@@ -2,6 +2,7 @@ import './SidebarLeft.css';
 import SearchIcon from '@material-ui/icons/Search';
 import FacebookIcon from '@material-ui/icons/Facebook';
 import InstagramIcon from '@material-ui/icons/Instagram';
+import { Link } from 'react-router-dom';
 
 function SidebarLeft() {
 	return (
@@ -9,7 +10,9 @@ function SidebarLeft() {
 			<div className="sidebarLeft__container">
 				<div className="sidebarLeft__innerContainer">
 					<div className="sidebarLeftTop">
-						<img src="logo.png" alt="" />
+						<Link to="/">
+							<img src="logo.png" className="sidebarLeftTopLogo" alt="" />
+						</Link>
 						<SearchIcon />
 					</div>
 					<div className="sidebarLeftBottom">
