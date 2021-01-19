@@ -17,13 +17,13 @@ function HomePage() {
 				{/* header */}
 				<Header />
 				{/* Banner */}
-                <Banner />
+                {/* <Banner /> */}
 				{/* Your experience matters */}
-                <MiddleSection />
+                {/* <MiddleSection /> */}
 				{/* Make your dreams come true */}
 				<MakeDreamsTrue />
 				{/* Amriahs key features */}
-                <KeyFeatures />
+                {/* <KeyFeatures /> */}
 				{/* shop by category */}
 				{/* footer */}
 			</div>

@@ -8,7 +8,37 @@
 	margin: 2.5vw;
 	font-size: 1.4vw;
 }
-.header__options > a {
+.header__options > a,
+.header__options > div > a {
 	color: rgb(85, 85, 85);
 	text-decoration: none;
+}
+.header__options > div {
+	/* border: 0.1vw blue solid; */
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+.header__optionsAboutDetails {
+	position: absolute;
+	margin-top: 3vw;
+	padding: 0.8vw;
+	width: 8vw;
+	display: flex;
+	flex-direction: column;
+	border-radius: 0.8vw;
+	/* border: 0.1vw red solid; */
+	box-shadow: 0vw 0.1vw 0.6vw rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+}
+.header__optionsAboutDetails > a {
+	font-size: 0.9vw;
+	padding: 0.4vw;
+	text-decoration: none;
+	cursor: pointer;
+	color: rgb(85, 85, 85);
+	width: 100%;
+}
+.header__optionsAboutDetails > a:hover {
+	font-weight: bold !important;
 }
