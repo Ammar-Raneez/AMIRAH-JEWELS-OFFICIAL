@@ -1,6 +1,7 @@
 import './App.css';
 import HomePage from './pages/HomePage/HomePage';
 import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
+import RegisterPage from './pages/RegisterPage/RegisterPage';
 
 function App() {
 	return (
@@ -9,6 +10,9 @@ function App() {
 				<Switch>
 					<Route path="/loginIn">
 						<h2>About us login component</h2>
+					</Route>
+					<Route path="/register">
+						<RegisterPage />
 					</Route>
 					<Route path="/SignUp">
 						<h2>About us SignUp component</h2>

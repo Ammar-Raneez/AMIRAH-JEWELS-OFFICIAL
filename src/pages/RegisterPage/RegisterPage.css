@@ -1,0 +1,10 @@
+.registerPage{
+    display: grid;
+    align-content: center;
+    justify-content: center;
+    border: 1px black solid;
+}
+.registerPage > img{
+    object-fit: contain;
+    height: 5vw;
+}
