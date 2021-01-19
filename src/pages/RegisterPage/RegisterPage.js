@@ -1,4 +1,4 @@
-import './RegisterPage.css'
+import './RegisterPage.css';
 
 function RegisterPage() {
 	return (
@@ -7,7 +7,7 @@ function RegisterPage() {
 			<img src="purple-sapphire.png" alt="" />
 
 			{/* form */}
-			<div className="registerPage__form">
+			<div className="registerPage__body">
 				<h1>CREATE AN ACCOUNT</h1>
 
 				<p>
@@ -22,14 +22,17 @@ function RegisterPage() {
 						<input type="email" placeholder="Email" />
 					</div>
 					<div className="registerPage__formSecond">
-						<h5>Gender (Optional)</h5>
+						<p>Gender (Optional)</p>
 						<div className="registerPage__formSecondInputs">
-							<input type="radio" name="gender" value="male" />
-							<input type="radio" name="gender" value="female" />
+							<input type="radio" name="gender" value="female" id="female" />
+							<label for="female">Female</label>
+                            {" "}
+							<input type="radio" name="gender" value="male" id="male" />
+							<label for="male">Male</label>
 						</div>
 					</div>
 					<div className="registerPage__formThird">
-						<h5>Birthday (Optional)</h5>
+						<p>Birthday (Optional)</p>
 						<div className="registerPage__formThirdInputs">
 							<input type="number" name="month" placeholder="Month" />
 							<input type="number" name="day" placeholder="Day" />
