@@ -1,0 +1,10 @@
+.homepage {
+    display: flex;
+    height: 100%;
+    position: relative;
+}
+
+.homepage__mainBody {
+    flex: 1;
+    height: 100%;
+}
