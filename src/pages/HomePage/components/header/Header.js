@@ -21,21 +21,48 @@ function Header() {
 					</Link>
 					{aboutUsClicked && (
 						<div className="header__optionsAboutDetails">
-							<Link style={{ color: '#656565', fontWeight: '600' }}>Our Company</Link>
-							<Link>Charity</Link>
-							<Link>Careers</Link>
-							<Link>Policy</Link>
+							<Link style={{ color: '#656565', fontWeight: '600' }} to="/aboutus">
+								Our Company
+							</Link>
+							<Link to="/charity">Charity</Link>
+							<Link to="/careers">Careers</Link>
+							<Link to="/policy">Policy</Link>
 						</div>
 					)}
 				</div>
-				<Link
-					onClick={() => {
-						setProductsClicked(true);
-						setAboutUsClicked(false);
-					}}
-				>
-					PRODUCTS
-				</Link>
+				<div>
+					<Link
+						onClick={() => {
+							setProductsClicked(!productsClicked);
+							setAboutUsClicked(false);
+						}}
+					>
+						PRODUCTS
+					</Link>
+					{productsClicked && (
+						<div className="header__optionsProductDetails">
+							<div>
+								<Link style={{ color: '#656565', fontWeight: '600' }}>Shop by Category</Link>
+								<Link to="/necklace+pendants">Necklaces & Pendants</Link>
+								<Link to="/bracelets">Bracelets</Link>
+								<Link to="/earrings">Earrings</Link>
+								<Link to="/rings">Rings</Link>
+								<Link to="/engagement+ring">Engagement Rings</Link>
+							</div>
+							<div>
+								<Link style={{ color: '#656565', fontWeight: '600' }}>Shop by Metal / Sapphire Stones</Link>
+								<Link to="/blue+sapphires">Blue Sapphires</Link>
+								<Link to="/yellow+sapphires">Yellow Sapphires</Link>
+								<Link to="/pink+sapphires">Pink Sapphires</Link>
+								<Link to="/orange+sapphires">Purple Sapphires</Link>
+								<Link to="/purple+sapphires">Orange Sapphires</Link>
+								<Link to="/teal+sapphires">Teal Sapphires</Link>
+								<Link to="/white+sapphires">White Sapphires</Link>
+								<Link to="/padparadscha+sapphires">Padparadscha Sapphires</Link>
+							</div>
+						</div>
+					)}
+				</div>
 				<Link to="/process">PROCESS</Link>
 			</div>
 		</div>
