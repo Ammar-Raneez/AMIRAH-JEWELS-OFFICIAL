@@ -3,9 +3,28 @@
 	align-content: center;
 	height: 100vh;
 	justify-content: center;
+	position: relative;
 	/* border: 1px black solid; */
 }
-.registerPage > img {
+.registerPage__firstJewel {
+	/* border: 1px black solid; */
+	display: flex;
+	align-items: flex-end;
+	justify-content: flex-end;
+	position: relative;
+	top: 3vw;
+	left: 3vw;
+}
+.registerPage__lastJewel {
+	/* border: 1px black solid; */
+	display: flex;
+	position: relative;
+	bottom: 3vw;
+	z-index: -1;
+	right: 3vw;
+}
+.registerPage__lastJewel > img,
+.registerPage__firstJewel > img {
 	object-fit: contain;
 	height: 7vw;
 }
@@ -30,27 +49,27 @@
 	border-right: none;
 	border-left: none;
 	font-family: Quattrocento-Regular;
-	padding: 0.6vw;
+	padding: 0.8vw;
 	border-bottom: 0.1vw solid #707070;
 	font-size: 1vw;
 	background-color: #f8f8f8;
 	color: #707070;
 }
 .registerPage__formThirdInputs {
-    display: flex;
+	display: flex;
 	align-items: center;
 	/* border: 0.1vw black solid; */
 	margin-top: 1vw;
 	justify-content: space-between;
 }
-.registerPage__formThirdInputs > input{
-    width: 40%;
+.registerPage__formThirdInputs > input {
+	width: 40%;
 	outline: none;
 	border-top: none;
 	border-right: none;
 	border-left: none;
 	font-family: Quattrocento-Regular;
-	padding: 0.6vw;
+	padding: 0.8vw;
 	border-bottom: 0.1vw solid #707070;
 	font-size: 1vw;
 	background-color: #f8f8f8;
@@ -86,16 +105,23 @@
 	font-weight: lighter;
 }
 
-.registerPage__form {
-	border: 1px red solid;
-}
-.registerPage__form > button {
+.registerPage__createButton {
 	display: flex;
+	justify-content: space-around;
 	align-items: center;
-	width: 100%;
+}
+.registerPage__createButton > button {
+	padding: 1vw 3vw;
+	cursor: pointer;
+	margin-top: 1vw;
+	font-family: Quattrocento-Regular;
 	/* border: 1px red solid; */
-	width: 10vw;
-	justify-content: center;
+	border: none;
+	font-size: 1vw;
+	color: #555555;
+	outline: none;
+	background-color: #ffc0a1;
+	border-radius: 0.7vw;
 }
 .registerPage__body > h1 {
 	font-size: 2.2vw;

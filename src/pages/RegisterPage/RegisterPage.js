@@ -4,8 +4,9 @@ function RegisterPage() {
 	return (
 		<div className="registerPage">
 			{/* jewel image */}
-			<img src="purple-sapphire.png" alt="" />
-
+			<div className="registerPage__firstJewel">
+				<img src="purple-sapphire.png" alt="" />
+			</div>
 			{/* form */}
 			<div className="registerPage__body">
 				<h1>CREATE AN ACCOUNT</h1>
@@ -25,9 +26,7 @@ function RegisterPage() {
 						<p>Gender (Optional)</p>
 						<div className="registerPage__formSecondInputs">
 							<input type="radio" name="gender" value="female" id="female" />
-							<label for="female">Female</label>
-                            {" "}
-							<input type="radio" name="gender" value="male" id="male" />
+							<label for="female">Female</label> <input type="radio" name="gender" value="male" id="male" />
 							<label for="male">Male</label>
 						</div>
 					</div>
@@ -38,12 +37,16 @@ function RegisterPage() {
 							<input type="number" name="day" placeholder="Day" />
 						</div>
 					</div>
-					<button>CREATE AN ACCOUNT</button>
+					<div className="registerPage__createButton">
+						<button>CREATE AN ACCOUNT</button>
+					</div>
 				</form>
 			</div>
 
 			{/* jewel image */}
-			<img src="purple-sapphire.png" alt="" />
+			<div className="registerPage__lastJewel">
+				<img src="purple-sapphire.png" alt="" />
+			</div>
 		</div>
 	);
 }

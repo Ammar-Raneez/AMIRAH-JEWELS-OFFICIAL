@@ -13,7 +13,7 @@ function HomePage() {
         <div className="homepage">
 			{/* left section side bar */}
 			<SidebarLeft />
-			<div className="app__mainBody">
+			<div>
 				{/* header */}
 				<Header />
 				{/* Banner */}

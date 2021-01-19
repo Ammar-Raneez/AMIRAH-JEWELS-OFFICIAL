@@ -2,6 +2,9 @@ import './App.css';
 import HomePage from './pages/HomePage/HomePage';
 import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
 import RegisterPage from './pages/RegisterPage/RegisterPage';
+import Header from './pages/HomePage/components/header/Header';
+import SidebarLeft from './pages/HomePage/components/sidebar-left/SidebarLeft';
+import SidebarRight from './pages/HomePage/components/sidebar-right/SidebarRight';
 
 function App() {
 	return (
@@ -12,7 +15,14 @@ function App() {
 						<h2>About us login component</h2>
 					</Route>
 					<Route path="/register">
-						<RegisterPage />
+						<div className="app__sidebar">
+							<SidebarLeft />
+							<div className="app__body">
+								<Header />
+								<RegisterPage />
+							</div>
+							<SidebarRight />
+						</div>
 					</Route>
 					<Route path="/SignUp">
 						<h2>About us SignUp component</h2>
