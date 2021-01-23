@@ -8,6 +8,7 @@ import SidebarRight from './pages/HomePage/components/sidebar-right/SidebarRight
 import Footer from './pages/HomePage/components/Footer/Footer';
 import AboutPageCompany from './pages/AboutPage/AboutPageCompany';
 import AboutPageCharity from './pages/AboutPage/AboutPageCharity';
+import ThankyouCreatingAccount from './pages/RegisterPage/ThankyouCreatingAccount';
 
 function App() {
 	return (
@@ -108,6 +109,16 @@ function App() {
 					<Route path="/ombre"></Route>
 					<Route path="/numero"></Route>
 					<Route path="/explore+all+collection"></Route>
+					<Route path="/thanking">
+						<div className="app__sidebar">
+							<SidebarLeft />
+							<div className="app__body">
+								<Header />
+								<ThankyouCreatingAccount />
+								<Footer />
+							</div>
+						</div>
+					</Route>
 					<Route path="/">
 						<HomePage />
 					</Route>
