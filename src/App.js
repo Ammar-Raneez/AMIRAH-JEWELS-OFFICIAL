@@ -21,7 +21,6 @@ function App() {
 								<Header />
 								<RegisterPage />
 							</div>
-							<SidebarRight />
 						</div>
 					</Route>
 					<Route path="/highTea">
