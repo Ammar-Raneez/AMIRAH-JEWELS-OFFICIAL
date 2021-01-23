@@ -1,5 +1,7 @@
 .sidebarLeft__container {
 	height: 100%;
+	border-right: 1px  rgb(255, 219, 187) solid;
+
 }
 .sidebarLeft__innerContainer {
 	display: flex;

@@ -10,19 +10,21 @@ import FavoriteBorderIcon from '@material-ui/icons/FavoriteBorder';
 function SidebarLeft() {
 	return (
 		<div className="sidebarLeft">
-			<div className="sidebarLeft__innerContainer">
-				<div className="sidebarLeftTop">
-					<Link to="/">
-						<img src="logo.png" className="sidebarLeftTopLogo" alt="" />
-					</Link>
-					<SearchIcon />
-				</div>
-				<div className="sidebarLeftBottom">
-					<FacebookIcon />
-					<InstagramIcon />
-					<PersonIcon />
-					<LocalMallIcon />
-					<FavoriteBorderIcon />
+			<div className="sidebarLeft__container">
+				<div className="sidebarLeft__innerContainer">
+					<div className="sidebarLeftTop">
+						<Link to="/">
+							<img src="logo.png" className="sidebarLeftTopLogo" alt="" />
+						</Link>
+						<SearchIcon />
+					</div>
+					<div className="sidebarLeftBottom">
+						<FacebookIcon />
+						<InstagramIcon />
+						<PersonIcon />
+						<LocalMallIcon />
+						<FavoriteBorderIcon />
+					</div>
 				</div>
 			</div>
 		</div>
