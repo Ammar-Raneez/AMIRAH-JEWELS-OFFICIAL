@@ -1,11 +1,42 @@
 .aboutPageCompany {
-    margin-bottom: -31vw;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+	margin-bottom: -31vw;
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	align-items: center;
 }
-.aboutPageCompanyTop{
-    width: 45vw;
+.aboutPageCompanyMiddle {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	/* border: 1px black solid; */
+	height: 10vw;
+	margin-bottom: 5vw;
+	justify-content: space-around;
+}
+.aboutPageCompanyMiddleFirst {
+	width: 2vw;
+	height: 2vw;
+	background: #ffc0a1 0% 0% no-repeat padding-box;
+	border-radius: 100vw;
+	opacity: 1;
+}
+.aboutPageCompanyMiddleMiddle {
+	width: 1vw;
+	height: 1vw;
+	background: #ffc0a1 0% 0% no-repeat padding-box;
+	border-radius: 100vw;
+	opacity: 1;
+}
+.aboutPageCompanyMiddleLast {
+	width: 0.8vw;
+	height: 0.8vw;
+	background: #ffc0a1 0% 0% no-repeat padding-box;
+	border-radius: 100vw;
+	opacity: 1;
+}
+.aboutPageCompanyTop {
+	width: 45vw;
 }
 .aboutPageCompanyTop__firstJewel {
 	/* border: 1px black solid; */
@@ -17,7 +48,7 @@
 	left: 3vw;
 }
 .aboutPageCompanyTop__lastJewel {
-    /* border: 1px black solid; */
+	/* border: 1px black solid; */
 	display: flex;
 	position: relative;
 	bottom: 3vw;
@@ -30,27 +61,41 @@
 	object-fit: contain;
 	height: 7vw;
 }
-.aboutPageCompanyTop__middleContent{
-    display: flex;
-    flex-direction: column;
+.aboutPageCompanyTop__middleContent,
+.aboutPageCompanyLast {
+	display: flex;
+	flex-direction: column;
 	color: #707070;
 	font-family: Quattrocento-Regular;
-    align-items: center;
-    justify-content: center;
-    /* border: 1px black solid; */
-    background-color: white;
+	align-items: center;
+	justify-content: center;
+	/* border: 1px black solid; */
+	background-color: white;
 	padding: 4vw 3vw;
 	border-radius: 1vw;
 	box-shadow: 0vw 0.1vw 0.6vw rgba(0, 0, 0, 0.12), 0 0.1vw 0.2vw rgba(0, 0, 0, 0.24);
 }
-.aboutPageCompanyTop__middleContent > h2{
-    font-family: bowie;
-    font-size: 2.5vw;
-    padding-bottom: 2.5vw;
-    font-weight: lighter;
+.aboutPageCompanyTop__middleContent > h2,
+.aboutPageCompanyLast > h2 {
+	font-family: bowie;
+	font-size: 2.5vw;
+	padding-bottom: 2.5vw;
+	font-weight: lighter;
 }
-.aboutPageCompanyTop__middleContent > p{
-    width: 35vw;
-    line-height: 2vw;
-    text-align: center;
+.aboutPageCompanyTop__middleContent > p {
+	width: 35vw;
+	font-size: 1.3vw;
+	line-height: 2vw;
+	text-align: center;
+}
+.aboutPageCompanyLast > p {
+	width: 35vw;
+	font-size: 1.3vw;
+	line-height: 2vw;
+	text-align: center;
+	padding: 1vw 0;
+}
+.aboutPageCompanyLast {
+	height: 80vw;
+	margin-bottom: 30vw;
 }
