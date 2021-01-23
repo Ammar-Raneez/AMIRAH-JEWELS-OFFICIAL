@@ -1,5 +1,6 @@
 .gemStonesMain {
 	margin-bottom: -30vw;
+	margin-top: 5vw;
 }
 .gemStonesMain__detailsSecond > img {
 	object-fit: contain;
@@ -74,4 +75,12 @@
 	outline: none;
 	background-color: white;
 	border-radius: 0.7vw;
+}
+.gemStonesMain__otherGems{
+	padding: 8vw 5vw;
+}
+.gemStonesMain__otherGemsRow{
+	display: flex;
+	align-items: center;
+	justify-content: space-evenly;
 }

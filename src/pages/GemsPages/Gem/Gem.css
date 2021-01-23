@@ -1,0 +1,43 @@
+.gem {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+}
+.gem > img {
+	object-fit: contain;
+	transition: 0.1s ease-in-out;
+	height: 40vw;
+}
+.gem > p {
+	font-family: Quattrocento-Regular;
+	color: #707070;
+	padding: 1vw;
+}
+.gem > button {
+	margin: 2vw;
+	padding: 0.8vw 3vw;
+	cursor: pointer !important;
+	margin-top: 1vw;
+	font-family: Quattrocento-Regular;
+	/* border: 1px red solid; */
+	border: none;
+	font-size: 1vw;
+	z-index: 999;
+	color: #555555;
+	outline: none;
+	background-color: white;
+	border: 0.2vw #ffc0a1 solid;
+	border-radius: 0.7vw;
+	transition: 0.3s ease-in-out;
+}
+.gem > button:hover {
+	transition: 0.3s ease-in-out;
+	color: white;
+	background-color: #ffc0a1;
+	font-weight: bold;
+}
+.gem > img:hover {
+	transition: 0.3s ease-in-out;
+	transform: scale(1.05);
+}
