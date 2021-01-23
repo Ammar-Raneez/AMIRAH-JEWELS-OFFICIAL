@@ -7,6 +7,7 @@ import SidebarLeft from './components/sidebar-left/SidebarLeft'
 import SidebarRight from './components/sidebar-right/SidebarRight'
 import Header from './components/header/Header';
 import MakeDreamsTrue from './components/dreams-section/MakeDreamsTrue'
+import Footer from './components/Footer/Footer'
 
 function HomePage() {
     return (
@@ -26,6 +27,7 @@ function HomePage() {
                 <KeyFeatures />
 				{/* shop by category */}
 				{/* footer */}
+				<Footer />
 			</div>
 			{/* right section side bar */}
         </div>

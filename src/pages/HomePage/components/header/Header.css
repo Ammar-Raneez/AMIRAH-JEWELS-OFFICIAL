@@ -24,7 +24,7 @@
 .header__options > div > a:hover,
 .header__options > a:hover {
 	color: rgb(63, 63, 63);
-	font-weight: 600;
+	font-weight: bold;
 }
 .header_optionsJewellery{
 	color: rgb(63, 63, 63);
