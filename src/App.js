@@ -24,6 +24,9 @@ function App() {
 							<SidebarRight />
 						</div>
 					</Route>
+					<Route path="/highTea">
+						<h2>highTea component</h2>
+					</Route>
 					<Route path="/SignUp">
 						<h2>About us SignUp component</h2>
 					</Route>
