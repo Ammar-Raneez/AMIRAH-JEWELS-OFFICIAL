@@ -7,6 +7,7 @@ import SidebarLeft from './pages/HomePage/components/sidebar-left/SidebarLeft';
 import SidebarRight from './pages/HomePage/components/sidebar-right/SidebarRight';
 import Footer from './pages/HomePage/components/Footer/Footer';
 import AboutPageCompany from './pages/AboutPage/AboutPageCompany';
+import AboutPageCharity from './pages/AboutPage/AboutPageCharity';
 
 function App() {
 	return (
@@ -78,7 +79,14 @@ function App() {
 						<h2>careers component</h2>
 					</Route>
 					<Route path="/charity">
-						<h2>charity component</h2>
+						<div className="app__sidebar">
+							<SidebarLeft />
+							<div className="app__body">
+								<Header />
+								<AboutPageCharity />
+								<Footer />
+							</div>
+						</div>
 					</Route>
 					<Route path="/process">
 						<h2>process component</h2>
