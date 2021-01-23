@@ -1,5 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Cinzel&display=swap');
 
+.header{
+	/* position: sticky;
+	top: 0;
+	border: 1px transparent solid;
+	background-color: #fff;
+	z-index: 999; */
+
+}
 .header__options {
 	display: flex;
 	align-items: center;

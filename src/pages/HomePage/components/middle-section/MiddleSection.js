@@ -1,18 +1,20 @@
 import React from 'react'
 import './MiddleSection.css'
-import FaceIcon from '@material-ui/icons/Face';
+// import FaceIcon from '@material-ui/icons/Face';
 import CalendarTodayIcon from '@material-ui/icons/CalendarToday';
-import CreditCardIcon from '@material-ui/icons/CreditCard';
+// import CreditCardIcon from '@material-ui/icons/CreditCard';
+import RoomServiceIcon from '@material-ui/icons/RoomService';
+import MonetizationOnIcon from '@material-ui/icons/MonetizationOn';
 
 function MiddleSection() {
     return (
         <div className="homePage__middleSection">
             <div className="homePage__middleSectionTitle">
-                YOUR EXPERIENCE MATTERS
+               THE ROYAL EXPERIENCE
             </div>
             <div className="homePage__middleSectionMiddleContainer">
                 <div>
-                    <FaceIcon />
+                    <RoomServiceIcon />
                     <p>At your service</p>
                     <p className="homePage__middleSectionMiddleContainerDesc">
                         Our customer service
@@ -30,7 +32,7 @@ function MiddleSection() {
                     </p>
                 </div>
                 <div>
-                    <CreditCardIcon />
+                    <MonetizationOnIcon />
                     <p>Easy Payment</p>
                     <p className="homePage__middleSectionMiddleContainerDesc">
                         We provide easy payment
