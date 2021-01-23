@@ -28,7 +28,6 @@ function HomePage() {
 				{/* footer */}
 			</div>
 			{/* right section side bar */}
-			{/* <SidebarRight /> */}
         </div>
     )
 }

@@ -27,8 +27,7 @@ function Header() {
 								<Link to="/earrings">Earrings</Link>
 								<Link to="/bracelets">Bracelets</Link>
 								<Link to="/necklace+pendants">Necklaces & Pendants</Link>
-								<Link to="/">Explore All Categories</Link>
-								{/* <Link to="/engagement+ring">Engagement Rings</Link> */}
+								<Link to="/explore+all+categories">Explore All Categories</Link>
 							</div>
 							<div>
 								<Link style={{ color: '#656565', fontWeight: '600' }}>Shop by Metal/Gemstones</Link>
@@ -39,27 +38,17 @@ function Header() {
 								<Link to="/blue+sapphires">Blue Sapphires</Link>
 								<Link to="/pink+sapphires">Pink Sapphires</Link>
 								<Link to="/pink+sapphires">Pearl Sapphires</Link>
-								<Link to="/">Explore More</Link>
-
-								{/* <Link to="/orange+sapphires">Purple Sapphires</Link>
-								<Link to="/purple+sapphires">Orange Sapphires</Link>
-								<Link to="/teal+sapphires">Teal Sapphires</Link>
-								<Link to="/padparadscha+sapphires">Padparadscha Sapphires</Link> */}
+								<Link to="/exploreMore+gemstones">Explore More</Link>
 							</div>
 							<div>
 								<Link style={{ color: '#656565', fontWeight: '600' }}>Featured Collections</Link>
-								<Link to="/">Signature</Link>
-								<Link to="/">Amarelo</Link>
-								<Link to="/">Mi Amor</Link>
-								<Link to="/">Dew Drops</Link>
-								<Link to="/">Ombre</Link>
-								<Link to="/">Numero</Link>
-								<Link to="/">Explore All Collection</Link>
-
-								{/* <Link to="/orange+sapphires">Purple Sapphires</Link>
-								<Link to="/purple+sapphires">Orange Sapphires</Link>
-								<Link to="/teal+sapphires">Teal Sapphires</Link>
-								<Link to="/padparadscha+sapphires">Padparadscha Sapphires</Link> */}
+								<Link to="/signature">Signature</Link>
+								<Link to="/amarelo">Amarelo</Link>
+								<Link to="/mi+amor">Mi Amor</Link>
+								<Link to="/dew+drops">Dew Drops</Link>
+								<Link to="/ombre">Ombre</Link>
+								<Link to="/numero">Numero</Link>
+								<Link to="/explore+all+collection">Explore All Collection</Link>
 							</div>
 						</div>
 					)}

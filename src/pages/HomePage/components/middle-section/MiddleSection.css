@@ -10,6 +10,8 @@
     justify-content: center;
     align-items: center;
     color: #888;
+    /* border: 1px red solid; */
+    height: 31vw;
     /* width: 100vw; */
     /* margin-left: calc(50% - 50vw); */
     position: absolute;
@@ -45,13 +47,13 @@
 }
 
 .homePage__middleSectionMiddleContainer div p {
-    font-size: 20px;
+    font-size: 2vw;
     text-align: center;
     margin-top: 2vw;
     font-family: 'Quattrocento', serif;
 }
 
 .homePage__middleSectionMiddleContainerDesc {
-    font-size: 14px !important;
-    max-width: 170px;
+    font-size: 1.5vw !important;
+    max-width: 20vw;
 }

@@ -29,20 +29,20 @@ function App() {
 					<Route path="/SignUp">
 						<h2>About us SignUp component</h2>
 					</Route>
-					<Route path="/padparadscha+sapphires">
-						<h2>About us padparadscha sapphires component</h2>
+					<Route path="/rose+sapphires">
+						<h2>About us Rose sapphires component</h2>
 					</Route>
 					<Route path="/white+sapphires">
 						<h2>About us white sapphires component</h2>
 					</Route>
-					<Route path="/teal+sapphires">
-						<h2>About us teal sapphires component</h2>
+					<Route path="/diamonds">
+						<h2>About us Diamonds component</h2>
 					</Route>
-					<Route path="/purple+sapphires">
-						<h2>About us purple sapphires component</h2>
+					<Route path="/pearl+sapphires">
+						<h2>About us Pearl sapphires component</h2>
 					</Route>
-					<Route path="/orange+sapphires">
-						<h2>About us orange sapphires component</h2>
+					<Route path="/exploreMore+gemstones">
+						<h2>About us Explore More Gems component</h2>
 					</Route>
 					<Route path="/pink+sapphires">
 						<h2>About us pink sapphires component</h2>
@@ -53,9 +53,7 @@ function App() {
 					<Route path="/blue+sapphires">
 						<h2>About us blue sapphires component</h2>
 					</Route>
-					<Route path="/engagement+ring">
-						<h2>About us engagement rings component</h2>
-					</Route>
+
 					<Route path="/rings">
 						<h2>About us rings component</h2>
 					</Route>
@@ -67,6 +65,9 @@ function App() {
 					</Route>
 					<Route path="/necklace+pendants">
 						<h2>About us necklace & pendants component</h2>
+					</Route>
+					<Route path="/explore+all+categories">
+						<h2>Explore All Categories component</h2>
 					</Route>
 					<Route path="/policy">
 						<h2>About us policy component</h2>
@@ -83,6 +84,15 @@ function App() {
 					<Route path="/aboutus">
 						<h2>About us page component</h2>
 					</Route>
+					<Route path="/signature">
+						
+					</Route>
+					<Route path="/amarelo"></Route>
+					<Route path="/mi+amor"></Route>
+					<Route path="/dew+drops"></Route>
+					<Route path="/ombre"></Route>
+					<Route path="/numero"></Route>
+					<Route path="/explore+all+collection"></Route>
 					<Route path="/">
 						<HomePage />
 					</Route>
