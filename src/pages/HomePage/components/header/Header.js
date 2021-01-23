@@ -38,7 +38,7 @@ function Header() {
 								<Link to="/blue+sapphires">Blue Sapphires</Link>
 								<Link to="/pink+sapphires">Pink Sapphires</Link>
 								<Link to="/pink+sapphires">Pearl Sapphires</Link>
-								<Link to="/exploreMore+gemstones">Explore More</Link>
+								<Link to="/gemstones+metal">Explore More</Link>
 							</div>
 							<div>
 								<Link style={{ color: '#656565', fontWeight: '600' }}>Featured Collections</Link>

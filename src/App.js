@@ -9,6 +9,7 @@ import Footer from './pages/HomePage/components/Footer/Footer';
 import AboutPageCompany from './pages/AboutPage/AboutPageCompany';
 import AboutPageCharity from './pages/AboutPage/AboutPageCharity';
 import ThankyouCreatingAccount from './pages/RegisterPage/ThankyouCreatingAccount';
+import GemStonesMain from './pages/GemsPages/GemStonesMain/GemStonesMain';
 
 function App() {
 	return (
@@ -45,8 +46,15 @@ function App() {
 					<Route path="/pearl+sapphires">
 						<h2>APearl sapphires component</h2>
 					</Route>
-					<Route path="/exploreMore+gemstones">
-						<h2> Explore More Gems component</h2>
+					<Route path="/gemstones+metal">
+					<div className="app__sidebar">
+							<SidebarLeft />
+							<div className="app__body">
+								<Header />
+								<GemStonesMain />
+								<Footer />
+							</div>
+						</div>
 					</Route>
 					<Route path="/pink+sapphires">
 						<h2> pink sapphires component</h2>
