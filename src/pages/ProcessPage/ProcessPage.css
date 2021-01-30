@@ -29,7 +29,8 @@
 	/* border: 1px red solid; */
 	width: 40vw;
 	display: flex;
-	margin: 5vw;
+	margin-top: 5vw;
+	margin-bottom: 10vw;
 	align-items: center;
 	justify-content: space-evenly;
 }
