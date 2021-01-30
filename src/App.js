@@ -10,6 +10,7 @@ import AboutPageCompany from './pages/AboutPage/AboutPageCompany';
 import AboutPageCharity from './pages/AboutPage/AboutPageCharity';
 import ThankyouCreatingAccount from './pages/RegisterPage/ThankyouCreatingAccount';
 import GemStonesMain from './pages/GemsPages/GemStonesMain/GemStonesMain';
+import ProcessPage from './pages/ProcessPage/ProcessPage';
 
 function App() {
 	return (
@@ -98,7 +99,14 @@ function App() {
 						</div>
 					</Route>
 					<Route path="/process">
-						<h2>process component</h2>
+						<div className="app__sidebar">
+							<SidebarLeft />
+							<div className="app__body">
+								<Header />
+								<ProcessPage />
+								<Footer />
+							</div>
+						</div>
 					</Route>
 					<Route path="/aboutus">
 						<div className="app__sidebar">

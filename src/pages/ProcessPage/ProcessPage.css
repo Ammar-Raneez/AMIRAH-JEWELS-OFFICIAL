@@ -1,0 +1,63 @@
+.processPage {
+	/* margin-bottom: -31vw; */
+	margin-top: 3vw;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+.processPage > h1 {
+	font-family: bowie;
+	font-size: 3vw;
+	margin: 2vw;
+	width: 50vw;
+	text-align: center;
+	padding-bottom: 2.5vw;
+	/* border: 1px red solid; */
+	font-weight: lighter;
+	color: #707070;
+}
+.processPage > p {
+	width: 65vw;
+	font-size: 1.5vw;
+	font-family: Quattrocento-Regular;
+	line-height: 2vw;
+	color: #707070;
+	text-align: center;
+}
+.processPage__callBtn {
+	/* border: 1px red solid; */
+	width: 40vw;
+	display: flex;
+	margin: 5vw;
+	align-items: center;
+	justify-content: space-evenly;
+}
+.processPage__callBtn > button {
+	padding: 1vw;
+	cursor: pointer;
+	width: 15vw;
+	font-family: Quattrocento-Regular;
+	border: none;
+	font-size: 1.4vw;
+	background-color: transparent;
+	outline: none;
+	border: 0.2vw #ffc0a1 solid;
+	transition: 0.3s ease;
+	border-radius: 0.7vw;
+}
+.processPage__callBtn > button:first-child {
+    background-color: #ffc0a1;
+    color: #5c5c5c;
+}
+.processPage__callBtn > button:last-child:hover{
+    background-color: #ffc0a1;
+    transition: 0.3s ease;
+    font-weight: bold;
+    color: white;
+}
+.processPage__callBtn > button:first-child:hover{
+    background-color: white;
+    transition: 0.3s ease;
+    color: black !important;
+}
