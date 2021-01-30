@@ -17,40 +17,40 @@ function Header() {
 						}}
 						className={productsClicked && 'header_optionsJewellery'}
 					>
-						Jewelry
+						Jewellery
 					</Link>
 					{productsClicked && (
 						<div 
 							className="header__optionsProductDetails"
 						>
 							<div>
-								<Link style={{ color: '#656565', fontWeight: '600' }}>Shop by Category</Link>
-								<Link to="/rings">Rings</Link>
-								<Link to="/earrings">Earrings</Link>
-								<Link to="/bracelets">Bracelets</Link>
-								<Link to="/necklace+pendants">Necklaces & Pendants</Link>
-								<Link to="/explore+all+categories">Explore All Categories</Link>
+								<p style={{ color: '#656565', fontWeight: '600' }}>Shop by Category</p>
+								<Link className="header__optionsProductDetail" to="/rings">Rings</Link>
+								<Link className="header__optionsProductDetail" to="/earrings">Earrings</Link>
+								<Link className="header__optionsProductDetail" to="/bracelets">Bracelets</Link>
+								<Link className="header__optionsProductDetail" to="/necklace+pendants">Necklaces & Pendants</Link>
+								<Link style={{ color: '#656565', fontWeight: '600' }} className="header__optionsProductDetail" to="/explore+all+categories">Explore All Categories</Link>
 							</div>
 							<div>
-								<Link style={{ color: '#656565', fontWeight: '600' }}>Shop by Metal/Gemstones</Link>
-								<Link to="/yellow+gold">Yellow Gold</Link>
-								<Link to="/white+gold">White Gold</Link>
-								<Link to="/rose+gold">Rose Gold</Link>
-								<Link to="/diamonds">Diamonds</Link>
-								<Link to="/blue+sapphires">Blue Sapphires</Link>
-								<Link to="/pink+sapphires">Pink Sapphires</Link>
-								<Link to="/pink+sapphires">Pearl Sapphires</Link>
-								<Link to="/gemstones+metal">Explore More</Link>
+								<p style={{ color: '#656565', fontWeight: '600' }}>Shop by Metal/Gemstones</p>
+								<Link className="header__optionsProductDetail" to="/yellow+gold">Yellow Gold</Link>
+								<Link className="header__optionsProductDetail" to="/white+gold">White Gold</Link>
+								<Link className="header__optionsProductDetail" to="/rose+gold">Rose Gold</Link>
+								<Link className="header__optionsProductDetail" to="/diamonds">Diamonds</Link>
+								<Link className="header__optionsProductDetail" to="/blue+sapphires">Blue Sapphires</Link>
+								<Link className="header__optionsProductDetail" to="/pink+sapphires">Pink Sapphires</Link>
+								<Link className="header__optionsProductDetail" to="/pink+sapphires">Pearl Sapphires</Link>
+								<Link style={{ color: '#656565', fontWeight: '600' }} className="header__optionsProductDetail" to="/gemstones+metal">Explore More</Link>
 							</div>
 							<div>
-								<Link style={{ color: '#656565', fontWeight: '600' }}>Featured Collections</Link>
-								<Link to="/signature">Signature</Link>
-								<Link to="/amarelo">Amarelo</Link>
-								<Link to="/mi+amor">Mi Amor</Link>
-								<Link to="/dew+drops">Dew Drops</Link>
-								<Link to="/ombre">Ombre</Link>
-								<Link to="/numero">Numero</Link>
-								<Link to="/explore+all+collection">Explore All Collection</Link>
+								<p style={{ color: '#656565', fontWeight: '600' }}>Featured Collections</p>
+								<Link className="header__optionsProductDetail" to="/signature">Signature</Link>
+								<Link className="header__optionsProductDetail" to="/amarelo">Amarelo</Link>
+								<Link className="header__optionsProductDetail" to="/mi+amor">Mi Amor</Link>
+								<Link className="header__optionsProductDetail" to="/dew+drops">Dew Drops</Link>
+								<Link className="header__optionsProductDetail" to="/ombre">Ombre</Link>
+								<Link className="header__optionsProductDetail" to="/numero">Numero</Link>
+								<Link style={{ color: '#656565', fontWeight: '600' }} className="header__optionsProductDetail" to="/explore+all+collection">Explore All Collection</Link>
 							</div>
 						</div>
 					)}
@@ -73,9 +73,9 @@ function Header() {
 							<Link style={{ color: '#656565', fontWeight: '600' }} to="/aboutus">
 								Our Company
 							</Link>
-							<Link to="/charity">Charity</Link>
-							<Link to="/careers">Careers</Link>
-							<Link to="/policy">Policy</Link>
+							<Link className="header__optionsProductDetail" to="/charity">Charity</Link>
+							<Link className="header__optionsProductDetail" to="/careers">Careers</Link>
+							<Link className="header__optionsProductDetail" to="/policy">Policy</Link>
 						</div>
 					)}
 				</div>

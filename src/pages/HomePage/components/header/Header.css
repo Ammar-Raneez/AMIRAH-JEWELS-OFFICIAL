@@ -43,6 +43,7 @@
 	align-items: center;
 }
 .header__optionsAboutDetails {
+	font-size: 1vw;
 	position: absolute;
 	margin-top: 3.5vw;
 	padding: 0.8vw;
@@ -57,13 +58,14 @@
 }
 
 .header__optionsProductDetails {
+	font-size: 1vw;
 	position: absolute;
 	margin-top: 3.5vw;
-	margin-left: 10vw;
+	margin-left: 12vw;
 	z-index: 99;
 	background-color: #fff;
 	padding: 0.8vw;
-	width: 38vw;
+	width: 39vw;
 	display: flex;
 	justify-content: space-between;
 	border-radius: 0.8vw;
@@ -75,17 +77,40 @@
 	flex-direction: column;
 	padding: 1vw;
 	/* border: 1px black solid; */
-	width: 100%;
+	/* width: 100%; */
 }
 
 .header__optionsAboutDetails > a, .header__optionsProductDetails > div > a {
-	font-size: 1vw;
 	padding: 0.4vw;
 	text-decoration: none;
 	cursor: pointer;
 	color: rgb(85, 85, 85);
+}
+
+.header__optionsProductDetail {
+	position: relative;
+}
+
+.header__optionsProductDetail::before, .header__optionsProductDetail::after {
+	position: absolute;
+	top: 1.6vw;
+	left: 0.5vw;
+	z-index: -1;
+	transition: 0.5s;
+	content: '';
 	width: 100%;
 }
-.header__optionsAboutDetails > a:hover, .heaer__optionsProductDetails > div > a:hover {
-	font-weight: bold !important;
+
+.header__optionsProductDetail::before, .header__optionsProductDetail::after {
+	height: 1px;
+	width: 0px;
+}
+
+.header__optionsProductDetail:hover::before {
+	width: 0;
+}
+
+.header__optionsProductDetail:hover::after {
+	width: 100%;
+	background: rgb(255, 177, 109);
 }
