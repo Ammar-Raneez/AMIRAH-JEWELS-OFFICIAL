@@ -8,6 +8,7 @@ import SidebarRight from './components/sidebar-right/SidebarRight'
 import Header from './components/header/Header';
 import MakeDreamsTrue from './components/dreams-section/MakeDreamsTrue'
 import Footer from './components/Footer/Footer'
+import Category from './components/shop-by-category/Category'
 
 function HomePage() {
     return (
@@ -26,10 +27,10 @@ function HomePage() {
 				{/* Amriahs key features */}
                 <KeyFeatures />
 				{/* shop by category */}
+				<Category />
 				{/* footer */}
 				<Footer />
 			</div>
-			{/* right section side bar */}
         </div>
     )
 }

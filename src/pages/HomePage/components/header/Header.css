@@ -18,7 +18,7 @@
 .header__options > a, .header__options > div > a {
 	color: rgb(85, 85, 85);
 	text-decoration: none;
-	transition: 0.3s ease;
+	/* transition: 0.3s ease; */
 }
 .header__options > div > a:hover, .header__options > a:hover {
 	border-bottom: 1px solid #e58177;

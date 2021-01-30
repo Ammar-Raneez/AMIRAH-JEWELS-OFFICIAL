@@ -10,12 +10,12 @@ function MiddleSection() {
     return (
         <div className="homePage__middleSection">
             <div className="homePage__middleSectionTitle">
-               THE ROYAL EXPERIENCE
+                THE ROYAL EXPERIENCE
             </div>
             <div className="homePage__middleSectionMiddleContainer">
                 <div>
                     <RoomServiceIcon />
-                    <p>At your service</p>
+                    <p>Amirah At Your Service</p>
                     <p className="homePage__middleSectionMiddleContainerDesc">
                         Our customer service
                         experts are always here to
@@ -24,7 +24,7 @@ function MiddleSection() {
                 </div>
                 <div>
                     <CalendarTodayIcon />
-                    <p>Book an appointment</p>
+                    <p>Book an Appointment</p>
                     <p className="homePage__middleSectionMiddleContainerDesc">
                         We are happy to help you
                         in-store or virtual

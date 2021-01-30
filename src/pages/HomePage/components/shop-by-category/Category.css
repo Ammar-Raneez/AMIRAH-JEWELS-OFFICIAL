@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css2?family=Quattrocento&display=swap');
+
+@font-face {
+    font-family: boowie;
+    src: url(BOOWIE.ttf);
+}
+
+.homePage__category {
+    margin-top: 35vw;
+    margin-bottom: 5vw;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    color: #888;
+}
+
+.homePage__categoryTitle {
+    font-size: 3.5vw;
+    font-family: boowie;
+}
+
+.homePage__categorySubTitle {
+    font-family: 'Quattrocento', serif;
+    font-size: 1.5vw;
+    margin-top: 1vw;
+    margin-bottom: 5vw;
+}
+
+.homePage__categoryRow {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.homePage__categoryRow div {
+    min-width: 15vw;
+    min-height: 15vw;
+    margin: 1vw;
+    border: 1px solid blue;
+}
