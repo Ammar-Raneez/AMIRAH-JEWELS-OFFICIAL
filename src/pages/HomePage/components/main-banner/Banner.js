@@ -1,6 +1,5 @@
 import React from 'react'
 import './Banner.css'
-import tempbanner from './tempbanner.png'
 
 function Banner() {
     return (
