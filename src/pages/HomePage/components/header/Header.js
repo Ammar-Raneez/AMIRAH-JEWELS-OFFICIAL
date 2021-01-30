@@ -11,16 +11,18 @@ function Header() {
 			<div className="header__options">
 				<div>
 					<Link
-						onClick={() => {
+						onMouseOver={() => {
 							setProductsClicked(!productsClicked);
 							setAboutUsClicked(false);
 						}}
 						className={productsClicked && 'header_optionsJewellery'}
 					>
-						JEWELLERY
+						Jewelry
 					</Link>
 					{productsClicked && (
-						<div className="header__optionsProductDetails">
+						<div 
+							className="header__optionsProductDetails"
+						>
 							<div>
 								<Link style={{ color: '#656565', fontWeight: '600' }}>Shop by Category</Link>
 								<Link to="/rings">Rings</Link>
@@ -31,9 +33,9 @@ function Header() {
 							</div>
 							<div>
 								<Link style={{ color: '#656565', fontWeight: '600' }}>Shop by Metal/Gemstones</Link>
-								<Link to="/yellow+sapphires">Yellow Sapphires</Link>
-								<Link to="/white+sapphires">White Sapphires</Link>
-								<Link to="/rose+sapphires">Rose Sapphires</Link>
+								<Link to="/yellow+gold">Yellow Gold</Link>
+								<Link to="/white+gold">White Gold</Link>
+								<Link to="/rose+gold">Rose Gold</Link>
 								<Link to="/diamonds">Diamonds</Link>
 								<Link to="/blue+sapphires">Blue Sapphires</Link>
 								<Link to="/pink+sapphires">Pink Sapphires</Link>
@@ -58,7 +60,7 @@ function Header() {
 
 				<div>
 					<Link
-						onClick={() => {
+						onMouseOver={() => {
 							setAboutUsClicked(!aboutUsClicked);
 							setProductsClicked(false);
 						}}
@@ -78,7 +80,7 @@ function Header() {
 					)}
 				</div>
 
-				<Link to="/">DESIGNESR DESK</Link>
+				<Link to="/">DESIGNER DESK</Link>
 
 				<Link to="/highTea">HIGH TEA</Link>
 			</div>

@@ -1,13 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Cinzel&display=swap');
 
-.header{
-	/* position: sticky;
+/* .header{
+	position: sticky;
 	top: 0;
 	border: 1px transparent solid;
 	background-color: #fff;
-	z-index: 999; */
-
-}
+	z-index: 999;
+} */
 .header__options {
 	display: flex;
 	align-items: center;
@@ -16,14 +15,13 @@
 	margin: 2.5vw;
 	font-size: 1.4vw;
 }
-.header__options > a,
-.header__options > div > a {
+.header__options > a, .header__options > div > a {
 	color: rgb(85, 85, 85);
 	text-decoration: none;
+	transition: 0.3s ease;
 }
-.header__options > div > a:hover,
-.header__options > a:hover {
-	color: rgb(63, 63, 63);
+.header__options > div > a:hover, .header__options > a:hover {
+	border-bottom: 1px solid #e58177;
 	font-weight: bold;
 }
 .header_optionsJewellery{
@@ -61,7 +59,6 @@
 	display: flex;
 	justify-content: space-between;
 	border-radius: 0.8vw;
-
 	/* border: 0.1vw red solid; */
 	box-shadow: 0vw 0.1vw 0.6vw rgba(0, 0, 0, 0.12), 0 0.1vw 0.2vw rgba(0, 0, 0, 0.24);
 }
@@ -73,8 +70,7 @@
 	width: 100%;
 }
 
-.header__optionsAboutDetails > a,
-.header__optionsProductDetails > div > a {
+.header__optionsAboutDetails > a, .header__optionsProductDetails > div > a {
 	font-size: 0.9vw;
 	padding: 0.4vw;
 	text-decoration: none;
@@ -82,7 +78,6 @@
 	color: rgb(85, 85, 85);
 	width: 100%;
 }
-.header__optionsAboutDetails > a:hover,
-.header__optionsProductDetails > div > a:hover {
+.header__optionsAboutDetails > a:hover, .heaer__optionsProductDetails > div > a:hover {
 	font-weight: bold !important;
 }

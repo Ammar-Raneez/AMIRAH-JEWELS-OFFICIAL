@@ -34,17 +34,17 @@ function App() {
 					<Route path="/SignUp">
 						<h2> SignUp component</h2>
 					</Route>
-					<Route path="/rose+sapphires">
-						<h2> Rose sapphires component</h2>
+					<Route path="/rose+gold">
+						<h2> Rose gold component</h2>
 					</Route>
-					<Route path="/white+sapphires">
-						<h2> white sapphires component</h2>
+					<Route path="/white+gold">
+						<h2> white gold component</h2>
 					</Route>
 					<Route path="/diamonds">
 						<h2> Diamonds component</h2>
 					</Route>
 					<Route path="/pearl+sapphires">
-						<h2>APearl sapphires component</h2>
+						<h2>Pearl sapphires component</h2>
 					</Route>
 					<Route path="/gemstones+metal">
 					<div className="app__sidebar">
@@ -59,8 +59,8 @@ function App() {
 					<Route path="/pink+sapphires">
 						<h2> pink sapphires component</h2>
 					</Route>
-					<Route path="/yellow+sapphires">
-						<h2> yellow sapphires component</h2>
+					<Route path="/yellow+gold">
+						<h2> yellow gold component</h2>
 					</Route>
 					<Route path="/blue+sapphires">
 						<h2> blue sapphires component</h2>
