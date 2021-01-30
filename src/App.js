@@ -2,9 +2,9 @@ import './App.css';
 import HomePage from './pages/HomePage/HomePage';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import RegisterPage from './pages/RegisterPage/RegisterPage';
-import Header from './pages/HomePage/components/header/Header';
-import TopBar from './pages/HomePage/components/topbar/TopBar';
-import Footer from './pages/HomePage/components/Footer/Footer';
+import Footer from './shared/components/Footer/Footer';
+import TopBar from './shared/components/topbar/TopBar';
+import Header from './shared/components/header/Header';
 import AboutPageCompany from './pages/AboutPage/AboutPageCompany';
 import AboutPageCharity from './pages/AboutPage/AboutPageCharity';
 import ThankyouCreatingAccount from './pages/RegisterPage/ThankyouCreatingAccount';
@@ -20,13 +20,10 @@ function App() {
 						<h2> login component</h2>
 					</Route>
 					<Route path="/register">
-						<div className="app__sidebar">
-							<TopBar />
-							<div className="app__body">
-								<Header />
-								<RegisterPage />
-							</div>
-						</div>
+						<TopBar />
+						<Header />
+						<RegisterPage />
+						<Footer />
 					</Route>
 					<Route path="/highTea">
 						<h2>highTea component</h2>
@@ -47,14 +44,10 @@ function App() {
 						<h2>Pearl sapphires component</h2>
 					</Route>
 					<Route path="/gemstones+metal">
-					<div className="app__sidebar">
-							<TopBar />
-							<div className="app__body">
-								<Header />
-								<GemStonesMain />
-								{/*<Footer />*/}
-							</div>
-						</div>
+						<TopBar />
+						<Header />
+						<GemStonesMain />
+						<Footer />
 					</Route>
 					<Route path="/pink+sapphires">
 						<h2> pink sapphires component</h2>
@@ -88,34 +81,22 @@ function App() {
 						<h2>careers component</h2>
 					</Route>
 					<Route path="/charity">
-						<div className="app__sidebar">
-							<TopBar />
-							<div className="app__body">
-								<Header />
-								<AboutPageCharity />
-								<Footer />
-							</div>
-						</div>
+						<TopBar />
+						<Header />
+						<AboutPageCharity />
+						<Footer />
 					</Route>
 					<Route path="/process">
-						<div className="app__sidebar">
-							<SidebarLeft />
-							<div className="app__body">
-								<Header />
-								<ProcessPage />
-								<Footer />
-							</div>
-						</div>
+						<TopBar />
+						<Header />
+						<ProcessPage />
+						<Footer />
 					</Route>
 					<Route path="/aboutus">
-						<div className="app__sidebar">
-							<TopBar />
-							<div className="app__body">
-								<Header />
-								<AboutPageCompany />
-								<Footer />
-							</div>
-						</div>
+						<TopBar />
+						<Header />
+						<AboutPageCompany />
+						<Footer />
 					</Route>
 					<Route path="/signature"></Route>
 					<Route path="/amarelo"></Route>
@@ -125,17 +106,16 @@ function App() {
 					<Route path="/numero"></Route>
 					<Route path="/explore+all+collection"></Route>
 					<Route path="/thanking">
-						<div className="app__sidebar">
-							<TopBar />
-							<div className="app__body">
-								<Header />
-								<ThankyouCreatingAccount />
-								<Footer />
-							</div>
-						</div>
+						<TopBar />
+						<Header />
+						<ThankyouCreatingAccount />
+						<Footer />
 					</Route>
 					<Route path="/">
+						<TopBar />
+						<Header />
 						<HomePage />
+						<Footer />
 					</Route>
 				</Switch>
 			</div>

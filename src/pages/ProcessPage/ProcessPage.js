@@ -23,14 +23,14 @@ function ProcessPage() {
 			{/* steps components */}
 			<div className="processPage__steps">
 				<ProcessStep
-					img="/process/sketch.png"
+					img="process/sketch.png"
 					stepNo="1"
 					stepName="The Sketch"
 					description="Sketches are created to illustrate ideas which helps to express scale, shape and design options. Sketches develop an overall direction, and as setting styles are considered, shapes and forms are explored and a design emerges"
 					reflect={false}
 				/>
 				<ProcessStep
-					img="/process/ring.png"
+					img="process/ring.png"
 					stepNo="2"
 					stepName="The Model"
 					description="Once the jewelry design is approved, it is being
@@ -41,7 +41,7 @@ function ProcessPage() {
 					reflect={true}
 				/>
 				<ProcessStep
-					img="/process/factory.png"
+					img="process/factory.png"
 					stepNo="3"
 					stepName="Workshop"
 					description="Craftsmen use traditional skills and techniques
@@ -50,7 +50,7 @@ function ProcessPage() {
 					reflect={false}
 				/>
 				<ProcessStep
-					img="/process/polishing.png"
+					img="process/polishing.png"
 					stepNo="4"
 					stepName="Final Touches"
 					description="Piece of jewelry is finished and it only needs a

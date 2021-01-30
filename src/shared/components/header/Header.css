@@ -102,7 +102,7 @@
 }
 
 .header__optionsProductDetail span::before, .header__optionsProductDetail span::after {
-	height: 1px;
+	height: 2px;
 	width: 0px;
 }
 
@@ -112,5 +112,5 @@
 
 .header__optionsProductDetail span:hover::after {
 	width: 100%;
-	background: rgb(255, 177, 109);
+	background: #d3650f;
 }
