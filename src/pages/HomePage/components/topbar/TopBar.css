@@ -36,6 +36,7 @@
 .topbar__rightAccount {
 	display: flex;
 	align-items: center;
+	font-size: 1.3vw;
 }
 
 .topbar__left > .MuiSvgIcon-root, .topbar__right > .MuiSvgIcon-root, .topbar__right > .topbar__rightAccount > .MuiSvgIcon-root {
