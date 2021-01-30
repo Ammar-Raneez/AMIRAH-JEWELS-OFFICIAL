@@ -1,6 +1,6 @@
 import './ProcessPage.css';
-
 import ProcessStep from './ProcessStep/ProcessStep';
+
 
 function ProcessPage() {
 	return (
@@ -23,6 +23,13 @@ function ProcessPage() {
 
 			{/* steps components */}
 			<div className="processPage__steps">
+				<ProcessStep
+					img="/process/sketch.png"
+					stepNo="1"
+					stepName="The Sketch"
+					description="Sketches are created to illustrate ideas which helps to express scale, shape and design options. Sketches develop an overall direction, and as setting styles are considered, shapes and forms are explored and a design emerges"
+					reflect={false}
+				/>
 				<ProcessStep
 					img="/process/sketch.png"
 					stepNo="1"

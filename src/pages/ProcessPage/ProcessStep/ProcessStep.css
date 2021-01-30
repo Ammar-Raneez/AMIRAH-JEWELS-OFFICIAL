@@ -1,5 +1,6 @@
 .processStep {
 	display: flex;
+	position: relative;
 	justify-content: space-between;
 	/* border: 1px black solid; */
 	background-color: #fff5ef;
@@ -10,7 +11,7 @@
 	align-self: center;
 	height: 50vw;
 }
-.processStep__description {
+.processStep__description > p{
     position: absolute;
 	/* border: 1px black solid; */
     font-size: 1.5vw;
