@@ -1,8 +1,6 @@
 import React from 'react'
 import './MiddleSection.css'
-// import FaceIcon from '@material-ui/icons/Face';
 import CalendarTodayIcon from '@material-ui/icons/CalendarToday';
-// import CreditCardIcon from '@material-ui/icons/CreditCard';
 import RoomServiceIcon from '@material-ui/icons/RoomService';
 import MonetizationOnIcon from '@material-ui/icons/MonetizationOn';
 

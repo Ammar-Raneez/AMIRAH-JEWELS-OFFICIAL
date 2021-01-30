@@ -1,10 +1,9 @@
 import './App.css';
 import HomePage from './pages/HomePage/HomePage';
-import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import RegisterPage from './pages/RegisterPage/RegisterPage';
 import Header from './pages/HomePage/components/header/Header';
 import TopBar from './pages/HomePage/components/topbar/TopBar';
-// import SidebarRight from './pages/HomePage/components/sidebar-right/SidebarRight';
 import Footer from './pages/HomePage/components/Footer/Footer';
 import AboutPageCompany from './pages/AboutPage/AboutPageCompany';
 import AboutPageCharity from './pages/AboutPage/AboutPageCharity';
