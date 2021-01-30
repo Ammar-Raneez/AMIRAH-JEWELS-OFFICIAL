@@ -1,0 +1,107 @@
+.thankingPage {
+	display: grid;
+	align-content: center;
+	margin-bottom: -20vw;
+	justify-content: center;
+	position: relative;
+	margin-top: 5vw;
+}
+.thankingPage__firstJewel {
+	/* border: 1px black solid; */
+	display: flex;
+	align-items: flex-end;
+	justify-content: flex-end;
+	position: relative;
+	top: 3vw;
+	left: 3vw;
+}
+.thankingPage__lastJewel {
+	/* border: 1px black solid; */
+	display: flex;
+	position: relative;
+	bottom: 3vw;
+	z-index: -1;
+	right: 3vw;
+}
+.thankingPage__lastJewel > img,
+.thankingPage__firstJewel > img {
+	object-fit: contain;
+	height: 7vw;
+}
+.thankingPage__body {
+	background-color: #f8f8f8;
+	width: 30vw;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 2vw 3vw;
+	border-radius: 1vw;
+	box-shadow: 0vw 0.1vw 0.6vw rgba(0, 0, 0, 0.12), 0 0.1vw 0.2vw rgba(0, 0, 0, 0.24);
+}
+
+.thankingPage__createButton {
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+}
+.thankingPage__body > button {
+	padding: 1vw 3vw;
+	cursor: pointer !important;
+	margin-top: 1vw;
+	font-family: Quattrocento-Regular;
+	/* border: 1px red solid; */
+	border: none;
+    font-size: 1vw;
+    z-index: 99;
+	color: #555555;
+	outline: none;
+	background-color: #ffc0a1;
+	border-radius: 0.7vw;
+    transition: 0.3s ease-in-out;
+
+}
+/* .thankingPage__body > button >a{
+    text-decoration: none;
+    color: #707070;
+} */
+.thankingPage__body > button:hover {
+    background-color: white;
+    border: 2px #ffc0a1 solid;
+	transition: 0.3s ease-in-out;
+}
+.thankingPage__body > h1 {
+	font-size: 2.5vw;
+	text-align: center;
+	/* border: 1px red solid; */
+	font-family: bowie;
+	margin-bottom: 1vw;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-weight: lighter;
+	color: #707070;
+}
+.thankingPage__body > p {
+	font-family: Quattrocento-Regular;
+	color: #707070;
+	padding: 1vw;
+	/* border: 1px red solid; */
+	margin-bottom: 1vw;
+	text-align: justify;
+	text-justify: inter-word;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 1.2vw;
+}
+
+/* ------------------------------------------------------ */
+@font-face {
+	font-family: bowie;
+	src: url(BOOWIE.ttf);
+}
+
+@font-face {
+	font-family: Quattrocento-Regular;
+	src: url(Quattrocento-Regular.ttf);
+}

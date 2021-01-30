@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=Quattrocento&display=swap');
+@font-face {
+    font-family: boowie;
+    src: url(BOOWIE.ttf);
+}
+
+.homePage__middleSection {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #888;
+    /* border: 1px red solid; */
+    height: 31vw;
+    /* width: 100vw; */
+    /* margin-left: calc(50% - 50vw); */
+    position: absolute;
+    left: 0;
+    width: 100%;
+    background-color:rgb(253, 246, 239);
+}
+
+.homePage__middleSectionTitle {
+    font-size: 3.5vw;
+    font-family: boowie;
+}
+
+.homePage__middleSectionTitle, .homePage__middleSectionMiddleContainer {
+    padding: 3vw;
+}
+
+.homePage__middleSectionMiddleContainer {
+    display: flex;
+    justify-content: center;
+}
+
+.homePage__middleSectionMiddleContainer div {
+    margin: 0px 3vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.homePage__middleSectionMiddleContainer div .MuiSvgIcon-root {
+    font-size: 6vw !important;
+    color: rgb(252, 203, 160) !important;
+}
+
+.homePage__middleSectionMiddleContainer div p {
+    font-size: 2vw;
+    text-align: center;
+    margin-top: 2vw;
+    font-family: 'Quattrocento', serif;
+}
+
+.homePage__middleSectionMiddleContainerDesc {
+    font-size: 1.5vw !important;
+    max-width: 20vw;
+}

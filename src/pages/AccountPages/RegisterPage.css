@@ -1,0 +1,161 @@
+.registerPage {
+	display: grid;
+	align-content: center;
+	height: 100vh;
+	justify-content: center;
+	position: relative;
+	margin-top: 5vw;
+	/* border: 1px black solid; */
+}
+.registerPage__firstJewel {
+	/* border: 1px black solid; */
+	display: flex;
+	align-items: flex-end;
+	justify-content: flex-end;
+	position: relative;
+	top: 3vw;
+	left: 3vw;
+}
+.registerPage__lastJewel {
+	/* border: 1px black solid; */
+	display: flex;
+	position: relative;
+	bottom: 3vw;
+	z-index: -1;
+	right: 3vw;
+}
+.registerPage__lastJewel > img,
+.registerPage__firstJewel > img {
+	object-fit: contain;
+	height: 7vw;
+}
+.registerPage__body {
+	background-color: #f8f8f8;
+	width: 25vw;
+	padding: 2vw 3vw;
+	border-radius: 1vw;
+	box-shadow: 0vw 0.1vw 0.6vw rgba(0, 0, 0, 0.12), 0 0.1vw 0.2vw rgba(0, 0, 0, 0.24);
+}
+.registerPage__formFirst {
+	display: flex;
+	flex-direction: column;
+	/* border: 1px black solid; */
+	align-items: center;
+	justify-content: center;
+}
+.registerPage__formFirst > input {
+	width: 90%;
+	outline: none;
+	border-top: none;
+	border-right: none;
+	border-left: none;
+	font-family: Quattrocento-Regular;
+	padding: 0.8vw;
+	border-bottom: 0.1vw solid #707070;
+	font-size: 1vw;
+	background-color: #f8f8f8;
+	color: #707070;
+}
+.registerPage__formThirdInputs {
+	display: flex;
+	align-items: center;
+	/* border: 0.1vw black solid; */
+	margin-top: 1vw;
+	justify-content: space-between;
+}
+.registerPage__formThirdInputs > input {
+	width: 40%;
+	outline: none;
+	border-top: none;
+	border-right: none;
+	border-left: none;
+	font-family: Quattrocento-Regular;
+	padding: 0.8vw;
+	border-bottom: 0.1vw solid #707070;
+	font-size: 1vw;
+	background-color: #f8f8f8;
+	color: #707070;
+}
+.registerPage__formSecond > p {
+	padding-bottom: 0.5vw;
+}
+.registerPage__formSecondInputs {
+	/* border: 0.1vw black solid; */
+	padding: 0.5vw;
+}
+.registerPage__formSecondInputs > label {
+	padding: 0 0.5vw;
+}
+.registerPage__formSecondInputs input:last-child {
+	margin-left: 5vw;
+}
+.registerPage__formSecond {
+	font-family: Quattrocento-Regular;
+	padding: 0.8vw;
+	margin-top: 1vw;
+	font-size: 1.2vw;
+	color: #707070;
+	font-weight: lighter;
+	/* border: 0.1vw black solid; */
+}
+.registerPage__formThird {
+	font-family: Quattrocento-Regular;
+	padding: 0.8vw;
+	font-size: 1.2vw;
+	color: #707070;
+	font-weight: lighter;
+}
+
+.registerPage__createButton {
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+}
+.registerPage__createButton > button {
+	padding: 1vw 3vw;
+	cursor: pointer;
+	margin-top: 1vw;
+	font-family: Quattrocento-Regular;
+	/* border: 1px red solid; */
+	border: none;
+	font-size: 1vw;
+	color: #555555;
+	outline: none;
+	background-color: #ffc0a1;
+	border-radius: 0.7vw;
+}
+.registerPage__body > h1 {
+	font-size: 2.2vw;
+	/* border: 1px red solid; */
+	font-family: bowie;
+	margin-bottom: 1vw;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-weight: lighter;
+	color: #707070;
+}
+.registerPage__body > p {
+	font-family: Quattrocento-Regular;
+	color: #707070;
+	padding: 1vw;
+	/* border: 1px red solid; */
+	margin-bottom: 1vw;
+	text-align: justify;
+	text-justify: inter-word;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 1.2vw;
+}
+
+/* ------------------------------------------------------ */
+@font-face {
+	font-family: bowie;
+	src: url(BOOWIE.ttf);
+}
+
+@font-face {
+	font-family: Quattrocento-Regular;
+	src: url(Quattrocento-Regular.ttf);
+}

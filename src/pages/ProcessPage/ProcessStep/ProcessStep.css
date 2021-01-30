@@ -1,0 +1,80 @@
+.processStep {
+	display: flex;
+	position: relative;
+	justify-content: space-between;
+	/* border: 1px black solid; */
+	background-color: #fff5ef;
+	width: 90vw;
+}
+.processStepReflect {
+	display: flex;
+	position: relative;
+	justify-content: space-between;
+	/* border: 1px black solid; */
+	flex-direction: row-reverse;
+	background-color: #fff5ef;
+	width: 90vw;
+}
+.processStep > img,
+.processStepReflect > img {
+	object-fit: contain;
+	align-self: center;
+	height: 50vw;
+}
+.processStep__description > p {
+	position: absolute;
+	/* border: 1px black solid; */
+	font-size: 1.5vw;
+	background-color: #fff;
+	padding: 2vw;
+	padding-bottom: 4vw;
+	line-height: 2vw;
+	bottom: 0;
+	right: 0;
+	margin-bottom: 5vw;
+	margin-right: 8vw;
+	width: 35vw;
+	font-family: Quattrocento-Regular;
+	color: #707070;
+	text-align: end;
+}
+.processStep__descriptionReflect > p {
+	position: absolute;
+	/* border: 1px black solid; */
+	font-size: 1.5vw;
+	background-color: #fff;
+	padding: 2vw;
+	padding-bottom: 4vw;
+	line-height: 2vw;
+	bottom: 0;
+	left: 0;
+	margin-bottom: 5vw;
+	margin-left: 8vw;
+	width: 35vw;
+	font-family: Quattrocento-Regular;
+	color: #707070;
+	text-align: end;
+}
+.processStep__stepName > p {
+	/* border: 1px black solid; */
+	font-size: 4vw;
+	font-family: Quattrocento-Regular;
+	color: #707070;
+	text-align: end;
+}
+.processStep__stepNameReflect > p {
+	/* border: 1px black solid; */
+	font-size: 4vw;
+	font-family: Quattrocento-Regular;
+	color: #707070;
+	text-align: start;
+}
+
+.processStep__stepName > p:first-child,
+.processStep__stepNameReflect > p:first-child {
+	font-weight: bold;
+}
+.processStep__stepName,
+.processStep__stepNameReflect {
+	margin: 6vw 5vw;
+}

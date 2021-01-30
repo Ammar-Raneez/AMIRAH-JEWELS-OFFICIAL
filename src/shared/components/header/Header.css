@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel&display=swap');
+
+@font-face {
+    font-family: timeless;
+    src: url(Timeless.ttf);
+}
+
+/* .header{
+	position: sticky;
+	top: 0;
+	border: 1px transparent solid;
+	background-color: #fff;
+	z-index: 999;
+} */
+.header__options {
+	display: flex;
+	align-items: center;
+	font-family: timeless;
+	/* font-family: 'Cinzel', serif; */
+	justify-content: space-evenly;
+	margin: 1vw 2.5vw;
+	/* margin: 2.5vw; */
+	font-size: 1.4vw;
+}
+.header__options > a, .header__options > div > a {
+	color: rgb(85, 85, 85);
+	text-decoration: none;
+	/* transition: 0.3s ease; */
+}
+.header__options > div > a:hover, .header__options > a:hover {
+	border-bottom: 1px solid #e58177;
+	font-weight: bold;
+}
+.header_optionsJewellery{
+	color: rgb(63, 63, 63);
+	font-weight: 600;
+}
+.header__options > div {
+	/* border: 0.1vw blue solid; */
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+.header__optionsAboutDetails {
+	font-size: 1.2vw;
+	position: absolute;
+	margin-top: 3.5vw;
+	padding: 0.8vw;
+	width: 10vw;
+	z-index: 99;
+	background-color: #fff;
+	display: flex;
+	flex-direction: column;
+	border-radius: 0.8vw;
+	/* border: 0.1vw red solid; */
+	box-shadow: 0vw 0.1vw 0.6vw rgba(0, 0, 0, 0.12), 0 0.1vw 0.2vw rgba(0, 0, 0, 0.24);
+}
+
+.header__optionsProductDetails {
+	font-size: 1.2vw;
+	position: absolute;
+	margin-top: 3.5vw;
+	margin-left: 18vw;
+	z-index: 99;
+	background-color: #fff;
+	padding: 0.8vw;
+	width: 45vw;
+	display: flex;
+	justify-content: space-between;
+	border-radius: 0.8vw;
+	/* border: 0.1vw red solid; */
+	box-shadow: 0vw 0.1vw 0.6vw rgba(0, 0, 0, 0.12), 0 0.1vw 0.2vw rgba(0, 0, 0, 0.24);
+}
+.header__optionsProductDetails > div {
+	display: flex;
+	flex-direction: column;
+	padding: 1vw;
+	/* border: 1px black solid; */
+	/* width: 100%; */
+}
+
+.header__optionsAboutDetails > a, .header__optionsProductDetails > div > a {
+	padding: 0.4vw;
+	text-decoration: none;
+	cursor: pointer;
+	color: rgb(85, 85, 85);
+}
+
+.header__optionsProductDetail span {
+	position: relative;
+}
+
+.header__optionsProductDetail span::before, .header__optionsProductDetail span::after {
+	position: absolute;
+	top: 1.3vw;
+	left: 0vw;
+	z-index: -1;
+	transition: 0.3s;
+	content: '';
+	/* width: 100%; */
+}
+
+.header__optionsProductDetail span::before, .header__optionsProductDetail span::after {
+	height: 2px;
+	width: 0px;
+}
+
+.header__optionsProductDetail span:hover::before {
+	width: 0;
+}
+
+.header__optionsProductDetail span:hover::after {
+	width: 100%;
+	background: #d3650f;
+}
