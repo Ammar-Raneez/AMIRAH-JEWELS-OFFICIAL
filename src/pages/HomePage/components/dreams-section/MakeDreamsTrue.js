@@ -14,7 +14,7 @@ function MakeDreamsTrue() {
 					<button>PURCHASE</button>
 				</div>
 
-				<img src="PINK SAPPHIRE RING 2.png" className="homePage__makeDreamsTrue__topImage" alt="" />
+				<img src="homepage-dreams/PINK SAPPHIRE RING 2.png" className="homePage__makeDreamsTrue__topImage" alt="" />
 				<div className="homePage__makeDreamsTrue__topPrices">
 					<h1>PRICE</h1>
 					<h2>US$4,500</h2>
@@ -32,7 +32,7 @@ function MakeDreamsTrue() {
 						Choose your own colored gemstone that is the epitome of something unique and personal to you.
 					</p>
 				</div>
-				<img className="homePage__makeDreamsTrue__middle__image" src="PINK SAPPHIRE RING.png" alt="" />
+				<img className="homePage__makeDreamsTrue__middle__image" src="homepage-dreams/PINK SAPPHIRE RING.png" alt="" />
 			</div>
 
 			{/* bottom ring section */}
@@ -54,7 +54,7 @@ function MakeDreamsTrue() {
 							<p>1.7 mm</p>
 						</div>
 					</div>
-					<img src="PINK SAPPHIRE RING 3.png"  alt="" />
+					<img src="homepage-dreams/PINK SAPPHIRE RING 3.png"  alt="" />
 					<div className="homePage__makeDreamsTrue__bottomImageDetailSecond">
 						<div className="homePage__makeDreamsTrue__bottomImageDetailFirstWeight">
 							<p>WEIGHT</p>

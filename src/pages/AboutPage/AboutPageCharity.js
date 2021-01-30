@@ -19,7 +19,7 @@ function AboutPageCharity() {
 
 				{/* jewel image */}
 				<div className="aboutPageCompanyTop__lastJewel">
-					<img src="purple-sapphire.png" alt="" />
+					<img src="aboutuspage/purple-sapphire.png" alt="" />
 				</div>
 			</div>
 			<div className="aboutPageCompanyMiddle">
