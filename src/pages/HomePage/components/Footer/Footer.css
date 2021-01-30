@@ -6,7 +6,7 @@
 .footer__main {
 	/* border: 1px black solid; */
     padding: 3vw 5vw;
-	margin-top: 35vw;
+	/* margin-top: 0vw; */
 	background-color: #ffe7dc;
 	display: flex;
 	flex-direction: column;

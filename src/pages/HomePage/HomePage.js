@@ -3,33 +3,31 @@ import './HomePage.css'
 import MiddleSection from './components/middle-section/MiddleSection'
 import KeyFeatures from './components/key-features/KeyFeatures'
 import Banner from './components/main-banner/Banner'
-import SidebarLeft from './components/sidebar-left/SidebarLeft'
-import SidebarRight from './components/sidebar-right/SidebarRight'
+import TopBar from './components/topbar/TopBar'
 import Header from './components/header/Header';
 import MakeDreamsTrue from './components/dreams-section/MakeDreamsTrue'
 import Footer from './components/Footer/Footer'
+import Category from './components/shop-by-category/Category'
 
 function HomePage() {
     return (
         <div className="homepage">
-			{/* left section side bar */}
-			<SidebarLeft />
-			<div>
-				{/* header */}
-				<Header />
-				{/* Banner */}
-                <Banner />
-				{/* Your experience matters */}
-                <MiddleSection />
-				{/* Make your dreams come true */}
-				<MakeDreamsTrue />
-				{/* Amriahs key features */}
-                <KeyFeatures />
-				{/* shop by category */}
-				{/* footer */}
-				<Footer />
-			</div>
-			{/* right section side bar */}
+			{/* top bar */}
+			<TopBar /> 
+			{/* header */}
+			<Header />
+			{/* Banner */}
+			<Banner />
+			{/* Your experience matters */}
+			<MiddleSection />
+			{/* Make your dreams come true */}
+			<MakeDreamsTrue />
+			{/* Amriahs key features */}
+			<KeyFeatures />
+			{/* shop by category */}
+			<Category />
+			{/* footer */}
+			<Footer />
         </div>
     )
 }

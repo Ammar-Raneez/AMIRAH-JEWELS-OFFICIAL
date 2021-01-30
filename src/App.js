@@ -1,10 +1,9 @@
 import './App.css';
 import HomePage from './pages/HomePage/HomePage';
-import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import RegisterPage from './pages/RegisterPage/RegisterPage';
 import Header from './pages/HomePage/components/header/Header';
-import SidebarLeft from './pages/HomePage/components/sidebar-left/SidebarLeft';
-import SidebarRight from './pages/HomePage/components/sidebar-right/SidebarRight';
+import TopBar from './pages/HomePage/components/topbar/TopBar';
 import Footer from './pages/HomePage/components/Footer/Footer';
 import AboutPageCompany from './pages/AboutPage/AboutPageCompany';
 import AboutPageCharity from './pages/AboutPage/AboutPageCharity';
@@ -22,7 +21,7 @@ function App() {
 					</Route>
 					<Route path="/register">
 						<div className="app__sidebar">
-							<SidebarLeft />
+							<TopBar />
 							<div className="app__body">
 								<Header />
 								<RegisterPage />
@@ -35,21 +34,21 @@ function App() {
 					<Route path="/SignUp">
 						<h2> SignUp component</h2>
 					</Route>
-					<Route path="/rose+sapphires">
-						<h2> Rose sapphires component</h2>
+					<Route path="/rose+gold">
+						<h2> Rose gold component</h2>
 					</Route>
-					<Route path="/white+sapphires">
-						<h2> white sapphires component</h2>
+					<Route path="/white+gold">
+						<h2> white gold component</h2>
 					</Route>
 					<Route path="/diamonds">
 						<h2> Diamonds component</h2>
 					</Route>
 					<Route path="/pearl+sapphires">
-						<h2>APearl sapphires component</h2>
+						<h2>Pearl sapphires component</h2>
 					</Route>
 					<Route path="/gemstones+metal">
 					<div className="app__sidebar">
-							<SidebarLeft />
+							<TopBar />
 							<div className="app__body">
 								<Header />
 								<GemStonesMain />
@@ -60,8 +59,8 @@ function App() {
 					<Route path="/pink+sapphires">
 						<h2> pink sapphires component</h2>
 					</Route>
-					<Route path="/yellow+sapphires">
-						<h2> yellow sapphires component</h2>
+					<Route path="/yellow+gold">
+						<h2> yellow gold component</h2>
 					</Route>
 					<Route path="/blue+sapphires">
 						<h2> blue sapphires component</h2>
@@ -90,7 +89,7 @@ function App() {
 					</Route>
 					<Route path="/charity">
 						<div className="app__sidebar">
-							<SidebarLeft />
+							<TopBar />
 							<div className="app__body">
 								<Header />
 								<AboutPageCharity />
@@ -110,7 +109,7 @@ function App() {
 					</Route>
 					<Route path="/aboutus">
 						<div className="app__sidebar">
-							<SidebarLeft />
+							<TopBar />
 							<div className="app__body">
 								<Header />
 								<AboutPageCompany />
@@ -127,7 +126,7 @@ function App() {
 					<Route path="/explore+all+collection"></Route>
 					<Route path="/thanking">
 						<div className="app__sidebar">
-							<SidebarLeft />
+							<TopBar />
 							<div className="app__body">
 								<Header />
 								<ThankyouCreatingAccount />

@@ -11,76 +11,78 @@ function Header() {
 			<div className="header__options">
 				<div>
 					<Link
-						onClick={() => {
+						onMouseOver={() => {
 							setProductsClicked(!productsClicked);
 							setAboutUsClicked(false);
 						}}
 						className={productsClicked && 'header_optionsJewellery'}
 					>
-						JEWELLERY
+						Jewellery
 					</Link>
 					{productsClicked && (
-						<div className="header__optionsProductDetails">
+						<div 
+							className="header__optionsProductDetails"
+						>
 							<div>
-								<Link style={{ color: '#656565', fontWeight: '600' }}>Shop by Category</Link>
-								<Link to="/rings">Rings</Link>
-								<Link to="/earrings">Earrings</Link>
-								<Link to="/bracelets">Bracelets</Link>
-								<Link to="/necklace+pendants">Necklaces & Pendants</Link>
-								<Link to="/explore+all+categories">Explore All Categories</Link>
+								<p style={{ color: '#656565', fontWeight: '600' }}>Shop by Category</p>
+								<Link className="header__optionsProductDetail" to="/rings"><span>Rings</span></Link>
+								<Link className="header__optionsProductDetail" to="/earrings"><span>Earrings</span></Link>
+								<Link className="header__optionsProductDetail" to="/bracelets"><span>Bracelets</span></Link>
+								<Link className="header__optionsProductDetail" to="/necklace+pendants"><span>Necklaces & Pendants</span></Link>
+								<Link style={{ color: '#656565', fontWeight: '600' }} className="header__optionsProductDetail" to="/explore+all+categories"><span>Explore All Categories</span></Link>
 							</div>
 							<div>
-								<Link style={{ color: '#656565', fontWeight: '600' }}>Shop by Metal/Gemstones</Link>
-								<Link to="/yellow+sapphires">Yellow Sapphires</Link>
-								<Link to="/white+sapphires">White Sapphires</Link>
-								<Link to="/rose+sapphires">Rose Sapphires</Link>
-								<Link to="/diamonds">Diamonds</Link>
-								<Link to="/blue+sapphires">Blue Sapphires</Link>
-								<Link to="/pink+sapphires">Pink Sapphires</Link>
-								<Link to="/pink+sapphires">Pearl Sapphires</Link>
-								<Link to="/gemstones+metal">Explore More</Link>
+								<p style={{ color: '#656565', fontWeight: '600' }}>Shop by Metal/Gemstones</p>
+								<Link className="header__optionsProductDetail" to="/yellow+gold"><span>Yellow Gold</span></Link>
+								<Link className="header__optionsProductDetail" to="/white+gold"><span>White Gold</span></Link>
+								<Link className="header__optionsProductDetail" to="/rose+gold"><span>Rose Gold</span></Link>
+								<Link className="header__optionsProductDetail" to="/diamonds"><span>Diamonds</span></Link>
+								<Link className="header__optionsProductDetail" to="/blue+sapphires"><span>Blue Sapphires</span></Link>
+								<Link className="header__optionsProductDetail" to="/pink+sapphires"><span>Pink Sapphires</span></Link>
+								<Link className="header__optionsProductDetail" to="/pink+sapphires"><span>Pearl Sapphires</span></Link>
+								<Link style={{ color: '#656565', fontWeight: '600' }} className="header__optionsProductDetail" to="/gemstones+metal"><span>Explore More</span></Link>
 							</div>
 							<div>
-								<Link style={{ color: '#656565', fontWeight: '600' }}>Featured Collections</Link>
-								<Link to="/signature">Signature</Link>
-								<Link to="/amarelo">Amarelo</Link>
-								<Link to="/mi+amor">Mi Amor</Link>
-								<Link to="/dew+drops">Dew Drops</Link>
-								<Link to="/ombre">Ombre</Link>
-								<Link to="/numero">Numero</Link>
-								<Link to="/explore+all+collection">Explore All Collection</Link>
+								<p style={{ color: '#656565', fontWeight: '600' }}>Featured Collections</p>
+								<Link className="header__optionsProductDetail" to="/signature"><span>Signature</span></Link>
+								<Link className="header__optionsProductDetail" to="/amarelo"><span>Amarelo</span></Link>
+								<Link className="header__optionsProductDetail" to="/mi+amor"><span>Mi Amor</span></Link>
+								<Link className="header__optionsProductDetail" to="/dew+drops"><span>Dew Drops</span></Link>
+								<Link className="header__optionsProductDetail" to="/ombre"><span>Ombre</span></Link>
+								<Link className="header__optionsProductDetail" to="/numero"><span>Numero</span></Link>
+								<Link style={{ color: '#656565', fontWeight: '600' }} className="header__optionsProductDetail" to="/explore+all+collection"><span>Explore All Collection</span></Link>
 							</div>
 						</div>
 					)}
 				</div>
 
-				<Link to="/process">PROCESS</Link>
+				<Link to="/process">Process</Link>
 
 				<div>
 					<Link
-						onClick={() => {
+						onMouseOver={() => {
 							setAboutUsClicked(!aboutUsClicked);
 							setProductsClicked(false);
 						}}
 						className={aboutUsClicked && 'header_optionsJewellery'}
 					>
-						ABOUT US
+						About Us
 					</Link>
 					{aboutUsClicked && (
 						<div className="header__optionsAboutDetails">
 							<Link style={{ color: '#656565', fontWeight: '600' }} to="/aboutus">
 								Our Company
 							</Link>
-							<Link to="/charity">Charity</Link>
-							<Link to="/careers">Careers</Link>
-							<Link to="/policy">Policy</Link>
+							<Link className="header__optionsProductDetail" to="/charity"><span>Charity</span></Link>
+							<Link className="header__optionsProductDetail" to="/careers"><span>Careers</span></Link>
+							<Link className="header__optionsProductDetail" to="/policy"><span>Policy</span></Link>
 						</div>
 					)}
 				</div>
 
-				<Link to="/">DESIGNESR DESK</Link>
+				<Link to="/">Designer Desk</Link>
 
-				<Link to="/highTea">HIGH TEA</Link>
+				<Link to="/highTea">High Tea</Link>
 			</div>
 		</div>
 	);

@@ -4,6 +4,11 @@
     src: url(BOOWIE.ttf);
 }
 
+@font-face {
+    font-family: timeless;
+    src: url(Timeless.ttf);
+}
+
 .homePage__banner {
     display: flex;
     justify-content: center;
@@ -18,7 +23,7 @@
     flex-direction: column;
     justify-content: space-between;
     /* align-items: center; */
-    padding-left: 5vw;
+    padding: 2vw 5vw;
 }
 
 .homePage__bannerRight {
