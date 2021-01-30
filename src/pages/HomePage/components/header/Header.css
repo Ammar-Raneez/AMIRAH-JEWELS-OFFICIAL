@@ -87,30 +87,30 @@
 	color: rgb(85, 85, 85);
 }
 
-.header__optionsProductDetail {
+.header__optionsProductDetail span {
 	position: relative;
 }
 
-.header__optionsProductDetail::before, .header__optionsProductDetail::after {
+.header__optionsProductDetail span::before, .header__optionsProductDetail span::after {
 	position: absolute;
-	top: 1.6vw;
-	left: 0.5vw;
+	top: 1.2vw;
+	left: 0vw;
 	z-index: -1;
-	transition: 0.5s;
+	transition: 0.3s;
 	content: '';
 	width: 100%;
 }
 
-.header__optionsProductDetail::before, .header__optionsProductDetail::after {
+.header__optionsProductDetail span::before, .header__optionsProductDetail span::after {
 	height: 1px;
 	width: 0px;
 }
 
-.header__optionsProductDetail:hover::before {
+.header__optionsProductDetail span:hover::before {
 	width: 0;
 }
 
-.header__optionsProductDetail:hover::after {
+.header__optionsProductDetail span:hover::after {
 	width: 100%;
 	background: rgb(255, 177, 109);
 }
