@@ -1,6 +1,6 @@
 import React from 'react'
 import './HomePage.css'
-import MiddleSection from './components/middle-section/MiddleSection'
+import RoyalExperience from './components/royal-experience/RoyalExperience'
 import KeyFeatures from './components/key-features/KeyFeatures'
 import Banner from './components/main-banner/Banner'
 import MakeDreamsTrue from './components/dreams-section/MakeDreamsTrue'
@@ -12,7 +12,7 @@ function HomePage() {
 			{/* Banner */}
 			<Banner />
 			{/* Your experience matters */}
-			<MiddleSection />
+			<RoyalExperience />
 			{/* Make your dreams come true */}
 			<MakeDreamsTrue />
 			{/* Amriahs key features */}

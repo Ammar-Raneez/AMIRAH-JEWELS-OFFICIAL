@@ -1,7 +1,7 @@
 import './App.css';
 import HomePage from './pages/HomePage/HomePage';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
-import RegisterPage from './pages/RegisterPage/RegisterPage';
+import RegisterPage from './pages/AccountPages/RegisterPage';
 import Footer from './shared/components/Footer/Footer';
 import TopBar from './shared/components/topbar/TopBar';
 import Header from './shared/components/header/Header';

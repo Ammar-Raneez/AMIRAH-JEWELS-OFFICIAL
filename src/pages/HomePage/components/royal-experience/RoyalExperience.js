@@ -1,10 +1,10 @@
 import React from 'react'
-import './MiddleSection.css'
+import './RoyalExperience.css'
 import CalendarTodayIcon from '@material-ui/icons/CalendarToday';
 import RoomServiceIcon from '@material-ui/icons/RoomService';
 import MonetizationOnIcon from '@material-ui/icons/MonetizationOn';
 
-function MiddleSection() {
+function RoyalExperience() {
     return (
         <div className="homePage__middleSection">
             <div className="homePage__middleSectionTitle">
@@ -42,4 +42,4 @@ function MiddleSection() {
     )
 }
 
-export default MiddleSection
+export default RoyalExperience
