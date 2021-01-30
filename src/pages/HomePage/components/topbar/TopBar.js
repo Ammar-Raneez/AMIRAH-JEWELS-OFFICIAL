@@ -3,30 +3,32 @@ import SearchIcon from '@material-ui/icons/Search';
 import FacebookIcon from '@material-ui/icons/Facebook';
 import InstagramIcon from '@material-ui/icons/Instagram';
 import { Link } from 'react-router-dom';
-import PersonIcon from '@material-ui/icons/Person';
-import LocalMallIcon from '@material-ui/icons/LocalMall';
+import PersonOutlinedIcon from '@material-ui/icons/PersonOutlined';
+import LocalMallOutlinedIcon from '@material-ui/icons/LocalMallOutlined';
 import FavoriteBorderIcon from '@material-ui/icons/FavoriteBorder';
 
 function TopBar() {
 	return (
-		<div className="sidebarLeft">
-			<div className="sidebarLeft__container">
-				<div className="sidebarLeft__innerContainer">
-					<div className="sidebarLeftTop">
-						<Link to="/">
-							<img src="logo.png" className="sidebarLeftTopLogo" alt="" />
-						</Link>
-						<SearchIcon />
-					</div>
-					<div className="sidebarLeftBottom">
-						<FacebookIcon />
-						<InstagramIcon />
-						<PersonIcon />
-						<LocalMallIcon />
-						<FavoriteBorderIcon />
-					</div>
-				</div>
+		<div className="topbar">
+			<div className="topbar__left">
+				<SearchIcon />
+				<FacebookIcon />
+				<InstagramIcon />
 			</div>
+			<div className="topbar__center">
+				<Link to="/">
+					<img src="logo.png" className="topbar__center__TopLogo" alt="" />
+				</Link>
+			</div>
+			<div className="topbar__right">
+				<div className="topbar__rightAccount">
+					<PersonOutlinedIcon />
+					My Account
+				</div>
+				<FavoriteBorderIcon />
+				<LocalMallOutlinedIcon />
+			</div>
+
 		</div>
 	);
 }
