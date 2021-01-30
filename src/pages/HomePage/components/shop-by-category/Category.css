@@ -30,13 +30,14 @@
 .homePage__categoryRow {
     display: flex;
     justify-content: space-evenly;
+    flex-wrap: wrap;
 }
 
 .homePage__categoryRow div img {
-    min-width: 15vw;
-    max-width: 15vw;
-    max-height: 15vw;
-    min-height: 15vw;
+    min-width: 200px;
+    max-width: 200px;
+    max-height: 200px;
+    min-height: 200px;
     margin: 1vw;
 }
 

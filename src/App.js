@@ -3,8 +3,8 @@ import HomePage from './pages/HomePage/HomePage';
 import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
 import RegisterPage from './pages/RegisterPage/RegisterPage';
 import Header from './pages/HomePage/components/header/Header';
-import SidebarLeft from './pages/HomePage/components/sidebar-left/SidebarLeft';
-import SidebarRight from './pages/HomePage/components/sidebar-right/SidebarRight';
+import TopBar from './pages/HomePage/components/topbar/TopBar';
+// import SidebarRight from './pages/HomePage/components/sidebar-right/SidebarRight';
 import Footer from './pages/HomePage/components/Footer/Footer';
 import AboutPageCompany from './pages/AboutPage/AboutPageCompany';
 import AboutPageCharity from './pages/AboutPage/AboutPageCharity';
@@ -21,7 +21,7 @@ function App() {
 					</Route>
 					<Route path="/register">
 						<div className="app__sidebar">
-							<SidebarLeft />
+							<TopBar />
 							<div className="app__body">
 								<Header />
 								<RegisterPage />
@@ -48,7 +48,7 @@ function App() {
 					</Route>
 					<Route path="/gemstones+metal">
 					<div className="app__sidebar">
-							<SidebarLeft />
+							<TopBar />
 							<div className="app__body">
 								<Header />
 								<GemStonesMain />
@@ -89,7 +89,7 @@ function App() {
 					</Route>
 					<Route path="/charity">
 						<div className="app__sidebar">
-							<SidebarLeft />
+							<TopBar />
 							<div className="app__body">
 								<Header />
 								<AboutPageCharity />
@@ -102,7 +102,7 @@ function App() {
 					</Route>
 					<Route path="/aboutus">
 						<div className="app__sidebar">
-							<SidebarLeft />
+							<TopBar />
 							<div className="app__body">
 								<Header />
 								<AboutPageCompany />
@@ -119,7 +119,7 @@ function App() {
 					<Route path="/explore+all+collection"></Route>
 					<Route path="/thanking">
 						<div className="app__sidebar">
-							<SidebarLeft />
+							<TopBar />
 							<div className="app__body">
 								<Header />
 								<ThankyouCreatingAccount />

@@ -1,5 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Cinzel&display=swap');
 
+@font-face {
+    font-family: timeless;
+    src: url(Timeless.ttf);
+}
+
 /* .header{
 	position: sticky;
 	top: 0;
@@ -10,9 +15,11 @@
 .header__options {
 	display: flex;
 	align-items: center;
-	font-family: 'Cinzel', serif;
+	font-family: timeless;
+	/* font-family: 'Cinzel', serif; */
 	justify-content: space-evenly;
-	margin: 2.5vw;
+	margin: 1vw 2.5vw;
+	/* margin: 2.5vw; */
 	font-size: 1.4vw;
 }
 .header__options > a, .header__options > div > a {

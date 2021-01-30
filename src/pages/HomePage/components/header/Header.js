@@ -56,7 +56,7 @@ function Header() {
 					)}
 				</div>
 
-				<Link to="/process">PROCESS</Link>
+				<Link to="/process">Process</Link>
 
 				<div>
 					<Link
@@ -66,7 +66,7 @@ function Header() {
 						}}
 						className={aboutUsClicked && 'header_optionsJewellery'}
 					>
-						ABOUT US
+						About Us
 					</Link>
 					{aboutUsClicked && (
 						<div className="header__optionsAboutDetails">
@@ -80,9 +80,9 @@ function Header() {
 					)}
 				</div>
 
-				<Link to="/">DESIGNER DESK</Link>
+				<Link to="/">Designer Desk</Link>
 
-				<Link to="/highTea">HIGH TEA</Link>
+				<Link to="/highTea">High Tea</Link>
 			</div>
 		</div>
 	);

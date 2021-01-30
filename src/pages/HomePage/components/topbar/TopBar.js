@@ -1,4 +1,4 @@
-import './SidebarLeft.css';
+import './TopBar.css';
 import SearchIcon from '@material-ui/icons/Search';
 import FacebookIcon from '@material-ui/icons/Facebook';
 import InstagramIcon from '@material-ui/icons/Instagram';
@@ -7,7 +7,7 @@ import PersonIcon from '@material-ui/icons/Person';
 import LocalMallIcon from '@material-ui/icons/LocalMall';
 import FavoriteBorderIcon from '@material-ui/icons/FavoriteBorder';
 
-function SidebarLeft() {
+function TopBar() {
 	return (
 		<div className="sidebarLeft">
 			<div className="sidebarLeft__container">
@@ -31,4 +31,4 @@ function SidebarLeft() {
 	);
 }
 
-export default SidebarLeft;
+export default TopBar;
