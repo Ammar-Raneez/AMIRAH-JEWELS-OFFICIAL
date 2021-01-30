@@ -52,7 +52,7 @@ function App() {
 							<div className="app__body">
 								<Header />
 								<GemStonesMain />
-								<Footer />
+								{/*<Footer />*/}
 							</div>
 						</div>
 					</Route>
