@@ -1,6 +1,7 @@
-import './AboutPage.css';
+import React from 'react'
+import './AboutPage.css'
 
-function AboutPageCompany() {
+function AboutPageCareer() {
 	return (
 		<div className="aboutPageCompany">
 			<div className="aboutPageCompanyTop">
@@ -10,7 +11,7 @@ function AboutPageCompany() {
 				</div>
 
 				<div className="aboutPageCompanyTop__middleContent">
-					<h2>AMIRAH GEMS</h2>
+					<h2>AMIRAH GEMS CAREER</h2>
 					<p>
 						Every story has a beginning. Discover how Amirah Gems began in 2020 and grew into a global design house at
 						the forefront of innovative jewelry design and expert craftsmanship
@@ -44,4 +45,4 @@ function AboutPageCompany() {
 	);
 }
 
-export default AboutPageCompany;
+export default AboutPageCareer

@@ -10,6 +10,8 @@ import AboutPageCharity from './pages/AboutPage/AboutPageCharity';
 import ThankyouCreatingAccount from './pages/AccountPages/ThankyouCreatingAccount';
 import GemStonesMain from './pages/GemsPages/GemStonesMain/GemStonesMain';
 import ProcessPage from './pages/ProcessPage/ProcessPage';
+import AboutPagePolicy from './pages/AboutPage/AboutPagePolicy';
+import AboutPageCareer from './pages/AboutPage/AboutPageCareer';
 
 function App() {
 	return (
@@ -75,10 +77,16 @@ function App() {
 						<h2>Explore All Categories component</h2>
 					</Route>
 					<Route path="/policy">
-						<h2>policy component</h2>
+						<TopBar />
+						<Header />
+						<AboutPagePolicy />
+						<Footer />
 					</Route>
 					<Route path="/careers">
-						<h2>careers component</h2>
+						<TopBar />
+						<Header />
+						<AboutPageCareer />
+						<Footer />
 					</Route>
 					<Route path="/charity">
 						<TopBar />
