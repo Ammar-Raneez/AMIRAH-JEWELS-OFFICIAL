@@ -1,6 +1,5 @@
 import './WishListItem.css';
 import CloseIcon from '@material-ui/icons/Close';
-import LocalMallIcon from '@material-ui/icons/LocalMall';
 
 function WishListItem({img, title, currency, price}) {
 	return (
@@ -15,18 +14,11 @@ function WishListItem({img, title, currency, price}) {
 					</div>
 
 					<div className="wishListItem__details">
-						<h2>{title}</h2>
-						<div className="wishListItem__detailsCart">
-							<LocalMallIcon />
-							<p>Add to cart</p>
-						</div>
-						<div className="wishListItem__detailsQuantity">
-							<p>Quantity</p>
-							<p>1</p>
-						</div>
 						<div className="wishListItem__price">
-							<p>Price: {currency}{(Math.round(price * 100) / 100).toFixed(2)}</p>
+							<p>{currency}{(Math.round(price * 100) / 100).toFixed(2)}</p>
+							<p>Add to Cart</p>
 						</div>
+						<p>{title}</p>
 					</div>
 				</div>
 			</div>
