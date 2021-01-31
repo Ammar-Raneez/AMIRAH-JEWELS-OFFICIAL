@@ -9,7 +9,7 @@
 	justify-content: space-between;
 	padding: 0 1vw;
 	align-items: center;
-	height: 5vw;
+	/* height: 5vw; */
 }
 
 .topbar__center__TopLogo {
@@ -23,13 +23,17 @@
 	justify-content: center;
 }
 
-.topbar__left, .topbar__right {
+.topbar__right {
 	flex-grow: 0.5;
+}
+
+.topbar__left  {
+	flex-grow: 1;
 }
 
 .topbar__left, .topbar__right {
 	display: flex;
-	justify-content: space-between;
+	justify-content: space-around;
 	align-items: center;
 }
 
@@ -53,6 +57,16 @@
 	color: black
 }
 
-@media screen and (max-width: 768px) {
-	
+@media screen and (max-width: 968px) {
+	.topbar__left > .MuiSvgIcon-root, .topbar__right > .MuiSvgIcon-root, .topbar__right > .topbar__rightAccount > .MuiSvgIcon-root, .topbar__right > a > .MuiSvgIcon-root {
+		font-size: 20px !important;
+	}
+
+	.topbar__center__TopLogo {
+		height: 30px;
+	}
+
+	.topbar__rightAccount {
+		font-size: 14px;
+	}
 }
