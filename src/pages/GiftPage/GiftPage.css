@@ -104,7 +104,8 @@
 }
 .giftPage__detailsFirstButtons {
 	display: flex;
-	margin: 1.5vw;
+    margin: 1.5vw;
+    flex-wrap: wrap;
 	justify-content: space-between;
 	align-items: center;
 }
@@ -165,19 +166,23 @@
 	}
 
 	.giftPage__detailsFirstButtons {
-		width: 280px;
+        width: 150px;
+        justify-content: center;
+        flex-wrap: wrap;
 		margin-left: 0;
 	}
 
 	.giftPage__detailsFirstButtons > a > button:first-child {
-		font-size: 12px;
-		width: 130px;
+		font-size: 11px;
+        margin: 5px;
+		width: 120px;
 		padding: 12px;
 	}
 
 	.giftPage__detailsFirstButtons > button:last-child {
-		font-size: 12px;
-		width: 130px;
+		font-size: 11px;
+        margin: 5px;
+		width: 120px;
 		padding: 12px;
 	}
 }
