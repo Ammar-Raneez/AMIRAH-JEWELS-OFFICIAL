@@ -5,7 +5,7 @@
 	justify-content: center;
 	position: relative;
 	margin-top: 5vw;
-	margin-bottom: 100px;
+	margin-bottom: 5vw;
 }
 .registerPage__firstJewel {
 	display: flex;
@@ -56,7 +56,7 @@
 .registerPage__formThirdInputs {
 	display: flex;
 	align-items: center;
-	margin-top: 1vw;
+	margin-top: 16px;
 	justify-content: space-between;
 }
 .registerPage__formThirdInputs > input {
@@ -87,7 +87,7 @@
 .registerPage__formSecond {
 	font-family: Quattrocento-Regular;
 	padding: 0.8vw;
-	margin-top: 1vw;
+	margin-top: 16px;
 	font-size: 1.2vw;
 	color: #707070;
 	font-weight: lighter;
@@ -108,7 +108,7 @@
 .registerPage__createButton > button {
 	padding: 1vw 3vw;
 	cursor: pointer;
-	margin-top: 1vw;
+	margin-top: 20px;
 	font-family: Quattrocento-Regular;
 	border: none;
 	font-size: 1vw;
@@ -151,6 +151,21 @@
 	src: url(Quattrocento-Regular.ttf);
 }
 
-@media screen and (max-width: 768px) {
-	
+@media screen and (max-width: 1000px) {
+	.registerPage__body {
+		width: 300px;
+	}
+
+	.registerPage__body > h1 {
+		font-size: 20px;
+	}
+
+	.registerPage__formFirst > input, .registerPage__formThirdInputs > input, .registerPage__formSecond, .registerPage__formThird, .registerPage__createButton > button, .registerPage__body > p {
+		font-size: 14px;
+	}
+
+	.registerPage__lastJewel > img,
+	.registerPage__firstJewel > img {
+		height: 50px;
+	}
 }
