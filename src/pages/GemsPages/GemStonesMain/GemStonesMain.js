@@ -17,7 +17,7 @@ function GemStonesMain() {
 						and internationally
 					</p>
 					<div className="gemStonesMain__detailsFirstButtons">
-						<Link to="/blue+sapphire">
+						<Link to="/blue+sapphires">
 							<button>VIEW PRODUCTS</button>
 						</Link>
 						<button>CALL US</button>

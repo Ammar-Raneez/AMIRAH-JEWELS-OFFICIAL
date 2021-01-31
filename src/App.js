@@ -34,8 +34,22 @@ function App() {
 						<RegisterPage />
 						<Footer />
 					</Route>
+					<Route path="/thanking">
+						<TopBar />
+						<Header />
+						<ThankyouCreatingAccount />
+						<Footer />
+					</Route>
+
 					<Route path="/highTea">
 						<h2>highTea component</h2>
+					</Route>
+
+					<Route path="/gemstones+metal">
+						<TopBar />
+						<Header />
+						<GemStonesMain />
+						<Footer />
 					</Route>
 					<Route path="/rose+gold">
 						<h2> Rose gold component</h2>
@@ -52,19 +66,13 @@ function App() {
 					<Route path="/teal+sapphires">
 						<h2>teal sapphires component</h2>
 					</Route>
-					<Route path="/gemstones+metal">
-						<TopBar />
-						<Header />
-						<GemStonesMain />
-						<Footer />
-					</Route>
 					<Route path="/pink+sapphires">
 						<h2> pink sapphires component</h2>
 					</Route>
 					<Route path="/yellow+gold">
 						<h2> yellow gold component</h2>
 					</Route>
-					<Route path="/blue+sapphire">
+					<Route path="/blue+sapphires">
 						<TopBar />
 						<Header />
 						<BlueGemDetail />
@@ -89,6 +97,13 @@ function App() {
 					<Route path="/explore+all+categories">
 						<h2>Explore All Categories component</h2>
 					</Route>
+
+					<Route path="/aboutus">
+						<TopBar />
+						<Header />
+						<AboutPageCompany />
+						<Footer />
+					</Route>
 					<Route path="/policy">
 						<TopBar />
 						<Header />
@@ -107,24 +122,21 @@ function App() {
 						<AboutPageCharity />
 						<Footer />
 					</Route>
+
 					<Route path="/process">
 						<TopBar />
 						<Header />
 						<ProcessPage />
 						<Footer />
 					</Route>
-					<Route path="/aboutus">
-						<TopBar />
-						<Header />
-						<AboutPageCompany />
-						<Footer />
-					</Route>
+
 					<Route path="/wishList">
 						<TopBar />
 						<Header />
 						<WishListPage />
 						<Footer />
 					</Route>
+
 					<Route path="/signature"></Route>
 					<Route path="/amarelo"></Route>
 					<Route path="/mi+amor"></Route>
@@ -132,12 +144,7 @@ function App() {
 					<Route path="/ombre"></Route>
 					<Route path="/numero"></Route>
 					<Route path="/explore+all+collection"></Route>
-					<Route path="/thanking">
-						<TopBar />
-						<Header />
-						<ThankyouCreatingAccount />
-						<Footer />
-					</Route>
+
 					<Route path="/">
 						<TopBar />
 						<Header />

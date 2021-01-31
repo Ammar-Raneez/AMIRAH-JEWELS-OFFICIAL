@@ -9,8 +9,7 @@
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	/* border: 1px black solid; */
-	height: 10vw;
+	height: 100px;
 	margin-bottom: 5vw;
 	justify-content: space-around;
 }
@@ -39,7 +38,6 @@
 	width: 45vw;
 }
 .aboutPageCompanyTop__firstJewel {
-	/* border: 1px black solid; */
 	display: flex;
 	align-items: flex-end;
 	justify-content: flex-end;
@@ -48,7 +46,6 @@
 	left: 3vw;
 }
 .aboutPageCompanyTop__lastJewel {
-	/* border: 1px black solid; */
 	display: flex;
 	position: relative;
 	bottom: 3vw;
@@ -69,7 +66,6 @@
 	font-family: Quattrocento-Regular;
 	align-items: center;
 	justify-content: center;
-	/* border: 1px black solid; */
 	background-color: white;
 	padding: 4vw 3vw;
 	border-radius: 1vw;
@@ -98,4 +94,25 @@
 .aboutPageCompanyLast {
 	height: 40vw;
 	margin-bottom: 40vw;
+}
+
+@media screen and (max-width: 900px) {
+	.aboutPageCompanyTop__middleContent > h2,
+	.aboutPageCompanyLast > h2 {
+		font-size: 30px;
+	}
+
+	.aboutPageCompanyLast {
+		height: 320px;
+	}
+
+	.aboutPageCompanyTop__middleContent > p {
+		font-size: 12px;
+		line-height: 18px;
+	}
+	
+	.aboutPageCompanyLast > p {
+		font-size: 12px;
+		line-height: 18px;
+	}
 }

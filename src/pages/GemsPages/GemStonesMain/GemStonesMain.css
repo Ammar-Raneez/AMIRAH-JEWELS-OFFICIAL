@@ -7,13 +7,11 @@
 }
 .gemStonesMain__details {
 	display: flex;
-	/* border: 1px black solid; */
 	align-items: center;
 	justify-content: space-between;
 	padding: 0 5vw;
 }
 .gemStonesMain__detailsFirst {
-	/* border: 1px black solid; */
 	width: 38vw;
 }
 .gemStonesMain__detailsFirst > h1 {
@@ -33,7 +31,6 @@
 .gemStonesMain__detailsFirstButtons {
 	display: flex;
 	margin: 1.5vw;
-	/* border: 1px black solid; */
 	justify-content: space-between;
 	align-items: center;
 }
@@ -42,7 +39,6 @@
 	width: 16vw;
 	cursor: pointer;
 	font-family: Quattrocento-Regular;
-	/* border: 1px red solid; */
 	z-index: 999;
 	border: none;
 	font-size: 1.1vw;
@@ -55,7 +51,7 @@
 .gemStonesMain__detailsFirstButtons > a > button:first-child:hover {
 	transition: 0.3s ease-in-out;
 	background-color: white;
-	border: 0.1vw #ffc0a1 solid;
+	border: 0.1px #ffc0a1 solid;
 }
 .gemStonesMain__detailsFirstButtons > button:last-child:hover {
 	transition: 0.3s ease-in-out;
@@ -83,4 +79,32 @@
 	display: flex;
 	align-items: center;
 	justify-content: space-evenly;
+}
+
+@media screen and (max-width: 900px) {
+	.gemStonesMain__detailsFirst > h1 {
+		font-size: 25px;
+	}	
+
+	.gemStonesMain__detailsFirst > p {
+		font-size: 12px;
+		line-height: 16px;
+	}
+
+	.gemStonesMain__detailsFirstButtons {
+		width: 280px;
+		margin-left: 0;
+	}
+
+	.gemStonesMain__detailsFirstButtons > a > button:first-child {
+		font-size: 12px;
+		width: 130px;
+		padding: 12px;
+	}
+
+	.gemStonesMain__detailsFirstButtons > button:last-child {
+		font-size: 12px;
+		width: 130px;
+		padding: 12px;
+	}
 }
