@@ -20,7 +20,7 @@ function WishListPage() {
 			{/* wishlist item */}
 			<div className="wishListPage__items">
 				<WishListItem
-					img="/wishListPage/ring.png"
+					img="/gems/orange-sapphire.png"
 					title="Diamond and Black Onyx Circle Pendant"
 					currency="$"
 					price={890}
@@ -31,20 +31,20 @@ function WishListPage() {
 					currency="$"
 					price={890}
 				/>
-								<WishListItem
-					img="/gems/teal-sapphire.png"
+				<WishListItem
+					img="/gems/purple-sapphire.png"
 					title="Diamond and Black Onyx Circle Pendant"
 					currency="$"
 					price={890}
 				/>
-								<WishListItem
-					img="/gems/teal-sapphire.png"
+				<WishListItem
+					img="/gems/white-sapphire.png"
 					title="Diamond and Black Onyx Circle Pendant"
 					currency="$"
 					price={890}
 				/>
-								<WishListItem
-					img="/gems/teal-sapphire.png"
+				<WishListItem
+					img="/gems/padparadscha-sapphire.png"
 					title="Diamond and Black Onyx Circle Pendant"
 					currency="$"
 					price={890}
