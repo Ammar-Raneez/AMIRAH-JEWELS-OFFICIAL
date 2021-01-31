@@ -13,6 +13,7 @@ import ProcessPage from './pages/ProcessPage/ProcessPage';
 import AboutPagePolicy from './pages/AboutPage/AboutPagePolicy';
 import AboutPageCareer from './pages/AboutPage/AboutPageCareer';
 import LoginPage from './pages/AccountPages/LoginPage/LoginPage';
+import WishListPage from './pages/WishListPage/WishListPage';
 
 function App() {
 	return (
@@ -105,6 +106,12 @@ function App() {
 						<TopBar />
 						<Header />
 						<AboutPageCompany />
+						<Footer />
+					</Route>
+					<Route path="/wishList">
+						<TopBar />
+						<Header />
+						<WishListPage />
 						<Footer />
 					</Route>
 					<Route path="/signature"></Route>

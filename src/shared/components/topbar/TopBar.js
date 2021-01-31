@@ -25,10 +25,13 @@ function TopBar() {
 					<PersonOutlinedIcon />
 					My Account
 				</div>
-				<FavoriteBorderIcon />
-				<LocalMallOutlinedIcon />
+				<Link to="/wishList">
+					<FavoriteBorderIcon />
+				</Link>
+				<Link>
+					<LocalMallOutlinedIcon />
+				</Link>
 			</div>
-
 		</div>
 	);
 }
