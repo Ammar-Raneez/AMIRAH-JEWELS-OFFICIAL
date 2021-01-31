@@ -32,7 +32,6 @@ function WishListPage() {
 				currency="$"
 				price={890}
 			/>
-           
 		</div>
 	);
 }

@@ -22,7 +22,7 @@ function WishListItem({img, title, currency, price}) {
 						</div>
 						<div className="wishListItem__detailsQuantity">
 							<p>Quantity</p>
-							<p>1+</p>
+							<p>1</p>
 						</div>
 						<div className="wishListItem__price">
 							<p>Price: {currency}{(Math.round(price * 100) / 100).toFixed(2)}</p>
