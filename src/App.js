@@ -10,6 +10,7 @@ import AboutPageCharity from './pages/AboutPage/AboutPageCharity';
 import ThankyouCreatingAccount from './pages/AccountPages/ThankyouCreatingAccount';
 import GemStonesMain from './pages/GemsPages/GemStonesMain/GemStonesMain';
 import ProcessPage from './pages/ProcessPage/ProcessPage';
+import WishListPage from './pages/WishListPage/WishListPage';
 
 function App() {
 	return (
@@ -97,6 +98,9 @@ function App() {
 						<Header />
 						<AboutPageCompany />
 						<Footer />
+					</Route>
+					<Route path="/wishList">
+						<WishListPage />
 					</Route>
 					<Route path="/signature"></Route>
 					<Route path="/amarelo"></Route>
