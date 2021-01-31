@@ -9,7 +9,6 @@
 	justify-content: space-between;
 	padding: 0 1vw;
 	align-items: center;
-	/* height: 5vw; */
 }
 
 .topbar__center__TopLogo {
@@ -48,7 +47,6 @@
 	font-size: 1.9vw !important;
 	transition: 0.3s ease;
 	color: rgb(255, 177, 109);
-	/* color: black; */
 }
 
 .topbar__right > .MuiSvgIcon-root:hover,
