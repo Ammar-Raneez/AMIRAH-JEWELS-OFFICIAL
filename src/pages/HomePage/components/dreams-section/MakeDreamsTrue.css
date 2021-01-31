@@ -4,13 +4,11 @@
 	overflow-x: hidden !important;
 	align-items: center;
 	justify-content: space-evenly;
-	/* margin-top: 32vw; */
 }
 /* ---------------------------TOP SECTION-------------------------- */
 .homePage__makeDreamsTrue__topImage {
 	object-fit: contain;
 	height: 28vw;
-	/* border: 1px black solid; */
 }
 .homePage__makeDreamsTrue > h1 {
 	font-family: bowie;
@@ -20,7 +18,6 @@
 	font-weight: lighter;
 }
 .homePage__makeDreamsTrue__top {
-	/* border: 1px black solid; */
 	width: 100%;
 	display: flex;
 	align-items: center;
@@ -29,14 +26,12 @@
 	justify-content: space-evenly;
 }
 .homePage__makeDreamsTrue__topPurchase {
-	/* border: 1px black solid; */
 	display: flex;
 	flex-direction: column;
 	justify-content: space-evenly;
 }
 .homePage__makeDreamsTrue__topPrices {
 	display: flex;
-	/* border: 1px black solid; */
 	align-self: flex-end;
 	flex: 0.4;
 	flex-direction: column;
@@ -87,7 +82,6 @@
 	display: flex;
 	margin-top: 18vw;
 	align-items: center;
-	/* border: 1px red solid; */
 	width: 100%;
 }
 .homePage__makeDreamsTrue__middle__image {
@@ -95,10 +89,8 @@
 	height: 18vw;
 	position: absolute;
 	right: 0vw;
-	/* border: 1px black solid; */
 }
 .homePage__makeDreamsTrue__middleText {
-	/* border: 1px red solid; */
 	height: 10vw;
 	padding-left: 8vw;
 	width: 30vw;
@@ -115,7 +107,6 @@
 	display: flex;
 	margin-top: 18vw;
 	margin-bottom: 5vw;
-	/* border: 1px red solid; */
 	flex-direction: column;
 	width: 100%;
 	align-items: center;
@@ -124,24 +115,20 @@
 .homePage__makeDreamsTrue__bottom > p {
 	font-family: Quattrocento-Regular;
 	font-size: 1.8vw;
-	/* border: 1px red solid; */
 	color: #707070;
 }
 .homePage__makeDreamsTrue__bottomImageDetail {
 	width: 100%;
 	padding: 5vw;
 	display: flex;
-	/* border: 1px red solid; */
 	justify-content: center;
 	align-items: center;
 }
 .homePage__makeDreamsTrue__bottomImageDetail > img {
-	/* border: 1px red solid; */
 	object-fit: contain;
 	height: 30vw;
 }
 .homePage__makeDreamsTrue__bottomImageDetailFirst, .homePage__makeDreamsTrue__bottomImageDetailSecond {
-	/* border: 1px red solid; */
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -155,7 +142,6 @@
 .homePage__makeDreamsTrue__bottomImageDetailFirstWeight,
 .homePage__makeDreamsTrue__bottomImageDetailFirstMetalWeight,
 .homePage__makeDreamsTrue__bottomImageDetailFirstPurity {
-	/* border: 1px red solid; */
 	width: 100%;
 }
 .homePage__makeDreamsTrue__bottomImageDetailFirstWeight p,
