@@ -1,8 +1,8 @@
 .product {
 	display: flex;
 	align-items: center;
-    justify-content: center;
-    padding: 20px;
+	justify-content: center;
+	padding: 20px;
 	flex-direction: column;
 }
 .product > img {
@@ -42,4 +42,21 @@
 .product > img:hover {
 	transition: 0.3s ease-in-out;
 	transform: scale(1.05);
+}
+@media screen and (max-width: 900px) {
+	.product > p {
+		font-size: 12px;
+		line-height: 16px;
+	}
+
+	.product > button {
+		font-size: 12px;
+		width: 130px;
+		margin-left: 0;
+	}
+
+	.product > img {
+		object-fit: contain;
+		height: 200px;
+	}
 }
