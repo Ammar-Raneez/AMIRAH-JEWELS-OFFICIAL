@@ -3,7 +3,7 @@
     width: 100%;
 }
 .footer__main {
-    padding: 3vw 5vw;
+    padding: 3vw 1vw 3vw 3vw;
 	background-color: #ffe7dc;
 	display: flex;
 	flex-direction: column;
@@ -30,7 +30,7 @@
 .footer a {
 	text-decoration: none;
 	margin-bottom: 1vw;
-	font-size: 1vw;
+	font-size: 14px;
 	font-family: Quattrocento-Regular;
 	color: #707070;
 }
@@ -39,7 +39,7 @@
 	font-weight: bold;
 }
 .footer p:first-child {
-	font-size: 1.2vw;
+	font-size: 14px;
 	color: #707070;
 	padding: 1vw 0;
 	font-family: Quattrocento-Regular;
@@ -48,8 +48,8 @@
 .footer__rightSectionDescription {
 	color: #707070;
 	font-family: Quattrocento-Regular;
-	font-size: 1vw;
-	line-height: 1.8vw;
+	font-size: 14px;
+	line-height: 16px;
 	width: 20vw;
 }
 
@@ -66,7 +66,7 @@
 	font-family: Quattrocento-Regular;
 	padding: 0.8vw;
 	border-bottom: 0.1vw solid #707070;
-	font-size: 1vw;
+	font-size: 14px;
 	color: #707070;
 }
 .footer__rightSection > form > button {
@@ -75,7 +75,7 @@
 	margin-top: 1vw;
 	font-family: Quattrocento-Regular;
 	border: none;
-    font-size: 1vw;
+    font-size: 14px;
     margin-top: 3vw;
     background-color: transparent;
 	outline: none;
@@ -106,6 +106,12 @@
 	src: url(Quattrocento-Regular.ttf);
 }
 
-@media screen and (max-width: 968px) {
+@media screen and (max-width: 600px) {
+	.footer a, .footer p:first-child, .footer__rightSectionDescription, .footer__rightSection > form > input, .footer__rightSection > form > button {
+		font-size: 12px;
+	}
 
+	.footer__rightSectionDescription {
+		line-height: 14px;
+	}
 }
