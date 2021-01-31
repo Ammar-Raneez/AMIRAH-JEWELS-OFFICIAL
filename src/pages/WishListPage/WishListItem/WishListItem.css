@@ -41,10 +41,10 @@
 }
 .wishListItem__price {
 	display: flex;
-	margin-bottom: 2vw;
+	margin-bottom: 24px;
 	align-items: center;
 	border: 1px solid #535353;
-	padding: 1vw;
+	padding: 12px;
 	margin-top: 1vw;
 	font-family: Quattrocento-Regular;
 	color: black;
