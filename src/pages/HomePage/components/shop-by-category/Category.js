@@ -9,23 +9,23 @@ function Category() {
 
             <div className="homePage__categoryRow">
                 <div className="homePage__categoryEach">
-                    <img src="homepage category/necklace.png" />
+                    <img alt="necklace-category" src="homepage category/necklace.png" />
                     <p>Necklaces & Pendants</p>
                 </div>
                 <div className="homePage__categoryEach">
-                    <img src="homepage category/earrings.png" />
+                    <img alt="earring-category" src="homepage category/earrings.png" />
                     <p>Earrings</p>
                 </div>
                 <div className="homePage__categoryEach">
-                    <img src="homepage category/rings.png" />
+                    <img alt="ring-category" src="homepage category/rings.png" />
                     <p>Rings</p>
                 </div>
                 <div className="homePage__categoryEach">
-                    <img src="homepage category/bracelets.png" />
+                    <img alt="bracelet-category" src="homepage category/bracelets.png" />
                     <p>Bracelets</p>
                 </div>
                 <div className="homePage__categoryEach">
-                    <img src="homepage category/engagement rings.png" />
+                    <img alt="engagementRing-category" src="homepage category/engagement rings.png" />
                     <p>Engagement Rings</p>
                 </div>
             </div>

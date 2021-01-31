@@ -1,4 +1,4 @@
-import { Link, useHistory } from 'react-router-dom';
+import { useHistory } from 'react-router-dom';
 import './ThankyouCreatingAccount.css';
 
 function ThankyouCreatingAccount() {
@@ -8,7 +8,7 @@ function ThankyouCreatingAccount() {
 		<div className="thankingPage">
 			{/* jewel image */}
 			<div className="thankingPage__firstJewel">
-				<img src="purple-sapphire.png" alt="" />
+				<img src="aboutuspage/purple-sapphire.png" alt="" />
 			</div>
 			{/* form */}
 			<div className="thankingPage__body">
@@ -23,7 +23,7 @@ function ThankyouCreatingAccount() {
 
 			{/* jewel image */}
 			<div className="thankingPage__lastJewel">
-				<img src="purple-sapphire.png" alt="" />
+				<img src="aboutuspage/purple-sapphire.png" alt="" />
 			</div>
 		</div>
 	);

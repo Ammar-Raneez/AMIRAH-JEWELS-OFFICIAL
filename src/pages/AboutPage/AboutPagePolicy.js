@@ -1,9 +1,10 @@
-import About from "./About/About";
+import React from 'react'
+import About from './About/About';
 
-function AboutPageCompany() {
+function AboutPagePolicy() {
 	return (
 		<About 
-			title="AMIRAH GEMS"
+			title="AMIRAH GEMS POLICY"
 			firstPara="Every story has a beginning. Discover how Amirah Gems began in 2020 and grew into a global design house at the forefront of innovative jewelry design and expert craftsmanship"
 			secondHeader="2020"
 			secondSubHeader="THE JOURNEY"
@@ -14,4 +15,4 @@ function AboutPageCompany() {
 	);
 }
 
-export default AboutPageCompany;
+export default AboutPagePolicy

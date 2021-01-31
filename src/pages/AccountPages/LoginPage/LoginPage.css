@@ -1,0 +1,78 @@
+@font-face {
+	font-family: bowie;
+	src: url(BOOWIE.ttf);
+}
+
+@font-face {
+	font-family: Quattrocento-Regular;
+	src: url(Quattrocento-Regular.ttf);
+}
+
+.loginPage {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 5vw;
+    margin-top: 8vw;
+}
+
+.loginPage div {
+    /* min-width: 500px; */
+    max-width: 37vw;
+    min-width: 37vw;
+    padding: 0 50px;
+    color: #555555;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.loginPage .loginPage__title  {
+    font-family: bowie;
+    font-size: 3vw;
+}
+
+.loginPage .loginPage__subTitle {
+    font-family: Quattrocento-Regular;
+    font-size: 1.2vw;
+    margin-top: 1vw;
+    margin-bottom: 3vw;
+}
+
+.loginPage__leftSide {
+	display: flex;
+	flex-direction: column;
+}
+
+.loginPage__leftSide > div > input {
+	width: 95%;
+	outline: none;
+	border-top: none;
+	border-right: none;
+	border-left: none;
+	font-family: Quattrocento-Regular;
+	padding: 0.8vw;
+	border-bottom: 0.1vw solid #707070;
+	font-size: 1vw;
+	color: #707070;
+}
+
+.loginPage > div > div > button {
+	padding: 1vw 3vw;
+	cursor: pointer;
+    margin-top: 1vw;
+    width: 100%;
+	font-family: Quattrocento-Regular;
+	border: none;
+	font-size: 1.3vw;
+	color: #555555;
+	outline: none;
+	background-color: #ffc0a1;
+    border-radius: 0.7vw;
+    margin-top: 2vw;
+    transition: 0.3s ease;
+}
+.loginPage > div > div > button:hover {
+    background: #fff;
+    border: 1px solid #e58177;
+}

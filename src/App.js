@@ -1,15 +1,18 @@
 import './App.css';
 import HomePage from './pages/HomePage/HomePage';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
-import RegisterPage from './pages/AccountPages/RegisterPage';
+import RegisterPage from './pages/AccountPages/RegisterPage/RegisterPage';
 import Footer from './shared/components/Footer/Footer';
 import TopBar from './shared/components/topbar/TopBar';
 import Header from './shared/components/header/Header';
 import AboutPageCompany from './pages/AboutPage/AboutPageCompany';
 import AboutPageCharity from './pages/AboutPage/AboutPageCharity';
-import ThankyouCreatingAccount from './pages/AccountPages/ThankyouCreatingAccount';
+import ThankyouCreatingAccount from './pages/AccountPages/ThankyouPage/ThankyouCreatingAccount';
 import GemStonesMain from './pages/GemsPages/GemStonesMain/GemStonesMain';
 import ProcessPage from './pages/ProcessPage/ProcessPage';
+import AboutPagePolicy from './pages/AboutPage/AboutPagePolicy';
+import AboutPageCareer from './pages/AboutPage/AboutPageCareer';
+import LoginPage from './pages/AccountPages/LoginPage/LoginPage';
 import WishListPage from './pages/WishListPage/WishListPage';
 import BlueGemDetail from './pages/GemsPages/SapphireViewDetails/BlueGemDetail';
 
@@ -18,8 +21,11 @@ function App() {
 		<Router>
 			<div className="app">
 				<Switch>
-					<Route path="/loginIn">
-						<h2> login component</h2>
+					<Route path="/login">
+						<TopBar />
+						<Header />
+						<LoginPage />
+						<Footer />
 					</Route>
 					<Route path="/register">
 						<TopBar />
@@ -29,9 +35,6 @@ function App() {
 					</Route>
 					<Route path="/highTea">
 						<h2>highTea component</h2>
-					</Route>
-					<Route path="/SignUp">
-						<h2> SignUp component</h2>
 					</Route>
 					<Route path="/rose+gold">
 						<h2> Rose gold component</h2>
@@ -83,10 +86,16 @@ function App() {
 						<h2>Explore All Categories component</h2>
 					</Route>
 					<Route path="/policy">
-						<h2>policy component</h2>
+						<TopBar />
+						<Header />
+						<AboutPagePolicy />
+						<Footer />
 					</Route>
 					<Route path="/careers">
-						<h2>careers component</h2>
+						<TopBar />
+						<Header />
+						<AboutPageCareer />
+						<Footer />
 					</Route>
 					<Route path="/charity">
 						<TopBar />
