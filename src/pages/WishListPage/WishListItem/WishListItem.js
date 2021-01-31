@@ -30,7 +30,6 @@ function WishListItem({img, title, currency, price}) {
 					</div>
 				</div>
 			</div>
-			<hr />
 		</div>
 	);
 }
