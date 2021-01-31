@@ -76,3 +76,7 @@
     background: #fff;
     border: 1px solid #e58177;
 }
+
+@media screen and (max-width: 768px) {
+    
+}
