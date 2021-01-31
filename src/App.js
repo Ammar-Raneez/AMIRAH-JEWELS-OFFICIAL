@@ -100,7 +100,10 @@ function App() {
 						<Footer />
 					</Route>
 					<Route path="/wishList">
+						<TopBar />
+						<Header />
 						<WishListPage />
+						<Footer />
 					</Route>
 					<Route path="/signature"></Route>
 					<Route path="/amarelo"></Route>
