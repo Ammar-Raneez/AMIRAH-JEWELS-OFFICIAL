@@ -1,10 +1,9 @@
 .wishListPage {
-	margin: 5vw;
+	margin: 3vw 5vw 5vw;
 	display: flex;
 	flex-direction: column;
 }
 .wishListPage__userDetails {
-	/* border: 1px red solid; */
 	font-family: Quattrocento-Regular;
 	font-size: 1.2vw;
 	color: #707070;
@@ -20,13 +19,12 @@
 	font-weight: bold;
 }
 .wishListPage__title {
-	margin-bottom: 4vw;
+	margin-bottom: 2vw;
 }
 .wishListPage__title > h1 {
 	font-family: bowie;
 	font-size: 2.5vw;
 	margin: 2vw 0;
-	/* border: 1px red solid; */
 	font-weight: lighter;
 	color: #707070;
 }
@@ -34,17 +32,14 @@
 	transition: 0.3s ease;
 	font-size: 1.5vw !important;
 }
-.wishListPage > hr {
-    width: 50vw;
-    border-top: 0.1vw solid #dadada;
-	border-left: none;
-    border-right: none;
-	border-color: #dadada !important;
-	border-bottom: none;
-}
-.wishListPage__titleContinueSection > .MuiSvgIcon-root:hover,
-.wishListPage__titleContinueSection:hover {
+.wishListPage__titleContinueSection > .MuiSvgIcon-root:hover, .wishListPage__titleContinueSection:hover {
 	transition: 0.3s ease;
 	color: rgb(255, 177, 109) !important;
 	cursor: pointer;
+}
+
+.wishListPage__items {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
 }
