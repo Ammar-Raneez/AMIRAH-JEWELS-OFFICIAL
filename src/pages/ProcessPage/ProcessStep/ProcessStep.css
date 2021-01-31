@@ -72,3 +72,10 @@
 .processStep__stepNameReflect {
 	margin: 6vw 5vw;
 }
+
+@media screen and (max-width: 768px) {
+	.processStep__descriptionReflect > p, .processStep__description > p {
+		font-size: 12px;
+		line-height: 14px;
+	}
+}

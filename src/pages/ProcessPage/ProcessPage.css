@@ -1,5 +1,5 @@
 .processPage {
-	margin-bottom: -31vw;
+	margin-bottom: 50px;
 	margin-top: 3vw;
 	display: flex;
 	justify-content: center;
@@ -62,5 +62,21 @@
 }
 
 @media screen and (max-width: 768px) {
-	
+	.processPage > h1 {
+		font-size: 20px;
+	}
+
+	.processPage > p {
+		font-size: 12px;
+		line-height: 14px;
+	}
+
+	.processPage__callBtn {
+		width: 350px;
+	}
+
+	.processPage__callBtn button {
+		font-size: 12px;
+		width: 150px;
+	}
 }
