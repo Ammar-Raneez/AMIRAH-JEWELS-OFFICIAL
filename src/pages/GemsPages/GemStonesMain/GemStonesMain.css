@@ -1,5 +1,4 @@
 .gemStonesMain {
-	margin-bottom: -30vw;
 	margin-top: 5vw;
 }
 .gemStonesMain__detailsSecond > img {
@@ -38,7 +37,7 @@
 	justify-content: space-between;
 	align-items: center;
 }
-.gemStonesMain__detailsFirstButtons > button:first-child {
+.gemStonesMain__detailsFirstButtons > a > button:first-child {
 	padding: 1.3vw 3vw;
 	width: 16vw;
 	cursor: pointer;
@@ -53,7 +52,7 @@
 	border-radius: 0.7vw;
 	transition: 0.3s ease-in-out;
 }
-.gemStonesMain__detailsFirstButtons > button:first-child:hover {
+.gemStonesMain__detailsFirstButtons > a > button:first-child:hover {
 	transition: 0.3s ease-in-out;
 	background-color: white;
 	border: 0.1vw #ffc0a1 solid;

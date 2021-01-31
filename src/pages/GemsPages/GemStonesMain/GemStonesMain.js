@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import Gem from '../Gem/Gem';
 import './GemStonesMain.css';
 
@@ -16,7 +17,9 @@ function GemStonesMain() {
 						and internationally
 					</p>
 					<div className="gemStonesMain__detailsFirstButtons">
-						<button>VIEW PRODUCTS</button>
+						<Link to="/blue+sapphire">
+							<button>VIEW PRODUCTS</button>
+						</Link>
 						<button>CALL US</button>
 					</div>
 				</div>
@@ -27,7 +30,7 @@ function GemStonesMain() {
 
 			<div className="gemStonesMain__otherGems">
 				<div className="gemStonesMain__otherGemsRow">
-					<Gem img="gems/teal-sapphire.png" name="Teal Sapphires" viewMoreUrl="/teal-sapphire" />
+					<Gem img="gems/teal-sapphire.png" name="Teal Sapphires" viewMoreUrl="/teal+sapphires" />
 					<Gem img="gems/purple-sapphire.png" name="Purple Sapphires" viewMoreUrl="/purple-sapphire" />
 				</div>
 				<div className="gemStonesMain__otherGemsRow">

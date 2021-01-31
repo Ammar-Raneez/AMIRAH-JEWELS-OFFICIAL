@@ -14,6 +14,7 @@ import AboutPagePolicy from './pages/AboutPage/AboutPagePolicy';
 import AboutPageCareer from './pages/AboutPage/AboutPageCareer';
 import LoginPage from './pages/AccountPages/LoginPage/LoginPage';
 import WishListPage from './pages/WishListPage/WishListPage';
+import BlueGemDetail from './pages/GemsPages/SapphireViewDetails/BlueGemDetail';
 
 function App() {
 	return (
@@ -47,6 +48,9 @@ function App() {
 					<Route path="/pearl+sapphires">
 						<h2>Pearl sapphires component</h2>
 					</Route>
+					<Route path="/teal+sapphires">
+						<h2>teal sapphires component</h2>
+					</Route>
 					<Route path="/gemstones+metal">
 						<TopBar />
 						<Header />
@@ -59,8 +63,11 @@ function App() {
 					<Route path="/yellow+gold">
 						<h2> yellow gold component</h2>
 					</Route>
-					<Route path="/blue+sapphires">
-						<h2> blue sapphires component</h2>
+					<Route path="/blue+sapphire">
+						<TopBar />
+						<Header />
+						<BlueGemDetail />
+						<Footer />
 					</Route>
 
 					<Route path="/rings">
