@@ -52,3 +52,7 @@
 .topbar__right > a > .MuiSvgIcon-root:hover {
 	color: black
 }
+
+@media screen and (max-width: 768px) {
+	
+}
