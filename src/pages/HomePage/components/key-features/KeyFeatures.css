@@ -9,9 +9,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    position: absolute;
     width: 100%;
-    height: 31vw;
     left: 0;
     color: #888;
     background-color:rgb(253, 246, 239);
@@ -48,4 +46,18 @@
     text-align: center;
     margin-top: 2vw;
     font-family: 'Quattrocento', serif;
+}
+
+@media screen and (max-width: 768px) {
+    .homePage__keyFeaturesTitle {
+        font-size: 30px;
+    }
+
+    .homePage__keyFeaturesMiddleContainer div .MuiSvgIcon-root {
+        font-size: 40px !important;
+    }
+
+    .homePage__keyFeaturesMiddleContainer div p {
+        font-size: 14px;
+    }
 }

@@ -29,25 +29,23 @@
 .homePage__bannerRight {
     width: 70%;
     background: transparent url('./tempbanner.png') 0% 0% no-repeat padding-box;
-    /* transform: scale(1.05); */
     background-size: cover;
-    /* background-position: right; */
 }
 
 .homePage__bannerLeftPhrase {
-    font-size: 3.5vw;
+    font-size: 3rem;
     margin-bottom: 3vw;
 }
 
 .homePage__bannerLeftPara {
-    font-size: 1.5vw;
+    font-size: 1rem;
     font-family: 'Quattrocento', serif;
     margin-bottom: 3vw;
 }
 
 .homePage__bannerLeftBtn {
     font-family: 'Quattrocento', serif;
-    font-size: 1.5vw;
+    font-size: 1.3rem;
     width:70%;
     text-align: center;
     padding: 15px 20px;
@@ -62,4 +60,26 @@
 
 .homePage__bannerLeftBtn:hover {
     background-color: #fff;
+}
+
+@media screen and (max-width: 768px) {
+    .homePage__bannerLeft {
+        width: 50%;
+    }
+
+    .homePage__bannerRight {
+        width: 50%;
+    }
+
+    .homePage__bannerLeftPhrase {
+        font-size: 30px;
+    }
+
+    .homePage__bannerLeftPara {
+        font-size: 14px;
+    }
+
+    .homePage__bannerLeftBtn {
+        font-size: 16px;
+    }
 }
