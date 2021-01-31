@@ -28,15 +28,15 @@ function Header() {
 								<Link className="header__optionsProductDetail" to="/rings"><span>Rings</span></Link>
 								<Link className="header__optionsProductDetail" to="/earrings"><span>Earrings</span></Link>
 								<Link className="header__optionsProductDetail" to="/bracelets"><span>Bracelets</span></Link>
-								<Link className="header__optionsProductDetail" to="/necklace+pendants"><span>Necklaces & Pendants</span></Link>
+								<Link className="hidden header__optionsProductDetail" to="/necklace+pendants"><span>Necklaces & Pendants</span></Link>
 								<Link style={{ color: '#656565', fontWeight: '600' }} className="header__optionsProductDetail" to="/explore+all+categories"><span>Explore All Categories</span></Link>
 							</div>
 							<div>
 								<p style={{ color: '#656565', fontWeight: '600' }}>Shop by Metal/Gemstones</p>
-								<Link className="header__optionsProductDetail" to="/yellow+gold"><span>Yellow Gold</span></Link>
-								<Link className="header__optionsProductDetail" to="/white+gold"><span>White Gold</span></Link>
-								<Link className="header__optionsProductDetail" to="/rose+gold"><span>Rose Gold</span></Link>
-								<Link className="header__optionsProductDetail" to="/diamonds"><span>Diamonds</span></Link>
+								<Link className="hidden header__optionsProductDetail" to="/yellow+gold"><span>Yellow Gold</span></Link>
+								<Link className="hidden header__optionsProductDetail" to="/white+gold"><span>White Gold</span></Link>
+								<Link className="hidden header__optionsProductDetail" to="/rose+gold"><span>Rose Gold</span></Link>
+								<Link className="hidden header__optionsProductDetail" to="/diamonds"><span>Diamonds</span></Link>
 								<Link className="header__optionsProductDetail" to="/blue+sapphires"><span>Blue Sapphires</span></Link>
 								<Link className="header__optionsProductDetail" to="/pink+sapphires"><span>Pink Sapphires</span></Link>
 								<Link className="header__optionsProductDetail" to="/pink+sapphires"><span>Pearl Sapphires</span></Link>
@@ -44,9 +44,9 @@ function Header() {
 							</div>
 							<div>
 								<p style={{ color: '#656565', fontWeight: '600' }}>Featured Collections</p>
-								<Link className="header__optionsProductDetail" to="/signature"><span>Signature</span></Link>
-								<Link className="header__optionsProductDetail" to="/amarelo"><span>Amarelo</span></Link>
-								<Link className="header__optionsProductDetail" to="/mi+amor"><span>Mi Amor</span></Link>
+								<Link className="hidden header__optionsProductDetail" to="/signature"><span>Signature</span></Link>
+								<Link className="hidden header__optionsProductDetail" to="/amarelo"><span>Amarelo</span></Link>
+								<Link className="hidden header__optionsProductDetail" to="/mi+amor"><span>Mi Amor</span></Link>
 								<Link className="header__optionsProductDetail" to="/dew+drops"><span>Dew Drops</span></Link>
 								<Link className="header__optionsProductDetail" to="/ombre"><span>Ombre</span></Link>
 								<Link className="header__optionsProductDetail" to="/numero"><span>Numero</span></Link>
