@@ -7,7 +7,7 @@ import TopBar from './shared/components/topbar/TopBar';
 import Header from './shared/components/header/Header';
 import AboutPageCompany from './pages/AboutPage/AboutPageCompany';
 import AboutPageCharity from './pages/AboutPage/AboutPageCharity';
-import ThankyouCreatingAccount from './pages/RegisterPage/ThankyouCreatingAccount';
+import ThankyouCreatingAccount from './pages/AccountPages/ThankyouCreatingAccount';
 import GemStonesMain from './pages/GemsPages/GemStonesMain/GemStonesMain';
 import ProcessPage from './pages/ProcessPage/ProcessPage';
 
