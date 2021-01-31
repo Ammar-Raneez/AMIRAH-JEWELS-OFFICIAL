@@ -7,13 +7,11 @@
 }
 .gemStonesMain__details {
 	display: flex;
-	/* border: 1px black solid; */
 	align-items: center;
 	justify-content: space-between;
 	padding: 0 5vw;
 }
 .gemStonesMain__detailsFirst {
-	/* border: 1px black solid; */
 	width: 38vw;
 }
 .gemStonesMain__detailsFirst > h1 {
@@ -33,7 +31,6 @@
 .gemStonesMain__detailsFirstButtons {
 	display: flex;
 	margin: 1.5vw;
-	/* border: 1px black solid; */
 	justify-content: space-between;
 	align-items: center;
 }
@@ -42,7 +39,6 @@
 	width: 16vw;
 	cursor: pointer;
 	font-family: Quattrocento-Regular;
-	/* border: 1px red solid; */
 	z-index: 999;
 	border: none;
 	font-size: 1.1vw;
@@ -82,4 +78,8 @@
 	display: flex;
 	align-items: center;
 	justify-content: space-evenly;
+}
+
+@media screen and (max-width: 768px) {
+	
 }
