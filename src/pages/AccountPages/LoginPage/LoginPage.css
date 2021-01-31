@@ -11,14 +11,16 @@
 .loginPage {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
     margin-bottom: 5vw;
     margin-top: 8vw;
+    overflow-x: hidden;
 }
 
 .loginPage div {
-    /* min-width: 500px; */
-    max-width: 37vw;
-    min-width: 37vw;
+    overflow-x: hidden;
+    min-width: 500px;
+    max-width: 500px;
     padding: 0 50px;
     color: #555555;
     display: flex;
@@ -77,6 +79,22 @@
     border: 1px solid #e58177;
 }
 
-@media screen and (max-width: 768px) {
-    
+@media screen and (max-width: 1250px) {
+    .loginPage div {
+        min-width: 80%;
+        max-width: 80%;
+        margin: 14px;
+    }
+
+    .loginPage .loginPage__title {
+        font-size: 30px;
+    }
+
+    .loginPage .loginPage__subTitle, .loginPage > div > div > button, .loginPage__leftSide > div > input {
+        font-size: 14px;
+    }
+
+    .loginPage {
+        justify-content: center;
+    }
 }
