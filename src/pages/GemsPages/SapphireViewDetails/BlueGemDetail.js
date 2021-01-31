@@ -4,11 +4,19 @@ import { Link } from 'react-router-dom';
 import './GemDetails.css';
 
 function BlueGemDetail() {
-	const [displayImage, setDisplayImage] = useState('gems/teal-sapphire.png');
+    const [displayImage, setDisplayImage] = useState('gems/teal-sapphire.png');
+    
 	const selectedImage = (imagePath) => {
 		console.log('/' + imagePath.split('/').reverse()[1] + '/' + imagePath.split('/').reverse()[0]);
 		setDisplayImage('/' + imagePath.split('/').reverse()[1] + '/' + imagePath.split('/').reverse()[0]);
-	};
+    };
+    
+    const tableRow = (description, detail) => (
+        <div className="tableRow">
+            <p>{description}</p>
+            <p>{detail}</p>
+        </div>
+    );
 
 	return (
 		<div className="gemDetails">
@@ -33,7 +41,7 @@ function BlueGemDetail() {
 						onClick={(e) => {
 							selectedImage(e.target.src);
 						}}
-						src="gems/teal-sapphire.png"
+						src="gems/white-sapphire.png"
 						alt=""
 					/>
 				</div>
@@ -72,10 +80,30 @@ function BlueGemDetail() {
 			</div>
 
 			{/* video content */}
-			<div className="gemDetails__sectionVideo"></div>
+			<div className="gemDetails__sectionVideo">
+				<h2>Video Content:</h2>
+				<video src="" loop controls autoplay></video>
+			</div>
 
 			{/* description and details */}
-			<div className="gemDetails__sectionDescription"></div>
+			<div className="gemDetails__sectionDescription">
+				<h2>Description & Details</h2>
+                <div className="gemDetails__sectionDescriptionTable">
+                    {tableRow("Main Stone", "Natural Sapphire")}
+                    {tableRow("Brand", "Natural Sapphire")}
+                    {tableRow("Verity", "Sapphire")}
+                    {tableRow("Shape", "Round")}
+                    {tableRow("Treatment", "Heated")}
+                    {tableRow("Country", "Sri Lanka")}
+                    {tableRow("Length (mm)", "6.87")}
+                    {tableRow("Width (mm)", "6.08")}
+                    {tableRow("Depth (mm)", "3.78")}
+                    {tableRow("Clarity", "-")}
+                    {tableRow("Cutting", "Natural Sapphire")}
+                    {tableRow("Weight (Carat)", "Natural Sapphire")}
+                    {tableRow("Certificate", "GIC")}
+                </div>
+			</div>
 
 			{/* other similar products */}
 			<div className="gemDetails__sectionProduct"></div>
