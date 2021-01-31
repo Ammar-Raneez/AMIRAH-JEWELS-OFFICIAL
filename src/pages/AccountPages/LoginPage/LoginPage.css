@@ -73,7 +73,6 @@
     transition: 0.3s ease;
 }
 .loginPage > div > div > button:hover {
-    color: #e58177;
     background: #fff;
     border: 1px solid #e58177;
 }
