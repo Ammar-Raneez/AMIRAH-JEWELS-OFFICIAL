@@ -1,6 +1,6 @@
 import './GemDetails.css'
 
-function GemDetails() {
+function TealGemDetail() {
     return (
         <div>
             
@@ -8,4 +8,4 @@ function GemDetails() {
     )
 }
 
-export default GemDetails
+export default TealGemDetail
