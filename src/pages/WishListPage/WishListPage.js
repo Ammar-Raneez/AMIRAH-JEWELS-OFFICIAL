@@ -20,7 +20,12 @@ function WishListPage() {
 			{/* top border */}
 			<hr />
 			{/* wishlist item */}
-			<WishListItem />
+			<WishListItem
+				img="/wishListPage/ring.png"
+				title="Diamond and Black Onyx Circle Pendant"
+				currency="$"
+				price={890}
+			/>
 		</div>
 	);
 }
