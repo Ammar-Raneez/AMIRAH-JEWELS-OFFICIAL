@@ -22,7 +22,7 @@
 	font-family: Quattrocento-Regular;
 	/* border: 1px red solid; */
 	border: none;
-	font-size: 1vw;
+	font-size: 14px;
 	z-index: 999;
 	color: #555555;
 	outline: none;
@@ -40,4 +40,10 @@
 .gem > img:hover {
 	transition: 0.3s ease-in-out;
 	transform: scale(1.05);
+}
+
+@media screen and (max-width: 900px) {
+	.gem > button {
+		font-size: 12px;
+	}
 }
