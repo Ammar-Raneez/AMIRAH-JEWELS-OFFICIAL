@@ -5,7 +5,7 @@ function RegisterPage() {
 		<div className="registerPage">
 			{/* jewel image */}
 			<div className="registerPage__firstJewel">
-				<img src="purple-sapphire.png" alt="" />
+				<img src="gems/purple-sapphire.png" alt="" />
 			</div>
 			{/* form */}
 			<div className="registerPage__body">
@@ -46,7 +46,7 @@ function RegisterPage() {
 
 			{/* jewel image */}
 			<div className="registerPage__lastJewel">
-				<img src="purple-sapphire.png" alt="" />
+				<img src="gems/purple-sapphire.png" alt="" />
 			</div>
 		</div>
 	);
