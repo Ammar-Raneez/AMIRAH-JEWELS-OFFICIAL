@@ -1,22 +1,25 @@
 import FavoriteBorderIcon from '@material-ui/icons/FavoriteBorder';
+import FavoriteIcon from '@material-ui/icons/Favorite';
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
+import Gem from '../Gem/Gem';
 import './GemDetails.css';
 
 function BlueGemDetail() {
-    const [displayImage, setDisplayImage] = useState('gems/teal-sapphire.png');
-    
+	const [displayImage, setDisplayImage] = useState('gems/teal-sapphire.png');
+	const [addToWishList, setAddToWishList] = useState(false);
+
 	const selectedImage = (imagePath) => {
 		console.log('/' + imagePath.split('/').reverse()[1] + '/' + imagePath.split('/').reverse()[0]);
 		setDisplayImage('/' + imagePath.split('/').reverse()[1] + '/' + imagePath.split('/').reverse()[0]);
-    };
-    
-    const tableRow = (description, detail) => (
-        <div className="tableRow">
-            <p>{description}</p>
-            <p>{detail}</p>
-        </div>
-    );
+	};
+
+	const tableRow = (description, detail) => (
+		<div className="tableRow">
+			<p>{description}</p>
+			<p>{detail}</p>
+		</div>
+	);
 
 	return (
 		<div className="gemDetails">
@@ -48,7 +51,11 @@ function BlueGemDetail() {
 				<div className="gemDetails__sectionCartMainImage">
 					<img src={displayImage} alt="" />
 					<div className="gemDetails__sectionCartMainImageIcon">
-						<FavoriteBorderIcon />
+						{addToWishList ? (
+							<FavoriteIcon onClick={(e) => setAddToWishList(false)} />
+						) : (
+							<FavoriteBorderIcon onClick={(e) => setAddToWishList(true)} />
+						)}
 					</div>
 				</div>
 				<div className="gemDetails__sectionCartCartDetails">
@@ -88,25 +95,49 @@ function BlueGemDetail() {
 			{/* description and details */}
 			<div className="gemDetails__sectionDescription">
 				<h2>Description & Details</h2>
-                <div className="gemDetails__sectionDescriptionTable">
-                    {tableRow("Main Stone", "Natural Sapphire")}
-                    {tableRow("Brand", "Natural Sapphire")}
-                    {tableRow("Verity", "Sapphire")}
-                    {tableRow("Shape", "Round")}
-                    {tableRow("Treatment", "Heated")}
-                    {tableRow("Country", "Sri Lanka")}
-                    {tableRow("Length (mm)", "6.87")}
-                    {tableRow("Width (mm)", "6.08")}
-                    {tableRow("Depth (mm)", "3.78")}
-                    {tableRow("Clarity", "-")}
-                    {tableRow("Cutting", "Natural Sapphire")}
-                    {tableRow("Weight (Carat)", "Natural Sapphire")}
-                    {tableRow("Certificate", "GIC")}
-                </div>
+				<div className="gemDetails__sectionDescriptionTable">
+					{tableRow('Main Stone', 'Natural Sapphire')}
+					{tableRow('Brand', 'Natural Sapphire')}
+					{tableRow('Verity', 'Sapphire')}
+					{tableRow('Shape', 'Round')}
+					{tableRow('Treatment', 'Heated')}
+					{tableRow('Country', 'Sri Lanka')}
+					{tableRow('Length (mm)', '6.87')}
+					{tableRow('Width (mm)', '6.08')}
+					{tableRow('Depth (mm)', '3.78')}
+					{tableRow('Clarity', '-')}
+					{tableRow('Cutting', 'Natural Sapphire')}
+					{tableRow('Weight (Carat)', 'Natural Sapphire')}
+					{tableRow('Certificate', 'GIC')}
+				</div>
 			</div>
 
 			{/* other similar products */}
-			<div className="gemDetails__sectionProduct"></div>
+			<div className="gemDetails__sectionProduct">
+				<h2>Other Similar Products</h2>
+				<h3>Showing 1 - 40 of 1020</h3>
+
+				<div className="gemDetails__otherGemsRow">
+					<Gem img="gems/teal-sapphire.png" name="Teal Sapphires" viewMoreUrl="/teal+sapphires" />
+					<Gem img="gems/purple-sapphire.png" name="Purple Sapphires" viewMoreUrl="/purple-sapphire" />
+				</div>
+				<div className="gemDetails__otherGemsRow">
+					<Gem
+						img="gems/Padparadscha-sapphire.png"
+						name="Padparadscha Sapphires"
+						viewMoreUrl="/padparadscha-sapphire"
+					/>
+					<Gem img="gems/orange-sapphire.png" name="Orange Sapphires" viewMoreUrl="/orange-sapphire" />
+				</div>
+				<div className="gemDetails__otherGemsRow">
+					<Gem
+						img="gems/ClaudiaHamann_PinkSapphire_Ceylon_Cushion_Unheated.png"
+						name="Pink Sapphires"
+						viewMoreUrl="/pink-sapphire"
+					/>
+					<Gem img="gems/white-sapphire.png" name="White Sapphires" viewMoreUrl="/white+sapphires" />
+				</div>
+			</div>
 		</div>
 	);
 }

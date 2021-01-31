@@ -3,6 +3,7 @@
 	flex-direction: column;
 	align-items: center;
 	margin-top: 80px;
+	margin-bottom: 80px;
 	/* border: 1px red solid; */
 	position: relative;
 	justify-content: center;
@@ -124,10 +125,17 @@
 	/* border: 1px red solid; */
 }
 .gemDetails__sectionVideo > h2,
-.gemDetails__sectionDescription > h2 {
+.gemDetails__sectionDescription > h2,
+.gemDetails__sectionProduct > h2 {
 	font-family: Quattrocento-Regular;
 	color: #707070;
 	margin: 100px 0 20px 0;
+}
+.gemDetails__sectionProduct > h3 {
+	font-family: Quattrocento-Regular;
+	color: #707070;
+    font-weight: lighter;
+    margin-bottom: 50px;
 }
 .gemDetails__sectionVideo > video {
 	object-fit: contain;
@@ -152,4 +160,9 @@
 }
 .tableRow > p:first-child {
 	font-weight: bold;
+}
+.gemDetails__otherGemsRow {
+	display: flex;
+	align-items: center;
+	justify-content: space-evenly;
 }
