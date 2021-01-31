@@ -15,6 +15,7 @@ import AboutPageCareer from './pages/AboutPage/AboutPageCareer';
 import LoginPage from './pages/AccountPages/LoginPage/LoginPage';
 import WishListPage from './pages/WishListPage/WishListPage';
 import BlueGemDetail from './pages/GemsPages/SapphireViewDetails/BlueGemDetail';
+import NecklacePendantPage from './pages/NecklacePendantPage/NecklacePendantPage';
 
 function App() {
 	return (
@@ -80,7 +81,10 @@ function App() {
 						<h2>bracelets component</h2>
 					</Route>
 					<Route path="/necklace+pendants">
-						<h2> necklace & pendants component</h2>
+						<TopBar />
+						<Header />
+						<NecklacePendantPage />
+						<Footer />
 					</Route>
 					<Route path="/explore+all+categories">
 						<h2>Explore All Categories component</h2>
