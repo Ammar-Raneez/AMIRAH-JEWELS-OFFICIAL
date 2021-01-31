@@ -9,7 +9,7 @@
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	height: 10vw;
+	height: 100px;
 	margin-bottom: 5vw;
 	justify-content: space-around;
 }
@@ -96,6 +96,23 @@
 	margin-bottom: 40vw;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 900px) {
+	.aboutPageCompanyTop__middleContent > h2,
+	.aboutPageCompanyLast > h2 {
+		font-size: 30px;
+	}
+
+	.aboutPageCompanyLast {
+		height: 320px;
+	}
+
+	.aboutPageCompanyTop__middleContent > p {
+		font-size: 12px;
+		line-height: 18px;
+	}
 	
+	.aboutPageCompanyLast > p {
+		font-size: 12px;
+		line-height: 18px;
+	}
 }
