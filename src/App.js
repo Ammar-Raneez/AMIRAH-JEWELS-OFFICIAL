@@ -1,13 +1,13 @@
 import './App.css';
 import HomePage from './pages/HomePage/HomePage';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
-import RegisterPage from './pages/AccountPages/RegisterPage';
+import RegisterPage from './pages/AccountPages/RegisterPage/RegisterPage';
 import Footer from './shared/components/Footer/Footer';
 import TopBar from './shared/components/topbar/TopBar';
 import Header from './shared/components/header/Header';
 import AboutPageCompany from './pages/AboutPage/AboutPageCompany';
 import AboutPageCharity from './pages/AboutPage/AboutPageCharity';
-import ThankyouCreatingAccount from './pages/AccountPages/ThankyouCreatingAccount';
+import ThankyouCreatingAccount from './pages/AccountPages/ThankyouPage/ThankyouCreatingAccount';
 import GemStonesMain from './pages/GemsPages/GemStonesMain/GemStonesMain';
 import ProcessPage from './pages/ProcessPage/ProcessPage';
 import AboutPagePolicy from './pages/AboutPage/AboutPagePolicy';
@@ -18,7 +18,7 @@ function App() {
 		<Router>
 			<div className="app">
 				<Switch>
-					<Route path="/loginIn">
+					<Route path="/login">
 						<h2> login component</h2>
 					</Route>
 					<Route path="/register">
@@ -29,9 +29,6 @@ function App() {
 					</Route>
 					<Route path="/highTea">
 						<h2>highTea component</h2>
-					</Route>
-					<Route path="/SignUp">
-						<h2> SignUp component</h2>
 					</Route>
 					<Route path="/rose+gold">
 						<h2> Rose gold component</h2>
