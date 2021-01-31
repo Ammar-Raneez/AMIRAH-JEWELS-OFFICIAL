@@ -12,6 +12,7 @@ import GemStonesMain from './pages/GemsPages/GemStonesMain/GemStonesMain';
 import ProcessPage from './pages/ProcessPage/ProcessPage';
 import AboutPagePolicy from './pages/AboutPage/AboutPagePolicy';
 import AboutPageCareer from './pages/AboutPage/AboutPageCareer';
+import LoginPage from './pages/AccountPages/LoginPage/LoginPage';
 
 function App() {
 	return (
@@ -19,7 +20,10 @@ function App() {
 			<div className="app">
 				<Switch>
 					<Route path="/login">
-						<h2> login component</h2>
+						<TopBar />
+						<Header />
+						<LoginPage />
+						<Footer />
 					</Route>
 					<Route path="/register">
 						<TopBar />
