@@ -26,6 +26,13 @@ function WishListPage() {
 				currency="$"
 				price={890}
 			/>
+            <WishListItem
+				img="/gems/teal-sapphire.png"
+				title="Diamond and Black Onyx Circle Pendant"
+				currency="$"
+				price={890}
+			/>
+           
 		</div>
 	);
 }
