@@ -60,7 +60,7 @@
     background-color: #fff;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 768px) and (min-width: 400px) {
     .homePage__bannerLeft {
         width: 50%;
     }
@@ -79,5 +79,33 @@
 
     .homePage__bannerLeftBtn {
         font-size: 16px;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .homePage__bannerLeft {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .homePage__bannerLeftPhrase {
+        font-size: 25px;
+        text-align: center;
+    }
+
+    .homePage__bannerLeftPara {
+        font-size: 14px;
+        text-align: center;
+    }
+
+    .homePage__bannerLeftBtn {
+        font-size: 14px;
+        text-align: center;
+    }
+
+    .homePage__bannerRight {
+        width: 0%;
     }
 }

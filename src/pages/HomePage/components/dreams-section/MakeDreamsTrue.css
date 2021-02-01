@@ -187,9 +187,10 @@
 	src: url(Quattrocento-Regular.ttf);
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 768px) and (min-width: 400px) {
 	.homePage__makeDreamsTrue > h1 {
 		font-size: 28px;
+		text-align: center;
 	}
 
 	.homePage__makeDreamsTrue__topPurchase > button {
@@ -225,5 +226,59 @@
 
 	.homePage__makeDreamsTrue__bottom > p {
 		font-size: 14px;
+	}
+
+	.homePage__makeDreamsTrue__bottomImageDetailFirst, .homePage__makeDreamsTrue__bottomImageDetailSecond {
+		width: 35%;
+	}
+}
+
+@media screen and (max-width: 400px) {
+	.homePage__makeDreamsTrue > h1 {
+		text-align: center;
+		font-size: 20px;
+	}
+
+	.homePage__makeDreamsTrue__topPurchase > p, .homePage__makeDreamsTrue__topPurchase > h1, .homePage__makeDreamsTrue__topPrices > h1, .homePage__makeDreamsTrue__topPrices > h2 {
+		font-size: 12px;
+	}
+
+	.homePage__makeDreamsTrue__middleText {
+		font-size: 12px;
+		width: 50%;
+	}
+
+	.homePage__makeDreamsTrue__topPurchase > button {
+		display: none;
+	}
+
+	.homePage__makeDreamsTrue__bottomImageDetailFirstHeight > p:first-child,
+	.homePage__makeDreamsTrue__bottomImageDetailFirstWidth > p:first-child,
+	.homePage__makeDreamsTrue__bottomImageDetailFirstThickness > p:first-child,
+	.homePage__makeDreamsTrue__bottomImageDetailFirstWeight > p:first-child,
+	.homePage__makeDreamsTrue__bottomImageDetailFirstMetalWeight > p:first-child,
+	.homePage__makeDreamsTrue__bottomImageDetailFirstPurity > p:first-child {
+		font-size: 10px;
+	}
+
+	.homePage__makeDreamsTrue__bottomImageDetailFirstHeight > p:last-child,
+	.homePage__makeDreamsTrue__bottomImageDetailFirstWidth > p:last-child,
+	.homePage__makeDreamsTrue__bottomImageDetailFirstThickness > p:last-child,
+	.homePage__makeDreamsTrue__bottomImageDetailFirstWeight > p:last-child,
+	.homePage__makeDreamsTrue__bottomImageDetailFirstMetalWeight > p:last-child,
+	.homePage__makeDreamsTrue__bottomImageDetailFirstPurity > p:last-child  {
+		font-size: 12px;
+	}
+
+	.homePage__makeDreamsTrue__bottom > p {
+		font-size: 14px;
+	}
+
+	.homePage__makeDreamsTrue__bottom {
+		margin-top: 120px;
+	}
+
+	.homePage__makeDreamsTrue__bottomImageDetailFirst, .homePage__makeDreamsTrue__bottomImageDetailSecond {
+		width: 35%;
 	}
 }

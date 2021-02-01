@@ -48,11 +48,21 @@
     justify-content: center;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 768px) and (min-width: 400px) {
     .homePage__categoryTitle {
         font-size: 30px;
     }
 
+    .homePage__categorySubTitle {
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .homePage__categoryTitle {
+        font-size: 20px;
+    }
+    
     .homePage__categorySubTitle {
         font-size: 14px;
     }

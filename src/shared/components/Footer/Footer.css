@@ -106,12 +106,22 @@
 	src: url(Quattrocento-Regular.ttf);
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 600px) and (min-width: 400px) {
 	.footer a, .footer p:first-child, .footer__rightSectionDescription, .footer__rightSection > form > input, .footer__rightSection > form > button {
 		font-size: 12px;
 	}
 
 	.footer__rightSectionDescription {
 		line-height: 14px;
+	}
+}
+
+@media screen and (max-width: 400px) {
+	.footer__top {
+		display: none;
+	}
+
+	.footer__bottom {
+		font-size: 14px;
 	}
 }
