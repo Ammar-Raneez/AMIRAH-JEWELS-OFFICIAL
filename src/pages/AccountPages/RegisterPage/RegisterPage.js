@@ -1,7 +1,11 @@
 import { useState } from 'react';
+import { useHistory } from 'react-router-dom';
+import { auth, db } from '../../../firebase';
 import './RegisterPage.css';
+import firebase from 'firebase';
 
 function RegisterPage() {
+	const history = useHistory();
 	const [firstName, setFirstName] = useState('');
 	const [lastName, setLastName] = useState('');
 	const [email, setEmail] = useState('');
@@ -12,7 +16,65 @@ function RegisterPage() {
 
 	const registerUser = (e) => {
 		e.preventDefault();
-		
+
+		if (!firstName || !email || !password || !lastName) {
+			return alert('Please enter the required details');
+		}
+		// register logic
+		auth
+			.createUserWithEmailAndPassword(email, password)
+			.then((auth) => {
+				// created a user and logged in
+				auth.user.updateProfile({
+					displayName: firstName + ' ' + lastName,
+				});
+
+				// Creating a user collection and adding details about the user using cloud firebase
+				db.collection('users').add({
+					userID: email,
+					gender: gender,
+					birthMonth: birthMonth,
+					birthDay: birthDay,
+					cart: [
+						{
+							productName: '',
+							productCost: 0,
+							productQuantity: 0,
+							productImgURL: '',
+						},
+					],
+					wishlist: [
+						{
+							productName: '',
+							productCost: 0,
+							productQuantity: 0,
+							productImgURL: '',
+						},
+					],
+					timestamp: firebase.firestore.FieldValue.serverTimestamp(),
+				});
+
+				// redirect to homepage
+				history.replace('/');
+			})
+			.catch((e) => alert(e.message));
+	};
+
+	const signIn = (e) => {
+		e.preventDefault();
+
+		if (!email || !password) {
+			return alert('Please enter Email and Password');
+		}
+
+		// sign in logic
+		auth
+			.signInWithEmailAndPassword(email, password)
+			.then((auth) => {
+				// signed in, redirect to the homepage
+				history.replace('/');
+			})
+			.catch((e) => alert(e.message));
 	};
 
 	return (
