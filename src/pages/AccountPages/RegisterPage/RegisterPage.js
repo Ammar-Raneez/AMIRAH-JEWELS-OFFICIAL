@@ -54,28 +54,24 @@ function RegisterPage() {
 					timestamp: firebase.firestore.FieldValue.serverTimestamp(),
 				});
 
+				// clean the fields
+				setFirstName("");
+				setLastName("");
+				setGender("");
+				setEmail("");
+				setBirthDay("");
+				setBirthMonth("");
+				setPassword("");
+
+				alert('Welcome ' + auth.user.displayName + '!');
+
 				// redirect to homepage
 				history.replace('/');
 			})
 			.catch((e) => alert(e.message));
 	};
 
-	const signIn = (e) => {
-		e.preventDefault();
-
-		if (!email || !password) {
-			return alert('Please enter Email and Password');
-		}
-
-		// sign in logic
-		auth
-			.signInWithEmailAndPassword(email, password)
-			.then((auth) => {
-				// signed in, redirect to the homepage
-				history.replace('/');
-			})
-			.catch((e) => alert(e.message));
-	};
+	
 
 	return (
 		<div className="registerPage">
