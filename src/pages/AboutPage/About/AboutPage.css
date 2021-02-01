@@ -96,7 +96,7 @@
 	margin-bottom: 40vw;
 }
 
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 900px) and (min-width: 450px) {
 	.aboutPageCompanyTop__middleContent > h2,
 	.aboutPageCompanyLast > h2 {
 		font-size: 30px;
@@ -104,6 +104,7 @@
 
 	.aboutPageCompanyLast {
 		height: 320px;
+		/* margin-bottom: 40px; */
 	}
 
 	.aboutPageCompanyTop__middleContent > p {
@@ -114,5 +115,55 @@
 	.aboutPageCompanyLast > p {
 		font-size: 12px;
 		line-height: 18px;
+	}
+}
+
+@media screen and (max-width: 450px) {
+	.aboutPageCompany {
+		margin-bottom: 0;
+	}
+
+	.aboutPageCompanyTop__middleContent > h2,
+	.aboutPageCompanyLast > h2 {
+		font-size: 20px;
+	}
+
+	.aboutPageCompanyTop, .aboutPageCompanyLast {
+		width: 80vw;
+	}
+
+	.aboutPageCompanyLast > p {
+		width: 100%;
+	}
+
+	.aboutPageCompanyLast {
+		height: 320px;
+		/* margin-bottom: 40px; */
+	}
+
+	.aboutPageCompanyTop__middleContent > p {
+		font-size: 12px;
+		line-height: 18px;
+		width: 100%;
+	}
+	
+	.aboutPageCompanyLast > p {
+		font-size: 12px;
+		line-height: 18px;
+	}
+
+	.aboutPageCompanyMiddleFirst {
+		width: 5vw;
+		height: 5vw;
+	}
+
+	.aboutPageCompanyMiddleMiddle {
+		width: 4vw;
+		height: 4vw;
+	}
+
+	.aboutPageCompanyMiddleLast {
+		width: 3vw;
+		height: 3vw;
 	}
 }
