@@ -1,6 +1,20 @@
+import { useState } from 'react';
 import './RegisterPage.css';
 
 function RegisterPage() {
+	const [firstName, setFirstName] = useState('');
+	const [lastName, setLastName] = useState('');
+	const [email, setEmail] = useState('');
+	const [password, setPassword] = useState('');
+	const [gender, setGender] = useState('');
+	const [birthMonth, setBirthMonth] = useState('');
+	const [birthDay, setBirthDay] = useState('');
+
+	const registerUser = (e) => {
+		e.preventDefault();
+		
+	};
+
 	return (
 		<div className="registerPage">
 			{/* jewel image */}
@@ -18,28 +32,51 @@ function RegisterPage() {
 
 				<form className="registerPage__form">
 					<div className="registerPage__formFirst">
-						<input type="text" placeholder="First Name" />
-						<input type="text" placeholder="Last Name" />
-						<input type="email" placeholder="Email" />
-						<input type="password" placeholder="Password" />
+						<input
+							type="text"
+							placeholder="First Name"
+							onChange={(e) => setFirstName(e.target.value)}
+							value={firstName}
+						/>
+						<input type="text" placeholder="Last Name" onChange={(e) => setLastName(e.target.value)} value={lastName} />
+						<input type="email" placeholder="Email" onChange={(e) => setEmail(e.target.value)} value={email} />
+						<input
+							type="password"
+							placeholder="Password"
+							onChange={(e) => setPassword(e.target.value)}
+							value={password}
+						/>
 					</div>
 					<div className="registerPage__formSecond">
 						<p>Gender (Optional)</p>
 						<div className="registerPage__formSecondInputs">
-							<input type="radio" name="gender" value="female" id="female" />
-							<label for="female">Female</label> <input type="radio" name="gender" value="male" id="male" />
+							<input type="radio" name="gender" value="female" id="female" onClick={(e) => setGender('Female')} />
+							<label for="female">Female</label>{' '}
+							<input type="radio" name="gender" value="male" id="male" onClick={(e) => setGender('Male')} />
 							<label for="male">Male</label>
 						</div>
 					</div>
 					<div className="registerPage__formThird">
 						<p>Birthday (Optional)</p>
 						<div className="registerPage__formThirdInputs">
-							<input type="number" name="month" placeholder="Month" />
-							<input type="number" name="day" placeholder="Day" />
+							<input
+								type="number"
+								name="month"
+								placeholder="Month"
+								onChange={(e) => setBirthMonth(e.target.value)}
+								value={birthMonth}
+							/>
+							<input
+								type="number"
+								name="day"
+								placeholder="Day"
+								onChange={(e) => setBirthDay(e.target.value)}
+								value={birthDay}
+							/>
 						</div>
 					</div>
 					<div className="registerPage__createButton">
-						<button>CREATE AN ACCOUNT</button>
+						<button onClick={registerUser}>CREATE AN ACCOUNT</button>
 					</div>
 				</form>
 			</div>
