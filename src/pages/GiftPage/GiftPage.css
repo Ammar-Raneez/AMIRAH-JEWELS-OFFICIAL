@@ -1,19 +1,15 @@
 .giftPage {
 	margin-top: 5vw;
 }
-.giftPage__detailsSecond,
-.giftPage__detailsFirst {
-	/* border: 1px red solid; */
-}
+
 .giftPage__detailsSecond > img {
 	object-fit: contain;
 	height: 25vw;
 }
 .giftPage__details {
-	/* border: 1px red solid; */
 	display: flex;
 	align-items: center;
-	justify-content: space-evenly;
+	justify-content: space-around;
 	padding: 0 5vw;
 }
 .giftPage__detailsFirst {
@@ -52,6 +48,7 @@
 	background-color: #ffc0a1;
 	border-radius: 0.7vw;
 	transition: 0.3s ease-in-out;
+	margin-right: 14px;
 }
 .giftPage__detailsFirstButtons > a > button:first-child:hover {
 	transition: 0.3s ease-in-out;
@@ -85,9 +82,6 @@
 	height: 25vw;
 }
 
-.giftPage__detailsFirst {
-	width: 38vw;
-}
 .giftPage__detailsFirst > h1 {
 	font-family: boowie;
 	color: #707070;
@@ -104,9 +98,8 @@
 }
 .giftPage__detailsFirstButtons {
 	display: flex;
-    margin: 1.5vw;
-    flex-wrap: wrap;
-	justify-content: space-between;
+	margin: 1.5vw;
+	justify-content: left;
 	align-items: center;
 }
 .giftPage__detailsFirstButtons > a > button:first-child {
@@ -156,6 +149,10 @@
 	justify-content: space-evenly;
 }
 @media screen and (max-width: 900px) {
+	.giftPage__detailsFirst {
+		width: 60vw;
+	}
+
 	.giftPage__detailsFirst > h1 {
 		font-size: 25px;
 	}
@@ -165,24 +162,19 @@
 		line-height: 16px;
 	}
 
-	.giftPage__detailsFirstButtons {
-        width: 150px;
-        justify-content: center;
-        flex-wrap: wrap;
-		margin-left: 0;
-	}
-
 	.giftPage__detailsFirstButtons > a > button:first-child {
 		font-size: 11px;
         margin: 5px;
-		width: 120px;
-		padding: 12px;
+		width: 100px;
+		padding: 9px;
 	}
 
 	.giftPage__detailsFirstButtons > button:last-child {
 		font-size: 11px;
         margin: 5px;
-		width: 120px;
+		width: 100px;
 		padding: 12px;
+		padding-top: 15px;
+		padding-bottom: 15px;
 	}
 }
