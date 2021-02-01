@@ -1,6 +1,6 @@
 // REACT CONTEXT API
 
-import { createContext, useReducer } from 'react';
+import { createContext, useContext, useReducer } from 'react';
 
 // THIS IS THE DATA LAYER
 export const StateContext = createContext();
@@ -9,3 +9,6 @@ export const StateContext = createContext();
 export const StateProvider = ({ reducer, initialState, children }) => (
 	<StateContext.Provider value={useReducer(reducer, initialState)}>{children}</StateContext.Provider>
 );
+
+// THIS IS HOW WE USE IT INSIDE OF A COMPONENT
+export const useStateValue = () => useContext(StateContext);
