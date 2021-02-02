@@ -42,7 +42,7 @@
 	transition: 0.3s ease-in-out;
 	transform: scale(1.05);
 }
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 900px) and (min-width: 450px) {
 	.product {
 		padding: 10px;
 	}
@@ -65,8 +65,14 @@
 	} */
 }
 
-/* @media screen and (max-width: 768px) {
-	.product > button {
-		font-size: 12px;
+@media screen and (max-width: 450px) {
+	.product > img {
+		height: 50vw;
 	}
-} */
+
+	.product > p {
+		font-size: 16px;
+		margin-top: 20px;
+		margin-bottom: 10px;
+	}
+}
