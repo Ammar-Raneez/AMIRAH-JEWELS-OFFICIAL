@@ -1,10 +1,10 @@
 .thankingPage {
 	display: grid;
 	align-content: center;
-	margin-bottom: 5vw;
+	margin-bottom: 7%;
 	justify-content: center;
 	position: relative;
-	margin-top: 2vw;
+	margin-top: 5%;
 }
 .thankingPage__firstJewel {
 	display: flex;

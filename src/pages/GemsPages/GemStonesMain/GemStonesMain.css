@@ -81,7 +81,7 @@
 	justify-content: space-evenly;
 }
 
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 900px) and (min-width: 450px) {
 	.gemStonesMain__detailsFirst > h1 {
 		font-size: 25px;
 	}	
@@ -106,5 +106,46 @@
 		font-size: 12px;
 		width: 130px;
 		padding: 12px;
+	}
+}
+
+@Media screen and (max-width: 450px) {
+	.gemStonesMain__detailsFirst {
+		width: 100%;
+		text-align: center;
+	}
+
+	.gemStonesMain__detailsSecond {
+		display: none;
+	}
+
+	.gemStonesMain__detailsFirst > h1 {
+		font-size: 25px;
+	}	
+
+	.gemStonesMain__detailsFirst > p {
+		font-size: 12px;
+		line-height: 16px;
+	}
+
+	.gemStonesMain__detailsFirstButtons {
+		display: flex;
+		justify-content: space-around;
+	}
+
+	.gemStonesMain__detailsFirstButtons > a > button:first-child {
+		font-size: 12px;
+		width: 130px;
+		padding: 12px;
+	}
+
+	.gemStonesMain__detailsFirstButtons > button:last-child {
+		font-size: 12px;
+		width: 130px;
+		padding: 12px;
+	}
+
+	.gemStonesMain__otherGemsRow {
+		flex-direction: column;
 	}
 }
