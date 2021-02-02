@@ -19,10 +19,24 @@ const reducer = (state, action) => {
 			return { state };
 		case 'ADD_TO_WISHLIST':
 			// Logic for adding item to the wishlist
+
+			// checking if the item is already present in the wishlist (if present we don't add else we add)
+			let itemToAdd = action.item;
+			let present = false;
+
+			// looping through the list of items to check if its present already
+			for (let index = 0; index < state.wishListBasket.length; index++) {
+				const element = state.wishListBasket[index];
+				if (element.name === itemToAdd.name) {
+					present = true;
+				}
+			}
+
 			return {
 				...state,
-				wishListBasket: [...state.wishListBasket, action.item],
+				wishListBasket: !present ? [...state.wishListBasket, action.item] : [...state.wishListBasket],
 			};
+
 		case 'REMOVE_FROM_WISHLIST':
 			// Logic for removing item to the wishlist
 
