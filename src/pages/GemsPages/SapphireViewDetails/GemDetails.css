@@ -120,6 +120,11 @@
 	color: #707070;
 	margin: 100px 0 20px 0;
 }
+.gemDetails__sectionProduct {
+	align-items: center;
+	display: flex;
+	flex-direction: column;
+}
 .gemDetails__sectionProduct > h3 {
 	font-family: Quattrocento-Regular;
 	color: #707070;
@@ -156,6 +161,9 @@
 	justify-content: space-evenly;
 }
 
-@media screen and (max-width: 768px) {
-	
+@media screen and (max-width: 450px) {
+	.gemDetails__otherGemsRow {
+		display: flex;
+		flex-direction: column;
+	}
 }
