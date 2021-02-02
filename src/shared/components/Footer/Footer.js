@@ -1,7 +1,35 @@
 import './Footer.css';
-import { Link } from 'react-router-dom';
+import { Link, useHistory } from 'react-router-dom';
+import { useState } from 'react';
+import { auth } from '../../../firebase';
 
 function Footer() {
+	const history = useHistory();
+	const [email, setEmail] = useState('');
+	const [password, setPassword] = useState('');
+
+	const signIn = (e) => {
+		e.preventDefault();
+
+		if (!email || !password) {
+			return alert('Please enter Email and Password');
+		}
+
+		// sign in logic
+		auth
+			.signInWithEmailAndPassword(email, password)
+			.then((auth) => {
+				// signed in, redirect to the homepage
+				setEmail('');
+				setPassword('');
+
+				alert('Welcome ' + auth.user.displayName + '!');
+
+				history.replace('/');
+			})
+			.catch((e) => alert(e.message));
+	};
+
 	return (
 		<div className="footer">
 			<div className="footer__main">
@@ -34,9 +62,14 @@ function Footer() {
 							Be the first to know about exciting new designs, special events, store openings and much more.
 						</p>
 						<form>
-							<input type="email" placeholder="Email" />
-							<input type="password" placeholder="Password" />
-							<button>SIGN UP</button>
+							<input type="email" placeholder="Email" onChange={(e) => setEmail(e.target.value)} value={email} />
+							<input
+								type="password"
+								placeholder="Password"
+								onChange={(e) => setPassword(e.target.value)}
+								value={password}
+							/>
+							<button onClick={signIn}>SIGN UP</button>
 						</form>
 					</div>
 				</div>

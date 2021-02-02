@@ -17,8 +17,46 @@ import WishListPage from './pages/WishListPage/WishListPage';
 import BlueGemDetail from './pages/GemsPages/SapphireViewDetails/BlueGemDetail';
 import NecklacePendantPage from './pages/NecklacePendantPage/NecklacePendantPage';
 import GiftPage from './pages/GiftPage/GiftPage';
+import { useStateValue } from './StateProvider';
+import { useEffect } from 'react';
+import { auth } from './firebase';
 
 function App() {
+	const [{ user }, dispatch] = useStateValue();
+
+	// This use effect deals with the user auth stuff
+	useEffect(() => {
+		const unsubscribe = auth.onAuthStateChanged((authUser) => {
+			if (authUser) {
+				// user is logged in
+				dispatch({
+					type: 'SET_USER',
+					user: authUser,
+				});
+			} else {
+				// user is logged out
+				dispatch({
+					type: 'SET_USER',
+					user: null,
+				});
+			}
+		});
+
+		return () => {
+			// clean up code
+			unsubscribe();
+		};
+	}, []);
+
+	// this Use effect to load the user details(cart, wishlist and all ) from the database once he signs in or registers and account
+	useEffect(() => {
+		console.log("Loading all details related to the");
+	}, []);
+
+	console.log("USER >>>>>>>>>>>", user);
+	// console.log(user.displayName);
+	// console.log(user.uid);
+
 	return (
 		<Router>
 			<div className="app">
