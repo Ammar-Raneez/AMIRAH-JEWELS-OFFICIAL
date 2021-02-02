@@ -220,6 +220,10 @@
 		padding-bottom: 15px;
 	}
 
+	.giftPage__otherGems {
+		padding: 0;
+	}
+
 	.giftPage__otherGemsRow {
 		flex-direction: column;
 	}
