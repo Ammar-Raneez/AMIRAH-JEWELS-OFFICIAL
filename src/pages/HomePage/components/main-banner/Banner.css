@@ -60,7 +60,7 @@
     background-color: #fff;
 }
 
-@media screen and (max-width: 768px) and (min-width: 400px) {
+@media screen and (max-width: 768px) and (min-width: 450px) {
     .homePage__bannerLeft {
         width: 50%;
     }
@@ -82,7 +82,7 @@
     }
 }
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 450px) {
     .homePage__bannerLeft {
         width: 100%;
         display: flex;

@@ -192,9 +192,17 @@
 		font-size: 28px;
 		text-align: center;
 	}
+	
+	.homePage__makeDreamsTrue__topPurchase > h1, .homePage__makeDreamsTrue__topPrices > h2 {
+		font-size: 14px;
+	}
+	
+	.homePage__makeDreamsTrue__topPurchase > p, .homePage__makeDreamsTrue__topPrices > h1 {
+		font-size: 12px;
+	}
 
 	.homePage__makeDreamsTrue__topPurchase > button {
-		font-size: 14px;
+		font-size: 12px;
 		width: 100px;
 	}
 
