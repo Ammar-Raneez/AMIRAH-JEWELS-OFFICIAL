@@ -13,28 +13,65 @@ const reducer = (state, action) => {
 			};
 		case 'ADD_TO_BASKET':
 			// Logic for adding item to basket
-			return { state };
-		case 'REMOVE_FROM_BASKET':
-			// Logic for removing item to basket
-			return { state };
-		case 'ADD_TO_WISHLIST':
-			// Logic for adding item to the wishlist
-
 			// checking if the item is already present in the wishlist (if present we don't add else we add)
-			let itemToAdd = action.item;
-			let present = false;
+			let itemToAddBasket = action.item;
+			let presentBasket = false;
 
 			// looping through the list of items to check if its present already
-			for (let index = 0; index < state.wishListBasket.length; index++) {
-				const element = state.wishListBasket[index];
-				if (element.name === itemToAdd.name) {
-					present = true;
+			for (let index = 0; index < state.cartBasket.length; index++) {
+				const element = state.cartBasket[index];
+				if (element.name === itemToAddBasket.name) {
+					presentBasket = true;
 				}
 			}
 
 			return {
 				...state,
-				wishListBasket: !present ? [...state.wishListBasket, action.item] : [...state.wishListBasket],
+				cartBasket: !presentBasket ? [...state.cartBasket, action.item] : [...state.cartBasket],
+			};
+
+		case 'REMOVE_FROM_BASKET':
+			// Logic for removing item to basket
+			// we cloned the basket
+			let newCartListBasket = [...state.cartBasket];
+
+			// finding the index of the item we are looking for to be deleted from the list
+			const index_cart = state.cartBasket.findIndex((cartItem) => cartItem.name === action.name);
+
+			if (index_cart >= 0) {
+				// item exists in wishlist basket, remove it (removes the item from the basket for the index)
+				newCartListBasket.splice(index_cart, 1);
+			} else {
+				console.warn(`Cant remove product id ${action.id} as its not in the cart basket`);
+			}
+
+			// return the updated basket back
+			return { ...state, cartBasket: newCartListBasket };
+
+		case 'INCREASE_ITEM_COUNT_FROM_BASKET':
+			// Logic for increasing the number of a particular item in a basket
+			return { state };
+		case 'DECREASE_ITEM_COUNT_FROM_BASKET':
+			// Logic for decreasing the number of a particular item in a basket
+			return { state };
+		case 'ADD_TO_WISHLIST':
+			// Logic for adding item to the wishlist
+
+			// checking if the item is already present in the wishlist (if present we don't add else we add)
+			let itemToAddWishlist = action.item;
+			let presentWishlist = false;
+
+			// looping through the list of items to check if its present already
+			for (let index = 0; index < state.wishListBasket.length; index++) {
+				const element = state.wishListBasket[index];
+				if (element.name === itemToAddWishlist.name) {
+					presentWishlist = true;
+				}
+			}
+
+			return {
+				...state,
+				wishListBasket: !presentWishlist ? [...state.wishListBasket, action.item] : [...state.wishListBasket],
 			};
 
 		case 'REMOVE_FROM_WISHLIST':
@@ -44,11 +81,11 @@ const reducer = (state, action) => {
 			let newWishListBasket = [...state.wishListBasket];
 
 			// finding the index of the item we are looking for to be deleted from the list
-			const index = state.wishListBasket.findIndex((wishListItem) => wishListItem.name === action.name);
+			const index_wish = state.wishListBasket.findIndex((wishListItem) => wishListItem.name === action.name);
 
-			if (index >= 0) {
+			if (index_wish >= 0) {
 				// item exists in wishlist basket, remove it (removes the item from the basket for the index)
-				newWishListBasket.splice(index, 1);
+				newWishListBasket.splice(index_wish, 1);
 			} else {
 				console.warn(`Cant remove product id ${action.id} as its not in the wishlist basket`);
 			}
