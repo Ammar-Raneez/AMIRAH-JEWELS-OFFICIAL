@@ -13,8 +13,7 @@
 	background-color: #fff5ef;
 	width: 90vw;
 }
-.processStep > img,
-.processStepReflect > img {
+.processStep > img, .processStepReflect > img {
 	object-fit: contain;
 	align-self: center;
 	height: 50vw;
@@ -64,18 +63,29 @@
 	text-align: start;
 }
 
-.processStep__stepName > p:first-child,
-.processStep__stepNameReflect > p:first-child {
+.processStep__stepName > p:first-child, .processStep__stepNameReflect > p:first-child {
 	font-weight: bold;
 }
-.processStep__stepName,
-.processStep__stepNameReflect {
+.processStep__stepName, .processStep__stepNameReflect {
 	margin: 6vw 5vw;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 768px) and (min-width: 500px) {
 	.processStep__descriptionReflect > p, .processStep__description > p {
 		font-size: 12px;
 		line-height: 14px;
+	}
+}
+
+@media screen and (max-width: 500px) {
+	.processStep__description > p, .processStep__descriptionReflect > p {
+		display: none;
+	}
+
+	.processStep__stepName, .processStep__stepNameReflect {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		/* align-items: center; */
 	}
 }
