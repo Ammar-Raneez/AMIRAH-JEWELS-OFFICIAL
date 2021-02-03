@@ -19,6 +19,44 @@ function BlueGemDetail() {
 		setDisplayImage('/' + imagePath.split('/').reverse()[1] + '/' + imagePath.split('/').reverse()[0]);
 	};
 
+	// we load all the content from the database (this runs only once)
+	useEffect(() => {
+		// user logged in only we load the details for the particular user
+		db.collection('users').onSnapshot((snapshot) =>
+			snapshot.docs.forEach((doc) => {
+				if (doc.id === user?.email) {
+					// adding the cart items
+					for (const cartItem of doc.data().cart) {
+						console.log('Adding items from the database into the cart');
+						dispatch({
+							type: 'ADD_TO_BASKET',
+							item: {
+								productCost: cartItem.productCost,
+								productImgURL: cartItem.productImgURL,
+								productName: cartItem.productName,
+								productQuantity: cartItem.productQuantity,
+							},
+						});
+					}
+
+					// adding the wishlist items
+					for (const wishlistItem of doc.data().wishlist) {
+						console.log('Adding items from the database into the wishlist');
+						console.log(wishlistItem);
+						dispatch({
+							type: 'ADD_TO_WISHLIST',
+							item: {
+								name: wishlistItem.name,
+								cost: wishlistItem.cost,
+								imgURL: wishlistItem.imgURL,
+							},
+						});
+					}
+				}
+			})
+		);
+	}, [])
+	
 	// use effect for updating the wishlist in the database when clicked
 	useEffect(() => {
 		if (tempSafety === true) {
