@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { Link, useHistory } from 'react-router-dom';
-import { auth, db } from '../../../firebase';
+import { auth } from '../../../firebase';
 import { useStateValue } from '../../../StateProvider';
 import './Footer.css';
 
@@ -30,62 +30,27 @@ function Footer() {
 					type: 'SET_USER',
 					user: auth.user,
 				});
-				window.location.reload(true);
 
-				// empty the cart basket and the wishlist basket before the user add their content
-				dispatch({
-					type: 'EMPTY_THE_WISHLIST_BASKET',
-					item: [],
-				});
-				dispatch({
-					type: 'EMPTY_THE_CART_BASKET',
-					item: [],
-				});
-				console.log('Before adding');
-				console.log(wishListBasket);
-
-				// user logged in only we load the details for the particular user
-				db.collection('users').onSnapshot((snapshot) =>
-					snapshot.docs.forEach((doc) => {
-						if (doc.id === user?.email) {
-							// adding the cart items
-							for (const cartItem of doc.data().cart) {
-								console.log('Adding items from the database into the cart');
-								dispatch({
-									type: 'ADD_TO_BASKET',
-									item: {
-										productCost: cartItem.productCost,
-										productImgURL: cartItem.productImgURL,
-										productName: cartItem.productName,
-										productQuantity: cartItem.productQuantity,
-									},
-								});
-							}
-
-							// adding the wishlist items
-							for (const wishlistItem of doc.data().wishlist) {
-								console.log('Adding items from the database into the wishlist');
-
-								dispatch({
-									type: 'ADD_TO_WISHLIST',
-									item: {
-										name: wishlistItem.name,
-										cost: wishlistItem.cost,
-										imgURL: wishlistItem.imgURL,
-									},
-								});
-							}
-						}
-					})
-				);
-				console.log('After adding');
-				console.log(wishListBasket);
-				//----------------------------------------
 				setTimeout(() => {
 					alert('Welcome ' + auth.user.displayName + '!');
 				}, 1000);
 
 				history.replace('/');
+
+				setTimeout(() => {
+					window.location.reload(true);
+				}, 2000);
+
+				// empty the cart basket and the wishlist basket before the user add their content
+				// dispatch({
+				// 	type: 'EMPTY_THE_WISHLIST_BASKET',
+				// 	item: [],
+				// });
+				// dispatch({
+				// 	type: 'EMPTY_THE_CART_BASKET',
+				// 	item: [],
+				// });
+				
 			})
 			.catch((e) => alert(e.message));
 	};

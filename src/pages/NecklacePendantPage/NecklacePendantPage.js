@@ -32,7 +32,6 @@ function NecklacePendantPage() {
 	// ADDING THE ITEM TO THE WISHLIST
 	const addItemToWishList = () => {
 		if (user) {
-			setAddToWishList(true);
 			dispatch({
 				type: 'ADD_TO_WISHLIST',
 				item: {
@@ -41,6 +40,7 @@ function NecklacePendantPage() {
 					imgURL: 'pendantsNecklace/ring1.png',
 				},
 			});
+			setAddToWishList(true);
 		} else {
 			alert('Please sign in to add item to wishlist');
 		}
@@ -49,11 +49,11 @@ function NecklacePendantPage() {
 	// REMOVING THE ITEM FROM THE WISHLIST
 	const removeFromWishList = () => {
 		if (user) {
-			setAddToWishList(false);
 			dispatch({
 				type: 'REMOVE_FROM_WISHLIST',
 				name: 'Diamond and Black Onyx Circle Pendant',
 			});
+			setAddToWishList(false);
 		} else {
 			alert('Please sign in to add item to wishlist');
 		}
