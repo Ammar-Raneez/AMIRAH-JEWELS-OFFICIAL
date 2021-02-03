@@ -20,6 +20,7 @@ import GiftPage from './pages/GiftPage/GiftPage';
 import { useStateValue } from './StateProvider';
 import { useEffect } from 'react';
 import { auth, db } from './firebase';
+import CartPage from './pages/CartPage/CartPage';
 
 function App() {
 	const [{ wishListBasket, cartBasket, user }, dispatch] = useStateValue();
@@ -219,6 +220,13 @@ function App() {
 						<TopBar />
 						<Header />
 						<WishListPage />
+						<Footer />
+					</Route>
+
+					<Route path="/cart">
+						<TopBar />
+						<Header />
+						<CartPage />
 						<Footer />
 					</Route>
 

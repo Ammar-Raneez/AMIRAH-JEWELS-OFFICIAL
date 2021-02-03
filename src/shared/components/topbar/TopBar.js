@@ -39,7 +39,7 @@ function TopBar() {
 				<Link to="/wishList">
 					<FavoriteBorderIcon />
 				</Link>
-				<Link>
+				<Link to="/cart">
 					<LocalMallOutlinedIcon />
 				</Link>
 			</div>
