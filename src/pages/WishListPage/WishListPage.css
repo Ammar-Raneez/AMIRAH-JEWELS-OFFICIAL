@@ -46,7 +46,7 @@
 
 @media screen and (max-width: 900px) {
 	.wishListPage__userDetails, .wishListPage__titleContinueSection > p {
-		font-size: 12px;
+		font-size: 12px !important;
 	}
 
 	.wishListPage__title > h1 {

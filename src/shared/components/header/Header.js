@@ -9,7 +9,11 @@ function Header() {
 	return (
 		<div className="header">
 			<div className="header__options">
-				<div>
+				<div
+					// onMouseOut={() => {
+					// 	!productsClicked && console.log("hover")
+					// }}
+				>
 					<Link
 						onMouseOver={() => {
 							setProductsClicked(!productsClicked);
@@ -21,6 +25,7 @@ function Header() {
 					</Link>
 					{productsClicked && (
 						<div 
+							// onMouseOut={() => console.log("hover")}
 							className="header__optionsProductDetails"
 						>
 							<div>

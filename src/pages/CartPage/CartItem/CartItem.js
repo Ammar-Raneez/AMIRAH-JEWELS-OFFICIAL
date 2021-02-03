@@ -47,7 +47,10 @@ function CartItem({ img, name, price, currency }) {
                                 value={qty}
                                 min={0}
                             />
-                            <p>Price {currency}{changedPrice}</p>
+                            <span>
+                                <p>Price</p>
+                                <p>{currency}{changedPrice}</p>
+                            </span>
                         </div>
                     </div>
                     <div className="cartItem__descriptionRightSave">

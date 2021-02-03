@@ -38,3 +38,20 @@
 .cartPage__items {
     width: 60%;
 }
+
+@media screen and (max-width: 768px) {
+	.cartPage__titleContinueSection, .cartPage__titleContinueSection > .MuiSvgIcon-root {
+		font-size: 12px !important;
+	}
+	.cartPage__title > h1 {
+		font-size: 20px;
+	}
+
+	.cartPage__main {
+		flex-direction: column;
+	}
+
+	.cartPage__items {
+		width: 100%;
+	}
+}

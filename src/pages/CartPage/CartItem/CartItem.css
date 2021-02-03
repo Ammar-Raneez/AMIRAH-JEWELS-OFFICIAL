@@ -44,7 +44,7 @@
     color: #707070;
 }
 
-.cartItem__descriptionRightBottom > .cartItem__descriptionRightBottomDetails > p {
+.cartItem__descriptionRightBottom > .cartItem__descriptionRightBottomDetails > span > p {
     font-family: Quattrocento-Regular;
     color: #707070;
 }
@@ -66,7 +66,7 @@
 	font-family: Quattrocento-Regular;
 	padding: 0.8vw;
 	border-bottom: 0.1vw solid #707070;
-	font-size: 1vw;
+	font-size: 20px;
 	color: #707070;
     width: 20%;
 }
@@ -87,4 +87,41 @@
 .cartItem__descriptionRightSave:hover {
 	color: rgb(255, 177, 109) !important;
 	cursor: pointer;
+}
+
+@media screen and (max-width: 768px) {
+    .cartItem__descriptionRightTop > h1 {
+        font-size: 16px;
+    }
+
+    .cartItem__descriptionRightBottomDetails {
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .cartItem__descriptionRightBottom > div > input {
+        width: 80%;
+        margin-bottom: 30px;
+    }
+
+    .cartItem__descriptionRightBottom > div > p, .cartItem__descriptionRightBottom > div > span > p {
+        font-weight: bold;
+    }
+
+    .cartItem__descriptionRightSave > p {
+        font-size: 14px;
+        text-align: center;
+    }
+
+    .cartItem__descriptionRightBottom > div > span { 
+        width: 90%;
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .cartItem__descriptionleft > img {
+        height: 200px;
+    }   
 }
