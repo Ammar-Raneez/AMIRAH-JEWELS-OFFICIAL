@@ -1,8 +1,8 @@
-import './Footer.css';
-import { Link, useHistory } from 'react-router-dom';
 import { useState } from 'react';
+import { Link, useHistory } from 'react-router-dom';
 import { auth, db } from '../../../firebase';
 import { useStateValue } from '../../../StateProvider';
+import './Footer.css';
 
 function Footer() {
 	const history = useHistory();
@@ -30,6 +30,19 @@ function Footer() {
 					type: 'SET_USER',
 					user: auth.user,
 				});
+				window.location.reload(true);
+
+				// empty the cart basket and the wishlist basket before the user add their content
+				dispatch({
+					type: 'EMPTY_THE_WISHLIST_BASKET',
+					item: [],
+				});
+				dispatch({
+					type: 'EMPTY_THE_CART_BASKET',
+					item: [],
+				});
+				console.log('Before adding');
+				console.log(wishListBasket);
 
 				// user logged in only we load the details for the particular user
 				db.collection('users').onSnapshot((snapshot) =>
@@ -65,6 +78,8 @@ function Footer() {
 						}
 					})
 				);
+				console.log('After adding');
+				console.log(wishListBasket);
 				//----------------------------------------
 				setTimeout(() => {
 					alert('Welcome ' + auth.user.displayName + '!');

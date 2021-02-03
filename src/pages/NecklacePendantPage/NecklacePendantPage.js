@@ -11,7 +11,6 @@ function NecklacePendantPage() {
 	const [displayImage, setDisplayImage] = useState('pendantsNecklace/ring1.png');
 	const [addToWishList, setAddToWishList] = useState(false);
 	const [tempSafety, setTempSafety] = useState(false);
-	const [dataFromDB, setDataFromDB] = useState({});
 	const [{ wishListBasket, cartBasket, user }, dispatch] = useStateValue();
 
 	// created the image path
@@ -22,7 +21,6 @@ function NecklacePendantPage() {
 
 	// use effect for updating the wishlist in the database when clicked
 	useEffect(() => {
-		console.log('user effect running...');
 		if (tempSafety === true) {
 			db.collection('users').doc(user?.email).update({
 				wishlist: wishListBasket,

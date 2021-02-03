@@ -1,17 +1,62 @@
 import FavoriteBorderIcon from '@material-ui/icons/FavoriteBorder';
 import FavoriteIcon from '@material-ui/icons/Favorite';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import Gem from '../Gem/Gem';
 import './GemDetails.css';
+import { useStateValue } from '../../../StateProvider';
+import { db } from '../../../firebase';
 
 function BlueGemDetail() {
 	const [displayImage, setDisplayImage] = useState('gems/teal-sapphire.png');
 	const [addToWishList, setAddToWishList] = useState(false);
+	const [tempSafety, setTempSafety] = useState(false);
+	const [{ wishListBasket, cartBasket, user }, dispatch] = useStateValue();
 
+	// created the image path
 	const selectedImage = (imagePath) => {
 		console.log('/' + imagePath.split('/').reverse()[1] + '/' + imagePath.split('/').reverse()[0]);
 		setDisplayImage('/' + imagePath.split('/').reverse()[1] + '/' + imagePath.split('/').reverse()[0]);
+	};
+
+	// use effect for updating the wishlist in the database when clicked
+	useEffect(() => {
+		if (tempSafety === true) {
+			db.collection('users').doc(user?.email).update({
+				wishlist: wishListBasket,
+			});
+		}
+		setTempSafety(true);
+	}, [addToWishList]);
+
+	// ADDING THE ITEM TO THE WISHLIST
+	const addItemToWishList = () => {
+		if (user) {
+			setAddToWishList(true);
+			dispatch({
+				type: 'ADD_TO_WISHLIST',
+				item: {
+					name: 'Deep Royal Blue Sapphire',
+					cost: 1100,
+					imgURL: 'gems/teal-sapphire.png',
+				},
+			});
+		} else {
+			alert('Please sign in to add item to wishlist');
+		}
+	};
+
+	// REMOVING THE ITEM FROM THE WISHLIST
+	const removeFromWishList = () => {
+		if (user) {
+			setAddToWishList(false);
+			dispatch({
+				type: 'REMOVE_FROM_WISHLIST',
+				name: 'Deep Royal Blue Sapphire',
+			});
+		} else {
+			alert('Please sign in to add item to wishlist');
+		}
 	};
 
 	const tableRow = (description, detail) => (
@@ -52,9 +97,9 @@ function BlueGemDetail() {
 					<img src={displayImage} alt="" />
 					<div className="gemDetails__sectionCartMainImageIcon">
 						{addToWishList ? (
-							<FavoriteIcon onClick={(e) => setAddToWishList(false)} />
+							<FavoriteIcon onClick={removeFromWishList} />
 						) : (
-							<FavoriteBorderIcon onClick={(e) => setAddToWishList(true)} />
+							<FavoriteBorderIcon onClick={addItemToWishList} />
 						)}
 					</div>
 				</div>
