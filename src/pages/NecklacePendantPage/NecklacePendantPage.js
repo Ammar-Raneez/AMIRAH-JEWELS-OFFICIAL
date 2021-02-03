@@ -9,7 +9,7 @@ import Product from './Product/Product';
 function NecklacePendantPage() {
 	const [displayImage, setDisplayImage] = useState('pendantsNecklace/ring1.png');
 	const [addToWishList, setAddToWishList] = useState(false);
-	const [{ wishListBasket, cartBasket }, dispatch] = useStateValue();
+	const [{ wishListBasket, cartBasket, user }, dispatch] = useStateValue();
 
 	const selectedImage = (imagePath) => {
 		console.log('/' + imagePath.split('/').reverse()[1] + '/' + imagePath.split('/').reverse()[0]);
@@ -18,32 +18,40 @@ function NecklacePendantPage() {
 
 	useEffect(() => {
 		console.log(wishListBasket);
-	}, [addToWishList])
+	}, [addToWishList]);
 
 	// ADDING THE ITEM TO THE WISHLIST
 	const addItemToWishList = () => {
-		setAddToWishList(true);
-		dispatch({
-			type: 'ADD_TO_WISHLIST',
-			item: {
-				name: 'Diamond and Black Onyx Circle Pendant',
-				cost: 890.0,
-				imgURL: 'pendantsNecklace/ring1.png',
-			},
-		});
+		if (user) {
+			setAddToWishList(true);
+			dispatch({
+				type: 'ADD_TO_WISHLIST',
+				item: {
+					name: 'Diamond and Black Onyx Circle Pendant',
+					cost: 890.0,
+					imgURL: 'pendantsNecklace/ring1.png',
+				},
+			});
 
-		// updating the wish list into the database for the specific user (adding)
+			// updating the wish list into the database for the specific user (adding)
+		} else {
+			alert('Please sign in to add item to wishlist');
+		}
 	};
 
 	// REMOVING THE ITEM FROM THE WISHLIST
 	const removeFromWishList = () => {
-		setAddToWishList(false);
-		dispatch({
-			type: 'REMOVE_FROM_WISHLIST',
-			name: 'Diamond and Black Onyx Circle Pendant',
-		});
+		if (user) {
+			setAddToWishList(false);
+			dispatch({
+				type: 'REMOVE_FROM_WISHLIST',
+				name: 'Diamond and Black Onyx Circle Pendant',
+			});
 
-		// updating the wish list into the database for the specific user (deleting)
+			// updating the wish list into the database for the specific user (deleting)
+		} else {
+			alert('Please sign in to add item to wishlist');
+		}
 	};
 
 	return (
