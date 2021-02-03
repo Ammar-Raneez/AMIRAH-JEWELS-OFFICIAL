@@ -79,6 +79,10 @@ function RegisterPage() {
 
 				// redirect to homepage
 				history.replace('/');
+
+				setTimeout(() => {
+					window.location.reload(true);
+				}, 2000);
 			})
 			.catch((e) => alert(e.message));
 	};
