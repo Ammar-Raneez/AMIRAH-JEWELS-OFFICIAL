@@ -3,6 +3,7 @@ import { useHistory } from 'react-router-dom';
 import { auth, db } from '../../../firebase';
 import './RegisterPage.css';
 import firebase from 'firebase';
+import { useStateValue } from '../../../StateProvider';
 
 function RegisterPage() {
 	const history = useHistory();
@@ -13,6 +14,7 @@ function RegisterPage() {
 	const [gender, setGender] = useState('');
 	const [birthMonth, setBirthMonth] = useState('');
 	const [birthDay, setBirthDay] = useState('');
+	const [{ user }, dispatch] = useStateValue();
 
 	const registerUser = (e) => {
 		e.preventDefault();
@@ -64,6 +66,12 @@ function RegisterPage() {
 				setPassword("");
 
 				alert('Welcome ' + auth.user.displayName + '!');
+
+				// setting the user into the react context API
+				dispatch({
+					type: 'SET_USER',
+					user: auth.user,
+				});
 
 				// redirect to homepage
 				history.replace('/');

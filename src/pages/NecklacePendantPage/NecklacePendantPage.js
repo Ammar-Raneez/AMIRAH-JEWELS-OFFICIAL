@@ -16,9 +16,9 @@ function NecklacePendantPage() {
 		setDisplayImage('/' + imagePath.split('/').reverse()[1] + '/' + imagePath.split('/').reverse()[0]);
 	};
 
-	useEffect(() => {
-		console.log(wishListBasket);
-	}, [addToWishList]);
+	// useEffect(() => {
+		
+	// }, [addToWishList]);
 
 	// ADDING THE ITEM TO THE WISHLIST
 	const addItemToWishList = () => {
@@ -34,9 +34,19 @@ function NecklacePendantPage() {
 			});
 
 			// updating the wish list into the database for the specific user (adding)
+			addItemToWishListDB();
 		} else {
 			alert('Please sign in to add item to wishlist');
 		}
+	};
+
+	const addItemToWishListDB = () => {
+		console.log('Adding to database');
+
+	};
+	const removeItemToWishListDB = () => {
+		console.log('Removing from database');
+
 	};
 
 	// REMOVING THE ITEM FROM THE WISHLIST
@@ -49,6 +59,8 @@ function NecklacePendantPage() {
 			});
 
 			// updating the wish list into the database for the specific user (deleting)
+			removeItemToWishListDB();
+
 		} else {
 			alert('Please sign in to add item to wishlist');
 		}

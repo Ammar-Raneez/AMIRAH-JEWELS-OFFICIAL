@@ -1,12 +1,14 @@
 import React, { useState } from 'react';
 import { useHistory } from 'react-router-dom';
 import { auth } from '../../../firebase';
+import { useStateValue } from '../../../StateProvider';
 import './LoginPage.css';
 
 function LoginPage() {
 	const history = useHistory();
 	const [email, setEmail] = useState('');
 	const [password, setPassword] = useState('');
+	const [{ user }, dispatch] = useStateValue();
 
 	const signIn = (e) => {
 		e.preventDefault();
@@ -23,7 +25,13 @@ function LoginPage() {
 				setEmail('');
                 setPassword('');
 				alert('Welcome ' + auth.user.displayName + '!');
-                
+				
+				// setting the user into the react context API
+				dispatch({
+					type: 'SET_USER',
+					user: auth.user,
+				});
+
 				history.replace('/');
 			})
 			.catch((e) => alert(e.message));

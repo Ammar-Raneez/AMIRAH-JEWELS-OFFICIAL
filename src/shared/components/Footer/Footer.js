@@ -2,11 +2,13 @@ import './Footer.css';
 import { Link, useHistory } from 'react-router-dom';
 import { useState } from 'react';
 import { auth } from '../../../firebase';
+import { useStateValue } from '../../../StateProvider';
 
 function Footer() {
 	const history = useHistory();
 	const [email, setEmail] = useState('');
 	const [password, setPassword] = useState('');
+	const [{ user }, dispatch] = useStateValue();
 
 	const signIn = (e) => {
 		e.preventDefault();
@@ -24,6 +26,12 @@ function Footer() {
 				setPassword('');
 
 				alert('Welcome ' + auth.user.displayName + '!');
+
+				// setting the user into the react context API
+				dispatch({
+					type: 'SET_USER',
+					user: auth.user,
+				});
 
 				history.replace('/');
 			})

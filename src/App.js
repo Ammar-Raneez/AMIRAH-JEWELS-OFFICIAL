@@ -22,7 +22,7 @@ import { useEffect } from 'react';
 import { auth } from './firebase';
 
 function App() {
-	const [dispatch] = useStateValue();
+	const [{ user }, dispatch] = useStateValue();
 
 	// This use effect deals with the user auth stuff
 	useEffect(() => {
