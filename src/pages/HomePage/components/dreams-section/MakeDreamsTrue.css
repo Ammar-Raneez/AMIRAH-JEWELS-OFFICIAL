@@ -39,16 +39,16 @@
 .homePage__makeDreamsTrue__topPrices > h1 {
 	color: #707070;
 	font-family: Quattrocento-Regular;
-	font-weight: lighter;
-	font-size: 3vw;
+	font-size: 2vw;
+	font-weight: bold;
 	align-self: flex-end;
 }
 .homePage__makeDreamsTrue__topPrices > h2 {
 	color: #707070;
 	font-family: Quattrocento-Regular;
-	font-weight: bold;
+	font-weight: lighter;
 	align-self: flex-end;
-	font-size: 2.5vw;
+	font-size: 2vw;
 }
 .homePage__makeDreamsTrue__topPurchase > h1 {
 	color: #707070;
@@ -69,7 +69,7 @@
 	font-family: Quattrocento-Regular;
 	outline: none;
 	margin-top: 3vh;
-	font-size: 2vw;
+	font-size: 1.2vw;
 	border-radius: 1vw;
 	background-color: transparent;
 	cursor: pointer;
@@ -98,7 +98,8 @@
 	font-family: Quattrocento-Regular;
 	color: #707070;
 	flex-direction: column;
-	font-size: 1.6vw;
+	font-size: 1.3vw;
+	text-align: justify;
 	justify-content: space-between;
 }
 
