@@ -19,10 +19,10 @@ import NecklacePendantPage from './pages/NecklacePendantPage/NecklacePendantPage
 import GiftPage from './pages/GiftPage/GiftPage';
 import { useStateValue } from './StateProvider';
 import { useEffect } from 'react';
-import { auth } from './firebase';
+import { auth, db } from './firebase';
 
 function App() {
-	const [{ user }, dispatch] = useStateValue();
+	const [{ wishListBasket, cartBasket, user }, dispatch] = useStateValue();
 
 	// This use effect deals with the user auth stuff
 	useEffect(() => {
@@ -49,9 +49,52 @@ function App() {
 	}, []);
 
 	// this Use effect to load the user details(cart, wishlist and all ) from the database once he signs in or registers and account
-	useEffect(() => {
-		console.log("Loading all details related to the");
-	}, []);
+	// useEffect(() => {
+	// 	// getting snapshot of the users data from the database fireStore
+	// 	if (user) {
+	// 		// empty the cart basket and the wishlist basket before the user add their content
+	// 		dispatch({
+	// 			type: 'EMPTY_THE_CART_BASKET',
+	// 			item: [],
+	// 		});
+	// 		dispatch({
+	// 			type: 'EMPTY_THE_WISHLIST_BASKET',
+	// 			item: [],
+	// 		});
+
+	// 		// user logged in only we load the details for the particular user
+	// 		db.collection('users').onSnapshot((snapshot) =>
+	// 			snapshot.docs.forEach((doc) => {
+	// 				if (doc.id === user?.email) {
+	// 					// adding the cart items
+	// 					for (const cartItem of doc.data().cart) {
+	// 						dispatch({
+	// 							type: 'ADD_TO_BASKET',
+	// 							item: {
+	// 								productCost: cartItem.productCost,
+	// 								productImgURL: cartItem.productImgURL,
+	// 								productName: cartItem.productName,
+	// 								productQuantity: cartItem.productQuantity,
+	// 							},
+	// 						});
+	// 					}
+
+	// 					// adding the wishlist items
+	// 					for (const wishlistItem of doc.data().wishlist) {
+	// 						dispatch({
+	// 							type: 'ADD_TO_WISHLIST',
+	// 							item: {
+	// 								cost: wishlistItem.cost,
+	// 								imgURL: wishlistItem.imgURL,
+	// 								name: wishlistItem.name,
+	// 							},
+	// 						});
+	// 					}
+	// 				}
+	// 			})
+	// 		);
+	// 	}
+	// }, []);
 
 	// console.log("USER >>>>>>>>>>>", user);
 	// console.log(user.displayName);

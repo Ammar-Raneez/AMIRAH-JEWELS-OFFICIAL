@@ -11,6 +11,10 @@ const reducer = (state, action) => {
 				...state,
 				user: action.user,
 			};
+		case 'EMPTY_THE_CART_BASKET':
+			// Empty the content of the cart array for new user to add their content
+			return { ...state, cartBasket: action.item };
+
 		case 'ADD_TO_BASKET':
 			// Logic for adding item to basket
 			// checking if the item is already present in the wishlist (if present we don't add else we add)
@@ -18,7 +22,7 @@ const reducer = (state, action) => {
 			let presentBasket = false;
 
 			// looping through the list of items to check if its present already
-			for (let index = 0; index < state.cartBasket.length; index++) {
+			for (let index = 0; index < state.cartBasket?.length; index++) {
 				const element = state.cartBasket[index];
 				if (element.name === itemToAddBasket.name) {
 					presentBasket = true;
@@ -54,6 +58,10 @@ const reducer = (state, action) => {
 		case 'DECREASE_ITEM_COUNT_FROM_BASKET':
 			// Logic for decreasing the number of a particular item in a basket
 			return { state };
+		case 'EMPTY_THE_WISHLIST_BASKET':
+			// Empty the content of the wishlist array for new user to add their content
+			return { ...state, wishListBasket: action.item };
+
 		case 'ADD_TO_WISHLIST':
 			// Logic for adding item to the wishlist
 
@@ -62,7 +70,7 @@ const reducer = (state, action) => {
 			let presentWishlist = false;
 
 			// looping through the list of items to check if its present already
-			for (let index = 0; index < state.wishListBasket.length; index++) {
+			for (let index = 0; index < state.wishListBasket?.length; index++) {
 				const element = state.wishListBasket[index];
 				if (element.name === itemToAddWishlist.name) {
 					presentWishlist = true;

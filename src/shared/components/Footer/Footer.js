@@ -1,14 +1,14 @@
-import './Footer.css';
-import { Link, useHistory } from 'react-router-dom';
 import { useState } from 'react';
+import { Link, useHistory } from 'react-router-dom';
 import { auth } from '../../../firebase';
 import { useStateValue } from '../../../StateProvider';
+import './Footer.css';
 
 function Footer() {
 	const history = useHistory();
 	const [email, setEmail] = useState('');
 	const [password, setPassword] = useState('');
-	const [{ user }, dispatch] = useStateValue();
+	const [{ wishListBasket, cartBasket, user }, dispatch] = useStateValue();
 
 	const signIn = (e) => {
 		e.preventDefault();
@@ -31,9 +31,26 @@ function Footer() {
 					user: auth.user,
 				});
 
-				alert('Welcome ' + user.displayName + '!');
+				setTimeout(() => {
+					alert('Welcome ' + auth.user.displayName + '!');
+				}, 1000);
 
 				history.replace('/');
+
+				setTimeout(() => {
+					window.location.reload(true);
+				}, 2000);
+
+				// empty the cart basket and the wishlist basket before the user add their content
+				// dispatch({
+				// 	type: 'EMPTY_THE_WISHLIST_BASKET',
+				// 	item: [],
+				// });
+				// dispatch({
+				// 	type: 'EMPTY_THE_CART_BASKET',
+				// 	item: [],
+				// });
+				
 			})
 			.catch((e) => alert(e.message));
 	};

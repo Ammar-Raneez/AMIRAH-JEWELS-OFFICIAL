@@ -30,8 +30,9 @@ function LoginPage() {
 					type: 'SET_USER',
 					user: auth.user,
 				});
-
-				alert('Welcome ' + user.displayName + '!');
+				setTimeout(() => {
+					alert('Welcome ' + auth.user.displayName + '!');
+				}, 1000);
 
 				history.replace('/');
 			})

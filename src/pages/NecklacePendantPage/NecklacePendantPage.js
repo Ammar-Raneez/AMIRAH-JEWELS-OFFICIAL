@@ -10,21 +10,66 @@ import Product from './Product/Product';
 function NecklacePendantPage() {
 	const [displayImage, setDisplayImage] = useState('pendantsNecklace/ring1.png');
 	const [addToWishList, setAddToWishList] = useState(false);
+	const [tempSafety, setTempSafety] = useState(false);
 	const [{ wishListBasket, cartBasket, user }, dispatch] = useStateValue();
 
+	// created the image path
 	const selectedImage = (imagePath) => {
 		console.log('/' + imagePath.split('/').reverse()[1] + '/' + imagePath.split('/').reverse()[0]);
 		setDisplayImage('/' + imagePath.split('/').reverse()[1] + '/' + imagePath.split('/').reverse()[0]);
 	};
 
-	// useEffect(() => {
+	// we load all the content from the database (this runs only once)
+	useEffect(() => {
+		// user logged in only we load the details for the particular user
+		db.collection('users').onSnapshot((snapshot) =>
+			snapshot.docs.forEach((doc) => {
+				if (doc.id === user?.email) {
+					// adding the cart items
+					for (const cartItem of doc.data().cart) {
+						console.log('Adding items from the database into the cart');
+						dispatch({
+							type: 'ADD_TO_BASKET',
+							item: {
+								productCost: cartItem.productCost,
+								productImgURL: cartItem.productImgURL,
+								productName: cartItem.productName,
+								productQuantity: cartItem.productQuantity,
+							},
+						});
+					}
 
-	// }, [addToWishList]);
+					// adding the wishlist items
+					for (const wishlistItem of doc.data().wishlist) {
+						console.log('Adding items from the database into the wishlist');
+						console.log(wishlistItem);
+						dispatch({
+							type: 'ADD_TO_WISHLIST',
+							item: {
+								name: wishlistItem.name,
+								cost: wishlistItem.cost,
+								imgURL: wishlistItem.imgURL,
+							},
+						});
+					}
+				}
+			})
+		);
+	}, [])
+
+	// use effect for updating the wishlist in the database when clicked
+	useEffect(() => {
+		if (tempSafety === true) {
+			db.collection('users').doc(user?.email).update({
+				wishlist: wishListBasket,
+			});
+		}
+		setTempSafety(true);
+	}, [addToWishList]);
 
 	// ADDING THE ITEM TO THE WISHLIST
 	const addItemToWishList = () => {
 		if (user) {
-			setAddToWishList(true);
 			dispatch({
 				type: 'ADD_TO_WISHLIST',
 				item: {
@@ -33,35 +78,20 @@ function NecklacePendantPage() {
 					imgURL: 'pendantsNecklace/ring1.png',
 				},
 			});
-
-			// updating the wish list into the database for the specific user (adding)
-			addItemToWishListDB();
+			setAddToWishList(true);
 		} else {
 			alert('Please sign in to add item to wishlist');
 		}
 	};
 
-	const addItemToWishListDB = () => {
-		// updating the wish list into the database for the specific user (adding)
-		db.collection('users').doc(user.email).update({
-			
-		});
-	};
-	const removeItemToWishListDB = () => {
-		// updating the wish list into the database for the specific user (deleting)
-	};
-
 	// REMOVING THE ITEM FROM THE WISHLIST
 	const removeFromWishList = () => {
 		if (user) {
-			setAddToWishList(false);
 			dispatch({
 				type: 'REMOVE_FROM_WISHLIST',
 				name: 'Diamond and Black Onyx Circle Pendant',
 			});
-
-			// updating the wish list into the database for the specific user (deleting)
-			removeItemToWishListDB();
+			setAddToWishList(false);
 		} else {
 			alert('Please sign in to add item to wishlist');
 		}
