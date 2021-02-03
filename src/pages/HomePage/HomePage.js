@@ -6,8 +6,9 @@ import MakeDreamsTrue from './components/dreams-section/MakeDreamsTrue';
 import Category from './components/shop-by-category/Category';
 
 function HomePage() {
-	
-
+	useEffect(() => {
+		console.log('This is the homepage');
+	}, []);
 	return (
 		<div className="homepage">
 			<Banner />

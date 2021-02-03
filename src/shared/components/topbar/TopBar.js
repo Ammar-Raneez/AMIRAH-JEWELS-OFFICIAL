@@ -6,12 +6,23 @@ import { Link } from 'react-router-dom';
 import PersonOutlinedIcon from '@material-ui/icons/PersonOutlined';
 import LocalMallOutlinedIcon from '@material-ui/icons/LocalMallOutlined';
 import FavoriteBorderIcon from '@material-ui/icons/FavoriteBorder';
+import { IconButton } from '@material-ui/core';
+import { useStateValue } from '../../../StateProvider';
 
 function TopBar() {
+	const [{ wishListBasket, cartBasket, user }, dispatch] = useStateValue();
+
+	const displayContent = () => {
+		console.log(wishListBasket);
+		console.log(cartBasket);
+		console.log(user.displayName);
+	};
 	return (
 		<div className="topbar">
 			<div className="topbar__left">
-				<SearchIcon />
+				<IconButton onClick={displayContent}>
+					<SearchIcon />
+				</IconButton>
 				<FacebookIcon />
 				<InstagramIcon />
 			</div>

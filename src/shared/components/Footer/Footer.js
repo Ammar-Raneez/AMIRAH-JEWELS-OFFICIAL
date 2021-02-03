@@ -1,14 +1,14 @@
 import './Footer.css';
 import { Link, useHistory } from 'react-router-dom';
 import { useState } from 'react';
-import { auth } from '../../../firebase';
+import { auth, db } from '../../../firebase';
 import { useStateValue } from '../../../StateProvider';
 
 function Footer() {
 	const history = useHistory();
 	const [email, setEmail] = useState('');
 	const [password, setPassword] = useState('');
-	const [{ user }, dispatch] = useStateValue();
+	const [{ wishListBasket, cartBasket, user }, dispatch] = useStateValue();
 
 	const signIn = (e) => {
 		e.preventDefault();
@@ -31,7 +31,44 @@ function Footer() {
 					user: auth.user,
 				});
 
-				alert('Welcome ' + user.displayName + '!');
+				// user logged in only we load the details for the particular user
+				db.collection('users').onSnapshot((snapshot) =>
+					snapshot.docs.forEach((doc) => {
+						if (doc.id === user?.email) {
+							// adding the cart items
+							for (const cartItem of doc.data().cart) {
+								console.log('Adding items from the database into the cart');
+								dispatch({
+									type: 'ADD_TO_BASKET',
+									item: {
+										productCost: cartItem.productCost,
+										productImgURL: cartItem.productImgURL,
+										productName: cartItem.productName,
+										productQuantity: cartItem.productQuantity,
+									},
+								});
+							}
+
+							// adding the wishlist items
+							for (const wishlistItem of doc.data().wishlist) {
+								console.log('Adding items from the database into the wishlist');
+
+								dispatch({
+									type: 'ADD_TO_WISHLIST',
+									item: {
+										name: wishlistItem.name,
+										cost: wishlistItem.cost,
+										imgURL: wishlistItem.imgURL,
+									},
+								});
+							}
+						}
+					})
+				);
+				//----------------------------------------
+				setTimeout(() => {
+					alert('Welcome ' + auth.user.displayName + '!');
+				}, 1000);
 
 				history.replace('/');
 			})
