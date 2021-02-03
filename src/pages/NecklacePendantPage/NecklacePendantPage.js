@@ -2,6 +2,7 @@ import FavoriteIcon from '@material-ui/icons/Favorite';
 import FavoriteBorderIcon from '@material-ui/icons/FavoriteBorder';
 import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
+import { db } from '../../firebase';
 import { useStateValue } from '../../StateProvider';
 import './NecklacePendantPage.css';
 import Product from './Product/Product';
@@ -17,7 +18,7 @@ function NecklacePendantPage() {
 	};
 
 	// useEffect(() => {
-		
+
 	// }, [addToWishList]);
 
 	// ADDING THE ITEM TO THE WISHLIST
@@ -41,12 +42,13 @@ function NecklacePendantPage() {
 	};
 
 	const addItemToWishListDB = () => {
-		console.log('Adding to database');
-
+		// updating the wish list into the database for the specific user (adding)
+		db.collection('users').doc(user.email).update({
+			
+		});
 	};
 	const removeItemToWishListDB = () => {
-		console.log('Removing from database');
-
+		// updating the wish list into the database for the specific user (deleting)
 	};
 
 	// REMOVING THE ITEM FROM THE WISHLIST
@@ -60,7 +62,6 @@ function NecklacePendantPage() {
 
 			// updating the wish list into the database for the specific user (deleting)
 			removeItemToWishListDB();
-
 		} else {
 			alert('Please sign in to add item to wishlist');
 		}

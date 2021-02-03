@@ -32,7 +32,7 @@ function RegisterPage() {
 				});
 
 				// Creating a user collection and adding details about the user using cloud firebase
-				db.collection('users').add({
+				db.collection('users').doc(email).set({
 					userID: email,
 					gender: gender,
 					birthMonth: birthMonth,
@@ -65,14 +65,14 @@ function RegisterPage() {
 				setBirthMonth("");
 				setPassword("");
 
-				alert('Welcome ' + auth.user.displayName + '!');
-
 				// setting the user into the react context API
 				dispatch({
 					type: 'SET_USER',
 					user: auth.user,
 				});
 
+				alert('Welcome ' + user.displayName + '!');
+				
 				// redirect to homepage
 				history.replace('/');
 			})

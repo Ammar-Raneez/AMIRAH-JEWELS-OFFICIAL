@@ -23,14 +23,15 @@ function LoginPage() {
 			.then((auth) => {
 				// signed in, redirect to the homepage
 				setEmail('');
-                setPassword('');
-				alert('Welcome ' + auth.user.displayName + '!');
-				
+				setPassword('');
+
 				// setting the user into the react context API
 				dispatch({
 					type: 'SET_USER',
 					user: auth.user,
 				});
+
+				alert('Welcome ' + user.displayName + '!');
 
 				history.replace('/');
 			})
