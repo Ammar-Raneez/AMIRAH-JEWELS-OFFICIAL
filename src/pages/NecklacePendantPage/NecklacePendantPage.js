@@ -10,16 +10,26 @@ import Product from './Product/Product';
 function NecklacePendantPage() {
 	const [displayImage, setDisplayImage] = useState('pendantsNecklace/ring1.png');
 	const [addToWishList, setAddToWishList] = useState(false);
+	const [tempSafety, setTempSafety] = useState(false);
+	const [dataFromDB, setDataFromDB] = useState({});
 	const [{ wishListBasket, cartBasket, user }, dispatch] = useStateValue();
 
+	// created the image path
 	const selectedImage = (imagePath) => {
 		console.log('/' + imagePath.split('/').reverse()[1] + '/' + imagePath.split('/').reverse()[0]);
 		setDisplayImage('/' + imagePath.split('/').reverse()[1] + '/' + imagePath.split('/').reverse()[0]);
 	};
 
-	// useEffect(() => {
-
-	// }, [addToWishList]);
+	// use effect for updating the wishlist in the database when clicked
+	useEffect(() => {
+		console.log('user effect running...');
+		if (tempSafety === true) {
+			db.collection('users').doc(user?.email).update({
+				wishlist: wishListBasket,
+			});
+		}
+		setTempSafety(true);
+	}, [addToWishList]);
 
 	// ADDING THE ITEM TO THE WISHLIST
 	const addItemToWishList = () => {
@@ -33,22 +43,9 @@ function NecklacePendantPage() {
 					imgURL: 'pendantsNecklace/ring1.png',
 				},
 			});
-
-			// updating the wish list into the database for the specific user (adding)
-			addItemToWishListDB();
 		} else {
 			alert('Please sign in to add item to wishlist');
 		}
-	};
-
-	const addItemToWishListDB = () => {
-		// updating the wish list into the database for the specific user (adding)
-		db.collection('users').doc(user.email).update({
-			
-		});
-	};
-	const removeItemToWishListDB = () => {
-		// updating the wish list into the database for the specific user (deleting)
 	};
 
 	// REMOVING THE ITEM FROM THE WISHLIST
@@ -59,9 +56,6 @@ function NecklacePendantPage() {
 				type: 'REMOVE_FROM_WISHLIST',
 				name: 'Diamond and Black Onyx Circle Pendant',
 			});
-
-			// updating the wish list into the database for the specific user (deleting)
-			removeItemToWishListDB();
 		} else {
 			alert('Please sign in to add item to wishlist');
 		}
