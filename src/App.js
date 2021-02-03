@@ -208,7 +208,7 @@ function App() {
 						<Footer />
 					</Route>
 
-					<Route path="/process">
+					<Route path="/processes">
 						<TopBar />
 						<Header />
 						<ProcessPage />
