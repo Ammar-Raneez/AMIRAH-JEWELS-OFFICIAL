@@ -22,6 +22,12 @@ function CartPage() {
                         currency="$"
                         price="890.00"
                     />
+                    <CartItem
+                        img="gems/teal-sapphire.png"
+                        name="Teal Sapphire"
+                        currency="$"
+                        price="890.00"
+                    />
                 </div>
                 <div className="cartPage__orderSummary">
 
