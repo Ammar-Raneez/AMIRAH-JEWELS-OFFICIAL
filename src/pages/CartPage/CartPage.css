@@ -3,6 +3,10 @@
 	display: flex;
 	flex-direction: column;
 }
+.cartPage__main {
+	display: flex;
+	justify-content: space-between;
+}
 .cartPage__titleContinueSection {
 	display: flex;
 	align-items: center;

@@ -59,6 +59,15 @@
 }
 
 .cartItem__descriptionRightBottom > div > input {
+	outline: none;
+	border-top: none;
+	border-right: none;
+	border-left: none;
+	font-family: Quattrocento-Regular;
+	padding: 0.8vw;
+	border-bottom: 0.1vw solid #707070;
+	font-size: 1vw;
+	color: #707070;
     width: 20%;
 }
 

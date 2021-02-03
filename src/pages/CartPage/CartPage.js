@@ -1,7 +1,8 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './CartPage.css'
 import ArrowBackIosIcon from '@material-ui/icons/ArrowBackIos';
 import CartItem from './CartItem/CartItem';
+import Bill from './Bill/Bill';
 
 function CartPage() {
     return (
@@ -20,17 +21,22 @@ function CartPage() {
                         img="gems/orange-sapphire.png"
                         name="Orange Sapphire"
                         currency="$"
-                        price="890.00"
+                        price={890.00}
                     />
                     <CartItem
                         img="gems/teal-sapphire.png"
                         name="Teal Sapphire"
                         currency="$"
-                        price="890.00"
+                        price={890.00}
                     />
                 </div>
                 <div className="cartPage__orderSummary">
-
+                    <Bill 
+                        subTotal={890.00}
+                        delivery={90.00}
+                        tax={20.00}
+                        currency="$"
+                    />
                 </div>
             </div>
         </div>
