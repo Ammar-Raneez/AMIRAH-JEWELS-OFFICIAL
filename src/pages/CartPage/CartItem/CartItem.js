@@ -10,7 +10,8 @@ function CartItem({ img, name, price, currency }) {
 
     // }, [qty, changedPrice])
 
-    function updatePrice() {
+    function updatePrice(event) {
+        onQtyChange(event);
         let updatedPrice = qty * price;
         setChangedPrice(updatedPrice);
         console.log(changedPrice)
@@ -18,7 +19,6 @@ function CartItem({ img, name, price, currency }) {
 
     function onQtyChange(event) {
         setQty(event.target.value);
-        updatePrice();
     }
 
     return (
@@ -43,7 +43,7 @@ function CartItem({ img, name, price, currency }) {
                                 type="number"
                                 name="Quantity"
                                 placeholder="Quantity"
-                                onChange={e => onQtyChange(e)}
+                                onChange={e => updatePrice(e)}
                                 value={qty}
                                 min={0}
                             />
