@@ -61,7 +61,7 @@
     color: black !important;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 768px) and (min-width: 400px) {
 	.processPage > h1 {
 		font-size: 20px;
 	}
@@ -78,5 +78,27 @@
 	.processPage__callBtn button {
 		font-size: 12px;
 		width: 150px;
+	}
+}
+
+@media screen and (max-width: 400px) {
+	.processPage > h1 {
+		font-size: 20px;
+	}
+
+	.processPage > p {
+		font-size: 12px;
+		line-height: 14px;
+	}
+
+	.processPage__callBtn {
+		width: 350px;
+		flex-direction: column;
+	}
+
+	.processPage__callBtn button {
+		font-size: 12px;
+		width: 150px;
+		margin: 4px;
 	}
 }
