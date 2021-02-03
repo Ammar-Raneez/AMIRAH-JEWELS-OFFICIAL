@@ -56,7 +56,7 @@ function Header() {
 					)}
 				</div>
 
-				<Link to="/process">Process</Link>
+				<Link to="/processes">Process</Link>
 
 				<div>
 					<Link
