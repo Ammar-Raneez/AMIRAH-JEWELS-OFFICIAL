@@ -14,7 +14,7 @@
 	color: #707070;
 	padding: 1vw;
 }
-.gem > button {
+.gem > a > button {
 	margin: 2vw;
 	padding: 0.8vw 3vw;
 	cursor: pointer !important;
@@ -30,7 +30,7 @@
 	border-radius: 0.7vw;
 	transition: 0.3s ease-in-out;
 }
-.gem > button:hover {
+.gem > a > button:hover {
 	transition: 0.3s ease-in-out;
 	color: white;
 	background-color: #ffc0a1;
@@ -42,7 +42,7 @@
 }
 
 @media screen and (max-width: 900px) and (min-width: 450px) {
-	.gem > button {
+	.gem > a > button {
 		font-size: 12px;
 	}
 }

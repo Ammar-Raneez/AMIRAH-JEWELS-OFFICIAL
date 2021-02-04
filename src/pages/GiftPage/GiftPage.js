@@ -30,7 +30,7 @@ function GiftPage() {
 
 			<div id="otherProducts" className="giftPage__otherGems">
 				<div className="giftPage__otherGemsRow">
-					<Product img="homepage category/necklace.png" name="Necklaces & Pendants" viewMoreUrl="/" />
+					<Product img="homepage category/necklace.png" name="Necklaces & Pendants" viewMoreUrl="/necklace+pendants" />
 					<Product img="homepage category/earrings.png" name="Earrings" viewMoreUrl="/" />
 					<Product img="homepage category/rings.png" name="Rings" viewMoreUrl="/" />
 					<Product img="homepage category/bracelets.png" name="Bracelets" viewMoreUrl="/" />

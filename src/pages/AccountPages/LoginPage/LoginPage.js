@@ -70,7 +70,7 @@ function LoginPage() {
 					</p>
 				</div>
 				<div className="loginPage__rightSideBottom">
-					<button>REGISTER NOW</button>
+					<a href="/register"><button>REGISTER NOW</button></a>
 				</div>
 			</div>
 		</div>
