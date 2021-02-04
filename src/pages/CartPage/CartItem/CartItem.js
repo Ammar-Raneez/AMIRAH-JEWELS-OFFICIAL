@@ -28,7 +28,7 @@ function CartItem({ img, name, price, currency }) {
             </div>
             <div className="cartItem__description">
                 <div className="cartItem__descriptionleft">
-                    <img src={img} />
+                    <img src={img} alt=""/>
                 </div>
                 <div className="cartItem__descriptionRight">
                     <div className="cartItem__descriptionRightTop">
