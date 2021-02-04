@@ -23,11 +23,11 @@
 }
 
 .topbar__right {
-	flex-grow: 0.5;
+	flex-grow: 0.3;
 }
 
 .topbar__left  {
-	flex-grow: 1;
+	flex-grow: 0.3;
 }
 
 .topbar__left, .topbar__right {
@@ -42,16 +42,14 @@
 	font-size: 1.3vw;
 }
 
-.topbar__left > .MuiSvgIcon-root, .topbar__right > .MuiSvgIcon-root, .topbar__right > .topbar__rightAccount > .MuiSvgIcon-root, .topbar__right > a > .MuiSvgIcon-root {
+.topbar__left > a > .MuiSvgIcon-root, .topbar__right > .MuiSvgIcon-root, .topbar__right > .topbar__rightAccount > .MuiSvgIcon-root, .topbar__right > a > .MuiSvgIcon-root {
 	cursor: pointer;
 	font-size: 1.9vw !important;
 	transition: 0.3s ease;
 	color: rgb(255, 177, 109);
 }
 
-.topbar__right > .MuiSvgIcon-root:hover,
-.topbar__left > .MuiSvgIcon-root:hover,
-.topbar__right > a > .MuiSvgIcon-root:hover {
+.topbar__left > a > .MuiSvgIcon-root:hover, .topbar__right > a > .MuiSvgIcon-root:hover {
 	color: black
 }
 

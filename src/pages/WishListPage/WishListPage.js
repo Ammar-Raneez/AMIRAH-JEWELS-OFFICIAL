@@ -5,8 +5,8 @@ import WishListItem from './WishListItem/WishListItem';
 function WishListPage() {
 	return (
 		<div className="wishListPage">
-			{/* user logged in details */}
-			<p className="wishListPage__userDetails">logged in as Vaappa</p>
+			{/* user logged in details
+			<p className="wishListPage__userDetails">logged in as Vaappa</p> */}
 
 			{/* wishlist title */}
 			<div className="wishListPage__title">

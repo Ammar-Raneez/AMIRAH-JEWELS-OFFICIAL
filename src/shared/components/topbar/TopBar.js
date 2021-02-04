@@ -23,8 +23,8 @@ function TopBar() {
 				{/* <IconButton onClick={displayContent}>
 					<SearchIcon />
 				</IconButton> */}
-				<FacebookIcon />
-				<InstagramIcon />
+				<a href="https://www.facebook.com/" target="_blank"><FacebookIcon /></a>
+				<a href="https://www.instagram.com/amirahgems/" target="_blank"><InstagramIcon /></a>
 			</div>
 			<div className="topbar__center">
 				<Link to="/">
