@@ -4,9 +4,13 @@ import { auth, db } from '../../../firebase';
 import './RegisterPage.css';
 import firebase from 'firebase';
 import { useStateValue } from '../../../StateProvider';
+import { Input } from '@material-ui/core';
+import DateFnsUtils from '@date-io/date-fns';
+import { KeyboardDatePicker, MuiPickersUtilsProvider } from '@material-ui/pickers';
 
 function RegisterPage() {
 	const history = useHistory();
+	const [testB, setTestB] = useState("Fri Feb 12 2021 20:52:00 GMT+0530");
 	const [firstName, setFirstName] = useState('');
 	const [lastName, setLastName] = useState('');
 	const [email, setEmail] = useState('');
@@ -15,6 +19,14 @@ function RegisterPage() {
 	const [birthMonth, setBirthMonth] = useState('');
 	const [birthDay, setBirthDay] = useState('');
 	const [{ user }, dispatch] = useStateValue();
+
+	function manipulateObtainedBirthday() {
+		let splittedVals = testB.split(" ");
+		
+		let monthMaps = {"Jan" : 1, "Feb" : 2, "Mar" : 3, "Apr" : 4, "May" : 5, "Jun" : 6, "Jul" : 7, "Aug" : 8, "Sep" : 9, "Oct" : 10, "Nov" : 11, "Dec" : 12};
+		setBirthMonth(monthMaps[splittedVals[1]]);
+		setBirthDay(monthMaps[splittedVals[2]]);
+	}
 
 	const registerUser = (e) => {
 		e.preventDefault();
@@ -88,15 +100,15 @@ function RegisterPage() {
 
 				<form className="registerPage__form">
 					<div className="registerPage__formFirst">
-						<input
+						<Input
 							type="text"
 							placeholder="First Name"
 							onChange={(e) => setFirstName(e.target.value)}
 							value={firstName}
 						/>
-						<input type="text" placeholder="Last Name" onChange={(e) => setLastName(e.target.value)} value={lastName} />
-						<input type="email" placeholder="Email" onChange={(e) => setEmail(e.target.value)} value={email} />
-						<input
+						<Input type="text" placeholder="Last Name" onChange={(e) => setLastName(e.target.value)} value={lastName} />
+						<Input type="email" placeholder="Email" onChange={(e) => setEmail(e.target.value)} value={email} />
+						<Input
 							type="password"
 							placeholder="Password"
 							onChange={(e) => setPassword(e.target.value)}
@@ -115,7 +127,7 @@ function RegisterPage() {
 					<div className="registerPage__formThird">
 						<p>Birthday (Optional)</p>
 						<div className="registerPage__formThirdInputs">
-							<input
+							{/* <input
 								type="number"
 								name="month"
 								placeholder="Month"
@@ -130,7 +142,22 @@ function RegisterPage() {
 								onChange={(e) => setBirthDay(e.target.value)}
 								value={birthDay}
 								min={1}
-							/>
+							/> */}
+							<MuiPickersUtilsProvider utils={DateFnsUtils}>
+								<KeyboardDatePicker
+									disableToolbar
+									variant="inline"
+									format="MM/dd/yyyy"
+									margin="normal"
+									id="bday"
+									label="Birthday"
+									value={testB}
+									onChange={(e) => setTestB(e)}
+									KeyboardButtonProps={{
+										'aria-label': 'change date',
+									}}
+								/>
+							</MuiPickersUtilsProvider>
 						</div>
 					</div>
 					<div className="registerPage__createButton">
