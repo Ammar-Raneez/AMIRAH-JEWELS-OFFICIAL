@@ -12,7 +12,7 @@ import { ValidatorForm, TextValidator} from 'react-material-ui-form-validator';
 function RegisterPage() {
 	const history = useHistory();
 	const formRef = useRef("form");
-	const [completeBirthday, setcompleteBirthday] = useState("Fri Feb 12 2021 20:52:00 GMT+0530");
+	let [completeBirthday, setcompleteBirthday] = useState("Fri Feb 12 2021 20:52:00 GMT+0530");
 	const [firstName, setFirstName] = useState('');
 	const [lastName, setLastName] = useState('');
 	const [email, setEmail] = useState('');
@@ -31,21 +31,21 @@ function RegisterPage() {
 	})});
 
 	function manipulateObtainedBirthday() {
+		completeBirthday = completeBirthday.toString();
 		let splittedVals = completeBirthday.split(" ");
-		
-		let monthMaps = {"Jan" : 1, "Feb" : 2, "Mar" : 3, "Apr" : 4, "May" : 5, "Jun" : 6, "Jul" : 7, "Aug" : 8, "Sep" : 9, "Oct" : 10, "Nov" : 11, "Dec" : 12};
+
+		let monthMaps = {"Jan" : "1", "Feb" : "2", "Mar" : "3", "Apr" : "4", "May" : "5", "Jun" : "6", "Jul" : "7", "Aug" : "8", "Sep" : "9", "Oct" : "10", "Nov" : "11", "Dec" : "12"};
 		setBirthMonth(monthMaps[splittedVals[1]]);
-		setBirthDay(monthMaps[splittedVals[2]]);
+		setBirthDay(splittedVals[2]);
 	}
 
 	const registerUser = (e) => {
 		e.preventDefault();
+		manipulateObtainedBirthday();
 
 		if (!firstName || !email || !password || !lastName) {
 			return;
-		} else {
-			manipulateObtainedBirthday();
-		}	
+		}
 
 		// register logic
 		auth
