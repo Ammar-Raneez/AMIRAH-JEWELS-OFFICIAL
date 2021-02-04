@@ -48,10 +48,10 @@
     text-align: center;
     padding: 15px 20px;
     color: #5B5A5A;
-    border-radius: 10px;
+    border-radius: 50px;
     box-shadow: 0px 1px 3px #878787;
     background: #FFC0A1 0% 0% no-repeat padding-box;
-    border: #FFC0A1;
+    border: 1px solid #FFC0A1;
     margin-bottom: 5vw;
     transition: 0.3s ease;
     cursor: pointer;

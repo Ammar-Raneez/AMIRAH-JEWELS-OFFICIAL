@@ -33,12 +33,12 @@
 	justify-content: space-evenly;
 }
 .processPage__callBtn > button {
-	padding: 1vw;
+	padding: 0.8vw;
 	cursor: pointer;
 	width: 15vw;
 	font-family: Quattrocento-Regular;
 	border: none;
-	font-size: 1.4vw;
+	font-size: 1.2vw;
 	background-color: transparent;
 	outline: none;
 	border: 0.2vw #ffc0a1 solid;

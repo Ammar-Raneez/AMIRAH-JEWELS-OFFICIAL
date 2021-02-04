@@ -26,33 +26,41 @@ function CartPage() {
                 </div> */}
 			</div>
 
-			<div className="cartPage__main">
-				<div className="cartPage__items">
-					{cartBasket?.map((item) => (
-						<CartItem
-							productImgURL={item.productImgURL}
-							productName={item.productName}
-							productCost={item.productCost}
-							productQuantity={item.productQuantity}
+			{cartBasket.length != 0 ? (
+				<div className="cartPage__main">
+					<div className="cartPage__items">
+						{cartBasket?.map((item) => (
+							<CartItem
+								productImgURL={item.productImgURL}
+								productName={item.productName}
+								productCost={item.productCost}
+								productQuantity={item.productQuantity}
+							/>
+						))}
+						{/* <CartItem
+							productImgURL="pendantsNecklace/pink_necklace.png"
+							productName="Orange Sapphire"
+							productCost={890.0}
+							productQuantity={3}
 						/>
-					))}
-					{/* <CartItem
-						productImgURL="gems/orange-sapphire.png"
-						productName="Orange Sapphire"
-						productCost={890.0}
-						productQuantity={3}
-					/>
-					<CartItem
-						productImgURL="gems/teal-sapphire.png"
-						productName="Teal Sapphire"
-						productCost={540.0}
-						productQuantity={2}
-					/> */}
-				</div>
+						<CartItem
+							productImgURL="gems/teal-sapphire.png"
+							productName="Teal Sapphire"
+							productCost={540.0}
+							productQuantity={2}
+						/> */}
+					</div>
 				<div className="cartPage__orderSummary">
 					<Bill subTotal={subTotal} delivery={delivery} tax={tax} />
 				</div>
 			</div>
+			) : (
+				<div className="cartPage__itemsEmpty">
+					<h1>Your Cart is Empty</h1>
+					<p>Add Items into Your Cart to Display them Here</p>
+				</div>
+			)
+		}
 		</div>
 	);
 }

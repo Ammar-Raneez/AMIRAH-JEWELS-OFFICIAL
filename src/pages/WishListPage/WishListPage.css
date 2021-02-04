@@ -75,8 +75,7 @@
 }
 
 @media screen and (max-width: 900px) and (min-width: 450px) {
-	.wishListPage__userDetails,
-	.wishListPage__titleContinueSection > p {
+	.wishListPage__userDetails, .wishListPage__titleContinueSection > p {
 		font-size: 12px !important;
 	}
 
