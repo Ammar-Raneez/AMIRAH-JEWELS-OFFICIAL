@@ -137,6 +137,7 @@ function RegisterPage() {
 								placeholder="Month"
 								onChange={(e) => setBirthMonth(e.target.value)}
 								value={birthMonth}
+								min={1}
 							/>
 							<input
 								type="number"
@@ -144,6 +145,7 @@ function RegisterPage() {
 								placeholder="Day"
 								onChange={(e) => setBirthDay(e.target.value)}
 								value={birthDay}
+								min={1}
 							/>
 						</div>
 					</div>
