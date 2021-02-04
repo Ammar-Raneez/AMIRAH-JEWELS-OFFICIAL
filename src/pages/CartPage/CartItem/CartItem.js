@@ -2,10 +2,10 @@ import React, { useEffect, useState } from 'react';
 import './CartItem.css';
 import CloseIcon from '@material-ui/icons/Close';
 
-function CartItem({ img, name, price, currency }) {
-	const [qty, setQty] = useState(1);
-	const priceForOne = price;
-	const [changedPrice, setChangedPrice] = useState(price);
+function CartItem({ productCost, productImgURL, productName, productQuantity }) {
+	const [qty, setQty] = useState(productQuantity);
+	const priceForOne = productCost;
+	const [changedPrice, setChangedPrice] = useState(productCost * productQuantity);
 
 	// useEffect(() => {
 
@@ -36,11 +36,11 @@ function CartItem({ img, name, price, currency }) {
 			</div>
 			<div className="cartItem__description">
 				<div className="cartItem__descriptionleft">
-					<img src={img} alt="" />
+					<img src={productImgURL} alt="" />
 				</div>
 				<div className="cartItem__descriptionRight">
 					<div className="cartItem__descriptionRightTop">
-						<h1>{name}</h1>
+						<h1>{productName}</h1>
 					</div>
 					<div className="cartItem__descriptionRightBottom">
 						<div className="cartItem__descriptionRightBottomQty">
@@ -58,10 +58,7 @@ function CartItem({ img, name, price, currency }) {
 							</div>
 							<span>
 								<p>Price</p>
-								<p>
-									{currency}
-									{changedPrice}
-								</p>
+								<p>${changedPrice}</p>
 							</span>
 						</div>
 					</div>
