@@ -62,23 +62,24 @@ function Footer() {
 					<div className="footer__leftSection">
 						<div className="footer__leftSectionTop">
 							<p>Products</p>
-							<Link to="/">Necklaces & Pendants</Link>
-							<Link to="/">Earrings</Link>
-							<Link to="/">Rings</Link>
-							<Link to="/">Bracelets</Link>
-							<Link to="/">Engagement Rings</Link>
+							<a href="/necklace+pendants">Necklaces & Pendants</a>
+							<a href="/earrings">Earrings</a>
+							<a href="/rings">Rings</a>
+							<a href="/bracelets">Bracelets</a>
+							<a href="/engagement+rings">Engagement Rings</a>
 						</div>
 						<div className="footer__leftSectionDown">
 							<p>Follow us on:</p>
-							<Link to="/">Instagram</Link>
-							<Link to="/">Facebook</Link>
+							<a href="https://www.instagram.com/amirahgems/" target="_blank">Instagram</a>
+							<a href="https://www.facebook.com/amirahgems" target="_blank">Facebook</a>
 						</div>
 					</div>
 					<div className="footer__middleSection">
 						<p>About Us</p>
-						<Link to="/">Company</Link>
-						<Link to="/">Charity</Link>
-						<Link to="/">Careers</Link>
+						<a href="/aboutus">Company</a>
+						<a href="/charity">Charity</a>
+						<a href="/careers">Careers</a>
+						<a href="/policy">Policy</a>
 					</div>
 					<div className="footer__rightSection">
 						<p>Latest by Amirah Gems</p>
