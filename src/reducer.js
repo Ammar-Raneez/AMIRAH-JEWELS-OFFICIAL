@@ -25,7 +25,7 @@ const reducer = (state, action) => {
 			// looping through the list of items to check if its present already
 			for (let index = 0; index < state.cartBasket?.length; index++) {
 				const element = state.cartBasket[index];
-				if (element.name === itemToAddBasket.name) {
+				if (element.productName === itemToAddBasket.productName) {
 					presentBasket = true;
 				}
 			}
