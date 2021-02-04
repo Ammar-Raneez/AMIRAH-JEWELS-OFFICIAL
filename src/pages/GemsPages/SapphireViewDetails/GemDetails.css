@@ -124,6 +124,7 @@
 	align-items: center;
 	display: flex;
 	flex-direction: column;
+	width: 100%;
 }
 .gemDetails__sectionProduct > h3 {
 	font-family: Quattrocento-Regular;
@@ -159,6 +160,7 @@
 	display: flex;
 	align-items: center;
 	justify-content: space-evenly;
+	width: 100%;
 }
 
 @media screen and (max-width: 450px) {
