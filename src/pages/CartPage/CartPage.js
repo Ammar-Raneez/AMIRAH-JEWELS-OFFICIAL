@@ -6,10 +6,14 @@ import Bill from './Bill/Bill';
 import { useStateValue } from '../../StateProvider';
 
 function CartPage() {
-	const [{ wishListBasket, cartBasket, user }, dispatch] = useStateValue();
+	const [{ wishListBasket, cartBasket, user, subTotal }, dispatch] = useStateValue();
 
 	useEffect(() => {
 		console.log(cartBasket);
+		// updating the sub total
+		dispatch({
+			type: 'SET_SUBTOTAL',
+		});
 	}, []);
 
 	return (
@@ -24,7 +28,7 @@ function CartPage() {
 
 			<div className="cartPage__main">
 				<div className="cartPage__items">
-					{cartBasket.map((item) => (
+					{cartBasket?.map((item) => (
 						<CartItem
 							productImgURL={item.productImgURL}
 							productName={item.productName}
@@ -46,7 +50,7 @@ function CartPage() {
 					/> */}
 				</div>
 				<div className="cartPage__orderSummary">
-					<Bill subTotal={890.0} delivery={90.0} tax={20.0} />
+					<Bill subTotal={subTotal} delivery={90.0} tax={20.0} />
 				</div>
 			</div>
 		</div>

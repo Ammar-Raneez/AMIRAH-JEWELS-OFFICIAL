@@ -41,16 +41,6 @@ function Footer() {
 					window.location.reload(true);
 				}, 2000);
 
-				// empty the cart basket and the wishlist basket before the user add their content
-				// dispatch({
-				// 	type: 'EMPTY_THE_WISHLIST_BASKET',
-				// 	item: [],
-				// });
-				// dispatch({
-				// 	type: 'EMPTY_THE_CART_BASKET',
-				// 	item: [],
-				// });
-				
 			})
 			.catch((e) => alert(e.message));
 	};
