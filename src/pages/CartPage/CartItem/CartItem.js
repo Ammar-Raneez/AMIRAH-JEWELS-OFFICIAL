@@ -1,65 +1,77 @@
-import React, { useEffect, useState } from 'react'
-import './CartItem.css'
+import React, { useEffect, useState } from 'react';
+import './CartItem.css';
 import CloseIcon from '@material-ui/icons/Close';
 
 function CartItem({ img, name, price, currency }) {
-    const [qty, setQty] = useState(1);
-    let [changedPrice, setChangedPrice] = useState(price);
+	const [qty, setQty] = useState(1);
+	const priceForOne = price;
+	const [changedPrice, setChangedPrice] = useState(price);
 
-    // useEffect(() => {
+	// useEffect(() => {
 
-    // }, [qty, changedPrice])
+	// }, [qty, changedPrice])
 
-    function updatePrice(event) {
-        onQtyChange(event);
-        let updatedPrice = qty * price;
-        setChangedPrice(updatedPrice);
-        console.log(changedPrice)
-    }
+	const updatePrice = (updatedQ) => {
+		let totalPrice = updatedQ * priceForOne;
+		setChangedPrice(totalPrice);
+	};
 
-    function onQtyChange(event) {
-        setQty(event.target.value);
-    }
+	const increaseQuantity = () => {
+		let updatedQ = qty + 1;
+		setQty(updatedQ);
+		updatePrice(updatedQ);
+	};
+	const decreaseQuantity = () => {
+		let updatedQ = qty - 1;
+		if (updatedQ > 0) {
+			setQty(updatedQ);
+			updatePrice(updatedQ);
+		}
+	};
 
-    return (
-        <div className="cartItem">
-            <div className="cartItem__cross">
-                <CloseIcon />
-            </div>
-            <div className="cartItem__description">
-                <div className="cartItem__descriptionleft">
-                    <img src={img} alt=""/>
-                </div>
-                <div className="cartItem__descriptionRight">
-                    <div className="cartItem__descriptionRightTop">
-                        <h1>{name}</h1>
-                    </div>
-                    <div className="cartItem__descriptionRightBottom">
-                        <div className="cartItem__descriptionRightBottomQty">
-                            <p>Qty</p>
-                        </div>
-                        <div className="cartItem__descriptionRightBottomDetails">
-                            <input
-                                type="number"
-                                name="Quantity"
-                                placeholder="Quantity"
-                                onChange={e => updatePrice(e)}
-                                value={qty}
-                                min={0}
-                            />
-                            <span>
-                                <p>Price</p>
-                                <p>{currency}{changedPrice}</p>
-                            </span>
-                        </div>
-                    </div>
-                    <div className="cartItem__descriptionRightSave">
-                        <p>Add to Wishlist</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    )
+	return (
+		<div className="cartItem">
+			<div className="cartItem__cross">
+				<CloseIcon />
+			</div>
+			<div className="cartItem__description">
+				<div className="cartItem__descriptionleft">
+					<img src={img} alt="" />
+				</div>
+				<div className="cartItem__descriptionRight">
+					<div className="cartItem__descriptionRightTop">
+						<h1>{name}</h1>
+					</div>
+					<div className="cartItem__descriptionRightBottom">
+						<div className="cartItem__descriptionRightBottomQty">
+							<p>Qty</p>
+						</div>
+						<div className="cartItem__descriptionRightBottomDetails">
+							<div>
+								<button style={{ padding: '5px 10px' }} onClick={decreaseQuantity}>
+									-
+								</button>
+								<input type="number" disabled={true} name="Quantity" placeholder="Quantity" value={qty} />
+								<button style={{ padding: '5px 10px' }} onClick={increaseQuantity}>
+									+
+								</button>
+							</div>
+							<span>
+								<p>Price</p>
+								<p>
+									{currency}
+									{changedPrice}
+								</p>
+							</span>
+						</div>
+					</div>
+					<div className="cartItem__descriptionRightSave">
+						<p>Add to Wishlist</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	);
 }
 
-export default CartItem
+export default CartItem;
