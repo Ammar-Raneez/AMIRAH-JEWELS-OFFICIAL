@@ -11,10 +11,10 @@ function WishListPage() {
 			{/* wishlist title */}
 			<div className="wishListPage__title">
 				<h1>MY WISHLIST</h1>
-				<div className="wishListPage__titleContinueSection">
+				{/* <div className="wishListPage__titleContinueSection">
 					<ArrowBackIosIcon />
 					<p>Continue shopping</p>
-				</div>
+				</div> */}
 			</div>
 
 			{/* wishlist item */}
