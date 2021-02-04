@@ -15,8 +15,9 @@ function TopBar() {
 	const displayContent = () => {
 		console.log(wishListBasket);
 		console.log(cartBasket);
-		console.log(user.displayName);
+		console.log(user);
 	};
+	displayContent()
 	return (
 		<div className="topbar">
 			<div className="topbar__left">
@@ -34,7 +35,13 @@ function TopBar() {
 			<div className="topbar__right">
 				<div className="topbar__rightAccount">
 					<PersonOutlinedIcon />
-					<a href="/login">My Account</a>
+					{
+						user?.displayName ? (
+							<a style={{ fontWeight: 'bold', fontSize: '13px' }} >Welcome to Your Account, {user?.displayName.split(" ")[0]}</a>
+						) : (
+							<a href="/login">Login</a>
+						)
+					}
 				</div>
 				<Link to="/wishList">
 					<FavoriteBorderIcon />
