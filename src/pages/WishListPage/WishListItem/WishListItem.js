@@ -7,6 +7,7 @@ import { useEffect, useState } from 'react';
 function WishListItem({ img, title, currency, price }) {
 	const [{ wishListBasket, cartBasket, user }, dispatch] = useStateValue();
 
+	// USE EFFECT TO UPDATE THE CONTENT FROM THE CLOUD STORE
 	useEffect(() => {
 		// REMOVING THE ITEM FROM THE DATABASE
 		console.log('UPDATED WISHLIST FROM THE USE EFFECT', wishListBasket);
@@ -17,6 +18,8 @@ function WishListItem({ img, title, currency, price }) {
 		console.log(wishListBasket);
 	}, [wishListBasket]);
 
+	// FUNCTION TO REMOVE ITEM FROM THE ReactCONT API LIST AND UPDATE LAST ITEM REMOVE FROM 
+	// CLOUD STORE
 	const removeItem = () => {
 		if (user) {
 			// REMOVING THE ITEM FROM THE REACT CONTEXT API VARIABLES

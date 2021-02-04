@@ -12,12 +12,12 @@ import { useStateValue } from '../../../StateProvider';
 function TopBar() {
 	const [{ wishListBasket, cartBasket, user }, dispatch] = useStateValue();
 
-	const displayContent = () => {
-		console.log(wishListBasket);
-		console.log(cartBasket);
-		console.log(user);
-	};
-	displayContent()
+	// const displayContent = () => {
+	// 	console.log(wishListBasket);
+	// 	console.log(cartBasket);
+	// 	console.log(user);
+	// };
+	// displayContent()
 	return (
 		<div className="topbar">
 			<div className="topbar__left">
