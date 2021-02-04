@@ -171,6 +171,9 @@ function App() {
 					<Route path="/bracelets">
 						<h2>bracelets component</h2>
 					</Route>
+					<Route path="/engagement+rings">
+						<h2>Engagement rings component</h2>
+					</Route>
 					<Route path="/necklace+pendants">
 						<TopBar />
 						<Header />

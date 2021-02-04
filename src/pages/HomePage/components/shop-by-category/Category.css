@@ -33,6 +33,11 @@
     flex-wrap: wrap;
 }
 
+.homePage__categoryRow > a {
+    text-decoration: none;
+    color: #888;
+}
+
 .homePage__categoryRow div img {
     min-width: 200px;
     max-width: 200px;
@@ -46,6 +51,12 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    transition: 0.3s ease;
+}
+
+.homePage__categoryEach:hover {
+    cursor: pointer;
+    transform: scale(1.05);
 }
 
 @media screen and (max-width: 768px) and (min-width: 400px) {
