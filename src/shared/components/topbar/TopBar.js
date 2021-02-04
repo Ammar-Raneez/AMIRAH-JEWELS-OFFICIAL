@@ -34,7 +34,7 @@ function TopBar() {
 			<div className="topbar__right">
 				<div className="topbar__rightAccount">
 					<PersonOutlinedIcon />
-					My Account
+					<a href="/login">My Account</a>
 				</div>
 				<Link to="/wishList">
 					<FavoriteBorderIcon />

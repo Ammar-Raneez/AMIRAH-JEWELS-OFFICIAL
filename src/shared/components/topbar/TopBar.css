@@ -42,6 +42,16 @@
 	font-size: 1.3vw;
 }
 
+.topbar__rightAccount > a {
+	text-decoration: none;
+	color: black;
+	transition: 0.3s ease;
+	cursor: pointer;	
+}
+.topbar__rightAccount > a:hover {
+	font-weight: bold;
+}
+
 .topbar__left > a > .MuiSvgIcon-root, .topbar__right > .MuiSvgIcon-root, .topbar__right > .topbar__rightAccount > .MuiSvgIcon-root, .topbar__right > a > .MuiSvgIcon-root {
 	cursor: pointer;
 	font-size: 1.9vw !important;
@@ -54,7 +64,7 @@
 }
 
 @media screen and (max-width: 968px) {
-	.topbar__left > .MuiSvgIcon-root, .topbar__right > .MuiSvgIcon-root, .topbar__right > .topbar__rightAccount > .MuiSvgIcon-root, .topbar__right > a > .MuiSvgIcon-root {
+	.topbar__left > a > .MuiSvgIcon-root, .topbar__right > .MuiSvgIcon-root, .topbar__right > .topbar__rightAccount > .MuiSvgIcon-root, .topbar__right > a > .MuiSvgIcon-root {
 		font-size: 20px !important;
 	}
 
