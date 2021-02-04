@@ -7,8 +7,13 @@ import { db } from '../../../firebase';
 function CartItem({ productCost, productImgURL, productName, productQuantity }) {
 	const [qty, setQty] = useState(productQuantity);
 	const priceForOne = productCost;
-	const [changedPrice, setChangedPrice] = useState(productCost * productQuantity);
-	const [{ wishListBasket, cartBasket, user }, dispatch] = useStateValue();
+    const [{ wishListBasket, cartBasket, user }, dispatch] = useStateValue();
+    
+    useEffect(() => {
+       
+        console.log(cartBasket);
+
+    }, [cartBasket]);
 
 	// FUNCTION TO REMOVE ITEM FROM THE ReactCONT API LIST AND UPDATE LAST ITEM REMOVE FROM
 	// CLOUD STORE
@@ -19,6 +24,12 @@ function CartItem({ productCost, productImgURL, productName, productQuantity }) 
 				type: 'REMOVE_FROM_BASKET',
 				productName: productName,
 			});
+
+			// updating the sub total
+			dispatch({
+				type: 'SET_SUBTOTAL',
+			});
+
 			console.log(cartBasket, '<===============> CHECK THIS ONE');
 
 			// LAST ITEM REMOVE PROBLEM ALTERNATE SOLUTION
@@ -32,16 +43,8 @@ function CartItem({ productCost, productImgURL, productName, productQuantity }) 
 		}
 	};
 
-	const updatePrice = (updatedQ) => {
-		let totalPrice = updatedQ * priceForOne;
-		setChangedPrice(totalPrice);
-	};
 
 	const increaseQuantity = () => {
-		let updatedQ = qty + 1;
-		setQty(updatedQ);
-		updatePrice(updatedQ);
-
 		// updating the quantity of the item from the context api cart
 		dispatch({
 			type: 'INCREASE_ITEM_COUNT_FROM_BASKET',
@@ -54,11 +57,6 @@ function CartItem({ productCost, productImgURL, productName, productQuantity }) 
 		});
 	};
 	const decreaseQuantity = () => {
-		let updatedQ = qty - 1;
-		if (updatedQ > 0) {
-			setQty(updatedQ);
-			updatePrice(updatedQ);
-		}
 		// updating the quantity of the item from the context api cart
 		dispatch({
 			type: 'DECREASE_ITEM_COUNT_FROM_BASKET',
@@ -89,17 +87,36 @@ function CartItem({ productCost, productImgURL, productName, productQuantity }) 
 						</div>
 						<div className="cartItem__descriptionRightBottomDetails">
 							<div>
-								<button style={{ padding: '5px 10px', background: 'transparent', border: 'none' }} onClick={decreaseQuantity}>
+								<button
+									style={{ padding: '5px 10px', background: 'transparent', border: 'none' }}
+									onClick={decreaseQuantity}
+								>
 									-
 								</button>
-								<input style={{ textAlign: 'right', padding: '10px', width: '30px', background: 'transparent', border: 'none' }} type="number" disabled={true} name="Quantity" placeholder="Quantity" value={qty} />
-								<button style={{ padding: '5px 10px', background: 'transparent', border: 'none' }} onClick={increaseQuantity}>
+								<input
+									style={{
+										textAlign: 'right',
+										padding: '10px',
+										width: '30px',
+										background: 'transparent',
+										border: 'none',
+									}}
+									type="number"
+									disabled={true}
+									name="Quantity"
+									placeholder="Quantity"
+									value={productQuantity}
+								/>
+								<button
+									style={{ padding: '5px 10px', background: 'transparent', border: 'none' }}
+									onClick={increaseQuantity}
+								>
 									+
 								</button>
 							</div>
 							<span>
 								{/* <p>Price</p> */}
-								<p>${changedPrice}</p>
+								<p>${productQuantity*productCost}</p>
 							</span>
 						</div>
 					</div>

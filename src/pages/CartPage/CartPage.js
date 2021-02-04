@@ -6,7 +6,7 @@ import Bill from './Bill/Bill';
 import { useStateValue } from '../../StateProvider';
 
 function CartPage() {
-	const [{ wishListBasket, cartBasket, user, subTotal }, dispatch] = useStateValue();
+	const [{ wishListBasket, cartBasket, user, subTotal, delivery, tax }, dispatch] = useStateValue();
 
 	useEffect(() => {
 		console.log(cartBasket);
@@ -50,7 +50,7 @@ function CartPage() {
 					/> */}
 				</div>
 				<div className="cartPage__orderSummary">
-					<Bill subTotal={subTotal} delivery={90.0} tax={20.0} />
+					<Bill subTotal={subTotal} delivery={delivery} tax={tax} />
 				</div>
 			</div>
 		</div>
