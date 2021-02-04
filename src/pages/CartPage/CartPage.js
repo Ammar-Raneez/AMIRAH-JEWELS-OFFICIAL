@@ -37,7 +37,7 @@ function CartPage() {
 						/>
 					))}
 					{/* <CartItem
-						productImgURL="gems/orange-sapphire.png"
+						productImgURL="pendantsNecklace/pink_necklace.png"
 						productName="Orange Sapphire"
 						productCost={890.0}
 						productQuantity={3}
