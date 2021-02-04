@@ -5,6 +5,7 @@ import { db } from '../../../firebase';
 import { useEffect, useState } from 'react';
 
 function WishListItem({ img, title, currency, price }) {
+	const [tempSafetyCartBasket, setTempSafetyCartBasket] = useState(false);
 	const [{ wishListBasket, cartBasket, user }, dispatch] = useStateValue();
 
 	// USE EFFECT TO UPDATE THE CONTENT FROM THE CLOUD STORE
@@ -18,7 +19,35 @@ function WishListItem({ img, title, currency, price }) {
 		console.log(wishListBasket);
 	}, [wishListBasket]);
 
-	// FUNCTION TO REMOVE ITEM FROM THE ReactCONT API LIST AND UPDATE LAST ITEM REMOVE FROM 
+	// UPDATING THE CART BASKET ON (FIRE-STORE)
+	useEffect(() => {
+		if (tempSafetyCartBasket === true) {
+			db.collection('users').doc(user?.email).update({
+				cart: cartBasket,
+			});
+		}
+		setTempSafetyCartBasket(true);
+	}, [cartBasket]);
+
+	// ADDING THE ITEM INTO THE REDUCER LIST
+	const addItemToCart = () => {
+		if (user) {
+			dispatch({
+				type: 'ADD_TO_BASKET',
+				item: {
+					productName: title,
+					productCost: price,
+					productImgURL: img,
+					productQuantity: 1,
+				},
+			});
+			alert('Added item to cart!');
+		} else {
+			alert('Please sign in to add item to wishlist');
+		}
+	};
+
+	// FUNCTION TO REMOVE ITEM FROM THE ReactCONT API LIST AND UPDATE LAST ITEM REMOVE FROM
 	// CLOUD STORE
 	const removeItem = () => {
 		if (user) {
@@ -57,7 +86,7 @@ function WishListItem({ img, title, currency, price }) {
 								{currency}
 								{(Math.round(price * 100) / 100).toFixed(2)}
 							</p>
-							<p>Add to Cart</p>
+							<p onClick={addItemToCart}>Add to Cart</p>
 						</div>
 						<p>{title}</p>
 					</div>
