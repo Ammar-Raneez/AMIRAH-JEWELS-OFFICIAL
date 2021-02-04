@@ -14,13 +14,14 @@ import AboutPagePolicy from './pages/AboutPage/AboutPagePolicy';
 import AboutPageCareer from './pages/AboutPage/AboutPageCareer';
 import LoginPage from './pages/AccountPages/LoginPage/LoginPage';
 import WishListPage from './pages/WishListPage/WishListPage';
-import BlueGemDetail from './pages/GemsPages/SapphireViewDetails/BlueGemDetail';
+import BlueGemDetail from './pages/GemsPages/SapphireViewDetails/TealGemDetail';
 import NecklacePendantPage from './pages/NecklacePendantPage/NecklacePendantPage';
 import GiftPage from './pages/GiftPage/GiftPage';
 import { useStateValue } from './StateProvider';
 import { useEffect } from 'react';
 import { auth, db } from './firebase';
 import CartPage from './pages/CartPage/CartPage';
+import TealGemDetail from './pages/GemsPages/SapphireViewDetails/TealGemDetail';
 
 function App() {
 	const [{ wishListBasket, cartBasket, user }, dispatch] = useStateValue();
@@ -143,22 +144,19 @@ function App() {
 					<Route path="/diamonds">
 						<h2> Diamonds component</h2>
 					</Route>
-					<Route path="/pearl+sapphires">
+					<Route path="/pearl+sapphire">
 						<h2>Pearl sapphires component</h2>
 					</Route>
-					<Route path="/teal+sapphires">
-						<h2>teal sapphires component</h2>
-					</Route>
-					<Route path="/pink+sapphires">
+					<Route path="/pink+sapphire">
 						<h2> pink sapphires component</h2>
 					</Route>
 					<Route path="/yellow+gold">
 						<h2> yellow gold component</h2>
 					</Route>
-					<Route path="/blue+sapphires">
+					<Route path="/teal+sapphire">
 						<TopBar />
 						<Header />
-						<BlueGemDetail />
+						<TealGemDetail />
 						<Footer />
 					</Route>
 

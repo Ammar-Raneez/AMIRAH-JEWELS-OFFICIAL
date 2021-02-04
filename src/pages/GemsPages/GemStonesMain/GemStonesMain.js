@@ -17,9 +17,9 @@ function GemStonesMain() {
 						and internationally
 					</p>
 					<div className="gemStonesMain__detailsFirstButtons">
-						<Link to="/blue+sapphires">
+						<a href="#gems">
 							<button>VIEW PRODUCTS</button>
-						</Link>
+						</a>
 						<button>CALL US</button>
 					</div>
 				</div>
@@ -28,9 +28,9 @@ function GemStonesMain() {
 				</div>
 			</div>
 
-			<div className="gemStonesMain__otherGems">
+			<div id="gems" className="gemStonesMain__otherGems">
 				<div className="gemStonesMain__otherGemsRow">
-					<Gem img="gems/teal-sapphire.png" name="Teal Sapphires" viewMoreUrl="/teal+sapphires" />
+					<Gem img="gems/teal-sapphire.png" name="Teal Sapphires" viewMoreUrl="/teal+sapphire" />
 					<Gem img="gems/purple-sapphire.png" name="Purple Sapphires" viewMoreUrl="/purple-sapphire" />
 					<Gem img="gems/Padparadscha-sapphire.png" name="Padparadscha Sapphires" viewMoreUrl="/padparadscha-sapphire" />
 					<Gem img="gems/orange-sapphire.png" name="Orange Sapphires" viewMoreUrl="/orange-sapphire" />

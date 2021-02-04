@@ -4,11 +4,13 @@ import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { db } from '../../firebase';
 import { useStateValue } from '../../StateProvider';
-import Category from '../HomePage/components/shop-by-category/Category';
 import './NecklacePendantPage.css';
 import Product from './Product/Product';
+import { CSSTransition, TransitionGroup } from 'react-transition-group'
 
 function NecklacePendantPage() {
+	const [readMoreDescription, setReadMoreDescription] = useState(false);
+
 	const [displayImage, setDisplayImage] = useState('pendantsNecklace/ring1.png');
 	const [addToWishList, setAddToWishList] = useState(false);
 	const [tempSafety, setTempSafety] = useState(false);
@@ -150,14 +152,14 @@ function NecklacePendantPage() {
 						<Link>
 							<button>ADD TO CART</button>
 						</Link>
-						<Link>
+						<a href="#product__description">
 							<button>VIEW DETAILS</button>
-						</Link>
+						</a>
 					</div>
 				</div>
 			</div>
 			{/* Description */}
-			<div className="necklacePendant__description">
+			<div id="product__description" className="necklacePendant__description">
 				<h2>Description & Details</h2>
 				<p className="necklacePendant__descriptionMain">
 					This circle pendant features black onyx, a unique variety of quartz found in nature. This striking pendant is
@@ -167,10 +169,37 @@ function NecklacePendantPage() {
 					look.
 				</p>
 				<div className="necklacePendant__descriptionOtherDetails">
-					<p>18k rose gold with black onyx and round brilliant diamonds</p>
-					<p>Circle, 16 mm diameter</p>
-					<p>Carat total weight .05</p>
-					<p>Adjustable, 16-18" chain</p>
+					{!readMoreDescription ? (
+						<p 
+							onClick={() => setReadMoreDescription(!readMoreDescription)} 
+							className="necklacePendant__descriptionOtherDetailsReadMore"
+						>
+							Read more...
+						</p>
+					) : (
+						<TransitionGroup>
+							<CSSTransition
+								in={readMoreDescription}
+								timeout={{
+									enter: 3000,
+									exit: 3000
+								}}
+								classNames="necklacePendant__descriptionTransition"
+							>
+								<div>
+									<p>18k rose gold with black onyx and round brilliant diamonds</p>
+									<p>Circle, 16 mm diameter</p>
+									<p>Carat total weight .05</p>
+									<p>Adjustable, 16-18" chain</p>
+									<p
+										onClick={() => setReadMoreDescription(!readMoreDescription)}
+										className="necklacePendant__descriptionOtherDetailsReadMore"
+									>	Read Less...
+									</p>
+								</div>
+							</CSSTransition>
+						</TransitionGroup>
+					)}
 				</div>
 			</div>
 

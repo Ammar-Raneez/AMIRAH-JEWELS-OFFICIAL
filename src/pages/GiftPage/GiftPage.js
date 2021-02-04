@@ -20,15 +20,15 @@ function GiftPage() {
 						and internationally
 					</p>
 					<div className="giftPage__detailsFirstButtons">
-						<Link to="/blue+sapphires">
+						<a href="#otherProducts">
 							<button>VIEW PRODUCTS</button>
-						</Link>
+						</a>
 						<button>CALL US</button>
 					</div>
 				</div>
 			</div>
 
-			<div className="giftPage__otherGems">
+			<div id="otherProducts" className="giftPage__otherGems">
 				<div className="giftPage__otherGemsRow">
 					<Product img="homepage category/necklace.png" name="Necklaces & Pendants" viewMoreUrl="/" />
 					<Product img="homepage category/earrings.png" name="Earrings" viewMoreUrl="/" />
