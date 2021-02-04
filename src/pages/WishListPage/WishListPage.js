@@ -74,9 +74,17 @@ function WishListPage() {
 				</div>
 			) : (
 				<div className="wishListPage__items">
-					{wishListBasket.map((item) => (
-						<WishListItem img={item.imgURL} title={item.name} currency="$" price={item.cost} />
-					))}
+					{
+						wishListBasket.length == 0 ? (
+							<div className="wishListPage__itemsEmpty">
+								<h1>Your Wish List is Empty</h1>
+								<p>Add Items To Your Wishlist to Display them Here</p>
+							</div>
+						) : (
+							wishListBasket.map((item) => (
+							<WishListItem img={item.imgURL} title={item.name} currency="$" price={item.cost} />
+						)))
+					}
 				</div>
 			)}
 		</div>
