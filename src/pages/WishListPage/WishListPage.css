@@ -7,8 +7,8 @@
 	font-family: Quattrocento-Regular;
 	font-size: 1.2vw;
 	color: #707070;
-    text-align: end;
-    margin-right: 1vw;
+	text-align: end;
+	margin-right: 1vw;
 }
 .wishListPage__titleContinueSection {
 	display: flex;
@@ -32,7 +32,8 @@
 	transition: 0.3s ease;
 	font-size: 1.5vw !important;
 }
-.wishListPage__titleContinueSection > .MuiSvgIcon-root:hover, .wishListPage__titleContinueSection:hover {
+.wishListPage__titleContinueSection > .MuiSvgIcon-root:hover,
+.wishListPage__titleContinueSection:hover {
 	transition: 0.3s ease;
 	color: rgb(255, 177, 109) !important;
 	cursor: pointer;
@@ -43,13 +44,28 @@
 	flex-wrap: wrap;
 	justify-content: space-around;
 }
+.loadingGif {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.loadingGif > img {
+	padding: 30px;
+	object-fit: contain;
+	height: 250px;
+}
 
 @media screen and (max-width: 900px) {
-	.wishListPage__userDetails, .wishListPage__titleContinueSection > p {
+	.wishListPage__userDetails,
+	.wishListPage__titleContinueSection > p {
 		font-size: 12px !important;
 	}
 
 	.wishListPage__title > h1 {
 		font-size: 20px;
+	}
+	.loadingGif > img {
+		height: 100px;
+		padding: 50px;
 	}
 }
