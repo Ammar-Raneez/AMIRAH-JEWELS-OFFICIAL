@@ -143,6 +143,7 @@
 .gemStonesMain__otherGems {
 	padding: 0px;
 	padding-top: 30px;
+	padding-bottom: 60px;
 }
 .gemStonesMain__otherGemsRow {
 	display: flex;

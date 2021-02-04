@@ -39,7 +39,7 @@
     width: 60%;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 900px) {
 	.cartPage__titleContinueSection, .cartPage__titleContinueSection > .MuiSvgIcon-root {
 		font-size: 12px !important;
 	}
