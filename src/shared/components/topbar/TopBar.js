@@ -31,8 +31,8 @@ function TopBar() {
 				{/* <IconButton onClick={displayContent}>
 					<SearchIcon />
 				</IconButton> */}
-				<a href="https://www.facebook.com/amirahgems" target="_blank"><FacebookIcon /></a>
-				<a href="https://www.instagram.com/amirahgems/" target="_blank"><InstagramIcon /></a>
+				<a style={{ marginRight: '1vw' }} href="https://www.facebook.com/amirahgems" target="_blank"><FacebookIcon /></a>
+				<a style={{ marginRight: '1vw' }} href="https://www.instagram.com/amirahgems/" target="_blank"><InstagramIcon /></a>
 			</div>
 			<div className="topbar__center">
 				<Link to="/">
