@@ -66,29 +66,27 @@ function CartPage() {
                 </div> */}
 			</div>
 
-			{cartBasket.length !== 0 ? (
-				loading ? (
-					<div className="loadingGif">
-						<img src="/loading/loading.gif" alt="" width="200" />
+			{loading ? (
+				<div className="loadingGif">
+					<img src="/loading/loading.gif" alt="" width="200" />
+				</div>
+			) : cartBasket.length !== 0 ? (
+				<div className="cartPage__main">
+					<div className="cartPage__items">
+						{cartBasket?.map((item) => (
+							<CartItem
+								key={item.productName}
+								productImgURL={item.productImgURL}
+								productName={item.productName}
+								productCost={item.productCost}
+								productQuantity={item.productQuantity}
+							/>
+						))}
 					</div>
-				) : (
-					<div className="cartPage__main">
-						<div className="cartPage__items">
-							{cartBasket?.map((item) => (
-								<CartItem
-									key={item.productName}
-									productImgURL={item.productImgURL}
-									productName={item.productName}
-									productCost={item.productCost}
-									productQuantity={item.productQuantity}
-								/>
-							))}
-						</div>
-						<div className="cartPage__orderSummary">
-							<Bill subTotal={subTotal} delivery={delivery} tax={tax} />
-						</div>
+					<div className="cartPage__orderSummary">
+						<Bill subTotal={subTotal} delivery={delivery} tax={tax} />
 					</div>
-				)
+				</div>
 			) : (
 				<div className="cartPage__itemsEmpty">
 					<h1>Your Cart is Empty</h1>
