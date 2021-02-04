@@ -9,6 +9,8 @@ function Header() {
 	return (
 		<div className="header">
 			<div className="header__options">
+				<Link to="/">Home</Link>
+
 				<div
 					// onMouseOut={() => {
 					// 	!productsClicked && console.log("hover")

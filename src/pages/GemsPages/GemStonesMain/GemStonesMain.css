@@ -78,7 +78,7 @@
 .gemStonesMain__otherGemsRow{
 	display: flex;
 	align-items: center;
-	justify-content: space-evenly;
+	justify-content: center;
 }
 
 @media screen and (max-width: 900px) and (min-width: 450px) {

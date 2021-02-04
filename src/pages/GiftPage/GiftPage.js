@@ -31,15 +31,16 @@ function GiftPage() {
 			<div className="giftPage__otherGems">
 				<div className="giftPage__otherGemsRow">
 					<Product img="homepage category/necklace.png" name="Necklaces & Pendants" viewMoreUrl="/" />
-					<Product img="homepage category/bracelets.png" name="Bracelets" viewMoreUrl="/" />
-				</div>
-				<div className="giftPage__otherGemsRow">
 					<Product img="homepage category/earrings.png" name="Earrings" viewMoreUrl="/" />
+					<Product img="homepage category/rings.png" name="Rings" viewMoreUrl="/" />
+					<Product img="homepage category/bracelets.png" name="Bracelets" viewMoreUrl="/" />
 					<Product img="homepage category/engagement rings.png" name="Engagement Rings" viewMoreUrl="/" />
 				</div>
-				<div className="giftPage__otherGemsRow">
-					<Product img="homepage category/rings.png" name="Rings" viewMoreUrl="/" />
-				</div>
+				{/* Place New products in each div, keeping a max of 4 per row */}
+				{/* <div className="giftPage__otherGemsRow">
+					<Product img="homepage category/earrings.png" name="Earrings" viewMoreUrl="/" />
+					<Product img="homepage category/engagement rings.png" name="Engagement Rings" viewMoreUrl="/" />
+				</div> */}
 			</div>
 		</div>
 	);

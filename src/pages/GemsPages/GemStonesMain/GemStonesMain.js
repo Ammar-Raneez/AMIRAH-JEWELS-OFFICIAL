@@ -32,21 +32,15 @@ function GemStonesMain() {
 				<div className="gemStonesMain__otherGemsRow">
 					<Gem img="gems/teal-sapphire.png" name="Teal Sapphires" viewMoreUrl="/teal+sapphires" />
 					<Gem img="gems/purple-sapphire.png" name="Purple Sapphires" viewMoreUrl="/purple-sapphire" />
-				</div>
-				<div className="gemStonesMain__otherGemsRow">
-					<Gem
-						img="gems/Padparadscha-sapphire.png"
-						name="Padparadscha Sapphires"
-						viewMoreUrl="/padparadscha-sapphire"
-					/>
+					<Gem img="gems/Padparadscha-sapphire.png" name="Padparadscha Sapphires" viewMoreUrl="/padparadscha-sapphire" />
 					<Gem img="gems/orange-sapphire.png" name="Orange Sapphires" viewMoreUrl="/orange-sapphire" />
 				</div>
+				{/* <div className="gemStonesMain__otherGemsRow">
+					<Gem img="gems/Padparadscha-sapphire.png" name="Padparadscha Sapphires" viewMoreUrl="/padparadscha-sapphire" />
+					<Gem img="gems/orange-sapphire.png" name="Orange Sapphires" viewMoreUrl="/orange-sapphire" />
+				</div> */}
 				<div className="gemStonesMain__otherGemsRow">
-					<Gem
-						img="gems/ClaudiaHamann_PinkSapphire_Ceylon_Cushion_Unheated.png"
-						name="Pink Sapphires"
-						viewMoreUrl="/pink-sapphire"
-					/>
+					<Gem img="gems/ClaudiaHamann_PinkSapphire_Ceylon_Cushion_Unheated.png" name="Pink Sapphires" viewMoreUrl="/pink-sapphire" />
 					<Gem img="gems/white-sapphire.png" name="White Sapphires" viewMoreUrl="/white+sapphires" />
 				</div>
 			</div>

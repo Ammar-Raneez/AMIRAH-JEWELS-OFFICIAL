@@ -146,7 +146,8 @@
 .giftPage__otherGemsRow {
 	display: flex;
 	align-items: center;
-	justify-content: space-evenly;
+	justify-content: center;
+	flex-wrap: wrap;
 }
 @media screen and (max-width: 900px) and (min-width: 450px) {
 	.giftPage__detailsFirst {

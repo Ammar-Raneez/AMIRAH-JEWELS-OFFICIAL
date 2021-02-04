@@ -4,6 +4,7 @@ import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { db } from '../../firebase';
 import { useStateValue } from '../../StateProvider';
+import Category from '../HomePage/components/shop-by-category/Category';
 import './NecklacePendantPage.css';
 import Product from './Product/Product';
 
@@ -183,15 +184,17 @@ function NecklacePendantPage() {
 					<div className="gemStonesMain__otherGemsRow">
 						<Product img="pendantsNecklace/pink_necklace.png" name="Product Name" viewMoreUrl="/" />
 						<Product img="pendantsNecklace/pink_necklace.png" name="Product Name" viewMoreUrl="/" />
+						<Product img="pendantsNecklace/pink_necklace.png" name="Product Name" viewMoreUrl="/" />
+						<Product img="pendantsNecklace/pink_necklace.png" name="Product Name" viewMoreUrl="/" />
+					</div>
+					{/* <div className="gemStonesMain__otherGemsRow">
+						<Product img="pendantsNecklace/pink_necklace.png" name="Product Name" viewMoreUrl="/" />
+						<Product img="pendantsNecklace/pink_necklace.png" name="Product Name" viewMoreUrl="/" />
 					</div>
 					<div className="gemStonesMain__otherGemsRow">
 						<Product img="pendantsNecklace/pink_necklace.png" name="Product Name" viewMoreUrl="/" />
 						<Product img="pendantsNecklace/pink_necklace.png" name="Product Name" viewMoreUrl="/" />
-					</div>
-					<div className="gemStonesMain__otherGemsRow">
-						<Product img="pendantsNecklace/pink_necklace.png" name="Product Name" viewMoreUrl="/" />
-						<Product img="pendantsNecklace/pink_necklace.png" name="Product Name" viewMoreUrl="/" />
-					</div>
+					</div> */}
 				</div>
 			</div>
 		</div>

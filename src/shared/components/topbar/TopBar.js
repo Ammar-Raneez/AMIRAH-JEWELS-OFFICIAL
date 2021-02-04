@@ -20,9 +20,9 @@ function TopBar() {
 	return (
 		<div className="topbar">
 			<div className="topbar__left">
-				<IconButton onClick={displayContent}>
+				{/* <IconButton onClick={displayContent}>
 					<SearchIcon />
-				</IconButton>
+				</IconButton> */}
 				<FacebookIcon />
 				<InstagramIcon />
 			</div>

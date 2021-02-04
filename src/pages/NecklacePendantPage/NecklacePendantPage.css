@@ -126,7 +126,7 @@
 	font-family: Quattrocento-Regular;
 	color: #707070;
     margin: 80px;
-    margin-bottom: 40px;
+    margin-bottom: -50px;
     max-width: 1200px;
 }
 .necklacePendant__otherProducts > h3 {
@@ -141,16 +141,24 @@
 	line-height: 25px;
 }
 .gemStonesMain__otherGems {
-	padding: 60px;
+	padding: 0px;
+	padding-top: 30px;
 }
 .gemStonesMain__otherGemsRow {
 	display: flex;
 	align-items: center;
 	justify-content: space-evenly;
+	flex-wrap: wrap;
 }
 
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 900px) and (min-width: 450px) {
 	.necklacePendant__descriptionMain, .necklacePendant__descriptionOtherDetails {
 		font-size: 14px;
+	}
+}
+
+@media screen and (max-width: 450px) {
+	.gemStonesMain__otherGems {
+		margin-bottom: 50px;
 	}
 }
