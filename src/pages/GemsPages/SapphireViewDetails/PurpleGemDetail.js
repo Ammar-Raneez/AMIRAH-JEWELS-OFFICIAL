@@ -201,24 +201,16 @@ function PurpleGemDetail() {
 				<h3>Showing 1 - 40 of 1020</h3>
 
 				<div className="gemDetails__otherGemsRow">
-					<Gem img="gems/teal-sapphire.png" name="Teal Sapphires" viewMoreUrl="/teal+sapphires" />
-					<Gem img="gems/purple-sapphire.png" name="Purple Sapphires" viewMoreUrl="/purple-sapphire" />
+					<Gem img="gems/teal-sapphire.png" name="Teal Sapphires" viewMoreUrl="/teal+sapphire" />
+					<Gem img="gems/purple-sapphire.png" name="Purple Sapphires" viewMoreUrl="/purple+sapphire" />
+					<Gem img="gems/Padparadscha-sapphire.png" name="Padparadscha Sapphires" viewMoreUrl="/padparadscha+sapphire" />
+					<Gem img="gems/orange-sapphire.png" name="Orange Sapphires" viewMoreUrl="/orange+sapphire" />
 				</div>
-				<div className="gemDetails__otherGemsRow">
-					<Gem
-						img="gems/Padparadscha-sapphire.png"
-						name="Padparadscha Sapphires"
-						viewMoreUrl="/padparadscha-sapphire"
-					/>
-					<Gem img="gems/orange-sapphire.png" name="Orange Sapphires" viewMoreUrl="/orange-sapphire" />
-				</div>
-				<div className="gemDetails__otherGemsRow">
-					<Gem
-						img="gems/ClaudiaHamann_PinkSapphire_Ceylon_Cushion_Unheated.png"
-						name="Pink Sapphires"
-						viewMoreUrl="/pink-sapphire"
-					/>
-					<Gem img="gems/white-sapphire.png" name="White Sapphires" viewMoreUrl="/white+sapphires" />
+				{/* <div className="gemDetails__otherGemsRow">
+				</div> */}
+				<div style={{ justifyContent: 'center' }} className="gemDetails__otherGemsRow">
+					<Gem img="gems/ClaudiaHamann_PinkSapphire_Ceylon_Cushion_Unheated.png" name="Pink Sapphires" viewMoreUrl="/pink+sapphire" />
+					<Gem img="gems/white-sapphire.png" name="White Sapphires" viewMoreUrl="/white+sapphire" />
 				</div>
 			</div>
 		</div>
