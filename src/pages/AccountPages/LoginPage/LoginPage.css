@@ -93,11 +93,16 @@
         font-size: 30px;
     }
 
-    .loginPage .loginPage__subTitle, .loginPage > div > div > button, .loginPage > div > div > a > button, .loginPage__leftSide > div > input {
+    .loginPage .loginPage__subTitle, .loginPage > div > div > form > button, .loginPage > div > div > a > button, .loginPage__leftSide > div > input {
         font-size: 14px;
     }
 
     .loginPage {
         justify-content: center;
+    }
+
+    .loginPage__form > div {
+        width: 100%;
+        padding: 0;
     }
 }

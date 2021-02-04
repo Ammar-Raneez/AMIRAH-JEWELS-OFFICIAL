@@ -4,10 +4,12 @@ import { auth } from '../../../firebase';
 import { useStateValue } from '../../../StateProvider';
 import './LoginPage.css';
 import { ValidatorForm, TextValidator} from 'react-material-ui-form-validator';
+import { Button, Dialog, DialogActions, DialogContent, DialogContentText, DialogTitle } from '@material-ui/core';
 
 function LoginPage() {
 	const history = useHistory();
 	const formRef = useRef("form");
+	const [dialogOpen, setDialogOpen] = useState(false);
 	const [email, setEmail] = useState('');
 	const [password, setPassword] = useState('');
 	const [{ user }, dispatch] = useStateValue();
@@ -32,9 +34,9 @@ function LoginPage() {
 					type: 'SET_USER',
 					user: auth.user,
 				});
-				setTimeout(() => {
-					alert('Welcome ' + auth.user.displayName + '!');
-				}, 1000);
+				// setTimeout(() => {
+				// 	alert('Welcome ' + auth.user.displayName + '!');
+				// }, 1000);
 
 				history.replace('/');
 
@@ -42,7 +44,7 @@ function LoginPage() {
 					window.location.reload(true);
 				}, 2000);
 			})
-			.catch((e) => alert(e.message));
+			.catch(setDialogOpen(!dialogOpen));
 	};
 
 	return (
@@ -53,7 +55,7 @@ function LoginPage() {
 					<p className="loginPage__subTitle">Please sign in to your Amirah account</p>
 				</div>
 				<div className="loginPage__leftSideBottom">
-					<ValidatorForm onSubmit={signIn} ref={formRef} className="registerPage__form">
+					<ValidatorForm onSubmit={signIn} ref={formRef} className="loginPage__form">
 						<TextValidator 
 							style={{ width: '90%' }} 
 							type="email" 
@@ -90,6 +92,25 @@ function LoginPage() {
 					<a href="/register"><button>REGISTER NOW</button></a>
 				</div>
 			</div>
+			<Dialog
+				open={dialogOpen}
+				onClose={() => setDialogOpen(!dialogOpen)}
+				aria-labelledby="alert-dialog-title"
+				aria-describedby="alert-dialog-description"
+			>
+				<DialogTitle id="alert-dialog-title">{"Invalid Credentials"}</DialogTitle>
+				<DialogContent>
+				<DialogContentText id="alert-dialog-description">
+					The details provided are incorrect, it is either because
+					there is no such Account or the email/password is incorrect.
+				</DialogContentText>
+				</DialogContent>
+				<DialogActions>
+				<Button onClick={() => setDialogOpen(!dialogOpen)} color="primary">
+					Retry
+				</Button>
+				</DialogActions>
+			</Dialog>
 		</div>
 	);
 }
