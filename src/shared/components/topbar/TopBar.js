@@ -46,15 +46,15 @@ function TopBar() {
 						user?.displayName ? (
 							<a onClick={logout} style={{ fontWeight: 'bold', fontSize: '13px' }} >Welcome to Your Account, {user?.displayName.split(" ")[0]}</a>
 						) : (
-							<a href="/login">Login</a>
+							<a style={{ marginRight: '1vw' }} href="/login">Login</a>
 						)
 					}
 				</div>
 				<Link to="/wishList">
-					<FavoriteBorderIcon />
+					<FavoriteBorderIcon style={{ marginRight: '1vw' }} />
 				</Link>
 				<Link to="/cart">
-					<LocalMallOutlinedIcon />
+					<LocalMallOutlinedIcon style={{ marginRight: '1vw' }} />
 				</Link>
 			</div>
 		</div>
