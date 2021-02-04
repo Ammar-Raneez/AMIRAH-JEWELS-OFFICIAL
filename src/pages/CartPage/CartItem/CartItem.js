@@ -40,6 +40,7 @@ function CartItem({ img, name, price, currency }) {
 				</div>
 				<div className="cartItem__descriptionRight">
 					<div className="cartItem__descriptionRightTop">
+						{/* <h1 style={{ marginBottom: '8px' }}>Amirah Jewellers</h1> */}
 						<h1>{name}</h1>
 					</div>
 					<div className="cartItem__descriptionRightBottom">
@@ -57,7 +58,7 @@ function CartItem({ img, name, price, currency }) {
 								</button>
 							</div>
 							<span>
-								<p>Price</p>
+								{/* <p>Price</p> */}
 								<p>
 									{currency}
 									{changedPrice}
