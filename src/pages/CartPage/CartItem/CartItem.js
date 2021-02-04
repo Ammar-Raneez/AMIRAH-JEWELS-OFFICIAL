@@ -162,8 +162,8 @@ function CartItem({ productCost, productImgURL, productName, productQuantity }) 
 							</span>
 						</div>
 					</div>
-					<div className="cartItem__descriptionRightSave" onClick={addItemToWishList}>
-						<p>Add to Wishlist</p>
+					<div className="cartItem__descriptionRightSave">
+						<p onClick={addItemToWishList}>Add to Wishlist</p>
 					</div>
 				</div>
 			</div>
