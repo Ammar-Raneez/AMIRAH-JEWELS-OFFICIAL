@@ -54,6 +54,7 @@
     border: #FFC0A1;
     margin-bottom: 5vw;
     transition: 0.3s ease;
+    cursor: pointer;
 }
 
 .homePage__bannerLeftBtn:hover {

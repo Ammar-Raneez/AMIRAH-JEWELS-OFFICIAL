@@ -13,9 +13,11 @@ function Banner() {
                     beautiful, custom designed, hand
                     crafted settings.
                 </p>
-                <button className="homePage__bannerLeftBtn">
-                    DISCOVER NOW
-                </button>
+                <a href="#category">
+                    <button className="homePage__bannerLeftBtn">
+                        DISCOVER NOW
+                    </button>
+                </a>
             </div>
             <div className="homePage__bannerRight">
                 
