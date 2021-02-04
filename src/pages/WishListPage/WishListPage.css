@@ -73,6 +73,46 @@
 	font-size: 14px;
 }
 
+
+.wishListPage__itemsNoLogin {
+	box-shadow: 0px 1px 3px #878787;
+	padding: 10vw;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	align-items: center;
+	color: #707070;
+	margin-top: 10px;
+	font-family: Quattrocento-Regular;
+}
+.wishListPage__itemsNoLogin > h1 {
+	font-size: 30px;
+	font-weight: lighter;
+}
+.wishListPage__itemsNoLogin > a > button {
+	margin-top: 20px;
+	font-size: 14px;
+}
+.wishListPage__itemsNoLogin > a > button {
+	padding: 1vw 3vw;
+	cursor: pointer;
+    margin-top: 1vw;
+    width: 100%;
+	font-family: Quattrocento-Regular;
+	border: 1px solid #ffc0a1;
+	font-size: 1.3vw;
+	color: #555555;
+	outline: none;
+	background-color: #ffc0a1;
+    border-radius: 0.7vw;
+    margin-top: 2vw;
+    transition: 0.3s ease;
+}
+.wishListPage__itemsNoLogin > a > button:hover {
+    background: #fff;
+    border: 1px solid #e58177;
+}
+
 @media screen and (max-width: 900px) and (min-width: 450px) {
 	.wishListPage__userDetails, .wishListPage__titleContinueSection > p {
 		font-size: 12px !important;

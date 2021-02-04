@@ -53,7 +53,7 @@ function WishListPage() {
 		);
 	}, []);
 
-	return (
+	return user ? (
 		<div className="wishListPage">
 			{/* user logged in details
 			<p className="wishListPage__userDetails">logged in as Vaappa</p> */}
@@ -67,7 +67,7 @@ function WishListPage() {
 				</div> */}
 			</div>
 
-			{/* wishlist item */}
+			/* wishlist item */
 			{loading ? (
 				<div className="loadingGif">
 					<img src="/loading/loading.gif" alt="" width="200" />
@@ -91,7 +91,14 @@ function WishListPage() {
 				</div>
 			)}
 		</div>
-	);
+	) : (
+		<div className="wishListPage">
+			<div className="wishListPage__itemsNoLogin">
+				<h1>Login to be able to save items you would like to purchase later</h1>
+				<a href="/login"><button>Login</button></a>
+			</div>
+		</div>
+	)
 }
 
 export default WishListPage;

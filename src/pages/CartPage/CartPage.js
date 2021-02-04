@@ -16,7 +16,7 @@ function CartPage() {
 		});
 	}, []);
 
-	return (
+	return user ? (
 		<div className="cartPage">
 			<div className="cartPage__title">
 				<h1>MY CART</h1>
@@ -62,7 +62,14 @@ function CartPage() {
 			)
 		}
 		</div>
-	);
+	) : (
+		<div className="cartPage">
+			<div className="cartPage__itemsNoLogin">
+				<h1>Login to be able to add items to your cart</h1>
+				<a href="/login"><button>Login</button></a>
+			</div>
+		</div>
+	)
 }
 
 export default CartPage;
