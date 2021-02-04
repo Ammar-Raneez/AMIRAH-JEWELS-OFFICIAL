@@ -6,7 +6,7 @@ import { db } from '../../firebase';
 import { useStateValue } from '../../StateProvider';
 import './NecklacePendantPage.css';
 import Product from './Product/Product';
-import { CSSTransition, TransitionGroup } from 'react-transition-group'
+import { CSSTransition, TransitionGroup } from 'react-transition-group';
 
 function NecklacePendantPage() {
 	const [readMoreDescription, setReadMoreDescription] = useState(false);
@@ -58,7 +58,7 @@ function NecklacePendantPage() {
 				}
 			})
 		);
-	}, [])
+	}, []);
 
 	// use effect for updating the wishlist in the database when clicked
 	useEffect(() => {
@@ -67,10 +67,27 @@ function NecklacePendantPage() {
 			db.collection('users').doc(user?.email).update({
 				wishlist: wishListBasket,
 			});
-			
 		}
 		setTempSafety(true);
 	}, [addToWishList]);
+
+	// ADDING THE ITEM INTO THE REACT CONTEXT API CART
+	const addItemToCart = () => {
+		if (user) {
+			dispatch({
+				type: 'ADD_TO_BASKET',
+				item: {
+					productName: 'Diamond and Black Onyx Circle Pendant',
+					productCost: 890.0,
+					productImgURL: 'pendantsNecklace/ring1.png',
+					productQuantity: 1,
+				},
+			});
+			alert('Added item to cart!');
+		} else {
+			alert('Please sign in to add item to wishlist');
+		}
+	};
 
 	// ADDING THE ITEM TO THE WISHLIST
 	const addItemToWishList = () => {
@@ -152,7 +169,7 @@ function NecklacePendantPage() {
 					<br />
 					<div className="necklacePendant__sectionCartCartDetailsBtns">
 						<Link>
-							<button>ADD TO CART</button>
+							<button onClick={addItemToCart}>ADD TO CART</button>
 						</Link>
 						<a href="#product__description">
 							<button>VIEW DETAILS</button>
@@ -172,8 +189,8 @@ function NecklacePendantPage() {
 				</p>
 				<div className="necklacePendant__descriptionOtherDetails">
 					{!readMoreDescription ? (
-						<p 
-							onClick={() => setReadMoreDescription(!readMoreDescription)} 
+						<p
+							onClick={() => setReadMoreDescription(!readMoreDescription)}
 							className="necklacePendant__descriptionOtherDetailsReadMore"
 						>
 							Read more...
@@ -184,7 +201,7 @@ function NecklacePendantPage() {
 								in={readMoreDescription}
 								timeout={{
 									enter: 3000,
-									exit: 3000
+									exit: 3000,
 								}}
 								classNames="necklacePendant__descriptionTransition"
 							>
@@ -196,7 +213,9 @@ function NecklacePendantPage() {
 									<p
 										onClick={() => setReadMoreDescription(!readMoreDescription)}
 										className="necklacePendant__descriptionOtherDetailsReadMore"
-									>	Read Less...
+									>
+										{' '}
+										Read Less...
 									</p>
 								</div>
 							</CSSTransition>

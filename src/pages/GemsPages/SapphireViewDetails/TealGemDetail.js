@@ -19,6 +19,24 @@ function TealGemDetail() {
 		setDisplayImage('/' + imagePath.split('/').reverse()[1] + '/' + imagePath.split('/').reverse()[0]);
 	};
 
+	// ADDING THE ITEM INTO THE REACT CONTEXT API CART
+	const addItemToCart = () => {
+		if (user) {
+			dispatch({
+				type: 'ADD_TO_BASKET',
+				item: {
+					productName: 'Teal Sapphire',
+					productCost: 1100.00,
+					productImgURL: 'gems/teal-sapphire.png',
+					productQuantity: 1,
+				},
+			});
+			alert('Added item to cart!');
+		} else {
+			alert('Please sign in to add item to wishlist');
+		}
+	};
+
 	// we load all the content from the database (this runs only once)
 	useEffect(() => {
 		// user logged in only we load the details for the particular user
@@ -55,8 +73,8 @@ function TealGemDetail() {
 				}
 			})
 		);
-	}, [])
-	
+	}, []);
+
 	// use effect for updating the wishlist in the database when clicked
 	useEffect(() => {
 		if (tempSafety === true) {
@@ -160,7 +178,7 @@ function TealGemDetail() {
 					<br />
 					<div className="gemDetails__sectionCartCartDetailsBtns">
 						<Link>
-							<button>ADD TO CART</button>
+							<button onClick={addItemToCart}>ADD TO CART</button>
 						</Link>
 						<a href="#viewDetails">
 							<button>VIEW DETAILS</button>
@@ -203,13 +221,21 @@ function TealGemDetail() {
 				<div className="gemDetails__otherGemsRow">
 					<Gem img="gems/teal-sapphire.png" name="Teal Sapphires" viewMoreUrl="/teal+sapphire" />
 					<Gem img="gems/purple-sapphire.png" name="Purple Sapphires" viewMoreUrl="/purple+sapphire" />
-					<Gem img="gems/Padparadscha-sapphire.png" name="Padparadscha Sapphires" viewMoreUrl="/padparadscha+sapphire" />
+					<Gem
+						img="gems/Padparadscha-sapphire.png"
+						name="Padparadscha Sapphires"
+						viewMoreUrl="/padparadscha+sapphire"
+					/>
 					<Gem img="gems/orange-sapphire.png" name="Orange Sapphires" viewMoreUrl="/orange+sapphire" />
 				</div>
 				{/* <div className="gemDetails__otherGemsRow">
 				</div> */}
 				<div style={{ justifyContent: 'center' }} className="gemDetails__otherGemsRow">
-					<Gem img="gems/ClaudiaHamann_PinkSapphire_Ceylon_Cushion_Unheated.png" name="Pink Sapphires" viewMoreUrl="/pink+sapphire" />
+					<Gem
+						img="gems/ClaudiaHamann_PinkSapphire_Ceylon_Cushion_Unheated.png"
+						name="Pink Sapphires"
+						viewMoreUrl="/pink+sapphire"
+					/>
 					<Gem img="gems/white-sapphire.png" name="White Sapphires" viewMoreUrl="/white+sapphire" />
 				</div>
 			</div>
