@@ -53,7 +53,7 @@ function CartItem({ productCost, productImgURL, productName, productQuantity }) 
 			console.log(cartBasket, '<===============> CHECK THIS ONE');
 
 			// LAST ITEM REMOVE PROBLEM ALTERNATE SOLUTION
-			if (cartBasket.length === 1) {
+			if (cartBasket?.length === 1) {
 				db.collection('users').doc(user?.email).update({
 					cart: [],
 				});
