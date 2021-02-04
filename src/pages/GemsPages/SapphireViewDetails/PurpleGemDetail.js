@@ -162,9 +162,9 @@ function PurpleGemDetail() {
 						<Link>
 							<button>ADD TO CART</button>
 						</Link>
-						<Link>
+						<a href="#gemDetails">
 							<button>VIEW DETAILS</button>
-						</Link>
+						</a>
 					</div>
 				</div>
 			</div>
@@ -176,7 +176,7 @@ function PurpleGemDetail() {
 			</div>
 
 			{/* description and details */}
-			<div className="gemDetails__sectionDescription">
+			<div id="gemDetails" className="gemDetails__sectionDescription">
 				<h2>Description & Details</h2>
 				<div className="gemDetails__sectionDescriptionTable">
 					{tableRow('Main Stone', 'Natural Sapphire')}
