@@ -1,11 +1,13 @@
-import React, { useState } from 'react';
+import React, { useRef, useState } from 'react';
 import { useHistory } from 'react-router-dom';
 import { auth } from '../../../firebase';
 import { useStateValue } from '../../../StateProvider';
 import './LoginPage.css';
+import { ValidatorForm, TextValidator} from 'react-material-ui-form-validator';
 
 function LoginPage() {
 	const history = useHistory();
+	const formRef = useRef("form");
 	const [email, setEmail] = useState('');
 	const [password, setPassword] = useState('');
 	const [{ user }, dispatch] = useStateValue();
@@ -14,7 +16,7 @@ function LoginPage() {
 		e.preventDefault();
 
 		if (!email || !password) {
-			return alert('Please enter Email and Password');
+			return;
 		}
 
 		// sign in logic
@@ -51,14 +53,29 @@ function LoginPage() {
 					<p className="loginPage__subTitle">Please sign in to your Amirah account</p>
 				</div>
 				<div className="loginPage__leftSideBottom">
-					<input type="email" placeholder="Email" onChange={(e) => setEmail(e.target.value)} value={email} />
-					<input
-						type="password"
-						placeholder="Password"
-						onChange={(e) => setPassword(e.target.value)}
-						value={password}
-					/>
-					<button onClick={signIn}>SIGN IN</button>
+					<ValidatorForm onSubmit={signIn} ref={formRef} className="registerPage__form">
+						<TextValidator 
+							style={{ width: '90%' }} 
+							type="email" 
+							label="Email"
+							name="email" 
+							onChange={(e) => setEmail(e.target.value)} 
+							value={email} 
+							errorMessages="Please add an email"
+							validators={['required', 'isEmail']}
+						/>
+						<TextValidator 
+							style={{ width: '90%' }} 
+							type="password" 
+							label="Password" 
+							name="password"
+							onChange={(e) => setPassword(e.target.value)} 
+							value={password} 
+							errorMessages="Please add a password"
+							validators={['required']}	
+						/>
+						<button type="submit">SIGN IN</button>
+					</ValidatorForm>
 				</div>
 			</div>
 			<div className="loginPage__rightSide">
