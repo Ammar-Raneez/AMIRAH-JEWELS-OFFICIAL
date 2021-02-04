@@ -17,7 +17,7 @@
 }
 
 .topbar__center {
-	flex-grow: 5;
+	flex-grow: 4;
 	display: flex;
 	justify-content: center;
 }
@@ -26,14 +26,18 @@
 	flex-grow: 0.3;
 }
 
-.topbar__left  {
-	flex-grow: 0.3;
-}
-
 .topbar__left, .topbar__right {
 	display: flex;
 	justify-content: space-around;
 	align-items: center;
+}
+
+.topbar__left  {
+	flex-grow: 1.5;
+	justify-content: left;
+}
+.topbar__left > .MuiSvgIcon-root {
+	/* margin-right: 8px; */
 }
 
 .topbar__rightAccount {
