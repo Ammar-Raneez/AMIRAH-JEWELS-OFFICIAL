@@ -8,9 +8,16 @@ import LocalMallOutlinedIcon from '@material-ui/icons/LocalMallOutlined';
 import FavoriteBorderIcon from '@material-ui/icons/FavoriteBorder';
 import { IconButton } from '@material-ui/core';
 import { useStateValue } from '../../../StateProvider';
+import { auth } from '../../../firebase'
 
 function TopBar() {
 	const [{ wishListBasket, cartBasket, user }, dispatch] = useStateValue();
+
+	const logout = () => {
+		if (user) {
+			auth.signOut();
+		}
+	}
 
 	// const displayContent = () => {
 	// 	console.log(wishListBasket);
@@ -37,7 +44,7 @@ function TopBar() {
 					<PersonOutlinedIcon />
 					{
 						user?.displayName ? (
-							<a style={{ fontWeight: 'bold', fontSize: '13px' }} >Welcome to Your Account, {user?.displayName.split(" ")[0]}</a>
+							<a onClick={logout} style={{ fontWeight: 'bold', fontSize: '13px' }} >Welcome to Your Account, {user?.displayName.split(" ")[0]}</a>
 						) : (
 							<a href="/login">Login</a>
 						)
