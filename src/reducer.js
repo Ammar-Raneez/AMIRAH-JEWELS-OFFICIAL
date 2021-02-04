@@ -1,3 +1,4 @@
+
 export const initialState = {
 	cartBasket: [],
 	wishListBasket: [],
@@ -97,6 +98,9 @@ const reducer = (state, action) => {
 			} else {
 				console.warn(`Cant remove product id ${action.id} as its not in the wishlist basket`);
 			}
+
+			// console.log("This is the old wishlist content:", state.wishListBasket);
+			// console.log("This is the new wishlist content:", newWishListBasket);
 
 			// return the updated basket back
 			return { ...state, wishListBasket: newWishListBasket };

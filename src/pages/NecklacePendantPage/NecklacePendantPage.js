@@ -30,7 +30,7 @@ function NecklacePendantPage() {
 				if (doc.id === user?.email) {
 					// adding the cart items
 					for (const cartItem of doc.data().cart) {
-						console.log('Adding items from the database into the cart');
+						// console.log('Adding items from the database into the cart');
 						dispatch({
 							type: 'ADD_TO_BASKET',
 							item: {
@@ -44,8 +44,8 @@ function NecklacePendantPage() {
 
 					// adding the wishlist items
 					for (const wishlistItem of doc.data().wishlist) {
-						console.log('Adding items from the database into the wishlist');
-						console.log(wishlistItem);
+						// console.log('Adding items from the database into the wishlist');
+						// console.log(wishlistItem);
 						dispatch({
 							type: 'ADD_TO_WISHLIST',
 							item: {
@@ -62,10 +62,12 @@ function NecklacePendantPage() {
 
 	// use effect for updating the wishlist in the database when clicked
 	useEffect(() => {
+		// console.log(wishListBasket, "<============");
 		if (tempSafety === true) {
 			db.collection('users').doc(user?.email).update({
 				wishlist: wishListBasket,
 			});
+			
 		}
 		setTempSafety(true);
 	}, [addToWishList]);

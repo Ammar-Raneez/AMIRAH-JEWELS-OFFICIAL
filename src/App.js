@@ -22,6 +22,7 @@ import { useEffect } from 'react';
 import { auth, db } from './firebase';
 import CartPage from './pages/CartPage/CartPage';
 import TealGemDetail from './pages/GemsPages/SapphireViewDetails/TealGemDetail';
+import PurpleGemDetail from './pages/GemsPages/SapphireViewDetails/PurpleGemDetail';
 
 function App() {
 	const [{ wishListBasket, cartBasket, user }, dispatch] = useStateValue();
@@ -152,6 +153,12 @@ function App() {
 					</Route>
 					<Route path="/yellow+gold">
 						<h2> yellow gold component</h2>
+					</Route>
+					<Route path="/purple+sapphire">
+						<TopBar />
+						<Header />
+						<PurpleGemDetail />
+						<Footer />
 					</Route>
 					<Route path="/teal+sapphire">
 						<TopBar />

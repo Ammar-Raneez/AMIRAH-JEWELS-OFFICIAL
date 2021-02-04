@@ -46,7 +46,8 @@ function Header() {
 								<Link className="hidden header__optionsProductDetail" to="/diamonds"><span>Diamonds</span></Link>
 								<Link className="header__optionsProductDetail" to="/teal+sapphire"><span>Teal Sapphires</span></Link>
 								<Link className="header__optionsProductDetail" to="/pink+sapphire"><span>Pink Sapphires</span></Link>
-								<Link className="header__optionsProductDetail" to="/pink+sapphire"><span>Pearl Sapphires</span></Link>
+								<Link className="header__optionsProductDetail" to="/pearl+sapphire"><span>Pearl Sapphires</span></Link>
+								<Link className="header__optionsProductDetail" to="/purple+sapphire"><span>Purple Sapphires</span></Link>
 								<Link style={{ color: '#656565', fontWeight: '600' }} className="header__optionsProductDetail" to="/gemstones+metal"><span>Explore More</span></Link>
 							</div>
 							<div>
