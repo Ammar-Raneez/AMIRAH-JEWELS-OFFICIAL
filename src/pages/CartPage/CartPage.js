@@ -31,6 +31,7 @@ function CartPage() {
 					<div className="cartPage__items">
 						{cartBasket?.map((item) => (
 							<CartItem
+								key={item.productName}
 								productImgURL={item.productImgURL}
 								productName={item.productName}
 								productCost={item.productCost}
@@ -50,17 +51,16 @@ function CartPage() {
 							productQuantity={2}
 						/> */}
 					</div>
-				<div className="cartPage__orderSummary">
-					<Bill subTotal={subTotal} delivery={delivery} tax={tax} />
+					<div className="cartPage__orderSummary">
+						<Bill subTotal={subTotal} delivery={delivery} tax={tax} />
+					</div>
 				</div>
-			</div>
 			) : (
 				<div className="cartPage__itemsEmpty">
 					<h1>Your Cart is Empty</h1>
 					<p>Add Items into Your Cart to Display them Here</p>
 				</div>
-			)
-		}
+			)}
 		</div>
 	) : (
 		<div className="cartPage">
