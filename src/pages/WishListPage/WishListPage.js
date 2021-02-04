@@ -67,7 +67,6 @@ function WishListPage() {
 				</div> */}
 			</div>
 
-			/* wishlist item */
 			{loading ? (
 				<div className="loadingGif">
 					<img src="/loading/loading.gif" alt="" width="200" />

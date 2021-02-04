@@ -10,7 +10,8 @@ import { db } from '../../../firebase';
 function TealGemDetail() {
 	const [displayImage, setDisplayImage] = useState('gems/teal-sapphire.png');
 	const [addToWishList, setAddToWishList] = useState(false);
-	const [tempSafety, setTempSafety] = useState(false);
+	const [tempSafetyWishList, setTempSafetyWishList] = useState(false);
+	const [tempSafetyCartBasket, setTempSafetyCartBasket] = useState(false);
 	const [{ wishListBasket, cartBasket, user }, dispatch] = useStateValue();
 
 	// created the image path
@@ -26,7 +27,7 @@ function TealGemDetail() {
 				type: 'ADD_TO_BASKET',
 				item: {
 					productName: 'Teal Sapphire',
-					productCost: 1100.00,
+					productCost: 1100.0,
 					productImgURL: 'gems/teal-sapphire.png',
 					productQuantity: 1,
 				},
@@ -75,15 +76,26 @@ function TealGemDetail() {
 		);
 	}, []);
 
-	// use effect for updating the wishlist in the database when clicked
+	// UPDATING THE WISHLIST BASKET ON (FIRE-STORE)
 	useEffect(() => {
-		if (tempSafety === true) {
+		// console.log(wishListBasket, "<============");
+		if (tempSafetyWishList === true) {
 			db.collection('users').doc(user?.email).update({
 				wishlist: wishListBasket,
 			});
 		}
-		setTempSafety(true);
+		setTempSafetyWishList(true);
 	}, [addToWishList]);
+
+	// UPDATING THE CART BASKET ON (FIRE-STORE)
+	useEffect(() => {
+		if (tempSafetyCartBasket === true) {
+			db.collection('users').doc(user?.email).update({
+				cart: cartBasket,
+			});
+		}
+		setTempSafetyCartBasket(true);
+	}, [cartBasket]);
 
 	// ADDING THE ITEM TO THE WISHLIST
 	const addItemToWishList = () => {
@@ -152,10 +164,12 @@ function TealGemDetail() {
 				<div className="gemDetails__sectionCartMainImage">
 					<img src={displayImage} alt="" />
 					<div className="gemDetails__sectionCartMainImageIcon">
-						{user ? addToWishList ? (
-							<FavoriteIcon onClick={removeFromWishList} />
-						) : (
-							<FavoriteBorderIcon onClick={addItemToWishList} />
+						{user ? (
+							addToWishList ? (
+								<FavoriteIcon onClick={removeFromWishList} />
+							) : (
+								<FavoriteBorderIcon onClick={addItemToWishList} />
+							)
 						) : (
 							<></>
 						)}
