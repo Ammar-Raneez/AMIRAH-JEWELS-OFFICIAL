@@ -81,8 +81,8 @@ function WishListPage() {
 								<p>Add Items To Your Wishlist to Display them Here</p>
 							</div>
 						) : (
-							wishListBasket.map((item) => (
-							<WishListItem img={item.imgURL} title={item.name} currency="$" price={item.cost} />
+							wishListBasket.map((item, x) => (
+							<WishListItem key={x} img={item.imgURL} title={item.name} currency="$" price={item.cost} />
 						)))
 					}
 				</div>
