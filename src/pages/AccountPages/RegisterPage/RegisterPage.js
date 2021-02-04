@@ -4,7 +4,7 @@ import { auth, db } from '../../../firebase';
 import './RegisterPage.css';
 import firebase from 'firebase';
 import { useStateValue } from '../../../StateProvider';
-import { Input } from '@material-ui/core';
+import { FormControl, FormControlLabel, FormLabel, Input, Radio, RadioGroup, TextField } from '@material-ui/core';
 import DateFnsUtils from '@date-io/date-fns';
 import { KeyboardDatePicker, MuiPickersUtilsProvider } from '@material-ui/pickers';
 
@@ -100,49 +100,26 @@ function RegisterPage() {
 
 				<form className="registerPage__form">
 					<div className="registerPage__formFirst">
-						<Input
-							type="text"
-							placeholder="First Name"
-							onChange={(e) => setFirstName(e.target.value)}
-							value={firstName}
-						/>
-						<Input type="text" placeholder="Last Name" onChange={(e) => setLastName(e.target.value)} value={lastName} />
-						<Input type="email" placeholder="Email" onChange={(e) => setEmail(e.target.value)} value={email} />
-						<Input
-							type="password"
-							placeholder="Password"
-							onChange={(e) => setPassword(e.target.value)}
-							value={password}
-						/>
+						<TextField style={{ width: '93%' }} type="text" label="First Name" onChange={(e) => setFirstName(e.target.value)} value={firstName} />
+						<TextField style={{ width: '93%' }} type="text" label="Last Name" onChange={(e) => setLastName(e.target.value)} value={lastName} />
+						<TextField style={{ width: '93%' }} type="email" label="Email" onChange={(e) => setEmail(e.target.value)} value={email} />
+						<TextField style={{ width: '93%' }} type="password" label="Password" onChange={(e) => setPassword(e.target.value)} value={password} />
 					</div>
 					<div className="registerPage__formSecond">
-						<p>Gender (Optional)</p>
+						{/* <p>Gender (Optional)</p> */}
 						<div className="registerPage__formSecondInputs">
-							<input type="radio" name="gender" value="female" id="female" onClick={(e) => setGender('Female')} />
-							<label for="female">Female</label>{' '}
-							<input type="radio" name="gender" value="male" id="male" onClick={(e) => setGender('Male')} />
-							<label for="male">Male</label>
+							<FormControl component="fieldset">
+								<FormLabel style={{ fontFamily: 'Quattrocento-Regular' }} component="legend">Gender (Optional)</FormLabel>
+								<RadioGroup style={{ display: 'flex' }}  aria-label="gender" name="gender1" value={gender} onChange={(e) => setGender(e.target.value)}>
+									<FormControlLabel value="female" control={<Radio />} label="Female" />
+									<FormControlLabel value="male" control={<Radio />} label="Male" />
+								</RadioGroup>
+							</FormControl>
 						</div>
 					</div>
 					<div className="registerPage__formThird">
 						<p>Birthday (Optional)</p>
 						<div className="registerPage__formThirdInputs">
-							{/* <input
-								type="number"
-								name="month"
-								placeholder="Month"
-								onChange={(e) => setBirthMonth(e.target.value)}
-								value={birthMonth}
-								min={1}
-							/>
-							<input
-								type="number"
-								name="day"
-								placeholder="Day"
-								onChange={(e) => setBirthDay(e.target.value)}
-								value={birthDay}
-								min={1}
-							/> */}
 							<MuiPickersUtilsProvider utils={DateFnsUtils}>
 								<KeyboardDatePicker
 									disableToolbar

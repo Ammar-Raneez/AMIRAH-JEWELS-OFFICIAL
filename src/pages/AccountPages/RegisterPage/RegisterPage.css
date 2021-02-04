@@ -4,8 +4,8 @@
 	height: 100vh;
 	justify-content: center;
 	position: relative;
-	margin-top: 5vw;
-	margin-bottom: 5vw;
+	margin-top: 150px;
+	margin-bottom: 150px;
 }
 .registerPage__firstJewel {
 	display: flex;
@@ -138,6 +138,10 @@
 	align-items: center;
 	justify-content: center;
 	font-size: 1.2vw;
+}
+
+.MuiInput-root, .MuiFormControl-root.MuiTextField-root.MuiFormControl-marginNormal {
+	width: 100%;
 }
 
 /* ------------------------------------------------------ */
