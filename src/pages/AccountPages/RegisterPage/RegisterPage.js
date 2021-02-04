@@ -32,31 +32,15 @@ function RegisterPage() {
 				});
 
 				// Creating a user collection and adding details about the user using cloud firebase
-				db.collection('users')
-					.doc(email)
-					.set({
-						userID: email,
-						gender: gender,
-						birthMonth: birthMonth,
-						birthDay: birthDay,
-						cart: [
-							{
-								productName: '',
-								productCost: 0,
-								productQuantity: 0,
-								productImgURL: '',
-							},
-						],
-						wishlist: [
-							{
-								productName: '',
-								productCost: 0,
-								productQuantity: 0,
-								productImgURL: '',
-							},
-						],
-						timestamp: firebase.firestore.FieldValue.serverTimestamp(),
-					});
+				db.collection('users').doc(email).set({
+					userID: email,
+					gender: gender,
+					birthMonth: birthMonth,
+					birthDay: birthDay,
+					cart: [],
+					wishlist: [],
+					timestamp: firebase.firestore.FieldValue.serverTimestamp(),
+				});
 
 				// clean the fields
 				setFirstName('');
