@@ -79,7 +79,6 @@ function Footer() {
 						<Link to="/">Company</Link>
 						<Link to="/">Charity</Link>
 						<Link to="/">Careers</Link>
-						<Link to="/">Blog</Link>
 					</div>
 					<div className="footer__rightSection">
 						<p>Latest by Amirah Gems</p>
