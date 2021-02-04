@@ -152,10 +152,12 @@ function TealGemDetail() {
 				<div className="gemDetails__sectionCartMainImage">
 					<img src={displayImage} alt="" />
 					<div className="gemDetails__sectionCartMainImageIcon">
-						{addToWishList ? (
+						{user ? addToWishList ? (
 							<FavoriteIcon onClick={removeFromWishList} />
 						) : (
 							<FavoriteBorderIcon onClick={addItemToWishList} />
+						) : (
+							<></>
 						)}
 					</div>
 				</div>
@@ -177,9 +179,13 @@ function TealGemDetail() {
 					<br />
 					<br />
 					<div className="gemDetails__sectionCartCartDetailsBtns">
-						<Link>
-							<button onClick={addItemToCart}>ADD TO CART</button>
-						</Link>
+						{user ? (
+							<Link>
+								<button onClick={addItemToCart}>ADD TO CART</button>
+							</Link>
+						) : (
+							<></>
+						)}
 						<a href="#viewDetails">
 							<button>VIEW DETAILS</button>
 						</a>

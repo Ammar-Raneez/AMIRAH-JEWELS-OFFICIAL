@@ -73,7 +73,10 @@ function WishListPage() {
 					<img src="/loading/loading.gif" alt="" width="200" />
 				</div>
 			) : (
-				<div className="wishListPage__items">
+				<div 
+					className="wishListPage__items" 
+					style={ wishListBasket.length < 4 && wishListBasket.length > 0 ? { justifyContent: 'flex-start' } : { justifyContent: 'space-around' } }
+				>
 					{
 						wishListBasket.length == 0 ? (
 							<div className="wishListPage__itemsEmpty">
