@@ -11,7 +11,7 @@ function WishListPage() {
 	const [{ wishListBasket, cartBasket, user }, dispatch] = useStateValue();
 	const [loading, setLoading] = useState(true);
 
-	// we load all the content from the database (this runs only once)
+	// WE LOAD ALL THE CONTENT FROM THE DATABASE (this runs only once)
 	useEffect(() => {
 		// user logged in only we load the details for the particular user
 		// setLoading(true)
@@ -67,7 +67,6 @@ function WishListPage() {
 				</div> */}
 			</div>
 
-			/* wishlist item */
 			{loading ? (
 				<div className="loadingGif">
 					<img src="/loading/loading.gif" alt="" width="200" />

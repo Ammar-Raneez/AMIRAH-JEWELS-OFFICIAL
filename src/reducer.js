@@ -74,7 +74,6 @@ const reducer = (state, action) => {
 			if (index_cart >= 0) {
 				// item exists in wishlist basket, remove it (removes the item from the basket for the index)
 				newCartListBasket.splice(index_cart, 1);
-				alert(newCartListBasket);
 			} else {
 				console.warn(`Cant remove product id ${action.id} as its not in the cart basket`);
 			}

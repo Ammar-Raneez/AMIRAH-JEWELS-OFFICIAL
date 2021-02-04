@@ -29,14 +29,15 @@
 	transition: 0.3s ease;
 	font-size: 1.5vw !important;
 }
-.cartPage__titleContinueSection > .MuiSvgIcon-root:hover, .cartPage__titleContinueSection:hover {
+.cartPage__titleContinueSection > .MuiSvgIcon-root:hover,
+.cartPage__titleContinueSection:hover {
 	transition: 0.3s ease;
 	color: rgb(255, 177, 109) !important;
 	cursor: pointer;
 }
 
 .cartPage__items {
-    width: 60%;
+	width: 60%;
 }
 
 .cartPage__itemsEmpty {
@@ -81,25 +82,30 @@
 .cartPage__itemsNoLogin > a > button {
 	padding: 1vw 3vw;
 	cursor: pointer;
-    margin-top: 1vw;
-    width: 100%;
+	margin-top: 1vw;
+	width: 100%;
 	font-family: Quattrocento-Regular;
 	border: 1px solid #ffc0a1;
 	font-size: 1.3vw;
 	color: #555555;
 	outline: none;
 	background-color: #ffc0a1;
-    border-radius: 0.7vw;
-    margin-top: 2vw;
-    transition: 0.3s ease;
+	border-radius: 0.7vw;
+	margin-top: 2vw;
+	transition: 0.3s ease;
 }
 .cartPage__itemsNoLogin > a > button:hover {
-    background: #fff;
-    border: 1px solid #e58177;
+	background: #fff;
+	border: 1px solid #e58177;
 }
-
+.loadingGif > img {
+	padding: 30px;
+	object-fit: contain;
+	height: 250px;
+}
 @media screen and (max-width: 900px) and (min-width: 450px) {
-	.cartPage__titleContinueSection, .cartPage__titleContinueSection > .MuiSvgIcon-root {
+	.cartPage__titleContinueSection,
+	.cartPage__titleContinueSection > .MuiSvgIcon-root {
 		font-size: 12px !important;
 	}
 	.cartPage__title > h1 {
@@ -112,11 +118,16 @@
 
 	.cartPage__items {
 		width: 100%;
+	}
+	.loadingGif > img {
+		height: 100px;
+		padding: 50px;
 	}
 }
 
 @media screen and (max-width: 450px) {
-	.cartPage__titleContinueSection, .cartPage__titleContinueSection > .MuiSvgIcon-root {
+	.cartPage__titleContinueSection,
+	.cartPage__titleContinueSection > .MuiSvgIcon-root {
 		font-size: 12px !important;
 	}
 	.cartPage__title > h1 {
@@ -130,7 +141,10 @@
 	.cartPage__items {
 		width: 100%;
 	}
-
+	.loadingGif > img {
+		height: 100px;
+		padding: 50px;
+	}
 	.cartPage__itemsEmpty {
 		margin-top: 25%;
 		margin-bottom: 25vh;

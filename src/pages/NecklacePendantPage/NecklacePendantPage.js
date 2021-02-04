@@ -13,7 +13,8 @@ function NecklacePendantPage() {
 
 	const [displayImage, setDisplayImage] = useState('pendantsNecklace/ring1.png');
 	const [addToWishList, setAddToWishList] = useState(false);
-	const [tempSafety, setTempSafety] = useState(false);
+	const [tempSafetyWishList, setTempSafetyWishList] = useState(false);
+	const [tempSafetyCartBasket, setTempSafetyCartBasket] = useState(false);
 	const [{ wishListBasket, cartBasket, user }, dispatch] = useStateValue();
 
 	// created the image path
@@ -60,16 +61,26 @@ function NecklacePendantPage() {
 		);
 	}, []);
 
-	// use effect for updating the wishlist in the database when clicked
+	// UPDATING THE WISHLIST BASKET ON (FIRE-STORE)
 	useEffect(() => {
 		// console.log(wishListBasket, "<============");
-		if (tempSafety === true) {
+		if (tempSafetyWishList === true) {
 			db.collection('users').doc(user?.email).update({
 				wishlist: wishListBasket,
 			});
 		}
-		setTempSafety(true);
+		setTempSafetyWishList(true);
 	}, [addToWishList]);
+
+	// UPDATING THE CART BASKET ON (FIRE-STORE)
+	useEffect(() => {
+		if (tempSafetyCartBasket === true) {
+			db.collection('users').doc(user?.email).update({
+				cart: cartBasket,
+			});
+		}
+		setTempSafetyCartBasket(true);
+	}, [cartBasket]);
 
 	// ADDING THE ITEM INTO THE REACT CONTEXT API CART
 	const addItemToCart = () => {
@@ -87,6 +98,9 @@ function NecklacePendantPage() {
 		} else {
 			alert('Please sign in to add item to wishlist');
 		}
+
+		// SINCE THE CART LIST IS NOW UPDATED, ADDING THE UPDATED CART TO FIRE-STORE
+		// USING THE USE-EFFECT
 	};
 
 	// ADDING THE ITEM TO THE WISHLIST
@@ -148,10 +162,12 @@ function NecklacePendantPage() {
 				<div className="necklacePendant__sectionCartMainImage">
 					<img src={displayImage} alt="" />
 					<div className="necklacePendant__sectionCartMainImageIcon">
-						{user ? addToWishList ? (
-							<FavoriteIcon onClick={removeFromWishList} />
-						) : (
-							<FavoriteBorderIcon onClick={addItemToWishList} />
+						{user ? (
+							addToWishList ? (
+								<FavoriteIcon onClick={removeFromWishList} />
+							) : (
+								<FavoriteBorderIcon onClick={addItemToWishList} />
+							)
 						) : (
 							<></>
 						)}

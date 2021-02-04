@@ -9,12 +9,21 @@ function CartItem({ productCost, productImgURL, productName, productQuantity }) 
 	const priceForOne = productCost;
 	const [{ wishListBasket, cartBasket, user }, dispatch] = useStateValue();
 	const [updateWishList, setUpdateWishList] = useState(false);
+	const [updateCartList, setUpdateCartList] = useState(false);
 
-	// THIS USE EFFECT WILL BE NECESSARY TO UPDATE THE CART IN THE FIRE-STORE
+	// UPDATE THE CART DETAILS IN THE FIRE-STORE WHEN CHANGES ARE MADE
 	useEffect(() => {
-		console.log(cartBasket);
+		// REMOVING THE ITEM FROM THE DATABASE
+		console.log('UPDATED WISHLIST FROM THE USE EFFECT', cartBasket);
+		if (updateCartList === true) {
+			db.collection('users').doc(user?.email).update({
+				cart: cartBasket,
+			});
+		}
+		setUpdateCartList(true);
 	}, [cartBasket]);
 
+	// UPDATE THE WISHLIST DATABASE CONTENT (FIRE-STORE)
 	useEffect(() => {
 		console.log('outside the database section');
 		if (updateWishList === true) {
@@ -44,11 +53,11 @@ function CartItem({ productCost, productImgURL, productName, productQuantity }) 
 			console.log(cartBasket, '<===============> CHECK THIS ONE');
 
 			// LAST ITEM REMOVE PROBLEM ALTERNATE SOLUTION
-			// if (wishListBasket.length === 1) {
-			// 	db.collection('users').doc(user?.email).update({
-			// 		wishlist: [],
-			// 	});
-			// }
+			if (cartBasket?.length === 1) {
+				db.collection('users').doc(user?.email).update({
+					cart: [],
+				});
+			}
 		} else {
 			alert('Please sign in to add item to wishlist');
 		}
@@ -85,7 +94,7 @@ function CartItem({ productCost, productImgURL, productName, productQuantity }) 
 	const addItemToWishList = () => {
 		// ADDING THE ITEM INTO THE WISHLIST REDUCER LIST
 		if (user) {
-            console.log("adding the item into the wishlist reducer");
+			console.log('adding the item into the wishlist reducer');
 			dispatch({
 				type: 'ADD_TO_WISHLIST',
 				item: {
