@@ -148,10 +148,12 @@ function NecklacePendantPage() {
 				<div className="necklacePendant__sectionCartMainImage">
 					<img src={displayImage} alt="" />
 					<div className="necklacePendant__sectionCartMainImageIcon">
-						{addToWishList ? (
+						{user ? addToWishList ? (
 							<FavoriteIcon onClick={removeFromWishList} />
 						) : (
 							<FavoriteBorderIcon onClick={addItemToWishList} />
+						) : (
+							<></>
 						)}
 					</div>
 				</div>
@@ -168,9 +170,13 @@ function NecklacePendantPage() {
 					<br />
 					<br />
 					<div className="necklacePendant__sectionCartCartDetailsBtns">
-						<Link>
-							<button onClick={addItemToCart}>ADD TO CART</button>
-						</Link>
+						{user ? (
+							<Link>
+								<button onClick={addItemToCart}>ADD TO CART</button>
+							</Link>
+						) : (
+							<></>
+						)}
 						<a href="#product__description">
 							<button>VIEW DETAILS</button>
 						</a>

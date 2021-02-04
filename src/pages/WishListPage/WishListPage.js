@@ -73,7 +73,10 @@ function WishListPage() {
 					<img src="/loading/loading.gif" alt="" width="200" />
 				</div>
 			) : (
-				<div className="wishListPage__items">
+				<div 
+					className="wishListPage__items" 
+					style={ wishListBasket.length < 4 && wishListBasket.length > 0 ? { justifyContent: 'flex-start' } : { justifyContent: 'space-around' } }
+				>
 					{
 						wishListBasket.length == 0 ? (
 							<div className="wishListPage__itemsEmpty">
@@ -81,8 +84,8 @@ function WishListPage() {
 								<p>Add Items To Your Wishlist to Display them Here</p>
 							</div>
 						) : (
-							wishListBasket.map((item) => (
-							<WishListItem img={item.imgURL} title={item.name} currency="$" price={item.cost} />
+							wishListBasket.map((item, x) => (
+							<WishListItem key={x} img={item.imgURL} title={item.name} currency="$" price={item.cost} />
 						)))
 					}
 				</div>
