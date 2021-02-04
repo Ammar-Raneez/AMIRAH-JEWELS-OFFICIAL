@@ -1,13 +1,13 @@
 import firebase from 'firebase';
 
 const firebaseApp = firebase.initializeApp({
-	apiKey: 'AIzaSyBneniuHRaTCqgGhhv82ttmRquRAPe0g7I',
-	authDomain: 'amirah-49b66.firebaseapp.com',
-	projectId: 'amirah-49b66',
-	storageBucket: 'amirah-49b66.appspot.com',
-	messagingSenderId: '297754531483',
-	appId: '1:297754531483:web:40bd2348c86de04f05583e',
-	measurementId: 'G-V65BJZGQG0',
+	apiKey: 'AIzaSyDJq1dkE5VQB34RaFPYkSB1f_ZlEb52dU0',
+	authDomain: 'amirahofficialsite.firebaseapp.com',
+	projectId: 'amirahofficialsite',
+	storageBucket: 'amirahofficialsite.appspot.com',
+	messagingSenderId: '955642905634',
+	appId: '1:955642905634:web:72b88e874f96fabaf6767b',
+	measurementId: 'G-J7H2DQTB2M',
 });
 
 const db = firebaseApp.firestore();
