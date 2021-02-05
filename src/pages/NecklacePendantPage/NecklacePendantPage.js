@@ -138,21 +138,21 @@ function NecklacePendantPage() {
 			<div className="necklacePendant__sectionCart">
 				<div className="necklacePendant__sectionCartSmallImages">
 					<img
-						onClick={(e) => {
+						onMouseOver={(e) => {
 							selectedImage(e.target.src);
 						}}
 						src="pendantsNecklace/ring2.png"
 						alt=""
 					/>
 					<img
-						onClick={(e) => {
+						onMouseOver={(e) => {
 							selectedImage(e.target.src);
 						}}
 						src="pendantsNecklace/ring3.png"
 						alt=""
 					/>
 					<img
-						onClick={(e) => {
+						onMouseOver={(e) => {
 							selectedImage(e.target.src);
 						}}
 						src="pendantsNecklace/ring4.png"

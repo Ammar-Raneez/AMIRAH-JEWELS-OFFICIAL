@@ -140,21 +140,21 @@ function TealGemDetail() {
 			<div className="gemDetails__sectionCart">
 				<div className="gemDetails__sectionCartSmallImages">
 					<img
-						onClick={(e) => {
+						onMouseOver={(e) => {
 							selectedImage(e.target.src);
 						}}
 						src="gems/purple-sapphire.png"
 						alt=""
 					/>
 					<img
-						onClick={(e) => {
+						onMouseOver={(e) => {
 							selectedImage(e.target.src);
 						}}
 						src="gems/teal-sapphire.png"
 						alt=""
 					/>
 					<img
-						onClick={(e) => {
+						onMouseOver={(e) => {
 							selectedImage(e.target.src);
 						}}
 						src="gems/white-sapphire.png"
