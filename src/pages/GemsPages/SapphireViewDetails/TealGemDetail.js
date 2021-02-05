@@ -8,6 +8,9 @@ import { useStateValue } from '../../../StateProvider';
 import { db } from '../../../firebase';
 
 function TealGemDetail() {
+	//this state is to track which image is selected to add a active className
+	const [currentImage, setCurrentImage] = useState('teal sapphire');
+
 	const [displayImage, setDisplayImage] = useState('gems/teal-sapphire.png');
 	const [addToWishList, setAddToWishList] = useState(false);
 	const [tempSafetyWishList, setTempSafetyWishList] = useState(false);
@@ -15,7 +18,9 @@ function TealGemDetail() {
 	const [{ wishListBasket, cartBasket, user }, dispatch] = useStateValue();
 
 	// created the image path
-	const selectedImage = (imagePath) => {
+	const selectedImage = (imagePath, image) => {
+		setCurrentImage(image);
+
 		console.log('/' + imagePath.split('/').reverse()[1] + '/' + imagePath.split('/').reverse()[0]);
 		setDisplayImage('/' + imagePath.split('/').reverse()[1] + '/' + imagePath.split('/').reverse()[0]);
 	};
@@ -141,24 +146,27 @@ function TealGemDetail() {
 				<div className="gemDetails__sectionCartSmallImages">
 					<img
 						onMouseOver={(e) => {
-							selectedImage(e.target.src);
+							selectedImage(e.target.src, "purple sapphire");
 						}}
 						src="gems/purple-sapphire.png"
 						alt=""
+						className={currentImage == 'purple sapphire' ? 'active' : ''}
 					/>
 					<img
 						onMouseOver={(e) => {
-							selectedImage(e.target.src);
+							selectedImage(e.target.src, "teal sapphire");
 						}}
 						src="gems/teal-sapphire.png"
 						alt=""
+						className={currentImage == 'teal sapphire' ? 'active' : ''}
 					/>
 					<img
 						onMouseOver={(e) => {
-							selectedImage(e.target.src);
+							selectedImage(e.target.src, "white sapphire");
 						}}
 						src="gems/white-sapphire.png"
 						alt=""
+						className={currentImage == 'white sapphire' ? 'active' : ''}
 					/>
 				</div>
 				<div className="gemDetails__sectionCartMainImage">
