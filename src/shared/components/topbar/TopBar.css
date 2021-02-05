@@ -33,7 +33,7 @@
 .topbar__right {
 	/* flex-grow: 0.3; */
 	min-width: 30%;
-	max-width: 30%;
+	/* max-width: 30%; */
 	justify-content: flex-end;
 }
 
@@ -120,6 +120,11 @@
 		justify-content: space-between;
 	}
 
+	.topbar__right {
+		width: 100%;
+		max-width: 100%;
+	}
+
 	.topbar__center {
 		justify-content: left;
 	}
@@ -143,6 +148,11 @@
 	}
 	.topbar {
 		justify-content: space-between;
+	}
+
+	.topbar__right {
+		width: 100%;
+		max-width: 100%;
 	}
 
 	.topbar__center {
