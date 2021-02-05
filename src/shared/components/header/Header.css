@@ -16,19 +16,15 @@
 	display: flex;
 	align-items: center;
 	font-family: timeless;
-	/* font-family: 'Cinzel', serif; */
 	justify-content: space-evenly;
 	margin: 1vw 2.5vw;
-	/* margin: 2.5vw; */
 	font-size: 1.4vw;
 }
 .header__options > a, .header__options > div > a {
 	color: rgb(85, 85, 85);
 	text-decoration: none;
-	/* transition: 0.3s ease; */
 }
 .header__options > div > a:hover, .header__options > a:hover {
-	/* border-bottom: 1px solid #e58177; */
 	font-weight: bold;
 }
 .header_optionsJewellery{
@@ -37,7 +33,6 @@
 }
 
 .header__options > div {
-	/* border: 0.1vw blue solid; */
 	position: relative;
 	display: flex;
 	flex-direction: column;
@@ -54,7 +49,6 @@
 	display: flex;
 	flex-direction: column;
 	border-radius: 0.8vw;
-	/* border: 0.1vw red solid; */
 	box-shadow: 0vw 0.1vw 0.6vw rgba(0, 0, 0, 0.12), 0 0.1vw 0.2vw rgba(0, 0, 0, 0.24);
 }
 
@@ -70,7 +64,6 @@
 	display: flex;
 	justify-content: space-between;
 	border-radius: 0.8vw;
-	/* border: 0.1vw red solid; */
 	box-shadow: 0vw 0.1vw 0.6vw rgba(0, 0, 0, 0.12), 0 0.1vw 0.2vw rgba(0, 0, 0, 0.24);
 }
 
@@ -78,8 +71,6 @@
 	display: flex;
 	flex-direction: column;
 	padding: 1vw;
-	/* border: 1px black solid; */
-	/* width: 100%; */
 }
 
 .header__optionsAboutDetails > a, .header__optionsProductDetails > div > a {
@@ -100,7 +91,6 @@
 	z-index: -1;
 	transition: 0.3s;
 	content: '';
-	/* width: 100%; */
 }
 
 .header__optionsProductDetail span::before, .header__optionsProductDetail span::after {
