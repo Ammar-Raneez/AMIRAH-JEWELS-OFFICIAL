@@ -8,6 +8,7 @@ import { useStateValue } from '../../StateProvider';
 import './NecklacePendantPage.css';
 import Product from './Product/Product';
 import ChevronRightIcon from '@material-ui/icons/ChevronRight';
+import ReactImageMagnify from 'react-image-magnify';
 
 function NecklacePendantPage() {
 	//this state is to track which image is selected to add a active className
@@ -168,7 +169,24 @@ function NecklacePendantPage() {
 					/>
 				</div>
 				<div className="necklacePendant__sectionCartMainImage">
-					<img src={displayImage} alt="" />
+					<ReactImageMagnify 
+						hoverDelayInMs = {0.1}
+						hoverOffDelayInMs = {0.1}
+						enlargedImagePosition = "over"  
+						{...{
+						smallImage: {
+							alt: "",
+							width: 450,
+							height: 450,
+							src: displayImage
+						},
+						largeImage: {
+							src: displayImage,
+							width: 1200,
+							height: 1200,
+						}
+					}}
+					/>
 					<div className="necklacePendant__sectionCartMainImageIcon">
 						{user ? (
 							addToWishList ? (
