@@ -96,7 +96,7 @@ function NecklacePendantPage() {
 				item: {
 					productName: 'Diamond and Black Onyx Circle Pendant',
 					productCost: 890.0,
-					productImgURL: 'pendantsNecklace/ring1.png',
+					productImgURL: 'pendantsNecklace/ring4.png',
 					productQuantity: 1,
 				},
 			});
@@ -117,7 +117,7 @@ function NecklacePendantPage() {
 				item: {
 					name: 'Diamond and Black Onyx Circle Pendant',
 					cost: 890.0,
-					imgURL: 'pendantsNecklace/ring1.png',
+					imgURL: 'pendantsNecklace/ring4.png',
 				},
 			});
 			setAddToWishList(true);
