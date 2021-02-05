@@ -10,40 +10,40 @@ function Footer() {
 	const [password, setPassword] = useState('');
 	const [{ wishListBasket, cartBasket, user }, dispatch] = useStateValue();
 
-	const signIn = (e) => {
-		e.preventDefault();
+	// const signIn = (e) => {
+	// 	e.preventDefault();
 
-		if (!email || !password) {
-			return alert('Please enter Email and Password');
-		}
+	// 	if (!email || !password) {
+	// 		return alert('Please enter Email and Password');
+	// 	}
 
-		// sign in logic
-		auth
-			.signInWithEmailAndPassword(email, password)
-			.then((auth) => {
-				// signed in, redirect to the homepage
-				setEmail('');
-				setPassword('');
+	// 	// sign in logic
+	// 	auth
+	// 		.signInWithEmailAndPassword(email, password)
+	// 		.then((auth) => {
+	// 			// signed in, redirect to the homepage
+	// 			setEmail('');
+	// 			setPassword('');
 
-				// setting the user into the react context API
-				dispatch({
-					type: 'SET_USER',
-					user: auth.user,
-				});
+	// 			// setting the user into the react context API
+	// 			dispatch({
+	// 				type: 'SET_USER',
+	// 				user: auth.user,
+	// 			});
 
-				// setTimeout(() => {
-				// 	alert('Welcome ' + auth.user.displayName + '!');
-				// }, 1000);
+	// 			// setTimeout(() => {
+	// 			// 	alert('Welcome ' + auth.user.displayName + '!');
+	// 			// }, 1000);
 
-				history.replace('/');
+	// 			history.replace('/');
 
-				setTimeout(() => {
-					window.location.reload(true);
-				}, 2000);
+	// 			setTimeout(() => {
+	// 				window.location.reload(true);
+	// 			}, 2000);
 
-			})
-			.catch((e) => alert(e.message));
-	};
+	// 		})
+	// 		.catch((e) => alert(e.message));
+	// };
 
 	return (
 		<div className="footer">
@@ -76,16 +76,16 @@ function Footer() {
 						<p className="footer__rightSectionDescription">
 							Be the first to know about exciting new designs, special events, store openings and much more.
 						</p>
-						<form>
-							<input type="email" placeholder="Email" onChange={(e) => setEmail(e.target.value)} value={email} />
+						{/* <form> */}
+							{/* <input type="email" placeholder="Email" onChange={(e) => setEmail(e.target.value)} value={email} />
 							<input
 								type="password"
 								placeholder="Password"
 								onChange={(e) => setPassword(e.target.value)}
 								value={password}
-							/>
-							<button onClick={signIn}>SIGN UP</button>
-						</form>
+							/> */}
+						<a href="/register">SIGN UP</a>
+						{/* </form> */}
 					</div>
 				</div>
 				<div className="footer__bottom">© AmirahGems. 2021</div>
