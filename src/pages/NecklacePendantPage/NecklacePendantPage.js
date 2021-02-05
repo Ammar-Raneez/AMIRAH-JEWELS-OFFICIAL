@@ -232,14 +232,14 @@ function NecklacePendantPage() {
 				<br />
 				<h3>Showing 1 - 40 of 1020</h3>
 
-				<div className="gemStonesMain__otherGems">
-					<div className="gemStonesMain__otherGemsRow">
+				<div className="necklacePendant__otherProductsProducts">
+					<div className="necklacePendant__otherProductsRow">
 						<Product img="pendantsNecklace/pink_necklace.png" name="Product Name" viewMoreUrl="/" />
 						<Product img="pendantsNecklace/pink_necklace.png" name="Product Name" viewMoreUrl="/" />
 						<Product img="pendantsNecklace/pink_necklace.png" name="Product Name" viewMoreUrl="/" />
 						<Product img="pendantsNecklace/pink_necklace.png" name="Product Name" viewMoreUrl="/" />
 					</div>
-					{/* <div className="gemStonesMain__otherGemsRow">
+					{/* <div className="necklacePendant__otherProductsRow">
 						<Product img="pendantsNecklace/pink_necklace.png" name="Product Name" viewMoreUrl="/" />
 						<Product img="pendantsNecklace/pink_necklace.png" name="Product Name" viewMoreUrl="/" />
 						<Product img="pendantsNecklace/pink_necklace.png" name="Product Name" viewMoreUrl="/" />

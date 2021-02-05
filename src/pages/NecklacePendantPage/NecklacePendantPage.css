@@ -134,19 +134,21 @@
 	font-weight: lighter;
 }
 .necklacePendant__otherProducts {
-    align-items: center;
+	align-items: center;
+	width: 100%;
 }
 .necklacePendant__descriptionMain, .necklacePendant__descriptionOtherDetails {
 	font-size: 18px;
 	padding-top: 20px;
 	line-height: 25px;
 }
-.gemStonesMain__otherGems {
+.necklacePendant__otherProductsProducts {
 	padding: 0px;
 	padding-top: 30px;
 	padding-bottom: 60px;
+	width: 100%;
 }
-.gemStonesMain__otherGemsRow {
+.necklacePendant__otherProductsRow {
 	display: flex;
 	align-items: center;
 	justify-content: space-evenly;

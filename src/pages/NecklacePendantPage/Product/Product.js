@@ -1,3 +1,4 @@
+import { Paper } from '@material-ui/core';
 import './Product.css'
 
 function Product({ img, name, viewMoreUrl }) {
@@ -6,11 +7,13 @@ function Product({ img, name, viewMoreUrl }) {
     const extraClassName = name.indexOf(" ") > 0 ? "smallerFont" : "";
     
     return (
-        <div className={"product " + extraClassName}>
-            <img src={img} alt="" />
-			<p>{name}</p>
-			<a href={viewMoreUrl}><button>VIEW MORE</button></a>
-        </div>
+        <Paper className={"product " + extraClassName}>
+            <a href={viewMoreUrl}>
+                <img src={img} alt="" />
+                <p>{name}</p>
+            </a>
+			{/* <a href={viewMoreUrl}><button>VIEW MORE</button></a> */}
+        </Paper>
     )
 }
 
