@@ -19,6 +19,7 @@
 	cursor: pointer;
 	transition: 0.3s ease-in-out;
 	height: 100px;
+
 }
 .necklacePendant__sectionCartSmallImages > img:hover {
 	box-shadow: 2px 2px 10px rgba(161, 161, 161, 0.24), 2px 2px 10px rgba(161, 161, 161, 0.24);
@@ -44,7 +45,7 @@
 .necklacePendant__sectionCartMainImage > img {
 	height: 450px;
 	transition: 0.3s ease-in-out;
-
+	width: 450px;
 	box-shadow: 2px 2px 10px rgba(161, 161, 161, 0.24), 2px 2px 10px rgba(161, 161, 161, 0.24);
 }
 .necklacePendant__sectionCartMainImage {
@@ -152,32 +153,38 @@
 	flex-wrap: wrap;
 }
 
-.necklacePendant__descriptionTransition-enter {
-	opacity: 0;
-	transform: scale(0.9);
-}
-.necklacePendant__descriptionTransition-enter-active {
-	opacity: 1;
-	transform: translateX(0);
-	transition: opacity 3000ms, transform 3000ms;
-
-}
-.necklacePendant__descriptionTransition-exit {
-	opacity: 1;
-}
-.necklacePendant__descriptionTransition-exit-active {
-	opacity: 0;
-	transform: scale(0.9);
-	transition: opacity 3000ms, transform 3000ms;
-}
-
 .necklacePendant__descriptionOtherDetailsReadMore {
+	margin-top: 8px;
 	transition: 0.3s ease;
 	cursor: pointer;
+	display: flex;
+	align-items: center;
+	position: relative;
+	width: 160px;
+	font-size: 16px;
 }
-.necklacePendant__descriptionOtherDetailsReadMore:hover {
-	color: black;
-	font-weight: bold;
+
+.necklacePendant__descriptionOtherDetailsReadMore::before, .necklacePendant__descriptionOtherDetailsReadMore::after {
+	position: absolute;
+	top: 20px;
+	left: 0vw;
+	z-index: -1;
+	transition: 0.3s;
+	content: '';
+}
+
+.necklacePendant__descriptionOtherDetailsReadMore::before, .necklacePendant__descriptionOtherDetailsReadMore::after {
+	height: 2px;
+	width: 0px;
+}
+
+.necklacePendant__descriptionOtherDetailsReadMore:hover::before {
+	width: 0;
+}
+
+.necklacePendant__descriptionOtherDetailsReadMore:hover::after {
+	width: 85%;
+	background: #d3650f;
 }
 
 @media screen and (max-width: 900px) and (min-width: 450px) {
@@ -187,6 +194,10 @@
 }
 
 @media screen and (max-width: 450px) {
+	.necklacePendant__descriptionMain, .necklacePendant__descriptionOtherDetails {
+		font-size: 14px;
+	}
+
 	.gemStonesMain__otherGems {
 		margin-bottom: 50px;
 	}

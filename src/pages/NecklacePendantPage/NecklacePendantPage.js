@@ -1,3 +1,4 @@
+import { Collapse } from '@material-ui/core';
 import FavoriteIcon from '@material-ui/icons/Favorite';
 import FavoriteBorderIcon from '@material-ui/icons/FavoriteBorder';
 import { useEffect, useState } from 'react';
@@ -6,7 +7,7 @@ import { db } from '../../firebase';
 import { useStateValue } from '../../StateProvider';
 import './NecklacePendantPage.css';
 import Product from './Product/Product';
-import { CSSTransition, TransitionGroup } from 'react-transition-group';
+import ChevronRightIcon from '@material-ui/icons/ChevronRight';
 
 function NecklacePendantPage() {
 	const [readMoreDescription, setReadMoreDescription] = useState(false);
@@ -210,39 +211,18 @@ function NecklacePendantPage() {
 					look.
 				</p>
 				<div className="necklacePendant__descriptionOtherDetails">
-					{!readMoreDescription ? (
-						<p
-							onClick={() => setReadMoreDescription(!readMoreDescription)}
-							className="necklacePendant__descriptionOtherDetailsReadMore"
-						>
-							Read more...
-						</p>
-					) : (
-						<TransitionGroup>
-							<CSSTransition
-								in={readMoreDescription}
-								timeout={{
-									enter: 3000,
-									exit: 3000,
-								}}
-								classNames="necklacePendant__descriptionTransition"
-							>
-								<div>
-									<p>18k rose gold with black onyx and round brilliant diamonds</p>
-									<p>Circle, 16 mm diameter</p>
-									<p>Carat total weight .05</p>
-									<p>Adjustable, 16-18" chain</p>
-									<p
-										onClick={() => setReadMoreDescription(!readMoreDescription)}
-										className="necklacePendant__descriptionOtherDetailsReadMore"
-									>
-										{' '}
-										Read Less...
-									</p>
-								</div>
-							</CSSTransition>
-						</TransitionGroup>
-					)}
+					<Collapse in={readMoreDescription}>
+						<p>18k rose gold with black onyx and round brilliant diamonds</p>
+						<p>Circle, 16 mm diameter</p>
+						<p>Carat total weight .05</p>
+						<p>Adjustable, 16-18" chain</p>
+					</Collapse>
+					<p
+						onClick={() => setReadMoreDescription(!readMoreDescription)}
+						className="necklacePendant__descriptionOtherDetailsReadMore"
+					>
+						{readMoreDescription ? "Read Less" : "Read More"} <ChevronRightIcon /><ChevronRightIcon /><ChevronRightIcon />
+					</p>
 				</div>
 			</div>
 
@@ -262,8 +242,6 @@ function NecklacePendantPage() {
 					{/* <div className="gemStonesMain__otherGemsRow">
 						<Product img="pendantsNecklace/pink_necklace.png" name="Product Name" viewMoreUrl="/" />
 						<Product img="pendantsNecklace/pink_necklace.png" name="Product Name" viewMoreUrl="/" />
-					</div>
-					<div className="gemStonesMain__otherGemsRow">
 						<Product img="pendantsNecklace/pink_necklace.png" name="Product Name" viewMoreUrl="/" />
 						<Product img="pendantsNecklace/pink_necklace.png" name="Product Name" viewMoreUrl="/" />
 					</div> */}
