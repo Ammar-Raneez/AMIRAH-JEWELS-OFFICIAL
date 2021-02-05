@@ -10,16 +10,20 @@ import Product from './Product/Product';
 import ChevronRightIcon from '@material-ui/icons/ChevronRight';
 
 function NecklacePendantPage() {
+	//this state is to track which image is selected to add a active className
+	const [currentImage, setCurrentImage] = useState('ring2');
 	const [readMoreDescription, setReadMoreDescription] = useState(false);
 
-	const [displayImage, setDisplayImage] = useState('pendantsNecklace/ring1.png');
+	const [displayImage, setDisplayImage] = useState('pendantsNecklace/ring2.png');
 	const [addToWishList, setAddToWishList] = useState(false);
 	const [tempSafetyWishList, setTempSafetyWishList] = useState(false);
 	const [tempSafetyCartBasket, setTempSafetyCartBasket] = useState(false);
 	const [{ wishListBasket, cartBasket, user }, dispatch] = useStateValue();
 
 	// created the image path
-	const selectedImage = (imagePath) => {
+	const selectedImage = (imagePath, image) => {
+		setCurrentImage(image);
+
 		console.log('/' + imagePath.split('/').reverse()[1] + '/' + imagePath.split('/').reverse()[0]);
 		setDisplayImage('/' + imagePath.split('/').reverse()[1] + '/' + imagePath.split('/').reverse()[0]);
 	};
@@ -140,24 +144,27 @@ function NecklacePendantPage() {
 				<div className="necklacePendant__sectionCartSmallImages">
 					<img
 						onMouseOver={(e) => {
-							selectedImage(e.target.src);
+							selectedImage(e.target.src, "ring2");
 						}}
 						src="pendantsNecklace/ring2.png"
 						alt=""
+						className={currentImage == 'ring2' ? 'active' : ''}
 					/>
 					<img
 						onMouseOver={(e) => {
-							selectedImage(e.target.src);
+							selectedImage(e.target.src, "ring3");
 						}}
 						src="pendantsNecklace/ring3.png"
 						alt=""
+						className={currentImage == 'ring3' ? 'active' : ''}
 					/>
 					<img
 						onMouseOver={(e) => {
-							selectedImage(e.target.src);
+							selectedImage(e.target.src, "ring4");
 						}}
 						src="pendantsNecklace/ring4.png"
 						alt=""
+						className={currentImage == 'ring4' ? 'active' : ''}
 					/>
 				</div>
 				<div className="necklacePendant__sectionCartMainImage">
