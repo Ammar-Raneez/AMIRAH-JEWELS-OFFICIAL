@@ -125,8 +125,8 @@
 .gemDetails__sectionProduct {
 	align-items: center;
 	display: flex;
+	justify-content: space-between;
 	flex-direction: column;
-	width: 100%;
 }
 .gemDetails__sectionProduct > h3 {
 	font-family: Quattrocento-Regular;
@@ -161,6 +161,8 @@
 .gemDetails__otherGemsRow {
 	display: flex;
 	align-items: center;
+	flex-wrap: wrap;
+	margin: 16px;
 	justify-content: space-evenly;
 	width: 100%;
 }

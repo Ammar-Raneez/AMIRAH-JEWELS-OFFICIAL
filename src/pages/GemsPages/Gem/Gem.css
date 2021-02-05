@@ -1,20 +1,36 @@
+.MuiPaper-root.gem.MuiPaper-elevation1.MuiPaper-rounded {
+	padding: 10px;
+	transition: 0.3s ease all;
+}
+
+.MuiPaper-root.gem.MuiPaper-elevation1.MuiPaper-rounded:hover {
+	transform: scale(1.05);
+}
+
 .gem {
 	display: flex;
 	align-items: center;
 	justify-content: center;
 	flex-direction: column;
+	width: 220px;
+	margin: 16px;
 }
-.gem > img {
+.gem > a > img {
 	object-fit: contain;
-	transition: 0.1s ease-in-out;
-	height: 200px;
+	height: 220px;
 }
-.gem > p {
+.gem > a {
+	text-decoration: none;
+}
+.gem > a > p {
 	font-family: Quattrocento-Regular;
 	color: #707070;
 	padding: 1vw;
+	font-size: 14px;
+	display: flex;
+	justify-content: center;
 }
-.gem > a > button {
+/* .gem > a > button {
 	margin: 2vw;
 	padding: 0.8vw 3vw;
 	cursor: pointer !important;
@@ -35,24 +51,24 @@
 	color: white;
 	background-color: #ffc0a1;
 	font-weight: bold;
-}
-.gem > img:hover {
+} */
+.gem:hover {
 	transition: 0.3s ease-in-out;
 	transform: scale(1.05);
 }
 
 @media screen and (max-width: 900px) and (min-width: 450px) {
-	.gem > a > button {
+	/* .gem > a > button {
 		font-size: 12px;
-	}
+	} */
 }
 
 @media screen and (max-width: 450px) {
-	.gem > img {
+	.gem > a > img {
 		height: 60vw;
 	}
 
-	.gem > p {
+	.gem > a > p {
 		font-size: 16px;
 		margin-top: 20px;
 		margin-bottom: 10px;
