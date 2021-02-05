@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Link, useHistory } from 'react-router-dom';
+import { useHistory } from 'react-router-dom';
 import { auth } from '../../../firebase';
 import { useStateValue } from '../../../StateProvider';
 import './Footer.css';
@@ -31,9 +31,9 @@ function Footer() {
 					user: auth.user,
 				});
 
-				setTimeout(() => {
-					alert('Welcome ' + auth.user.displayName + '!');
-				}, 1000);
+				// setTimeout(() => {
+				// 	alert('Welcome ' + auth.user.displayName + '!');
+				// }, 1000);
 
 				history.replace('/');
 
@@ -60,8 +60,8 @@ function Footer() {
 						</div>
 						<div className="footer__leftSectionDown">
 							<p>Follow us on:</p>
-							<a href="https://www.instagram.com/amirahgems/" target="_blank">Instagram</a>
-							<a href="https://www.facebook.com/amirahgems" target="_blank">Facebook</a>
+							<a rel="noreferrer" href="https://www.instagram.com/amirahgems/" target="_blank">Instagram</a>
+							<a rel="noreferrer" href="https://www.facebook.com/amirahgems" target="_blank">Facebook</a>
 						</div>
 					</div>
 					<div className="footer__middleSection">

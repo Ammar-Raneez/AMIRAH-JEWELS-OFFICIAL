@@ -1,4 +1,3 @@
-import { Link } from 'react-router-dom';
 import Gem from '../Gem/Gem';
 import './GemStonesMain.css';
 

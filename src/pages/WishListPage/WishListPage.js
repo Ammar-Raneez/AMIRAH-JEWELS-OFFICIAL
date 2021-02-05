@@ -1,13 +1,11 @@
 import './WishListPage.css';
-import ArrowBackIosIcon from '@material-ui/icons/ArrowBackIos';
 import WishListItem from './WishListItem/WishListItem';
 import { useStateValue } from '../../StateProvider';
 import { useEffect, useState } from 'react';
 import { db } from '../../firebase';
-import { useHistory } from 'react-router-dom';
 
 function WishListPage() {
-	const history = useHistory();
+	// const history = useHistory();
 	const [{ wishListBasket, cartBasket, user }, dispatch] = useStateValue();
 	const [loading, setLoading] = useState(true);
 
@@ -83,7 +81,7 @@ function WishListPage() {
 							: { justifyContent: 'space-around' }
 					}
 				>
-					{wishListBasket.length == 0 ? (
+					{wishListBasket.length === 0 ? (
 						<div className="wishListPage__itemsEmpty">
 							<h1>Your Wish List is Empty</h1>
 							<p>Add Items To Your Wishlist to Display them Here</p>

@@ -4,7 +4,7 @@ import { auth, db } from '../../../firebase';
 import './RegisterPage.css';
 import firebase from 'firebase';
 import { useStateValue } from '../../../StateProvider';
-import { FormControl, FormControlLabel, FormLabel, Input, Radio, RadioGroup, TextField } from '@material-ui/core';
+import { FormControl, FormControlLabel, FormLabel, Radio, RadioGroup } from '@material-ui/core';
 import DateFnsUtils from '@date-io/date-fns';
 import { KeyboardDatePicker, MuiPickersUtilsProvider } from '@material-ui/pickers';
 import { ValidatorForm, TextValidator} from 'react-material-ui-form-validator';

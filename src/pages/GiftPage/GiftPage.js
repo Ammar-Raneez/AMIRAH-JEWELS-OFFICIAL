@@ -1,4 +1,3 @@
-import { Link } from 'react-router-dom';
 import Product from '../NecklacePendantPage/Product/Product';
 import './GiftPage.css';
 

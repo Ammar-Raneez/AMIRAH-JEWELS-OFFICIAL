@@ -1,4 +1,3 @@
-import { useHistory } from 'react-router-dom';
 import './Product.css'
 
 function Product({ img, name, viewMoreUrl }) {

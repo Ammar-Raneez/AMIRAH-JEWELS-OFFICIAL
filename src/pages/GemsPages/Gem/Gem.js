@@ -1,4 +1,3 @@
-import { useHistory } from 'react-router-dom';
 import './Gem.css';
 
 function Gem({ img, name, viewMoreUrl }) {

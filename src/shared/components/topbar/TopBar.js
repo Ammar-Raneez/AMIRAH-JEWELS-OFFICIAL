@@ -1,12 +1,10 @@
 import './TopBar.css';
-import SearchIcon from '@material-ui/icons/Search';
 import FacebookIcon from '@material-ui/icons/Facebook';
 import InstagramIcon from '@material-ui/icons/Instagram';
 import { Link } from 'react-router-dom';
 import PersonOutlinedIcon from '@material-ui/icons/PersonOutlined';
 import LocalMallOutlinedIcon from '@material-ui/icons/LocalMallOutlined';
 import FavoriteBorderIcon from '@material-ui/icons/FavoriteBorder';
-import { IconButton } from '@material-ui/core';
 import { useStateValue } from '../../../StateProvider';
 import { auth } from '../../../firebase'
 
@@ -31,8 +29,8 @@ function TopBar() {
 				{/* <IconButton onClick={displayContent}>
 					<SearchIcon />
 				</IconButton> */}
-				<a style={{ marginRight: '1vw' }} href="https://www.facebook.com/amirahgems" target="_blank"><FacebookIcon /></a>
-				<a style={{ marginRight: '1vw' }} href="https://www.instagram.com/amirahgems/" target="_blank"><InstagramIcon /></a>
+				<a rel="noreferrer" style={{ marginRight: '1vw' }} href="https://www.facebook.com/amirahgems" target="_blank"><FacebookIcon /></a>
+				<a rel="noreferrer" style={{ marginRight: '1vw' }} href="https://www.instagram.com/amirahgems/" target="_blank"><InstagramIcon /></a>
 			</div>
 			<div className="topbar__center">
 				<Link to="/">

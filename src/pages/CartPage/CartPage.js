@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react';
 import './CartPage.css';
-import ArrowBackIosIcon from '@material-ui/icons/ArrowBackIos';
 import CartItem from './CartItem/CartItem';
 import Bill from './Bill/Bill';
 import { useStateValue } from '../../StateProvider';
