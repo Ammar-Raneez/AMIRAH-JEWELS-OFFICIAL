@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Quattrocento&display=swap');
+
 @font-face {
     font-family: timeless;
     src: url(Timeless-Bold.ttf);
@@ -25,7 +27,7 @@
 .topbar__left, .topbar__right {
 	display: flex;
 	justify-content: space-around;
-	align-items: center;
+	/* align-items: center; */
 }
 
 .topbar__right {
@@ -58,15 +60,19 @@
 	font-weight: bold;
 }
 
-.topbar__left > a > .MuiSvgIcon-root, .topbar__right > .MuiSvgIcon-root, .topbar__right > .topbar__rightAccount > .MuiSvgIcon-root, .topbar__right > a > .MuiSvgIcon-root {
+.topbar__left > a > .MuiSvgIcon-root, .topbar__right > .MuiSvgIcon-root, .topbar__right > .topbar__rightAccount > .MuiSvgIcon-root, .topbar__right > a > .MuiSvgIcon-root, .topbar__rightMenuIcon {
 	cursor: pointer;
 	font-size: 1.9vw !important;
 	transition: 0.3s ease;
 	color: rgb(255, 177, 109);
 }
 
-.topbar__left > a > .MuiSvgIcon-root:hover, .topbar__right > a > .MuiSvgIcon-root:hover {
+.topbar__left > a > .MuiSvgIcon-root:hover, .topbar__right > a > .MuiSvgIcon-root:hover, .topbar__rightMenuIcon:hover {
 	color: black
+}
+
+.topbar__rightMenuIcon {
+	display: none !important;
 }
 
 @media screen and (max-width: 900px) and (min-width: 768px) {
@@ -83,7 +89,30 @@
 	}
 }
 
-@media screen and (max-width: 768px) {
+.MuiTreeItem-label {
+    font-family: 'Quattrocento', serif !important;
+	padding: 10px;
+	font-size: 14px !important;
+}
+.MuiTypography-root.MuiListItemText-primary.MuiTypography-body1.MuiTypography-displayBlock {
+	font-family: 'Quattrocento', serif !important;
+	font-size: 14px !important;
+}
+
+.topbar__treeItem {
+	text-decoration: none;
+	color: black;
+}
+
+.MuiPaper-root.MuiDrawer-paper.MuiDrawer-paperAnchorLeft.MuiPaper-elevation16 {
+	background-color: #aaa;
+}
+
+.topbar__tree::-webkit-scrollbar, .MuiTreeView-root::-webkit-scrollbar, .MuiDrawer-root.MuiDrawer-modal::-webkit-scrollbar, .MuiPaper-root.MuiDrawer-paper.MuiDrawer-paperAnchorLeft.MuiPaper-elevation16::-webkit-scrollbar {
+	display: none !important;
+}
+
+@media screen and (max-width: 768px) and (min-width: 500px) {
 	.topbar__left {
 		display: none;
 	}
@@ -105,5 +134,34 @@
 
 	.topbar__rightAccount {
 		font-size: 14px;
+	}
+}
+
+@media screen and (max-width: 500px) {
+	.topbar__left {
+		display: none;
+	}
+	.topbar {
+		justify-content: space-between;
+	}
+
+	.topbar__center {
+		justify-content: left;
+	}
+
+	.topbar__left > a > .MuiSvgIcon-root, .topbar__right > .MuiSvgIcon-root, .topbar__right > .topbar__rightAccount > .MuiSvgIcon-root, .topbar__right > a > .MuiSvgIcon-root {
+		font-size: 20px !important;
+	}
+
+	.topbar__center__TopLogo {
+		height: 30px;
+	}
+
+	.topbar__rightAccount {
+		font-size: 14px;
+	}
+
+	.topbar__rightMenuIcon {
+		display: block !important;
 	}
 }
