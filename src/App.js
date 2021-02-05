@@ -75,7 +75,10 @@ function App() {
 						<Footer />
 					</Route>
 
-					<Route path="/highTea">
+					<Route path="/designer+desk">
+						<h2>Designer Desk component</h2>
+					</Route>
+					<Route path="/high+tea">
 						<h2>highTea component</h2>
 					</Route>
 
