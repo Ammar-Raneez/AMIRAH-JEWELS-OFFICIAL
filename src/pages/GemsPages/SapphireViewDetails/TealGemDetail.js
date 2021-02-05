@@ -6,6 +6,7 @@ import Gem from '../Gem/Gem';
 import './GemDetails.css';
 import { useStateValue } from '../../../StateProvider';
 import { db } from '../../../firebase';
+import ReactImageMagnify from 'react-image-magnify';
 
 function TealGemDetail() {
 	//this state is to track which image is selected to add a active className
@@ -170,7 +171,24 @@ function TealGemDetail() {
 					/>
 				</div>
 				<div className="gemDetails__sectionCartMainImage">
-					<img src={displayImage} alt="" />
+					<ReactImageMagnify 
+						hoverDelayInMs = {0.1}
+						hoverOffDelayInMs = {0.1}
+						enlargedImagePosition = "over"  
+						{...{
+						smallImage: {
+							alt: "",
+							width: 450,
+							height: 450,
+							src: displayImage
+						},
+						largeImage: {
+							src: displayImage,
+							width: 1200,
+							height: 1200,
+						}
+					}}
+					/>
 					<div className="gemDetails__sectionCartMainImageIcon">
 						{user ? (
 							addToWishList ? (
