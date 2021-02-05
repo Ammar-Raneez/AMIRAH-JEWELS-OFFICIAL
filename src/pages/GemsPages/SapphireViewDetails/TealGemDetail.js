@@ -248,8 +248,6 @@ function TealGemDetail() {
 					/>
 					<Gem img="gems/orange-sapphire.png" name="Orange Sapphires" viewMoreUrl="/orange+sapphire" />
 				</div>
-				{/* <div className="gemDetails__otherGemsRow">
-				</div> */}
 				<div style={{ justifyContent: 'center' }} className="gemDetails__otherGemsRow">
 					<Gem
 						img="gems/ClaudiaHamann_PinkSapphire_Ceylon_Cushion_Unheated.png"

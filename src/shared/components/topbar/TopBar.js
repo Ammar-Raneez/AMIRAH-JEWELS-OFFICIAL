@@ -13,7 +13,7 @@ import TreeView from '@material-ui/lab/TreeView';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import ChevronRightIcon from '@material-ui/icons/ChevronRight';
 import TreeItem from '@material-ui/lab/TreeItem';
-import { Divider, List, ListItem, ListItemIcon, ListItemText, SwipeableDrawer } from '@material-ui/core';
+import { List, ListItem, ListItemIcon, ListItemText, SwipeableDrawer } from '@material-ui/core';
 
 function TopBar() {
 	const social = ['https://www.facebook.com/amirahgems', 'https://www.instagram.com/amirahgems/']
@@ -75,7 +75,6 @@ function TopBar() {
 				<a><TreeItem nodeId="22" label="Designer Desk" /></a>
 				<a><TreeItem nodeId="23" label="High Tea" /></a>
 			</TreeView>
-			{/* <Divider /> */}
 			<List>
 				{['Instagram', 'Facebook'].map((text, index) => (
 				<a className="topbar__treeItem" href={social[index]} target="_blank" rel="noreferrer" >

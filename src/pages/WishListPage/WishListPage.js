@@ -5,7 +5,6 @@ import { useEffect, useState } from 'react';
 import { db } from '../../firebase';
 
 function WishListPage() {
-	// const history = useHistory();
 	const [{ wishListBasket, cartBasket, user }, dispatch] = useStateValue();
 	const [loading, setLoading] = useState(true);
 
@@ -56,16 +55,9 @@ function WishListPage() {
 
 	return user ? (
 		<div className="wishListPage">
-			{/* user logged in details
-			<p className="wishListPage__userDetails">logged in as Vaappa</p> */}
-
 			{/* wishlist title */}
 			<div className="wishListPage__title">
 				<h1>MY WISHLIST</h1>
-				{/* <div className="wishListPage__titleContinueSection">
-					<ArrowBackIosIcon />
-					<p>Continue shopping</p>
-				</div> */}
 			</div>
 
 			{loading ? (

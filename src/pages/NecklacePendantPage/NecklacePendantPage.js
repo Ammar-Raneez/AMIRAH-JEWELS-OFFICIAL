@@ -240,10 +240,6 @@ function NecklacePendantPage() {
 						<Product img="pendantsNecklace/pink_necklace.png" name="Product Name" viewMoreUrl="/" />
 					</div>
 					{/* <div className="necklacePendant__otherProductsRow">
-						<Product img="pendantsNecklace/pink_necklace.png" name="Product Name" viewMoreUrl="/" />
-						<Product img="pendantsNecklace/pink_necklace.png" name="Product Name" viewMoreUrl="/" />
-						<Product img="pendantsNecklace/pink_necklace.png" name="Product Name" viewMoreUrl="/" />
-						<Product img="pendantsNecklace/pink_necklace.png" name="Product Name" viewMoreUrl="/" />
 					</div> */}
 				</div>
 			</div>

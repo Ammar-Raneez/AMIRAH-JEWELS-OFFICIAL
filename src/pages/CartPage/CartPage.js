@@ -59,10 +59,6 @@ function CartPage() {
 		<div className="cartPage">
 			<div className="cartPage__title">
 				<h1>MY CART</h1>
-				{/* <div className="cartPage__titleContinueSection">
-                    <ArrowBackIosIcon />
-                    <p>Continue shopping</p>
-                </div> */}
 			</div>
 
 			{loading ? (
