@@ -14,6 +14,7 @@ import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import ChevronRightIcon from '@material-ui/icons/ChevronRight';
 import TreeItem from '@material-ui/lab/TreeItem';
 import { List, ListItem, ListItemIcon, ListItemText, SwipeableDrawer } from '@material-ui/core';
+import { Fade } from 'react-awesome-reveal';
 
 function TopBar() {
 	const social = ['https://www.facebook.com/amirahgems', 'https://www.instagram.com/amirahgems/']
@@ -41,50 +42,52 @@ function TopBar() {
 			onClick={toggleDrawer(anchor, false)}
 			onKeyDown={toggleDrawer(anchor, false)}
 			>
-			<TreeView
-				defaultCollapseIcon={<ExpandMoreIcon />}
-				defaultExpandIcon={<ChevronRightIcon />}
-			>
-				<a className="topbar__treeItem" href="/home"><TreeItem nodeId="0" label="Home" /></a>
-				<TreeItem nodeId="1" label="Jewellery">
-					<TreeItem nodeId="2" label="Shop By Category">
-						<a className="topbar__treeItem" href="/rings"><TreeItem nodeId="3" label="Rings" /></a>
-						<a className="topbar__treeItem" href="/earrings"><TreeItem nodeId="4" label="Earrings" /></a>
-						<a className="topbar__treeItem" href="/bracelets"><TreeItem nodeId="5" label="Bracelets" /></a>
-						<a className="topbar__treeItem" href="/explore+all+categories"><TreeItem nodeId="6" label="Explore All Categories" /></a>
+			<Fade direction="left">
+				<TreeView
+					defaultCollapseIcon={<ExpandMoreIcon />}
+					defaultExpandIcon={<ChevronRightIcon />}
+				>
+					<a className="topbar__treeItem" href="/home"><TreeItem nodeId="0" label="Home" /></a>
+					<TreeItem nodeId="1" label="Jewellery">
+						<TreeItem nodeId="2" label="Shop By Category">
+							<a className="topbar__treeItem" href="/rings"><TreeItem nodeId="3" label="Rings" /></a>
+							<a className="topbar__treeItem" href="/earrings"><TreeItem nodeId="4" label="Earrings" /></a>
+							<a className="topbar__treeItem" href="/bracelets"><TreeItem nodeId="5" label="Bracelets" /></a>
+							<a className="topbar__treeItem" href="/explore+all+categories"><TreeItem nodeId="6" label="Explore All Categories" /></a>
+						</TreeItem>
+						<TreeItem nodeId="7" label="Shop By Gemstones/Metals">
+							<a className="topbar__treeItem" href="/yellow+gold"><TreeItem nodeId="8" label="Yellow Gold" /></a>
+							<a className="topbar__treeItem" href="/teal+sapphire"><TreeItem nodeId="9" label="Teal Sapphires" /></a>
+							<a className="topbar__treeItem" href="/purple+sapphire"><TreeItem nodeId="10" label="Purple Sapphires" /></a>
+							<a className="topbar__treeItem" href="/gemstones+metal"><TreeItem nodeId="11" label="Explore More" /></a>
+						</TreeItem>
+						<TreeItem nodeId="12" label="Featured Collections">
+							<a><TreeItem nodeId="13" label="Signature" /></a>
+							<a><TreeItem nodeId="14" label="Amarelo" /></a>
+							<a><TreeItem nodeId="15" label="Mi Amor" /></a>
+						</TreeItem>
 					</TreeItem>
-					<TreeItem nodeId="7" label="Shop By Gemstones/Metals">
-						<a className="topbar__treeItem" href="/yellow+gold"><TreeItem nodeId="8" label="Yellow Gold" /></a>
-						<a className="topbar__treeItem" href="/teal+sapphire"><TreeItem nodeId="9" label="Teal Sapphires" /></a>
-						<a className="topbar__treeItem" href="/purple+sapphire"><TreeItem nodeId="10" label="Purple Sapphires" /></a>
-						<a className="topbar__treeItem" href="/gemstones+metal"><TreeItem nodeId="11" label="Explore More" /></a>
+					<TreeItem nodeId="16" label="Process" />
+					<TreeItem nodeId="17" label="About Us">
+						<a className="topbar__treeItem" href="/aboutus"><TreeItem nodeId="18" label="Our Company" /></a>
+						<a className="topbar__treeItem" href="/charity"><TreeItem nodeId="19" label="Charity" /></a>
+						<a className="topbar__treeItem" href="/careers"><TreeItem nodeId="20" label="Careers" /></a>
+						<a className="topbar__treeItem" href="/policy"><TreeItem nodeId="21" label="Policy" /></a>
 					</TreeItem>
-					<TreeItem nodeId="12" label="Featured Collections">
-						<a><TreeItem nodeId="13" label="Signature" /></a>
-						<a><TreeItem nodeId="14" label="Amarelo" /></a>
-						<a><TreeItem nodeId="15" label="Mi Amor" /></a>
-					</TreeItem>
-				</TreeItem>
-				<TreeItem nodeId="16" label="Process" />
-				<TreeItem nodeId="17" label="About Us">
-					<a className="topbar__treeItem" href="/aboutus"><TreeItem nodeId="18" label="Our Company" /></a>
-					<a className="topbar__treeItem" href="/charity"><TreeItem nodeId="19" label="Charity" /></a>
-					<a className="topbar__treeItem" href="/careers"><TreeItem nodeId="20" label="Careers" /></a>
-					<a className="topbar__treeItem" href="/policy"><TreeItem nodeId="21" label="Policy" /></a>
-				</TreeItem>
-				<a><TreeItem nodeId="22" label="Designer Desk" /></a>
-				<a><TreeItem nodeId="23" label="High Tea" /></a>
-			</TreeView>
-			<List>
-				{['Instagram', 'Facebook'].map((text, index) => (
-				<a className="topbar__treeItem" href={social[index]} target="_blank" rel="noreferrer" >
-					<ListItem key={text}>
-						<ListItemIcon>{index % 2 === 0 ? <InstagramIcon /> : <FacebookIcon />}</ListItemIcon>
-						<ListItemText primary={text} />
-					</ListItem>
-				</a>
-				))}
-			</List>
+					<a><TreeItem nodeId="22" label="Designer Desk" /></a>
+					<a><TreeItem nodeId="23" label="High Tea" /></a>
+				</TreeView>
+				<List>
+					{['Instagram', 'Facebook'].map((text, index) => (
+					<a className="topbar__treeItem" href={social[index]} target="_blank" rel="noreferrer" >
+						<ListItem key={text}>
+							<ListItemIcon>{index % 2 === 0 ? <InstagramIcon /> : <FacebookIcon />}</ListItemIcon>
+							<ListItemText primary={text} />
+						</ListItem>
+					</a>
+					))}
+				</List>
+			</Fade>
 		</div>
 	);
 
