@@ -1,9 +1,9 @@
-.MuiPaper-root.product.smallerFont.MuiPaper-elevation1.MuiPaper-rounded {
+.MuiPaper-root.product.MuiPaper-elevation1.MuiPaper-rounded {
 	padding: 10px;
 	transition: 0.3s ease all;
 }
 
-.MuiPaper-root.product.smallerFont.MuiPaper-elevation1.MuiPaper-rounded:hover {
+.MuiPaper-root.product.MuiPaper-elevation1.MuiPaper-rounded:hover {
 	transform: scale(1.05);
 }
 
