@@ -6,7 +6,7 @@
 	align-items: center;
 	flex-direction: column;
 }
-.processPage > h1 {
+.processPage > div > h1 {
 	font-family: bowie;
 	font-size: 3vw;
 	margin: 2vw;
@@ -16,7 +16,7 @@
 	font-weight: lighter;
 	color: #707070;
 }
-.processPage > p {
+.processPage > div > p {
 	width: 65vw;
 	font-size: 1.5vw;
 	font-family: Quattrocento-Regular;
