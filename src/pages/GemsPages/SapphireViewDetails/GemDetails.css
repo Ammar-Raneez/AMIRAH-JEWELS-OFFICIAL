@@ -42,7 +42,9 @@
 	color: rgb(255, 177, 109) !important;
 }
 .gemDetails__sectionCartMainImage > img {
-	height: 500px;
+	height: 450px;
+	object-fit: contain;
+	width: 450px;
 }
 .gemDetails__sectionCartMainImage {
 	margin: 0 80px;
