@@ -29,6 +29,7 @@
 	display: flex;
 	flex-direction: column;
 	justify-content: space-evenly;
+	width: 18vw;
 }
 .homePage__makeDreamsTrue__topPrices {
 	display: flex;
