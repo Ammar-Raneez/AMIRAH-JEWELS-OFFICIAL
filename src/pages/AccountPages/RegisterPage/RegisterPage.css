@@ -1,11 +1,11 @@
 .registerPage {
 	display: grid;
 	align-content: center;
-	height: 100vh;
+	/* height: 100vh; */
 	justify-content: center;
 	position: relative;
-	margin-top: 150px;
-	margin-bottom: 150px;
+	/* margin-top: 150px;
+	margin-bottom: 150px; */
 }
 .registerPage__firstJewel {
 	display: flex;
@@ -155,7 +155,11 @@
 	src: url(Quattrocento-Regular.ttf);
 }
 
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 1024px) {
+	.registerPage {
+		margin-top: 0px;
+	}
+
 	.registerPage__body {
 		width: 300px;
 	}
