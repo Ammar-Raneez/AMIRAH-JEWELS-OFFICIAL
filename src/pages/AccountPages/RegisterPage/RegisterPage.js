@@ -33,8 +33,8 @@ function RegisterPage() {
 
 	const onDateChange = (date, value) => {
 		setcompleteBirthday(value);
-		birthMonth(value.toString().split('/')[1]);
-		birthDay(value.toString().split('/')[0]);
+		setBirthMonth(value.toString().split('/')[1]);
+		setBirthDay(value.toString().split('/')[0]);
 	};
 
 	const registerUser = (e) => {
