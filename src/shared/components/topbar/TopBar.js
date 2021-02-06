@@ -86,9 +86,15 @@ function TopBar() {
 							</a>
 						</TreeItem>
 						<TreeItem nodeId="12" label="Featured Collections">
-							<a href="/"><TreeItem nodeId="13" label="Signature" /></a>
-							<a href="/"><TreeItem nodeId="14" label="Amarelo" /></a>
-							<a href="/"><TreeItem nodeId="15" label="Mi Amor" /></a>
+							<a href="/">
+								<TreeItem nodeId="13" label="Signature" />
+							</a>
+							<a href="/">
+								<TreeItem nodeId="14" label="Amarelo" />
+							</a>
+							<a href="/">
+								<TreeItem nodeId="15" label="Mi Amor" />
+							</a>
 						</TreeItem>
 					</TreeItem>
 					<TreeItem nodeId="16" label="Process" />
@@ -106,8 +112,12 @@ function TopBar() {
 							<TreeItem nodeId="21" label="- Policy" />
 						</a>
 					</TreeItem>
-					<a href="/"><TreeItem nodeId="22" label="Designer Desk" /></a>
-					<a href="/"><TreeItem nodeId="23" label="High Tea" /></a>
+					<a href="/" style={{ textDecoration: 'none', color: '#000000DE' }}>
+						<TreeItem nodeId="22" label="Designer Desk" />
+					</a>
+					<a href="/" style={{ textDecoration: 'none', color: '#000000DE' }}>
+						<TreeItem nodeId="23" label="High Tea" />
+					</a>
 				</TreeView>
 				<List>
 					{['Instagram', 'Facebook'].map((text, index) => (
@@ -127,10 +137,10 @@ function TopBar() {
 		<div className="topbar">
 			<div className="topbar__left">
 				<a rel="noreferrer" style={{ marginRight: '1vw' }} href="https://www.facebook.com/amirahgems" target="_blank">
-					<FacebookIcon className="facebook__icon"/>
+					<FacebookIcon className="facebook__icon" />
 				</a>
 				<a rel="noreferrer" style={{ marginRight: '1vw' }} href="https://www.instagram.com/amirahgems/" target="_blank">
-					<InstagramIcon className="instagram__icon"/>
+					<InstagramIcon className="instagram__icon" />
 				</a>
 			</div>
 			<div className="topbar__center">
