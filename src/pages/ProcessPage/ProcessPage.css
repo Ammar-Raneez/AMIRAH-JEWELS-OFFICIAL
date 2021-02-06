@@ -62,11 +62,11 @@
 }
 
 @media screen and (max-width: 768px) and (min-width: 400px) {
-	.processPage > h1 {
+	.processPage > div > h1 {
 		font-size: 20px;
 	}
 
-	.processPage > p {
+	.processPage > div > p {
 		font-size: 12px;
 		line-height: 14px;
 	}
@@ -82,11 +82,11 @@
 }
 
 @media screen and (max-width: 400px) {
-	.processPage > h1 {
+	.processPage > div > h1 {
 		font-size: 20px;
 	}
 
-	.processPage > p {
+	.processPage > div > p {
 		font-size: 12px;
 		line-height: 14px;
 	}

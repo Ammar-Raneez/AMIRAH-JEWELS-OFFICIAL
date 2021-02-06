@@ -117,6 +117,23 @@
 }
 
 @media screen and (max-width: 900px) and (min-width: 768px) {
+	.topbar__left > a > .MuiSvgIcon-root,
+	.topbar__right > .MuiSvgIcon-root,
+	.topbar__right > .topbar__rightAccount > .MuiSvgIcon-root,
+	.topbar__right > a > .MuiSvgIcon-root {
+		font-size: 20px !important;
+	}
+
+	.topbar__center__TopLogo {
+		height: 30px;
+	}
+
+	.topbar__rightAccount {
+		font-size: 14px;
+	}
+}
+
+@media screen and (max-width: 900px) and (min-width: 768px) {
 	.topbar__left > a > .MuiSvgIcon-root, .topbar__right > .MuiSvgIcon-root, .topbar__right > .topbar__rightAccount > .MuiSvgIcon-root, .topbar__right > a > .MuiSvgIcon-root {
 		font-size: 20px !important;
 	}

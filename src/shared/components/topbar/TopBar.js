@@ -97,7 +97,7 @@ function TopBar() {
 							</a>
 						</TreeItem>
 					</TreeItem>
-					<TreeItem nodeId="16" label="Process" />
+					<a className="topbar__treeItem" href="/processes"><TreeItem nodeId="16" label="Process" /></a>
 					<TreeItem nodeId="17" label="About Us">
 						<a className="topbar__treeItem" href="/aboutus">
 							<TreeItem nodeId="18" label="- Our Company" />
