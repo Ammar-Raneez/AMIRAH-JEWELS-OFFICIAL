@@ -33,12 +33,12 @@
     flex-wrap: wrap;
 }
 
-.homePage__categoryRow > a {
+.homePage__categoryRow > .css-z1mjt4 > a {
     text-decoration: none;
     color: #888;
 }
 
-.homePage__categoryRow div img {
+.homePage__categoryRow div div img {
     min-width: 200px;
     max-width: 200px;
     max-height: 200px;

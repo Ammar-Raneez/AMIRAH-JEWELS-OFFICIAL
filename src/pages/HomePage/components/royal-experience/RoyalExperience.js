@@ -3,17 +3,17 @@ import './RoyalExperience.css'
 import CalendarTodayIcon from '@material-ui/icons/CalendarToday';
 import RoomServiceIcon from '@material-ui/icons/RoomService';
 import MonetizationOnIcon from '@material-ui/icons/MonetizationOn';
-import { Slide } from 'react-awesome-reveal';
+import { Fade, Slide } from 'react-awesome-reveal';
 
 function RoyalExperience() {
     return (
         <div className="homePage__middleSection">
-            <Slide>
+            <Fade>
                 <div className="homePage__middleSectionTitle">
                     THE ROYAL EXPERIENCE
                 </div>
-            </Slide>
-            <Slide delay={200} duration={2000}>
+            </Fade>
+            <Fade direction="up" delay={100}>
                 <div className="homePage__middleSectionMiddleContainer">
                     <div>
                         <RoomServiceIcon />
@@ -42,7 +42,7 @@ function RoyalExperience() {
                         </p>
                     </div>
                 </div>
-            </Slide>
+            </Fade>
         </div>
     )
 }

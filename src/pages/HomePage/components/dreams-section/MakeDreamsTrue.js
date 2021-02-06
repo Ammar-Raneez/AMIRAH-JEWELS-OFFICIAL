@@ -5,9 +5,9 @@ function MakeDreamsTrue() {
 	return (
 		<div className="homePage__makeDreamsTrue">
 			{/* title */}
-			<Slide>
+			<Fade>
 				<h1>MAKE YOUR DREAMS COME TRUE.</h1>
-			</Slide>
+			</Fade>
 
 			{/* top ring section */}
 			<div className="homePage__makeDreamsTrue__top">
