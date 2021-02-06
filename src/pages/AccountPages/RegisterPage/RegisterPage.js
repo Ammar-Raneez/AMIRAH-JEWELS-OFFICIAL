@@ -63,6 +63,7 @@ function RegisterPage() {
 					cart: [],
 					wishlist: [],
 					timestamp: firebase.firestore.FieldValue.serverTimestamp(),
+					checkOutOrders: [],
 				});
 
 				// clean the fields

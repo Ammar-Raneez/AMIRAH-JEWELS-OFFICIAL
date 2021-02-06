@@ -3,10 +3,14 @@ import { FormControl, FormControlLabel, FormLabel, Radio, RadioGroup } from '@ma
 import { KeyboardDatePicker, MuiPickersUtilsProvider } from '@material-ui/pickers';
 import { useRef, useState } from 'react';
 import { TextValidator, ValidatorForm } from 'react-material-ui-form-validator';
+import { db } from '../../firebase';
+import { useStateValue } from '../../StateProvider';
 import './CheckOutPage.css';
 
 function CheckOutPage() {
+	const [{ subTotal, delivery, tax, user }, dispatch] = useStateValue();
 	const formRef = useRef('form');
+
 	const [firstName, setFirstName] = useState('');
 	const [middleName, setMiddleName] = useState('');
 	const [lastName, setLastName] = useState('');
@@ -25,23 +29,72 @@ function CheckOutPage() {
 
 	// WHEN USER CLICKS CHECKOUT BTN, THIS FUNCTION IS FIRED!
 	const proceedCheckout = (e) => {
+		let paymentSuccessful = true;
+		let allCheckOutDetailsHistory = [];
 		e.preventDefault();
 
-		// displaying all the data
-		console.log(firstName);
-		console.log(lastName);
-		console.log(middleName);
-		console.log(addressLineOne);
-		console.log(addressLineTwo);
-		console.log(city);
-		console.log(pinCode);
-		console.log(telephoneNumber);
-		console.log(emailAddress);
-		console.log(paymentType);
-		console.log(cardExpMonth);
-		console.log(cardExpYear);
-		console.log(csc);
-		console.log(cardNumber);
+		// CONNECTING THE BANK AND SEND THE AMOUNT TO BE CREDITED
+		// BANK STUFF (NOTE:- Important to get the response of the transaction occurred!)
+
+		// STORING THE CHECKOUT RELATED DETAILS WITH THE PRICE INTO THE FIREBASE FIRE-STORE (ONLY IF PAYMENTS ARE MADE SUCCESSFULLY)
+		if (paymentSuccessful) {
+			// Getting snapshot of the current checkout order list
+			db.collection('users').onSnapshot((snapshot) =>
+				snapshot.docs.forEach((doc) => {
+					if (doc.id === user?.email) {
+						// getting the current checkout orders present from the database
+						for (const checkOutDetails of doc.data().checkOutOrders) {
+							allCheckOutDetailsHistory.push(checkOutDetails);
+						}
+					}
+				})
+			);
+
+			// adding the new record into the all check out details history list
+			allCheckOutDetailsHistory.push({
+				firstName: firstName,
+				lastName: lastName,
+				middleName: middleName,
+				addressLineOne: addressLineOne,
+				addressLineTwo: addressLineTwo,
+				city: city,
+				pinCode: pinCode,
+				telephoneNumber: telephoneNumber,
+				emailAddress: emailAddress,
+				paymentType: paymentType,
+				cardExpMonth: cardExpMonth,
+				cardExpYear: cardExpYear,
+				csc: csc,
+				cardNumber: cardNumber,
+				orderPrice: subTotal + tax + delivery,
+			});
+
+			// Updating the checkout order list
+			db.collection('users').doc(user?.email).update({
+				checkOutOrders: allCheckOutDetailsHistory,
+			});
+		}
+
+		// ALERT THE USER THAT PAYMENT DONE SUCCESSFULLY OR RE-DIRECT USING A MODEL
+		if (paymentSuccessful) {
+		} else {
+		}
+
+		// // displaying all the data
+		// console.log(firstName);
+		// console.log(lastName);
+		// console.log(middleName);
+		// console.log(addressLineOne);
+		// console.log(addressLineTwo);
+		// console.log(city);
+		// console.log(pinCode);
+		// console.log(telephoneNumber);
+		// console.log(emailAddress);
+		// console.log(paymentType);
+		// console.log(cardExpMonth);
+		// console.log(cardExpYear);
+		// console.log(csc);
+		// console.log(cardNumber);
 	};
 
 	const onDateChange = (date, value) => {
