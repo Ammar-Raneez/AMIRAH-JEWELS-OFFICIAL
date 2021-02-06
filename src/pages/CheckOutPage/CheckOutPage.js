@@ -17,13 +17,15 @@ function CheckOutPage() {
 	const [telephoneNumber, setTelephoneNumber] = useState('');
 	const [emailAddress, setEmailAddress] = useState('');
 	const [paymentType, setPaymentType] = useState('visa');
-	const [cardExpireDate, setCardExpireDate] = useState('');
+	let [cardExpireDate, setCardExpireDate] = useState('Fri Feb 12 2021 20:52:00 GMT+0530');
 	const [cardExpMonth, setCardExpMonth] = useState('');
 	const [cardExpYear, setCardExpYear] = useState('');
 	const [csc, setCsc] = useState('');
 	const [cardNumber, setCardNumber] = useState('');
 
 	function extractTheMonthAndYear() {
+		cardExpireDate = cardExpireDate.toString();
+		let splittedValues = cardExpireDate.split(' ');
 		let monthMaps = {
 			Jan: '1',
 			Feb: '2',
@@ -38,8 +40,9 @@ function CheckOutPage() {
 			Nov: '11',
 			Dec: '12',
 		};
-		setCardExpMonth(monthMaps[cardExpireDate.toString().split(' ')[1]]);
-		setCardExpYear(cardExpireDate[cardExpireDate.toString().split(' ')[2]]);
+
+		setCardExpMonth(monthMaps[splittedValues[1]]);
+		setCardExpYear(splittedValues[2]);
 	}
 
 	// WHEN USER CLICKS CHECKOUT BTN, THIS FUNCTION IS FIRED!
@@ -47,8 +50,21 @@ function CheckOutPage() {
 		e.preventDefault();
 		extractTheMonthAndYear();
 
-
-		// 
+		// displaying all the data
+		console.log(firstName);
+		console.log(lastName);
+		console.log(middleName);
+		console.log(addressLineOne);
+		console.log(addressLineTwo);
+		console.log(city);
+		console.log(pinCode);
+		console.log(telephoneNumber);
+		console.log(emailAddress);
+		console.log(paymentType);
+		console.log(cardExpMonth);
+		console.log(cardExpYear);
+		console.log(csc);
+		console.log(cardNumber);
 	};
 
 	return (
@@ -64,7 +80,7 @@ function CheckOutPage() {
 						onChange={(e) => setFirstName(e.target.value)}
 						value={firstName}
 						errorMessages="Please add a First name"
-						validators={['required']}
+						validators={['required', 'matchRegexp:[a-z A-Z]$']}
 					/>
 					<TextValidator
 						style={{ width: '93%' }}
@@ -74,7 +90,7 @@ function CheckOutPage() {
 						onChange={(e) => setMiddleName(e.target.value)}
 						value={middleName}
 						errorMessages="Please add a Middle name"
-						validators={['required']}
+						validators={['required', 'matchRegexp:[a-z A-Z]$']}
 					/>
 					<TextValidator
 						style={{ width: '93%' }}
@@ -84,7 +100,7 @@ function CheckOutPage() {
 						onChange={(e) => setLastName(e.target.value)}
 						value={lastName}
 						errorMessages="Please add a Last name"
-						validators={['required']}
+						validators={['required', 'matchRegexp:[a-z A-Z]$']}
 					/>
 					<TextValidator
 						style={{ width: '93%' }}
@@ -112,7 +128,7 @@ function CheckOutPage() {
 						onChange={(e) => setCity(e.target.value)}
 						value={city}
 						errorMessages="Please add a City"
-						validators={['required']}
+						validators={['required', 'matchRegexp:[a-z A-Z]$']}
 					/>
 					<TextValidator
 						style={{ width: '93%' }}
@@ -132,7 +148,7 @@ function CheckOutPage() {
 						onChange={(e) => setTelephoneNumber(e.target.value)}
 						value={telephoneNumber}
 						errorMessages="Please add a Telephone Number"
-						validators={['required']}
+						validators={['required', 'matchRegexp:[0-9]$']}
 					/>
 					<TextValidator
 						style={{ width: '93%' }}
@@ -142,7 +158,7 @@ function CheckOutPage() {
 						onChange={(e) => setEmailAddress(e.target.value)}
 						value={emailAddress}
 						errorMessages="Please add an Email Address"
-						validators={['required']}
+						validators={['required', "isEmail"]}
 					/>
 					<div className="checkout__payment">
 						<FormControl component="fieldset" style={{ width: '93%' }}>
@@ -204,9 +220,7 @@ function CheckOutPage() {
 						validators={['required']}
 					/>
 					<div className="registerPage__createButton">
-						<button type="submit" onClick={proceedCheckout}>
-							CONTINUE CHECKOUT
-						</button>
+						<button type="submit">CONTINUE CHECKOUT</button>
 					</div>
 				</ValidatorForm>
 			</div>
