@@ -22,6 +22,7 @@ import { auth } from './firebase';
 import CartPage from './pages/CartPage/CartPage';
 import TealGemDetail from './pages/GemsPages/SapphireViewDetails/TealGemDetail';
 import PurpleGemDetail from './pages/GemsPages/SapphireViewDetails/PurpleGemDetail';
+import CheckOutPage from './pages/CheckOutPage/CheckOutPage';
 
 function App() {
 	const [{ wishListBasket, cartBasket, user }, dispatch] = useStateValue();
@@ -135,6 +136,12 @@ function App() {
 						<TopBar />
 						<Header />
 						<NecklacePendantPage />
+						<Footer />
+					</Route>
+					<Route path="/checkout">
+						<TopBar />
+						<Header />
+						<CheckOutPage />
 						<Footer />
 					</Route>
 					<Route path="/explore+all+categories">
