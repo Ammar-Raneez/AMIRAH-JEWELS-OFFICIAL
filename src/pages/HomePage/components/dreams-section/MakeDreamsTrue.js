@@ -1,72 +1,97 @@
+import { Fade, Slide } from 'react-awesome-reveal';
 import './MakeDreamsTrue.css';
 
 function MakeDreamsTrue() {
 	return (
 		<div className="homePage__makeDreamsTrue">
 			{/* title */}
-			<h1>MAKE YOUR DREAMS COME TRUE.</h1>
+			<Slide>
+				<h1>MAKE YOUR DREAMS COME TRUE.</h1>
+			</Slide>
 
 			{/* top ring section */}
 			<div className="homePage__makeDreamsTrue__top">
 				<div className="homePage__makeDreamsTrue__topPurchase">
-					<h1>Solitaire Ring</h1>
-					<p>Yellow</p>
-					<button>PURCHASE</button>
+					<Slide>
+						<h1>Solitaire Ring</h1>
+						<p>Yellow</p>
+						<button>PURCHASE</button>
+					</Slide>
 				</div>
 
 				<img src="homepage-dreams/PINK SAPPHIRE RING 2.png" className="homePage__makeDreamsTrue__topImage" alt="" />
 				<div className="homePage__makeDreamsTrue__topPrices">
-					<h1>PRICE</h1>
-					<h2>US$4,500</h2>
+					<Slide direction="right">
+						<h1>PRICE</h1>
+						<h2>US$4,500</h2>
+					</Slide>
 				</div>
 			</div>
 
 			{/* middle ring section */}
 			<div className="homePage__makeDreamsTrue__middle">
 				<div className="homePage__makeDreamsTrue__middleText">
-					<p className="homePage__makeDreamsTrue__middleTextFirst">
-						Sapphire engagement rings have increasingly been the choice for brides looking for more economical,
-						personal, and unique choices.
-					</p>
-					<p className="homePage__makeDreamsTrue__middleTextSecond">
-						Choose your own colored gemstone that is the epitome of something unique and personal to you.
-					</p>
+					<Slide>
+						<p className="homePage__makeDreamsTrue__middleTextFirst">
+							Sapphire engagement rings have increasingly been the choice for brides looking for more economical,
+							personal, and unique choices.
+						</p>
+						<p className="homePage__makeDreamsTrue__middleTextSecond">
+							Choose your own colored gemstone that is the epitome of something unique and personal to you.
+						</p>
+					</Slide>
 				</div>
-				<img className="homePage__makeDreamsTrue__middle__image" src="homepage-dreams/PINK SAPPHIRE RING.png" alt="" />
+				{/* <Slide direction="right"> */}
+					<img className="homePage__makeDreamsTrue__middle__image" src="homepage-dreams/PINK SAPPHIRE RING.png" alt="" />
+				{/* </Slide> */}
 			</div>
 
 			{/* bottom ring section */}
 			<div className="homePage__makeDreamsTrue__bottom">
-				<p>Technical information</p>
+				<Fade>
+					<p>Technical information</p>
+				</Fade>
 
 				<div className="homePage__makeDreamsTrue__bottomImageDetail">
 					<div className="homePage__makeDreamsTrue__bottomImageDetailFirst">
 						<div className="homePage__makeDreamsTrue__bottomImageDetailFirstHeight">
-							<p>HEIGHT</p>
-							<p>25.1 mm</p>
+							<Slide>
+								<p>HEIGHT</p>
+								<p>25.1 mm</p>
+							</Slide>
 						</div>
 						<div className="homePage__makeDreamsTrue__bottomImageDetailFirstWidth">
-							<p>WIDTH</p>
-							<p>21.5 mm</p>
+							<Slide>
+								<p>WIDTH</p>
+								<p>21.5 mm</p>
+							</Slide>
 						</div>
 						<div className="homePage__makeDreamsTrue__bottomImageDetailFirstThickness">
-							<p>THICKNESS</p>
-							<p>1.7 mm</p>
+							<Slide>
+								<p>THICKNESS</p>
+								<p>1.7 mm</p>
+							</Slide>
 						</div>
 					</div>
 					<img src="homepage-dreams/PINK SAPPHIRE RING 3.png"  alt="" />
 					<div className="homePage__makeDreamsTrue__bottomImageDetailSecond">
 						<div className="homePage__makeDreamsTrue__bottomImageDetailFirstWeight">
-							<p>WEIGHT</p>
-							<p>1.292 get</p>
+							<Slide direction="right">
+								<p>WEIGHT</p>
+								<p>1.292 get</p>
+							</Slide>
 						</div>
 						<div className="homePage__makeDreamsTrue__bottomImageDetailFirstMetalWeight">
-							<p>METAL WEIGHT</p>
-							<p>2.77 gm</p>
+							<Slide direction="right">
+								<p>METAL WEIGHT</p>
+								<p>2.77 gm</p>
+							</Slide>
 						</div>
 						<div className="homePage__makeDreamsTrue__bottomImageDetailFirstPurity">
-							<p>PURITY</p>
-							<p>18 gk</p>
+							<Slide direction="right">
+								<p>PURITY</p>
+								<p>18 gk</p>
+							</Slide>
 						</div>
 					</div>
 				</div>

@@ -13,7 +13,7 @@ function RoyalExperience() {
                     THE ROYAL EXPERIENCE
                 </div>
             </Slide>
-            <Slide delay={500} duration={2000}>
+            <Slide delay={200} duration={2000}>
                 <div className="homePage__middleSectionMiddleContainer">
                     <div>
                         <RoomServiceIcon />
