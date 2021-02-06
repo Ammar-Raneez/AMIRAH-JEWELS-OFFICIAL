@@ -17,38 +17,15 @@ function CheckOutPage() {
 	const [telephoneNumber, setTelephoneNumber] = useState('');
 	const [emailAddress, setEmailAddress] = useState('');
 	const [paymentType, setPaymentType] = useState('visa');
-	let [cardExpireDate, setCardExpireDate] = useState('Fri Feb 12 2021 20:52:00 GMT+0530');
+	let [cardExpireDate, setCardExpireDate] = useState();
 	const [cardExpMonth, setCardExpMonth] = useState('');
 	const [cardExpYear, setCardExpYear] = useState('');
 	const [csc, setCsc] = useState('');
 	const [cardNumber, setCardNumber] = useState('');
 
-	function extractTheMonthAndYear() {
-		cardExpireDate = cardExpireDate.toString();
-		let splittedValues = cardExpireDate.split(' ');
-		let monthMaps = {
-			Jan: '1',
-			Feb: '2',
-			Mar: '3',
-			Apr: '4',
-			May: '5',
-			Jun: '6',
-			Jul: '7',
-			Aug: '8',
-			Sep: '9',
-			Oct: '10',
-			Nov: '11',
-			Dec: '12',
-		};
-
-		setCardExpMonth(monthMaps[splittedValues[1]]);
-		setCardExpYear(splittedValues[2]);
-	}
-
 	// WHEN USER CLICKS CHECKOUT BTN, THIS FUNCTION IS FIRED!
 	const proceedCheckout = (e) => {
 		e.preventDefault();
-		extractTheMonthAndYear();
 
 		// displaying all the data
 		console.log(firstName);
@@ -67,6 +44,11 @@ function CheckOutPage() {
 		console.log(cardNumber);
 	};
 
+	const onDateChange = (date, value) => {
+		setCardExpireDate(value);
+		setCardExpYear(value.toString().split('/')[2]);
+		setCardExpMonth(value.toString().split('/')[1]);
+	};
 	return (
 		<div className="checkoutPage">
 			<div className="checkoutPage__form">
@@ -158,7 +140,7 @@ function CheckOutPage() {
 						onChange={(e) => setEmailAddress(e.target.value)}
 						value={emailAddress}
 						errorMessages="Please add an Email Address"
-						validators={['required', "isEmail"]}
+						validators={['required', 'isEmail']}
 					/>
 					<div className="checkout__payment">
 						<FormControl component="fieldset" style={{ width: '93%' }}>
@@ -193,7 +175,7 @@ function CheckOutPage() {
 							id="card-expire-date"
 							placeholder="Card Expiry Date"
 							value={cardExpireDate}
-							onChange={(e) => setCardExpireDate(e)}
+							onChange={onDateChange}
 							KeyboardButtonProps={{
 								'aria-label': 'change date',
 							}}
