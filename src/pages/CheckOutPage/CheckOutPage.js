@@ -16,12 +16,40 @@ function CheckOutPage() {
 	const [pinCode, setPinCode] = useState('');
 	const [telephoneNumber, setTelephoneNumber] = useState('');
 	const [emailAddress, setEmailAddress] = useState('');
-	const [paymentType, setPaymentType] = useState('');
+	const [paymentType, setPaymentType] = useState('visa');
 	const [cardExpireDate, setCardExpireDate] = useState('');
+	const [cardExpMonth, setCardExpMonth] = useState('');
+	const [cardExpYear, setCardExpYear] = useState('');
 	const [csc, setCsc] = useState('');
 	const [cardNumber, setCardNumber] = useState('');
 
-	const proceedCheckout = () => {};
+	function extractTheMonthAndYear() {
+		let monthMaps = {
+			Jan: '1',
+			Feb: '2',
+			Mar: '3',
+			Apr: '4',
+			May: '5',
+			Jun: '6',
+			Jul: '7',
+			Aug: '8',
+			Sep: '9',
+			Oct: '10',
+			Nov: '11',
+			Dec: '12',
+		};
+		setCardExpMonth(monthMaps[cardExpireDate.toString().split(' ')[1]]);
+		setCardExpYear(cardExpireDate[cardExpireDate.toString().split(' ')[2]]);
+	}
+
+	// WHEN USER CLICKS CHECKOUT BTN, THIS FUNCTION IS FIRED!
+	const proceedCheckout = (e) => {
+		e.preventDefault();
+		extractTheMonthAndYear();
+
+
+		// 
+	};
 
 	return (
 		<div className="checkoutPage">
@@ -71,7 +99,7 @@ function CheckOutPage() {
 					<TextValidator
 						style={{ width: '93%' }}
 						type="text"
-						label="Address Line 02"
+						label="Address Line 02 (Optional)"
 						name="address line 02"
 						onChange={(e) => setAddressLineTwo(e.target.value)}
 						value={addressLineTwo}
@@ -147,7 +175,7 @@ function CheckOutPage() {
 							format="MM/dd/yyyy"
 							margin="normal"
 							id="card-expire-date"
-							placeholder="Card Expiry Date (mm/dd/yyyy)"
+							placeholder="Card Expiry Date"
 							value={cardExpireDate}
 							onChange={(e) => setCardExpireDate(e)}
 							KeyboardButtonProps={{
@@ -176,7 +204,9 @@ function CheckOutPage() {
 						validators={['required']}
 					/>
 					<div className="registerPage__createButton">
-						<button type="submit">CONTINUE CHECKOUT</button>
+						<button type="submit" onClick={proceedCheckout}>
+							CONTINUE CHECKOUT
+						</button>
 					</div>
 				</ValidatorForm>
 			</div>
