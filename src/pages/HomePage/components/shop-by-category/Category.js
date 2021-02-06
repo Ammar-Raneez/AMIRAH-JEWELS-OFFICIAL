@@ -11,7 +11,7 @@ function Category() {
             </Fade>
 
             <div className="homePage__categoryRow">
-                <Slide direction="up">
+                <Slide triggerOnce  direction="up">
                     <a href="/necklace+pendants">
                         <div className="homePage__categoryEach">
                             <img alt="necklace-category" src="homepage category/necklace.png" />

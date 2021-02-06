@@ -13,7 +13,7 @@ function RoyalExperience() {
                     THE ROYAL EXPERIENCE
                 </div>
             </Fade>
-            <Fade direction="down" delay={100}>
+            <Fade direction="down" delay={100} triggerOnce>
                 <div className="homePage__middleSectionMiddleContainer">
                     <div>
                         <RoomServiceIcon />
