@@ -1,8 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Quattrocento&display=swap');
 
 @font-face {
-    font-family: timeless;
-    src: url(Timeless-Bold.ttf);
+	font-family: timeless;
+	src: url(Timeless-Bold.ttf);
 }
 
 .topbar {
@@ -18,13 +18,22 @@
 	height: 4vw;
 }
 
+.expandedMoreIcon {
+	color: #c23d00 !important;
+}
+.chevronRightIcon {
+	color: #c23d00 !important;
+}
+
+
 .topbar__center {
 	flex-grow: 4;
 	display: flex;
 	justify-content: center;
 }
 
-.topbar__left, .topbar__right {
+.topbar__left,
+.topbar__right {
 	display: flex;
 	justify-content: space-around;
 	/* align-items: center; */
@@ -37,7 +46,7 @@
 	justify-content: flex-end;
 }
 
-.topbar__left  {
+.topbar__left {
 	/* flex-grow: 1.5; */
 	min-width: 30%;
 	max-width: 30%;
@@ -54,21 +63,27 @@
 	text-decoration: none;
 	color: black;
 	transition: 0.3s ease;
-	cursor: pointer;	
+	cursor: pointer;
 }
 .topbar__rightAccount > a:hover {
 	font-weight: bold;
 }
 
-.topbar__left > a > .MuiSvgIcon-root, .topbar__right > .MuiSvgIcon-root, .topbar__right > .topbar__rightAccount > .MuiSvgIcon-root, .topbar__right > a > .MuiSvgIcon-root, .topbar__rightMenuIcon {
+.topbar__left > a > .MuiSvgIcon-root,
+.topbar__right > .MuiSvgIcon-root,
+.topbar__right > .topbar__rightAccount > .MuiSvgIcon-root,
+.topbar__right > a > .MuiSvgIcon-root,
+.topbar__rightMenuIcon {
 	cursor: pointer;
 	font-size: 1.9vw !important;
 	transition: 0.3s ease;
 	color: rgb(255, 177, 109);
 }
 
-.topbar__left > a > .MuiSvgIcon-root:hover, .topbar__right > a > .MuiSvgIcon-root:hover, .topbar__rightMenuIcon:hover {
-	color: black
+.topbar__left > a > .MuiSvgIcon-root:hover,
+.topbar__right > a > .MuiSvgIcon-root:hover,
+.topbar__rightMenuIcon:hover {
+	color: black;
 }
 
 .topbar__rightMenuIcon {
@@ -76,7 +91,10 @@
 }
 
 @media screen and (max-width: 900px) and (min-width: 768px) {
-	.topbar__left > a > .MuiSvgIcon-root, .topbar__right > .MuiSvgIcon-root, .topbar__right > .topbar__rightAccount > .MuiSvgIcon-root, .topbar__right > a > .MuiSvgIcon-root {
+	.topbar__left > a > .MuiSvgIcon-root,
+	.topbar__right > .MuiSvgIcon-root,
+	.topbar__right > .topbar__rightAccount > .MuiSvgIcon-root,
+	.topbar__right > a > .MuiSvgIcon-root {
 		font-size: 20px !important;
 	}
 
@@ -90,7 +108,7 @@
 }
 
 .MuiTreeItem-label {
-    font-family: 'Quattrocento', serif !important;
+	font-family: 'Quattrocento', serif !important;
 	padding: 10px;
 	font-size: 14px !important;
 }
@@ -108,7 +126,10 @@
 	background-color: #aaa;
 }
 
-.topbar__tree::-webkit-scrollbar, .MuiTreeView-root::-webkit-scrollbar, .MuiDrawer-root.MuiDrawer-modal::-webkit-scrollbar, .MuiPaper-root.MuiDrawer-paper.MuiDrawer-paperAnchorLeft.MuiPaper-elevation16::-webkit-scrollbar {
+.topbar__tree::-webkit-scrollbar,
+.MuiTreeView-root::-webkit-scrollbar,
+.MuiDrawer-root.MuiDrawer-modal::-webkit-scrollbar,
+.MuiPaper-root.MuiDrawer-paper.MuiDrawer-paperAnchorLeft.MuiPaper-elevation16::-webkit-scrollbar {
 	display: none !important;
 }
 
@@ -129,7 +150,10 @@
 		justify-content: left;
 	}
 
-	.topbar__left > a > .MuiSvgIcon-root, .topbar__right > .MuiSvgIcon-root, .topbar__right > .topbar__rightAccount > .MuiSvgIcon-root, .topbar__right > a > .MuiSvgIcon-root {
+	.topbar__left > a > .MuiSvgIcon-root,
+	.topbar__right > .MuiSvgIcon-root,
+	.topbar__right > .topbar__rightAccount > .MuiSvgIcon-root,
+	.topbar__right > a > .MuiSvgIcon-root {
 		font-size: 20px !important;
 	}
 
@@ -159,7 +183,10 @@
 		justify-content: left;
 	}
 
-	.topbar__left > a > .MuiSvgIcon-root, .topbar__right > .MuiSvgIcon-root, .topbar__right > .topbar__rightAccount > .MuiSvgIcon-root, .topbar__right > a > .MuiSvgIcon-root {
+	.topbar__left > a > .MuiSvgIcon-root,
+	.topbar__right > .MuiSvgIcon-root,
+	.topbar__right > .topbar__rightAccount > .MuiSvgIcon-root,
+	.topbar__right > a > .MuiSvgIcon-root {
 		font-size: 20px !important;
 	}
 

@@ -8,9 +8,7 @@ import { ParallaxProvider } from 'react-scroll-parallax';
 
 ReactDOM.render(
 	<StateProvider initialState={initialState} reducer={reducer}>
-		<ParallaxProvider>
-			<App />
-		</ParallaxProvider>
+		<App />
 	</StateProvider>,
 	document.getElementById('root')
 );
