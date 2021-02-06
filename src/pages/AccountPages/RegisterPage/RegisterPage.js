@@ -7,12 +7,12 @@ import { useStateValue } from '../../../StateProvider';
 import { FormControl, FormControlLabel, FormLabel, Radio, RadioGroup } from '@material-ui/core';
 import DateFnsUtils from '@date-io/date-fns';
 import { KeyboardDatePicker, MuiPickersUtilsProvider } from '@material-ui/pickers';
-import { ValidatorForm, TextValidator} from 'react-material-ui-form-validator';
+import { ValidatorForm, TextValidator } from 'react-material-ui-form-validator';
 
 function RegisterPage() {
 	const history = useHistory();
-	const formRef = useRef("form");
-	let [completeBirthday, setcompleteBirthday] = useState("Fri Feb 12 2021 20:52:00 GMT+0530");
+	const formRef = useRef('form');
+	const [completeBirthday, setcompleteBirthday] = useState('');
 	const [firstName, setFirstName] = useState('');
 	const [lastName, setLastName] = useState('');
 	const [email, setEmail] = useState('');
@@ -21,27 +21,25 @@ function RegisterPage() {
 	const [birthMonth, setBirthMonth] = useState('');
 	const [birthDay, setBirthDay] = useState('');
 	const [{ user }, dispatch] = useStateValue();
-	
+
 	useEffect(() => {
 		ValidatorForm.addValidationRule('isPasswordLength', (password) => {
 			if (password.length <= 6) {
 				return false;
 			}
 			return true;
-	})});
+		});
+	});
 
-	function manipulateObtainedBirthday() {
-		completeBirthday = completeBirthday.toString();
-		let splittedVals = completeBirthday.split(" ");
-
-		let monthMaps = {"Jan" : "1", "Feb" : "2", "Mar" : "3", "Apr" : "4", "May" : "5", "Jun" : "6", "Jul" : "7", "Aug" : "8", "Sep" : "9", "Oct" : "10", "Nov" : "11", "Dec" : "12"};
-		setBirthMonth(monthMaps[splittedVals[1]]);
-		setBirthDay(splittedVals[2]);
-	}
+	const onDateChange = (date, value) => {
+		setcompleteBirthday(value);
+		setBirthMonth(value.toString().split('/')[1]);
+		setBirthDay(value.toString().split('/')[0]);
+	};
 
 	const registerUser = (e) => {
 		e.preventDefault();
-		manipulateObtainedBirthday();
+		console.log(birthMonth, birthDay);
 
 		if (!firstName || !email || !password || !lastName) {
 			return;
@@ -114,54 +112,62 @@ function RegisterPage() {
 				<ValidatorForm onSubmit={registerUser} ref={formRef} style={{ width: '100%' }} className="registerPage__form">
 					{/* <div className="registerPage__formFirst">
 						<ValidatorForm ref={formRef} style={{ width: '100%' }}> */}
-							<TextValidator 
-								style={{ width: '93%' }} 
-								type="text" 
-								label="First Name" 
-								name="first name"
-								onChange={(e) => setFirstName(e.target.value)} 
-								value={firstName} 
-								errorMessages="Please add a first name"
-								validators={['required']}
-							/>
-							<TextValidator 
-								style={{ width: '93%' }} 
-								type="text" 
-								label="Last Name" 
-								name="last name"
-								onChange={(e) => setLastName(e.target.value)} 
-								value={lastName} 
-								errorMessages="Please add a last name"
-								validators={['required']}	
-							/>
-							<TextValidator 
-								style={{ width: '93%' }} 
-								type="email" 
-								label="Email"
-								name="email" 
-								onChange={(e) => setEmail(e.target.value)} 
-								value={email} 
-								errorMessages="Please add an email"
-								validators={['required', 'isEmail']}
-							/>
-							<TextValidator 
-								style={{ width: '93%' }} 
-								type="password" 
-								label="Password" 
-								name="password"
-								onChange={(e) => setPassword(e.target.value)} 
-								value={password} 
-								errorMessages={["Please add a password", "Please enter more than 6 characters"]}
-								validators={['required', 'isPasswordLength']}	
-							/>
-						{/* </ValidatorForm>
+					<TextValidator
+						style={{ width: '93%' }}
+						type="text"
+						label="First Name"
+						name="first name"
+						onChange={(e) => setFirstName(e.target.value)}
+						value={firstName}
+						errorMessages="Please add a first name"
+						validators={['required']}
+					/>
+					<TextValidator
+						style={{ width: '93%' }}
+						type="text"
+						label="Last Name"
+						name="last name"
+						onChange={(e) => setLastName(e.target.value)}
+						value={lastName}
+						errorMessages="Please add a last name"
+						validators={['required']}
+					/>
+					<TextValidator
+						style={{ width: '93%' }}
+						type="email"
+						label="Email"
+						name="email"
+						onChange={(e) => setEmail(e.target.value)}
+						value={email}
+						errorMessages="Please add an email"
+						validators={['required', 'isEmail']}
+					/>
+					<TextValidator
+						style={{ width: '93%' }}
+						type="password"
+						label="Password"
+						name="password"
+						onChange={(e) => setPassword(e.target.value)}
+						value={password}
+						errorMessages={['Please add a password', 'Please enter more than 6 characters']}
+						validators={['required', 'isPasswordLength']}
+					/>
+					{/* </ValidatorForm>
 					</div> */}
 					<div className="registerPage__formSecond">
 						{/* <p>Gender (Optional)</p> */}
 						<div className="registerPage__formSecondInputs">
 							<FormControl component="fieldset">
-								<FormLabel style={{ fontFamily: 'Quattrocento-Regular' }} component="legend">Gender (Optional)</FormLabel>
-								<RadioGroup style={{ display: 'flex' }}  aria-label="gender" name="gender1" value={gender} onChange={(e) => setGender(e.target.value)}>
+								<FormLabel style={{ fontFamily: 'Quattrocento-Regular' }} component="legend">
+									Gender (Optional)
+								</FormLabel>
+								<RadioGroup
+									style={{ display: 'flex' }}
+									aria-label="gender"
+									name="gender1"
+									value={gender}
+									onChange={(e) => setGender(e.target.value)}
+								>
 									<FormControlLabel value="female" control={<Radio />} label="Female" />
 									<FormControlLabel value="male" control={<Radio />} label="Male" />
 								</RadioGroup>
@@ -180,7 +186,7 @@ function RegisterPage() {
 									id="bday"
 									label="Birthday"
 									value={completeBirthday}
-									onChange={(e) => setcompleteBirthday(e)}
+									onChange={onDateChange}
 									KeyboardButtonProps={{
 										'aria-label': 'change date',
 									}}
