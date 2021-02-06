@@ -1,5 +1,17 @@
 import DateFnsUtils from '@date-io/date-fns';
-import { FormControl, FormControlLabel, FormLabel, Radio, RadioGroup } from '@material-ui/core';
+import {
+	Button,
+	Dialog,
+	DialogActions,
+	DialogContent,
+	DialogContentText,
+	DialogTitle,
+	FormControl,
+	FormControlLabel,
+	FormLabel,
+	Radio,
+	RadioGroup
+} from '@material-ui/core';
 import { KeyboardDatePicker, MuiPickersUtilsProvider } from '@material-ui/pickers';
 import { useEffect, useRef, useState } from 'react';
 import { TextValidator, ValidatorForm } from 'react-material-ui-form-validator';
@@ -12,6 +24,8 @@ function CheckOutPage() {
 	const [{ subTotal, delivery, tax, cartBasket, user }, dispatch] = useStateValue();
 	const formRef = useRef('form');
 	const history = useHistory();
+	const [dialogOpen, setDialogOpen] = useState(false);
+	const [sucessDialgoOpen, setSucessDialgoOpen] = useState(false);
 
 	const [firstName, setFirstName] = useState('');
 	const [middleName, setMiddleName] = useState('');
@@ -72,8 +86,6 @@ function CheckOutPage() {
 		// CONNECTING THE BANK AND SEND THE AMOUNT TO BE CREDITED
 		// BANK STUFF (NOTE:- Important to get the response of the transaction occurred!)
 
-		
-
 		// STORING THE CHECKOUT RELATED DETAILS WITH THE PRICE INTO THE FIREBASE FIRE-STORE (ONLY IF PAYMENTS ARE MADE SUCCESSFULLY)
 		if (paymentSuccessful) {
 			// Getting snapshot of the current checkout order list
@@ -92,12 +104,14 @@ function CheckOutPage() {
 
 			setTimeout(() => {
 				setAllCheckOutDetailsHistory(tempArray);
-			}, 3000);
+			}, 5000);
 		}
 
 		// ALERT THE USER THAT PAYMENT DONE SUCCESSFULLY OR RE-DIRECT USING A MODEL
 		if (paymentSuccessful) {
+			setSucessDialgoOpen(!sucessDialgoOpen);
 		} else {
+			setDialogOpen(!dialogOpen);
 		}
 	};
 
@@ -263,6 +277,39 @@ function CheckOutPage() {
 					</div>
 				</ValidatorForm>
 			</div>
+
+			<Dialog
+				open={dialogOpen}
+				onClose={() => setDialogOpen(!dialogOpen)}
+				aria-labelledby="alert-dialog-title"
+				aria-describedby="alert-dialog-description"
+			>
+				<DialogTitle id="alert-dialog-title">{'Error'}</DialogTitle>
+				<DialogContent>
+					<DialogContentText id="alert-dialog-description">Something went wrong!</DialogContentText>
+				</DialogContent>
+				<DialogActions>
+					<Button onClick={() => setDialogOpen(!dialogOpen)} color="primary">
+						Retry
+					</Button>
+				</DialogActions>
+			</Dialog>
+			<Dialog
+				open={sucessDialgoOpen}
+				onClose={() => setSucessDialgoOpen(!sucessDialgoOpen)}
+				aria-labelledby="alert-dialog-title"
+				aria-describedby="alert-dialog-description"
+			>
+				<DialogTitle id="alert-dialog-title">{'Success'}</DialogTitle>
+				<DialogContent>
+					<DialogContentText id="alert-dialog-description">Check out Successfully Completed!</DialogContentText>
+				</DialogContent>
+				<DialogActions>
+					<Button onClick={() => setSucessDialgoOpen(!sucessDialgoOpen)} color="primary">
+						ok
+					</Button>
+				</DialogActions>
+			</Dialog>
 		</div>
 	);
 }
