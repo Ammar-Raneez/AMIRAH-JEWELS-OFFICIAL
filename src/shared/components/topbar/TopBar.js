@@ -62,9 +62,9 @@ function TopBar() {
 							<a className="topbar__treeItem" href="/gemstones+metal"><TreeItem nodeId="11" label="Explore More" /></a>
 						</TreeItem>
 						<TreeItem nodeId="12" label="Featured Collections">
-							<a><TreeItem nodeId="13" label="Signature" /></a>
-							<a><TreeItem nodeId="14" label="Amarelo" /></a>
-							<a><TreeItem nodeId="15" label="Mi Amor" /></a>
+							<a href="/"><TreeItem nodeId="13" label="Signature" /></a>
+							<a href="/"><TreeItem nodeId="14" label="Amarelo" /></a>
+							<a href="/"><TreeItem nodeId="15" label="Mi Amor" /></a>
 						</TreeItem>
 					</TreeItem>
 					<TreeItem nodeId="16" label="Process" />
@@ -74,8 +74,8 @@ function TopBar() {
 						<a className="topbar__treeItem" href="/careers"><TreeItem nodeId="20" label="Careers" /></a>
 						<a className="topbar__treeItem" href="/policy"><TreeItem nodeId="21" label="Policy" /></a>
 					</TreeItem>
-					<a><TreeItem nodeId="22" label="Designer Desk" /></a>
-					<a><TreeItem nodeId="23" label="High Tea" /></a>
+					<a href="/"><TreeItem nodeId="22" label="Designer Desk" /></a>
+					<a href="/"><TreeItem nodeId="23" label="High Tea" /></a>
 				</TreeView>
 				<List>
 					{['Instagram', 'Facebook'].map((text, index) => (

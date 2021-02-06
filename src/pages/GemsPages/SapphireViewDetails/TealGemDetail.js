@@ -151,7 +151,7 @@ function TealGemDetail() {
 						}}
 						src="gems/purple-sapphire.png"
 						alt=""
-						className={currentImage == 'purple sapphire' ? 'active' : ''}
+						className={currentImage === 'purple sapphire' ? 'active' : ''}
 					/>
 					<img
 						onMouseOver={(e) => {
@@ -159,7 +159,7 @@ function TealGemDetail() {
 						}}
 						src="gems/teal-sapphire.png"
 						alt=""
-						className={currentImage == 'teal sapphire' ? 'active' : ''}
+						className={currentImage === 'teal sapphire' ? 'active' : ''}
 					/>
 					<img
 						onMouseOver={(e) => {
@@ -167,7 +167,7 @@ function TealGemDetail() {
 						}}
 						src="gems/white-sapphire.png"
 						alt=""
-						className={currentImage == 'white sapphire' ? 'active' : ''}
+						className={currentImage === 'white sapphire' ? 'active' : ''}
 					/>
 				</div>
 				<div className="gemDetails__sectionCartMainImage">

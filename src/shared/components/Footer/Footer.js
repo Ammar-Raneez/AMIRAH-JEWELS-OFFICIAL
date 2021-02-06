@@ -1,14 +1,14 @@
-import { useState } from 'react';
-import { useHistory } from 'react-router-dom';
-import { auth } from '../../../firebase';
-import { useStateValue } from '../../../StateProvider';
+// import { useState } from 'react';
+// import { useHistory } from 'react-router-dom';
+// import { auth } from '../../../firebase';
+// import { useStateValue } from '../../../StateProvider';
 import './Footer.css';
 
 function Footer() {
-	const history = useHistory();
-	const [email, setEmail] = useState('');
-	const [password, setPassword] = useState('');
-	const [{ wishListBasket, cartBasket, user }, dispatch] = useStateValue();
+	// const history = useHistory();
+	// const [email, setEmail] = useState('');
+	// const [password, setPassword] = useState('');
+	// const [{ wishListBasket, cartBasket, user }, dispatch] = useStateValue();
 
 	// const signIn = (e) => {
 	// 	e.preventDefault();
@@ -31,9 +31,9 @@ function Footer() {
 	// 				user: auth.user,
 	// 			});
 
-	// 			// setTimeout(() => {
-	// 			// 	alert('Welcome ' + auth.user.displayName + '!');
-	// 			// }, 1000);
+				// setTimeout(() => {
+				// 	alert('Welcome ' + auth.user.displayName + '!');
+				// }, 1000);
 
 	// 			history.replace('/');
 
