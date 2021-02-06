@@ -74,8 +74,8 @@ function TopBar() {
 						<a className="topbar__treeItem" href="/careers"><TreeItem nodeId="20" label="Careers" /></a>
 						<a className="topbar__treeItem" href="/policy"><TreeItem nodeId="21" label="Policy" /></a>
 					</TreeItem>
-					<a href="/"><TreeItem nodeId="22" label="Designer Desk" /></a>
-					<a href="/"><TreeItem nodeId="23" label="High Tea" /></a>
+					<a className="topbar__treeItem" href="/"><TreeItem nodeId="22" label="Designer Desk" /></a>
+					<a className="topbar__treeItem" href="/"><TreeItem nodeId="23" label="High Tea" /></a>
 				</TreeView>
 				<List>
 					{['Instagram', 'Facebook'].map((text, index) => (
