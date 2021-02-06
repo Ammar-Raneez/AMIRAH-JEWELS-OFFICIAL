@@ -1,7 +1,7 @@
 import DateFnsUtils from '@date-io/date-fns';
 import { FormControl, FormControlLabel, FormLabel, Radio, RadioGroup } from '@material-ui/core';
 import { KeyboardDatePicker, MuiPickersUtilsProvider } from '@material-ui/pickers';
-import { useRef, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { TextValidator, ValidatorForm } from 'react-material-ui-form-validator';
 import { useHistory } from 'react-router-dom';
 import { db } from '../../firebase';
@@ -9,7 +9,7 @@ import { useStateValue } from '../../StateProvider';
 import './CheckOutPage.css';
 
 function CheckOutPage() {
-	const [{ subTotal, delivery, tax, user }, dispatch] = useStateValue();
+	const [{ subTotal, delivery, tax, cartBasket, user }, dispatch] = useStateValue();
 	const formRef = useRef('form');
 	const history = useHistory();
 
@@ -28,15 +28,51 @@ function CheckOutPage() {
 	const [cardExpYear, setCardExpYear] = useState('');
 	const [csc, setCsc] = useState('');
 	const [cardNumber, setCardNumber] = useState('');
+	const [allCheckOutDetailsHistory, setAllCheckOutDetailsHistory] = useState([]);
+	const [updateCheckoutCollection, setUpdateCheckoutCollection] = useState(false);
+
+	useEffect(() => {
+		if (updateCheckoutCollection) {
+			console.log('adding to database');
+			db.collection('users')
+				.doc(user?.email)
+				.update({
+					checkOutOrders: [
+						...allCheckOutDetailsHistory,
+						{
+							cartBasket: cartBasket,
+							firstName: firstName,
+							lastName: lastName,
+							middleName: middleName,
+							addressLineOne: addressLineOne,
+							addressLineTwo: addressLineTwo,
+							city: city,
+							pinCode: pinCode,
+							telephoneNumber: telephoneNumber,
+							emailAddress: emailAddress,
+							paymentType: paymentType,
+							cardExpMonth: cardExpMonth,
+							cardExpYear: cardExpYear,
+							csc: csc,
+							cardNumber: cardNumber,
+							orderPrice: subTotal + tax + delivery,
+						},
+					],
+				});
+		}
+		setUpdateCheckoutCollection(true);
+	}, [allCheckOutDetailsHistory]);
 
 	// WHEN USER CLICKS CHECKOUT BTN, THIS FUNCTION IS FIRED!
 	const proceedCheckout = (e) => {
 		let paymentSuccessful = true;
-		let allCheckOutDetailsHistory = [];
+		let tempArray = [];
 		e.preventDefault();
 
 		// CONNECTING THE BANK AND SEND THE AMOUNT TO BE CREDITED
 		// BANK STUFF (NOTE:- Important to get the response of the transaction occurred!)
+
+		
 
 		// STORING THE CHECKOUT RELATED DETAILS WITH THE PRICE INTO THE FIREBASE FIRE-STORE (ONLY IF PAYMENTS ARE MADE SUCCESSFULLY)
 		if (paymentSuccessful) {
@@ -45,61 +81,24 @@ function CheckOutPage() {
 				snapshot.docs.forEach((doc) => {
 					if (doc.id === user?.email) {
 						// getting the current checkout orders present from the database
+						console.log('Adding old items inside');
+						tempArray = [];
 						for (const checkOutDetails of doc.data().checkOutOrders) {
-							console.log('Adding old items inside');
-							allCheckOutDetailsHistory.push(checkOutDetails);
+							tempArray.push(checkOutDetails);
 						}
 					}
 				})
 			);
+
+			setTimeout(() => {
+				setAllCheckOutDetailsHistory(tempArray);
+			}, 3000);
 		}
-		// adding the new record into the all check out details history list
-		allCheckOutDetailsHistory.push({
-			firstName: firstName,
-			lastName: lastName,
-			middleName: middleName,
-			addressLineOne: addressLineOne,
-			addressLineTwo: addressLineTwo,
-			city: city,
-			pinCode: pinCode,
-			telephoneNumber: telephoneNumber,
-			emailAddress: emailAddress,
-			paymentType: paymentType,
-			cardExpMonth: cardExpMonth,
-			cardExpYear: cardExpYear,
-			csc: csc,
-			cardNumber: cardNumber,
-			orderPrice: subTotal + tax + delivery,
-		});
 
-		console.log('-----------------------------------------------------------');
-		console.log(allCheckOutDetailsHistory);
-		console.log('-----------------------------------------------------------');
-
-		// Updating the checkout order list
-		db.collection('users').doc(user?.email).update({
-			checkOutOrders: allCheckOutDetailsHistory,
-		});
 		// ALERT THE USER THAT PAYMENT DONE SUCCESSFULLY OR RE-DIRECT USING A MODEL
 		if (paymentSuccessful) {
 		} else {
 		}
-
-		// // displaying all the data
-		// console.log(firstName);
-		// console.log(lastName);
-		// console.log(middleName);
-		// console.log(addressLineOne);
-		// console.log(addressLineTwo);
-		// console.log(city);
-		// console.log(pinCode);
-		// console.log(telephoneNumber);
-		// console.log(emailAddress);
-		// console.log(paymentType);
-		// console.log(cardExpMonth);
-		// console.log(cardExpYear);
-		// console.log(csc);
-		// console.log(cardNumber);
 	};
 
 	const onDateChange = (date, value) => {
