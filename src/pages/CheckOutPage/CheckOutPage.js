@@ -17,7 +17,7 @@ function CheckOutPage() {
 	const [telephoneNumber, setTelephoneNumber] = useState('');
 	const [emailAddress, setEmailAddress] = useState('');
 	const [paymentType, setPaymentType] = useState('visa');
-	let [cardExpireDate, setCardExpireDate] = useState();
+	const [cardExpireDate, setCardExpireDate] = useState('');
 	const [cardExpMonth, setCardExpMonth] = useState('');
 	const [cardExpYear, setCardExpYear] = useState('');
 	const [csc, setCsc] = useState('');

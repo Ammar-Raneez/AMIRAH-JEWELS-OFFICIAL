@@ -12,7 +12,7 @@ import { ValidatorForm, TextValidator } from 'react-material-ui-form-validator';
 function RegisterPage() {
 	const history = useHistory();
 	const formRef = useRef('form');
-	const [completeBirthday, setcompleteBirthday] = useState();
+	const [completeBirthday, setcompleteBirthday] = useState('');
 	const [firstName, setFirstName] = useState('');
 	const [lastName, setLastName] = useState('');
 	const [email, setEmail] = useState('');
