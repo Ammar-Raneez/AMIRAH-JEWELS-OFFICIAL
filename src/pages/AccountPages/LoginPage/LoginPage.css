@@ -17,7 +17,7 @@
     overflow-x: hidden;
 }
 
-.loginPage div {
+.loginPage .loginPage__leftSide, .loginPage .loginPage__rightSide {
     overflow-x: hidden;
     min-width: 500px;
     max-width: 500px;
@@ -83,10 +83,22 @@
 }
 
 @media screen and (max-width: 1250px) {
-    .loginPage div {
-        min-width: 80%;
-        max-width: 80%;
-        margin: 14px;
+    .loginPage__leftSide, .loginPage__rightSide {
+        min-width: 95% !important;
+        max-width: 95% !important;
+        margin: 0px;
+    }
+
+    .loginPage__leftSide > div, .loginPage__rightSide > div {
+        width: 100%;
+    }
+
+    .loginPage__rightSide {
+        margin-top: 15%;
+    }
+
+    .loginPage__form > div > div {
+        width: 100% !important;
     }
 
     .loginPage .loginPage__title {
@@ -98,11 +110,21 @@
     }
 
     .loginPage {
-        justify-content: center;
+        justify-content: space-between;
+        padding: 30px;
+        height: 60%;
+        align-items: center;
+        margin-bottom: 22%;
+        text-align: center;
+        /* flex-direction: column; */
     }
 
-    .loginPage__form > div {
+    .loginPage__form {
         width: 100%;
-        padding: 0;
+    }
+
+    .loginPage__form > div > div > div > .MuiInputBase-input {
+        width: 100%;
+        font-size: 14px !important;
     }
 }
