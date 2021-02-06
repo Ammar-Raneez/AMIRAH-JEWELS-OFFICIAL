@@ -63,6 +63,7 @@ function RegisterPage() {
 					cart: [],
 					wishlist: [],
 					timestamp: firebase.firestore.FieldValue.serverTimestamp(),
+					checkOutOrders: [],
 				});
 
 				// clean the fields
@@ -184,7 +185,7 @@ function RegisterPage() {
 									format="MM/dd/yyyy"
 									margin="normal"
 									id="bday"
-									label="Birthday"
+									placeholder="Birthday"
 									value={completeBirthday}
 									onChange={onDateChange}
 									KeyboardButtonProps={{

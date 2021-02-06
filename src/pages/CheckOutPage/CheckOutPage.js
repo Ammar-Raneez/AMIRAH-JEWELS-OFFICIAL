@@ -1,12 +1,32 @@
 import DateFnsUtils from '@date-io/date-fns';
-import { FormControl, FormControlLabel, FormLabel, Radio, RadioGroup } from '@material-ui/core';
+import {
+	Button,
+	Dialog,
+	DialogActions,
+	DialogContent,
+	DialogContentText,
+	DialogTitle,
+	FormControl,
+	FormControlLabel,
+	FormLabel,
+	Radio,
+	RadioGroup
+} from '@material-ui/core';
 import { KeyboardDatePicker, MuiPickersUtilsProvider } from '@material-ui/pickers';
-import { useRef, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { TextValidator, ValidatorForm } from 'react-material-ui-form-validator';
+import { useHistory } from 'react-router-dom';
+import { db } from '../../firebase';
+import { useStateValue } from '../../StateProvider';
 import './CheckOutPage.css';
 
 function CheckOutPage() {
+	const [{ subTotal, delivery, tax, cartBasket, user }, dispatch] = useStateValue();
 	const formRef = useRef('form');
+	const history = useHistory();
+	const [dialogOpen, setDialogOpen] = useState(false);
+	const [sucessDialgoOpen, setSucessDialgoOpen] = useState(false);
+
 	const [firstName, setFirstName] = useState('');
 	const [middleName, setMiddleName] = useState('');
 	const [lastName, setLastName] = useState('');
@@ -22,26 +42,77 @@ function CheckOutPage() {
 	const [cardExpYear, setCardExpYear] = useState('');
 	const [csc, setCsc] = useState('');
 	const [cardNumber, setCardNumber] = useState('');
+	const [allCheckOutDetailsHistory, setAllCheckOutDetailsHistory] = useState([]);
+	const [updateCheckoutCollection, setUpdateCheckoutCollection] = useState(false);
+
+	useEffect(() => {
+		if (updateCheckoutCollection) {
+			console.log('adding to database');
+			db.collection('users')
+				.doc(user?.email)
+				.update({
+					checkOutOrders: [
+						...allCheckOutDetailsHistory,
+						{
+							cartBasket: cartBasket,
+							firstName: firstName,
+							lastName: lastName,
+							middleName: middleName,
+							addressLineOne: addressLineOne,
+							addressLineTwo: addressLineTwo,
+							city: city,
+							pinCode: pinCode,
+							telephoneNumber: telephoneNumber,
+							emailAddress: emailAddress,
+							paymentType: paymentType,
+							cardExpMonth: cardExpMonth,
+							cardExpYear: cardExpYear,
+							csc: csc,
+							cardNumber: cardNumber,
+							orderPrice: subTotal + tax + delivery,
+						},
+					],
+				});
+		}
+		setUpdateCheckoutCollection(true);
+	}, [allCheckOutDetailsHistory]);
 
 	// WHEN USER CLICKS CHECKOUT BTN, THIS FUNCTION IS FIRED!
 	const proceedCheckout = (e) => {
+		let paymentSuccessful = true;
+		let tempArray = [];
 		e.preventDefault();
 
-		// displaying all the data
-		console.log(firstName);
-		console.log(lastName);
-		console.log(middleName);
-		console.log(addressLineOne);
-		console.log(addressLineTwo);
-		console.log(city);
-		console.log(pinCode);
-		console.log(telephoneNumber);
-		console.log(emailAddress);
-		console.log(paymentType);
-		console.log(cardExpMonth);
-		console.log(cardExpYear);
-		console.log(csc);
-		console.log(cardNumber);
+		// CONNECTING THE BANK AND SEND THE AMOUNT TO BE CREDITED
+		// BANK STUFF (NOTE:- Important to get the response of the transaction occurred!)
+
+		// STORING THE CHECKOUT RELATED DETAILS WITH THE PRICE INTO THE FIREBASE FIRE-STORE (ONLY IF PAYMENTS ARE MADE SUCCESSFULLY)
+		if (paymentSuccessful) {
+			// Getting snapshot of the current checkout order list
+			db.collection('users').onSnapshot((snapshot) =>
+				snapshot.docs.forEach((doc) => {
+					if (doc.id === user?.email) {
+						// getting the current checkout orders present from the database
+						console.log('Adding old items inside');
+						tempArray = [];
+						for (const checkOutDetails of doc.data().checkOutOrders) {
+							tempArray.push(checkOutDetails);
+						}
+					}
+				})
+			);
+
+			setTimeout(() => {
+				setAllCheckOutDetailsHistory(tempArray);
+			}, 5000);
+		}
+
+		// ALERT THE USER THAT PAYMENT DONE SUCCESSFULLY OR RE-DIRECT USING A MODEL
+		if (paymentSuccessful) {
+			setSucessDialgoOpen(!sucessDialgoOpen);
+		} else {
+			setDialogOpen(!dialogOpen);
+		}
 	};
 
 	const onDateChange = (date, value) => {
@@ -51,6 +122,10 @@ function CheckOutPage() {
 	};
 	return (
 		<div className="checkoutPage">
+			{/* jewel image */}
+			<div className="thankingPage__firstJewel">
+				<img src="aboutuspage/purple-sapphire.png" alt="" />
+			</div>
 			<div className="checkoutPage__form">
 				<h2>Check Out</h2>
 				<ValidatorForm onSubmit={proceedCheckout} ref={formRef} style={{ width: '100%' }}>
@@ -206,6 +281,43 @@ function CheckOutPage() {
 					</div>
 				</ValidatorForm>
 			</div>
+			{/* jewel image */}
+			<div className="thankingPage__lastJewel">
+				<img src="aboutuspage/purple-sapphire.png" alt="" />
+			</div>
+
+			<Dialog
+				open={dialogOpen}
+				onClose={() => setDialogOpen(!dialogOpen)}
+				aria-labelledby="alert-dialog-title"
+				aria-describedby="alert-dialog-description"
+			>
+				<DialogTitle id="alert-dialog-title">{'Error'}</DialogTitle>
+				<DialogContent>
+					<DialogContentText id="alert-dialog-description">Something went wrong!</DialogContentText>
+				</DialogContent>
+				<DialogActions>
+					<Button onClick={() => setDialogOpen(!dialogOpen)} color="primary">
+						Retry
+					</Button>
+				</DialogActions>
+			</Dialog>
+			<Dialog
+				open={sucessDialgoOpen}
+				onClose={() => setSucessDialgoOpen(!sucessDialgoOpen)}
+				aria-labelledby="alert-dialog-title"
+				aria-describedby="alert-dialog-description"
+			>
+				<DialogTitle id="alert-dialog-title">{'Success'}</DialogTitle>
+				<DialogContent>
+					<DialogContentText id="alert-dialog-description">Check out Successfully Completed!</DialogContentText>
+				</DialogContent>
+				<DialogActions>
+					<Button onClick={() => setSucessDialgoOpen(!sucessDialgoOpen)} color="primary">
+						ok
+					</Button>
+				</DialogActions>
+			</Dialog>
 		</div>
 	);
 }
