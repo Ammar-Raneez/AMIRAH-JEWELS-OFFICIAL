@@ -1,9 +1,12 @@
 .checkoutPage {
-	position: relative;
 	margin: 80px;
 	overflow: hidden !important;
-	/* border: 1px red solid; */
+	display: grid;
+	align-content: center;
+	justify-content: center;
+	position: relative;
 }
+
 .checkoutPage__form {
 	background-color: whitesmoke;
 	padding: 50px;
@@ -14,7 +17,7 @@
 	flex-direction: column;
 	width: 400px;
 	border-radius: 20px;
-	border: 2px #FFE7DC solid;
+	border: 2px #ffe7dc solid;
 }
 .checkoutPage__form > h2 {
 	font-size: 2.2vw;
@@ -30,11 +33,21 @@
 	padding-top: 20px;
 }
 
+/* ----------------------------------------------------------- */
 
-
-
-@media screen and (max-width: 1000px) {
-	.checkoutPage > h2 {
-		font-size: 20px;
+@media screen and (max-width: 700px) {
+	.checkoutPage__form > h2 {
+		font-size: 20px ;
+	}
+	.checkoutPage__form {
+		width: 250px;
+		padding: 20px;
+	}
+	input {
+		width: 200px !important;
+		font-size: 11px !important;
+	}
+	.checkoutPage {
+		margin: 10px;
 	}
 }

@@ -122,6 +122,10 @@ function CheckOutPage() {
 	};
 	return (
 		<div className="checkoutPage">
+			{/* jewel image */}
+			<div className="thankingPage__firstJewel">
+				<img src="aboutuspage/purple-sapphire.png" alt="" />
+			</div>
 			<div className="checkoutPage__form">
 				<h2>Check Out</h2>
 				<ValidatorForm onSubmit={proceedCheckout} ref={formRef} style={{ width: '100%' }}>
@@ -276,6 +280,10 @@ function CheckOutPage() {
 						<button type="submit">CONTINUE CHECKOUT</button>
 					</div>
 				</ValidatorForm>
+			</div>
+			{/* jewel image */}
+			<div className="thankingPage__lastJewel">
+				<img src="aboutuspage/purple-sapphire.png" alt="" />
 			</div>
 
 			<Dialog
