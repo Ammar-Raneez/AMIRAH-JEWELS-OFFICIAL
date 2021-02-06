@@ -1,12 +1,12 @@
 import './ProcessPage.css';
 import ProcessStep from './ProcessStep/ProcessStep';
-import { Slide } from 'react-awesome-reveal';
+import { Fade } from 'react-awesome-reveal';
 
 function ProcessPage() {
 	return (
 		<div className="processPage">
 			{/* title */}
-			<Slide direction="right">
+			<Fade cascade direction="right" triggerOnce>
 				<h1>bringing unique jewelry designs to life</h1>
 
 				{/* description */}
@@ -21,13 +21,14 @@ function ProcessPage() {
 					<button>SCHEDULE A CALL</button>
 					<button>CALL US NOW</button>
 				</div>
-			</Slide>
+			</Fade>
 
 			{/* steps components */}
 			<div className="processPage__steps">
 				<ProcessStep
 					img="process/sketch.png"
 					stepNo="1"
+					images={["process/sketch.png", "process/ring.png", "process/factory.png", "process/polishing.png"]}
 					stepName="The Sketch"
 					description="Sketches are created to illustrate ideas which helps to express scale, shape and design options. Sketches develop an overall direction, and as setting styles are considered, shapes and forms are explored and a design emerges"
 					reflect={false}
@@ -35,6 +36,7 @@ function ProcessPage() {
 				<ProcessStep
 					img="process/ring.png"
 					stepNo="2"
+					images={["process/sketch.png", "process/ring.png", "process/factory.png", "process/polishing.png"]}
 					stepName="The Model"
 					description="Once the jewelry design is approved, it is being
 					translated into a three dimensional model using
@@ -46,6 +48,7 @@ function ProcessPage() {
 				<ProcessStep
 					img="process/factory.png"
 					stepNo="3"
+					images={["process/sketch.png", "process/ring.png", "process/factory.png", "process/polishing.png"]}
 					stepName="Workshop"
 					description="Craftsmen use traditional skills and techniques
 					to complete any details of the jewelry design,
@@ -55,6 +58,7 @@ function ProcessPage() {
 				<ProcessStep
 					img="process/polishing.png"
 					stepNo="4"
+					images={["process/sketch.png", "process/ring.png", "process/factory.png", "process/polishing.png"]}
 					stepName="Final Touches"
 					description="Piece of jewelry is finished and it only needs a
 					light final polish to bring out the luster and

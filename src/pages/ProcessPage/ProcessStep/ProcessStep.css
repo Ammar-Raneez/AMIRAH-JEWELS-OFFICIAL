@@ -18,6 +18,7 @@
 	align-self: center;
 	height: 50vw;
 }
+
 .processStep__description > p {
 	position: absolute;
 	font-size: 1.5vw;
@@ -50,20 +51,20 @@
 	color: #707070;
 	text-align: end;
 }
-.processStep__stepName > p {
+.processStep__stepName > div > p {
 	font-size: 4vw;
 	font-family: Quattrocento-Regular;
 	color: #707070;
 	text-align: end;
 }
-.processStep__stepNameReflect > p {
+.processStep__stepNameReflect > div > p {
 	font-size: 4vw;
 	font-family: Quattrocento-Regular;
 	color: #707070;
 	text-align: start;
 }
 
-.processStep__stepName > p:first-child, .processStep__stepNameReflect > p:first-child {
+.processStep__stepName > div:first-child > p, .processStep__stepNameReflect > div:first-child > p {
 	font-weight: bold;
 }
 .processStep__stepName, .processStep__stepNameReflect {
