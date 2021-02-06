@@ -1,12 +1,12 @@
 import React from 'react'
 import './Banner.css'
-import { Slide } from 'react-awesome-reveal';
+// import { Slide } from 'react-awesome-reveal';
 
 function Banner() {
     return (
         <div className="homePage__banner">
                 <div className="homePage__bannerLeft">
-                <Slide cascade>
+                {/* <Slide> */}
                     <p className="homePage__bannerLeftPhrase">YOU DESERVE TO FEEL LIKE A PRINCESS...</p>
                     <p className="homePage__bannerLeftPara">
                         AMIRAH holds thousands of exquisite,
@@ -20,7 +20,7 @@ function Banner() {
                             DISCOVER NOW
                         </button>
                     </a>
-                    </Slide>
+                    {/* </Slide> */}
                 </div>
             <div className="homePage__bannerRight">
                 
