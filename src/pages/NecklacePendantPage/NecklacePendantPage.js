@@ -149,7 +149,7 @@ function NecklacePendantPage() {
 						}}
 						src="pendantsNecklace/ring2.png"
 						alt=""
-						className={currentImage == 'ring2' ? 'active' : ''}
+						className={currentImage === 'ring2' ? 'active' : ''}
 					/>
 					<img
 						onMouseOver={(e) => {
@@ -157,7 +157,7 @@ function NecklacePendantPage() {
 						}}
 						src="pendantsNecklace/ring3.png"
 						alt=""
-						className={currentImage == 'ring3' ? 'active' : ''}
+						className={currentImage === 'ring3' ? 'active' : ''}
 					/>
 					<img
 						onMouseOver={(e) => {
@@ -165,7 +165,7 @@ function NecklacePendantPage() {
 						}}
 						src="pendantsNecklace/ring4.png"
 						alt=""
-						className={currentImage == 'ring4' ? 'active' : ''}
+						className={currentImage === 'ring4' ? 'active' : ''}
 					/>
 				</div>
 				<div className="necklacePendant__sectionCartMainImage">
