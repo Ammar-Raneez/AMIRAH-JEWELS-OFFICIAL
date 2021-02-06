@@ -1,74 +1,76 @@
 .bill {
-    box-shadow: 2px 2px 10px rgba(161, 161, 161, 0.24), 2px 2px 10px rgba(161, 161, 161, 0.24);
-    padding: 20px;
-    font-family: Quattrocento-Regular;
-    color: #707070;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    height: 100%;
+	box-shadow: 2px 2px 10px rgba(161, 161, 161, 0.24), 2px 2px 10px rgba(161, 161, 161, 0.24);
+	padding: 20px;
+	font-family: Quattrocento-Regular;
+	color: #707070;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	height: 100%;
 }
 
 .bill__topSection > p {
-    font-weight: bold;
+	font-weight: bold;
 }
 
 .bill__topSection > span {
-    display: flex;
-    justify-content: space-between;
-    margin: 20px 0px;
+	display: flex;
+	justify-content: space-between;
+	margin: 20px 0px;
 }
 
 .bill_middleSection {
-    border-top: 1px solid #aaa;
-    padding-top: 20px;
+	border-top: 1px solid #aaa;
+	padding-top: 20px;
 }
 .bill_middleSection > span {
-    display: flex;
-    justify-content: space-between;
+	display: flex;
+	justify-content: space-between;
 }
 
 .bill_middleSection > span > p:first-child {
-    font-weight: bold;
+	font-weight: bold;
 }
 
 .bill__bottomSection {
-    display: flex;
-    flex-direction: column;
+	display: flex;
+	flex-direction: column;
 }
 
-.bill__bottomSection > div > button {
-    width: 80%;
-    padding: 10px 20px;
-    border-radius: 10px;
-    border: 1px solid #ffc0a1;
-    font-size: 14px;
-    font-weight: bold;
-    font-family: Quattrocento-Regular;
-    color: #707070;
-    background-color: #ffc0a1;
-    transition: 0.3s ease;
+.bill__bottomSection > div > a > button {
+	width: 80%;
+	padding: 10px 20px;
+	border-radius: 10px;
+	border: 1px solid #ffc0a1;
+	font-size: 14px;
+	font-weight: bold;
+	font-family: Quattrocento-Regular;
+	color: #707070;
+	background-color: #ffc0a1;
+	transition: 0.3s ease;
 }
-.bill__bottomSection > div > button:hover {
-    cursor: pointer;
-    background-color: white;
-    border: 1px solid #ffc0a1;
+.bill__bottomSection > div > a > button:hover {
+	cursor: pointer;
+	background-color: white;
+	border: 1px solid #ffc0a1;
 }
 
 .bill__bottomSection > div > p {
-    text-align: center;
-    margin-top: 20px;
-    width: 55%;
-    font-size: 12px;
+	text-align: center;
+	margin-top: 20px;
+	width: 55%;
+	font-size: 12px;
 }
 
-.bill__bottomSectionWarrant, .bill__bottomSectionButton {
-    display: flex;
-    justify-content: center;
+.bill__bottomSectionWarrant,
+.bill__bottomSectionButton > a {
+	display: flex;
+	justify-content: center;
+    text-decoration: none;
 }
 
 @media screen and (max-width: 768px) {
-    .bill__bottomSection > div > button {
-        margin-top: 20px;
-    }
+	.bill__bottomSection > div > a > button {
+		margin-top: 20px;
+	}
 }

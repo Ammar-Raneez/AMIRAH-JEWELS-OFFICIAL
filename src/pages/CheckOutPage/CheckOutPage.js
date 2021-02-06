@@ -3,6 +3,7 @@ import { FormControl, FormControlLabel, FormLabel, Radio, RadioGroup } from '@ma
 import { KeyboardDatePicker, MuiPickersUtilsProvider } from '@material-ui/pickers';
 import { useRef, useState } from 'react';
 import { TextValidator, ValidatorForm } from 'react-material-ui-form-validator';
+import { useHistory } from 'react-router-dom';
 import { db } from '../../firebase';
 import { useStateValue } from '../../StateProvider';
 import './CheckOutPage.css';
@@ -10,6 +11,7 @@ import './CheckOutPage.css';
 function CheckOutPage() {
 	const [{ subTotal, delivery, tax, user }, dispatch] = useStateValue();
 	const formRef = useRef('form');
+	const history = useHistory();
 
 	const [firstName, setFirstName] = useState('');
 	const [middleName, setMiddleName] = useState('');
@@ -44,37 +46,40 @@ function CheckOutPage() {
 					if (doc.id === user?.email) {
 						// getting the current checkout orders present from the database
 						for (const checkOutDetails of doc.data().checkOutOrders) {
+							console.log('Adding old items inside');
 							allCheckOutDetailsHistory.push(checkOutDetails);
 						}
 					}
 				})
 			);
-
-			// adding the new record into the all check out details history list
-			allCheckOutDetailsHistory.push({
-				firstName: firstName,
-				lastName: lastName,
-				middleName: middleName,
-				addressLineOne: addressLineOne,
-				addressLineTwo: addressLineTwo,
-				city: city,
-				pinCode: pinCode,
-				telephoneNumber: telephoneNumber,
-				emailAddress: emailAddress,
-				paymentType: paymentType,
-				cardExpMonth: cardExpMonth,
-				cardExpYear: cardExpYear,
-				csc: csc,
-				cardNumber: cardNumber,
-				orderPrice: subTotal + tax + delivery,
-			});
-
-			// Updating the checkout order list
-			db.collection('users').doc(user?.email).update({
-				checkOutOrders: allCheckOutDetailsHistory,
-			});
 		}
+		// adding the new record into the all check out details history list
+		allCheckOutDetailsHistory.push({
+			firstName: firstName,
+			lastName: lastName,
+			middleName: middleName,
+			addressLineOne: addressLineOne,
+			addressLineTwo: addressLineTwo,
+			city: city,
+			pinCode: pinCode,
+			telephoneNumber: telephoneNumber,
+			emailAddress: emailAddress,
+			paymentType: paymentType,
+			cardExpMonth: cardExpMonth,
+			cardExpYear: cardExpYear,
+			csc: csc,
+			cardNumber: cardNumber,
+			orderPrice: subTotal + tax + delivery,
+		});
 
+		console.log('-----------------------------------------------------------');
+		console.log(allCheckOutDetailsHistory);
+		console.log('-----------------------------------------------------------');
+
+		// Updating the checkout order list
+		db.collection('users').doc(user?.email).update({
+			checkOutOrders: allCheckOutDetailsHistory,
+		});
 		// ALERT THE USER THAT PAYMENT DONE SUCCESSFULLY OR RE-DIRECT USING A MODEL
 		if (paymentSuccessful) {
 		} else {

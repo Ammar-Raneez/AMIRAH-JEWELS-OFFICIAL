@@ -185,7 +185,7 @@ function RegisterPage() {
 									format="MM/dd/yyyy"
 									margin="normal"
 									id="bday"
-									label="Birthday"
+									placeholder="Birthday"
 									value={completeBirthday}
 									onChange={onDateChange}
 									KeyboardButtonProps={{
