@@ -23,6 +23,7 @@ import CartPage from './pages/CartPage/CartPage';
 import TealGemDetail from './pages/GemsPages/SapphireViewDetails/TealGemDetail';
 import PurpleGemDetail from './pages/GemsPages/SapphireViewDetails/PurpleGemDetail';
 import CheckOutPage from './pages/CheckOutPage/CheckOutPage';
+import ContactUsPage from './pages/ContactUsPage/ContactUsPage';
 
 function App() {
 	const [{ wishListBasket, cartBasket, user }, dispatch] = useStateValue();
@@ -180,6 +181,13 @@ function App() {
 						<TopBar />
 						<Header />
 						<ProcessPage />
+						<Footer />
+					</Route>
+
+					<Route path="/contactUs">
+						<TopBar />
+						<Header />
+						<ContactUsPage />
 						<Footer />
 					</Route>
 

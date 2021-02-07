@@ -1,0 +1,82 @@
+.contactUsPage {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	margin: 60px;
+}
+.contactUsPageTitle {
+	font-family: bowie;
+	font-size: 40px;
+    margin-top: 30px;
+	text-align: center;
+	font-weight: lighter;
+	color: #707070;
+}
+.contactUsPageDescription {
+	width: 65vw;
+	font-size: 1.5vw;
+	font-family: Quattrocento-Regular;
+	line-height: 30px;
+	padding: 40px 0;
+	color: #707070;
+	text-align: center;
+}
+.contactUsPage__options {
+	align-items: center;
+	padding: 40px;
+	margin: 60px;
+	background-color: whitesmoke;
+	width: 65vw;
+	justify-content: space-evenly;
+	display: flex;
+	/* border: 1px red solid; */
+}
+.contactUsPage__optionsItem {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+.contactUsPage__optionsItem > .MuiSvgIcon-root {
+	color: #ffc0a1;
+	font-size: 40px !important;
+}
+.contactUsPage__optionsItem > button {
+	border: none;
+	background-color: white;
+	font-size: 1.2vw;
+	outline: none;
+    color: #424242;
+	width: 200px;
+	cursor: pointer;
+	border: 0.2vw #ffc0a1 solid;
+	transition: 0.3s ease;
+	border-radius: 0.7vw;
+	margin: 20px;
+	font-family: Quattrocento-Regular;
+	padding: 15px 0;
+}
+.contactUsPage__optionsItem > button:hover {
+    background-color: #ffc0a1;
+    transition: 0.3s ease;
+    font-weight: bold;
+    color: white;
+}
+.contactUsPage__openHours{
+    display: flex;
+	margin: 40px;
+	flex-direction: column;
+	font-family: Quattrocento-Regular;
+	align-items: center;
+	justify-content: center;
+}
+.contactUsPage__openHours > h4{
+    padding: 20px;
+    color: #2e2e2e;
+    font-size: 20px;
+}
+.contactUsPage__openHours > p{
+    color: #424242;
+    font-size: 18px;
+    
+}

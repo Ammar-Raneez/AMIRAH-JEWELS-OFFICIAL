@@ -70,6 +70,7 @@ function Footer() {
 						<a href="/charity">Charity</a>
 						<a href="/careers">Careers</a>
 						<a href="/policy">Policy</a>
+						<a href="/contactUs">Contact Us</a>
 					</div>
 					<div className="footer__rightSection">
 						<p>Latest by Amirah Gems</p>
