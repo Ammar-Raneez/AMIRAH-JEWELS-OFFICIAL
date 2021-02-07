@@ -8,7 +8,7 @@ function ContactUsPage() {
 	return (
 		<div className="contactUsPage">
 			<Fade cascade direction="right" triggerOnce>
-				<h1  className="contactUsPageTitle">Contact Us</h1>
+				<h1 className="contactUsPageTitle">Contact Us</h1>
 
 				{/* description */}
 				<p className="contactUsPageDescription">
@@ -29,7 +29,9 @@ function ContactUsPage() {
 					</div>
 					<div className="contactUsPage__optionsItem">
 						<CallIcon />
-						<button>CALL US NOW</button>
+						<a href="tel:+94761234567">
+							<button>CALL US NOW</button>
+						</a>
 					</div>
 				</div>
 

@@ -31,11 +31,13 @@
 	width: 65vw;
 	justify-content: space-evenly;
 	display: flex;
-    flex-wrap: wrap;
+	flex-wrap: wrap;
 	/* border: 1px red solid; */
 }
-.contactUsPage__optionsItem {
+.contactUsPage__optionsItem,
+.contactUsPage__optionsItem > a {
 	display: flex;
+	text-decoration: none;
 	flex-direction: column;
 	align-items: center;
 }
@@ -43,13 +45,15 @@
 	color: #ffc0a1;
 	font-size: 40px !important;
 }
-.contactUsPage__optionsItem > button {
+.contactUsPage__optionsItem > button,
+.contactUsPage__optionsItem > a > button {
 	border: none;
 	background-color: white;
 	font-size: 1.2vw;
 	outline: none;
 	color: #424242;
 	width: 200px;
+	text-decoration: none;
 	cursor: pointer;
 	border: 0.2vw #ffc0a1 solid;
 	transition: 0.3s ease;
@@ -58,8 +62,10 @@
 	font-family: Quattrocento-Regular;
 	padding: 15px 0;
 }
-.contactUsPage__optionsItem > button:hover {
+.contactUsPage__optionsItem > button:hover,
+.contactUsPage__optionsItem > a > button:hover {
 	background-color: #ffc0a1;
+	text-decoration: none;
 	transition: 0.3s ease;
 	font-weight: bold;
 	color: white;
@@ -94,8 +100,10 @@
 	.contactUsPageDescription {
 		font-size: 20px;
 	}
-	.contactUsPage__optionsItem > button {
+	.contactUsPage__optionsItem > button,
+	.contactUsPage__optionsItem > a > button {
 		font-size: 18px;
+		text-decoration: none;
 		width: 180px;
 		border: 0.2vw #ffc0a1 solid;
 		transition: 0.3s ease;
@@ -122,14 +130,16 @@
 		margin: 40px;
 		background-color: whitesmoke;
 		width: 300px;
-        flex-direction: column;
+		flex-direction: column;
 		justify-content: space-evenly;
 		display: flex;
 		/* border: 1px red solid; */
 	}
-	.contactUsPage__optionsItem > button {
+	.contactUsPage__optionsItem > button,
+	.contactUsPage__optionsItem > a > button {
 		font-size: 16px;
 		width: 150px;
+		text-decoration: none;
 		border: 0.2vw #ffc0a1 solid;
 		transition: 0.3s ease;
 		border-radius: 0.7vw;
@@ -139,39 +149,42 @@
 	}
 }
 @media screen and (max-width: 400px) {
-    .contactUsPageTitle{
-        font-size: 30px;
-    }
-    .contactUsPageDescription {
+	.contactUsPageTitle {
+		font-size: 30px;
+	}
+	.contactUsPageDescription {
 		font-size: 18px;
 	}
-    .contactUsPage__optionsItem > button {
+	.contactUsPage__optionsItem > button,
+	.contactUsPage__optionsItem > a > button {
 		font-size: 13px;
 		width: 150px;
 		border: 0.2vw #ffc0a1 solid;
 		transition: 0.3s ease;
+		text-decoration: none;
 		border-radius: 0.7vw;
 		margin: 20px;
 		font-family: Quattrocento-Regular;
 		padding: 15px 0;
 	}
-    .contactUsPage__openHours > h4 {
-        font-size: 15px;
-    }
-    .contactUsPage__openHours > p {
-        font-size: 14px;
-        width: 230px;
-    }
-    
-}
-@media screen and (max-width: 280px) {
-    .contactUsPageTitle{
-        font-size: 25px;
-    }
-    .contactUsPageDescription {
+	.contactUsPage__openHours > h4 {
 		font-size: 15px;
 	}
-    .contactUsPage__optionsItem > button {
+	.contactUsPage__openHours > p {
+		font-size: 14px;
+		width: 230px;
+	}
+}
+@media screen and (max-width: 280px) {
+	.contactUsPageTitle {
+		font-size: 25px;
+	}
+	.contactUsPageDescription {
+		font-size: 15px;
+	}
+	.contactUsPage__optionsItem > button,
+	.contactUsPage__optionsItem > a > button {
+		text-decoration: none;
 		font-size: 13px;
 		width: 100px;
 		border: 0.2vw #ffc0a1 solid;
@@ -181,12 +194,12 @@
 		font-family: Quattrocento-Regular;
 		padding: 15px 0;
 	}
-    .contactUsPage__openHours > h4 {
-        font-size: 15px;
-    }
-	
-    .contactUsPage__openHours > p {
-        font-size: 14px;
-        width: 230px;
-    }
+	.contactUsPage__openHours > h4 {
+		font-size: 15px;
+	}
+
+	.contactUsPage__openHours > p {
+		font-size: 14px;
+		width: 230px;
+	}
 }
