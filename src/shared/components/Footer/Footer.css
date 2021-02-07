@@ -30,7 +30,7 @@
 .footer a {
 	text-decoration: none;
 	margin-bottom: 1vw;
-	font-size: 14px;
+	font-size: 1vw;
 	font-family: Quattrocento-Regular;
 	color: #707070;
 }
@@ -39,7 +39,7 @@
 	font-weight: bold;
 }
 .footer p:first-child {
-	font-size: 14px;
+	font-size: 1vw;
 	color: #707070;
 	padding: 1vw 0;
 	font-family: Quattrocento-Regular;
@@ -48,8 +48,8 @@
 .footer__rightSectionDescription {
 	color: #707070;
 	font-family: Quattrocento-Regular;
-	font-size: 14px;
-	line-height: 16px;
+	font-size: 1vw;
+	line-height: 1.2vw;
 	width: 20vw;
 }
 
@@ -59,7 +59,7 @@
 	margin-top: 1vw;
 	font-family: Quattrocento-Regular;
 	border: none;
-    font-size: 14px;
+    font-size: 1vw;
 	margin-top: 3vw;
 	text-align: center;
     background-color: transparent;
@@ -74,11 +74,11 @@
     font-weight: bold;
     color: white;
 }
-.footer__bottom {
+.footer__bottom {	
 	color: #707070;
 	font-family: Quattrocento-Regular;
 	font-weight: bold;
-	font-size: 14px;
+	font-size: 1vw;
 }
 
 /* ------------------------------------------------------ */

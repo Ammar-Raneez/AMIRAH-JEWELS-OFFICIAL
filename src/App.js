@@ -7,7 +7,7 @@ import TopBar from './shared/components/topbar/TopBar';
 import Header from './shared/components/header/Header';
 import AboutPageCompany from './pages/AboutPage/AboutPageCompany';
 import AboutPageCharity from './pages/AboutPage/AboutPageCharity';
-import ThankyouCreatingAccount from './pages/AccountPages/ThankyouPage/ThankyouCreatingAccount';
+// import ThankyouCreatingAccount from './pages/AccountPages/ThankyouPage/ThankyouCreatingAccount';
 import GemStonesMain from './pages/GemsPages/GemStonesMain/GemStonesMain';
 import ProcessPage from './pages/ProcessPage/ProcessPage';
 import AboutPagePolicy from './pages/AboutPage/AboutPagePolicy';
@@ -70,12 +70,12 @@ function App() {
 						<RegisterPage />
 						<Footer />
 					</Route>
-					<Route path="/thanking">
+					{/* <Route path="/thanking">
 						<TopBar />
 						<Header />
 						<ThankyouCreatingAccount />
 						<Footer />
-					</Route>
+					</Route> */}
 
 					<Route path="/designer+desk">
 						<h2>Designer Desk component</h2>

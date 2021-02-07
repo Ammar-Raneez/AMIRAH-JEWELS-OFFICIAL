@@ -38,7 +38,7 @@
     color: #888;
 }
 
-.homePage__categoryRow div div img {
+.homePage__categoryRow > div > a > div > img {
     min-width: 200px;
     max-width: 200px;
     max-height: 200px;
@@ -57,6 +57,20 @@
 .homePage__categoryEach:hover {
     cursor: pointer;
     transform: scale(1.05);
+}
+
+@media screen and (max-width: 4000px) and (min-width: 1400px) {
+    .homePage__categoryRow > div > a > div > img {
+        min-width: 11vw;
+        max-width: 11vw;
+        max-height: 11vw;
+        min-height: 11vw;
+        margin: 1vw;
+    }
+
+    .homePage__categoryRow > div > a > div > p {
+        font-size: 1.2vw;
+    }
 }
 
 @media screen and (max-width: 768px) and (min-width: 400px) {
