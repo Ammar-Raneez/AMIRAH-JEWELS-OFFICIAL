@@ -3,6 +3,7 @@ import WishListItem from './WishListItem/WishListItem';
 import { useStateValue } from '../../StateProvider';
 import { useEffect, useState } from 'react';
 import { db } from '../../firebase';
+import { Fade } from 'react-awesome-reveal';
 
 function WishListPage() {
 	const [{ wishListBasket, cartBasket, user }, dispatch] = useStateValue();
@@ -79,9 +80,11 @@ function WishListPage() {
 							<p>Add Items To Your Wishlist to Display them Here</p>
 						</div>
 					) : (
-						wishListBasket.map((item, x) => (
-							<WishListItem key={x} img={item.imgURL} title={item.name} currency="$" price={item.cost} />
-						))
+						<Fade direction="left">
+							{wishListBasket.map((item, x) => (
+								<WishListItem key={x} img={item.imgURL} title={item.name} currency="$" price={item.cost} />
+							))}
+						</Fade>
 					)}
 				</div>
 			)}
