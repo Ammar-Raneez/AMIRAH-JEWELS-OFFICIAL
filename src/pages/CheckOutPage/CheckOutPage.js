@@ -95,7 +95,7 @@ function CheckOutPage() {
 						// getting the current checkout orders present from the database
 						console.log('Adding old items inside');
 						tempArray = [];
-						for (const checkOutDetails of doc.data().checkOutOrders) {
+						for (const checkOutDetails of doc.data()?.checkOutOrders) {
 							tempArray.push(checkOutDetails);
 						}
 					}
