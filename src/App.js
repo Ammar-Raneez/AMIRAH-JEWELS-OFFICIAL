@@ -52,8 +52,6 @@ function App() {
 		};
 	}, []);
 
-	
-
 	return (
 		<Router>
 			<div className="app">
@@ -64,18 +62,13 @@ function App() {
 						<LoginPage />
 						<Footer />
 					</Route>
+
 					<Route path="/register">
 						<TopBar />
 						<Header />
 						<RegisterPage />
 						<Footer />
 					</Route>
-					{/* <Route path="/thanking">
-						<TopBar />
-						<Header />
-						<ThankyouCreatingAccount />
-						<Footer />
-					</Route> */}
 
 					<Route path="/designer+desk">
 						<h2>Coming Soon!</h2>
@@ -139,12 +132,14 @@ function App() {
 						<NecklacePendantPage />
 						<Footer />
 					</Route>
+
 					<Route path="/checkout">
 						<TopBar />
 						<Header />
 						<CheckOutPage />
 						<Footer />
 					</Route>
+					
 					<Route path="/explore+all+categories">
 						<TopBar />
 						<Header />

@@ -41,7 +41,8 @@ function WishListItem({ img, title, currency, price }) {
 					productQuantity: 1,
 				},
 			});
-			alert('Added item to cart!');
+			//If item is added into cart, remove it from wishlist
+			removeItem();
 		} else {
 			alert('Please sign in to add item to wishlist');
 		}
@@ -81,12 +82,12 @@ function WishListItem({ img, title, currency, price }) {
 					</div>
 
 					<div className="wishListItem__details">
-						<div className="wishListItem__price">
+						<div className="wishListItem__price" onClick={addItemToCart}>
 							<p>
 								{currency}
 								{(Math.round(price * 100) / 100).toFixed(2)}
 							</p>
-							<p onClick={addItemToCart}>Add to Cart</p>
+							<p>Add to Cart</p>
 						</div>
 						<p>{title}</p>
 					</div>
