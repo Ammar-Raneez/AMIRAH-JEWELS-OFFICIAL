@@ -57,7 +57,7 @@ function WishListPage() {
 
 	return user ? (
 		<div className="wishListPage">
-			<SEO title={`${user}'s Wish List`} />
+			<SEO title={`${user.displayName}'s Wish List`} />
 			{/* wishlist title */}
 			<div className="wishListPage__title">
 				<h1>MY WISHLIST</h1>
