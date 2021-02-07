@@ -13,10 +13,51 @@
 	background-color: #fff5ef;
 	width: 90vw;
 }
-.processStep > img, .processStepReflect > img {
+.processStep > img, .processStepReflect > img, .processStep > div > img, .processStepReflect > div > img {
 	object-fit: contain;
 	align-self: center;
 	height: 50vw;
+	transition: 0.3s ease all;
+}
+
+.processStep > div > img, .processStepReflect > div > img {
+	opacity: 0;
+}
+
+@keyframes cf3FadeInOut {
+	0% {
+		opacity:1;
+	}
+	45% {
+		opacity:1;
+	}
+	55% {
+		opacity:0;
+	}
+	100% {
+		opacity:0;
+	}
+}
+.processStep__firstImage {
+	animation-name: cf3FadeInOut;
+	animation-timing-function: ease-in-out;
+	animation-iteration-count: infinite;
+	animation-duration: 5s;
+	animation-direction: alternate;
+}
+.processStep__secondImage {
+	animation-name: cf3FadeInOut;
+	animation-timing-function: ease-in-out;
+	animation-iteration-count: infinite;
+	animation-duration: 10s;
+	animation-direction: alternate;
+}
+.processStep__thirdImage {
+	animation-name: cf3FadeInOut;
+	animation-timing-function: ease-in-out;
+	animation-iteration-count: infinite;
+	animation-duration: 15s;
+	animation-direction: alternate;
 }
 
 .processStep__description > p {
