@@ -55,7 +55,7 @@
 	justify-items: flex-start !important;
 	width: 300px;
 }
-.necklacePendant__sectionCartCartDetails > h2 {
+.necklacePendant__sectionCartCartDetails > div > h2 {
 	font-size: 25px;
 	font-family: Quattrocento-Regular;
 	color: #707070;
@@ -71,7 +71,7 @@
 	align-items: center;
 	justify-content: space-between;
 }
-.necklacePendant__sectionCartCartDetails > p {
+.necklacePendant__sectionCartCartDetails > div > p {
 	font-family: Quattrocento-Regular;
 	font-size: 20px;
 	color: #494949;
@@ -130,7 +130,7 @@
     margin-bottom: -50px;
     max-width: 1200px;
 }
-.necklacePendant__otherProducts > h3 {
+.necklacePendant__otherProducts > div > h3 {
 	font-weight: lighter;
 }
 .necklacePendant__otherProducts {
