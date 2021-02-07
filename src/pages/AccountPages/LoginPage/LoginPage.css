@@ -45,6 +45,11 @@
 	flex-direction: column;
 }
 
+.loginPage__leftSide .loginPage__leftSideTop, .loginPage__leftSide .loginPage__leftSideBottom, 
+.loginPage__rightSide .loginPage__rightSideTop, .loginPage__rightSide .loginPage__rightSideBottom {
+    width: 100%;
+}
+
 .loginPage__leftSide > div > input {
 	width: 95%;
 	outline: none;
@@ -107,6 +112,10 @@
 
     .loginPage .loginPage__subTitle, .loginPage > div > div > form > button, .loginPage > div > div > a > button, .loginPage__leftSide > div > input {
         font-size: 14px;
+    }
+
+    .loginPage > div > div > form > button {
+        margin-top: 20px;
     }
 
     .loginPage {
