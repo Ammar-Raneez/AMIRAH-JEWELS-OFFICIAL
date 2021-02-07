@@ -19,7 +19,9 @@ function MakeDreamsTrue() {
 					</Slide>
 				</div>
 
-				<img src="homepage-dreams/PINK SAPPHIRE RING 2.png" className="homePage__makeDreamsTrue__topImage" alt="" />
+				<Fade>
+					<img src="homepage-dreams/PINK SAPPHIRE RING 2.png" className="homePage__makeDreamsTrue__topImage" alt="" />
+				</Fade>
 				<div className="homePage__makeDreamsTrue__topPrices">
 					<Slide direction="right">
 						<h1>PRICE</h1>
@@ -42,7 +44,9 @@ function MakeDreamsTrue() {
 					</Slide>
 				</div>
 				{/* <Slide direction="right"> */}
-					<img className="homePage__makeDreamsTrue__middle__image" src="homepage-dreams/PINK SAPPHIRE RING.png" alt="" />
+					<Fade>
+						<img className="homePage__makeDreamsTrue__middle__image" src="homepage-dreams/PINK SAPPHIRE RING.png" alt="" />
+					</Fade>
 				{/* </Slide> */}
 			</div>
 
@@ -73,7 +77,9 @@ function MakeDreamsTrue() {
 							</Slide>
 						</div>
 					</div>
-					<img src="homepage-dreams/PINK SAPPHIRE RING 3.png"  alt="" />
+					<Fade>
+						<img src="homepage-dreams/PINK SAPPHIRE RING 3.png"  alt="" />
+					</Fade>
 					<div className="homePage__makeDreamsTrue__bottomImageDetailSecond">
 						<div className="homePage__makeDreamsTrue__bottomImageDetailFirstWeight">
 							<Slide direction="right">
