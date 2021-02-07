@@ -3,16 +3,18 @@ import { useHistory } from 'react-router-dom';
 import { auth } from '../../../firebase';
 import { useStateValue } from '../../../StateProvider';
 import './LoginPage.css';
-import { ValidatorForm, TextValidator} from 'react-material-ui-form-validator';
+import { ValidatorForm, TextValidator } from 'react-material-ui-form-validator';
 import { Button, Dialog, DialogActions, DialogContent, DialogContentText, DialogTitle } from '@material-ui/core';
 
 function LoginPage() {
 	const history = useHistory();
-	const formRef = useRef("form");
+	const formRef = useRef('form');
 	const [dialogOpen, setDialogOpen] = useState(false);
 	const [email, setEmail] = useState('');
+	const [forgetEmail, setForgetEmail] = useState('');
 	const [password, setPassword] = useState('');
 	const [{ user }, dispatch] = useStateValue();
+	const [forgetPasswordOpen, setForgetPasswordOpen] = useState(false);
 
 	const signIn = (e) => {
 		e.preventDefault();
@@ -47,6 +49,19 @@ function LoginPage() {
 			.catch(setDialogOpen(!dialogOpen));
 	};
 
+	// Forget password implementation (using firebase)
+	const forgetPassword = () => {
+		setForgetPasswordOpen(!forgetPasswordOpen);
+
+		auth
+			.sendPasswordResetEmail(forgetEmail)
+			.then((res) => {
+				alert('Please check your email');
+				setForgetEmail('');
+			})
+			.catch((e) => alert(e.message));
+	};
+
 	return (
 		<div className="loginPage">
 			<div className="loginPage__leftSide">
@@ -56,28 +71,28 @@ function LoginPage() {
 				</div>
 				<div className="loginPage__leftSideBottom">
 					<ValidatorForm onSubmit={signIn} ref={formRef} className="loginPage__form">
-						<TextValidator 
-							style={{ width: '90%' }} 
-							type="email" 
+						<TextValidator
+							style={{ width: '90%' }}
 							label="Email"
-							name="email" 
-							onChange={(e) => setEmail(e.target.value)} 
-							value={email} 
+							name="email"
+							onChange={(e) => setEmail(e.target.value)}
+							value={email}
 							errorMessages="Please add an email"
 							validators={['required', 'isEmail']}
 						/>
-						<TextValidator 
-							style={{ width: '90%' }} 
-							type="password" 
-							label="Password" 
+						<TextValidator
+							style={{ width: '90%' }}
+							type="password"
+							label="Password"
 							name="password"
-							onChange={(e) => setPassword(e.target.value)} 
-							value={password} 
+							onChange={(e) => setPassword(e.target.value)}
+							value={password}
 							errorMessages="Please add a password"
-							validators={['required']}	
+							validators={['required']}
 						/>
 						<button type="submit">SIGN IN</button>
 					</ValidatorForm>
+					<button onClick={() => setForgetPasswordOpen(!forgetPasswordOpen)}>FORGOT PASSWORD</button>
 				</div>
 			</div>
 			<div className="loginPage__rightSide">
@@ -89,7 +104,9 @@ function LoginPage() {
 					</p>
 				</div>
 				<div className="loginPage__rightSideBottom">
-					<a href="/register"><button>REGISTER NOW</button></a>
+					<a href="/register">
+						<button>REGISTER NOW</button>
+					</a>
 				</div>
 			</div>
 			<Dialog
@@ -98,18 +115,56 @@ function LoginPage() {
 				aria-labelledby="alert-dialog-title"
 				aria-describedby="alert-dialog-description"
 			>
-				<DialogTitle id="alert-dialog-title">{"Invalid Credentials"}</DialogTitle>
+				<DialogTitle id="alert-dialog-title">{'Invalid Credentials'}</DialogTitle>
 				<DialogContent>
-				<DialogContentText id="alert-dialog-description">
-					The details provided are incorrect, it is either because
-					there is no such Account or the email/password is incorrect.
-				</DialogContentText>
+					<DialogContentText id="alert-dialog-description">
+						The details provided are incorrect, it is either because there is no such Account or the email/password is
+						incorrect.
+					</DialogContentText>
 				</DialogContent>
 				<DialogActions>
-				<Button onClick={() => setDialogOpen(!dialogOpen)} color="primary">
-					Retry
-				</Button>
+					<Button onClick={() => setDialogOpen(!dialogOpen)} color="primary">
+						Retry
+					</Button>
 				</DialogActions>
+			</Dialog>
+			{/* Dialog Box for forget password */}
+			<Dialog
+				open={forgetPasswordOpen}
+				onClose={() => setForgetPasswordOpen(!forgetPasswordOpen)}
+				aria-labelledby="alert-dialog-title"
+				aria-describedby="alert-dialog-description"
+			>
+				<DialogTitle id="alert-dialog-title">{'Forgot Password?'}</DialogTitle>
+				<DialogContent>
+					<DialogContentText id="alert-dialog-description">
+						<DialogContentText id="alert-dialog-description">
+							An email will be sent to the entered email address for resetting password purposes.
+						</DialogContentText>
+						<ValidatorForm onSubmit={forgetPassword} ref={formRef}>
+							<TextValidator
+								style={{ width: '40vw' }}
+								type="email"
+								label="Email"
+								name="from_name"
+								onChange={(e) => setForgetEmail(e.target.value)}
+								value={forgetEmail}
+								errorMessages="Please add an email"
+								validators={['required', 'isEmail']}
+							/>
+							<Button
+								style={{
+									float: 'right',
+									margin: '15px',
+								}}
+								type="submit"
+								onClick={forgetPassword}
+							>
+								CONFIRM
+							</Button>
+						</ValidatorForm>
+					</DialogContentText>
+				</DialogContent>
 			</Dialog>
 		</div>
 	);

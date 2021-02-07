@@ -9,35 +9,36 @@
 }
 
 .loginPage {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    margin-bottom: 5vw;
-    margin-top: 8vw;
-    overflow-x: hidden;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	margin-bottom: 5vw;
+	margin-top: 8vw;
+	overflow-x: hidden;
 }
 
-.loginPage .loginPage__leftSide, .loginPage .loginPage__rightSide {
-    overflow-x: hidden;
-    min-width: 500px;
-    max-width: 500px;
-    color: #555555;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
+.loginPage .loginPage__leftSide,
+.loginPage .loginPage__rightSide {
+	overflow-x: hidden;
+	min-width: 500px;
+	max-width: 500px;
+	color: #555555;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
 }
 
-.loginPage .loginPage__title  {
-    font-family: bowie;
-    font-size: 3vw;
+.loginPage .loginPage__title {
+	font-family: bowie;
+	font-size: 3vw;
 }
 
 .loginPage .loginPage__subTitle {
-    font-family: Quattrocento-Regular;
-    font-size: 1.2vw;
-    margin-top: 1vw;
-    margin-bottom: 3vw;
+	font-family: Quattrocento-Regular;
+	font-size: 1.2vw;
+	margin-top: 1vw;
+	margin-bottom: 3vw;
 }
 
 .loginPage__leftSide {
@@ -45,9 +46,11 @@
 	flex-direction: column;
 }
 
-.loginPage__leftSide .loginPage__leftSideTop, .loginPage__leftSide .loginPage__leftSideBottom, 
-.loginPage__rightSide .loginPage__rightSideTop, .loginPage__rightSide .loginPage__rightSideBottom {
-    width: 100%;
+.loginPage__leftSide .loginPage__leftSideTop,
+.loginPage__leftSide .loginPage__leftSideBottom,
+.loginPage__rightSide .loginPage__rightSideTop,
+.loginPage__rightSide .loginPage__rightSideBottom {
+	width: 100%;
 }
 
 .loginPage__leftSide > div > input {
@@ -64,131 +67,146 @@
 }
 
 .loginPage > div > div > a {
-    width: 100%;
+	width: 100%;
 }
 
-.loginPage > div > div > form > button, .loginPage > div > div >a > button {
+.loginPage > div > div > form > button,
+.loginPage > div > div > a > button,
+.loginPage__leftSideBottom > button {
 	padding: 1vw 3vw;
 	cursor: pointer;
-    margin-top: 1vw;
-    width: 100%;
+	margin-top: 1vw;
+	width: 100%;
 	font-family: Quattrocento-Regular;
 	border: 1px solid #ffc0a1;
 	font-size: 1.3vw;
 	color: #555555;
 	outline: none;
 	background-color: #ffc0a1;
-    border-radius: 0.7vw;
-    margin-top: 2vw;
-    transition: 0.3s ease;
+	border-radius: 0.7vw;
+	margin-top: 2vw;
+	transition: 0.3s ease;
 }
-.loginPage > div > div > button:hover, .loginPage > div > div > a > button:hover {
-    background: #fff;
-    border: 1px solid #e58177;
+.loginPage > div > div > form > button:hover,
+.loginPage > div > div > a > button:hover,
+.loginPage__leftSideBottom > button:hover {
+	background: #fff;
+	border: 1px solid #e58177;
 }
 
 @media screen and (max-width: 1250px) and (min-width: 400px) {
-    .loginPage__leftSide, .loginPage__rightSide {
-        min-width: 95% !important;
-        max-width: 95% !important;
-        margin: 0px;
-    }
+	.loginPage__leftSide,
+	.loginPage__rightSide {
+		min-width: 95% !important;
+		max-width: 95% !important;
+		margin: 0px;
+	}
 
-    .loginPage__leftSide > div, .loginPage__rightSide > div {
-        width: 100%;
-    }
+	.loginPage__leftSide > div,
+	.loginPage__rightSide > div {
+		width: 100%;
+	}
 
-    .loginPage__rightSide {
-        margin-top: 15%;
-    }
+	.loginPage__rightSide {
+		margin-top: 15%;
+	}
 
-    .loginPage__form > div > div {
-        width: 100% !important;
-    }
+	.loginPage__form > div > div {
+		width: 100% !important;
+	}
 
-    .loginPage .loginPage__title {
-        font-size: 30px;
-    }
+	.loginPage .loginPage__title {
+		font-size: 30px;
+	}
 
-    .loginPage .loginPage__subTitle, .loginPage > div > div > form > button, .loginPage > div > div > a > button, .loginPage__leftSide > div > input {
-        font-size: 14px;
-    }
+	.loginPage .loginPage__subTitle,
+	.loginPage > div > div > form > button,
+	.loginPage > div > div > a > button,
+	.loginPage__leftSide > div > input,
+	.loginPage__leftSideBottom > button {
+		font-size: 14px;
+	}
 
-    .loginPage > div > div > form > button {
-        margin-top: 20px;
-    }
+	.loginPage > div > div > form > button ,.loginPage__leftSideBottom > button{
+		margin-top: 20px;
+	}
 
-    .loginPage {
-        justify-content: space-between;
-        padding: 30px;
-        height: 60%;
-        align-items: center;
-        margin-bottom: 22%;
-        text-align: center;
-        /* flex-direction: column; */
-    }
+	.loginPage {
+		justify-content: space-between;
+		padding: 30px;
+		height: 60%;
+		align-items: center;
+		margin-bottom: 22%;
+		text-align: center;
+		/* flex-direction: column; */
+	}
 
-    .loginPage__form {
-        width: 100%;
-    }
+	.loginPage__form {
+		width: 100%;
+	}
 
-    .loginPage__form > div > div > div > .MuiInputBase-input {
-        width: 100%;
-        font-size: 14px !important;
-    }
+	.loginPage__form > div > div > div > .MuiInputBase-input {
+		width: 100%;
+		font-size: 14px !important;
+	}
 }
 
 @media screen and (max-width: 400px) {
-    .loginPage__leftSide, .loginPage__rightSide {
-        min-width: 95% !important;
-        max-width: 95% !important;
-        margin: 0px;
-    }
+	.loginPage__leftSide,
+	.loginPage__rightSide {
+		min-width: 95% !important;
+		max-width: 95% !important;
+		margin: 0px;
+	}
 
-    .loginPage__leftSide > div, .loginPage__rightSide > div {
-        width: 100%;
-    }
+	.loginPage__leftSide > div,
+	.loginPage__rightSide > div {
+		width: 100%;
+	}
 
-    .loginPage__leftSide {
-        margin-bottom: 30%;
-    }
+	.loginPage__leftSide {
+		margin-bottom: 30%;
+	}
 
-    .loginPage__rightSide {
-        margin-top: 15%;
-    }
+	.loginPage__rightSide {
+		margin-top: 15%;
+	}
 
-    .loginPage__form > div > div {
-        width: 100% !important;
-    }
+	.loginPage__form > div > div {
+		width: 100% !important;
+	}
 
-    .loginPage .loginPage__title {
-        font-size: 30px;
-    }
+	.loginPage .loginPage__title {
+		font-size: 30px;
+	}
 
-    .loginPage .loginPage__subTitle, .loginPage > div > div > form > button, .loginPage > div > div > a > button, .loginPage__leftSide > div > input {
-        font-size: 14px;
-    }
+	.loginPage .loginPage__subTitle,
+	.loginPage > div > div > form > button,
+	.loginPage > div > div > a > button,
+	.loginPage__leftSide > div > input,.loginPage__leftSideBottom > button {
+		font-size: 14px;
+	}
 
-    .loginPage > div > div > form > button {
-        margin-top: 20px;
-    }
+	.loginPage > div > div > form > button,.loginPage__leftSideBottom > button {
+		margin-top: 20px;
+	}
 
-    .loginPage {
-        justify-content: space-between;
-        padding: 30px;
-        height: 60%;
-        align-items: center;
-        margin-bottom: 50%;
-        text-align: center;
-        /* flex-direction: column; */
-    }
+	.loginPage {
+		justify-content: space-between;
+		padding: 30px;
+		height: 60%;
+		align-items: center;
+		margin-bottom: 50%;
+		text-align: center;
+		/* flex-direction: column; */
+	}
 
-    .loginPage__form {
-        width: 100%;
-    }
+	.loginPage__form {
+		width: 100%;
+	}
 
-    .loginPage__form > div > div > div > .MuiInputBase-input {
-        width: 100%;
-        font-size: 14px !important;
-    }
+	.loginPage__form > div > div > div > .MuiInputBase-input {
+		width: 100%;
+		font-size: 14px !important;
+	}
 }
