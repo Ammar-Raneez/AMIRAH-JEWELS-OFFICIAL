@@ -230,7 +230,7 @@ function NecklacePendantPage() {
 			</div>
 			{/* Description */}
 			<div id="product__description" className="necklacePendant__description">
-				<Fade cascade>
+				<Fade triggerOnce cascade>
 					<h2>Description & Details</h2>
 					<p className="necklacePendant__descriptionMain">
 						This circle pendant features black onyx, a unique variety of quartz found in nature. This striking pendant is

@@ -33,7 +33,7 @@
     flex-wrap: wrap;
 }
 
-.homePage__categoryRow > .css-z1mjt4 > a {
+.homePage__categoryRow > div > a {
     text-decoration: none;
     color: #888;
 }

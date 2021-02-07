@@ -7,6 +7,7 @@ import './GemDetails.css';
 import { useStateValue } from '../../../StateProvider';
 import { db } from '../../../firebase';
 import ReactImageMagnify from 'react-image-magnify';
+import { Fade } from 'react-awesome-reveal';
 
 function TealGemDetail() {
 	//this state is to track which image is selected to add a active className
@@ -202,86 +203,96 @@ function TealGemDetail() {
 					</div>
 				</div>
 				<div className="gemDetails__sectionCartCartDetails">
-					<h2>Teal Sapphire</h2>
-					<div className="gemDetails__sectionCartCartDetailsItem">
-						<p>Quantity</p>
-						<p>1</p>
-					</div>
-					<div className="gemDetails__sectionCartCartDetailsItem">
-						<p>Weight (Carat)</p>
-						<p>0.3</p>
-					</div>
-					<div className="gemDetails__sectionCartCartDetailsItem">
-						<p>Shape</p>
-						<p>Round</p>
-					</div>
-					<p>Price: $ 1100.00</p>
-					<br />
-					<br />
-					<div className="gemDetails__sectionCartCartDetailsBtns">
-						{user ? (
-							<Link>
-								<button onClick={addItemToCart}>ADD TO CART</button>
-							</Link>
-						) : (
-							<></>
-						)}
-						<a href="#viewDetails">
-							<button>VIEW DETAILS</button>
-						</a>
-					</div>
+					<Fade triggerOnce direction="right" cascade>
+						<h2>Teal Sapphire</h2>
+						<div className="gemDetails__sectionCartCartDetailsItem">
+							<p>Quantity</p>
+							<p>1</p>
+						</div>
+						<div className="gemDetails__sectionCartCartDetailsItem">
+							<p>Weight (Carat)</p>
+							<p>0.3</p>
+						</div>
+						<div className="gemDetails__sectionCartCartDetailsItem">
+							<p>Shape</p>
+							<p>Round</p>
+						</div>
+						<p>Price: $ 1100.00</p>
+						<br />
+						<br />
+						<div className="gemDetails__sectionCartCartDetailsBtns">
+							{user ? (
+								<Link>
+									<button onClick={addItemToCart}>ADD TO CART</button>
+								</Link>
+							) : (
+								<></>
+							)}
+							<a href="#viewDetails">
+								<button>VIEW DETAILS</button>
+							</a>
+						</div>
+					</Fade>
 				</div>
 			</div>
 
 			{/* video content */}
 			<div className="gemDetails__sectionVideo">
-				<h2>Video Content:</h2>
-				<video src="" loop controls autoplay></video>
+				<Fade triggerOnce>
+					<h2>Video Content:</h2>
+					<video src="" loop controls autoplay></video>
+				</Fade>
 			</div>
 
 			{/* description and details */}
 			<div id="viewDetails" className="gemDetails__sectionDescription">
-				<h2>Description & Details</h2>
-				<div className="gemDetails__sectionDescriptionTable">
-					{tableRow('Main Stone', 'Natural Sapphire')}
-					{tableRow('Brand', 'Natural Sapphire')}
-					{tableRow('Verity', 'Sapphire')}
-					{tableRow('Shape', 'Round')}
-					{tableRow('Treatment', 'Heated')}
-					{tableRow('Country', 'Sri Lanka')}
-					{tableRow('Length (mm)', '6.87')}
-					{tableRow('Width (mm)', '6.08')}
-					{tableRow('Depth (mm)', '3.78')}
-					{tableRow('Clarity', '-')}
-					{tableRow('Cutting', 'Natural Sapphire')}
-					{tableRow('Weight (Carat)', 'Natural Sapphire')}
-					{tableRow('Certificate', 'GIC')}
-				</div>
+			<Fade cascade triggerOnce>
+					<h2>Description & Details</h2>
+					<div className="gemDetails__sectionDescriptionTable">
+						{tableRow('Main Stone', 'Natural Sapphire')}
+						{tableRow('Brand', 'Natural Sapphire')}
+						{tableRow('Verity', 'Sapphire')}
+						{tableRow('Shape', 'Round')}
+						{tableRow('Treatment', 'Heated')}
+						{tableRow('Country', 'Sri Lanka')}
+						{tableRow('Length (mm)', '6.87')}
+						{tableRow('Width (mm)', '6.08')}
+						{tableRow('Depth (mm)', '3.78')}
+						{tableRow('Clarity', '-')}
+						{tableRow('Cutting', 'Natural Sapphire')}
+						{tableRow('Weight (Carat)', 'Natural Sapphire')}
+						{tableRow('Certificate', 'GIC')}
+					</div>
+				</Fade>
 			</div>
 
 			{/* other similar products */}
 			<div className="gemDetails__sectionProduct">
-				<h2>Other Similar Products</h2>
-				<h3>Showing 1 - 40 of 1020</h3>
+				<Fade cascade>
+					<h2>Other Similar Products</h2>
+					<h3>Showing 1 - 40 of 1020</h3>
+				</Fade>
 
-				<div className="gemDetails__otherGemsRow">
-					<Gem img="gems/teal-sapphire.png" name="Teal Sapphires" viewMoreUrl="/teal+sapphire" />
-					<Gem img="gems/purple-sapphire.png" name="Purple Sapphires" viewMoreUrl="/purple+sapphire" />
-					<Gem
-						img="gems/Padparadscha-sapphire.png"
-						name="Padparadscha Sapphires"
-						viewMoreUrl="/padparadscha+sapphire"
-					/>
-					<Gem img="gems/orange-sapphire.png" name="Orange Sapphires" viewMoreUrl="/orange+sapphire" />
-				</div>
-				<div style={{ justifyContent: 'center' }} className="gemDetails__otherGemsRow">
-					<Gem
-						img="gems/ClaudiaHamann_PinkSapphire_Ceylon_Cushion_Unheated.png"
-						name="Pink Sapphires"
-						viewMoreUrl="/pink+sapphire"
-					/>
-					<Gem img="gems/white-sapphire.png" name="White Sapphires" viewMoreUrl="/white+sapphire" />
-				</div>
+				<Fade cascade>
+					<div className="gemDetails__otherGemsRow">
+						<Gem img="gems/teal-sapphire.png" name="Teal Sapphires" viewMoreUrl="/teal+sapphire" />
+						<Gem img="gems/purple-sapphire.png" name="Purple Sapphires" viewMoreUrl="/purple+sapphire" />
+						<Gem
+							img="gems/Padparadscha-sapphire.png"
+							name="Padparadscha Sapphires"
+							viewMoreUrl="/padparadscha+sapphire"
+						/>
+						<Gem img="gems/orange-sapphire.png" name="Orange Sapphires" viewMoreUrl="/orange+sapphire" />
+					</div>
+					<div style={{ justifyContent: 'center' }} className="gemDetails__otherGemsRow">
+						<Gem
+							img="gems/ClaudiaHamann_PinkSapphire_Ceylon_Cushion_Unheated.png"
+							name="Pink Sapphires"
+							viewMoreUrl="/pink+sapphire"
+						/>
+						<Gem img="gems/white-sapphire.png" name="White Sapphires" viewMoreUrl="/white+sapphire" />
+					</div>
+				</Fade>
 			</div>
 		</div>
 	);
