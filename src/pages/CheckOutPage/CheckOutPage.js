@@ -117,8 +117,8 @@ function CheckOutPage() {
 
 	const onDateChange = (date, value) => {
 		setCardExpireDate(value);
-		setCardExpYear(value.toString().split('/')[2]);
-		setCardExpMonth(value.toString().split('/')[1]);
+		setCardExpYear(value.toString().split(' ')[1]);
+		setCardExpMonth(value.toString().split(' ')[0]);
 	};
 	return (
 		<div className="checkoutPage">
@@ -245,7 +245,7 @@ function CheckOutPage() {
 							style={{ width: '93%' }}
 							disableToolbar
 							variant="inline"
-							format="MM/dd/yyyy"
+							views={["year", "month"]}
 							margin="normal"
 							id="card-expire-date"
 							placeholder="Card Expiry Date"
