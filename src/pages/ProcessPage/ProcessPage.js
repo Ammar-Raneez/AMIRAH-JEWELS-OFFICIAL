@@ -1,10 +1,12 @@
 import './ProcessPage.css';
 import ProcessStep from './ProcessStep/ProcessStep';
 import { Fade } from 'react-awesome-reveal';
+import SEO from '../../shared/components/SEO/SEO';
 
 function ProcessPage() {
 	return (
 		<div className="processPage">
+			<SEO title="The Process" />
 			{/* title */}
 			<Fade cascade direction="right" triggerOnce>
 				<h1>bringing unique jewelry designs to life</h1>

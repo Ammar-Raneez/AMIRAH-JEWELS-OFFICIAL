@@ -17,6 +17,7 @@ import { useEffect, useRef, useState } from 'react';
 import { TextValidator, ValidatorForm } from 'react-material-ui-form-validator';
 import { useHistory } from 'react-router-dom';
 import { db } from '../../firebase';
+import SEO from '../../shared/components/SEO/SEO';
 import { useStateValue } from '../../StateProvider';
 import './CheckOutPage.css';
 
@@ -122,6 +123,7 @@ function CheckOutPage() {
 	};
 	return (
 		<div className="checkoutPage">
+			<SEO title="Checkout" />
 			{/* jewel image */}
 			<div className="thankingPage__firstJewel">
 				<img src="aboutuspage/purple-sapphire.png" alt="" />

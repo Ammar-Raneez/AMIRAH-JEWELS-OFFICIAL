@@ -1,10 +1,12 @@
 import Product from '../NecklacePendantPage/Product/Product';
 import './GiftPage.css';
 import { Fade } from 'react-awesome-reveal';
+import SEO from '../../shared/components/SEO/SEO';
 
 function GiftPage() {
 	return (
 		<div className="giftPage">
+			<SEO title="Explore All Categories" />
 			<div className="giftPage__details">
 				<Fade triggerOnce direction="left">
 					<div className="giftPage__detailsSecond">

@@ -11,6 +11,7 @@ import { useStateValue } from '../../StateProvider';
 import { KeyboardDatePicker, MuiPickersUtilsProvider } from '@material-ui/pickers';
 import DateFnsUtils from '@date-io/date-fns';
 import { setDate } from 'date-fns/esm';
+import SEO from '../../shared/components/SEO/SEO';
 
 function ContactUsPage() {
 	const [{ user }, dispatch] = useStateValue();
@@ -66,6 +67,7 @@ function ContactUsPage() {
 
 	return (
 		<div className="contactUsPage">
+			<SEO title="Contact Us" />
 			<Fade cascade direction="right" triggerOnce>
 				<h1 className="contactUsPageTitle">Contact Us</h1>
 

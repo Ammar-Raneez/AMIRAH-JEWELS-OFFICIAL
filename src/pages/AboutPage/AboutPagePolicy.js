@@ -4,6 +4,7 @@ import About from './About/About';
 function AboutPagePolicy() {
 	return (
 		<About 
+			seoTitle="About Us - Policy"
 			title="POLICY"
 			firstPara="Every story has a beginning. Discover how Amirah Gems began in 2020 and grew into a global design house at the forefront of innovative jewelry design and expert craftsmanship"
 			secondHeader="2020"

@@ -4,6 +4,7 @@ import CartItem from './CartItem/CartItem';
 import Bill from './Bill/Bill';
 import { useStateValue } from '../../StateProvider';
 import { db } from '../../firebase';
+import SEO from '../../shared/components/SEO/SEO';
 
 function CartPage() {
 	const [{ wishListBasket, cartBasket, user, subTotal, delivery, tax }, dispatch] = useStateValue();
@@ -57,6 +58,7 @@ function CartPage() {
 
 	return user ? (
 		<div className="cartPage">
+			<SEO title={`${user.displayName}'s Cart`} />
 			<div className="cartPage__title">
 				<h1>MY CART</h1>
 			</div>
@@ -91,6 +93,7 @@ function CartPage() {
 		</div>
 	) : (
 		<div className="cartPage">
+			<SEO title="Cart" />
 			<div className="cartPage__itemsNoLogin">
 				<h1>Login to be able to add items to your cart</h1>
 				<a href="/login">

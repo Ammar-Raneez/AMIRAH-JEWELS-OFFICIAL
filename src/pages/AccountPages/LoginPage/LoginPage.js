@@ -5,6 +5,7 @@ import { useStateValue } from '../../../StateProvider';
 import './LoginPage.css';
 import { ValidatorForm, TextValidator } from 'react-material-ui-form-validator';
 import { Button, Dialog, DialogActions, DialogContent, DialogContentText, DialogTitle } from '@material-ui/core';
+import SEO from '../../../shared/components/SEO/SEO';
 
 function LoginPage() {
 	const history = useHistory();
@@ -64,6 +65,7 @@ function LoginPage() {
 
 	return (
 		<div className="loginPage">
+			<SEO title="Login" />
 			<div className="loginPage__leftSide">
 				<div className="loginPage__leftSideTop">
 					<p className="loginPage__title">SIGN IN</p>
