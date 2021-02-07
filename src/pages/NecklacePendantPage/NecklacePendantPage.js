@@ -10,6 +10,7 @@ import Product from './Product/Product';
 import ChevronRightIcon from '@material-ui/icons/ChevronRight';
 import ReactImageMagnify from 'react-image-magnify';
 import { Fade } from 'react-awesome-reveal';
+import SEO from '../../shared/components/SEO/SEO';
 
 function NecklacePendantPage() {
 	//this state is to track which image is selected to add a active className
@@ -142,6 +143,7 @@ function NecklacePendantPage() {
 
 	return (
 		<div className="necklacePendant">
+			<SEO title="Necklaces & Pendants" />
 			<div className="necklacePendant__sectionCart">
 				<div className="necklacePendant__sectionCartSmallImages">
 					<img

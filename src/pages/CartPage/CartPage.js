@@ -58,7 +58,7 @@ function CartPage() {
 
 	return user ? (
 		<div className="cartPage">
-			<SEO title={user ? `${user}'s cart` : 'cart'} />
+			<SEO title={`${user}'s cart`} />
 			<div className="cartPage__title">
 				<h1>MY CART</h1>
 			</div>
@@ -93,6 +93,7 @@ function CartPage() {
 		</div>
 	) : (
 		<div className="cartPage">
+			<SEO title="Cart" />
 			<div className="cartPage__itemsNoLogin">
 				<h1>Login to be able to add items to your cart</h1>
 				<a href="/login">

@@ -4,7 +4,7 @@ import './GemDetails.css'
 function PadparadschaGemDetail() {
     return (
         <div>
-            <SEO title="Padparadscha Gem Details" />
+            <SEO title="Padparadscha Gems" />
         </div>
     )
 }

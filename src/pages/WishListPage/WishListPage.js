@@ -4,6 +4,7 @@ import { useStateValue } from '../../StateProvider';
 import { useEffect, useState } from 'react';
 import { db } from '../../firebase';
 import { Fade } from 'react-awesome-reveal';
+import SEO from '../../shared/components/SEO/SEO';
 
 function WishListPage() {
 	const [{ wishListBasket, cartBasket, user }, dispatch] = useStateValue();
@@ -56,6 +57,7 @@ function WishListPage() {
 
 	return user ? (
 		<div className="wishListPage">
+			<SEO title={`${user}'s Wish List`} />
 			{/* wishlist title */}
 			<div className="wishListPage__title">
 				<h1>MY WISHLIST</h1>
@@ -91,6 +93,7 @@ function WishListPage() {
 		</div>
 	) : (
 		<div className="wishListPage">
+			<SEO title="Wish list" />
 			<div className="wishListPage__itemsNoLogin">
 				<h1>Login to be able to save items you would like to purchase later</h1>
 				<a href="/login">

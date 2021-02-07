@@ -144,7 +144,7 @@ function TealGemDetail() {
 
 	return (
 		<div className="gemDetails">
-			<SEO title="Teal Gem Details" />
+			<SEO title="Teal Gems" />
 			{/* Blue gem add to cart section */}
 			<div className="gemDetails__sectionCart">
 				<div className="gemDetails__sectionCartSmallImages">

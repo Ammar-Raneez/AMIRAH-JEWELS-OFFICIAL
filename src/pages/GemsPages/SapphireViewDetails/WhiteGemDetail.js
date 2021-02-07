@@ -4,7 +4,7 @@ import './GemDetails.css'
 function WhiteGemDetail() {
     return (
         <div>
-            <SEO title="White Gem Details" />
+            <SEO title="White Gems" />
         </div>
     )
 }

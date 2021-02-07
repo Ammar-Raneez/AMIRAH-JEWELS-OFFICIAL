@@ -4,7 +4,7 @@ import './GemDetails.css'
 function PinkGemDetail() {
     return (
         <div>
-            <SEO title="Pink Gem Details" />
+            <SEO title="Pink Gems" />
         </div>
     )
 }
