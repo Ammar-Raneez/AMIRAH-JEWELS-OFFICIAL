@@ -32,7 +32,10 @@
 	align-items: center;
 	justify-content: space-evenly;
 }
-.processPage__callBtn > button {
+.processPage__callBtn > a {
+	text-decoration: none;
+}
+.processPage__callBtn > a > button {
 	padding: 0.8vw;
 	cursor: pointer;
 	width: 15vw;
@@ -45,17 +48,16 @@
 	transition: 0.3s ease;
 	border-radius: 0.7vw;
 }
-.processPage__callBtn > button:first-child {
+.processPage__callBtn > a:first-child > button {
     background-color: #ffc0a1;
     color: #5c5c5c;
 }
-.processPage__callBtn > button:last-child:hover{
+.processPage__callBtn > a:last-child > button:hover{
     background-color: #ffc0a1;
     transition: 0.3s ease;
-    font-weight: bold;
     color: white;
 }
-.processPage__callBtn > button:first-child:hover{
+.processPage__callBtn > a:first-child > button:hover{
     background-color: white;
     transition: 0.3s ease;
     color: black !important;
@@ -75,7 +77,7 @@
 		width: 350px;
 	}
 
-	.processPage__callBtn button {
+	.processPage__callBtn > a > button {
 		font-size: 12px;
 		width: 150px;
 	}
@@ -96,7 +98,7 @@
 		flex-direction: column;
 	}
 
-	.processPage__callBtn button {
+	.processPage__callBtn > a > button {
 		font-size: 12px;
 		width: 150px;
 		margin: 4px;

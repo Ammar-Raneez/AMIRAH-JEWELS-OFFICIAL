@@ -20,8 +20,8 @@ function ProcessPage() {
 
 				{/* call buttons */}
 				<div className="processPage__callBtn">
-					<button>SCHEDULE A CALL</button>
-					<button>CALL US NOW</button>
+					<a href="/contactus"><button>SCHEDULE A CALL</button></a>
+					<a href="/contactus"><button>CALL US NOW</button></a>
 				</div>
 			</Fade>
 
