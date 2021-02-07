@@ -3,13 +3,13 @@
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
-    overflow-x: hidden;
+	overflow-x: hidden;
 	margin: 60px;
 }
 .contactUsPageTitle {
 	font-family: bowie;
 	font-size: 40px;
-    margin-top: 30px;
+	margin-top: 30px;
 	text-align: center;
 	font-weight: lighter;
 	color: #707070;
@@ -31,6 +31,7 @@
 	width: 65vw;
 	justify-content: space-evenly;
 	display: flex;
+    flex-wrap: wrap;
 	/* border: 1px red solid; */
 }
 .contactUsPage__optionsItem {
@@ -47,7 +48,7 @@
 	background-color: white;
 	font-size: 1.2vw;
 	outline: none;
-    color: #424242;
+	color: #424242;
 	width: 200px;
 	cursor: pointer;
 	border: 0.2vw #ffc0a1 solid;
@@ -58,26 +59,134 @@
 	padding: 15px 0;
 }
 .contactUsPage__optionsItem > button:hover {
-    background-color: #ffc0a1;
-    transition: 0.3s ease;
-    font-weight: bold;
-    color: white;
+	background-color: #ffc0a1;
+	transition: 0.3s ease;
+	font-weight: bold;
+	color: white;
 }
-.contactUsPage__openHours{
-    display: flex;
+.contactUsPage__openHours {
+	display: flex;
 	margin: 40px;
 	flex-direction: column;
 	font-family: Quattrocento-Regular;
 	align-items: center;
 	justify-content: center;
 }
-.contactUsPage__openHours > h4{
-    padding: 20px;
-    color: #2e2e2e;
-    font-size: 20px;
+.contactUsPage__openHours > h4 {
+	padding: 20px;
+	color: #2e2e2e;
+	text-align: center;
+	font-size: 20px;
 }
-.contactUsPage__openHours > p{
-    color: #424242;
-    font-size: 18px;
+.contactUsPage__openHours > p {
+	color: #424242;
+	text-align: center;
+	font-size: 18px;
+}
+
+@media screen and (max-width: 1200px) {
+	.contactUsPageDescription {
+		font-size: 20px;
+	}
+}
+
+@media screen and (max-width: 1000px) {
+	.contactUsPageDescription {
+		font-size: 20px;
+	}
+	.contactUsPage__optionsItem > button {
+		font-size: 18px;
+		width: 180px;
+		border: 0.2vw #ffc0a1 solid;
+		transition: 0.3s ease;
+		border-radius: 0.7vw;
+		margin: 20px;
+		font-family: Quattrocento-Regular;
+		padding: 15px 0;
+	}
+	.contactUsPage__options {
+		align-items: center;
+		padding: 40px;
+		margin: 60px;
+		background-color: whitesmoke;
+		width: 650px;
+		justify-content: space-evenly;
+		display: flex;
+		/* border: 1px red solid; */
+	}
+}
+@media screen and (max-width: 800px) {
+	.contactUsPage__options {
+		align-items: center;
+		padding: 50px 35px;
+		margin: 40px;
+		background-color: whitesmoke;
+		width: 300px;
+        flex-direction: column;
+		justify-content: space-evenly;
+		display: flex;
+		/* border: 1px red solid; */
+	}
+	.contactUsPage__optionsItem > button {
+		font-size: 16px;
+		width: 150px;
+		border: 0.2vw #ffc0a1 solid;
+		transition: 0.3s ease;
+		border-radius: 0.7vw;
+		margin: 20px;
+		font-family: Quattrocento-Regular;
+		padding: 15px 0;
+	}
+}
+@media screen and (max-width: 400px) {
+    .contactUsPageTitle{
+        font-size: 30px;
+    }
+    .contactUsPageDescription {
+		font-size: 18px;
+	}
+    .contactUsPage__optionsItem > button {
+		font-size: 13px;
+		width: 150px;
+		border: 0.2vw #ffc0a1 solid;
+		transition: 0.3s ease;
+		border-radius: 0.7vw;
+		margin: 20px;
+		font-family: Quattrocento-Regular;
+		padding: 15px 0;
+	}
+    .contactUsPage__openHours > h4 {
+        font-size: 15px;
+    }
+    .contactUsPage__openHours > p {
+        font-size: 14px;
+        width: 230px;
+    }
     
+}
+@media screen and (max-width: 280px) {
+    .contactUsPageTitle{
+        font-size: 25px;
+    }
+    .contactUsPageDescription {
+		font-size: 15px;
+	}
+    .contactUsPage__optionsItem > button {
+		font-size: 13px;
+		width: 100px;
+		border: 0.2vw #ffc0a1 solid;
+		transition: 0.3s ease;
+		border-radius: 0.7vw;
+		margin: 20px;
+		font-family: Quattrocento-Regular;
+		padding: 15px 0;
+	}
+    .contactUsPage__openHours > h4 {
+        font-size: 15px;
+    }
+	
+    .contactUsPage__openHours > p {
+        font-size: 14px;
+        width: 230px;
+    }
 }
