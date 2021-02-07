@@ -1,10 +1,12 @@
 import React from 'react'
 import './AboutPage.css'
 import { Fade } from 'react-awesome-reveal';
+import SEO from '../../../shared/components/SEO/SEO';
 
-function About({ title, firstPara, secondHeader, secondSubHeader, secondFirstPara, secondSecondPara, secondThirdPara }) {
+function About({ seoTitle, title, firstPara, secondHeader, secondSubHeader, secondFirstPara, secondSecondPara, secondThirdPara }) {
     return (
 		<div className="aboutPageCompany">
+			<SEO title={seoTitle} />
 			<div className="aboutPageCompanyTop">
 				<Fade direction="left">
 					{/* jewel image */}
