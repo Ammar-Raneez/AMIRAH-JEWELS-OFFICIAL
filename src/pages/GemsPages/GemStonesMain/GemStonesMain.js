@@ -1,10 +1,12 @@
 import Gem from '../Gem/Gem';
 import './GemStonesMain.css';
 import { Fade } from 'react-awesome-reveal';
+import SEO from '../../../shared/components/SEO/SEO';
 
 function GemStonesMain() {
 	return (
 		<div className="gemStonesMain">
+			<SEO title="Explore All Gems & Stones" />
 			<div className="gemStonesMain__details">
 				<div className="gemStonesMain__detailsFirst">
 					<Fade triggerOnce direction="left">

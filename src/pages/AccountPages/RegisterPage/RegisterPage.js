@@ -8,6 +8,7 @@ import { FormControl, FormControlLabel, FormLabel, Radio, RadioGroup } from '@ma
 import DateFnsUtils from '@date-io/date-fns';
 import { KeyboardDatePicker, MuiPickersUtilsProvider } from '@material-ui/pickers';
 import { ValidatorForm, TextValidator } from 'react-material-ui-form-validator';
+import SEO from '../../../shared/components/SEO/SEO';
 
 function RegisterPage() {
 	const history = useHistory();
@@ -97,6 +98,7 @@ function RegisterPage() {
 
 	return (
 		<div className="registerPage">
+			<SEO title="Register" />
 			{/* jewel image */}
 			<div className="registerPage__firstJewel">
 				<img src="aboutuspage/purple-sapphire.png" alt="" />

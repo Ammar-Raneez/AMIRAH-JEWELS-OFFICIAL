@@ -8,6 +8,7 @@ import { useStateValue } from '../../../StateProvider';
 import { db } from '../../../firebase';
 import ReactImageMagnify from 'react-image-magnify';
 import { Fade } from 'react-awesome-reveal';
+import SEO from '../../../shared/components/SEO/SEO';
 
 function PurpleGemDetail() {
 	//this state is to track which image is selected to add a active className
@@ -143,6 +144,7 @@ function PurpleGemDetail() {
 
 	return (
 		<div className="gemDetails">
+			<SEO title="Purple Gem Details" />
 			{/* Blue gem add to cart section */}
 			<div className="gemDetails__sectionCart">
 				<div className="gemDetails__sectionCartSmallImages">
