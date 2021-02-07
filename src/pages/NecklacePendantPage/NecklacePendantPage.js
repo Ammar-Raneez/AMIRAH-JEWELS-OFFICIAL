@@ -9,6 +9,7 @@ import './NecklacePendantPage.css';
 import Product from './Product/Product';
 import ChevronRightIcon from '@material-ui/icons/ChevronRight';
 import ReactImageMagnify from 'react-image-magnify';
+import { Fade } from 'react-awesome-reveal';
 
 function NecklacePendantPage() {
 	//this state is to track which image is selected to add a active className
@@ -200,72 +201,79 @@ function NecklacePendantPage() {
 					</div>
 				</div>
 				<div className="necklacePendant__sectionCartCartDetails">
-					<h2>Diamond and Black Onyx Circle Pendant</h2>
-					<div className="necklacePendant__sectionCartCartDetailsItem">
-						<p>in 18k Rose Gold, 16-18"</p>
-					</div>
-					<div className="necklacePendant__sectionCartCartDetailsItem">
-						<p>Quantity</p>
-						<p>1</p>
-					</div>
-					<p>Price: $890.00</p>
-					<br />
-					<br />
-					<div className="necklacePendant__sectionCartCartDetailsBtns">
-						{user ? (
-							<Link>
-								<button onClick={addItemToCart}>ADD TO CART</button>
-							</Link>
-						) : (
-							<></>
-						)}
-						<a href="#product__description">
-							<button>VIEW DETAILS</button>
-						</a>
-					</div>
+					<Fade direction="left" cascade triggerOnce>
+						<h2>Diamond and Black Onyx Circle Pendant</h2>
+						<div className="necklacePendant__sectionCartCartDetailsItem">
+							<p>in 18k Rose Gold, 16-18"</p>
+						</div>
+						<div className="necklacePendant__sectionCartCartDetailsItem">
+							<p>Quantity</p>
+							<p>1</p>
+						</div>
+						<p>Price: $890.00</p>
+						<br />
+						<br />
+						<div className="necklacePendant__sectionCartCartDetailsBtns">
+							{user ? (
+								<Link>
+									<button onClick={addItemToCart}>ADD TO CART</button>
+								</Link>
+							) : (
+								<></>
+							)}
+							<a href="#product__description">
+								<button>VIEW DETAILS</button>
+							</a>
+						</div>
+					</Fade>
 				</div>
 			</div>
 			{/* Description */}
 			<div id="product__description" className="necklacePendant__description">
-				<h2>Description & Details</h2>
-				<p className="necklacePendant__descriptionMain">
-					This circle pendant features black onyx, a unique variety of quartz found in nature. This striking pendant is
-					traced with scintillating diamonds, resulting in a modern design with a smooth finish and high polish. As
-					multifaceted as it is iconic, the Tiffany T collection is a tangible reminder of the connections we feel but
-					can't always see. Showcase your personal style by pairing this pendant with other Tiffany designs for a bold
-					look.
-				</p>
-				<div className="necklacePendant__descriptionOtherDetails">
-					<Collapse in={readMoreDescription}>
-						<p>18k rose gold with black onyx and round brilliant diamonds</p>
-						<p>Circle, 16 mm diameter</p>
-						<p>Carat total weight .05</p>
-						<p>Adjustable, 16-18" chain</p>
-					</Collapse>
-					<p
-						onClick={() => setReadMoreDescription(!readMoreDescription)}
-						className="necklacePendant__descriptionOtherDetailsReadMore"
-					>
-						{readMoreDescription ? "Read Less" : "Read More"} <ChevronRightIcon /><ChevronRightIcon /><ChevronRightIcon />
+				<Fade triggerOnce cascade>
+					<h2>Description & Details</h2>
+					<p className="necklacePendant__descriptionMain">
+						This circle pendant features black onyx, a unique variety of quartz found in nature. This striking pendant is
+						traced with scintillating diamonds, resulting in a modern design with a smooth finish and high polish. As
+						multifaceted as it is iconic, the Tiffany T collection is a tangible reminder of the connections we feel but
+						can't always see. Showcase your personal style by pairing this pendant with other Tiffany designs for a bold
+						look.
 					</p>
-				</div>
+					<div className="necklacePendant__descriptionOtherDetails">
+						<Collapse in={readMoreDescription}>
+							<p>18k rose gold with black onyx and round brilliant diamonds</p>
+							<p>Circle, 16 mm diameter</p>
+							<p>Carat total weight .05</p>
+							<p>Adjustable, 16-18" chain</p>
+						</Collapse>
+						<p
+							onClick={() => setReadMoreDescription(!readMoreDescription)}
+							className="necklacePendant__descriptionOtherDetailsReadMore"
+						>
+							{readMoreDescription ? "Read Less" : "Read More"} <ChevronRightIcon /><ChevronRightIcon /><ChevronRightIcon />
+						</p>
+					</div>
+				</Fade>	
 			</div>
 
 			{/* Other Similar Products */}
 			<div className="necklacePendant__otherProducts">
-				<h2>Other Similar Products</h2>
-				<br />
-				<h3>Showing 1 - 40 of 1020</h3>
-
+				<Fade cascade>
+					<h2>Other Similar Products</h2>
+					<br />
+					<h3>Showing 1 - 40 of 1020</h3>
+				</Fade>
 				<div className="necklacePendant__otherProductsProducts">
-					<div className="necklacePendant__otherProductsRow">
-						<Product img="pendantsNecklace/pink_necklace.png" name="Product Name" viewMoreUrl="/" />
-						<Product img="pendantsNecklace/pink_necklace.png" name="Product Name" viewMoreUrl="/" />
-						<Product img="pendantsNecklace/pink_necklace.png" name="Product Name" viewMoreUrl="/" />
-						<Product img="pendantsNecklace/pink_necklace.png" name="Product Name" viewMoreUrl="/" />
-					</div>
+					<Fade delay={500} cascade>
+						<div className="necklacePendant__otherProductsRow">
+							<Product img="pendantsNecklace/pink_necklace.png" name="Product Name" viewMoreUrl="/" />
+							<Product img="pendantsNecklace/pink_necklace.png" name="Product Name" viewMoreUrl="/" />
+							<Product img="pendantsNecklace/pink_necklace.png" name="Product Name" viewMoreUrl="/" />
+							<Product img="pendantsNecklace/pink_necklace.png" name="Product Name" viewMoreUrl="/" />
+						</div>
 					{/* <div className="necklacePendant__otherProductsRow">
 					</div> */}
+					</Fade>
 				</div>
 			</div>
 		</div>

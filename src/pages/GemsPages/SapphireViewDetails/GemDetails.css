@@ -54,7 +54,7 @@
 	/* border: 1px blue solid; */
 	justify-items: flex-start !important;
 }
-.gemDetails__sectionCartCartDetails > h2 {
+.gemDetails__sectionCartCartDetails > div > h2 {
 	font-size: 25px;
 	font-family: Quattrocento-Regular;
 	color: #707070;
@@ -70,7 +70,7 @@
 	align-items: center;
 	justify-content: space-between;
 }
-.gemDetails__sectionCartCartDetails > p {
+.gemDetails__sectionCartCartDetails > div > p {
 	font-family: Quattrocento-Regular;
 	font-size: 20px;
 	color: #494949;
@@ -117,7 +117,7 @@
 	background-color: #ffc0a1;
 }
 
-.gemDetails__sectionVideo > h2, .gemDetails__sectionDescription > h2, .gemDetails__sectionProduct > h2 {
+.gemDetails__sectionVideo > div > h2, .gemDetails__sectionDescription > div > h2, .gemDetails__sectionProduct > div > h2 {
 	font-family: Quattrocento-Regular;
 	color: #707070;
 	margin: 100px 0 20px 0;
@@ -128,13 +128,13 @@
 	justify-content: space-between;
 	flex-direction: column;
 }
-.gemDetails__sectionProduct > h3 {
+.gemDetails__sectionProduct > div > h3 {
 	font-family: Quattrocento-Regular;
 	color: #707070;
     font-weight: lighter;
     margin-bottom: 50px;
 }
-.gemDetails__sectionVideo > video {
+.gemDetails__sectionVideo > div > video {
 	object-fit: contain;
 	height: 500px;
 	border-radius: 20px;

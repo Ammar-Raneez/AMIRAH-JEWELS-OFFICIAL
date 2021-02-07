@@ -70,18 +70,18 @@ function App() {
 						<RegisterPage />
 						<Footer />
 					</Route>
-					<Route path="/thanking">
+					{/* <Route path="/thanking">
 						<TopBar />
 						<Header />
 						<ThankyouCreatingAccount />
 						<Footer />
-					</Route>
+					</Route> */}
 
 					<Route path="/designer+desk">
-						<h2>Designer Desk component</h2>
+						<h2>Coming Soon!</h2>
 					</Route>
 					<Route path="/high+tea">
-						<h2>highTea component</h2>
+						<h2>Coming Soon!</h2>
 					</Route>
 
 					<Route path="/gemstones+metal">

@@ -45,6 +45,11 @@
 	flex-direction: column;
 }
 
+.loginPage__leftSide .loginPage__leftSideTop, .loginPage__leftSide .loginPage__leftSideBottom, 
+.loginPage__rightSide .loginPage__rightSideTop, .loginPage__rightSide .loginPage__rightSideBottom {
+    width: 100%;
+}
+
 .loginPage__leftSide > div > input {
 	width: 95%;
 	outline: none;
@@ -82,7 +87,7 @@
     border: 1px solid #e58177;
 }
 
-@media screen and (max-width: 1250px) {
+@media screen and (max-width: 1250px) and (min-width: 400px) {
     .loginPage__leftSide, .loginPage__rightSide {
         min-width: 95% !important;
         max-width: 95% !important;
@@ -109,12 +114,71 @@
         font-size: 14px;
     }
 
+    .loginPage > div > div > form > button {
+        margin-top: 20px;
+    }
+
     .loginPage {
         justify-content: space-between;
         padding: 30px;
         height: 60%;
         align-items: center;
         margin-bottom: 22%;
+        text-align: center;
+        /* flex-direction: column; */
+    }
+
+    .loginPage__form {
+        width: 100%;
+    }
+
+    .loginPage__form > div > div > div > .MuiInputBase-input {
+        width: 100%;
+        font-size: 14px !important;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .loginPage__leftSide, .loginPage__rightSide {
+        min-width: 95% !important;
+        max-width: 95% !important;
+        margin: 0px;
+    }
+
+    .loginPage__leftSide > div, .loginPage__rightSide > div {
+        width: 100%;
+    }
+
+    .loginPage__leftSide {
+        margin-bottom: 30%;
+    }
+
+    .loginPage__rightSide {
+        margin-top: 15%;
+    }
+
+    .loginPage__form > div > div {
+        width: 100% !important;
+    }
+
+    .loginPage .loginPage__title {
+        font-size: 30px;
+    }
+
+    .loginPage .loginPage__subTitle, .loginPage > div > div > form > button, .loginPage > div > div > a > button, .loginPage__leftSide > div > input {
+        font-size: 14px;
+    }
+
+    .loginPage > div > div > form > button {
+        margin-top: 20px;
+    }
+
+    .loginPage {
+        justify-content: space-between;
+        padding: 30px;
+        height: 60%;
+        align-items: center;
+        margin-bottom: 50%;
         text-align: center;
         /* flex-direction: column; */
     }

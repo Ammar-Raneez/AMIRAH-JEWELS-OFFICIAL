@@ -148,7 +148,7 @@ function TopBar() {
 				<div className="topbar__rightAccount">
 					<PersonOutlinedIcon />
 					{user?.displayName ? (
-						<a onClick={logout} style={{ fontWeight: 'bold', fontSize: '13px' }}>
+						<a onClick={logout} style={{ fontWeight: 'bold', fontSize: '1vw' }}>
 							Welcome to Your Account, {user?.displayName.split(' ')[0]}
 						</a>
 					) : (

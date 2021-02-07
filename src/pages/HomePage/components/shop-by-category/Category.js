@@ -1,5 +1,5 @@
 import React from 'react'
-import { Fade, Slide } from 'react-awesome-reveal'
+import { Fade } from 'react-awesome-reveal'
 import './Category.css'
 
 function Category() {
@@ -11,7 +11,7 @@ function Category() {
             </Fade>
 
             <div className="homePage__categoryRow">
-                <Slide triggerOnce  direction="up">
+                <Fade direction="right">
                     <a href="/necklace+pendants">
                         <div className="homePage__categoryEach">
                             <img alt="necklace-category" src="homepage category/necklace.png" />
@@ -42,7 +42,7 @@ function Category() {
                             <p>Engagement Rings</p>
                         </div>
                     </a>
-                </Slide>   
+                </Fade>   
             </div>
         </div>
     )

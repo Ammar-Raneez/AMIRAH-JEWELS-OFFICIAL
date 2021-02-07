@@ -25,15 +25,13 @@
 	color: #c23d00 !important;
 }
 
-
 .topbar__center {
 	flex-grow: 4;
 	display: flex;
 	justify-content: center;
 }
 
-.topbar__left,
-.topbar__right {
+.topbar__left, .topbar__right {
 	display: flex;
 	justify-content: space-around;
 	/* align-items: center; */
@@ -64,6 +62,7 @@
 	color: black;
 	transition: 0.3s ease;
 	cursor: pointer;
+	font-size: 1vw;
 }
 .topbar__rightAccount > a:hover {
 	font-weight: bold;
@@ -128,8 +127,8 @@
 		height: 30px;
 	}
 
-	.topbar__rightAccount {
-		font-size: 14px;
+	.topbar__rightAccount > a {
+		font-size: 14px !important;
 	}
 }
 
@@ -142,8 +141,8 @@
 		height: 30px;
 	}
 
-	.topbar__rightAccount {
-		font-size: 14px;
+	.topbar__rightAccount > a {
+		font-size: 14px !important;
 	}
 }
 
@@ -175,8 +174,8 @@
 		height: 30px;
 	}
 
-	.topbar__rightAccount {
-		font-size: 14px;
+	.topbar__rightAccount > a {
+		font-size: 12px !important;
 	}
 }
 
@@ -208,8 +207,8 @@
 		height: 30px;
 	}
 
-	.topbar__rightAccount {
-		font-size: 14px;
+	.topbar__rightAccount > a {
+		font-size: 12px !important;
 	}
 
 	.topbar__rightMenuIcon {
