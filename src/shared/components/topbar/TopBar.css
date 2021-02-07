@@ -105,7 +105,7 @@
 }
 
 .MuiPaper-root.MuiDrawer-paper.MuiDrawer-paperAnchorLeft.MuiPaper-elevation16 {
-	background-color: #aaa;
+	background-color: rgba(255, 255, 255, 0.8);
 }
 
 .topbar__tree::-webkit-scrollbar,
