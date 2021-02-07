@@ -279,7 +279,12 @@ function CheckOutPage() {
 						validators={['required']}
 					/>
 					<div className="registerPage__createButton">
-						<button type="submit">CONTINUE CHECKOUT</button>
+						{user ? cartBasket ? (
+							<Button type="submit">CONTINUE CHECKOUT</Button>
+						) : (
+							<Button disabled type="submit">CONTINUE CHECKOUT</Button>
+						) : <Button disabled type="submit">CONTINUE CHECKOUT</Button>
+						}
 					</div>
 				</ValidatorForm>
 			</div>
