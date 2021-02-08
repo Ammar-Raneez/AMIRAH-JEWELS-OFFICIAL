@@ -1,6 +1,6 @@
 .bill {
 	box-shadow: 2px 2px 10px rgba(161, 161, 161, 0.24), 2px 2px 10px rgba(161, 161, 161, 0.24);
-	padding: 20px;
+	padding: 1.8vw;
 	font-family: Quattrocento-Regular;
 	color: #707070;
 	display: flex;
@@ -11,23 +11,30 @@
 
 .bill__topSection > p {
 	font-weight: bold;
+	font-size: 1.2vw;
 }
 
 .bill__topSection > span {
 	display: flex;
 	justify-content: space-between;
-	margin: 20px 0px;
+	margin: 2vw 0vw;
+}
+.bill__topSection > span > p {
+	font-size: 1.2vw;
 }
 
 .bill_middleSection {
 	border-top: 1px solid #aaa;
-	padding-top: 20px;
+	padding-top: 2vw;
 }
 .bill_middleSection > span {
 	display: flex;
 	justify-content: space-between;
 }
 
+.bill_middleSection > span > p {
+	font-size: 1.2vw;
+}
 .bill_middleSection > span > p:first-child {
 	font-weight: bold;
 }
@@ -39,10 +46,10 @@
 
 .bill__bottomSection > div > a > button {
 	width: 80%;
-	padding: 10px 20px;
-	border-radius: 10px;
+	padding: 1vw 1.5vw;
+	border-radius: 1vw;
 	border: 1px solid #ffc0a1;
-	font-size: 14px;
+	font-size: 1.2vw;
 	font-weight: bold;
 	font-family: Quattrocento-Regular;
 	color: #707070;
@@ -57,9 +64,9 @@
 
 .bill__bottomSection > div > p {
 	text-align: center;
-	margin-top: 20px;
+	margin-top: 2vw;
 	width: 55%;
-	font-size: 12px;
+	font-size: 1vw;
 }
 
 .bill__bottomSectionWarrant,
@@ -69,8 +76,61 @@
     text-decoration: none;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 900px) and (min-width: 450px) {
+	.bill {
+		margin-bottom: 3vh;
+	}
 	.bill__bottomSection > div > a > button {
 		margin-top: 20px;
+	}
+
+	.bill__topSection > p {
+		font-size: 16px;
+	}
+
+	.bill__topSection > span > p {
+		font-size: 14px;
+	}
+
+	.bill_middleSection > span > p {
+		font-size: 14px;
+	}
+
+	.bill__bottomSection > div > a > button {
+		font-size: 14px;
+	}
+
+	.bill__bottomSection > div > p {
+		font-size: 12px;
+	}
+}
+
+@media screen and (max-width: 450px) {
+	.bill {
+		margin-bottom: 12vh;
+	}
+
+	.bill__bottomSection > div > a > button {
+		margin-top: 20px;
+	}
+
+	.bill__topSection > p {
+		font-size: 16px;
+	}
+
+	.bill__topSection > span > p {
+		font-size: 14px;
+	}
+
+	.bill_middleSection > span > p {
+		font-size: 14px;
+	}
+
+	.bill__bottomSection > div > a > button {
+		font-size: 14px;
+	}
+
+	.bill__bottomSection > div > p {
+		font-size: 12px;
 	}
 }

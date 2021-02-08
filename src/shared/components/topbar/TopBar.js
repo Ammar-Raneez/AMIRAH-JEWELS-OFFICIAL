@@ -149,7 +149,7 @@ function TopBar() {
 					<PersonOutlinedIcon />
 					{user?.displayName ? (
 						<a onClick={logout} style={{ fontWeight: 'bold', fontSize: '1vw' }}>
-							Welcome to Your Account, {user?.displayName.split(' ')[0]}
+							Welcome, {user?.displayName.split(' ')[0]}
 						</a>
 					) : (
 						<a style={{ marginRight: '1vw' }} href="/login">

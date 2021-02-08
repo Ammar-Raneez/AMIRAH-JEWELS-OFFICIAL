@@ -130,16 +130,16 @@ function CartItem({ productCost, productImgURL, productName, productQuantity }) 
 						<div className="cartItem__descriptionRightBottomDetails">
 							<div>
 								<button
-									style={{ padding: '5px 10px', background: 'transparent', border: 'none' }}
+									style={{ padding: '0.5vw 1vw', fontSize: '1.5vw', background: 'transparent', border: 'none' }}
 									onClick={decreaseQuantity}
 								>
 									-
 								</button>
 								<input
 									style={{
-										textAlign: 'right',
-										padding: '10px',
-										width: '30px',
+										textAlign: 'center',
+										padding: '1vw',
+										width: '3vw',
 										background: 'transparent',
 										border: 'none',
 									}}
@@ -150,7 +150,7 @@ function CartItem({ productCost, productImgURL, productName, productQuantity }) 
 									value={productQuantity}
 								/>
 								<button
-									style={{ padding: '5px 10px', background: 'transparent', border: 'none' }}
+									style={{ padding: '0.5vw 1vw', fontSize: '1.5vw', background: 'transparent', border: 'none' }}
 									onClick={increaseQuantity}
 								>
 									+

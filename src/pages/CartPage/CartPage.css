@@ -52,12 +52,12 @@
 }
 
 .cartPage__itemsEmpty > h1 {
-	font-size: 30px;
+	font-size: 2vw;
 	font-weight: lighter;
 }
 .cartPage__itemsEmpty > p {
-	margin-top: 20px;
-	font-size: 14px;
+	margin-top: 1.8vw;
+	font-size: 1.5vw;
 }
 
 .cartPage__itemsNoLogin {
@@ -68,16 +68,12 @@
 	justify-content: space-around;
 	align-items: center;
 	color: #707070;
-	margin-top: 10px;
+	margin-top: 1vw;
 	font-family: Quattrocento-Regular;
 }
 .cartPage__itemsNoLogin > h1 {
-	font-size: 30px;
+	font-size: 2vw;
 	font-weight: lighter;
-}
-.cartPage__itemsNoLogin > a > button {
-	margin-top: 20px;
-	font-size: 14px;
 }
 .cartPage__itemsNoLogin > a > button {
 	padding: 1vw 3vw;
@@ -99,10 +95,23 @@
 	border: 1px solid #e58177;
 }
 .loadingGif > img {
-	padding: 30px;
+	padding: 2.2vw;
 	object-fit: contain;
-	height: 250px;
+	height: 20vw;
 }
+
+@media screen and (max-width: 1700px) and (min-width: 900px) {
+	.cartPage__itemsEmpty, .cartPage__itemsNoLogin {
+		text-align: center;
+		box-shadow: 0px 1px 3px #878787;
+		padding: 10vw;
+		color: #707070;
+		height: 60vh;
+		justify-content: center;
+		font-family: Quattrocento-Regular;
+	}
+}
+
 @media screen and (max-width: 900px) and (min-width: 450px) {
 	.cartPage__titleContinueSection,
 	.cartPage__titleContinueSection > .MuiSvgIcon-root {
@@ -123,6 +132,20 @@
 		height: 100px;
 		padding: 50px;
 	}
+
+	.cartPage__title > h1, .cartPage__itemsNoLogin > h1, .cartPage__itemsNoLogin > a > button, .cartPage__itemsEmpty > h1 {
+		font-size: 20px;
+	}
+
+	.cartPage__itemsEmpty, .cartPage__itemsNoLogin {
+		text-align: center;
+		box-shadow: 0px 1px 3px #878787;
+		padding: 10vw;
+		color: #707070;
+		height: 80vh;
+		justify-content: center;
+		font-family: Quattrocento-Regular;
+	}
 }
 
 @media screen and (max-width: 450px) {
@@ -130,7 +153,10 @@
 	.cartPage__titleContinueSection > .MuiSvgIcon-root {
 		font-size: 12px !important;
 	}
-	.cartPage__title > h1 {
+	.cartPage__itemsEmpty > p {
+		font-size: 14px;
+	}
+	.cartPage__title > h1, .cartPage__itemsNoLogin > h1, .cartPage__itemsNoLogin > a > button, .cartPage__itemsEmpty > h1 {
 		font-size: 20px;
 	}
 
@@ -145,14 +171,14 @@
 		height: 100px;
 		padding: 50px;
 	}
-	.cartPage__itemsEmpty {
-		margin-top: 25%;
-		margin-bottom: 25vh;
+	.cartPage__itemsEmpty, .cartPage__itemsNoLogin {
 		font-size: 20px;
 		text-align: center;
 		box-shadow: 0px 1px 3px #878787;
 		padding: 10vw;
 		color: #707070;
+		height: 80vh;
+		justify-content: center;
 		font-family: Quattrocento-Regular;
 	}
 }
