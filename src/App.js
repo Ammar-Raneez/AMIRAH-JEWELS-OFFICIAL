@@ -24,6 +24,7 @@ import TealGemDetail from './pages/GemsPages/SapphireViewDetails/TealGemDetail';
 import PurpleGemDetail from './pages/GemsPages/SapphireViewDetails/PurpleGemDetail';
 import CheckOutPage from './pages/CheckOutPage/CheckOutPage';
 import ContactUsPage from './pages/ContactUsPage/ContactUsPage';
+import ComingSoon from './pages/ComingSoon/CominSoon';
 
 function App() {
 	const [{ wishListBasket, cartBasket, user }, dispatch] = useStateValue();
@@ -198,6 +199,10 @@ function App() {
 						<Header />
 						<CartPage />
 						<Footer />
+					</Route>
+
+					<Route path="/comingsoon">
+						<ComingSoon />
 					</Route>
 
 					<Route path="/signature"></Route>
