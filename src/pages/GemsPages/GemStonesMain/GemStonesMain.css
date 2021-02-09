@@ -1,9 +1,10 @@
 .gemStonesMain {
 	margin-top: 5vw;
 }
-.gemStonesMain__detailsSecond > img {
+.gemStonesMain__detailsSecond > div > img {
 	object-fit: contain;
-	height: 25vw;
+	height: 30vw;
+	width: 30vw	;
 }
 .gemStonesMain__details {
 	display: flex;
