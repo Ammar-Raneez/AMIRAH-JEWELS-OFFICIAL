@@ -2,6 +2,7 @@
 	left: 0;
 	width: 100%;
 }
+/* ---------------------SELECT COUNTRY-------------------- */
 .footer__rightSectionSelectCountry {
 	display: flex;
 	align-items: center;
@@ -28,6 +29,7 @@
 	transition: 0.3s ease-in-out;
 	border-bottom: 1px #ffc0a1 solid;
 }
+/* ----------------------------------------------------- */
 .footer__main {
 	padding: 3vw 1vw 0.5vw 3vw;
 	background-color: #ffe7dc;
@@ -149,5 +151,24 @@
 
 	.footer__bottom {
 		font-size: 14px;
+	}
+}
+
+@media screen and (max-width: 700px) {
+	.footer__rightSectionSelectCountry > select {
+		width: 120px;
+		font-size: 10px;
+		height: 20px;
+	}
+}
+
+@media screen and (max-width: 500px) {
+	.footer__rightSectionSelectCountry > select {
+		font-size: 12px;
+		width: 80px;
+		height: 18px;
+	}
+	.footer__rightSectionSelectCountry > p {
+		font-size: 13px;
 	}
 }

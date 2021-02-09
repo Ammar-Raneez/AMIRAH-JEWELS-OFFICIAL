@@ -4,6 +4,7 @@ import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import Gem from '../Gem/Gem';
 import './GemDetails.css';
+import formatCurrency from 'format-currency';
 import { useStateValue } from '../../../StateProvider';
 import { db } from '../../../firebase';
 import ReactImageMagnify from 'react-image-magnify';
@@ -18,7 +19,7 @@ function PurpleGemDetail() {
 	const [addToWishList, setAddToWishList] = useState(false);
 	const [tempSafetyWishList, setTempSafetyWishList] = useState(false);
 	const [tempSafetyCartBasket, setTempSafetyCartBasket] = useState(false);
-	const [{ wishListBasket, cartBasket, user }, dispatch] = useStateValue();
+	const [{ wishListBasket, cartBasket, user, currencySymbol, currencyRate }, dispatch] = useStateValue();
 
 	// created the image path
 	const selectedImage = (imagePath, image) => {
@@ -227,7 +228,10 @@ function PurpleGemDetail() {
 							<p>Shape</p>
 							<p>Round</p>
 						</div>
-						<p>Price: $ 10.00</p>
+						<p>
+							{' '}
+							Price: {currencySymbol} {formatCurrency(Math.round(500 * currencyRate * 100) / 100)}
+						</p>
 						<br />
 						<br />
 						<div className="gemDetails__sectionCartCartDetailsBtns">

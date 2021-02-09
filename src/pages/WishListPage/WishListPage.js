@@ -17,9 +17,9 @@ function WishListPage() {
 
 		db.collection('users').onSnapshot((snapshot) =>
 			snapshot.docs.forEach((doc) => {
-				console.log("fetching all the data from the database")
+				console.log('fetching all the data from the database');
 				if (doc.id === user?.email) {
-					console.log("OUTPUTTT");
+					console.log('OUTPUTTT');
 					// adding the cart items
 					for (const cartItem of doc.data().cart) {
 						console.log('Adding items from the database into the cart');
@@ -31,7 +31,7 @@ function WishListPage() {
 								productName: cartItem.productName,
 								productQuantity: cartItem.productQuantity,
 								preferredMetal: cartItem.preferredMetal,
-                                preferredSize: cartItem.preferredSize,
+								preferredSize: cartItem.preferredSize,
 							},
 						});
 					}
@@ -47,7 +47,7 @@ function WishListPage() {
 								cost: wishlistItem.cost,
 								imgURL: wishlistItem.imgURL,
 								preferredMetal: wishlistItem.preferredMetal,
-                                preferredSize: wishlistItem.preferredSize,
+								preferredSize: wishlistItem.preferredSize,
 							},
 						});
 					}
@@ -60,7 +60,7 @@ function WishListPage() {
 	}, []);
 
 	return user ? (
-		<div className="wishListPage" style={wishListBasket.length == 1 ? { height: '85vh' } : {}}>
+		<div className="wishListPage" style={wishListBasket.length === 1 ? { height: '85vh' } : {}}>
 			<SEO title={`${user.displayName}'s Wish List`} />
 			{/* wishlist title */}
 			<div className="wishListPage__title">
@@ -73,7 +73,11 @@ function WishListPage() {
 				</div>
 			) : (
 				<div
-					className={wishListBasket.length < 4 && wishListBasket.length > 0 ? "wishListPage__itemsFStart" : "wishListPage__itemsFAround"}
+					className={
+						wishListBasket.length < 4 && wishListBasket.length > 0
+							? 'wishListPage__itemsFStart'
+							: 'wishListPage__itemsFAround'
+					}
 				>
 					{wishListBasket.length === 0 ? (
 						<div className="wishListPage__itemsEmpty">
@@ -82,8 +86,15 @@ function WishListPage() {
 						</div>
 					) : (
 						<Fade direction="left">
-							{wishListBasket.map((item, x) => (
-								<WishListItem key={x} img={item.imgURL} title={item.name} currency="$" price={item.cost} preferredMetal={item.preferredMetal} preferredSize={item.preferredSize}/>
+							{wishListBasket.map((item, index) => (
+								<WishListItem
+									key={index}
+									img={item.imgURL}
+									title={item.name}
+									price={item.cost}
+									preferredMetal={item.preferredMetal}
+									preferredSize={item.preferredSize}
+								/>
 							))}
 						</Fade>
 					)}

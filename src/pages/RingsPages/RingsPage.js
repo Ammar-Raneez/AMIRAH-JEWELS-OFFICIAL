@@ -11,6 +11,7 @@ import ChevronRightIcon from '@material-ui/icons/ChevronRight';
 import ReactImageMagnify from 'react-image-magnify';
 import { Fade } from 'react-awesome-reveal';
 import SEO from '../../shared/components/SEO/SEO';
+import formatCurrency from 'format-currency';
 
 function RingsPage() {
 	//this state is to track which image is selected to add a active className
@@ -274,7 +275,10 @@ function RingsPage() {
 							<p>Quantity</p>
 							<p>1</p>
 						</div>
-						<p>{displayPrice && `Price: ${currencySymbol} ${Math.round(890.0 * currencyRate * 100) / 100}`}</p>
+						<p>
+							{displayPrice &&
+								`Price: ${currencySymbol} ${formatCurrency(Math.round(890.0 * currencyRate * 100) / 100)}`}
+						</p>
 						<br />
 						<br />
 						<div className="ringsPage__sectionCartCartDetailsBtns">

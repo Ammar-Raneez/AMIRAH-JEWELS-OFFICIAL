@@ -1,8 +1,12 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { useStateValue } from '../../../StateProvider';
 import './Bill.css';
+import formatCurrency from 'format-currency';
 
-function Bill({ subTotal, delivery, tax, currency }) {
+function Bill({ subTotal, delivery, tax }) {
+	const [{ wishListBasket, cartBasket, user, currencySymbol, currencyRate }, dispatch] = useStateValue();
+
 	return (
 		<div className="bill">
 			<div className="bill__topSection">
@@ -10,22 +14,19 @@ function Bill({ subTotal, delivery, tax, currency }) {
 				<span>
 					<p>Subtotal</p>
 					<p>
-						{currency}
-						{subTotal}
+						{currencySymbol} {formatCurrency(Math.round(subTotal * currencyRate * 100) / 100)}
 					</p>
 				</span>
 				<span>
 					<p>Delivery</p>
 					<p>
-						{currency}
-						{delivery}
+						{currencySymbol} {formatCurrency(Math.round(delivery * currencyRate * 100) / 100)}
 					</p>
 				</span>
 				<span>
 					<p>Tax</p>
 					<p>
-						{currency}
-						{tax}
+						{currencySymbol} {formatCurrency(Math.round(tax * currencyRate * 100) / 100)}
 					</p>
 				</span>
 			</div>
@@ -33,8 +34,7 @@ function Bill({ subTotal, delivery, tax, currency }) {
 				<span>
 					<p>Estimated Total</p>
 					<p>
-						{currency}
-						{subTotal + delivery + tax}
+						{currencySymbol} {formatCurrency(Math.round((subTotal + delivery + tax) * currencyRate * 100) / 100)}
 					</p>
 				</span>
 			</div>

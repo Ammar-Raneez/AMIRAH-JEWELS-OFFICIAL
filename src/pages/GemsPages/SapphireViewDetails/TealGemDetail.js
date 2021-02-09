@@ -6,6 +6,7 @@ import Gem from '../Gem/Gem';
 import './GemDetails.css';
 import { useStateValue } from '../../../StateProvider';
 import { db } from '../../../firebase';
+import formatCurrency from 'format-currency';
 import ReactImageMagnify from 'react-image-magnify';
 import { Fade } from 'react-awesome-reveal';
 import SEO from '../../../shared/components/SEO/SEO';
@@ -18,7 +19,7 @@ function TealGemDetail() {
 	const [addToWishList, setAddToWishList] = useState(false);
 	const [tempSafetyWishList, setTempSafetyWishList] = useState(false);
 	const [tempSafetyCartBasket, setTempSafetyCartBasket] = useState(false);
-	const [{ wishListBasket, cartBasket, user }, dispatch] = useStateValue();
+	const [{ wishListBasket, cartBasket, user, currencySymbol, currencyRate }, dispatch] = useStateValue();
 
 	// created the image path
 	const selectedImage = (imagePath, image) => {
@@ -158,7 +159,7 @@ function TealGemDetail() {
 				<div className="gemDetails__sectionCartSmallImages">
 					<img
 						onMouseOver={(e) => {
-							selectedImage(e.target.src, "purple sapphire");
+							selectedImage(e.target.src, 'purple sapphire');
 						}}
 						src="gems/purple-sapphire.png"
 						alt=""
@@ -166,7 +167,7 @@ function TealGemDetail() {
 					/>
 					<img
 						onMouseOver={(e) => {
-							selectedImage(e.target.src, "teal sapphire");
+							selectedImage(e.target.src, 'teal sapphire');
 						}}
 						src="gems/teal-sapphire.png"
 						alt=""
@@ -174,7 +175,7 @@ function TealGemDetail() {
 					/>
 					<img
 						onMouseOver={(e) => {
-							selectedImage(e.target.src, "white sapphire");
+							selectedImage(e.target.src, 'white sapphire');
 						}}
 						src="gems/white-sapphire.png"
 						alt=""
@@ -182,23 +183,23 @@ function TealGemDetail() {
 					/>
 				</div>
 				<div className="gemDetails__sectionCartMainImage">
-					<ReactImageMagnify 
-						hoverDelayInMs = {0.1}
-						hoverOffDelayInMs = {0.1}
-						enlargedImagePosition = "over"  
+					<ReactImageMagnify
+						hoverDelayInMs={0.1}
+						hoverOffDelayInMs={0.1}
+						enlargedImagePosition="over"
 						{...{
-						smallImage: {
-							alt: "",
-							width: 450,
-							height: 450,
-							src: displayImage
-						},
-						largeImage: {
-							src: displayImage,
-							width: 1200,
-							height: 1200,
-						}
-					}}
+							smallImage: {
+								alt: '',
+								width: 450,
+								height: 450,
+								src: displayImage,
+							},
+							largeImage: {
+								src: displayImage,
+								width: 1200,
+								height: 1200,
+							},
+						}}
 					/>
 					<div className="gemDetails__sectionCartMainImageIcon">
 						{user ? (
@@ -227,7 +228,9 @@ function TealGemDetail() {
 							<p>Shape</p>
 							<p>Round</p>
 						</div>
-						<p>Price: $ 1100.00</p>
+						<p>
+							Price: {currencySymbol} {formatCurrency(Math.round(1100 * currencyRate * 100) / 100)}
+						</p>
 						<br />
 						<br />
 						<div className="gemDetails__sectionCartCartDetailsBtns">
@@ -256,7 +259,7 @@ function TealGemDetail() {
 
 			{/* description and details */}
 			<div id="viewDetails" className="gemDetails__sectionDescription">
-			<Fade cascade triggerOnce>
+				<Fade cascade triggerOnce>
 					<h2>Description & Details</h2>
 					<div className="gemDetails__sectionDescriptionTable">
 						{tableRow('Main Stone', 'Natural Sapphire')}

@@ -117,7 +117,7 @@ function CheckOutPage() {
 				cartDetails += '(';
 				cartDetails += 'Item Name: ' + item.productName;
 				cartDetails += ', ';
-				cartDetails += 'Cost of Item: ' + item.productCost;
+				cartDetails += 'Cost of Item: $' + item.productCost;
 				cartDetails += ', ';
 				if (item.preferredMetal !== null) {
 					cartDetails += 'Preferred Metal: ' + item.preferredMetal;
@@ -143,7 +143,7 @@ function CheckOutPage() {
 				- City: ${city}
 				- Telephone: ${telephoneNumber}
 				- Payment Type: ${paymentType}
-				- Order Total Cost: ${subTotal + tax + delivery}
+				- Order Total Cost: $ ${subTotal + tax + delivery}
 				`);
 
 			emailjs.sendForm('service_lvksm7m', 'amirah_contactUs', e.target, 'user_pxB9WpI7yEgKMxO3A4XCP').then(
