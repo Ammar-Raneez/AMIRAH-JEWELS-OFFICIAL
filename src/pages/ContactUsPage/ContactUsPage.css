@@ -34,8 +34,7 @@
 	flex-wrap: wrap;
 	/* border: 1px red solid; */
 }
-.contactUsPage__optionsItem,
-.contactUsPage__optionsItem > a {
+.contactUsPage__optionsItem, .contactUsPage__optionsItem > a {
 	display: flex;
 	text-decoration: none;
 	flex-direction: column;
@@ -45,8 +44,7 @@
 	color: #ffc0a1;
 	font-size: 40px !important;
 }
-.contactUsPage__optionsItem > button,
-.contactUsPage__optionsItem > a > button {
+.contactUsPage__optionsItem > button, .contactUsPage__optionsItem > a > button {
 	border: none;
 	background-color: white;
 	font-size: 1.2vw;
@@ -62,8 +60,7 @@
 	font-family: Quattrocento-Regular;
 	padding: 15px 0;
 }
-.contactUsPage__optionsItem > button:hover,
-.contactUsPage__optionsItem > a > button:hover {
+.contactUsPage__optionsItem > button:hover, .contactUsPage__optionsItem > a > button:hover {
 	background-color: #ffc0a1;
 	text-decoration: none;
 	transition: 0.3s ease;
@@ -90,7 +87,148 @@
 	font-size: 18px;
 }
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 10000px) and (min-width: 1500px) {
+	.contactUsPage {
+		margin: 5vw;
+	}
+
+	.contactUsPageTitle { 
+		font-size: 5vw;
+	}
+
+	.contactUsPageDescription { 
+		line-height: 3vw;
+		padding: 4vw;
+	}
+
+	.contactUsPage__options { 
+		padding: 4vw;
+		margin: 6vw;
+	}
+
+	.contactUsPage__optionsItem > .MuiSvgIcon-root {
+		font-size: 4vw !important;
+	}
+
+	.contactUsPage__optionsItem > button, .contactUsPage__optionsItem > a > button {
+		margin: 2vw;
+		padding: 1.5vw;
+		width: 15vw;
+	}
+
+	.contactUsPage__openHours {
+		margin: 4vw;
+	}
+
+	.contactUsPage__openHours > h4 {
+		padding: 2vw;
+		font-size: 2vw;
+	}
+
+	.contactUsPage__openHours > p {
+		font-size: 1.8vw;
+	}
+
+	.MuiPaper-root.MuiDialog-paper.MuiDialog-paperScrollPaper.MuiDialog-paperWidthSm.MuiPaper-elevation24.MuiPaper-rounded {
+		max-width: 70vw;
+	}
+	.MuiPaper-root.MuiDialog-paper.MuiDialog-paperScrollPaper.MuiDialog-paperWidthSm.MuiPaper-elevation24.MuiPaper-rounded > div > h2 {
+		font-size: 1.5vw !important;
+		margin: 0.5vw;
+		margin-bottom: 2vw;
+	}
+	.MuiPaper-root.MuiDialog-paper.MuiDialog-paperScrollPaper.MuiDialog-paperWidthSm.MuiPaper-elevation24.MuiPaper-rounded > div > p {
+		margin-bottom: 1vw;
+	}
+
+	.MuiPaper-root.MuiDialog-paper.MuiDialog-paperScrollPaper.MuiDialog-paperWidthSm.MuiPaper-elevation24.MuiPaper-rounded > div > p > form > div > div > label, .MuiPaper-root.MuiDialog-paper.MuiDialog-paperScrollPaper.MuiDialog-paperWidthSm.MuiPaper-elevation24.MuiPaper-rounded > div > p > form > div > div > p {
+		font-size: 1.2vw;
+		margin: 0vw 1vw;
+	}
+
+	.MuiPaper-root.MuiDialog-paper.MuiDialog-paperScrollPaper.MuiDialog-paperWidthSm.MuiPaper-elevation24.MuiPaper-rounded > div > p > form > div > div > div {
+		margin: 0.5vw 1vw;
+		width: 38vw;
+	}
+	.MuiPaper-root.MuiDialog-paper.MuiDialog-paperScrollPaper.MuiDialog-paperWidthSm.MuiPaper-elevation24.MuiPaper-rounded > div > p > form > div > div {
+		margin: 0.5vw 1vw;
+	}
+
+	.MuiPaper-root.MuiDialog-paper.MuiDialog-paperScrollPaper.MuiDialog-paperWidthSm.MuiPaper-elevation24.MuiPaper-rounded > div > p > form > div > div > div > input, .MuiPaper-root.MuiDialog-paper.MuiDialog-paperScrollPaper.MuiDialog-paperWidthSm.MuiPaper-elevation24.MuiPaper-rounded > div > p > form > div > div > input {
+		padding: 0.5vw 0px 0.5vw;
+		height: 1.5vw;
+		font-size: 1.5vw;
+	}
+
+	.MuiPaper-root.MuiDialog-paper.MuiDialog-paperScrollPaper.MuiDialog-paperWidthSm.MuiPaper-elevation24.MuiPaper-rounded > div > p > form > button {
+		margin: 1vw;
+		padding: 0.5vw 2vw;
+	}
+	.MuiPaper-root.MuiDialog-paper.MuiDialog-paperScrollPaper.MuiDialog-paperWidthSm.MuiPaper-elevation24.MuiPaper-rounded > div > p > form > button > span {
+		font-size: 1vw;
+	}
+
+	.MuiPaper-root.MuiDialog-paper.MuiDialog-paperScrollPaper.MuiDialog-paperWidthSm.MuiPaper-elevation24.MuiPaper-rounded > div > p > form > div.MuiFormControl-root.MuiTextField-root.MuiFormControl-marginNormal {
+		margin: 0.5vw 1vw;
+	}
+
+	.MuiPaper-root.MuiDialog-paper.MuiDialog-paperScrollPaper.MuiDialog-paperWidthSm.MuiPaper-elevation24.MuiPaper-rounded > div > p > form > div > div > div.MuiInputAdornment-root.MuiInputAdornment-positionEnd {
+		width: 2vw !important;
+		margin: 0 !important;
+	}
+
+	.MuiPaper-root.MuiDialog-paper.MuiDialog-paperScrollPaper.MuiDialog-paperWidthSm.MuiPaper-elevation24.MuiPaper-rounded > div > p > form > div > div > div > button > span > svg.MuiSvgIcon-root {
+		font-size: 2vw !important;
+	}
+
+	.MuiPickersCalendarHeader-transitionContainer {
+		padding: 0 1vw;
+	}
+
+	.MuiPickersBasePicker-pickerView, .MuiPickersBasePicker-container {
+		min-width: 22vw !important;
+	}
+
+	.MuiPickersCalendarHeader-switchHeader > button > span > svg {
+		font-size: 2vw !important;
+	}
+
+	.MuiPickersCalendarHeader-transitionContainer > .MuiTypography-body1 {
+		font-size: 1vw !important;
+		line-height: 1vw !important;
+	}
+
+	.MuiPickersCalendarHeader-daysHeader > span {
+		font-size: 1vw !important;
+		width: 3vw;
+	}
+
+	.MuiPickersCalendarHeader-switchHeader {
+		margin-bottom: 1vw !important;
+	}
+
+	.MuiPickersCalendarHeader-daysHeader {
+		max-height: 1.6vw !important;
+	}
+
+	.MuiPickersCalendarHeader-transitionContainer, .MuiPickersSlideTransition-transitionContainer.MuiPickersCalendar-transitionContainer {
+		height: 1.2vw !important;
+	}
+
+	.MuiPickersSlideTransition-transitionContainer.MuiPickersCalendar-transitionContainer > div > div.MuiPickersCalendar-week > div > button {
+		font-size: 1vw !important;
+		height: 1vw !important;
+		width: 1vw !important;
+		padding: 1.4vw;
+	}
+
+	.MuiPickersSlideTransition-transitionContainer.MuiPickersCalendar-transitionContainer > div > div.MuiPickersCalendar-week > div > button > span > p {
+		font-size: 1vw !important;
+		line-height: 1vw !important;
+	}
+}
+
+@media screen and (max-width: 1500px) {
 	.contactUsPageDescription {
 		font-size: 20px;
 	}
@@ -100,8 +238,7 @@
 	.contactUsPageDescription {
 		font-size: 20px;
 	}
-	.contactUsPage__optionsItem > button,
-	.contactUsPage__optionsItem > a > button {
+	.contactUsPage__optionsItem > button, .contactUsPage__optionsItem > a > button {
 		font-size: 18px;
 		text-decoration: none;
 		width: 180px;
@@ -135,8 +272,7 @@
 		display: flex;
 		/* border: 1px red solid; */
 	}
-	.contactUsPage__optionsItem > button,
-	.contactUsPage__optionsItem > a > button {
+	.contactUsPage__optionsItem > button, .contactUsPage__optionsItem > a > button {
 		font-size: 16px;
 		width: 150px;
 		text-decoration: none;
@@ -148,15 +284,18 @@
 		padding: 15px 0;
 	}
 }
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 400px) and (min-width: 280px) {
+	.contactUsPage__openHours {
+		margin: 0px !important;
+	}
+
 	.contactUsPageTitle {
 		font-size: 30px;
 	}
 	.contactUsPageDescription {
 		font-size: 18px;
 	}
-	.contactUsPage__optionsItem > button,
-	.contactUsPage__optionsItem > a > button {
+	.contactUsPage__optionsItem > button, .contactUsPage__optionsItem > a > button {
 		font-size: 13px;
 		width: 150px;
 		border: 0.2vw #ffc0a1 solid;
@@ -172,18 +311,21 @@
 	}
 	.contactUsPage__openHours > p {
 		font-size: 14px;
-		width: 230px;
+		/* width: 230px; */
 	}
 }
 @media screen and (max-width: 280px) {
+	.contactUsPage__openHours {
+		margin: 0px !important;
+	}
 	.contactUsPageTitle {
 		font-size: 25px;
 	}
 	.contactUsPageDescription {
 		font-size: 15px;
+		width: 100%;
 	}
-	.contactUsPage__optionsItem > button,
-	.contactUsPage__optionsItem > a > button {
+	.contactUsPage__optionsItem > button, .contactUsPage__optionsItem > a > button {
 		text-decoration: none;
 		font-size: 13px;
 		width: 100px;
@@ -200,6 +342,6 @@
 
 	.contactUsPage__openHours > p {
 		font-size: 14px;
-		width: 230px;
+		/* width: 230px; */
 	}
 }
