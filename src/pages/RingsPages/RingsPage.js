@@ -49,6 +49,8 @@ function RingsPage() {
 								productImgURL: cartItem.productImgURL,
 								productName: cartItem.productName,
 								productQuantity: cartItem.productQuantity,
+                                preferredMetal: currentMetalType.preferredMetal,
+                                preferredSize: currentMetalSize.preferredSize,
 							},
 						});
 					}
@@ -63,6 +65,8 @@ function RingsPage() {
 								name: wishlistItem.name,
 								cost: wishlistItem.cost,
 								imgURL: wishlistItem.imgURL,
+                                preferredMetal: wishlistItem.preferredMetal,
+                                preferredSize: wishlistItem.preferredSize,
 							},
 						});
 					}
@@ -98,10 +102,12 @@ function RingsPage() {
 			dispatch({
 				type: 'ADD_TO_BASKET',
 				item: {
-					productName: 'Diamond and Black Onyx Circle Pendant',
+					productName: 'Some Stupid Ring',
 					productCost: 890.0,
 					productImgURL: 'pendantsNecklace/ring4.png',
 					productQuantity: 1,
+                    preferredMetal: currentMetalType,
+					preferredSize: currentMetalSize,
 				},
 			});
 			alert('Added item to cart!');
@@ -119,9 +125,11 @@ function RingsPage() {
 			dispatch({
 				type: 'ADD_TO_WISHLIST',
 				item: {
-					name: 'Diamond and Black Onyx Circle Pendant',
+					name: 'Some Stupid Ring',
 					cost: 890.0,
 					imgURL: 'pendantsNecklace/ring4.png',
+					preferredMetal: currentMetalType,
+					preferredSize: currentMetalSize,
 				},
 			});
 			setAddToWishList(true);
@@ -135,7 +143,7 @@ function RingsPage() {
 		if (user) {
 			dispatch({
 				type: 'REMOVE_FROM_WISHLIST',
-				name: 'Diamond and Black Onyx Circle Pendant',
+				name: 'Some Stupid Ring',
 			});
 			setAddToWishList(false);
 		} else {
@@ -206,9 +214,7 @@ function RingsPage() {
 				</div>
 				<div className="ringsPage__sectionCartCartDetails">
 					<Fade direction="left" cascade triggerOnce>
-						<h2>
-							Some Stupid Ring • {currentMetalType} • {currentMetalSize}
-						</h2>
+						<h2>Some Stupid Ring</h2>
 						<div className="ringsPage__sectionCartCartDetailsItem">
 							Preferred Metal:
 							<select
