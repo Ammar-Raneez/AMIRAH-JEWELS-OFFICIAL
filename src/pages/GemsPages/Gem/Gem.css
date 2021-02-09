@@ -66,6 +66,7 @@
 	.gem {
 		padding: 3vw !important;
 		margin: 1.6vw !important;
+		width: 15vw !important;
 	}
 
 	.gem > a > img {

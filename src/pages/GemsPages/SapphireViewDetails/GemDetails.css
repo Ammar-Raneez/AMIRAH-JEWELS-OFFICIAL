@@ -167,6 +167,105 @@
 	width: 100%;
 }
 
+@media screen and (max-width: 10000px) and (min-width: 1400px) {
+	.gemDetails {
+		margin-top: 8vw;
+		overflow-x: hidden;
+		margin-bottom: 8vw;
+	}
+
+	.gemDetails__sectionCartSmallImages > img {
+		padding: 2vw;
+		height: 10vw;
+	}
+
+	.gemDetails__sectionCartSmallImages > img:hover, .gemDetails__sectionCartSmallImages > img.active {
+		box-shadow: 0.2vw 0.2vw 1vw rgba(161, 161, 161, 0.24), 0.2vw 0.2vw 1vw rgba(161, 161, 161, 0.24);
+	}
+
+	.gemDetails__sectionCartMainImageIcon {
+		margin-top: 3vw;
+		margin-left: 35vw;
+	}
+
+	.gemDetails__sectionCartMainImageIcon > .MuiSvgIcon-root {
+		font-size: 4vw !important;
+	}
+
+	.gemDetails__sectionCartMainImage > div > img, .gemDetails__sectionCartMainImage > div {
+		height: 35vw !important;
+		width: 35vw !important;
+	}
+
+	.gemDetails__sectionCartMainImage {
+		margin: 0 8vw;
+	}
+
+	.gemDetails__sectionCartCartDetails {
+		width: 30vw;
+	}
+
+	.gemDetails__sectionCartCartDetails > div > h2 {
+		font-size: 2vw;
+		margin-bottom: 5vw;
+	}
+
+	.gemDetails__sectionCartCartDetailsItem {
+		font-size: 1.5vw;
+		line-height: 5vw;
+	}
+
+	.gemDetails__sectionVideo > div > h2, .gemDetails__sectionDescription > div > h2, .gemDetails__sectionProduct > div > h2 {
+		font-size: 2vw;
+	}
+
+	.gemDetails__sectionProduct > div > h3 {
+		font-size: 1.5vw;
+	}
+
+	.gemDetails__otherGemsRow {
+		width: 90vw;
+	}
+
+	.gemDetails__sectionCartCartDetails > div > p {
+		font-size: 1.5vw;
+		line-height: 5vw;
+	}
+
+	.gemDetails__sectionCartCartDetailsBtns > a > button {
+		font-size: 1.5vw;
+		margin: 0.5vw 0;
+		padding: 1.5vw;
+	}
+
+	.gemDetails__sectionVideo > div > h2, .gemDetails__sectionDescription > div > h2, .gemDetails__sectionProduct > div > h2 {
+		margin: 10vw 0 2vw 2vw;
+	}
+
+	.gemDetails__sectionProduct > div > h3 {
+		margin-bottom: 5vw;
+	}
+
+	.gemDetails__sectionVideo > div > video {
+		height: 40vw;
+		border-radius: 2vw;
+	}
+
+	.tableRow {
+		width: 80vw;
+		font-size: 1.5vw;
+		margin: 1.5vw;
+	}
+
+	.tableRow > p {
+		padding: 1vw;
+	}
+
+	.gemDetails__otherGemsRow {
+		margin: 1.5vw;
+	}
+}
+
 @media screen and (max-width: 1100px) and (min-width: 900px) {
 	.gemDetails__sectionVideo > div > video {
 		height: 450px;
@@ -250,6 +349,11 @@
 		justify-content: center;
 	}
 
+	.gemDetails__sectionDescription > div > h2, .gemDetails__sectionProduct > div > h2 {
+		margin: 100px 0px 10px 0px;
+		text-align: center;
+	}
+
 	.gemDetails__sectionCartCartDetails > div > h1 {
 		text-align: center !important;
 	}
@@ -266,7 +370,19 @@
 		width: auto;
 	}
 
-	.gemDetails__sectionCartSmallImages, .gemDetails__sectionDescription, .gemDetails__sectionVideo {
+	.gemDetails__sectionDescription, .tableRow {
+		width: 90vw;
+	}
+
+	.tableRow {
+		margin: 0;
+	}
+
+	.tableRow > p {
+		font-size: 12px;
+	}
+
+	.gemDetails__sectionCartSmallImages, .gemDetails__sectionVideo {
 		display: none;
 	}
 
