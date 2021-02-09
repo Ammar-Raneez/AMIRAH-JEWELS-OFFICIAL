@@ -69,7 +69,17 @@ function Footer() {
 		let clickedCC = currency[countryIndex];
 		let currencySymbol = coinify.symbol(clickedCC);
 
-		alert(`${currencySymbol} ${e.target.value} ${clickedCC}`);
+		// Dispatch to set the new currency rate 
+		dispatch({
+			type: 'SET_CURRENCY_RATE',
+			currencyRate: exchangeRates[clickedCC],
+		});
+
+		// Dispatch to set the new currency symbol
+		dispatch({
+			type: 'SET_CURRENCY_SYMBOL',
+			currencySymbol: currencySymbol,
+		});
 	};
 
 	return (

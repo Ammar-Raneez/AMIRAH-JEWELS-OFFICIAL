@@ -21,7 +21,7 @@ function RingsPage() {
 	const [addToWishList, setAddToWishList] = useState(false);
 	const [tempSafetyWishList, setTempSafetyWishList] = useState(false);
 	const [tempSafetyCartBasket, setTempSafetyCartBasket] = useState(false);
-	const [{ wishListBasket, cartBasket, user }, dispatch] = useStateValue();
+	const [{ wishListBasket, cartBasket, user, currencySymbol, currencyRate }, dispatch] = useStateValue();
 	const [currentMetalType, setCurrentMetalType] = useState('18k Rose Gold');
 	const [currentMetalSize, setCurrentMetalSize] = useState('US 4');
 
@@ -49,8 +49,8 @@ function RingsPage() {
 								productImgURL: cartItem.productImgURL,
 								productName: cartItem.productName,
 								productQuantity: cartItem.productQuantity,
-                                preferredMetal: currentMetalType.preferredMetal,
-                                preferredSize: currentMetalSize.preferredSize,
+								preferredMetal: currentMetalType.preferredMetal,
+								preferredSize: currentMetalSize.preferredSize,
 							},
 						});
 					}
@@ -65,8 +65,8 @@ function RingsPage() {
 								name: wishlistItem.name,
 								cost: wishlistItem.cost,
 								imgURL: wishlistItem.imgURL,
-                                preferredMetal: wishlistItem.preferredMetal,
-                                preferredSize: wishlistItem.preferredSize,
+								preferredMetal: wishlistItem.preferredMetal,
+								preferredSize: wishlistItem.preferredSize,
 							},
 						});
 					}
@@ -78,6 +78,7 @@ function RingsPage() {
 	// UPDATING THE WISHLIST BASKET ON (FIRE-STORE)
 	useEffect(() => {
 		// console.log(wishListBasket, "<============");
+        console.log(currencyRate)
 		if (tempSafetyWishList === true) {
 			db.collection('users').doc(user?.email).update({
 				wishlist: wishListBasket,
@@ -106,7 +107,7 @@ function RingsPage() {
 					productCost: 890.0,
 					productImgURL: 'pendantsNecklace/ring4.png',
 					productQuantity: 1,
-                    preferredMetal: currentMetalType,
+					preferredMetal: currentMetalType,
 					preferredSize: currentMetalSize,
 				},
 			});
@@ -261,7 +262,10 @@ function RingsPage() {
 							<p>Quantity</p>
 							<p>1</p>
 						</div>
-						<p>Price: $890.00</p>
+						<p>
+							Price: {currencySymbol}{" "}
+							{890.0 * currencyRate}
+						</p>
 						<br />
 						<br />
 						<div className="ringsPage__sectionCartCartDetailsBtns">
