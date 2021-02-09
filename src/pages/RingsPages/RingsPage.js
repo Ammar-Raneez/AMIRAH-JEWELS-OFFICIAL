@@ -22,6 +22,8 @@ function RingsPage() {
 	const [tempSafetyWishList, setTempSafetyWishList] = useState(false);
 	const [tempSafetyCartBasket, setTempSafetyCartBasket] = useState(false);
 	const [{ wishListBasket, cartBasket, user }, dispatch] = useStateValue();
+	const [currentMetalType, setCurrentMetalType] = useState('18k Rose Gold');
+	const [currentMetalSize, setCurrentMetalSize] = useState('US 4');
 
 	// created the image path
 	const selectedImage = (imagePath, image) => {
@@ -204,12 +206,40 @@ function RingsPage() {
 				</div>
 				<div className="ringsPage__sectionCartCartDetails">
 					<Fade direction="left" cascade triggerOnce>
-						<h2>Diamond and Black Onyx Circle Pendant</h2>
+						<h2>Some Stupid Ring • {currentMetalType} • {currentMetalSize}</h2>
 						<div className="ringsPage__sectionCartCartDetailsItem" style={{ border: '1px red solid' }}>
-							<p>in 18k Rose Gold, 16-18"</p>
+							Preferred Metal:
+							<select value={currentMetalType} onChange={(e) => setCurrentMetalType(e.target.value)}>
+								<option key={3} value="18k Rose Gold">
+									18k Rose Gold
+								</option>
+								<option key={1} value="18k Yellow Gold">
+									18k Yellow Gold
+								</option>
+								<option key={2} value="18k White Gold">
+									18k White Gold
+								</option>
+								<option key={4} value="Sterling Silver">
+									Sterling Silver
+								</option>
+							</select>
 						</div>
-                        <div className="ringsPage__sectionCartCartDetailsItem" style={{ border: '1px red solid' }}>
-							<p>in 18k Rose Gold, 16-18"</p>
+						<div className="ringsPage__sectionCartCartDetailsItem" style={{ border: '1px red solid' }}>
+							Preferred Size:
+							<select value={currentMetalSize} onChange={(e) => setCurrentMetalSize(e.target.value)}>
+								<option key={3} value="US 4">
+									US 4
+								</option>
+								<option key={1} value="US 4 ½">
+									US 4 ½
+								</option>
+								<option key={2} value="US 5">
+									US 5
+								</option>
+								<option key={4} value="US 5 ½">
+									US 5 ½
+								</option>
+							</select>
 						</div>
 						<div className="ringsPage__sectionCartCartDetailsItem">
 							<p>Quantity</p>
