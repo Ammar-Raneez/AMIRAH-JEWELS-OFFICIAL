@@ -56,7 +56,7 @@ function WishListPage() {
 	}, []);
 
 	return user ? (
-		<div className="wishListPage">
+		<div className="wishListPage" style={wishListBasket.length == 1 ? { height: '85vh' } : {}}>
 			<SEO title={`${user.displayName}'s Wish List`} />
 			{/* wishlist title */}
 			<div className="wishListPage__title">
@@ -69,12 +69,7 @@ function WishListPage() {
 				</div>
 			) : (
 				<div
-					className="wishListPage__items"
-					style={
-						wishListBasket.length < 4 && wishListBasket.length > 0
-							? { justifyContent: 'flex-start' }
-							: { justifyContent: 'space-around' }
-					}
+					className={wishListBasket.length < 4 && wishListBasket.length > 0 ? "wishListPage__itemsFStart" : "wishListPage__itemsFAround"}
 				>
 					{wishListBasket.length === 0 ? (
 						<div className="wishListPage__itemsEmpty">

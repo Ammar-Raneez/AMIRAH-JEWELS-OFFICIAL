@@ -7,14 +7,7 @@
 	display: flex;
 	justify-content: space-between;
 }
-.cartPage__titleContinueSection {
-	display: flex;
-	align-items: center;
-	font-size: 1.5vw;
-	font-family: Quattrocento-Regular;
-	color: #707070;
-	font-weight: bold;
-}
+
 .cartPage__title {
 	margin-bottom: 2vw;
 }
@@ -24,16 +17,6 @@
 	margin: 2vw 0;
 	font-weight: lighter;
 	color: #707070;
-}
-.cartPage__titleContinueSection > .MuiSvgIcon-root {
-	transition: 0.3s ease;
-	font-size: 1.5vw !important;
-}
-.cartPage__titleContinueSection > .MuiSvgIcon-root:hover,
-.cartPage__titleContinueSection:hover {
-	transition: 0.3s ease;
-	color: rgb(255, 177, 109) !important;
-	cursor: pointer;
 }
 
 .cartPage__items {
@@ -113,14 +96,6 @@
 }
 
 @media screen and (max-width: 900px) and (min-width: 450px) {
-	.cartPage__titleContinueSection,
-	.cartPage__titleContinueSection > .MuiSvgIcon-root {
-		font-size: 12px !important;
-	}
-	.cartPage__title > h1 {
-		font-size: 20px;
-	}
-
 	.cartPage__main {
 		flex-direction: column;
 	}
@@ -149,10 +124,6 @@
 }
 
 @media screen and (max-width: 450px) {
-	.cartPage__titleContinueSection,
-	.cartPage__titleContinueSection > .MuiSvgIcon-root {
-		font-size: 12px !important;
-	}
 	.cartPage__itemsEmpty > p {
 		font-size: 14px;
 	}
