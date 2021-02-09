@@ -46,6 +46,7 @@ function CheckOutPage() {
 	const [allCheckOutDetailsHistory, setAllCheckOutDetailsHistory] = useState([]);
 	const [updateCheckoutCollection, setUpdateCheckoutCollection] = useState(false);
 
+	// Adding the order details into the database
 	useEffect(() => {
 		if (updateCheckoutCollection) {
 			console.log('adding to database');
@@ -106,6 +107,9 @@ function CheckOutPage() {
 			setTimeout(() => {
 				setAllCheckOutDetailsHistory(tempArray);
 			}, 5000);
+
+			// SENDING AN EMAIL OF THE ORDER TO AMIRAH EMAIL
+			
 		}
 
 		// ALERT THE USER THAT PAYMENT DONE SUCCESSFULLY OR RE-DIRECT USING A MODEL

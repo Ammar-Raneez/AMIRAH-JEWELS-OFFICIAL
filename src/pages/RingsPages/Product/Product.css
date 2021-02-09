@@ -1,0 +1,79 @@
+.MuiPaper-root.product.MuiPaper-elevation1.MuiPaper-rounded {
+	padding: 10px;
+	transition: 0.3s ease all;
+}
+
+.MuiPaper-root.product.MuiPaper-elevation1.MuiPaper-rounded:hover {
+	transform: scale(1.05);
+}
+
+.product {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 30px;
+	flex-direction: column;
+	margin: 16px;
+}
+.product > a > img {
+	object-fit: contain;
+	height: 220px;
+}
+.product > a {
+	text-decoration: none;
+}
+.product > a > p {
+	font-family: Quattrocento-Regular;
+	color: #707070;
+	padding: 1vw;
+	font-size: 14px;
+	display: flex;
+	justify-content: center;
+}
+/* .product > a > button {
+	margin: 2vw;
+	padding: 0.8vw 3vw;
+	cursor: pointer !important;
+	margin-top: 1vw;
+	font-family: Quattrocento-Regular;
+	border: none;
+	font-size: 12px;
+	z-index: 999;
+	color: #555555;
+	outline: none;
+	background-color: white;
+	border: 2px #ffc0a1 solid;
+	border-radius: 0.7vw;
+	transition: 0.3s ease-in-out;
+} */
+/* .product > a > button:hover {
+	transition: 0.3s ease-in-out;
+	color: white;
+	background-color: #ffc0a1;
+	font-weight: bold;
+} */
+/* .product > img:hover {
+	transition: 0.3s ease-in-out;
+	transform: scale(1.05);
+} */
+@media screen and (max-width: 900px) and (min-width: 450px) {
+	.product {
+		padding: 10px;
+	}
+
+	.product > a > button {
+		font-size: 12px;
+	}
+}
+
+@media screen and (max-width: 450px) {
+	.product > img {
+		height: 60vw;
+	}
+
+	.product > p {
+		font-size: 16px;
+		margin-top: 20px;
+		margin-bottom: 10px;
+	}
+}
