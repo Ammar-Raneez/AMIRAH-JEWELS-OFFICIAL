@@ -1,8 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Cinzel&display=swap');
 
 @font-face {
-    font-family: timeless;
-    src: url(Timeless.ttf);
+    font-family: quattrocento;
+    src: url(Quattrocento-Regular.ttf);
 }
 
 .header{
@@ -15,7 +15,7 @@
 .header__options {
 	display: flex;
 	align-items: center;
-	font-family: timeless;
+	font-family: quattrocento;
 	justify-content: space-evenly;
 	margin: 1vw 2.5vw;
 	font-size: 1.4vw;
