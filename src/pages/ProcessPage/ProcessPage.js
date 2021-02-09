@@ -9,7 +9,7 @@ function ProcessPage() {
 			<SEO title="The Process" />
 			{/* title */}
 			<Fade cascade direction="right" triggerOnce>
-				<h1>bringing unique jewelry designs to life</h1>
+				<h1>bringing unique jewellery designs to life</h1>
 
 				{/* description */}
 				<p>
