@@ -153,6 +153,83 @@
 	src: url(Quattrocento-Regular.ttf);
 }
 
+@media screen and (max-width: 10000px) and (min-width: 1400px) {
+	.registerPage__form > div > div > label {
+		font-size: 1vw;
+		line-height: 1vw;
+	}
+	
+	.registerPage__form > div > div > div {
+		margin-top: 1vw;
+		font-size: 1vw;
+		line-height: 1vw;
+	}
+
+	.registerPage__form > div > div > div > input {
+		height: 1vw;
+		padding: 0.5vw 0 0.6vw;
+	}
+
+	.registerPage__formSecond > div > fieldset > legend {
+		line-height: 1vw;
+		font-size: 1vw;
+	}
+
+	.registerPage__formSecond > div > fieldset > div > label {
+		margin-left: -1vw;
+		margin-right: 1vw;
+	}
+
+	.registerPage__form > div > div > p {
+		font-size: 1vw;
+	}
+
+	.registerPage__formSecond > div > fieldset > div > label > span {
+		font-size: 1vw;
+	}
+
+	.registerPage__formSecond > div > fieldset > div > label > span > span > div > svg {
+		font-size: 2vw !important;
+		height: 1vw;
+		width: 1vw;
+	}
+
+	.registerPage__formThirdInputs > div {
+		margin-bottom: 1vw;
+	}
+
+	.registerPage__formThirdInputs > div > div {
+		font-size: 1vw;
+		line-height: 1vw;
+	}
+
+	.registerPage__formThirdInputs > div > div > input {
+		height: 1vw;
+		padding: 0.5vw 0 0.6vw;
+	}
+
+	.registerPage__formThirdInputs > div > div > div {
+		height: 0.1vw;
+		margin-left: 1vw;
+		max-height: 1.5vw;
+	}
+
+	.registerPage__formThirdInputs > div > div > div > button {
+		font-size: 1.2vw;
+		padding: 1.2vw;
+	}
+
+	.registerPage__formThirdInputs > div > div > div > button > span > svg {
+		font-size: 2vw !important;
+		width: 2vw;
+		height: 2vw;
+	}
+
+	.registerPage__formThirdInputs > div > p {
+		font-size: 1vw;
+	}
+}
+
 @media screen and (max-width: 1024px) and (min-width: 300px) {
 	.registerPage {
 		margin-top: 0px;
