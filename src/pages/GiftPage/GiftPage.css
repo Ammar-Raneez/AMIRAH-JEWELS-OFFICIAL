@@ -32,7 +32,7 @@
 .giftPage__detailsFirstButtons {
 	display: flex;
 	margin: 1.5vw;
-	justify-content: space-between;
+	justify-content: flex-start;
 	align-items: center;
 }
 .giftPage__detailsFirstButtons > a:first-child > button {
@@ -125,6 +125,10 @@
 @media screen and (max-width: 450px) {
 	.giftPage__detailsSecond {
 		display: none;
+	}
+
+	.giftPage__details {
+		justify-content: center;
 	}
 
 	.giftPage__detailsFirst {
