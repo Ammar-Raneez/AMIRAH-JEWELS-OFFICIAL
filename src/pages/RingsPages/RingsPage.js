@@ -206,37 +206,47 @@ function RingsPage() {
 				</div>
 				<div className="ringsPage__sectionCartCartDetails">
 					<Fade direction="left" cascade triggerOnce>
-						<h2>Some Stupid Ring • {currentMetalType} • {currentMetalSize}</h2>
-						<div className="ringsPage__sectionCartCartDetailsItem" style={{ border: '1px red solid' }}>
+						<h2>
+							Some Stupid Ring • {currentMetalType} • {currentMetalSize}
+						</h2>
+						<div className="ringsPage__sectionCartCartDetailsItem">
 							Preferred Metal:
-							<select value={currentMetalType} onChange={(e) => setCurrentMetalType(e.target.value)}>
-								<option key={3} value="18k Rose Gold">
+							<select
+								className="ringsPage__dropdownList"
+								value={currentMetalType}
+								onChange={(e) => setCurrentMetalType(e.target.value)}
+							>
+								<option key={3} className="ringsPage__dropdownItem" value="18k Rose Gold">
 									18k Rose Gold
 								</option>
-								<option key={1} value="18k Yellow Gold">
+								<option key={1} className="ringsPage__dropdownItem" value="18k Yellow Gold">
 									18k Yellow Gold
 								</option>
-								<option key={2} value="18k White Gold">
+								<option key={2} className="ringsPage__dropdownItem" value="18k White Gold">
 									18k White Gold
 								</option>
-								<option key={4} value="Sterling Silver">
+								<option key={4} className="ringsPage__dropdownItem" value="Sterling Silver">
 									Sterling Silver
 								</option>
 							</select>
 						</div>
-						<div className="ringsPage__sectionCartCartDetailsItem" style={{ border: '1px red solid' }}>
+						<div className="ringsPage__sectionCartCartDetailsItem">
 							Preferred Size:
-							<select value={currentMetalSize} onChange={(e) => setCurrentMetalSize(e.target.value)}>
-								<option key={3} value="US 4">
+							<select
+								className="ringsPage__dropdownList"
+								value={currentMetalSize}
+								onChange={(e) => setCurrentMetalSize(e.target.value)}
+							>
+								<option className="ringsPage__dropdownItem" key={3} value="US 4">
 									US 4
 								</option>
-								<option key={1} value="US 4 ½">
+								<option className="ringsPage__dropdownItem" key={1} value="US 4 ½">
 									US 4 ½
 								</option>
-								<option key={2} value="US 5">
+								<option className="ringsPage__dropdownItem" key={2} value="US 5">
 									US 5
 								</option>
-								<option key={4} value="US 5 ½">
+								<option className="ringsPage__dropdownItem" key={4} value="US 5 ½">
 									US 5 ½
 								</option>
 							</select>
