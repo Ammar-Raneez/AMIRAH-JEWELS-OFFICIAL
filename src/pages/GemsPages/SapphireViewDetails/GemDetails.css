@@ -9,7 +9,7 @@
 }
 .gemDetails__sectionCart {
 	display: flex;
-	width: 100%;
+	width: 95vw;
 	align-items: center;
 	justify-content: center;
 }
@@ -33,17 +33,18 @@
 .gemDetails__sectionCartMainImageIcon {
 	position: absolute;
 	top: 0;
+	display: flex;
+	justify-content: flex-end;
 	margin-top: 30px;
-	margin-left: 350px;
 }
 .gemDetails__sectionCartMainImageIcon > .MuiSvgIcon-root {
 	font-size: 30px !important;
 	cursor: pointer;
 	color: rgb(255, 177, 109) !important;
 }
-.gemDetails__sectionCartMainImage > img {
+.gemDetails__sectionCartMainImage > div > img {
 	height: 450px;
-	object-fit: contain;
+	transition: 0.3s ease-in-out;
 	width: 450px;
 }
 .gemDetails__sectionCartMainImage {
@@ -267,15 +268,25 @@
 }
 
 @media screen and (max-width: 1100px) and (min-width: 900px) {
+	.gemDetails {
+		overflow-x: hidden;
+	}
+
 	.gemDetails__sectionVideo > div > video {
 		height: 450px;
 	}
 }
 
 @media screen and (max-width: 900px) and (min-width: 600px) {
+	.gemDetails {
+		overflow-x: hidden;
+	}
+	.necklacePendant__sectionCartMainImage {
+		margin: 0;
+	}
 	.gemDetails__sectionCartMainImage > img {
-		height: 400px;
-		width: 400px;
+		height: 400px !important;
+		width: 400px !important;
 	}
 
 	.gemDetails__sectionCartSmallImages {
@@ -305,9 +316,14 @@
 }
 
 @media screen and (max-width: 600px) and (min-width: 450px) {
+	.gemDetails {
+		overflow-x: hidden;
+	}
+
 	.gemDetails__sectionCartMainImage > div {
 		display: flex;
-		justify-content: center;
+		align-items: flex-start !important;
+		justify-content: flex-end !important;
 	}
 
 	.tableRow {
@@ -323,6 +339,11 @@
 	.gemDetails__sectionDescription {
 		width: 90vw;
 	}
+
+	.gemDetails__sectionCartMainImage > div > img, .gemDetails__sectionCartMainImage > div {
+		height: 300px !important;
+		width: 300px !important;
+	}
 	
 	.gemDetails__sectionVideo > div > video {
 		height: 45vw;
@@ -337,16 +358,27 @@
 	}
 }
 
-@media screen and (max-width: 450px) {
-	.gemDetails__sectionCartMainImage {
-		margin: 0;
+@media screen and (max-width: 450px) and (min-width: 320px) {
+	.gemDetails {
+		overflow-x: hidden;
 	}
 
 	.gemDetails__sectionCartMainImage > div {
-		height: auto;
-		width: auto;
+		display: flex;
+		align-items: flex-start !important;
+		justify-content: flex-end !important;
+	}
+
+	.gemDetails__sectionCartMainImage {
+		margin: 0;
 		display: flex;
 		justify-content: center;
+		width: 90vw;
+	}
+
+	.gemDetails__sectionCartMainImage > div > img, .gemDetails__sectionCartMainImage > div {
+		height: 300px !important;
+		width: 300px !important;
 	}
 
 	.gemDetails__sectionDescription > div > h2, .gemDetails__sectionProduct > div > h2 {
@@ -359,11 +391,69 @@
 	}
 
 	.gemDetails__sectionCartMainImage > div > img {
-		height: 300px !important;
-		width: auto !important;
 		object-fit: contain;
 	}
-	.gemDetails__sectionCartCartDetails, .gemDetails__sectionCartCart, .gemDetails__sectionCartMainImage > div {
+	.gemDetails__sectionCartCartDetails, .gemDetails__sectionCartCart {
+		width: 90vw !important;
+	}
+	.gemDetails__otherGemsRow {
+		width: auto;
+	}
+
+	.gemDetails__sectionDescription, .tableRow {
+		width: 90vw;
+	}
+
+	.tableRow {
+		margin: 0;
+	}
+
+	.tableRow > p {
+		font-size: 12px;
+	}
+
+	.gemDetails__sectionCartSmallImages, .gemDetails__sectionVideo {
+		display: none;
+	}
+
+	.gemDetails__sectionCart {
+		flex-direction: column;
+	}
+}
+
+@media screen and (max-width: 320px) {
+	.gemDetails {
+		overflow-x: hidden;
+	}
+
+	.gemDetails__sectionCartMainImage > div {
+		display: flex;
+		align-items: flex-start !important;
+		justify-content: flex-end !important;
+	}
+
+	.gemDetails__sectionCartMainImage {
+		margin: 0;
+		display: flex;
+		justify-content: center;
+		width: 90vw;
+	}
+
+	.gemDetails__sectionCartMainImage > div > img, .gemDetails__sectionCartMainImage > div {
+		height: 280px !important;
+		width: 280px !important;
+	}
+
+	.gemDetails__sectionDescription > div > h2, .gemDetails__sectionProduct > div > h2 {
+		margin: 100px 0px 10px 0px;
+		text-align: center;
+	}
+
+	.gemDetails__sectionCartCartDetails > div > h1 {
+		text-align: center !important;
+	}
+
+	.gemDetails__sectionCartCartDetails, .gemDetails__sectionCartCart {
 		width: 90vw !important;
 	}
 	.gemDetails__otherGemsRow {
