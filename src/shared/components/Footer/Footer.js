@@ -6,10 +6,11 @@ import { useStateValue } from '../../../StateProvider';
 import './Footer.css';
 import cc from 'currency-codes';
 import coinify from 'coinify';
+import { db } from '../../../firebase';
 
 function Footer() {
 	const [date] = useState(new Date().getFullYear());
-	const [{ currencySymbol, currencyRate }, dispatch] = useStateValue();
+	const [{ currencySymbol, currencyRate, user }, dispatch] = useStateValue();
 	const BASE_URL = 'https://v6.exchangerate-api.com/v6/0a31808a3c199a87cfda7925/latest/USD';
 	const [exchangeRates, setExchangeRates] = useState({});
 
@@ -21,6 +22,7 @@ function Footer() {
 
 	// This use effect will fetch all the updated/latest currency rates from the API with base (USD)
 	useEffect(() => {
+		// This is fetching the exchange rate API details
 		fetch(BASE_URL)
 			.then((res) => res.json())
 			.then((data) => {
@@ -69,7 +71,23 @@ function Footer() {
 		let clickedCC = currency[countryIndex];
 		let currencySymbol = coinify.symbol(clickedCC);
 
-		alert(`${currencySymbol} ${e.target.value} ${clickedCC}`);
+		// Dispatch to set the new currency rate
+		dispatch({
+			type: 'SET_CURRENCY_RATE',
+			currencyRate: exchangeRates[clickedCC],
+		});
+
+		// Dispatch to set the new currency symbol
+		dispatch({
+			type: 'SET_CURRENCY_SYMBOL',
+			currencySymbol: currencySymbol,
+		});
+
+		// Update the currency and the currency symbol from the DB
+		db.collection('users').doc(user?.email).update({
+			currencyRate: exchangeRates[clickedCC],
+			currencySymbol: currencySymbol,
+		});
 	};
 
 	return (
@@ -115,8 +133,8 @@ function Footer() {
 								<p>Select Country: </p>
 								<select onChange={(e) => handleClickedCountry(e)}>
 									<option value={cc.code('USD')?.countries[0]}>Select Country</option>
-									{countries?.map((country) => (
-										<option key={country} value={country}>
+									{countries?.map((country, index) => (
+										<option key={index} value={country}>
 											{country}
 										</option>
 									))}

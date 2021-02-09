@@ -21,9 +21,10 @@ function RingsPage() {
 	const [addToWishList, setAddToWishList] = useState(false);
 	const [tempSafetyWishList, setTempSafetyWishList] = useState(false);
 	const [tempSafetyCartBasket, setTempSafetyCartBasket] = useState(false);
-	const [{ wishListBasket, cartBasket, user }, dispatch] = useStateValue();
+	const [{ wishListBasket, cartBasket, user, currencySymbol, currencyRate }, dispatch] = useStateValue();
 	const [currentMetalType, setCurrentMetalType] = useState('18k Rose Gold');
 	const [currentMetalSize, setCurrentMetalSize] = useState('US 4');
+	const [displayPrice, setDisplayPrice] = useState(false);
 
 	// created the image path
 	const selectedImage = (imagePath, image) => {
@@ -49,27 +50,38 @@ function RingsPage() {
 								productImgURL: cartItem.productImgURL,
 								productName: cartItem.productName,
 								productQuantity: cartItem.productQuantity,
-                                preferredMetal: currentMetalType.preferredMetal,
-                                preferredSize: currentMetalSize.preferredSize,
+								preferredMetal: currentMetalType.preferredMetal,
+								preferredSize: currentMetalSize.preferredSize,
 							},
 						});
 					}
 
 					// adding the wishlist items
 					for (const wishlistItem of doc.data().wishlist) {
-						// console.log('Adding items from the database into the wishlist');
-						// console.log(wishlistItem);
 						dispatch({
 							type: 'ADD_TO_WISHLIST',
 							item: {
 								name: wishlistItem.name,
 								cost: wishlistItem.cost,
 								imgURL: wishlistItem.imgURL,
-                                preferredMetal: wishlistItem.preferredMetal,
-                                preferredSize: wishlistItem.preferredSize,
+								preferredMetal: wishlistItem.preferredMetal,
+								preferredSize: wishlistItem.preferredSize,
 							},
 						});
 					}
+					// Dispatch to set the currency rate from the db
+					dispatch({
+						type: 'SET_CURRENCY_RATE',
+						currencyRate: doc.data().currencyRate,
+					});
+
+					// Dispatch to set the currency symbol from the db
+					dispatch({
+						type: 'SET_CURRENCY_SYMBOL',
+						currencySymbol: doc.data().currencySymbol,
+					});
+
+					setDisplayPrice(true);
 				}
 			})
 		);
@@ -78,6 +90,7 @@ function RingsPage() {
 	// UPDATING THE WISHLIST BASKET ON (FIRE-STORE)
 	useEffect(() => {
 		// console.log(wishListBasket, "<============");
+		console.log(currencyRate);
 		if (tempSafetyWishList === true) {
 			db.collection('users').doc(user?.email).update({
 				wishlist: wishListBasket,
@@ -106,7 +119,7 @@ function RingsPage() {
 					productCost: 890.0,
 					productImgURL: 'pendantsNecklace/ring4.png',
 					productQuantity: 1,
-                    preferredMetal: currentMetalType,
+					preferredMetal: currentMetalType,
 					preferredSize: currentMetalSize,
 				},
 			});
@@ -261,7 +274,7 @@ function RingsPage() {
 							<p>Quantity</p>
 							<p>1</p>
 						</div>
-						<p>Price: $890.00</p>
+						<p>{displayPrice && `Price: ${currencySymbol} ${Math.round(890.0 * currencyRate * 100) / 100}`}</p>
 						<br />
 						<br />
 						<div className="ringsPage__sectionCartCartDetailsBtns">
