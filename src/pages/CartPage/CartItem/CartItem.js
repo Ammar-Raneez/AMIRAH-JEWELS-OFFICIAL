@@ -4,7 +4,7 @@ import CloseIcon from '@material-ui/icons/Close';
 import { useStateValue } from '../../../StateProvider';
 import { db } from '../../../firebase';
 
-function CartItem({ productCost, productImgURL, productName, productQuantity }) {
+function CartItem({ productCost, productImgURL, productName, productQuantity, preferredMetal, preferredSize }) {
 	const [qty, setQty] = useState(productQuantity);
 	const priceForOne = productCost;
 	const [{ wishListBasket, cartBasket, user }, dispatch] = useStateValue();
@@ -101,6 +101,8 @@ function CartItem({ productCost, productImgURL, productName, productQuantity }) 
 					name: productName,
 					cost: productCost,
 					imgURL: productImgURL,
+					preferredMetal: preferredMetal,
+					preferredSize: preferredSize,
 				},
 			});
 		} else {
@@ -121,7 +123,10 @@ function CartItem({ productCost, productImgURL, productName, productQuantity }) 
 				</div>
 				<div className="cartItem__descriptionRight">
 					<div className="cartItem__descriptionRightTop">
-						<h1>{productName}</h1>
+						<h1>
+							{productName} {preferredMetal !== null && ` • ${preferredMetal} • `}
+							{preferredSize !== null && ` ${preferredSize}  `}
+						</h1>
 					</div>
 					<div className="cartItem__descriptionRightBottom">
 						<div className="cartItem__descriptionRightBottomQty">

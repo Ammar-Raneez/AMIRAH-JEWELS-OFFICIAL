@@ -27,6 +27,8 @@ function CartPage() {
 								productImgURL: cartItem.productImgURL,
 								productName: cartItem.productName,
 								productQuantity: cartItem.productQuantity,
+								preferredMetal: cartItem.preferredMetal,
+								preferredSize: cartItem.preferredSize,
 							},
 						});
 					}
@@ -41,6 +43,8 @@ function CartPage() {
 								name: wishlistItem.name,
 								cost: wishlistItem.cost,
 								imgURL: wishlistItem.imgURL,
+								preferredMetal: wishlistItem.preferredMetal,
+								preferredSize: wishlistItem.preferredSize,
 							},
 						});
 					}
@@ -72,11 +76,13 @@ function CartPage() {
 					<div className="cartPage__items">
 						{cartBasket?.map((item) => (
 							<CartItem
-								key={item.productName}
-								productImgURL={item.productImgURL}
-								productName={item.productName}
-								productCost={item.productCost}
-								productQuantity={item.productQuantity}
+								key={item?.productName}
+								productImgURL={item?.productImgURL}
+								productName={item?.productName}
+								productCost={item?.productCost}
+								productQuantity={item?.productQuantity}
+								preferredMetal={item?.preferredMetal}
+								preferredSize={item?.preferredSize}
 							/>
 						))}
 					</div>
