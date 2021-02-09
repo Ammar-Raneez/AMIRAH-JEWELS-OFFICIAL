@@ -3,11 +3,10 @@ import './CartItem.css';
 import CloseIcon from '@material-ui/icons/Close';
 import { useStateValue } from '../../../StateProvider';
 import { db } from '../../../firebase';
+import formatCurrency from 'format-currency';
 
 function CartItem({ productCost, productImgURL, productName, productQuantity, preferredMetal, preferredSize }) {
-	const [qty, setQty] = useState(productQuantity);
-	const priceForOne = productCost;
-	const [{ wishListBasket, cartBasket, user }, dispatch] = useStateValue();
+	const [{ wishListBasket, cartBasket, user, currencyRate, currencySymbol }, dispatch] = useStateValue();
 	const [updateWishList, setUpdateWishList] = useState(false);
 	const [updateCartList, setUpdateCartList] = useState(false);
 
@@ -135,10 +134,16 @@ function CartItem({ productCost, productImgURL, productName, productQuantity, pr
 						<div className="cartItem__descriptionRightBottomDetails">
 							<div>
 								<button
-									style={{ padding: '0.5vw 1vw', fontSize: '1.5vw', background: 'transparent', border: 'none' }}
+									style={{
+										padding: '0.5vw 1vw',
+										fontSize: '1.5vw',
+										background: 'transparent',
+										border: 'none',
+										cursor: 'pointer',
+									}}
 									onClick={decreaseQuantity}
 								>
-									-
+									−
 								</button>
 								<input
 									style={{
@@ -155,15 +160,22 @@ function CartItem({ productCost, productImgURL, productName, productQuantity, pr
 									value={productQuantity}
 								/>
 								<button
-									style={{ padding: '0.5vw 1vw', fontSize: '1.5vw', background: 'transparent', border: 'none' }}
+									style={{
+										padding: '0.5vw 0vw',
+										fontSize: '1.5vw',
+										background: 'transparent',
+										border: 'none',
+										cursor: 'pointer',
+									}}
 									onClick={increaseQuantity}
 								>
 									+
 								</button>
 							</div>
 							<span>
-								{/* <p>Price</p> */}
-								<p>${productQuantity * productCost}</p>
+								<p>
+									{currencySymbol} {formatCurrency((productQuantity * Math.round(productCost * currencyRate * 100)) / 100)}
+								</p>
 							</span>
 						</div>
 					</div>

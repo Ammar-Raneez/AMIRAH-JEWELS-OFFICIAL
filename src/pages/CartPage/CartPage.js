@@ -7,7 +7,7 @@ import { db } from '../../firebase';
 import SEO from '../../shared/components/SEO/SEO';
 
 function CartPage() {
-	const [{ wishListBasket, cartBasket, user, subTotal, delivery, tax }, dispatch] = useStateValue();
+	const [{ cartBasket, user, subTotal, delivery, tax }, dispatch] = useStateValue();
 	const [loading, setLoading] = useState(true);
 
 	// WE LOAD ALL THE CONTENT FROM THE DATABASE (this runs only once)
@@ -74,9 +74,9 @@ function CartPage() {
 			) : cartBasket.length !== 0 ? (
 				<div className="cartPage__main">
 					<div className="cartPage__items">
-						{cartBasket?.map((item) => (
+						{cartBasket?.map((item, index) => (
 							<CartItem
-								key={item?.productName}
+								key={index}
 								productImgURL={item?.productImgURL}
 								productName={item?.productName}
 								productCost={item?.productCost}
