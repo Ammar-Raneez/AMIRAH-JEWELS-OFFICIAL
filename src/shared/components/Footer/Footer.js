@@ -22,25 +22,6 @@ function Footer() {
 
 	// This use effect will fetch all the updated/latest currency rates from the API with base (USD)
 	useEffect(() => {
-		// Loading the currency rate and symbol from the database
-		db.collection('users').onSnapshot((snapshot) =>
-			snapshot.docs.forEach((doc) => {
-				if (doc.id === user?.email) {
-					// Dispatch to set the currency rate from the db
-					dispatch({
-						type: 'SET_CURRENCY_RATE',
-						currencyRate: doc.data().currencyRate,
-					});
-
-					// Dispatch to set the currency symbol from the db
-					dispatch({
-						type: 'SET_CURRENCY_SYMBOL',
-						currencySymbol: doc.data().currencySymbol,
-					});
-				}
-			})
-		);
-
 		// This is fetching the exchange rate API details
 		fetch(BASE_URL)
 			.then((res) => res.json())
@@ -152,8 +133,8 @@ function Footer() {
 								<p>Select Country: </p>
 								<select onChange={(e) => handleClickedCountry(e)}>
 									<option value={cc.code('USD')?.countries[0]}>Select Country</option>
-									{countries?.map((country) => (
-										<option key={country} value={country}>
+									{countries?.map((country, index) => (
+										<option key={index} value={country}>
 											{country}
 										</option>
 									))}

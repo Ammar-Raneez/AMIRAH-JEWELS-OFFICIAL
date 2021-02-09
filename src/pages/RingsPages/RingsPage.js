@@ -24,6 +24,7 @@ function RingsPage() {
 	const [{ wishListBasket, cartBasket, user, currencySymbol, currencyRate }, dispatch] = useStateValue();
 	const [currentMetalType, setCurrentMetalType] = useState('18k Rose Gold');
 	const [currentMetalSize, setCurrentMetalSize] = useState('US 4');
+	const [displayPrice, setDisplayPrice] = useState(false);
 
 	// created the image path
 	const selectedImage = (imagePath, image) => {
@@ -57,8 +58,6 @@ function RingsPage() {
 
 					// adding the wishlist items
 					for (const wishlistItem of doc.data().wishlist) {
-						// console.log('Adding items from the database into the wishlist');
-						// console.log(wishlistItem);
 						dispatch({
 							type: 'ADD_TO_WISHLIST',
 							item: {
@@ -70,7 +69,19 @@ function RingsPage() {
 							},
 						});
 					}
+					// Dispatch to set the currency rate from the db
+					dispatch({
+						type: 'SET_CURRENCY_RATE',
+						currencyRate: doc.data().currencyRate,
+					});
 
+					// Dispatch to set the currency symbol from the db
+					dispatch({
+						type: 'SET_CURRENCY_SYMBOL',
+						currencySymbol: doc.data().currencySymbol,
+					});
+
+					setDisplayPrice(true);
 				}
 			})
 		);
@@ -263,9 +274,7 @@ function RingsPage() {
 							<p>Quantity</p>
 							<p>1</p>
 						</div>
-						<p>
-							Price: {currencySymbol} {890.0 * currencyRate}
-						</p>
+						<p>{displayPrice && `Price: ${currencySymbol} ${Math.round(890.0 * currencyRate * 100) / 100}`}</p>
 						<br />
 						<br />
 						<div className="ringsPage__sectionCartCartDetailsBtns">
