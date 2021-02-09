@@ -20,6 +20,9 @@
 	flex-direction: column;
 	justify-content: space-between;
 }
+.footer__rightSection{
+	border: 1px red solid;
+}
 .footer__leftSectionTop, .footer__leftSectionDown, .footer__middleSection, .footer__rightSection {
 	display: flex;
 	flex-direction: column;
