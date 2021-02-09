@@ -65,6 +65,8 @@ function RegisterPage() {
 					wishlist: [],
 					timestamp: firebase.firestore.FieldValue.serverTimestamp(),
 					checkOutOrders: [],
+					currencyRate: 1,
+					currencySymbol: "$"
 				});
 
 				// clean the fields

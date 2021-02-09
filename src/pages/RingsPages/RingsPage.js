@@ -70,6 +70,7 @@ function RingsPage() {
 							},
 						});
 					}
+
 				}
 			})
 		);
@@ -78,7 +79,7 @@ function RingsPage() {
 	// UPDATING THE WISHLIST BASKET ON (FIRE-STORE)
 	useEffect(() => {
 		// console.log(wishListBasket, "<============");
-        console.log(currencyRate)
+		console.log(currencyRate);
 		if (tempSafetyWishList === true) {
 			db.collection('users').doc(user?.email).update({
 				wishlist: wishListBasket,
@@ -263,8 +264,7 @@ function RingsPage() {
 							<p>1</p>
 						</div>
 						<p>
-							Price: {currencySymbol}{" "}
-							{890.0 * currencyRate}
+							Price: {currencySymbol} {890.0 * currencyRate}
 						</p>
 						<br />
 						<br />
