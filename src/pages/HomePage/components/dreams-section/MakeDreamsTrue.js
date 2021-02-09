@@ -1,7 +1,10 @@
 import { Fade, Slide } from 'react-awesome-reveal';
+import { useStateValue } from '../../../../StateProvider';
 import './MakeDreamsTrue.css';
+import formatCurrency from 'format-currency';
 
 function MakeDreamsTrue() {
+	const [{ wishListBasket, cartBasket, user, currencySymbol, currencyRate }, dispatch] = useStateValue();
 	return (
 		<div className="homePage__makeDreamsTrue">
 			{/* title */}
@@ -25,7 +28,9 @@ function MakeDreamsTrue() {
 				<div className="homePage__makeDreamsTrue__topPrices">
 					<Slide direction="right">
 						<h1>PRICE</h1>
-						<h2>US$4,500</h2>
+						<h2>
+							{currencySymbol} {formatCurrency(Math.round(4500 * currencyRate * 100) / 100)}
+						</h2>
 					</Slide>
 				</div>
 			</div>
@@ -44,9 +49,13 @@ function MakeDreamsTrue() {
 					</Slide>
 				</div>
 				{/* <Slide direction="right"> */}
-					<Fade>
-						<img className="homePage__makeDreamsTrue__middle__image" src="homepage-dreams/PINK SAPPHIRE RING.png" alt="" />
-					</Fade>
+				<Fade>
+					<img
+						className="homePage__makeDreamsTrue__middle__image"
+						src="homepage-dreams/PINK SAPPHIRE RING.png"
+						alt=""
+					/>
+				</Fade>
 				{/* </Slide> */}
 			</div>
 
@@ -78,7 +87,7 @@ function MakeDreamsTrue() {
 						</div>
 					</div>
 					<Fade>
-						<img src="homepage-dreams/PINK SAPPHIRE RING 3.png"  alt="" />
+						<img src="homepage-dreams/PINK SAPPHIRE RING 3.png" alt="" />
 					</Fade>
 					<div className="homePage__makeDreamsTrue__bottomImageDetailSecond">
 						<div className="homePage__makeDreamsTrue__bottomImageDetailFirstWeight">

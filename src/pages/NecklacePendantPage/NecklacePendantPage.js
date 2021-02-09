@@ -11,6 +11,7 @@ import ChevronRightIcon from '@material-ui/icons/ChevronRight';
 import ReactImageMagnify from 'react-image-magnify';
 import { Fade } from 'react-awesome-reveal';
 import SEO from '../../shared/components/SEO/SEO';
+import formatCurrency from 'format-currency';
 
 function NecklacePendantPage() {
 	//this state is to track which image is selected to add a active className
@@ -21,7 +22,8 @@ function NecklacePendantPage() {
 	const [addToWishList, setAddToWishList] = useState(false);
 	const [tempSafetyWishList, setTempSafetyWishList] = useState(false);
 	const [tempSafetyCartBasket, setTempSafetyCartBasket] = useState(false);
-	const [{ wishListBasket, cartBasket, user }, dispatch] = useStateValue();
+	const [displayPrice, setDisplayPrice] = useState(false);
+	const [{ wishListBasket, cartBasket, user, currencySymbol, currencyRate }, dispatch] = useStateValue();
 
 	// created the image path
 	const selectedImage = (imagePath, image) => {
@@ -48,7 +50,7 @@ function NecklacePendantPage() {
 								productName: cartItem.productName,
 								productQuantity: cartItem.productQuantity,
 								preferredMetal: cartItem.preferredMetal,
-                                preferredSize: cartItem.preferredSize,
+								preferredSize: cartItem.preferredSize,
 							},
 						});
 					}
@@ -64,10 +66,24 @@ function NecklacePendantPage() {
 								cost: wishlistItem.cost,
 								imgURL: wishlistItem.imgURL,
 								preferredMetal: wishlistItem.preferredMetal,
-                                preferredSize: wishlistItem.preferredSize,
+								preferredSize: wishlistItem.preferredSize,
 							},
 						});
 					}
+
+					// Dispatch to set the currency rate from the db
+					dispatch({
+						type: 'SET_CURRENCY_RATE',
+						currencyRate: doc.data().currencyRate,
+					});
+
+					// Dispatch to set the currency symbol from the db
+					dispatch({
+						type: 'SET_CURRENCY_SYMBOL',
+						currencySymbol: doc.data().currencySymbol,
+					});
+
+					setDisplayPrice(true);
 				}
 			})
 		);
@@ -156,7 +172,7 @@ function NecklacePendantPage() {
 				<div className="necklacePendant__sectionCartSmallImages">
 					<img
 						onMouseOver={(e) => {
-							selectedImage(e.target.src, "ring2");
+							selectedImage(e.target.src, 'ring2');
 						}}
 						src="pendantsNecklace/ring2.png"
 						alt=""
@@ -164,7 +180,7 @@ function NecklacePendantPage() {
 					/>
 					<img
 						onMouseOver={(e) => {
-							selectedImage(e.target.src, "ring3");
+							selectedImage(e.target.src, 'ring3');
 						}}
 						src="pendantsNecklace/ring3.png"
 						alt=""
@@ -172,7 +188,7 @@ function NecklacePendantPage() {
 					/>
 					<img
 						onMouseOver={(e) => {
-							selectedImage(e.target.src, "ring4");
+							selectedImage(e.target.src, 'ring4');
 						}}
 						src="pendantsNecklace/ring4.png"
 						alt=""
@@ -180,23 +196,23 @@ function NecklacePendantPage() {
 					/>
 				</div>
 				<div className="necklacePendant__sectionCartMainImage">
-					<ReactImageMagnify 
-						hoverDelayInMs = {0.1}
-						hoverOffDelayInMs = {0.1}
-						enlargedImagePosition = "over"  
+					<ReactImageMagnify
+						hoverDelayInMs={0.1}
+						hoverOffDelayInMs={0.1}
+						enlargedImagePosition="over"
 						{...{
-						smallImage: {
-							alt: "",
-							width: 450,
-							height: 450,
-							src: displayImage
-						},
-						largeImage: {
-							src: displayImage,
-							width: 1200,
-							height: 1200,
-						}
-					}}
+							smallImage: {
+								alt: '',
+								width: 450,
+								height: 450,
+								src: displayImage,
+							},
+							largeImage: {
+								src: displayImage,
+								width: 1200,
+								height: 1200,
+							},
+						}}
 					/>
 					<div className="necklacePendant__sectionCartMainImageIcon">
 						{user ? (
@@ -220,7 +236,10 @@ function NecklacePendantPage() {
 							<p>Quantity</p>
 							<p>1</p>
 						</div>
-						<p>Price: $890.00</p>
+						<p>
+							{displayPrice &&
+								`Price: ${currencySymbol} ${formatCurrency(Math.round(4500.0 * currencyRate * 100) / 100)}`}
+						</p>
 						<br />
 						<br />
 						<div className="necklacePendant__sectionCartCartDetailsBtns">
@@ -243,8 +262,8 @@ function NecklacePendantPage() {
 				<Fade triggerOnce cascade>
 					<h2>Description & Details</h2>
 					<p className="necklacePendant__descriptionMain">
-						This circle pendant features black onyx, a unique variety of quartz found in nature. This striking pendant is
-						traced with scintillating diamonds, resulting in a modern design with a smooth finish and high polish. As
+						This circle pendant features black onyx, a unique variety of quartz found in nature. This striking pendant
+						is traced with scintillating diamonds, resulting in a modern design with a smooth finish and high polish. As
 						multifaceted as it is iconic, the Tiffany T collection is a tangible reminder of the connections we feel but
 						can't always see. Showcase your personal style by pairing this pendant with other Tiffany designs for a bold
 						look.
@@ -260,10 +279,12 @@ function NecklacePendantPage() {
 							onClick={() => setReadMoreDescription(!readMoreDescription)}
 							className="necklacePendant__descriptionOtherDetailsReadMore"
 						>
-							{readMoreDescription ? "Read Less" : "Read More"} <ChevronRightIcon /><ChevronRightIcon /><ChevronRightIcon />
+							{readMoreDescription ? 'Read Less' : 'Read More'} <ChevronRightIcon />
+							<ChevronRightIcon />
+							<ChevronRightIcon />
 						</p>
 					</div>
-				</Fade>	
+				</Fade>
 			</div>
 
 			{/* Other Similar Products */}
@@ -281,7 +302,7 @@ function NecklacePendantPage() {
 							<Product img="pendantsNecklace/pink_necklace.png" name="Product Name" viewMoreUrl="/" />
 							<Product img="pendantsNecklace/pink_necklace.png" name="Product Name" viewMoreUrl="/" />
 						</div>
-					{/* <div className="necklacePendant__otherProductsRow">
+						{/* <div className="necklacePendant__otherProductsRow">
 					</div> */}
 					</Fade>
 				</div>
