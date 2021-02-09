@@ -1,50 +1,60 @@
 // import { useHistory } from 'react-router-dom';
 // import { auth } from '../../../firebase';
 // import { useStateValue } from '../../../StateProvider';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
+import { useStateValue } from '../../../StateProvider';
 import './Footer.css';
+import cc from 'currency-codes';
 
 function Footer() {
-	const [date] = useState(new Date().getFullYear())
-	// const history = useHistory();
-	// const [email, setEmail] = useState('');
-	// const [password, setPassword] = useState('');
-	// const [{ wishListBasket, cartBasket, user }, dispatch] = useStateValue();
+	const [date] = useState(new Date().getFullYear());
+	const [{ currencySymbol, currencyRate }, dispatch] = useStateValue();
+	const BASE_URL = 'https://v6.exchangerate-api.com/v6/0a31808a3c199a87cfda7925/latest/USD';
+	const [exchangeRates, setExchangeRates] = useState({});
 
-	// const signIn = (e) => {
-	// 	e.preventDefault();
+	const [countries, setCountries] = useState([]);
+	const [currency, setCurrency] = useState([]);
+	const [displayCountryList, setDisplayCountryList] = useState(false);
+	const [loadedAllTheCountries, setLoadedAllTheCountries] = useState(false);
 
-	// 	if (!email || !password) {
-	// 		return alert('Please enter Email and Password');
-	// 	}
+	// This use effect will fetch all the updated/latest currency rates from the API with base (USD)
+	useEffect(() => {
+		fetch(BASE_URL)
+			.then((res) => res.json())
+			.then((data) => {
+				// we have fetched all the rates from the API
+				setExchangeRates(data['conversion_rates']);
+				setLoadedAllTheCountries(true);
+			});
+	}, []);
 
-	// 	// sign in logic
-	// 	auth
-	// 		.signInWithEmailAndPassword(email, password)
-	// 		.then((auth) => {
-	// 			// signed in, redirect to the homepage
-	// 			setEmail('');
-	// 			setPassword('');
+	useEffect(() => {
+		if (loadedAllTheCountries) {
+			// Looping though each of the Currency Code and Populating the Country and the
+			// Code list
+			let allCountry = [];
+			let allCurrency = [];
 
-	// 			// setting the user into the react context API
-	// 			dispatch({
-	// 				type: 'SET_USER',
-	// 				user: auth.user,
-	// 			});
+			for (let index = 0; index < Object.keys(exchangeRates).length; index++) {
+				const currencyItem = Object.keys(exchangeRates)[index];
+				const countriesArr = cc.code(currencyItem)?.countries;
+				for (let indexNew = 0; indexNew < countriesArr?.length; indexNew++) {
+					countriesArr[indexNew] = countriesArr[indexNew]?.replace('(The)', '');
+					allCountry.push(countriesArr[indexNew]);
+					allCurrency.push(currencyItem);
+				}
+			}
 
-				// setTimeout(() => {
-				// 	alert('Welcome ' + auth.user.displayName + '!');
-				// }, 1000);
+			// setting the currency and country array
+			allCountry.sort();
+			setCountries(allCountry);
+			setCurrency(allCurrency);
 
-	// 			history.replace('/');
-
-	// 			setTimeout(() => {
-	// 				window.location.reload(true);
-	// 			}, 2000);
-
-	// 		})
-	// 		.catch((e) => alert(e.message));
-	// };
+			console.log(countries);
+			console.log(currency);
+			setDisplayCountryList(true);
+		}
+	}, [loadedAllTheCountries]);
 
 	return (
 		<div className="footer">
@@ -61,8 +71,12 @@ function Footer() {
 						</div>
 						<div className="footer__leftSectionDown">
 							<p>Follow us on:</p>
-							<a rel="noreferrer" href="https://www.instagram.com/amirahgems/" target="_blank">Instagram</a>
-							<a rel="noreferrer" href="https://www.facebook.com/amirahgems" target="_blank">Facebook</a>
+							<a rel="noreferrer" href="https://www.instagram.com/amirahgems/" target="_blank">
+								Instagram
+							</a>
+							<a rel="noreferrer" href="https://www.facebook.com/amirahgems" target="_blank">
+								Facebook
+							</a>
 						</div>
 					</div>
 					<div className="footer__middleSection">
@@ -78,15 +92,20 @@ function Footer() {
 						<p className="footer__rightSectionDescription">
 							Be the first to know about exciting new designs, special events, store openings and much more.
 						</p>
-						{/* <form> */}
-							{/* <input type="email" placeholder="Email" onChange={(e) => setEmail(e.target.value)} value={email} />
-							<input
-								type="password"
-								placeholder="Password"
-								onChange={(e) => setPassword(e.target.value)}
-								value={password}
-							/> */}
+
 						<a href="/register">SIGN UP</a>
+						{displayCountryList && (
+							<div className="footer__rightSectionSelectCountry">
+								<p>Select Country: </p>
+								<select>
+									{countries?.map((country) => (
+										<option key={country} value={country}>
+											{country}
+										</option>
+									))}
+								</select>
+							</div>
+						)}
 						{/* </form> */}
 					</div>
 				</div>
