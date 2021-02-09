@@ -73,10 +73,10 @@ function App() {
 					</Route>
 
 					<Route path="/designer+desk">
-						<h2>Coming Soon!</h2>
+						<ComingSoon />
 					</Route>
 					<Route path="/high+tea">
-						<h2>Coming Soon!</h2>
+						<ComingSoon />
 					</Route>
 
 					<Route path="/gemstones+metal">
@@ -203,10 +203,6 @@ function App() {
 						<Header />
 						<CartPage />
 						<Footer />
-					</Route>
-
-					<Route path="/comingsoon">
-						<ComingSoon />
 					</Route>
 
 					<Route path="/signature"></Route>
