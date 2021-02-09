@@ -112,6 +112,10 @@
 		font-size: 20px;
 	}
 
+	.wishListPage__itemsEmpty > p {
+		font-size: 14px;
+	}
+
 	.loadingGif > img {
 		height: 100px;
 		padding: 50px;
@@ -137,6 +141,10 @@
 		font-size: 20px;
 	}
 
+	.wishListPage__itemsEmpty > p {
+		font-size: 14px;
+	}
+
 	.loadingGif > img {
 		height: 100px;
 		padding: 50px;
@@ -160,6 +168,10 @@
 
 	.wishListPage__title > h1, .wishListPage__itemsEmpty > h1, .wishListPage__itemsNoLogin > h1, .wishListPage__itemsNoLogin > a > button {
 		font-size: 20px;
+	}
+
+	.wishListPage__itemsEmpty > p {
+		font-size: 12px;
 	}
 
 	.loadingGif > img {

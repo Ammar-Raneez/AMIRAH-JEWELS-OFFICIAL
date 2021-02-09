@@ -89,7 +89,9 @@ function WishListItem({ img, title, currency, price }) {
 							</p>
 							<p>Add to Cart</p>
 						</div>
-						<p>{title}</p>
+						<div className="wishListItem__title">
+							<p>{title}</p>
+						</div>
 					</div>
 				</div>
 			</div>

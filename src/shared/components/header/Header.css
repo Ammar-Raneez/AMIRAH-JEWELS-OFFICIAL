@@ -39,7 +39,7 @@
 	align-items: center;
 }
 .header__optionsAboutDetails {
-	font-size: 1.2vw;
+	font-size: 1.1vw;
 	position: absolute;
 	margin-top: 3.5vw;
 	padding: 0.8vw;
@@ -53,7 +53,7 @@
 }
 
 .header__optionsProductDetails {
-	font-size: 1.2vw;
+	font-size: 1.1vw;
 	position: absolute;
 	margin-top: 3.5vw;
 	margin-left: 18vw;
