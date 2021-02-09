@@ -3,10 +3,11 @@ import CloseIcon from '@material-ui/icons/Close';
 import { useStateValue } from '../../../StateProvider';
 import { db } from '../../../firebase';
 import { useEffect, useState } from 'react';
+import formatCurrency from 'format-currency';
 
-function WishListItem({ img, title, currency, price, preferredSize, preferredMetal }) {
+function WishListItem({ img, title, price, preferredSize, preferredMetal }) {
 	const [tempSafetyCartBasket, setTempSafetyCartBasket] = useState(false);
-	const [{ wishListBasket, cartBasket, user }, dispatch] = useStateValue();
+	const [{ wishListBasket, cartBasket, user, currencySymbol, currencyRate }, dispatch] = useStateValue();
 
 	// USE EFFECT TO UPDATE THE CONTENT FROM THE CLOUD STORE
 	useEffect(() => {
@@ -59,7 +60,6 @@ function WishListItem({ img, title, currency, price, preferredSize, preferredMet
 				type: 'REMOVE_FROM_WISHLIST',
 				name: title,
 			});
-			console.log(wishListBasket, '<===============> CHECK THIS ONE');
 
 			// LAST ITEM REMOVE PROBLEM ALTERNATE SOLUTION
 			if (wishListBasket.length === 1) {
@@ -86,8 +86,7 @@ function WishListItem({ img, title, currency, price, preferredSize, preferredMet
 					<div className="wishListItem__details">
 						<div className="wishListItem__price" onClick={addItemToCart}>
 							<p>
-								{currency}
-								{(Math.round(price * 100) / 100).toFixed(2)}
+								{currencySymbol} {formatCurrency(Math.round(price * currencyRate * 100) / 100)}
 							</p>
 							<p>Add to Cart</p>
 						</div>
