@@ -24,6 +24,7 @@ import TealGemDetail from './pages/GemsPages/SapphireViewDetails/TealGemDetail';
 import PurpleGemDetail from './pages/GemsPages/SapphireViewDetails/PurpleGemDetail';
 import CheckOutPage from './pages/CheckOutPage/CheckOutPage';
 import ContactUsPage from './pages/ContactUsPage/ContactUsPage';
+import RingsPage from './pages/RingsPages/RingsPage';
 
 function App() {
 	const [{ wishListBasket, cartBasket, user }, dispatch] = useStateValue();
@@ -115,10 +116,13 @@ function App() {
 					</Route>
 
 					<Route path="/rings">
-						<h2>rings component</h2>
+						<TopBar />
+						<Header />
+						<RingsPage />
+						<Footer />
 					</Route>
 					<Route path="/earrings">
-						<h2>earrings component</h2>
+					<h2>earrings component</h2>
 					</Route>
 					<Route path="/bracelets">
 						<h2>bracelets component</h2>
@@ -139,7 +143,7 @@ function App() {
 						<CheckOutPage />
 						<Footer />
 					</Route>
-					
+
 					<Route path="/explore+all+categories">
 						<TopBar />
 						<Header />
