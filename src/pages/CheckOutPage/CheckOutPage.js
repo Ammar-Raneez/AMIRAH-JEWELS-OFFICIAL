@@ -329,15 +329,9 @@ function CheckOutPage() {
 					/>
 					<TextValidator style={{ width: '40vw', display: 'none' }} type="text" name="message" value={orderMessage} />
 					<div className="registerPage__createButton">
-						{user ? (
-							cartBasket ? (
+						{user && cartBasket.length > 0 ? (
 								<Button type="submit">CONTINUE CHECKOUT</Button>
 							) : (
-								<Button disabled type="submit">
-									CONTINUE CHECKOUT
-								</Button>
-							)
-						) : (
 							<Button disabled type="submit">
 								CONTINUE CHECKOUT
 							</Button>
