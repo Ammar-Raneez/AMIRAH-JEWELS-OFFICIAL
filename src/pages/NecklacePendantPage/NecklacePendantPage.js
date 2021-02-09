@@ -47,6 +47,8 @@ function NecklacePendantPage() {
 								productImgURL: cartItem.productImgURL,
 								productName: cartItem.productName,
 								productQuantity: cartItem.productQuantity,
+								preferredMetal: cartItem.preferredMetal,
+                                preferredSize: cartItem.preferredSize,
 							},
 						});
 					}
@@ -61,6 +63,8 @@ function NecklacePendantPage() {
 								name: wishlistItem.name,
 								cost: wishlistItem.cost,
 								imgURL: wishlistItem.imgURL,
+								preferredMetal: wishlistItem.preferredMetal,
+                                preferredSize: wishlistItem.preferredSize,
 							},
 						});
 					}
@@ -100,6 +104,8 @@ function NecklacePendantPage() {
 					productCost: 890.0,
 					productImgURL: 'pendantsNecklace/ring4.png',
 					productQuantity: 1,
+					preferredMetal: null,
+					preferredSize: null,
 				},
 			});
 			alert('Added item to cart!');
@@ -120,6 +126,8 @@ function NecklacePendantPage() {
 					name: 'Diamond and Black Onyx Circle Pendant',
 					cost: 890.0,
 					imgURL: 'pendantsNecklace/ring4.png',
+					preferredMetal: null,
+					preferredSize: null,
 				},
 			});
 			setAddToWishList(true);
