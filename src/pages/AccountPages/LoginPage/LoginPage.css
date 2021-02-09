@@ -134,7 +134,7 @@
 	.loginPage {
 		justify-content: space-between;
 		padding: 30px;
-		height: 60%;
+		height: 70vh;
 		align-items: center;
 		margin-bottom: 22%;
 		text-align: center;
@@ -148,6 +148,37 @@
 	.loginPage__form > div > div > div > .MuiInputBase-input {
 		width: 100%;
 		font-size: 14px !important;
+	}
+}
+
+@media screen and (max-width: 10000px) and (min-width: 1400px) {
+	.loginPage .loginPage__leftSide,
+	.loginPage .loginPage__rightSide {
+		min-width: 48vw;
+		max-width: 48vw;
+	}
+
+	.MuiDialogContent-root > p > p {
+		font-size: 1.2vw;
+		margin-left: 1vw;
+	}
+
+	.loginPage__form > div:first-child {
+		margin-bottom: 1.5vw;
+	}
+
+	.loginPage__form > div > div > label, .loginPage__form > div > div > div {
+		font-size: 1.5vw !important;
+		line-height: 1vw !important;
+	}
+
+	.loginPage__form > div > div > p {
+		font-size: 1vw !important;
+	}
+
+	.loginPage__form > div > div > div > input {
+		height: 1vw !important;
+		padding: 0.5vw 0 0.5vw;
 	}
 }
 

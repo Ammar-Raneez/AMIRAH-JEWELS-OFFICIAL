@@ -92,9 +92,9 @@ function LoginPage() {
 							errorMessages="Please add a password"
 							validators={['required']}
 						/>
-						<button type="submit">SIGN IN</button>
+						<button type="submit">Sign In</button>
 					</ValidatorForm>
-					<button onClick={() => setForgetPasswordOpen(!forgetPasswordOpen)}>FORGOT PASSWORD</button>
+					<button onClick={() => setForgetPasswordOpen(!forgetPasswordOpen)}>Forgot Password?</button>
 				</div>
 			</div>
 			<div className="loginPage__rightSide">
@@ -107,7 +107,7 @@ function LoginPage() {
 				</div>
 				<div className="loginPage__rightSideBottom">
 					<a href="/register">
-						<button>REGISTER NOW</button>
+						<button>Register</button>
 					</a>
 				</div>
 			</div>
@@ -141,7 +141,7 @@ function LoginPage() {
 				<DialogContent>
 					<DialogContentText id="alert-dialog-description">
 						<DialogContentText id="alert-dialog-description">
-							An email will be sent to the entered email address for resetting password purposes.
+							Please provide an E-mail in order to reset your password
 						</DialogContentText>
 						<ValidatorForm onSubmit={forgetPassword} ref={formRef}>
 							<TextValidator
