@@ -10,9 +10,10 @@ import {
 	FormControlLabel,
 	FormLabel,
 	Radio,
-	RadioGroup
+	RadioGroup,
 } from '@material-ui/core';
 import { KeyboardDatePicker, MuiPickersUtilsProvider } from '@material-ui/pickers';
+import emailjs from 'emailjs-com';
 import { useEffect, useRef, useState } from 'react';
 import { TextValidator, ValidatorForm } from 'react-material-ui-form-validator';
 import { useHistory } from 'react-router-dom';
@@ -45,6 +46,7 @@ function CheckOutPage() {
 	const [cardNumber, setCardNumber] = useState('');
 	const [allCheckOutDetailsHistory, setAllCheckOutDetailsHistory] = useState([]);
 	const [updateCheckoutCollection, setUpdateCheckoutCollection] = useState(false);
+	const [orderMessage, setOrderMessage] = useState('');
 
 	// Adding the order details into the database
 	useEffect(() => {
@@ -109,7 +111,49 @@ function CheckOutPage() {
 			}, 5000);
 
 			// SENDING AN EMAIL OF THE ORDER TO AMIRAH EMAIL
-			
+			// SENDING MAIL FUNCTIONALITY
+			var cartDetails = '[';
+			for (const item of cartBasket) {
+				cartDetails += '(';
+				cartDetails += 'Item Name: ' + item.productName;
+				cartDetails += ', ';
+				cartDetails += 'Cost of Item: ' + item.productCost;
+				cartDetails += ', ';
+				if (item.preferredMetal !== null) {
+					cartDetails += 'Preferred Metal: ' + item.preferredMetal;
+					cartDetails += ', ';
+				}
+				if (item.preferredSize !== null) {
+					cartDetails += 'Preferred Size: ' + item.preferredSize;
+					cartDetails += ', ';
+				}
+				cartDetails += 'Product Quantity: ' + item.productQuantity;
+				cartDetails += '), ';
+			}
+			cartDetails += ']';
+			setOrderMessage(`
+				An Order is made by ${user?.email},
+				The Order includes the following details:
+				- Cart Items: ${cartDetails}
+				- First Name: ${firstName}
+				- Last Name: ${lastName}
+				- Middle Name: ${middleName}
+				- Address Line One: ${addressLineOne}
+				- Address Line Two: ${addressLineTwo}
+				- City: ${city}
+				- Telephone: ${telephoneNumber}
+				- Payment Type: ${paymentType}
+				- Order Total Cost: ${subTotal + tax + delivery}
+				`);
+
+			emailjs.sendForm('service_lvksm7m', 'amirah_contactUs', e.target, 'user_pxB9WpI7yEgKMxO3A4XCP').then(
+				(result) => {
+					console.log(result.text);
+				},
+				(error) => {
+					console.log(error.text);
+				}
+			);
 		}
 
 		// ALERT THE USER THAT PAYMENT DONE SUCCESSFULLY OR RE-DIRECT USING A MODEL
@@ -217,12 +261,13 @@ function CheckOutPage() {
 						style={{ width: '93%' }}
 						type="text"
 						label="Email Address"
-						name="email address"
+						name="from_name"
 						onChange={(e) => setEmailAddress(e.target.value)}
 						value={emailAddress}
 						errorMessages="Please add an Email Address"
 						validators={['required', 'isEmail']}
 					/>
+
 					<div className="checkout__payment">
 						<FormControl component="fieldset" style={{ width: '93%' }}>
 							<FormLabel component="legend" errorMessages="Please add an Email Address" validators={['required']}>
@@ -251,7 +296,7 @@ function CheckOutPage() {
 							style={{ width: '93%' }}
 							disableToolbar
 							variant="inline"
-							views={["year", "month"]}
+							views={['year', 'month']}
 							margin="normal"
 							id="card-expire-date"
 							placeholder="Card Expiry Date"
@@ -282,13 +327,21 @@ function CheckOutPage() {
 						errorMessages="Please add a CSC"
 						validators={['required']}
 					/>
+					<TextValidator style={{ width: '40vw', display: 'none' }} type="text" name="message" value={orderMessage} />
 					<div className="registerPage__createButton">
-						{user ? cartBasket ? (
-							<Button type="submit">CONTINUE CHECKOUT</Button>
+						{user ? (
+							cartBasket ? (
+								<Button type="submit">CONTINUE CHECKOUT</Button>
+							) : (
+								<Button disabled type="submit">
+									CONTINUE CHECKOUT
+								</Button>
+							)
 						) : (
-							<Button disabled type="submit">CONTINUE CHECKOUT</Button>
-						) : <Button disabled type="submit">CONTINUE CHECKOUT</Button>
-						}
+							<Button disabled type="submit">
+								CONTINUE CHECKOUT
+							</Button>
+						)}
 					</div>
 				</ValidatorForm>
 			</div>

@@ -20,7 +20,6 @@ function ContactUsPage() {
 	const [emailDialogOpen, setEmailDialogOpen] = useState(false);
 	const [email, setEmail] = useState();
 	const [message, setMessage] = useState('');
-	const [to_name, setTo_name] = useState('Amirah');
 
 	const [scheduleACallDialogOpen, setScheduleACallDialogOpen] = useState(false);
 	const [scheduleDate, setScheduleDate] = useState();
@@ -126,7 +125,7 @@ function ContactUsPage() {
 									validators={['required', 'isEmail']}
 								/>
 
-								<TextValidator style={{ width: '40vw', display: 'none' }} type="text" name="to_name" value={to_name} />
+							
 								<TextValidator
 									style={{ width: '40vw' }}
 									type="text"
@@ -174,7 +173,7 @@ function ContactUsPage() {
 									errorMessages="Please add an email"
 									validators={['required', 'isEmail']}
 								/>
-								<TextValidator style={{ width: '40vw', display: 'none' }} type="text" name="to_name" value={to_name} />
+		
 								<MuiPickersUtilsProvider utils={DateFnsUtils}>
 									<KeyboardDatePicker
 										style={{ width: '40vw' }}
