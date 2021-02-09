@@ -38,6 +38,8 @@ function TealGemDetail() {
 					productCost: 1100.0,
 					productImgURL: 'gems/teal-sapphire.png',
 					productQuantity: 1,
+					preferredMetal: null,
+					preferredSize: null,
 				},
 			});
 			alert('Added item to cart!');
@@ -62,6 +64,8 @@ function TealGemDetail() {
 								productImgURL: cartItem.productImgURL,
 								productName: cartItem.productName,
 								productQuantity: cartItem.productQuantity,
+								preferredMetal: cartItem.preferredMetal,
+								preferredSize: cartItem.preferredSize,
 							},
 						});
 					}
@@ -76,6 +80,8 @@ function TealGemDetail() {
 								name: wishlistItem.name,
 								cost: wishlistItem.cost,
 								imgURL: wishlistItem.imgURL,
+								preferredMetal: wishlistItem.preferredMetal,
+								preferredSize: wishlistItem.preferredSize,
 							},
 						});
 					}
@@ -115,6 +121,8 @@ function TealGemDetail() {
 					name: 'Teal Sapphire',
 					cost: 1100,
 					imgURL: 'gems/teal-sapphire.png',
+					preferredMetal: null,
+					preferredSize: null,
 				},
 			});
 		} else {

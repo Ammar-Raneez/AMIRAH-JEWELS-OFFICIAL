@@ -44,6 +44,8 @@ function PurpleGemDetail() {
 								productImgURL: cartItem.productImgURL,
 								productName: cartItem.productName,
 								productQuantity: cartItem.productQuantity,
+								preferredMetal: cartItem.preferredMetal,
+								preferredSize: cartItem.preferredSize,
 							},
 						});
 					}
@@ -58,6 +60,8 @@ function PurpleGemDetail() {
 								name: wishlistItem.name,
 								cost: wishlistItem.cost,
 								imgURL: wishlistItem.imgURL,
+								preferredMetal: wishlistItem.preferredMetal,
+								preferredSize: wishlistItem.preferredSize,
 							},
 						});
 					}
@@ -97,6 +101,8 @@ function PurpleGemDetail() {
 					name: 'Purple Sapphire',
 					cost: 10,
 					imgURL: 'gems/purple-sapphire.png',
+					preferredMetal: null,
+					preferredSize: null,
 				},
 			});
 		} else {
@@ -114,6 +120,8 @@ function PurpleGemDetail() {
 					productCost: 550.0,
 					productImgURL: 'gems/purple-sapphire.png',
 					productQuantity: 1,
+					preferredMetal: null,
+					preferredSize: null,
 				},
 			});
 			alert('Added item to cart!');
@@ -158,7 +166,7 @@ function PurpleGemDetail() {
 					/>
 					<img
 						onMouseOver={(e) => {
-							selectedImage(e.target.src, "teal sapphire");
+							selectedImage(e.target.src, 'teal sapphire');
 						}}
 						src="gems/teal-sapphire.png"
 						alt=""
@@ -166,7 +174,7 @@ function PurpleGemDetail() {
 					/>
 					<img
 						onMouseOver={(e) => {
-							selectedImage(e.target.src, "white sapphire");
+							selectedImage(e.target.src, 'white sapphire');
 						}}
 						src="gems/white-sapphire.png"
 						alt=""
@@ -174,24 +182,24 @@ function PurpleGemDetail() {
 					/>
 				</div>
 				<div className="gemDetails__sectionCartMainImage">
-					<ReactImageMagnify 
-						hoverDelayInMs = {0.1}
-						hoverOffDelayInMs = {0.1}
-						enlargedImagePosition = "over"  
+					<ReactImageMagnify
+						hoverDelayInMs={0.1}
+						hoverOffDelayInMs={0.1}
+						enlargedImagePosition="over"
 						{...{
-						smallImage: {
-							alt: "",
-							width: 450,
-							height: 450,
-							src: displayImage
-						},
-						largeImage: {
-							src: displayImage,
-							width: 1200,
-							height: 1200,
-						}
-					}}
-					/>					
+							smallImage: {
+								alt: '',
+								width: 450,
+								height: 450,
+								src: displayImage,
+							},
+							largeImage: {
+								src: displayImage,
+								width: 1200,
+								height: 1200,
+							},
+						}}
+					/>
 					<div className="gemDetails__sectionCartMainImageIcon">
 						{user ? (
 							addToWishList ? (
