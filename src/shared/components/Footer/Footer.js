@@ -5,6 +5,7 @@ import { useEffect, useState } from 'react';
 import { useStateValue } from '../../../StateProvider';
 import './Footer.css';
 import cc from 'currency-codes';
+import coinify from 'coinify';
 
 function Footer() {
 	const [date] = useState(new Date().getFullYear());
@@ -13,6 +14,7 @@ function Footer() {
 	const [exchangeRates, setExchangeRates] = useState({});
 
 	const [countries, setCountries] = useState([]);
+	const [notSortedCountries, setNotSortedCountries] = useState([]);
 	const [currency, setCurrency] = useState([]);
 	const [displayCountryList, setDisplayCountryList] = useState(false);
 	const [loadedAllTheCountries, setLoadedAllTheCountries] = useState(false);
@@ -46,15 +48,29 @@ function Footer() {
 			}
 
 			// setting the currency and country array
-			allCountry.sort();
-			setCountries(allCountry);
+			// allCountry.sort();
+			let copyCountry = [];
+
+			for (let index = 0; index < allCountry.length; index++) {
+				copyCountry.push(allCountry[index]);
+			}
+
+			setNotSortedCountries(allCountry);
+			setCountries(copyCountry.sort());
 			setCurrency(allCurrency);
 
-			console.log(countries);
-			console.log(currency);
 			setDisplayCountryList(true);
 		}
 	}, [loadedAllTheCountries]);
+
+	// handling the clicked country
+	const handleClickedCountry = (e) => {
+		let countryIndex = notSortedCountries.indexOf(e.target.value);
+		let clickedCC = currency[countryIndex];
+		let currencySymbol = coinify.symbol(clickedCC);
+
+		alert(`${currencySymbol} ${e.target.value} ${clickedCC}`);
+	};
 
 	return (
 		<div className="footer">
@@ -97,7 +113,8 @@ function Footer() {
 						{displayCountryList && (
 							<div className="footer__rightSectionSelectCountry">
 								<p>Select Country: </p>
-								<select>
+								<select onChange={(e) => handleClickedCountry(e)}>
+									<option value={cc.code('USD')?.countries[0]}>Select Country</option>
 									{countries?.map((country) => (
 										<option key={country} value={country}>
 											{country}
@@ -106,7 +123,6 @@ function Footer() {
 								</select>
 							</div>
 						)}
-						{/* </form> */}
 					</div>
 				</div>
 				<div className="footer__bottom">{`© AmirahGems. ${date}`}</div>
