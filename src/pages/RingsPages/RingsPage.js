@@ -166,7 +166,7 @@ function RingsPage() {
 
 	return (
 		<div className="ringsPage">
-			<SEO title="Necklaces & Pendants" />
+			<SEO title="Rings" />
 			<div className="ringsPage__sectionCart">
 				<div className="ringsPage__sectionCartSmallImages">
 					<img

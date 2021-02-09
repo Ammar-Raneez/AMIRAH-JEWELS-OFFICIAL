@@ -120,7 +120,7 @@
 .gemDetails__sectionVideo > div > h2, .gemDetails__sectionDescription > div > h2, .gemDetails__sectionProduct > div > h2 {
 	font-family: Quattrocento-Regular;
 	color: #707070;
-	margin: 100px 0 20px 0;
+	margin: 100px 0 20px 20px;
 }
 .gemDetails__sectionProduct {
 	align-items: center;
@@ -167,9 +167,110 @@
 	width: 100%;
 }
 
-@media screen and (max-width: 450px) {
-	.gemDetails__otherGemsRow {
+@media screen and (max-width: 1100px) and (min-width: 900px) {
+	.gemDetails__sectionVideo > div > video {
+		height: 450px;
+	}
+}
+
+@media screen and (max-width: 900px) and (min-width: 600px) {
+	.gemDetails__sectionCartMainImage > img {
+		height: 400px;
+		width: 400px;
+	}
+
+	.gemDetails__sectionCartSmallImages {
+		display: none;
+	}
+
+	.tableRow {
+		width: 90vw;
+	}
+
+	.gemDetails__sectionDescription {
+		width: 90vw;
+	}
+
+	.gemDetails__sectionVideo > div {
 		display: flex;
+		justify-content: center;
+	}
+
+	.gemDetails__sectionVideo > div > video {
+		height: 45vw;
+	}
+	
+	.gemDetails__sectionCartMainImage {
+		margin: 0;
+	}
+}
+
+@media screen and (max-width: 600px) and (min-width: 450px) {
+	.gemDetails__sectionCartMainImage > div {
+		display: flex;
+		justify-content: center;
+	}
+
+	.tableRow {
+		width: 90vw;
+	}
+
+	.gemDetails__sectionVideo, .gemDetails__sectionDescription {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+
+	.gemDetails__sectionDescription {
+		width: 90vw;
+	}
+	
+	.gemDetails__sectionVideo > div > video {
+		height: 45vw;
+	}
+
+	.gemDetails__sectionCartSmallImages {
+		display: none;
+	}
+
+	.gemDetails__sectionCart {
+		flex-direction: column;
+	}
+}
+
+@media screen and (max-width: 450px) {
+	.gemDetails__sectionCartMainImage {
+		margin: 0;
+	}
+
+	.gemDetails__sectionCartMainImage > div {
+		height: auto;
+		width: auto;
+		display: flex;
+		justify-content: center;
+	}
+
+	.gemDetails__sectionCartCartDetails > div > h1 {
+		text-align: center !important;
+	}
+
+	.gemDetails__sectionCartMainImage > div > img {
+		height: 300px !important;
+		width: auto !important;
+		object-fit: contain;
+	}
+	.gemDetails__sectionCartCartDetails, .gemDetails__sectionCartCart, .gemDetails__sectionCartMainImage > div {
+		width: 90vw !important;
+	}
+	.gemDetails__otherGemsRow {
+		width: auto;
+	}
+
+	.gemDetails__sectionCartSmallImages, .gemDetails__sectionDescription, .gemDetails__sectionVideo {
+		display: none;
+	}
+
+	.gemDetails__sectionCart {
 		flex-direction: column;
 	}
 }
