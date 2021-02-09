@@ -1,14 +1,40 @@
-.footer{
-    left: 0;
-    width: 100%;
+.footer {
+	left: 0;
+	width: 100%;
+}
+.footer__rightSectionSelectCountry {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	margin-top: 20px;
+}
+.footer__rightSectionSelectCountry > select {
+	width: 200px;
+	margin-left: 10px;
+	outline: none;
+	background-color: transparent;
+	font-size: 14px;
+	font-family: Quattrocento-Regular;
+	color: #474747;
+	height: 30px;
+	cursor: pointer;
+	border-top: none;
+	border-left: none;
+	border-right: none;
+	border-bottom: 1px transparent solid;
+	transition: 0.3s ease-in-out;
+}
+.footer__rightSectionSelectCountry > select:hover {
+	transition: 0.3s ease-in-out;
+	border-bottom: 1px #ffc0a1 solid;
 }
 .footer__main {
-    padding: 3vw 1vw 0.5vw 3vw;
+	padding: 3vw 1vw 0.5vw 3vw;
 	background-color: #ffe7dc;
 	display: flex;
 	flex-direction: column;
 	justify-content: space-evenly;
-    align-items: center;
+	align-items: center;
 }
 .footer__top {
 	display: flex;
@@ -20,14 +46,22 @@
 	flex-direction: column;
 	justify-content: space-between;
 }
-.footer__rightSection{
+/* .footer__rightSection {
 	border: 1px red solid;
-}
-.footer__leftSectionTop, .footer__leftSectionDown, .footer__middleSection, .footer__rightSection {
+	display: flex;
+} */
+.footer__leftSectionTop,
+.footer__leftSectionDown,
+.footer__middleSection,
+.footer__rightSection {
 	display: flex;
 	flex-direction: column;
 }
-.footer__leftSectionTop, .footer__leftSectionDown, .footer__middleSection, .footer__rightSection, .footer__bottom {
+.footer__leftSectionTop,
+.footer__leftSectionDown,
+.footer__middleSection,
+.footer__rightSection,
+.footer__bottom {
 	padding: 1vw;
 }
 .footer a {
@@ -62,22 +96,22 @@
 	margin-top: 1vw;
 	font-family: Quattrocento-Regular;
 	border: none;
-    font-size: 1vw;
+	font-size: 1vw;
 	margin-top: 3vw;
 	text-align: center;
-    background-color: transparent;
+	background-color: transparent;
 	outline: none;
-    border: 0.2vw #ffc0a1 solid;
-    transition: 0.3s ease;
+	border: 0.2vw #ffc0a1 solid;
+	transition: 0.3s ease;
 	border-radius: 0.7vw;
 }
-.footer__rightSection > a:hover{
-    background-color: #ffc0a1;
-    transition: 0.3s ease;
-    font-weight: bold;
-    color: white;
+.footer__rightSection > a:hover {
+	background-color: #ffc0a1;
+	transition: 0.3s ease;
+	font-weight: bold;
+	color: white;
 }
-.footer__bottom {	
+.footer__bottom {
 	color: #707070;
 	font-family: Quattrocento-Regular;
 	font-weight: bold;
@@ -96,7 +130,10 @@
 }
 
 @media screen and (max-width: 600px) and (min-width: 400px) {
-	.footer a, .footer p:first-child, .footer__rightSectionDescription, .footer__rightSection > a {
+	.footer a,
+	.footer p:first-child,
+	.footer__rightSectionDescription,
+	.footer__rightSection > a {
 		font-size: 12px;
 	}
 
