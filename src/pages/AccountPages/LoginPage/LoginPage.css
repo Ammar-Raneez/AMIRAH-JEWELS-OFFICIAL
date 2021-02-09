@@ -152,6 +152,20 @@
 }
 
 @media screen and (max-width: 10000px) and (min-width: 1400px) {
+	.MuiPaper-root.MuiDialog-paper.MuiDialog-paperScrollPaper.MuiDialog-paperWidthSm.MuiPaper-elevation24.MuiPaper-rounded > div > p {
+		font-size: 1.2vw;
+		padding: 0.8vw;
+	}
+
+	.MuiPaper-root.MuiDialog-paper.MuiDialog-paperScrollPaper.MuiDialog-paperWidthSm.MuiPaper-elevation24.MuiPaper-rounded > div.MuiDialogActions-root.MuiDialogActions-spacing {
+		padding: 1vw;
+	}
+
+	.MuiPaper-root.MuiDialog-paper.MuiDialog-paperScrollPaper.MuiDialog-paperWidthSm.MuiPaper-elevation24.MuiPaper-rounded > div.MuiDialogActions-root.MuiDialogActions-spacing > button {
+		padding: 1vw 1.1vw;
+		font-size: 1vw;
+	}
+
 	.loginPage .loginPage__leftSide,
 	.loginPage .loginPage__rightSide {
 		min-width: 48vw;
