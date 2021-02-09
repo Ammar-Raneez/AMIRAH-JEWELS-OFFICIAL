@@ -6,6 +6,8 @@ export const initialState = {
 	tax: 20,
 	delivery: 90,
 	estimatedTotal: 0,
+	currencySymbol: '$',
+	currencyRate: 1.0,
 };
 
 const reducer = (state, action) => {
@@ -16,6 +18,10 @@ const reducer = (state, action) => {
 				user: action.user,
 			};
 
+		case 'SET_CURRENCY_SYMBOL':
+			return { ...state, currencySymbol: action.currencySymbol };
+		case 'SET_CURRENCY_RATE':
+			return { ...state, currencyRate: action.currencyRate };
 		case 'SET_SUBTOTAL':
 			// setting the sub total price
 			let updatedSubtotal = 0;
