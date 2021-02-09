@@ -30,6 +30,8 @@ function WishListPage() {
 								productImgURL: cartItem.productImgURL,
 								productName: cartItem.productName,
 								productQuantity: cartItem.productQuantity,
+								preferredMetal: cartItem.preferredMetal,
+                                preferredSize: cartItem.preferredSize,
 							},
 						});
 					}
@@ -44,6 +46,8 @@ function WishListPage() {
 								name: wishlistItem.name,
 								cost: wishlistItem.cost,
 								imgURL: wishlistItem.imgURL,
+								preferredMetal: wishlistItem.preferredMetal,
+                                preferredSize: wishlistItem.preferredSize,
 							},
 						});
 					}
@@ -84,7 +88,7 @@ function WishListPage() {
 					) : (
 						<Fade direction="left">
 							{wishListBasket.map((item, x) => (
-								<WishListItem key={x} img={item.imgURL} title={item.name} currency="$" price={item.cost} />
+								<WishListItem key={x} img={item.imgURL} title={item.name} currency="$" price={item.cost} preferredMetal={item.preferredMetal} preferredSize={item.preferredSize}/>
 							))}
 						</Fade>
 					)}

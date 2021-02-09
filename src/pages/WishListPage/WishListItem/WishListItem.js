@@ -4,7 +4,7 @@ import { useStateValue } from '../../../StateProvider';
 import { db } from '../../../firebase';
 import { useEffect, useState } from 'react';
 
-function WishListItem({ img, title, currency, price }) {
+function WishListItem({ img, title, currency, price, preferredSize, preferredMetal }) {
 	const [tempSafetyCartBasket, setTempSafetyCartBasket] = useState(false);
 	const [{ wishListBasket, cartBasket, user }, dispatch] = useStateValue();
 
@@ -39,6 +39,8 @@ function WishListItem({ img, title, currency, price }) {
 					productCost: price,
 					productImgURL: img,
 					productQuantity: 1,
+					preferredSize: preferredSize,
+					preferredMetal: preferredMetal,
 				},
 			});
 			//If item is added into cart, remove it from wishlist
