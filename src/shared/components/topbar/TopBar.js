@@ -141,7 +141,7 @@ function TopBar() {
 			</div>
 			<div className="topbar__center">
 				<Link to="/">
-					<img src="logo.png" className="topbar__center__TopLogo" alt="" />
+					<img src="word_logo.png" className="topbar__center__TopLogo" alt="" />
 				</Link>
 			</div>
 			<div className="topbar__right">
