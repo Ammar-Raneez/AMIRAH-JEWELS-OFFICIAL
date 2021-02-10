@@ -14,7 +14,7 @@ import SEO from '../../shared/components/SEO/SEO';
 import formatCurrency from 'format-currency';
 
 function NecklacePendantPage() {
-	//this state is to track which image is selected to add a active className
+	//this state is to track which image is selected to add aa active className
 	const [currentImage, setCurrentImage] = useState('ring2');
 	const [readMoreDescription, setReadMoreDescription] = useState(false);
 

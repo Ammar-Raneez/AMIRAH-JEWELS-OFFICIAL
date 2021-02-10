@@ -5,17 +5,56 @@
 	src: url(Timeless.ttf);
 }
 
+@font-face {
+	font-family: boowie;
+	src: url(BOOWIE.ttf);
+}
+
+@font-face {
+	font-family: cinzel;
+	src: url(CinzelDecorative-Regular.otf);
+}
+
+.topbar__centerHidden {
+	display: none;
+}
+
 .topbar {
 	font-family: timeless;
 	display: flex;
 	justify-content: space-between;
-	padding: 0 1vw;
+	padding: 0 0 0 1vw;
 	align-items: center;
+}
+
+.topbar__center {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.topbar__center > a {
+	text-decoration: none;
+	margin-top: 1vw;
 }
 
 .topbar__center__TopLogo {
 	object-fit: contain;
-	height: 4vw;
+	width: 14vw;
+}
+
+.topbar__centerTypedText {
+	font-family: cinzel;
+	font-size: 2.6vw;
+	color: #d35f46;
+	font-weight: 500;
+	letter-spacing: 0.5vw;
+	line-height: 1.8vw;
+	margin-top: 1vw;
+}
+
+.topbar__centerTypedText .typed-cursor.typed-cursor--blink {
+	display: none;
 }
 
 .expandedMoreIcon {
@@ -40,21 +79,21 @@
 .topbar__right {
 	/* flex-grow: 0.3; */
 	min-width: 30%;
-	/* max-width: 30%; */
+	/* max-width: 25%; */
 	justify-content: flex-end;
 }
 
 .topbar__left {
 	/* flex-grow: 1.5; */
-	min-width: 30%;
-	max-width: 30%;
+	min-width: 25%;
+	max-width: 25%;
 	justify-content: left;
 }
 
 .topbar__rightAccount {
 	display: flex;
-	align-items: center;
 	font-size: 1.3vw;
+	margin-right: 1vw;
 }
 
 .topbar__rightAccount > a {
@@ -62,6 +101,8 @@
 	color: black;
 	transition: 0.3s ease;
 	cursor: pointer;
+	display: flex;
+	align-items: center;
 	font-size: 1vw;
 }
 .topbar__rightAccount > a:hover {
@@ -116,29 +157,15 @@
 }
 
 @media screen and (max-width: 900px) and (min-width: 768px) {
-	.topbar__left > a > .MuiSvgIcon-root,
-	.topbar__right > .MuiSvgIcon-root,
-	.topbar__right > .topbar__rightAccount > .MuiSvgIcon-root,
-	.topbar__right > a > .MuiSvgIcon-root {
-		font-size: 20px !important;
+	.topbar__centerTypedHidden > a > div {
+		line-height: 0;
 	}
-
-	.topbar__center__TopLogo {
-		height: 30px;
-	}
-
-	.topbar__rightAccount > a {
-		font-size: 14px !important;
-	}
-}
-
-@media screen and (max-width: 900px) and (min-width: 768px) {
 	.topbar__left > a > .MuiSvgIcon-root, .topbar__right > .MuiSvgIcon-root, .topbar__right > .topbar__rightAccount > .MuiSvgIcon-root, .topbar__right > a > .MuiSvgIcon-root {
 		font-size: 20px !important;
 	}
 
 	.topbar__center__TopLogo {
-		height: 30px;
+		height: auto;
 	}
 
 	.topbar__rightAccount > a {
@@ -147,7 +174,11 @@
 }
 
 @media screen and (max-width: 768px) and (min-width: 500px) {
-	.topbar__left {
+	.topbar__centerHidden {
+		display: block;
+	}
+
+	.topbar__left, .topbar__centerTypedHidden {
 		display: none;
 	}
 	.topbar {
@@ -180,7 +211,11 @@
 }
 
 @media screen and (max-width: 500px) {
-	.topbar__left {
+	.topbar__centerHidden {
+		display: block;
+	}
+
+	.topbar__left, .topbar__centerTypedHidden {
 		display: none;
 	}
 	.topbar {

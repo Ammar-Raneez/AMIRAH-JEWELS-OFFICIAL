@@ -15,6 +15,7 @@ import ChevronRightIcon from '@material-ui/icons/ChevronRight';
 import TreeItem from '@material-ui/lab/TreeItem';
 import { List, ListItem, ListItemIcon, ListItemText, SwipeableDrawer } from '@material-ui/core';
 import { Fade } from 'react-awesome-reveal';
+import Typed from 'react-typed';
 
 function TopBar() {
 	const social = ['https://www.facebook.com/amirahgems', 'https://www.instagram.com/amirahgems/'];
@@ -140,9 +141,20 @@ function TopBar() {
 				</a>
 			</div>
 			<div className="topbar__center">
-				<Link to="/">
+				<a href="/" className="topbar__centerTypedHidden">
+					<Typed
+					strings={['AMIRAH']}
+					typeSpeed={100}
+					className="topbar__centerTypedText"
+					>
+					</Typed>
+					<Fade direction="up" triggerOnce delay={800}>
+						<img src="word_logo_bottom.png" className="topbar__center__TopLogo" alt="" />
+					</Fade>
+				</a>
+				<a href="/" className="topbar__centerHidden">
 					<img src="word_logo.png" className="topbar__center__TopLogo" alt="" />
-				</Link>
+				</a>
 			</div>
 			<div className="topbar__right">
 				<div className="topbar__rightAccount">
