@@ -117,7 +117,7 @@
 .necklacePendant__sectionCartCartDetailsBtns > a:last-child > button:hover {
 	background-color: #ffc0a1;
 }
-.necklacePendant__description{
+.necklacePendant__description {
     padding-top: 100px;
 }
 .necklacePendant__description, .necklacePendant__otherProducts {
@@ -190,7 +190,104 @@
 }
 
 @media screen and (max-width: 10000px) and (min-width: 1400px) {
+	.necklacePendant {
+		margin-top: 6vw;
+	}
+
+	.necklacePendant__sectionCartSmallImages > img {
+		padding: 2vw;
+		height: 10vw;
+	}
+
+	.necklacePendant__sectionCartSmallImages > img:hover, .necklacePendant__sectionCartSmallImages > img.active {
+		box-shadow: 0.2vw 0.2vw 0.8vw rgba(161, 161, 161, 0.24), 0.2vw 0.2vw 0.8vw rgba(161, 161, 161, 0.24);
+	}
 	
+	.necklacePendant__sectionCartMainImageIcon {
+		margin-top: 3vw;
+	}
+
+	.necklacePendant__sectionCartMainImageIcon > .MuiSvgIcon-root {
+		font-size: 3vw !important;
+	}
+
+	.necklacePendant__sectionCartMainImage > div > img, .necklacePendant__sectionCartMainImage > div {
+		height: 30vw !important;
+		width: 30vw !important;
+	}
+
+	.necklacePendant__sectionCartMainImage {
+		margin: 0 8vw;
+	}
+
+	.necklacePendant__sectionCartCartDetails {
+		width: 28vw;
+	}
+
+	.necklacePendant__sectionCartCartDetails > div > h2 {
+		font-size: 2.5vw;
+		margin-bottom: 5vw;
+	}
+
+	.necklacePendant__sectionCartCartDetailsItem {
+		font-size: 1.5vw;
+		line-height: 5vw;
+	}
+
+	.necklacePendant__sectionCartCartDetails > div > p {
+		font-size: 1.8vw;
+		line-height: 5vw;
+	}
+
+	.necklacePendant__sectionCartCartDetailsBtns > a > button {
+		font-size: 1.2vw;
+		border-radius: 1vw;
+		margin: 0.5vw 0;
+		padding: 1.5vw;
+	}
+
+	.necklacePendant__description {
+		padding-top: 10vw;
+	}
+
+	.necklacePendant__description > div > h2, .necklacePendant__otherProducts > div > h2 {
+		font-size: 2vw;
+	}
+	.necklacePendant__otherProducts > div > h3 {
+		font-size: 1.5vw;
+	}
+
+	.necklacePendant__description, .necklacePendant__otherProducts {
+		margin: 2vw;
+		margin-bottom: -0.5vw;
+		max-width: 90vw;
+	}
+
+	.necklacePendant__descriptionMain, .necklacePendant__descriptionOtherDetails {
+		font-size: 1.5vw;
+		padding-top: 2vw;
+		line-height: 2.5vw;
+	}
+
+	.necklacePendant__otherProductsProducts {
+		padding: 3vw 0 6vw 0;
+	}
+
+	.necklacePendant__descriptionOtherDetailsReadMore { 
+		margin-top: 0.8vw;
+		width: 13.5vw;
+		font-size: 1.6vw;
+	}
+
+	.necklacePendant__descriptionOtherDetailsReadMore > svg {
+		font-size: 1.6vw !important;
+	}
+
+	.necklacePendant__descriptionOtherDetailsReadMore::before, .necklacePendant__descriptionOtherDetailsReadMore::after {
+		top: 2vw;
+		height: 0.1vw;
+		width: 0;
+	}
 }
 
 @media screen and (max-width: 900px) and (min-width: 600px) {
