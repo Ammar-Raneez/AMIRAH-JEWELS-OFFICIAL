@@ -34,6 +34,106 @@
 }
 
 /* ----------------------------------------------------------- */
+@media screen and (max-width: 10000px) and (min-width: 1500px) {
+	.MuiPickersBasePicker-pickerView.MuiPickersBasePicker-pickerViewLandscape {
+		padding: 0 0.5vw;
+	}
+
+	.MuiPickersMonthSelection-container {
+		width: 100% !important;
+	}
+
+	.MuiPickersMonthSelection-container, .MuiPickersYearSelection-container {
+		height: 15vw !important;
+	}
+
+	.MuiPickersMonthSelection-container > div {
+		height: 6vw;
+		font-size: 1vw !important;
+		line-height: 1vw !important;
+	}
+	
+	.MuiPickersYearSelection-container > div {
+		height: 3vw;
+		font-size: 1vw !important;
+		line-height: 1.2vw;
+	}
+
+	.checkoutPage {
+		margin: 6vw;
+	}
+
+	.checkoutPage__form {
+		padding: 4vw;
+		width: 35vw;
+		border-radius: 2vw;
+	}
+
+	.checkout__payment {
+		padding-top: 2vw;
+	}
+
+	.checkoutPage__form > form > div > div > label {
+		font-size: 1vw;
+		line-height: 1vw;
+	}
+
+	.checkoutPage__form > form > div > div > div { 
+		margin-top: 1vw;
+		font-size: 1vw;
+		line-height: 1vw;
+		margin-left: 0.5vw;
+	}
+
+	.checkoutPage__form > form > div > div > div > input {
+		height: 1vw;
+		padding: 0.6vw 0 0.7vw;
+	}
+
+	.checkout__payment > fieldset > legend {
+		font-size: 1vw;
+		line-height: 1vw;
+	}
+
+	.checkout__payment > fieldset > div > label {
+		margin-left: -0.1vw;
+	}
+
+	.checkout__payment > fieldset > div > label > span {
+		font-size: 1.2vw;
+		padding: 0.7vw;
+	}
+
+	.checkout__payment > fieldset > div > label > span > span > div > svg, .checkoutPage__form > form > div.MuiFormControl-root.MuiTextField-root.MuiFormControl-marginNormal > div > div > button > span > svg {
+		font-size: 1.5vw !important;
+		height: 2vw !important;
+		width: 2vw !important;
+	}
+
+	.checkoutPage__form > form > div.MuiFormControl-root.MuiTextField-root.MuiFormControl-marginNormal {
+		margin-top: 1.4vw;
+		margin-bottom: 0.5vw;
+	}
+
+	.checkoutPage__form > form > div.MuiFormControl-root.MuiTextField-root.MuiFormControl-marginNormal > div {
+		font-size: 1vw;
+		line-height: 1vw;
+	}
+
+	.checkoutPage__form > form > div.MuiFormControl-root.MuiTextField-root.MuiFormControl-marginNormal > div > input {
+		height: 1vw;
+		padding: 0.5vw 0 0.6vw;
+	}
+
+	.checkoutPage__form > form > div.MuiFormControl-root.MuiTextField-root.MuiFormControl-marginNormal > div > div > button {
+		font-size: 1.2vw;
+	}
+
+	.MuiFormHelperText-root {
+		font-size: 1vw !important;
+		line-height: 2vw !important;
+	}
+}
 
 @media screen and (max-width: 700px) {
 	.checkoutPage__form > h2 {
