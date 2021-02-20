@@ -10,13 +10,14 @@ import { db } from '../../../firebase';
 import { IconButton } from '@material-ui/core';
 import InstagramIcon from '@material-ui/icons/Instagram';
 import FacebookIcon from '@material-ui/icons/Facebook';
-import YouTubeIcon from '@material-ui/icons/YouTube';
+import EmailIcon from '@material-ui/icons/Email';
 import PinterestIcon from '@material-ui/icons/Pinterest';
 import TwitterIcon from '@material-ui/icons/Twitter';
-import { Link } from 'react-router-dom';
+import { Link, useHistory } from 'react-router-dom';
 
 function Footer() {
 	const [date] = useState(new Date().getFullYear());
+	const history = useHistory();
 	const [{ currencySymbol, currencyRate, user }, dispatch] = useStateValue();
 	const BASE_URL = 'https://v6.exchangerate-api.com/v6/0a31808a3c199a87cfda7925/latest/USD';
 	const [exchangeRates, setExchangeRates] = useState({});
@@ -129,54 +130,39 @@ function Footer() {
 					</div>
 					<div className="footer__topLeftSectionTwo">
 						<p>
-							<Link>Customer Service</Link>
+							<Link>Our Company</Link>
 						</p>
 						<p>
-							<Link>Contact Us</Link>
+							<Link>World of Amirah</Link>
 						</p>
 						<p>
-							<Link>Product Care & Repair</Link>
+							<Link>Sustainability</Link>
 						</p>
 						<p>
-							<Link>Book an Appointment</Link>
+							<Link>CA Supply Chains Act</Link>
 						</p>
 						<p>
-							<Link>Frequently Asked Questions</Link>
+							<Link>Amirah Careers</Link>
 						</p>
 						<p>
-							<Link>Shipping & Returns</Link>
+							<Link>Website Policies</Link>
 						</p>
 						<p>
-							<Link>Tiffany Select Financing</Link>
-						</p>
-						<p>
-							<Link>Gift Cards</Link>
+							<Link>Report an Issue</Link>
 						</p>
 					</div>
 					<div className="footer__topLeftSectionThree">
 						<p>
-							<Link>Customer Service</Link>
+							<Link>Related Amirah Sites</Link>
 						</p>
 						<p>
-							<Link>Contact Us</Link>
+							<Link>Wedding & Gift Registry</Link>
 						</p>
 						<p>
-							<Link>Product Care & Repair</Link>
+							<Link>Business Accounts</Link>
 						</p>
 						<p>
-							<Link>Book an Appointment</Link>
-						</p>
-						<p>
-							<Link>Frequently Asked Questions</Link>
-						</p>
-						<p>
-							<Link>Shipping & Returns</Link>
-						</p>
-						<p>
-							<Link>Tiffany Select Financing</Link>
-						</p>
-						<p>
-							<Link>Gift Cards</Link>
+							<Link>Amirah some shit</Link>
 						</p>
 					</div>
 				</div>
@@ -190,19 +176,25 @@ function Footer() {
 						<a href="/register">SIGN UP</a>
 					</div>
 					<div className="footer__topRightIcons">
-						<IconButton className="footer__topRightIconButton">
+						<IconButton
+							className="footer__topRightIconButton"
+							onClick={() => window.open('http://www.instagram.com', '_blank')}
+						>
 							<InstagramIcon />
 						</IconButton>
-						<IconButton className="footer__topRightIconButton">
+						<IconButton
+							className="footer__topRightIconButton"
+							onClick={() => window.open('http://www.facebook.com', '_blank')}
+						>
 							<FacebookIcon />
 						</IconButton>
-						<IconButton className="footer__topRightIconButton">
-							<YouTubeIcon />
+						<IconButton className="footer__topRightIconButton" onClick={() => history.replace('/contactUs')}>
+							<EmailIcon />
 						</IconButton>
-						<IconButton className="footer__topRightIconButton">
-							<PinterestIcon />
-						</IconButton>
-						<IconButton className="footer__topRightIconButton">
+						<IconButton
+							className="footer__topRightIconButton"
+							onClick={() => window.open('http://www.twitter.com', '_blank')}
+						>
 							<TwitterIcon />
 						</IconButton>
 					</div>
@@ -212,9 +204,9 @@ function Footer() {
 				<div className="footer__bottomCountryRight">
 					{displayCountryList && (
 						<div className="footer__bottomCountrySelectCountry">
-							<p>Select Country: </p>
+							<p>Change Location: </p>
 							<select onChange={(e) => handleClickedCountry(e)}>
-								<option value={cc.code('USD')?.countries[0]}>Select Country</option>
+								<option value={cc.code('USD')?.countries[0]}>United States</option>
 								{countries?.map((country, index) => (
 									<option key={index} value={country}>
 										{country}
@@ -227,9 +219,9 @@ function Footer() {
 				<p className="footer__bottomText">{`© AmirahGems. ${date}`}</p>
 				<div className="footer__bottomCountryLeft">
 					{displayCountryList && (
-						<div className="footer__bottomCountrySelectCountry">
+						<div className="footer__bottomCountrySelectCountry footer__bottomCountrySelectCountryRight">
 							<p>Select Country: </p>
-							<select onChange={(e) => handleClickedCountry(e)}>
+							<select disabled={true} onChange={(e) => handleClickedCountry(e)}>
 								<option value={cc.code('USD')?.countries[0]}>Select Country</option>
 								{countries?.map((country, index) => (
 									<option key={index} value={country}>
