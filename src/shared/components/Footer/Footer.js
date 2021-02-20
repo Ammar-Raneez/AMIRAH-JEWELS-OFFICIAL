@@ -7,6 +7,13 @@ import './Footer.css';
 import cc from 'currency-codes';
 import coinify from 'coinify';
 import { db } from '../../../firebase';
+import { IconButton } from '@material-ui/core';
+import InstagramIcon from '@material-ui/icons/Instagram';
+import FacebookIcon from '@material-ui/icons/Facebook';
+import YouTubeIcon from '@material-ui/icons/YouTube';
+import PinterestIcon from '@material-ui/icons/Pinterest';
+import TwitterIcon from '@material-ui/icons/Twitter';
+import { Link } from 'react-router-dom';
 
 function Footer() {
 	const [date] = useState(new Date().getFullYear());
@@ -92,58 +99,147 @@ function Footer() {
 
 	return (
 		<div className="footer">
-			<div className="footer__main">
-				<div className="footer__top">
-					<div className="footer__leftSection">
-						<div className="footer__leftSectionTop">
-							<p>Products</p>
-							<a href="/necklace+pendants">Necklaces & Pendants</a>
-							<a href="/earrings">Earrings</a>
-							<a href="/rings">Rings</a>
-							<a href="/bracelets">Bracelets</a>
-							<a href="/engagement+rings">Engagement Rings</a>
-						</div>
-						<div className="footer__leftSectionDown">
-							<p>Follow us on:</p>
-							<a rel="noreferrer" href="https://www.instagram.com/amirahgems/" target="_blank">
-								Instagram
-							</a>
-							<a rel="noreferrer" href="https://www.facebook.com/amirahgems" target="_blank">
-								Facebook
-							</a>
-						</div>
+			<div className="footer__top">
+				<div className="footer__topLeft">
+					<div className="footer__topLeftSectionOne">
+						<p>
+							<Link>Customer Service</Link>
+						</p>
+						<p>
+							<Link>Contact Us</Link>
+						</p>
+						<p>
+							<Link>Product Care & Repair</Link>
+						</p>
+						<p>
+							<Link>Book an Appointment</Link>
+						</p>
+						<p>
+							<Link>Frequently Asked Questions</Link>
+						</p>
+						<p>
+							<Link>Shipping & Returns</Link>
+						</p>
+						<p>
+							<Link>Tiffany Select Financing</Link>
+						</p>
+						<p>
+							<Link>Gift Cards</Link>
+						</p>
 					</div>
-					<div className="footer__middleSection">
-						<p>About Us</p>
-						<a href="/aboutus">Company</a>
-						<a href="/charity">Charity</a>
-						<a href="/careers">Careers</a>
-						<a href="/policy">Policy</a>
-						<a href="/contactUs">Contact Us</a>
+					<div className="footer__topLeftSectionTwo">
+						<p>
+							<Link>Customer Service</Link>
+						</p>
+						<p>
+							<Link>Contact Us</Link>
+						</p>
+						<p>
+							<Link>Product Care & Repair</Link>
+						</p>
+						<p>
+							<Link>Book an Appointment</Link>
+						</p>
+						<p>
+							<Link>Frequently Asked Questions</Link>
+						</p>
+						<p>
+							<Link>Shipping & Returns</Link>
+						</p>
+						<p>
+							<Link>Tiffany Select Financing</Link>
+						</p>
+						<p>
+							<Link>Gift Cards</Link>
+						</p>
 					</div>
-					<div className="footer__rightSection">
+					<div className="footer__topLeftSectionThree">
+						<p>
+							<Link>Customer Service</Link>
+						</p>
+						<p>
+							<Link>Contact Us</Link>
+						</p>
+						<p>
+							<Link>Product Care & Repair</Link>
+						</p>
+						<p>
+							<Link>Book an Appointment</Link>
+						</p>
+						<p>
+							<Link>Frequently Asked Questions</Link>
+						</p>
+						<p>
+							<Link>Shipping & Returns</Link>
+						</p>
+						<p>
+							<Link>Tiffany Select Financing</Link>
+						</p>
+						<p>
+							<Link>Gift Cards</Link>
+						</p>
+					</div>
+				</div>
+				<div className="footer__topRight">
+					<div className="footer__topRightSignUp">
 						<p>Latest by Amirah Gems</p>
 						<p className="footer__rightSectionDescription">
 							Be the first to know about exciting new designs, special events, store openings and much more.
 						</p>
 
 						<a href="/register">SIGN UP</a>
-						{displayCountryList && (
-							<div className="footer__rightSectionSelectCountry">
-								<p>Select Country: </p>
-								<select onChange={(e) => handleClickedCountry(e)}>
-									<option value={cc.code('USD')?.countries[0]}>Select Country</option>
-									{countries?.map((country, index) => (
-										<option key={index} value={country}>
-											{country}
-										</option>
-									))}
-								</select>
-							</div>
-						)}
+					</div>
+					<div className="footer__topRightIcons">
+						<IconButton className="footer__topRightIconButton">
+							<InstagramIcon />
+						</IconButton>
+						<IconButton className="footer__topRightIconButton">
+							<FacebookIcon />
+						</IconButton>
+						<IconButton className="footer__topRightIconButton">
+							<YouTubeIcon />
+						</IconButton>
+						<IconButton className="footer__topRightIconButton">
+							<PinterestIcon />
+						</IconButton>
+						<IconButton className="footer__topRightIconButton">
+							<TwitterIcon />
+						</IconButton>
 					</div>
 				</div>
-				<div className="footer__bottom">{`© AmirahGems. ${date}`}</div>
+			</div>
+			<div className="footer__bottom">
+				<div className="footer__bottomCountryRight">
+					{displayCountryList && (
+						<div className="footer__bottomCountrySelectCountry">
+							<p>Select Country: </p>
+							<select onChange={(e) => handleClickedCountry(e)}>
+								<option value={cc.code('USD')?.countries[0]}>Select Country</option>
+								{countries?.map((country, index) => (
+									<option key={index} value={country}>
+										{country}
+									</option>
+								))}
+							</select>
+						</div>
+					)}
+				</div>
+				<p className="footer__bottomText">{`© AmirahGems. ${date}`}</p>
+				<div className="footer__bottomCountryLeft">
+					{displayCountryList && (
+						<div className="footer__bottomCountrySelectCountry">
+							<p>Select Country: </p>
+							<select onChange={(e) => handleClickedCountry(e)}>
+								<option value={cc.code('USD')?.countries[0]}>Select Country</option>
+								{countries?.map((country, index) => (
+									<option key={index} value={country}>
+										{country}
+									</option>
+								))}
+							</select>
+						</div>
+					)}
+				</div>
 			</div>
 		</div>
 	);
