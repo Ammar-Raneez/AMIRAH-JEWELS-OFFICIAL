@@ -1,5 +1,4 @@
 // REACT CONTEXT API
-
 import { createContext, useContext, useReducer } from 'react';
 
 // THIS IS THE DATA LAYER
