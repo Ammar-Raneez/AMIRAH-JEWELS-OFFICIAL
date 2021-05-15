@@ -95,8 +95,6 @@ function Header() {
 				</ClickAwayListener>
 
 				<Link to="/designer+desk">Designer Desk</Link>
-
-				<Link to="/high+tea">High Tea</Link>
 			</div>
 		</div>
 	);

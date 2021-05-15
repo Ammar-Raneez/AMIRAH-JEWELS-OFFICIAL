@@ -114,7 +114,6 @@ function TopBar() {
 						</a>
 					</TreeItem>
 					<a className="topbar__treeItem" href="/"><TreeItem nodeId="22" label="Designer Desk" /></a>
-					<a className="topbar__treeItem" href="/"><TreeItem nodeId="23" label="High Tea" /></a>
 				</TreeView>
 				<List>
 					{['Instagram', 'Facebook'].map((text, index) => (
