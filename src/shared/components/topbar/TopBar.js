@@ -71,49 +71,52 @@ function TopBar() {
 							<a className="topbar__treeItem" href="/explore+all+categories">
 								<TreeItem nodeId="6" label="- Explore All Categories" />
 							</a>
-						</TreeItem>
-						<TreeItem nodeId="7" label="Shop By Gemstones/Metals">
-							<a className="topbar__treeItem" href="/yellow+gold">
-								<TreeItem nodeId="8" label="- Yellow Gold" />
-							</a>
-							<a className="topbar__treeItem" href="/teal+sapphire">
-								<TreeItem nodeId="9" label="- Teal Sapphires" />
-							</a>
-							<a className="topbar__treeItem" href="/purple+sapphire">
-								<TreeItem nodeId="10" label="- Purple Sapphires" />
-							</a>
 							<a className="topbar__treeItem" href="/gemstones+metal">
-								<TreeItem nodeId="11" label="- Explore More" />
+								<TreeItem nodeId="7" label="- Shop By Gemstones" />
 							</a>
 						</TreeItem>
-						<TreeItem nodeId="12" label="Featured Collections">
+						<TreeItem nodeId="8" label="Shop By Collection">
+							<a className="topbar__treeItem" href="/sollitarates">
+								<TreeItem nodeId="9" label="- Sollitarates" />
+							</a>
+							<a className="topbar__treeItem" href="/eternity">
+								<TreeItem nodeId="10" label="- Eternity" />
+							</a>
+							<a className="topbar__treeItem" href="/joy+of+jewellery">
+								<TreeItem nodeId="11" label="- Joy of Jewellery" />
+							</a>
+							{/* <a className="topbar__treeItem" href="/gemstones+metal">
+								<TreeItem nodeId="12" label="- Explore More" />
+							</a> */}
+						</TreeItem>
+						<TreeItem nodeId="13" label="Featured Collections">
 							<a href="/">
-								<TreeItem nodeId="13" label="Signature" />
+								<TreeItem nodeId="14" label="Signature" />
 							</a>
 							<a href="/">
-								<TreeItem nodeId="14" label="Amarelo" />
+								<TreeItem nodeId="15" label="Amarelo" />
 							</a>
 							<a href="/">
-								<TreeItem nodeId="15" label="Mi Amor" />
+								<TreeItem nodeId="16" label="Mi Amor" />
 							</a>
 						</TreeItem>
 					</TreeItem>
-					<a className="topbar__treeItem" href="/processes"><TreeItem nodeId="16" label="Process" /></a>
-					<TreeItem nodeId="17" label="About Us">
+					<a className="topbar__treeItem" href="/processes"><TreeItem nodeId="17" label="Process" /></a>
+					<TreeItem nodeId="18" label="About Us">
 						<a className="topbar__treeItem" href="/aboutus">
-							<TreeItem nodeId="18" label="- Our Company" />
+							<TreeItem nodeId="19" label="- Our Company" />
 						</a>
 						<a className="topbar__treeItem" href="/charity">
-							<TreeItem nodeId="19" label="- Charity" />
+							<TreeItem nodeId="20" label="- Charity" />
 						</a>
 						<a className="topbar__treeItem" href="/careers">
-							<TreeItem nodeId="20" label="- Careers" />
+							<TreeItem nodeId="21" label="- Careers" />
 						</a>
 						<a className="topbar__treeItem" href="/policy">
-							<TreeItem nodeId="21" label="- Policy" />
+							<TreeItem nodeId="22" label="- Policy" />
 						</a>
 					</TreeItem>
-					<a className="topbar__treeItem" href="/"><TreeItem nodeId="22" label="Designer Desk" /></a>
+					<a className="topbar__treeItem" href="/"><TreeItem nodeId="23" label="Designer Desk" /></a>
 				</TreeView>
 				<List>
 					{['Instagram', 'Facebook'].map((text, index) => (
