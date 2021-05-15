@@ -128,8 +128,8 @@ function App() {
 					<Route path="/bracelets">
 						<h2>bracelets component</h2>
 					</Route>
-					<Route path="/engagement+rings">
-						<h2>Engagement rings component</h2>
+					<Route path="/forever+knot">
+						<h2>Forever Knot component</h2>
 					</Route>
 					<Route path="/necklace+pendants">
 						<TopBar />

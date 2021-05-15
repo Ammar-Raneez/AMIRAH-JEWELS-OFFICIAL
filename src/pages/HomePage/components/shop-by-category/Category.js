@@ -36,10 +36,10 @@ function Category() {
                             <p>Bracelets</p>
                         </div>
                     </a>
-                    <a href="/engagement+rings">
+                    <a href="forever+knot">
                         <div className="homePage__categoryEach">
-                            <img alt="engagementRing-category" src="homepage category/engagement rings.png" />
-                            <p>Engagement Rings</p>
+                            <img alt="foreverKnot-category" src="homepage category/forever-knot.png" />
+                            <p>Forever Knot</p>
                         </div>
                     </a>
                 </Fade>   
