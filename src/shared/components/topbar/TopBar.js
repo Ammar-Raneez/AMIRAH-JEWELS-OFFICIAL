@@ -168,10 +168,10 @@ function TopBar() {
 						</a>
 					)}
 				</div>
-				<Link to="/wishList">
+				<Link style={{ display: 'flex', alignItems: 'center' }} to="/wishList">
 					<FavoriteBorderIcon style={{ marginRight: '1vw' }} />
 				</Link>
-				<Link to="/cart">
+				<Link style={{ display: 'flex', alignItems: 'center' }} to="/cart">
 					<LocalMallOutlinedIcon style={{ marginRight: '1vw' }} />
 				</Link>
 				<MenuIcon onClick={toggleDrawer(true)} className="topbar__rightMenuIcon" />

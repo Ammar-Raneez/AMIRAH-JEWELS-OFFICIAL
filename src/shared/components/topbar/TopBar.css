@@ -93,7 +93,8 @@
 .topbar__rightAccount {
 	display: flex;
 	font-size: 1.3vw;
-	margin-right: 1vw;
+    align-items: center;
+    margin-right: 1vw;
 }
 
 .topbar__rightAccount > a {
