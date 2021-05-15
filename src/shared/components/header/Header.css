@@ -107,6 +107,17 @@
 	background: #d3650f;
 }
 
+.header__optionsProductDetailSpecial {
+	border: 0.1vw solid #ffc0a1;
+	display: flex;
+	justify-content: center;
+	transition: 0.3s ease;
+	border-radius: 0.7vw;
+}
+.header__optionsProductDetailSpecial:hover {
+	background: #ffc0a1;
+}
+
 @media screen and (max-width: 900px) and (min-width: 600px) {
 	.header__options, .header__optionsAboutDetails, .header__optionsProductDetails {
 		font-size: 13px;

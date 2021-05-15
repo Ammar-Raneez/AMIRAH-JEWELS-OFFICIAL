@@ -36,10 +36,14 @@ function Header() {
 									<Link className="header__optionsProductDetail" to="/bracelets"><span>Bracelets</span></Link>
 									<Link className="header__optionsProductHidden header__optionsProductDetail" to="/necklace+pendants"><span>Necklaces & Pendants</span></Link>
 									<Link style={{ color: '#656565', fontWeight: '600' }} className="header__optionsProductDetail" to="/explore+all+categories"><span>Explore All Categories</span></Link>
+									<Link style={{ color: '#656565', fontWeight: '600' }} className="header__optionsProductDetail header__optionsProductDetailSpecial" to="/gemstones+metal"><span>Shop by Gemstones</span></Link>
 								</div>
 								<div>
-									<p style={{ color: '#656565', fontWeight: '600' }}>Shop by Metal/Gemstones</p>
-									<Link className="header__optionsProductHidden header__optionsProductDetail" to="/yellow+gold"><span>Yellow Gold</span></Link>
+									<p style={{ color: '#656565', fontWeight: '600' }}>Shop by Collection</p>
+									<Link className="header__optionsProductHidden header__optionsProductDetail" to="/sollitarates"><span>Sollitarates</span></Link>
+									<Link className="header__optionsProductHidden header__optionsProductDetail" to="/eternity"><span>Eternity</span></Link>
+									<Link className="header__optionsProductHidden header__optionsProductDetail" to="/joy+of+jewellery"><span>Joy of Jewellery</span></Link>
+									{/* <Link className="header__optionsProductHidden header__optionsProductDetail" to="/yellow+gold"><span>Yellow Gold</span></Link>
 									<Link className="header__optionsProductHidden header__optionsProductDetail" to="/white+gold"><span>White Gold</span></Link>
 									<Link className="header__optionsProductHidden header__optionsProductDetail" to="/rose+gold"><span>Rose Gold</span></Link>
 									<Link className="header__optionsProductHidden header__optionsProductDetail" to="/diamonds"><span>Diamonds</span></Link>
@@ -47,7 +51,7 @@ function Header() {
 									<Link className="header__optionsProductDetail" to="/pink+sapphire"><span>Pink Sapphires</span></Link>
 									<Link className="header__optionsProductDetail" to="/pearl+sapphire"><span>Pearl Sapphires</span></Link>
 									<Link className="header__optionsProductDetail" to="/purple+sapphire"><span>Purple Sapphires</span></Link>
-									<Link style={{ color: '#656565', fontWeight: '600' }} className="header__optionsProductDetail" to="/gemstones+metal"><span>Explore More</span></Link>
+									<Link style={{ color: '#656565', fontWeight: '600' }} className="header__optionsProductDetail" to="/gemstones+metal"><span>Explore More</span></Link> */}
 								</div>
 								<div>
 									<p style={{ color: '#656565', fontWeight: '600' }}>Featured Collections</p>
