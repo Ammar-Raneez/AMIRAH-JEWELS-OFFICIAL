@@ -16,9 +16,9 @@ import LoginPage from './pages/AccountPages/LoginPage/LoginPage';
 import WishListPage from './pages/WishListPage/WishListPage';
 import NecklacePendantPage from './pages/NecklacePendantPage/NecklacePendantPage';
 import GiftPage from './pages/GiftPage/GiftPage';
-import { useStateValue } from './StateProvider';
+// import { useStateValue } from './StateProvider';
 import { useEffect } from 'react';
-import { auth } from './firebase';
+import { auth, db } from './firebase';
 import CartPage from './pages/CartPage/CartPage';
 import TealGemDetail from './pages/GemsPages/SapphireViewDetails/TealGemDetail';
 import PurpleGemDetail from './pages/GemsPages/SapphireViewDetails/PurpleGemDetail';
@@ -26,32 +26,70 @@ import CheckOutPage from './pages/CheckOutPage/CheckOutPage';
 import ContactUsPage from './pages/ContactUsPage/ContactUsPage';
 import ComingSoon from './pages/ComingSoon/CominSoon';
 import RingsPage from './pages/RingsPages/RingsPage';
+import { login, logout, selectUser } from './features/userSlice';
+import { useDispatch, useSelector } from 'react-redux';
+import { addToCart } from './features/cartSlice';
+import { addToWishlist } from './features/wishlistSlice';
+import { changeRate } from './features/currencyRateSlice';
+import { changeSymbol } from './features/currencySymbolSlice';
 
 function App() {
-	const [{ wishListBasket, cartBasket, user }, dispatch] = useStateValue();
+	// const [{ wishListBasket, cartBasket, user }, dispatch] = useStateValue();
+	const dispatch = useDispatch();
 
-	// This use effect deals with the user auth stuff
 	useEffect(() => {
-		const unsubscribe = auth.onAuthStateChanged((authUser) => {
-			if (authUser) {
+		// auth persistance
+		auth.onAuthStateChanged((userAuth) => {
+			if (userAuth) {
 				// user is logged in
-				dispatch({
-					type: 'SET_USER',
-					user: authUser,
-				});
+				dispatch(login(userAuth));
+
+				// we load all the content from the database (this runs only once)
+				// user logged in only we load the details for the particular user
+				db.collection('users').onSnapshot((snapshot) =>
+					snapshot.docs.forEach((doc) => {
+						if (doc.id === userAuth?.email) {
+							// adding the cart items
+							for (const cartItem of doc.data().cart) {
+								// console.log('Adding items from the database into the cart');
+								dispatch(
+									addToCart({
+										productCost: cartItem.productCost,
+										productImgURL: cartItem.productImgURL,
+										productName: cartItem.productName,
+										productQuantity: cartItem.productQuantity,
+										preferredMetal: cartItem.preferredMetal,
+										preferredSize: cartItem.preferredSize,
+									})
+								);
+							}
+
+							// adding the wishlist items
+							for (const wishlistItem of doc.data().wishlist) {
+								dispatch(
+									addToWishlist({
+										name: wishlistItem.name,
+										cost: wishlistItem.cost,
+										imgURL: wishlistItem.imgURL,
+										preferredMetal: wishlistItem.preferredMetal,
+										preferredSize: wishlistItem.preferredSize,
+									})
+								);
+							}
+
+							// Dispatch to set the currency rate from the db
+							dispatch(changeRate(doc.data().currencyRate));
+
+							// Dispatch to set the currency symbol from the db
+							dispatch(changeSymbol(doc.data().currencySymbol));
+						}
+					})
+				);
 			} else {
 				// user is logged out
-				dispatch({
-					type: 'SET_USER',
-					user: null,
-				});
+				dispatch(logout());
 			}
 		});
-
-		return () => {
-			// clean up code
-			unsubscribe();
-		};
 	}, []);
 
 	return (
@@ -123,7 +161,7 @@ function App() {
 						<Footer />
 					</Route>
 					<Route path="/earrings">
-					<h2>earrings component</h2>
+						<h2>earrings component</h2>
 					</Route>
 					<Route path="/bracelets">
 						<h2>bracelets component</h2>

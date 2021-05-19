@@ -12,16 +12,18 @@ export const initialState = {
 
 const reducer = (state, action) => {
 	switch (action.type) {
-		case 'SET_USER':
+		case 'SET_USER': // DONE
 			return {
 				...state,
 				user: action.user,
 			};
 
-		case 'SET_CURRENCY_SYMBOL':
+		case 'SET_CURRENCY_SYMBOL': // DONE
 			return { ...state, currencySymbol: action.currencySymbol };
-		case 'SET_CURRENCY_RATE':
+
+		case 'SET_CURRENCY_RATE': // DONE
 			return { ...state, currencyRate: action.currencyRate };
+			
 		case 'SET_SUBTOTAL':
 			// setting the sub total price
 			let updatedSubtotal = 0;

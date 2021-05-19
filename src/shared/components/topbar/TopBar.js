@@ -1,12 +1,12 @@
 import './TopBar.css';
 import FacebookIcon from '@material-ui/icons/Facebook';
 import InstagramIcon from '@material-ui/icons/Instagram';
-import { Link } from 'react-router-dom';
+import { Link, Redirect } from 'react-router-dom';
 import PersonOutlinedIcon from '@material-ui/icons/PersonOutlined';
 import LocalMallOutlinedIcon from '@material-ui/icons/LocalMallOutlined';
 import MenuIcon from '@material-ui/icons/Menu';
 import FavoriteBorderIcon from '@material-ui/icons/FavoriteBorder';
-import { useStateValue } from '../../../StateProvider';
+// import { useStateValue } from '../../../StateProvider';
 import { auth } from '../../../firebase';
 import React, { useState } from 'react';
 import TreeView from '@material-ui/lab/TreeView';
@@ -16,15 +16,20 @@ import TreeItem from '@material-ui/lab/TreeItem';
 import { List, ListItem, ListItemIcon, ListItemText, SwipeableDrawer } from '@material-ui/core';
 import { Fade } from 'react-awesome-reveal';
 import Typed from 'react-typed';
+import { useDispatch, useSelector } from 'react-redux';
+import { logout, selectUser } from '../../../features/userSlice';
 
 function TopBar() {
 	const social = ['https://www.facebook.com/amirahgems', 'https://www.instagram.com/amirahgems/'];
 	const [openDrawer, setDrawer] = useState(false);
-	const [{ wishListBasket, cartBasket, user }, dispatch] = useStateValue();
+	// const [{ wishListBasket, cartBasket, user }, dispatch] = useStateValue();
+	const user = useSelector(selectUser);
+	const dispatch = useDispatch();
 
-	const logout = () => {
+	const handleLogout = () => {
 		if (user) {
 			auth.signOut();
+			dispatch(logout());
 		}
 	};
 
@@ -101,7 +106,9 @@ function TopBar() {
 							</a>
 						</TreeItem>
 					</TreeItem>
-					<a className="topbar__treeItem" href="/processes"><TreeItem nodeId="17" label="Process" /></a>
+					<a className="topbar__treeItem" href="/processes">
+						<TreeItem nodeId="17" label="Process" />
+					</a>
 					<TreeItem nodeId="18" label="About Us">
 						<a className="topbar__treeItem" href="/aboutus">
 							<TreeItem nodeId="19" label="- Our Company" />
@@ -116,7 +123,9 @@ function TopBar() {
 							<TreeItem nodeId="22" label="- Policy" />
 						</a>
 					</TreeItem>
-					<a className="topbar__treeItem" href="/"><TreeItem nodeId="23" label="Designer Desk" /></a>
+					<a className="topbar__treeItem" href="/">
+						<TreeItem nodeId="23" label="Designer Desk" />
+					</a>
 				</TreeView>
 				<List>
 					{['Instagram', 'Facebook'].map((text, index) => (
@@ -135,21 +144,26 @@ function TopBar() {
 	return (
 		<div className="topbar">
 			<div className="topbar__left">
-				<a rel="noreferrer" style={{ marginRight: '1vw' }} href="https://www.facebook.com/amirahgems" target="_blank">
+				<a
+					rel="noreferrer"
+					style={{ marginRight: '1vw' }}
+					href="https://www.facebook.com/amirahgems"
+					target="_blank"
+				>
 					<FacebookIcon className="facebook__icon" />
 				</a>
-				<a rel="noreferrer" style={{ marginRight: '1vw' }} href="https://www.instagram.com/amirahgems/" target="_blank">
+				<a
+					rel="noreferrer"
+					style={{ marginRight: '1vw' }}
+					href="https://www.instagram.com/amirahgems/"
+					target="_blank"
+				>
 					<InstagramIcon className="instagram__icon" />
 				</a>
 			</div>
 			<div className="topbar__center">
 				<a href="/" className="topbar__centerTypedHidden">
-					<Typed
-					strings={['AMIRAH']}
-					typeSpeed={100}
-					className="topbar__centerTypedText"
-					>
-					</Typed>
+					<Typed strings={['AMIRAH']} typeSpeed={100} className="topbar__centerTypedText"></Typed>
 					<Fade direction="up" triggerOnce delay={800}>
 						<img src="word_logo_bottom.png" className="topbar__center__TopLogo" alt="" />
 					</Fade>
@@ -162,13 +176,13 @@ function TopBar() {
 				<div className="topbar__rightAccount">
 					<PersonOutlinedIcon />
 					{user?.displayName ? (
-						<a onClick={logout} style={{ fontWeight: 'bold', fontSize: '1vw' }}>
+						<p onClick={handleLogout} style={{ fontWeight: 'bold', fontSize: '1vw', cursor: 'pointer' }}>
 							Welcome, {user?.displayName.split(' ')[0]}
-						</a>
+						</p>
 					) : (
-						<a style={{ marginRight: '1vw' }} href="/login">
+						<Link style={{ marginRight: '1vw', cursor: 'pointer' }} to="/login">
 							Login
-						</a>
+						</Link>
 					)}
 				</div>
 				<Link style={{ display: 'flex', alignItems: 'center' }} to="/wishList">

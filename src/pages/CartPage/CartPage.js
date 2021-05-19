@@ -5,9 +5,16 @@ import Bill from './Bill/Bill';
 import { useStateValue } from '../../StateProvider';
 import { db } from '../../firebase';
 import SEO from '../../shared/components/SEO/SEO';
+import { selectUser } from '../../features/userSlice';
+import { useDispatch, useSelector } from 'react-redux';
+import { selectCart } from '../../features/cartSlice';
 
 function CartPage() {
-	const [{ cartBasket, user, subTotal, delivery, tax }, dispatch] = useStateValue();
+	// const [{ cartBasket, user, subTotal, delivery, tax }, dispatch] = useStateValue();
+	const user = useSelector(selectUser);
+	const dispatch = useDispatch();
+	const cartBasket = useSelector(selectCart);
+	const { subTotal, delivery, tax } = 0;
 	const [loading, setLoading] = useState(true);
 
 	// WE LOAD ALL THE CONTENT FROM THE DATABASE (this runs only once)

@@ -9,6 +9,8 @@ import DateFnsUtils from '@date-io/date-fns';
 import { KeyboardDatePicker, MuiPickersUtilsProvider } from '@material-ui/pickers';
 import { ValidatorForm, TextValidator } from 'react-material-ui-form-validator';
 import SEO from '../../../shared/components/SEO/SEO';
+import { useDispatch } from 'react-redux';
+import { login } from '../../../features/userSlice';
 
 function RegisterPage() {
 	const history = useHistory();
@@ -21,7 +23,9 @@ function RegisterPage() {
 	const [gender, setGender] = useState('');
 	const [birthMonth, setBirthMonth] = useState('');
 	const [birthDay, setBirthDay] = useState('');
-	const [{ user }, dispatch] = useStateValue();
+	// const [{ user }, dispatch] = useStateValue();
+	// const user = useSelector(selectUser);
+	const dispatch = useDispatch();
 
 	useEffect(() => {
 		ValidatorForm.addValidationRule('isPasswordLength', (password) => {
@@ -47,8 +51,7 @@ function RegisterPage() {
 		}
 
 		// register logic
-		auth
-			.createUserWithEmailAndPassword(email, password)
+		auth.createUserWithEmailAndPassword(email, password)
 			.then((auth) => {
 				// created a user and logged in
 				auth.user.updateProfile({
@@ -66,7 +69,7 @@ function RegisterPage() {
 					timestamp: firebase.firestore.FieldValue.serverTimestamp(),
 					checkOutOrders: [],
 					currencyRate: 1,
-					currencySymbol: "$"
+					currencySymbol: '$',
 				});
 
 				// clean the fields
@@ -79,21 +82,24 @@ function RegisterPage() {
 				setPassword('');
 
 				// setting the user into the react context API
-				dispatch({
-					type: 'SET_USER',
-					user: auth.user,
-				});
+				// dispatch({
+				// 	type: 'SET_USER',
+				// 	user: auth.user,
+				// });
+				dispatch(login(auth.user));
 
 				// setTimeout(() => {
 				// 	alert('Welcome ' + auth.user.displayName + '!');
 				// }, 1000);
 
 				// redirect to homepage
-				history.replace('/');
-
 				setTimeout(() => {
-					window.location.reload(true);
+					history.replace('/');
 				}, 2000);
+
+				// setTimeout(() => {
+				// 	window.location.reload(true);
+				// }, 2000);
 			})
 			.catch((e) => alert(e.message));
 	};
@@ -110,11 +116,16 @@ function RegisterPage() {
 				<h1>CREATE AN ACCOUNT</h1>
 
 				<p>
-					Save time during checkout, view your shopping bag and saved items from any device and access your order
-					history.
+					Save time during checkout, view your shopping bag and saved items from any device and access your
+					order history.
 				</p>
 
-				<ValidatorForm onSubmit={registerUser} ref={formRef} style={{ width: '100%' }} className="registerPage__form">
+				<ValidatorForm
+					onSubmit={registerUser}
+					ref={formRef}
+					style={{ width: '100%' }}
+					className="registerPage__form"
+				>
 					{/* <div className="registerPage__formFirst">
 						<ValidatorForm ref={formRef} style={{ width: '100%' }}> */}
 					<TextValidator

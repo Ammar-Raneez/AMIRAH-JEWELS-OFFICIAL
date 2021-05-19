@@ -3,9 +3,13 @@ import { Link } from 'react-router-dom';
 import { useStateValue } from '../../../StateProvider';
 import './Bill.css';
 import formatCurrency from 'format-currency';
+import { useDispatch, useSelector } from 'react-redux';
+import { selectCurrencySymbol } from '../../../features/currencySymbolSlice';
+import { selectCurrencyRate } from '../../../features/currencyRateSlice';
 
 function Bill({ subTotal, delivery, tax }) {
-	const [{ wishListBasket, cartBasket, user, currencySymbol, currencyRate }, dispatch] = useStateValue();
+	const currencySymbol = useSelector(selectCurrencySymbol);
+	const currencyRate = useSelector(selectCurrencyRate);
 
 	return (
 		<div className="bill">

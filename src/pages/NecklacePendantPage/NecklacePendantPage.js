@@ -12,6 +12,12 @@ import ReactImageMagnify from 'react-image-magnify';
 import { Fade } from 'react-awesome-reveal';
 import SEO from '../../shared/components/SEO/SEO';
 import formatCurrency from 'format-currency';
+import { selectUser } from '../../features/userSlice';
+import { useDispatch, useSelector } from 'react-redux';
+import { selectCurrencySymbol } from '../../features/currencySymbolSlice';
+import { selectCurrencyRate } from '../../features/currencyRateSlice';
+import { addToCart, selectCart } from '../../features/cartSlice';
+import { addToWishlist, removeFromWishlist, selectWishlist } from '../../features/wishlistSlice';
 
 function NecklacePendantPage() {
 	//this state is to track which image is selected to add aa active className
@@ -22,8 +28,15 @@ function NecklacePendantPage() {
 	const [addToWishList, setAddToWishList] = useState(false);
 	const [tempSafetyWishList, setTempSafetyWishList] = useState(false);
 	const [tempSafetyCartBasket, setTempSafetyCartBasket] = useState(false);
-	const [displayPrice, setDisplayPrice] = useState(false);
-	const [{ wishListBasket, cartBasket, user, currencySymbol, currencyRate }, dispatch] = useStateValue();
+
+	const user = useSelector(selectUser);
+	const cartBasket = useSelector(selectCart);
+	const wishListBasket = useSelector(selectWishlist);
+	const currencySymbol = useSelector(selectCurrencySymbol);
+	const currencyRate = useSelector(selectCurrencyRate);
+	const dispatch = useDispatch();
+
+	// const [{ wishListBasket, cartBasket, user, currencySymbol, currencyRate }, dispatch] = useStateValue();
 
 	// created the image path
 	const selectedImage = (imagePath, image) => {
@@ -32,62 +45,6 @@ function NecklacePendantPage() {
 		console.log('/' + imagePath.split('/').reverse()[1] + '/' + imagePath.split('/').reverse()[0]);
 		setDisplayImage('/' + imagePath.split('/').reverse()[1] + '/' + imagePath.split('/').reverse()[0]);
 	};
-
-	// we load all the content from the database (this runs only once)
-	useEffect(() => {
-		// user logged in only we load the details for the particular user
-		db.collection('users').onSnapshot((snapshot) =>
-			snapshot.docs.forEach((doc) => {
-				if (doc.id === user?.email) {
-					// adding the cart items
-					for (const cartItem of doc.data().cart) {
-						// console.log('Adding items from the database into the cart');
-						dispatch({
-							type: 'ADD_TO_BASKET',
-							item: {
-								productCost: cartItem.productCost,
-								productImgURL: cartItem.productImgURL,
-								productName: cartItem.productName,
-								productQuantity: cartItem.productQuantity,
-								preferredMetal: cartItem.preferredMetal,
-								preferredSize: cartItem.preferredSize,
-							},
-						});
-					}
-
-					// adding the wishlist items
-					for (const wishlistItem of doc.data().wishlist) {
-						// console.log('Adding items from the database into the wishlist');
-						// console.log(wishlistItem);
-						dispatch({
-							type: 'ADD_TO_WISHLIST',
-							item: {
-								name: wishlistItem.name,
-								cost: wishlistItem.cost,
-								imgURL: wishlistItem.imgURL,
-								preferredMetal: wishlistItem.preferredMetal,
-								preferredSize: wishlistItem.preferredSize,
-							},
-						});
-					}
-
-					// Dispatch to set the currency rate from the db
-					dispatch({
-						type: 'SET_CURRENCY_RATE',
-						currencyRate: doc.data().currencyRate,
-					});
-
-					// Dispatch to set the currency symbol from the db
-					dispatch({
-						type: 'SET_CURRENCY_SYMBOL',
-						currencySymbol: doc.data().currencySymbol,
-					});
-
-					setDisplayPrice(true);
-				}
-			})
-		);
-	}, []);
 
 	// UPDATING THE WISHLIST BASKET ON (FIRE-STORE)
 	useEffect(() => {
@@ -113,17 +70,16 @@ function NecklacePendantPage() {
 	// ADDING THE ITEM INTO THE REACT CONTEXT API CART
 	const addItemToCart = () => {
 		if (user) {
-			dispatch({
-				type: 'ADD_TO_BASKET',
-				item: {
+			dispatch(
+				addToCart({
 					productName: 'Diamond and Black Onyx Circle Pendant',
 					productCost: 890.0,
 					productImgURL: 'pendantsNecklace/ring4.png',
 					productQuantity: 1,
 					preferredMetal: null,
 					preferredSize: null,
-				},
-			});
+				})
+			);
 			alert('Added item to cart!');
 		} else {
 			alert('Please sign in to add item to wishlist');
@@ -136,16 +92,15 @@ function NecklacePendantPage() {
 	// ADDING THE ITEM TO THE WISHLIST
 	const addItemToWishList = () => {
 		if (user) {
-			dispatch({
-				type: 'ADD_TO_WISHLIST',
-				item: {
+			dispatch(
+				addToWishlist({
 					name: 'Diamond and Black Onyx Circle Pendant',
 					cost: 890.0,
 					imgURL: 'pendantsNecklace/ring4.png',
 					preferredMetal: null,
 					preferredSize: null,
-				},
-			});
+				})
+			);
 			setAddToWishList(true);
 		} else {
 			alert('Please sign in to add item to wishlist');
@@ -153,12 +108,9 @@ function NecklacePendantPage() {
 	};
 
 	// REMOVING THE ITEM FROM THE WISHLIST
-	const removeFromWishList = () => {
+	const handleRemoveItemWishlist = () => {
 		if (user) {
-			dispatch({
-				type: 'REMOVE_FROM_WISHLIST',
-				name: 'Diamond and Black Onyx Circle Pendant',
-			});
+			dispatch(removeFromWishlist({ name: 'Diamond and Black Onyx Circle Pendant' }));
 			setAddToWishList(false);
 		} else {
 			alert('Please sign in to add item to wishlist');
@@ -217,7 +169,7 @@ function NecklacePendantPage() {
 					<div className="necklacePendant__sectionCartMainImageIcon">
 						{user ? (
 							addToWishList ? (
-								<FavoriteIcon onClick={removeFromWishList} />
+								<FavoriteIcon onClick={handleRemoveItemWishlist} />
 							) : (
 								<FavoriteBorderIcon onClick={addItemToWishList} />
 							)
@@ -237,8 +189,10 @@ function NecklacePendantPage() {
 							<p>1</p>
 						</div>
 						<p>
-							{displayPrice &&
-								`Price: ${currencySymbol} ${formatCurrency(Math.round(4500.0 * currencyRate * 100) / 100)}`}
+							{user &&
+								`Price: ${currencySymbol} ${formatCurrency(
+									Math.round(4500.0 * currencyRate * 100) / 100
+								)}`}
 						</p>
 						<br />
 						<br />
@@ -262,11 +216,11 @@ function NecklacePendantPage() {
 				<Fade triggerOnce cascade>
 					<h2>Description & Details</h2>
 					<p className="necklacePendant__descriptionMain">
-						This circle pendant features black onyx, a unique variety of quartz found in nature. This striking pendant
-						is traced with scintillating diamonds, resulting in a modern design with a smooth finish and high polish. As
-						multifaceted as it is iconic, the Tiffany T collection is a tangible reminder of the connections we feel but
-						can't always see. Showcase your personal style by pairing this pendant with other Tiffany designs for a bold
-						look.
+						This circle pendant features black onyx, a unique variety of quartz found in nature. This
+						striking pendant is traced with scintillating diamonds, resulting in a modern design with a
+						smooth finish and high polish. As multifaceted as it is iconic, the Tiffany T collection is a
+						tangible reminder of the connections we feel but can't always see. Showcase your personal style
+						by pairing this pendant with other Tiffany designs for a bold look.
 					</p>
 					<div className="necklacePendant__descriptionOtherDetails">
 						<Collapse in={readMoreDescription}>

@@ -16,15 +16,22 @@ import { KeyboardDatePicker, MuiPickersUtilsProvider } from '@material-ui/picker
 import emailjs from 'emailjs-com';
 import { useEffect, useRef, useState } from 'react';
 import { TextValidator, ValidatorForm } from 'react-material-ui-form-validator';
+import { useDispatch, useSelector } from 'react-redux';
 import { useHistory } from 'react-router-dom';
+import { selectCart } from '../../features/cartSlice';
+import { selectUser } from '../../features/userSlice';
 import { db } from '../../firebase';
 import SEO from '../../shared/components/SEO/SEO';
 import { useStateValue } from '../../StateProvider';
 import './CheckOutPage.css';
 
 function CheckOutPage() {
-	const [{ subTotal, delivery, tax, cartBasket, user }, dispatch] = useStateValue();
+	// const [{ subTotal, delivery, tax, cartBasket, user }, dispatch] = useStateValue();
 	const formRef = useRef('form');
+	const dispatch = useDispatch();
+	const user = useSelector(selectUser);
+	const cartBasket = useSelector(selectCart);
+	const { subTotal, tax, delivery } = 0;    // Fake
 	const history = useHistory();
 	const [dialogOpen, setDialogOpen] = useState(false);
 	const [sucessDialgoOpen, setSucessDialgoOpen] = useState(false);
@@ -49,37 +56,37 @@ function CheckOutPage() {
 	const [orderMessage, setOrderMessage] = useState('');
 
 	// Adding the order details into the database
-	useEffect(() => {
-		if (updateCheckoutCollection) {
-			console.log('adding to database');
-			db.collection('users')
-				.doc(user?.email)
-				.update({
-					checkOutOrders: [
-						...allCheckOutDetailsHistory,
-						{
-							cartBasket: cartBasket,
-							firstName: firstName,
-							lastName: lastName,
-							middleName: middleName,
-							addressLineOne: addressLineOne,
-							addressLineTwo: addressLineTwo,
-							city: city,
-							pinCode: pinCode,
-							telephoneNumber: telephoneNumber,
-							emailAddress: emailAddress,
-							paymentType: paymentType,
-							cardExpMonth: cardExpMonth,
-							cardExpYear: cardExpYear,
-							csc: csc,
-							cardNumber: cardNumber,
-							orderPrice: subTotal + tax + delivery,
-						},
-					],
-				});
-		}
-		setUpdateCheckoutCollection(true);
-	}, [allCheckOutDetailsHistory]);
+	// useEffect(() => {
+	// 	if (updateCheckoutCollection) {
+	// 		console.log('adding to database');
+	// 		db.collection('users')
+	// 			.doc(user?.email)
+	// 			.update({
+	// 				checkOutOrders: [
+	// 					...allCheckOutDetailsHistory,
+	// 					{
+	// 						cartBasket: cartBasket,
+	// 						firstName: firstName,
+	// 						lastName: lastName,
+	// 						middleName: middleName,
+	// 						addressLineOne: addressLineOne,
+	// 						addressLineTwo: addressLineTwo,
+	// 						city: city,
+	// 						pinCode: pinCode,
+	// 						telephoneNumber: telephoneNumber,
+	// 						emailAddress: emailAddress,
+	// 						paymentType: paymentType,
+	// 						cardExpMonth: cardExpMonth,
+	// 						cardExpYear: cardExpYear,
+	// 						csc: csc,
+	// 						cardNumber: cardNumber,
+	// 						orderPrice: subTotal + tax + delivery,
+	// 					},
+	// 				],
+	// 			});
+	// 	}
+	// 	setUpdateCheckoutCollection(true);
+	// }, [allCheckOutDetailsHistory]);
 
 	// WHEN USER CLICKS CHECKOUT BTN, THIS FUNCTION IS FIRED!
 	const proceedCheckout = (e) => {
@@ -270,7 +277,11 @@ function CheckOutPage() {
 
 					<div className="checkout__payment">
 						<FormControl component="fieldset" style={{ width: '93%' }}>
-							<FormLabel component="legend" errorMessages="Please add an Email Address" validators={['required']}>
+							<FormLabel
+								component="legend"
+								errorMessages="Please add an Email Address"
+								validators={['required']}
+							>
 								Payment Type
 							</FormLabel>
 
@@ -281,7 +292,12 @@ function CheckOutPage() {
 								value={paymentType}
 								onChange={(e) => setPaymentType(e.target.value)}
 							>
-								<FormControlLabel value="visa" style={{ color: 'grey' }} control={<Radio />} label="VISA" />
+								<FormControlLabel
+									value="visa"
+									style={{ color: 'grey' }}
+									control={<Radio />}
+									label="VISA"
+								/>
 								<FormControlLabel
 									value="masterCard"
 									style={{ color: 'grey' }}
@@ -327,11 +343,16 @@ function CheckOutPage() {
 						errorMessages="Please add a CSC"
 						validators={['required']}
 					/>
-					<TextValidator style={{ width: '40vw', display: 'none' }} type="text" name="message" value={orderMessage} />
+					<TextValidator
+						style={{ width: '40vw', display: 'none' }}
+						type="text"
+						name="message"
+						value={orderMessage}
+					/>
 					<div className="registerPage__createButton">
 						{user && cartBasket.length > 0 ? (
-								<Button type="submit">CONTINUE CHECKOUT</Button>
-							) : (
+							<Button type="submit">CONTINUE CHECKOUT</Button>
+						) : (
 							<Button disabled type="submit">
 								CONTINUE CHECKOUT
 							</Button>
@@ -368,7 +389,9 @@ function CheckOutPage() {
 			>
 				<DialogTitle id="alert-dialog-title">{'Success'}</DialogTitle>
 				<DialogContent>
-					<DialogContentText id="alert-dialog-description">Check out Successfully Completed!</DialogContentText>
+					<DialogContentText id="alert-dialog-description">
+						Check out Successfully Completed!
+					</DialogContentText>
 				</DialogContent>
 				<DialogActions>
 					<Button onClick={() => setSucessDialgoOpen(!sucessDialgoOpen)} color="primary">

@@ -6,7 +6,7 @@ import { useStateValue } from '../../../StateProvider';
 import './Footer.css';
 import cc from 'currency-codes';
 import coinify from 'coinify';
-import { db } from '../../../firebase';
+import { auth, db } from '../../../firebase';
 import { IconButton } from '@material-ui/core';
 import InstagramIcon from '@material-ui/icons/Instagram';
 import FacebookIcon from '@material-ui/icons/Facebook';
@@ -14,11 +14,15 @@ import EmailIcon from '@material-ui/icons/Email';
 import PinterestIcon from '@material-ui/icons/Pinterest';
 import TwitterIcon from '@material-ui/icons/Twitter';
 import { Link, useHistory } from 'react-router-dom';
+import { useDispatch, useSelector } from 'react-redux';
+import { logout, selectUser } from '../../../features/userSlice';
+import { changeSymbol, selectCurrencySymbol } from '../../../features/currencySymbolSlice';
+import { changeRate, selectCurrencyRate } from '../../../features/currencyRateSlice';
 
 function Footer() {
 	const [date] = useState(new Date().getFullYear());
 	const history = useHistory();
-	const [{ currencySymbol, currencyRate, user }, dispatch] = useStateValue();
+	// const [{ currencySymbol, currencyRate, user }, dispatch] = useStateValue();
 	const BASE_URL = 'https://v6.exchangerate-api.com/v6/0a31808a3c199a87cfda7925/latest/USD';
 	const [exchangeRates, setExchangeRates] = useState({});
 
@@ -27,6 +31,8 @@ function Footer() {
 	const [currency, setCurrency] = useState([]);
 	const [displayCountryList, setDisplayCountryList] = useState(false);
 	const [loadedAllTheCountries, setLoadedAllTheCountries] = useState(false);
+	const user = useSelector(selectUser);
+	const dispatch = useDispatch();
 
 	// This use effect will fetch all the updated/latest currency rates from the API with base (USD)
 	useEffect(() => {
@@ -73,6 +79,11 @@ function Footer() {
 		}
 	}, [loadedAllTheCountries]);
 
+	const userSignOut = () => {
+		auth.signOut();
+		dispatch(logout());
+	};
+
 	// handling the clicked country
 	const handleClickedCountry = (e) => {
 		let countryIndex = notSortedCountries.indexOf(e.target.value);
@@ -80,22 +91,24 @@ function Footer() {
 		let currencySymbol = coinify.symbol(clickedCC);
 
 		// Dispatch to set the new currency rate
-		dispatch({
-			type: 'SET_CURRENCY_RATE',
-			currencyRate: exchangeRates[clickedCC],
-		});
+		// dispatch({
+		// 	type: 'SET_CURRENCY_RATE',
+		// 	currencyRate: exchangeRates[clickedCC],
+		// });
+		dispatch(changeRate(exchangeRates[clickedCC]));
 
 		// Dispatch to set the new currency symbol
-		dispatch({
-			type: 'SET_CURRENCY_SYMBOL',
-			currencySymbol: currencySymbol,
-		});
+		// dispatch({
+		// 	type: 'SET_CURRENCY_SYMBOL',
+		// 	currencySymbol: currencySymbol,
+		// });
+		dispatch(changeSymbol(currencySymbol));
 
 		// Update the currency and the currency symbol from the DB
-		db.collection('users').doc(user?.email).update({
-			currencyRate: exchangeRates[clickedCC],
-			currencySymbol: currencySymbol,
-		});
+		// db.collection('users').doc(user?.email).update({
+		// 	currencyRate: exchangeRates[clickedCC],
+		// 	currencySymbol: currencySymbol,
+		// });
 	};
 
 	return (
@@ -170,10 +183,16 @@ function Footer() {
 					<div className="footer__topRightSignUp">
 						<p>Latest by Amirah Gems</p>
 						<p className="footer__rightSectionDescription">
-							Be the first to know about exciting new designs, special events, store openings and much more.
+							Be the first to know about exciting new designs, special events, store openings and much
+							more.
 						</p>
-
-						<a href="/register">SIGN UP</a>
+						{!user ? (
+							<Link to="/register" target="_top">
+								SIGN UP
+							</Link>
+						) : (
+							<Link onClick={userSignOut}>SIGN OUT</Link>
+						)}
 					</div>
 					<div className="footer__topRightIcons">
 						<IconButton
@@ -188,7 +207,10 @@ function Footer() {
 						>
 							<FacebookIcon />
 						</IconButton>
-						<IconButton className="footer__topRightIconButton" onClick={() => history.replace('/contactUs')}>
+						<IconButton
+							className="footer__topRightIconButton"
+							onClick={() => history.replace('/contactUs')}
+						>
 							<EmailIcon />
 						</IconButton>
 						<IconButton
@@ -217,6 +239,8 @@ function Footer() {
 					)}
 				</div>
 				<p className="footer__bottomText">{`© AmirahGems. ${date}`}</p>
+
+				{/* The below one is just duplicated for styling 🤣 ignore that */}
 				<div className="footer__bottomCountryLeft">
 					{displayCountryList && (
 						<div className="footer__bottomCountrySelectCountry footer__bottomCountrySelectCountryRight">
@@ -239,9 +263,9 @@ function Footer() {
 
 export default Footer;
 
-
 // OLD FOOTER CODE
-{/* <div className="footer__main">
+{
+	/* <div className="footer__main">
 				<div className="footer__top">
 					<div className="footer__leftSection">
 						<div className="footer__leftSectionTop">
@@ -293,4 +317,5 @@ export default Footer;
 					</div>
 				</div>
 				<div className="footer__bottom">{`© AmirahGems. ${date}`}</div>
-			</div> */}
+			</div> */
+}

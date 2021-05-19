@@ -2,9 +2,14 @@ import { Fade, Slide } from 'react-awesome-reveal';
 import { useStateValue } from '../../../../StateProvider';
 import './MakeDreamsTrue.css';
 import formatCurrency from 'format-currency';
+import { useSelector } from 'react-redux';
+import { selectCurrencySymbol } from '../../../../features/currencySymbolSlice';
+import { selectCurrencyRate } from '../../../../features/currencyRateSlice';
 
 function MakeDreamsTrue() {
-	const [{ wishListBasket, cartBasket, user, currencySymbol, currencyRate }, dispatch] = useStateValue();
+	const currencySymbol = useSelector(selectCurrencySymbol);
+	const currencyRate = useSelector(selectCurrencyRate);
+	
 	return (
 		<div className="homePage__makeDreamsTrue">
 			{/* title */}
@@ -23,14 +28,16 @@ function MakeDreamsTrue() {
 				</div>
 
 				<Fade>
-					<img src="homepage-dreams/PINK SAPPHIRE RING 2.png" className="homePage__makeDreamsTrue__topImage" alt="" />
+					<img
+						src="homepage-dreams/PINK SAPPHIRE RING 2.png"
+						className="homePage__makeDreamsTrue__topImage"
+						alt=""
+					/>
 				</Fade>
 				<div className="homePage__makeDreamsTrue__topPrices">
 					<Slide direction="right">
 						<h1>PRICE</h1>
-						<h2>
-							{currencySymbol} {formatCurrency(Math.round(4500 * currencyRate * 100) / 100)}
-						</h2>
+						<h2>{currencySymbol} {formatCurrency(Math.round(4500 * currencyRate * 100) / 100)}</h2>
 					</Slide>
 				</div>
 			</div>
@@ -40,11 +47,12 @@ function MakeDreamsTrue() {
 				<div className="homePage__makeDreamsTrue__middleText">
 					<Slide>
 						<p className="homePage__makeDreamsTrue__middleTextFirst">
-							Sapphire engagement rings have increasingly been the choice for brides looking for more economical,
-							personal, and unique choices.
+							Sapphire engagement rings have increasingly been the choice for brides looking for more
+							economical, personal, and unique choices.
 						</p>
 						<p className="homePage__makeDreamsTrue__middleTextSecond">
-							Choose your own colored gemstone that is the epitome of something unique and personal to you.
+							Choose your own colored gemstone that is the epitome of something unique and personal to
+							you.
 						</p>
 					</Slide>
 				</div>

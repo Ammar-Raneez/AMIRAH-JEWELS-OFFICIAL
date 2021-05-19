@@ -6,6 +6,8 @@ import './LoginPage.css';
 import { ValidatorForm, TextValidator } from 'react-material-ui-form-validator';
 import { Button, Dialog, DialogActions, DialogContent, DialogContentText, DialogTitle } from '@material-ui/core';
 import SEO from '../../../shared/components/SEO/SEO';
+import { useDispatch, useSelector } from 'react-redux';
+import { login, selectUser } from '../../../features/userSlice';
 
 function LoginPage() {
 	const history = useHistory();
@@ -14,8 +16,9 @@ function LoginPage() {
 	const [email, setEmail] = useState('');
 	const [forgetEmail, setForgetEmail] = useState('');
 	const [password, setPassword] = useState('');
-	const [{ user }, dispatch] = useStateValue();
+	// const [{ user }, dispatch] = useStateValue();
 	const [forgetPasswordOpen, setForgetPasswordOpen] = useState(false);
+	const dispatch = useDispatch();
 
 	const signIn = (e) => {
 		e.preventDefault();
@@ -25,18 +28,18 @@ function LoginPage() {
 		}
 
 		// sign in logic
-		auth
-			.signInWithEmailAndPassword(email, password)
+		auth.signInWithEmailAndPassword(email, password)
 			.then((auth) => {
 				// signed in, redirect to the homepage
 				setEmail('');
 				setPassword('');
 
 				// setting the user into the react context API
-				dispatch({
-					type: 'SET_USER',
-					user: auth.user,
-				});
+				// dispatch({
+				// 	type: 'SET_USER',
+				// 	user: auth.user,
+				// });
+				dispatch(login(auth.user));
 				// setTimeout(() => {
 				// 	alert('Welcome ' + auth.user.displayName + '!');
 				// }, 1000);
@@ -54,8 +57,7 @@ function LoginPage() {
 	const forgetPassword = () => {
 		setForgetPasswordOpen(!forgetPasswordOpen);
 
-		auth
-			.sendPasswordResetEmail(forgetEmail)
+		auth.sendPasswordResetEmail(forgetEmail)
 			.then((res) => {
 				alert('Please check your email');
 				setForgetEmail('');
@@ -101,8 +103,8 @@ function LoginPage() {
 				<div className="loginPage__rightSideTop">
 					<p className="loginPage__title">CREATE AN ACCOUNT</p>
 					<p className="loginPage__subTitle">
-						Save time during checkout, view your shopping bag and saved items from any device and access your order
-						history.
+						Save time during checkout, view your shopping bag and saved items from any device and access
+						your order history.
 					</p>
 				</div>
 				<div className="loginPage__rightSideBottom">
@@ -120,8 +122,8 @@ function LoginPage() {
 				<DialogTitle id="alert-dialog-title">{'Invalid Credentials'}</DialogTitle>
 				<DialogContent>
 					<DialogContentText id="alert-dialog-description">
-						The details provided are incorrect, it is either because there is no such Account or the email/password is
-						incorrect.
+						The details provided are incorrect, it is either because there is no such Account or the
+						email/password is incorrect.
 					</DialogContentText>
 				</DialogContent>
 				<DialogActions>
