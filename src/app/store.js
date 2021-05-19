@@ -4,6 +4,7 @@ import currencySymbolReducer from '../features/currencySymbolSlice';
 import currencyRateReducer from '../features/currencyRateSlice';
 import cartReducer from '../features/cartSlice';
 import wishlistReducer from '../features/wishlistSlice';
+import costReducer from '../features/costSlice';
 import { loadFromLocalStorage, saveToLocalStorage } from './redux-persist';
 
 const persistedState = loadFromLocalStorage();
@@ -15,6 +16,7 @@ export const store = configureStore({
 		rate: currencyRateReducer,
 		cart: cartReducer,
 		wishlist: wishlistReducer,
+		cost: costReducer,
 	},
 	preloadedState: persistedState,
 });
