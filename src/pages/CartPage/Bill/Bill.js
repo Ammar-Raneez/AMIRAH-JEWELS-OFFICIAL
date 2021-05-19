@@ -1,6 +1,5 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { useStateValue } from '../../../StateProvider';
 import './Bill.css';
 import formatCurrency from 'format-currency';
 import { useDispatch, useSelector } from 'react-redux';

@@ -26,6 +26,7 @@ function NecklacePendantPage() {
 
 	const [displayImage, setDisplayImage] = useState('pendantsNecklace/ring2.png');
 	const [addToWishList, setAddToWishList] = useState(false);
+	const wishList = useSelector(selectWishlist);
 	const [tempSafetyWishList, setTempSafetyWishList] = useState(false);
 	const [tempSafetyCartBasket, setTempSafetyCartBasket] = useState(false);
 
@@ -55,7 +56,7 @@ function NecklacePendantPage() {
 			});
 		}
 		setTempSafetyWishList(true);
-	}, [addToWishList]);
+	}, [wishList]);
 
 	// UPDATING THE CART BASKET ON (FIRE-STORE)
 	useEffect(() => {

@@ -8,64 +8,48 @@ import SEO from '../../shared/components/SEO/SEO';
 import { selectUser } from '../../features/userSlice';
 import { useDispatch, useSelector } from 'react-redux';
 import { selectCart } from '../../features/cartSlice';
+import { calculateSubTotal, selectDelivery, selectSubTotal, selectTax } from '../../features/costSlice';
+import { selectWishlist } from '../../features/wishlistSlice';
 
 function CartPage() {
 	// const [{ cartBasket, user, subTotal, delivery, tax }, dispatch] = useStateValue();
 	const user = useSelector(selectUser);
-	const dispatch = useDispatch();
 	const cartBasket = useSelector(selectCart);
-	const { subTotal, delivery, tax } = 0;
+	const subTotal = useSelector(selectSubTotal);
+	const delivery = useSelector(selectDelivery);
+	const tax = useSelector(selectTax);
 	const [loading, setLoading] = useState(true);
+	const [updateWishList, setUpdateWishList] = useState(false);
+	const wishListBasket = useSelector(selectWishlist);
+	const [updateCartList, setUpdateCartList] = useState(false);
 
-	// WE LOAD ALL THE CONTENT FROM THE DATABASE (this runs only once)
+	// STOP LOADING
 	useEffect(() => {
-		// user logged in only we load the details for the particular user
-		// setLoading(true)
-		db.collection('users').onSnapshot((snapshot) =>
-			snapshot.docs.forEach((doc) => {
-				if (doc.id === user?.email) {
-					// adding the cart items
-					for (const cartItem of doc.data().cart) {
-						console.log('Adding items from the database into the cart');
-						dispatch({
-							type: 'ADD_TO_BASKET',
-							item: {
-								productCost: cartItem.productCost,
-								productImgURL: cartItem.productImgURL,
-								productName: cartItem.productName,
-								productQuantity: cartItem.productQuantity,
-								preferredMetal: cartItem.preferredMetal,
-								preferredSize: cartItem.preferredSize,
-							},
-						});
-					}
-
-					// adding the wishlist items
-					for (const wishlistItem of doc.data().wishlist) {
-						console.log('Adding items from the database into the wishlist');
-						console.log(wishlistItem);
-						dispatch({
-							type: 'ADD_TO_WISHLIST',
-							item: {
-								name: wishlistItem.name,
-								cost: wishlistItem.cost,
-								imgURL: wishlistItem.imgURL,
-								preferredMetal: wishlistItem.preferredMetal,
-								preferredSize: wishlistItem.preferredSize,
-							},
-						});
-					}
-					// updating the sub total
-					dispatch({
-						type: 'SET_SUBTOTAL',
-					});
-
-					// stop displaying the spinner
-					setLoading(false);
-				}
-			})
-		);
+		setTimeout(() => {
+			setLoading(false);
+		}, 2000);
 	}, []);
+
+	// UPDATE THE WISHLIST DATABASE CONTENT (FIRE-STORE)
+	useEffect(() => {
+		if (updateWishList === true) {
+			db.collection('users').doc(user?.email).update({
+				wishlist: wishListBasket,
+			});
+		}
+		setUpdateWishList(true);
+	}, [wishListBasket]);
+
+	//  UPDATE THE CART DATABASE CONTENT (FIRE-STORE)
+	useEffect(() => {
+		// REMOVING THE ITEM FROM THE DATABASE
+		if (updateCartList === true) {
+			db.collection('users').doc(user?.email).update({
+				cart: cartBasket,
+			});
+		}
+		setUpdateCartList(true);
+	}, [cartBasket]);
 
 	return user ? (
 		<div className="cartPage">
