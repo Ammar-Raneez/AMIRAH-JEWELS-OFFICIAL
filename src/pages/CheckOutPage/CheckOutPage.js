@@ -19,6 +19,7 @@ import { TextValidator, ValidatorForm } from 'react-material-ui-form-validator';
 import { useDispatch, useSelector } from 'react-redux';
 import { useHistory } from 'react-router-dom';
 import { selectCart } from '../../features/cartSlice';
+import { selectDelivery, selectSubTotal, selectTax } from '../../features/costSlice';
 import { selectUser } from '../../features/userSlice';
 import { db } from '../../firebase';
 import SEO from '../../shared/components/SEO/SEO';
@@ -31,8 +32,9 @@ function CheckOutPage() {
 	const dispatch = useDispatch();
 	const user = useSelector(selectUser);
 	const cartBasket = useSelector(selectCart);
-	const { subTotal, tax, delivery } = 0;    // Fake
-	const history = useHistory();
+	const subTotal = useSelector(selectSubTotal);
+	const delivery = useSelector(selectDelivery);
+	const tax = useSelector(selectTax);
 	const [dialogOpen, setDialogOpen] = useState(false);
 	const [sucessDialgoOpen, setSucessDialgoOpen] = useState(false);
 
@@ -56,37 +58,37 @@ function CheckOutPage() {
 	const [orderMessage, setOrderMessage] = useState('');
 
 	// Adding the order details into the database
-	// useEffect(() => {
-	// 	if (updateCheckoutCollection) {
-	// 		console.log('adding to database');
-	// 		db.collection('users')
-	// 			.doc(user?.email)
-	// 			.update({
-	// 				checkOutOrders: [
-	// 					...allCheckOutDetailsHistory,
-	// 					{
-	// 						cartBasket: cartBasket,
-	// 						firstName: firstName,
-	// 						lastName: lastName,
-	// 						middleName: middleName,
-	// 						addressLineOne: addressLineOne,
-	// 						addressLineTwo: addressLineTwo,
-	// 						city: city,
-	// 						pinCode: pinCode,
-	// 						telephoneNumber: telephoneNumber,
-	// 						emailAddress: emailAddress,
-	// 						paymentType: paymentType,
-	// 						cardExpMonth: cardExpMonth,
-	// 						cardExpYear: cardExpYear,
-	// 						csc: csc,
-	// 						cardNumber: cardNumber,
-	// 						orderPrice: subTotal + tax + delivery,
-	// 					},
-	// 				],
-	// 			});
-	// 	}
-	// 	setUpdateCheckoutCollection(true);
-	// }, [allCheckOutDetailsHistory]);
+	useEffect(() => {
+		if (updateCheckoutCollection) {
+			console.log('adding to database');
+			db.collection('users')
+				.doc(user?.email)
+				.update({
+					checkOutOrders: [
+						...allCheckOutDetailsHistory,
+						{
+							cartBasket: cartBasket,
+							firstName: firstName,
+							lastName: lastName,
+							middleName: middleName,
+							addressLineOne: addressLineOne,
+							addressLineTwo: addressLineTwo,
+							city: city,
+							pinCode: pinCode,
+							telephoneNumber: telephoneNumber,
+							emailAddress: emailAddress,
+							paymentType: paymentType,
+							cardExpMonth: cardExpMonth,
+							cardExpYear: cardExpYear,
+							csc: csc,
+							cardNumber: cardNumber,
+							orderPrice: subTotal + tax + delivery,
+						},
+					],
+				});
+		}
+		setUpdateCheckoutCollection(true);
+	}, [allCheckOutDetailsHistory]);
 
 	// WHEN USER CLICKS CHECKOUT BTN, THIS FUNCTION IS FIRED!
 	const proceedCheckout = (e) => {

@@ -10,22 +10,30 @@ import formatCurrency from 'format-currency';
 import ReactImageMagnify from 'react-image-magnify';
 import { Fade } from 'react-awesome-reveal';
 import SEO from '../../../shared/components/SEO/SEO';
+import { useDispatch, useSelector } from 'react-redux';
+import { selectUser } from '../../../features/userSlice';
+import { selectWishlist } from '../../../features/wishlistSlice';
+import { selectCart } from '../../../features/cartSlice';
+import { selectCurrencySymbol } from '../../../features/currencySymbolSlice';
+import { selectCurrencyRate } from '../../../features/currencyRateSlice';
 
 function TealGemDetail() {
 	//this state is to track which image is selected to add a active className
 	const [currentImage, setCurrentImage] = useState('teal sapphire');
-
 	const [displayImage, setDisplayImage] = useState('gems/teal-sapphire.png');
 	const [addToWishList, setAddToWishList] = useState(false);
 	const [tempSafetyWishList, setTempSafetyWishList] = useState(false);
 	const [tempSafetyCartBasket, setTempSafetyCartBasket] = useState(false);
-	const [{ wishListBasket, cartBasket, user, currencySymbol, currencyRate }, dispatch] = useStateValue();
+	const user = useSelector(selectUser);
+	const dispatch = useDispatch();
+	const wishListBasket = useSelector(selectWishlist);
+	const cartBasket = useSelector(selectCart);
+	const currencySymbol = useSelector(selectCurrencySymbol);
+	const currencyRate = useSelector(selectCurrencyRate);
 
 	// created the image path
 	const selectedImage = (imagePath, image) => {
 		setCurrentImage(image);
-
-		console.log('/' + imagePath.split('/').reverse()[1] + '/' + imagePath.split('/').reverse()[0]);
 		setDisplayImage('/' + imagePath.split('/').reverse()[1] + '/' + imagePath.split('/').reverse()[0]);
 	};
 

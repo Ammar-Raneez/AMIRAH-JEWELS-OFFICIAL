@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import './Bill.css';
 import formatCurrency from 'format-currency';
-import { useDispatch, useSelector } from 'react-redux';
+import { useSelector } from 'react-redux';
 import { selectCurrencySymbol } from '../../../features/currencySymbolSlice';
 import { selectCurrencyRate } from '../../../features/currencyRateSlice';
 
@@ -37,7 +37,8 @@ function Bill({ subTotal, delivery, tax }) {
 				<span>
 					<p>Estimated Total</p>
 					<p>
-						{currencySymbol} {formatCurrency(Math.round((subTotal + delivery + tax) * currencyRate * 100) / 100)}
+						{currencySymbol}{' '}
+						{formatCurrency(Math.round((subTotal + delivery + tax) * currencyRate * 100) / 100)}
 					</p>
 				</span>
 			</div>

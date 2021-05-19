@@ -2,13 +2,12 @@ import React, { useEffect, useState } from 'react';
 import './CartPage.css';
 import CartItem from './CartItem/CartItem';
 import Bill from './Bill/Bill';
-import { useStateValue } from '../../StateProvider';
 import { db } from '../../firebase';
 import SEO from '../../shared/components/SEO/SEO';
 import { selectUser } from '../../features/userSlice';
-import { useDispatch, useSelector } from 'react-redux';
+import { useSelector } from 'react-redux';
 import { selectCart } from '../../features/cartSlice';
-import { calculateSubTotal, selectDelivery, selectSubTotal, selectTax } from '../../features/costSlice';
+import { selectDelivery, selectSubTotal, selectTax } from '../../features/costSlice';
 import { selectWishlist } from '../../features/wishlistSlice';
 
 function CartPage() {
@@ -23,15 +22,14 @@ function CartPage() {
 	const wishListBasket = useSelector(selectWishlist);
 	const [updateCartList, setUpdateCartList] = useState(false);
 
-	// STOP LOADING
 	useEffect(() => {
 		setTimeout(() => {
 			setLoading(false);
 		}, 2000);
 	}, []);
 
-	// UPDATE THE WISHLIST DATABASE CONTENT (FIRE-STORE)
 	useEffect(() => {
+		// Update the database records when the items are updated in the cart (Inc, Dec Qty)
 		if (updateWishList === true) {
 			db.collection('users').doc(user?.email).update({
 				wishlist: wishListBasket,
@@ -40,9 +38,8 @@ function CartPage() {
 		setUpdateWishList(true);
 	}, [wishListBasket]);
 
-	//  UPDATE THE CART DATABASE CONTENT (FIRE-STORE)
 	useEffect(() => {
-		// REMOVING THE ITEM FROM THE DATABASE
+		// Update the database records when the items are updated in the cart (Add to WishLt)
 		if (updateCartList === true) {
 			db.collection('users').doc(user?.email).update({
 				cart: cartBasket,

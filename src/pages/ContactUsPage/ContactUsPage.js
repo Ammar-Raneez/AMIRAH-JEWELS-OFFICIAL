@@ -7,20 +7,16 @@ import emailjs from 'emailjs-com';
 import { Button, Dialog, DialogContent, DialogContentText, DialogTitle } from '@material-ui/core';
 import { useRef, useState } from 'react';
 import { TextValidator, ValidatorForm } from 'react-material-ui-form-validator';
-import { useStateValue } from '../../StateProvider';
 import { KeyboardDatePicker, MuiPickersUtilsProvider } from '@material-ui/pickers';
 import DateFnsUtils from '@date-io/date-fns';
 import { setDate } from 'date-fns/esm';
 import SEO from '../../shared/components/SEO/SEO';
 
 function ContactUsPage() {
-	const [{ user }, dispatch] = useStateValue();
 	const formRef = useRef('form');
-
 	const [emailDialogOpen, setEmailDialogOpen] = useState(false);
 	const [email, setEmail] = useState();
 	const [message, setMessage] = useState('');
-
 	const [scheduleACallDialogOpen, setScheduleACallDialogOpen] = useState(false);
 	const [scheduleDate, setScheduleDate] = useState();
 
