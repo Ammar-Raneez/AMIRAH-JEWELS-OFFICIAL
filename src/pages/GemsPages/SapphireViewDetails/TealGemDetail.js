@@ -12,8 +12,8 @@ import { Fade } from 'react-awesome-reveal';
 import SEO from '../../../shared/components/SEO/SEO';
 import { useDispatch, useSelector } from 'react-redux';
 import { selectUser } from '../../../features/userSlice';
-import { selectWishlist } from '../../../features/wishlistSlice';
-import { selectCart } from '../../../features/cartSlice';
+import { addToWishlist, removeFromWishlist, selectWishlist } from '../../../features/wishlistSlice';
+import { addToCart, selectCart } from '../../../features/cartSlice';
 import { selectCurrencySymbol } from '../../../features/currencySymbolSlice';
 import { selectCurrencyRate } from '../../../features/currencyRateSlice';
 
@@ -31,86 +31,15 @@ function TealGemDetail() {
 	const currencySymbol = useSelector(selectCurrencySymbol);
 	const currencyRate = useSelector(selectCurrencyRate);
 
-	// created the image path
-	const selectedImage = (imagePath, image) => {
-		setCurrentImage(image);
-		setDisplayImage('/' + imagePath.split('/').reverse()[1] + '/' + imagePath.split('/').reverse()[0]);
-	};
-
-	// ADDING THE ITEM INTO THE REACT CONTEXT API CART
-	const addItemToCart = () => {
-		if (user) {
-			dispatch({
-				type: 'ADD_TO_BASKET',
-				item: {
-					productName: 'Teal Sapphire',
-					productCost: 1100.0,
-					productImgURL: 'gems/teal-sapphire.png',
-					productQuantity: 1,
-					preferredMetal: null,
-					preferredSize: null,
-				},
-			});
-			alert('Added item to cart!');
-		} else {
-			alert('Please sign in to add item to wishlist');
-		}
-	};
-
-	// we load all the content from the database (this runs only once)
 	useEffect(() => {
-		// user logged in only we load the details for the particular user
-		db.collection('users').onSnapshot((snapshot) =>
-			snapshot.docs.forEach((doc) => {
-				if (doc.id === user?.email) {
-					// adding the cart items
-					for (const cartItem of doc.data().cart) {
-						console.log('Adding items from the database into the cart');
-						dispatch({
-							type: 'ADD_TO_BASKET',
-							item: {
-								productCost: cartItem.productCost,
-								productImgURL: cartItem.productImgURL,
-								productName: cartItem.productName,
-								productQuantity: cartItem.productQuantity,
-								preferredMetal: cartItem.preferredMetal,
-								preferredSize: cartItem.preferredSize,
-							},
-						});
-					}
-
-					// adding the wishlist items
-					for (const wishlistItem of doc.data().wishlist) {
-						console.log('Adding items from the database into the wishlist');
-						console.log(wishlistItem);
-						dispatch({
-							type: 'ADD_TO_WISHLIST',
-							item: {
-								name: wishlistItem.name,
-								cost: wishlistItem.cost,
-								imgURL: wishlistItem.imgURL,
-								preferredMetal: wishlistItem.preferredMetal,
-								preferredSize: wishlistItem.preferredSize,
-							},
-						});
-					}
-				}
-			})
-		);
-	}, []);
-
-	// UPDATING THE WISHLIST BASKET ON (FIRE-STORE)
-	useEffect(() => {
-		// console.log(wishListBasket, "<============");
 		if (tempSafetyWishList === true) {
 			db.collection('users').doc(user?.email).update({
 				wishlist: wishListBasket,
 			});
 		}
 		setTempSafetyWishList(true);
-	}, [addToWishList]);
+	}, [wishListBasket]);
 
-	// UPDATING THE CART BASKET ON (FIRE-STORE)
 	useEffect(() => {
 		if (tempSafetyCartBasket === true) {
 			db.collection('users').doc(user?.email).update({
@@ -120,33 +49,51 @@ function TealGemDetail() {
 		setTempSafetyCartBasket(true);
 	}, [cartBasket]);
 
-	// ADDING THE ITEM TO THE WISHLIST
-	const addItemToWishList = () => {
+	// created the image path
+	const selectedImage = (imagePath, image) => {
+		setCurrentImage(image);
+		setDisplayImage('/' + imagePath.split('/').reverse()[1] + '/' + imagePath.split('/').reverse()[0]);
+	};
+
+	const addItemToCart = () => {
 		if (user) {
-			setAddToWishList(true);
-			dispatch({
-				type: 'ADD_TO_WISHLIST',
-				item: {
-					name: 'Teal Sapphire',
-					cost: 1100,
-					imgURL: 'gems/teal-sapphire.png',
+			dispatch(
+				addToCart({
+					productName: 'Teal Sapphire',
+					productCost: 1100.0,
+					productImgURL: 'gems/teal-sapphire.png',
+					productQuantity: 1,
 					preferredMetal: null,
 					preferredSize: null,
-				},
-			});
+				})
+			);
+			alert('Added item to cart!');
 		} else {
 			alert('Please sign in to add item to wishlist');
 		}
 	};
 
-	// REMOVING THE ITEM FROM THE WISHLIST
+	const addItemToWishList = () => {
+		if (user) {
+			setAddToWishList(true);
+			dispatch(
+				addToWishlist({
+					name: 'Teal Sapphire',
+					cost: 1100,
+					imgURL: 'gems/teal-sapphire.png',
+					preferredMetal: null,
+					preferredSize: null,
+				})
+			);
+		} else {
+			alert('Please sign in to add item to wishlist');
+		}
+	};
+
 	const removeFromWishList = () => {
 		if (user) {
 			setAddToWishList(false);
-			dispatch({
-				type: 'REMOVE_FROM_WISHLIST',
-				name: 'Teal Sapphire',
-			});
+			dispatch(removeFromWishlist({ name: 'Teal Sapphire' }));
 		} else {
 			alert('Please sign in to add item to wishlist');
 		}
