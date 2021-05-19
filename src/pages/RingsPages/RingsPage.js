@@ -12,95 +12,40 @@ import ReactImageMagnify from 'react-image-magnify';
 import { Fade } from 'react-awesome-reveal';
 import SEO from '../../shared/components/SEO/SEO';
 import formatCurrency from 'format-currency';
+import { useDispatch, useSelector } from 'react-redux';
+import { selectUser } from '../../features/userSlice';
+import { addToWishlist, removeFromWishlist, selectWishlist } from '../../features/wishlistSlice';
+import { addToCart, selectCart } from '../../features/cartSlice';
+import { selectCurrencySymbol } from '../../features/currencySymbolSlice';
+import { selectCurrencyRate } from '../../features/currencyRateSlice';
 
 function RingsPage() {
 	//this state is to track which image is selected to add a active className
 	const [currentImage, setCurrentImage] = useState('ring2');
 	const [readMoreDescription, setReadMoreDescription] = useState(false);
-
+	const user = useSelector(selectUser);
+	const dispatch = useDispatch();
+	const wishListBasket = useSelector(selectWishlist);
+	const cartBasket = useSelector(selectCart);
+	const currencySymbol = useSelector(selectCurrencySymbol);
+	const currencyRate = useSelector(selectCurrencyRate);
 	const [displayImage, setDisplayImage] = useState('pendantsNecklace/ring2.png');
 	const [addToWishList, setAddToWishList] = useState(false);
 	const [tempSafetyWishList, setTempSafetyWishList] = useState(false);
 	const [tempSafetyCartBasket, setTempSafetyCartBasket] = useState(false);
-	const [{ wishListBasket, cartBasket, user, currencySymbol, currencyRate }, dispatch] = useStateValue();
 	const [currentMetalType, setCurrentMetalType] = useState('18k Rose Gold');
 	const [currentMetalSize, setCurrentMetalSize] = useState('US 4');
 	const [displayPrice, setDisplayPrice] = useState(false);
 
-	// created the image path
-	const selectedImage = (imagePath, image) => {
-		setCurrentImage(image);
-
-		console.log('/' + imagePath.split('/').reverse()[1] + '/' + imagePath.split('/').reverse()[0]);
-		setDisplayImage('/' + imagePath.split('/').reverse()[1] + '/' + imagePath.split('/').reverse()[0]);
-	};
-
-	// we load all the content from the database (this runs only once)
 	useEffect(() => {
-		// user logged in only we load the details for the particular user
-		db.collection('users').onSnapshot((snapshot) =>
-			snapshot.docs.forEach((doc) => {
-				if (doc.id === user?.email) {
-					// adding the cart items
-					for (const cartItem of doc.data().cart) {
-						// console.log('Adding items from the database into the cart');
-						dispatch({
-							type: 'ADD_TO_BASKET',
-							item: {
-								productCost: cartItem.productCost,
-								productImgURL: cartItem.productImgURL,
-								productName: cartItem.productName,
-								productQuantity: cartItem.productQuantity,
-								preferredMetal: currentMetalType.preferredMetal,
-								preferredSize: currentMetalSize.preferredSize,
-							},
-						});
-					}
-
-					// adding the wishlist items
-					for (const wishlistItem of doc.data().wishlist) {
-						dispatch({
-							type: 'ADD_TO_WISHLIST',
-							item: {
-								name: wishlistItem.name,
-								cost: wishlistItem.cost,
-								imgURL: wishlistItem.imgURL,
-								preferredMetal: wishlistItem.preferredMetal,
-								preferredSize: wishlistItem.preferredSize,
-							},
-						});
-					}
-					// Dispatch to set the currency rate from the db
-					dispatch({
-						type: 'SET_CURRENCY_RATE',
-						currencyRate: doc.data().currencyRate,
-					});
-
-					// Dispatch to set the currency symbol from the db
-					dispatch({
-						type: 'SET_CURRENCY_SYMBOL',
-						currencySymbol: doc.data().currencySymbol,
-					});
-
-					setDisplayPrice(true);
-				}
-			})
-		);
-	}, []);
-
-	// UPDATING THE WISHLIST BASKET ON (FIRE-STORE)
-	useEffect(() => {
-		// console.log(wishListBasket, "<============");
-		console.log(currencyRate);
 		if (tempSafetyWishList === true) {
 			db.collection('users').doc(user?.email).update({
 				wishlist: wishListBasket,
 			});
 		}
 		setTempSafetyWishList(true);
-	}, [addToWishList]);
+	}, [wishListBasket]);
 
-	// UPDATING THE CART BASKET ON (FIRE-STORE)
 	useEffect(() => {
 		if (tempSafetyCartBasket === true) {
 			db.collection('users').doc(user?.email).update({
@@ -110,55 +55,52 @@ function RingsPage() {
 		setTempSafetyCartBasket(true);
 	}, [cartBasket]);
 
-	// ADDING THE ITEM INTO THE REACT CONTEXT API CART
+	// created the image path
+	const selectedImage = (imagePath, image) => {
+		setCurrentImage(image);
+
+		console.log('/' + imagePath.split('/').reverse()[1] + '/' + imagePath.split('/').reverse()[0]);
+		setDisplayImage('/' + imagePath.split('/').reverse()[1] + '/' + imagePath.split('/').reverse()[0]);
+	};
+
 	const addItemToCart = () => {
 		if (user) {
-			dispatch({
-				type: 'ADD_TO_BASKET',
-				item: {
+			dispatch(
+				addToCart({
 					productName: 'Some Stupid Ring',
 					productCost: 890.0,
 					productImgURL: 'pendantsNecklace/ring4.png',
 					productQuantity: 1,
 					preferredMetal: currentMetalType,
 					preferredSize: currentMetalSize,
-				},
-			});
+				})
+			);
 			alert('Added item to cart!');
 		} else {
 			alert('Please sign in to add item to wishlist');
 		}
-
-		// SINCE THE CART LIST IS NOW UPDATED, ADDING THE UPDATED CART TO FIRE-STORE
-		// USING THE USE-EFFECT
 	};
 
-	// ADDING THE ITEM TO THE WISHLIST
 	const addItemToWishList = () => {
 		if (user) {
-			dispatch({
-				type: 'ADD_TO_WISHLIST',
-				item: {
+			dispatch(
+				addToWishlist({
 					name: 'Some Stupid Ring',
 					cost: 890.0,
 					imgURL: 'pendantsNecklace/ring4.png',
 					preferredMetal: currentMetalType,
 					preferredSize: currentMetalSize,
-				},
-			});
+				})
+			);
 			setAddToWishList(true);
 		} else {
 			alert('Please sign in to add item to wishlist');
 		}
 	};
 
-	// REMOVING THE ITEM FROM THE WISHLIST
 	const removeFromWishList = () => {
 		if (user) {
-			dispatch({
-				type: 'REMOVE_FROM_WISHLIST',
-				name: 'Some Stupid Ring',
-			});
+			dispatch(removeFromWishlist({ name: 'Some Stupid Ring' }));
 			setAddToWishList(false);
 		} else {
 			alert('Please sign in to add item to wishlist');
@@ -277,7 +219,9 @@ function RingsPage() {
 						</div>
 						<p>
 							{displayPrice &&
-								`Price: ${currencySymbol} ${formatCurrency(Math.round(890.0 * currencyRate * 100) / 100)}`}
+								`Price: ${currencySymbol} ${formatCurrency(
+									Math.round(890.0 * currencyRate * 100) / 100
+								)}`}
 						</p>
 						<br />
 						<br />
@@ -301,11 +245,11 @@ function RingsPage() {
 				<Fade triggerOnce cascade>
 					<h2>Description & Details</h2>
 					<p className="ringsPage__descriptionMain">
-						This circle pendant features black onyx, a unique variety of quartz found in nature. This striking pendant
-						is traced with scintillating diamonds, resulting in a modern design with a smooth finish and high polish. As
-						multifaceted as it is iconic, the Tiffany T collection is a tangible reminder of the connections we feel but
-						can't always see. Showcase your personal style by pairing this pendant with other Tiffany designs for a bold
-						look.
+						This circle pendant features black onyx, a unique variety of quartz found in nature. This
+						striking pendant is traced with scintillating diamonds, resulting in a modern design with a
+						smooth finish and high polish. As multifaceted as it is iconic, the Tiffany T collection is a
+						tangible reminder of the connections we feel but can't always see. Showcase your personal style
+						by pairing this pendant with other Tiffany designs for a bold look.
 					</p>
 					<div className="ringsPage__descriptionOtherDetails">
 						<Collapse in={readMoreDescription}>

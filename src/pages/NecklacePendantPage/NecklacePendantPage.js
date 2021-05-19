@@ -23,13 +23,11 @@ function NecklacePendantPage() {
 	//this state is to track which image is selected to add aa active className
 	const [currentImage, setCurrentImage] = useState('ring2');
 	const [readMoreDescription, setReadMoreDescription] = useState(false);
-
 	const [displayImage, setDisplayImage] = useState('pendantsNecklace/ring2.png');
 	const [addToWishList, setAddToWishList] = useState(false);
 	const wishList = useSelector(selectWishlist);
 	const [tempSafetyWishList, setTempSafetyWishList] = useState(false);
 	const [tempSafetyCartBasket, setTempSafetyCartBasket] = useState(false);
-
 	const user = useSelector(selectUser);
 	const cartBasket = useSelector(selectCart);
 	const wishListBasket = useSelector(selectWishlist);
@@ -37,17 +35,6 @@ function NecklacePendantPage() {
 	const currencyRate = useSelector(selectCurrencyRate);
 	const dispatch = useDispatch();
 
-	// const [{ wishListBasket, cartBasket, user, currencySymbol, currencyRate }, dispatch] = useStateValue();
-
-	// created the image path
-	const selectedImage = (imagePath, image) => {
-		setCurrentImage(image);
-
-		console.log('/' + imagePath.split('/').reverse()[1] + '/' + imagePath.split('/').reverse()[0]);
-		setDisplayImage('/' + imagePath.split('/').reverse()[1] + '/' + imagePath.split('/').reverse()[0]);
-	};
-
-	// UPDATING THE WISHLIST BASKET ON (FIRE-STORE)
 	useEffect(() => {
 		// console.log(wishListBasket, "<============");
 		if (tempSafetyWishList === true) {
@@ -58,7 +45,6 @@ function NecklacePendantPage() {
 		setTempSafetyWishList(true);
 	}, [wishList]);
 
-	// UPDATING THE CART BASKET ON (FIRE-STORE)
 	useEffect(() => {
 		if (tempSafetyCartBasket === true) {
 			db.collection('users').doc(user?.email).update({
@@ -68,7 +54,14 @@ function NecklacePendantPage() {
 		setTempSafetyCartBasket(true);
 	}, [cartBasket]);
 
-	// ADDING THE ITEM INTO THE REACT CONTEXT API CART
+	// created the image path
+	const selectedImage = (imagePath, image) => {
+		setCurrentImage(image);
+
+		console.log('/' + imagePath.split('/').reverse()[1] + '/' + imagePath.split('/').reverse()[0]);
+		setDisplayImage('/' + imagePath.split('/').reverse()[1] + '/' + imagePath.split('/').reverse()[0]);
+	};
+
 	const addItemToCart = () => {
 		if (user) {
 			dispatch(
@@ -85,12 +78,8 @@ function NecklacePendantPage() {
 		} else {
 			alert('Please sign in to add item to wishlist');
 		}
-
-		// SINCE THE CART LIST IS NOW UPDATED, ADDING THE UPDATED CART TO FIRE-STORE
-		// USING THE USE-EFFECT
 	};
 
-	// ADDING THE ITEM TO THE WISHLIST
 	const addItemToWishList = () => {
 		if (user) {
 			dispatch(
@@ -108,7 +97,6 @@ function NecklacePendantPage() {
 		}
 	};
 
-	// REMOVING THE ITEM FROM THE WISHLIST
 	const handleRemoveItemWishlist = () => {
 		if (user) {
 			dispatch(removeFromWishlist({ name: 'Diamond and Black Onyx Circle Pendant' }));

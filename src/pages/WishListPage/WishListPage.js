@@ -5,59 +5,43 @@ import { useEffect, useState } from 'react';
 import { db } from '../../firebase';
 import { Fade } from 'react-awesome-reveal';
 import SEO from '../../shared/components/SEO/SEO';
+import { useSelector } from 'react-redux';
+import { selectCart } from '../../features/cartSlice';
+import { selectWishlist } from '../../features/wishlistSlice';
+import { selectUser } from '../../features/userSlice';
+import { useDispatch } from 'react-redux';
 
 function WishListPage() {
-	const [{ wishListBasket, cartBasket, user }, dispatch] = useStateValue();
+	const [tempSafetyCartBasket, setTempSafetyCartBasket] = useState(false);
+	const [tempSafetyWishListBasket, setTempSafetyWishListBasket] = useState(false);
 	const [loading, setLoading] = useState(true);
+	const wishListBasket = useSelector(selectWishlist);
+	const cartBasket = useSelector(selectCart);
+	const user = useSelector(selectUser);
 
-	// WE LOAD ALL THE CONTENT FROM THE DATABASE (this runs only once)
 	useEffect(() => {
-		// user logged in only we load the details for the particular user
-		// setLoading(true)
-
-		db.collection('users').onSnapshot((snapshot) =>
-			snapshot.docs.forEach((doc) => {
-				console.log('fetching all the data from the database');
-				if (doc.id === user?.email) {
-					console.log('OUTPUTTT');
-					// adding the cart items
-					for (const cartItem of doc.data().cart) {
-						console.log('Adding items from the database into the cart');
-						dispatch({
-							type: 'ADD_TO_BASKET',
-							item: {
-								productCost: cartItem.productCost,
-								productImgURL: cartItem.productImgURL,
-								productName: cartItem.productName,
-								productQuantity: cartItem.productQuantity,
-								preferredMetal: cartItem.preferredMetal,
-								preferredSize: cartItem.preferredSize,
-							},
-						});
-					}
-
-					// adding the wishlist items
-					for (const wishlistItem of doc.data().wishlist) {
-						console.log('Adding items from the database into the wishlist');
-						console.log(wishlistItem);
-						dispatch({
-							type: 'ADD_TO_WISHLIST',
-							item: {
-								name: wishlistItem.name,
-								cost: wishlistItem.cost,
-								imgURL: wishlistItem.imgURL,
-								preferredMetal: wishlistItem.preferredMetal,
-								preferredSize: wishlistItem.preferredSize,
-							},
-						});
-					}
-
-					// stop displaying the spinner
-					setLoading(false);
-				}
-			})
-		);
+		setTimeout(() => {
+			setLoading(false);
+		}, 1500);
 	}, []);
+
+	useEffect(() => {
+		if (tempSafetyWishListBasket === true) {
+			db.collection('users').doc(user?.email).update({
+				wishlist: wishListBasket,
+			});
+		}
+		setTempSafetyWishListBasket(true);
+	}, [wishListBasket]);
+
+	useEffect(() => {
+		if (tempSafetyCartBasket === true) {
+			db.collection('users').doc(user?.email).update({
+				cart: cartBasket,
+			});
+		}
+		setTempSafetyCartBasket(true);
+	}, [cartBasket]);
 
 	return user ? (
 		<div className="wishListPage" style={wishListBasket.length === 1 ? { height: '85vh' } : {}}>

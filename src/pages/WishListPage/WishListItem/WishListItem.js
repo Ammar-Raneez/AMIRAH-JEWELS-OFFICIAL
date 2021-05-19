@@ -1,72 +1,51 @@
 import './WishListItem.css';
 import CloseIcon from '@material-ui/icons/Close';
-import { useStateValue } from '../../../StateProvider';
 import { db } from '../../../firebase';
 import { useEffect, useState } from 'react';
 import formatCurrency from 'format-currency';
+import { useDispatch, useSelector } from 'react-redux';
+import { selectUser } from '../../../features/userSlice';
+import { removeFromWishlist, selectWishlist } from '../../../features/wishlistSlice';
+import { addToCart, selectCart } from '../../../features/cartSlice';
+import { selectCurrencySymbol } from '../../../features/currencySymbolSlice';
+import { selectCurrencyRate } from '../../../features/currencyRateSlice';
 
 function WishListItem({ img, title, price, preferredSize, preferredMetal }) {
-	const [tempSafetyCartBasket, setTempSafetyCartBasket] = useState(false);
-	const [{ wishListBasket, cartBasket, user, currencySymbol, currencyRate }, dispatch] = useStateValue();
+	const user = useSelector(selectUser);
+	const dispatch = useDispatch();
+	const currencySymbol = useSelector(selectCurrencySymbol);
+	const currencyRate = useSelector(selectCurrencyRate);
 
-	// USE EFFECT TO UPDATE THE CONTENT FROM THE CLOUD STORE
-	useEffect(() => {
-		// REMOVING THE ITEM FROM THE DATABASE
-		console.log('UPDATED WISHLIST FROM THE USE EFFECT', wishListBasket);
-		db.collection('users').doc(user?.email).update({
-			wishlist: wishListBasket,
-		});
-
-		console.log(wishListBasket);
-	}, [wishListBasket]);
-
-	// UPDATING THE CART BASKET ON (FIRE-STORE)
-	useEffect(() => {
-		if (tempSafetyCartBasket === true) {
-			db.collection('users').doc(user?.email).update({
-				cart: cartBasket,
-			});
-		}
-		setTempSafetyCartBasket(true);
-	}, [cartBasket]);
-
-	// ADDING THE ITEM INTO THE REDUCER LIST
 	const addItemToCart = () => {
 		if (user) {
-			dispatch({
-				type: 'ADD_TO_BASKET',
-				item: {
+			dispatch(
+				addToCart({
 					productName: title,
 					productCost: price,
 					productImgURL: img,
 					productQuantity: 1,
 					preferredSize: preferredSize,
 					preferredMetal: preferredMetal,
-				},
-			});
-			//If item is added into cart, remove it from wishlist
+				})
+			);
+
+			// remove item from wishlist once added to cart
 			removeItem();
 		} else {
 			alert('Please sign in to add item to wishlist');
 		}
 	};
 
-	// FUNCTION TO REMOVE ITEM FROM THE ReactCONT API LIST AND UPDATE LAST ITEM REMOVE FROM
-	// CLOUD STORE
 	const removeItem = () => {
 		if (user) {
-			// REMOVING THE ITEM FROM THE REACT CONTEXT API VARIABLES
-			dispatch({
-				type: 'REMOVE_FROM_WISHLIST',
-				name: title,
-			});
+			dispatch(removeFromWishlist({ name: title }));
 
 			// LAST ITEM REMOVE PROBLEM ALTERNATE SOLUTION
-			if (wishListBasket.length === 1) {
-				db.collection('users').doc(user?.email).update({
-					wishlist: [],
-				});
-			}
+			// if (wishListBasket.length === 1) {
+			// 	db.collection('users').doc(user?.email).update({
+			// 		wishlist: [],
+			// 	});
+			// }
 		} else {
 			alert('Please sign in to add item to wishlist');
 		}
