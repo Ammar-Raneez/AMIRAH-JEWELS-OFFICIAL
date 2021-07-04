@@ -17,6 +17,8 @@ import { addToWishlist, removeFromWishlist, selectWishlist } from '../../feature
 import { addToCart, selectCart } from '../../features/cartSlice';
 import { selectCurrencySymbol } from '../../features/currencySymbolSlice';
 import { selectCurrencyRate } from '../../features/currencyRateSlice';
+import "react-responsive-carousel/lib/styles/carousel.min.css";
+import { Carousel } from 'react-responsive-carousel';
 
 function RingsPage({ title, description, specification, stoneInfo, diamondInfo, images, imageNames }) {
 	const user = useSelector(selectUser);
@@ -36,6 +38,17 @@ function RingsPage({ title, description, specification, stoneInfo, diamondInfo, 
 	const [displayPrice, setDisplayPrice] = useState(false);
 
 	const dispatch = useDispatch();
+
+	const [width, setWidth] = useState(0);
+
+    useEffect(() => {
+        setWidth(window.innerWidth);
+        const listener = window.addEventListener('resize', () => {
+            setWidth(window.innerWidth);
+        });
+
+        return window.removeEventListener('resize', listener);
+    }, [width])
 
 	useEffect(() => {
 		if (tempSafetyWishList === true) {
@@ -137,26 +150,41 @@ function RingsPage({ title, description, specification, stoneInfo, diamondInfo, 
 						className={currentImage === imageNames[2] ? 'active' : ''}
 					/>
 				</div>
-				<div className="ringsPage__sectionCartMainImage">
-					<ReactImageMagnify
-						hoverDelayInMs={0.1}
-						hoverOffDelayInMs={0.1}
-						enlargedImagePosition="over"
-						{...{
-							smallImage: {
-								alt: '',
-								width: 550,
-								height: 550,
-								src: displayImage,
-							},
-							largeImage: {
-								src: displayImage,
-								width: 900,
-								height: 900,
-							},
-						}}
-					/>
-				</div>
+				{
+					width > 600 ? 
+						<div className="ringsPage__sectionCartMainImage">
+							<ReactImageMagnify
+								hoverDelayInMs={0.1}
+								hoverOffDelayInMs={0.1}
+								enlargedImagePosition="over"
+								{...{
+									smallImage: {
+										alt: '',
+										width: 550,
+										height: 550,
+										src: displayImage,
+									},
+									largeImage: {
+										src: displayImage,
+										width: 900,
+										height: 900,
+									},
+								}}
+							/>
+						</div>
+					:
+						<Carousel showArrows={true}>
+							<div>
+								<img height={250} width="90%" src={images[0]} />
+							</div>
+							<div>
+								<img height={250} width="90%" src={images[1]} />
+							</div>
+							<div>
+								<img height={250} width="90%" src={images[2]} />
+							</div>
+						</Carousel>
+				}
 
 				<div className="ringsPage__sectionCartCartDetails">
 					<Fade direction="left" triggerOnce>

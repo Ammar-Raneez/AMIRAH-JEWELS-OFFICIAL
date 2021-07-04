@@ -160,7 +160,7 @@ function App() {
 						<GemDetailPage />
 						<Footer />
 					</Route>
-					<Route path="/rings">
+					<Route path="/ring">
 						<TopBar />
 						<Header />
 						<RingsPage
