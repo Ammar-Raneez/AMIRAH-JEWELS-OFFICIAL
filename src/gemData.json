@@ -1,0 +1,57 @@
+{
+	"aquamarine": {
+		"title": "Aquamarine",
+		"titleText": "Named after seawater, aquamarine’s fresh watery hue is a cool plunge into a refreshing pool",
+		"titleImage": "/amirah-details-latest/KNOW YOUR GEMSTONES/AQUAMARINE.jpg",
+		"aboutName": "AQUAMARINE",
+		"aboutDescriptionArray": [
+			"Aquamarine’s name comes from the Latin for seawater and it was said to calm waves and keep sailors safe at sea. March’s birthstone was also thought to enhance the happiness of marriages.",
+			"The best gems combine high clarity with limpid transparency and blue to slightly greenish blue hues. Like many beryls, aquamarine forms large crystals suitable for sizable fashioned gems and carvings"
+		],
+		"aboutImage": "/amirah-details-latest/KNOW YOUR GEMSTONES/AQUAMARINE.jpg",
+		"birthStoneDetails": "Aquamarine is the birthstone for March and the gem of the 19th wedding anniversary.",
+		"treatmentsDetails": "There are a number of processes used to alter the color, apparent clarity, or improve the durability of gems.",
+		"syntheticDetails": "Some gemstones have synthetic counterparts that have essentially the same chemical, physical, and optical properties, but are grown by man in a laboratory",
+		"imitationsDetails": "Any gem can be imitated—sometimes by manmade materials or by natural materials chosen by man to impersonate a particular gem.",
+		"moreDetails": [
+			{
+				"title": "110 KILOS",
+				"description": "The largest gem-quality aquamarine crystal mined to date is 19 inches long"
+			},
+			{
+				"title": "BERYL",
+				"description": "Like emerald, aquamarine is a color variety of the mineral beryl"
+			},
+			{
+				"title": "15,000 FEET",
+				"description": "Aquamarine is mined at high elevations in Pakistan’s Karakoram Mountains"
+			}
+		],
+		"factsInformation": {
+			"mineral": "Beryl",
+			"chemistry": "Be3Al2Si6O18",
+			"color": "Greenish blue, light in tone",
+			"refractiveIndex": "1.577 to 1.583",
+			"specificGravity": "2.72",
+			"mohsHardness": "7.5 to 8.0",
+			"birefringence": "0.005 to 0.009"
+		},
+		"whyWeLoveGemStone": {
+			"img": "/amirah-details-latest/KNOW YOUR GEMSTONES/AQUAMARINE.jpg",
+			"data": [
+				{
+					"title": "BEAUTIFUL CRYSTALS",
+					"description": "quamarine grows in beautiful six-sided prismatic crystals that on rare occasions can be more than a foot long."
+				},
+				{
+					"title": "TRANSPARENCY",
+					"description": "Faceted aquamarine is often exceptionally transparent with vitreous luster, so it really sparkles"
+				},
+				{
+					"title": "DICHROIC",
+					"description": "Using a dichroscope, you can see aquamarine is near colorless and stronger blue in different crystal directions."
+				}
+			]
+		}
+	}
+}

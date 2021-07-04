@@ -8,28 +8,30 @@ import { Synthetics } from './components/Synthetics';
 import { Treatments } from './components/Treatments';
 import { WhyWeLoveGemStone } from './components/WhyWeLoveGemStone';
 
-const GemDetailPage = () => {
+const GemDetailPage = ({ data }) => {
 	return (
 		<Container>
 			<section>
-				<GemTitle />
+				<GemTitle title={data.title} titleText={data.titleText} titleImage={data.titleImage} />
 			</section>
 			<section>
 				<main>
-					{/* flex 0.6 */}
-					<AboutGem />
-					<BirthStonesAnniversary />
-					<Treatments />
-					<Synthetics />
-					<Imitations />
+					<AboutGem
+						aboutName={data.aboutName}
+						aboutDescriptionArray={data.aboutDescriptionArray}
+						aboutImage={data.aboutImage}
+					/>
+					<BirthStonesAnniversary birthStoneDetails={data.birthStoneDetails} />
+					<Treatments treatmentsDetails={data.treatmentsDetails} />
+					<Synthetics syntheticDetails={data.syntheticDetails} />
+					<Imitations imitationsDetails={data.imitationsDetails} />
 				</main>
 				<main>
-					<GemStatistics />
+					<GemStatistics moreDetails={data.moreDetails} factsInformation={data.factsInformation} />
 				</main>
 			</section>
 			<section>
-				{/* flex 0.4 */}
-				<WhyWeLoveGemStone />
+				<WhyWeLoveGemStone whyWeLoveGemStone={data.whyWeLoveGemStone}/>
 			</section>
 		</Container>
 	);
@@ -39,18 +41,31 @@ export default GemDetailPage;
 
 const Container = styled.div`
 	font-family: Quattrocento-Regular;
+	background-color: #f4ebe2;
 
 	> section {
 		:nth-child(2) {
-			border: 1px red solid;
+			/* border: 1px red solid; */
 			display: flex;
 			> main {
+				margin: 30px 20px;
 				:first-child {
-					flex: 0.6;
+					flex: 0.65;
 				}
 				:last-child {
-					flex: 0.4;
+					flex: 0.35;
 				}
+			}
+		}
+		:last-child {
+			padding: 30px;
+		}
+	}
+
+	@media screen and (max-width: 600px) {
+		> section {
+			:nth-child(2) {
+				flex-direction: column;
 			}
 		}
 	}

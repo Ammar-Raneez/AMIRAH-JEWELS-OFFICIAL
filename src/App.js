@@ -34,11 +34,13 @@ import { changeRate } from './features/currencyRateSlice';
 import { changeSymbol } from './features/currencySymbolSlice';
 import GemDetailPage from './pages/GemsPages/update/GemDetailPage';
 import { ringData } from './pages/RingsPages/ring-data';
+import gemData from "./gemData.json"
 
 function App() {
 	// const [{ wishListBasket, cartBasket, user }, dispatch] = useStateValue();
 	const dispatch = useDispatch();
 
+	/* COMMENTED INORDERED TO PREVENT WASTAGE FOR NOW ----------->
 	useEffect(() => {
 		// auth persistance
 		auth.onAuthStateChanged((userAuth) => {
@@ -93,6 +95,7 @@ function App() {
 			}
 		});
 	}, []);
+	*/
 
 	return (
 		<Router>
@@ -158,7 +161,7 @@ function App() {
 					<Route path="/gems/aquamarine">
 						<TopBar />
 						<Header />
-						<GemDetailPage />
+						<GemDetailPage data={gemData?.aquamarine}/>
 						<Footer />
 					</Route>
 
