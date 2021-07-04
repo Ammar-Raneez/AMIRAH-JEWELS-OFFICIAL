@@ -5,7 +5,7 @@ import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { db } from '../../firebase';
 import './RingsPage.css';
-import Product from './Product/Product';
+import OtherProducts from './other-products/OtherProducts';
 import ChevronRightIcon from '@material-ui/icons/ChevronRight';
 import ReactImageMagnify from 'react-image-magnify';
 import { Fade } from 'react-awesome-reveal';
@@ -19,6 +19,7 @@ import { selectCurrencySymbol } from '../../features/currencySymbolSlice';
 import { selectCurrencyRate } from '../../features/currencyRateSlice';
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Carousel } from 'react-responsive-carousel';
+import { ringData } from './ring-data';
 
 function RingsPage({ title, description, specification, stoneInfo, diamondInfo, images, imageNames }) {
 	const user = useSelector(selectUser);
@@ -306,13 +307,8 @@ function RingsPage({ title, description, specification, stoneInfo, diamondInfo, 
 				<div className="ringsPage__otherProductsProducts">
 					<Fade delay={500} cascade>
 						<div className="ringsPage__otherProductsRow">
-							<Product img="pendantsNecklace/pink_necklace.png" name="Product Name" viewMoreUrl="/" />
-							<Product img="pendantsNecklace/pink_necklace.png" name="Product Name" viewMoreUrl="/" />
-							<Product img="pendantsNecklace/pink_necklace.png" name="Product Name" viewMoreUrl="/" />
-							<Product img="pendantsNecklace/pink_necklace.png" name="Product Name" viewMoreUrl="/" />
+							{ringData.map(ring => <OtherProducts img={ring.images[0]} name={ring.title} viewMoreUrl="/" />)}
 						</div>
-						{/* <div className="ringsPage__otherProductsRow">
-					</div> */}
 					</Fade>
 				</div>
 			</div>

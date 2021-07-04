@@ -161,7 +161,10 @@ function App() {
 						<GemDetailPage />
 						<Footer />
 					</Route>
-					<Route path="/ring">
+
+
+					{/* all rings */}
+					<Route path="/rings/SOR020">
 						<TopBar />
 						<Header />
 						<RingsPage
@@ -175,6 +178,9 @@ function App() {
 						/>
 						<Footer />
 					</Route>
+
+
+					{/* everything else - tbc */}
 					<Route path="/earrings">
 						<h2>earrings component</h2>
 					</Route>

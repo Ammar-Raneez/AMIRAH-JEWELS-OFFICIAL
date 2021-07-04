@@ -2,10 +2,10 @@ export const ringData = [
     {
         title: "Classic Square Pink Sapphire & Diamond Three Stone Ring",
         description: "This classic three stone ring features a fascinating square pink sapphire in between glittering round diamonds. The blossomy pink sapphire and the white diamonds are prong set on the 18K white gold ring for maximum brilliance. This pink sapphire ring with two diamonds exudes refined elegance",
-        specification: ["Product Code: SORGO20", "Metal: 18K White Gold"],
+        specification: ["Product Code: SORG020", "Metal: 18K White Gold"],
         stoneInfo: ["Gemstone: Square Pink Sapphire", "Carat Weight: 0.30 carat", "Setting Type: Prong"],
         diamondInfo: ["Number of Round Diamonds: 2", "Carat Weight: 0.07 carat", "Quality Grade: VS", "Setting Type: Prong"],
-        images: ["rings/SORG020.jpg", "rings/SORG020F - Copy.jpg", "rings/SORG020F.jpg"],
+        images: ["../rings/SORG020.jpg", "../rings/SORG020F - Copy.jpg", "../rings/SORG020F.jpg"],
         imageNames: ["SORG020", "SORG020F - Copy", "SORG020F"]
     },
 
@@ -15,7 +15,7 @@ export const ringData = [
         specification: ["Product Code: SORG014", "Metal: 18K White Gold"],
         stoneInfo: ["Gemstone: Blue Heart Sapphire", "Carat Weight: 0.32 carat", "Setting Type: Bezel"],
         diamondInfo: ["Number of Round Diamonds: 20", "Carat Weight: 0.10 carat", "Quality Grade: VS", "Setting Type: Pavé"],
-        images: ["rings/SORG014.jpg", "rings/SORG014F - Copy.jpg", "rings/SORG014F.jpg"],
+        images: ["../rings/SORG014.jpg", "../rings/SORG014F - Copy.jpg", "../rings/SORG014F.jpg"],
         imageNames: ["SORG014", "SORG014F - Copy", "SORG014F"]
     },
 
@@ -25,7 +25,7 @@ export const ringData = [
         specification: ["Product Code: SORG011", "Metal: 18K White Gold"],
         stoneInfo: ["Gemstone: Dark Blue Sapphire", "Carat Weight: 1.00 carat", "Setting Type: Prong"],
         diamondInfo: ["Number of Round Diamonds: 12", "Carat Weight: 0.07 carat", "Quality Grade: VS", "Setting Type: Pavé"],
-        images: ["rings/SORG011.jpg", "rings/SORG011F - Copy.jpg", "rings/SORG011F.jpg"],
+        images: ["../rings/SORG011.jpg", "../rings/SORG011F - Copy.jpg", "../rings/SORG011F.jpg"],
         imageNames: ["SORG011", "SORG011F - Copy", "SORG011F"]
     },
 
@@ -35,7 +35,7 @@ export const ringData = [
         specification: ["Product Code: SORG010", "Metal: 18K White Gold"],
         stoneInfo: ["Gemstone: Round Blue Sapphire", "Carat Weight: 1.00 carat", "Setting Type: Prong"],
         diamondInfo: ["", "", "", ""],
-        images: ["rings/SORG010.jpg", "rings/SORG010F - Copy.jpg", "rings/SORG010F.jpg"],
+        images: ["../rings/SORG010.jpg", "../rings/SORG010F - Copy.jpg", "../rings/SORG010F.jpg"],
         imageNames: ["SORG010", "SORG010F - Copy", "SORG010F"]
     },
 
@@ -45,7 +45,7 @@ export const ringData = [
         specification: ["Product Code: SORG006", "Metal: 18K White Gold"],
         stoneInfo: ["Gemstone: Pear Pink Sapphire", "Carat Weight: 1.00 carat", "Setting Type: Prong"],
         diamondInfo: ["", "", "", ""],
-        images: ["rings/SORG006.jpg", "rings/SORG006F - Copy.jpg", "rings/SORG006F.jpg"],
+        images: ["../rings/SORG006.jpg", "../rings/SORG006F - Copy.jpg", "../rings/SORG006F.jpg"],
         imageNames: ["SORG006", "SORG006F - Copy", "SORG006F"]
     },
 
@@ -55,7 +55,7 @@ export const ringData = [
         specification: ["Product Code: SORG005", "Metal: 18K White Gold"],
         stoneInfo: ["Gemstone: Emerald Cut Blue Sapphire", "Carat Weight: 1.00 carat", "Setting Type: Prong"],
         diamondInfo: ["Number of Round Diamonds: 06", "Carat Weight: 0.08 carat", "Quality Grade: VS", "Setting Type: Pavé"],
-        images: ["rings/SORG005.jpg", "rings/SORG005F - Copy.jpg", "rings/SORG005F.jpg"],
+        images: ["../rings/SORG005.jpg", "../rings/SORG005F - Copy.jpg", "../rings/SORG005F.jpg"],
         imageNames: ["SORG005", "SORG005F - Copy", "SORG005F"]
     },
 
@@ -65,7 +65,7 @@ export const ringData = [
         specification: ["Product Code: SORG002", "Metal: 18K White Gold"],
         stoneInfo: ["Gemstone: Round Blue Sapphire", "Carat Weight: 1.00 carat", "Setting Type: Bar"],
         diamondInfo: ["", "", "", ""],
-        images: ["rings/SORG002.jpg", "rings/SORG002F - Copy.jpg", "rings/SORG002F.jpg"],
+        images: ["../rings/SORG002.jpg", "../rings/SORG002F - Copy.jpg", "../rings/SORG002F.jpg"],
         imageNames: ["SORG002", "SORG002F - Copy", "SORG002F"]
     },
 
@@ -75,7 +75,7 @@ export const ringData = [
         specification: ["Product Code: SORG025", "Metal: 18K White Gold"],
         stoneInfo: ["Gemstone: Pink Heart Sapphire", "Carat Weight: 1.53 carat", "Setting Type: Prong"],
         diamondInfo: ["", "", "", ""],
-        images: ["rings/SORG025.jpg", "rings/SORG025 - Copy.jpg", "rings/SORG025 - Copy (2).jpg"],
+        images: ["../rings/SORG025.jpg", "../rings/SORG025 - Copy.jpg", "../rings/SORG025 - Copy (2).jpg"],
         imageNames: ["SORG025", "SORG025 - Copy", "SORG025 - Copy (2)"]
     },
 
@@ -85,7 +85,7 @@ export const ringData = [
         specification: ["Product Code: SORG026", "Metal: 18K White Gold"],
         stoneInfo: ["Gemstone: Cushion Yellow Sapphire", "Carat Weight: 1.42 carat", "Setting Type: Prong"],
         diamondInfo: ["", "", "", ""],
-        images: ["rings/SORG026.jpg", "rings/SORG026 - Copy.jpg", "rings/SORG026 - Copy (2).jpg"],
+        images: ["../rings/SORG026.jpg", "../rings/SORG026 - Copy.jpg", "../rings/SORG026 - Copy (2).jpg"],
         imageNames: ["SORG026", "SORG026 - Copy", "SORG026 - Copy (2)"]
     },
 
@@ -95,7 +95,7 @@ export const ringData = [
         specification: ["Product Code: SORG024", "Metal: 18K White Gold"],
         stoneInfo: ["Gemstone: Emerald Cut Blue Sapphire", "Carat Weight: 1.00 carat", "Setting Type: Prong"],
         diamondInfo: ["", "", "", ""],
-        images: ["rings/SORG024.jpg", "rings/SORG024 - Copy.jpg", "rings/SORG024 - Copy (2).jpg"],
+        images: ["../rings/SORG024.jpg", "../rings/SORG024 - Copy.jpg", "../rings/SORG024 - Copy (2).jpg"],
         imageNames: ["SORG024", "SORG024 - Copy", "SORG024 - Copy (2)"]
     },
 
@@ -105,7 +105,7 @@ export const ringData = [
         specification: ["Product Code: SORG023", "Metal: 18K White Gold"],
         stoneInfo: ["Gemstone: Pear Blue Sapphire", "Carat Weight: 0.82 carat", "Setting Type: Prong"],
         diamondInfo: ["", "", "", ""],
-        images: ["rings/SORG023.jpg", "rings/SORG023 - Copy.jpg", "rings/SORG023 - Copy (2).jpg"],
+        images: ["../rings/SORG023.jpg", "../rings/SORG023 - Copy.jpg", "../rings/SORG023 - Copy (2).jpg"],
         imageNames: ["SORG023", "SORG023 - Copy", "SORG023 - Copy (2)"]
     },
 
@@ -115,7 +115,7 @@ export const ringData = [
         specification: ["Product Code: SORG022", "Metal: 18K White Gold"],
         stoneInfo: ["Gemstone: Oval Light Purple Sapphire", "Carat Weight: 0.72 carat", "Setting Type: Prong"],
         diamondInfo: ["", "", "", ""],
-        images: ["rings/SORG022.jpg", "rings/SORG022 - Copy.jpg", "rings/SORG022 - Copy (2).jpg"],
+        images: ["../rings/SORG022.jpg", "../rings/SORG022 - Copy.jpg", "../rings/SORG022 - Copy (2).jpg"],
         imageNames: ["SORG022", "SORG022 - Copy", "SORG022 - Copy (2)"]
     },
 
@@ -125,7 +125,7 @@ export const ringData = [
         specification: ["Product Code: SORG021", "Metal: 18K White Gold"],
         stoneInfo: ["Gemstone: Pear Vivid Yellow Sapphire", "Carat Weight: 1.67 carat", "Setting Type: Prong"],
         diamondInfo: ["Quality Grade: VS", "", "", ""],
-        images: ["rings/SORG021.jpg", "rings/SORG021 - Copy.jpg", "rings/SORG021 - Copy (2).jpg"],
+        images: ["../rings/SORG021.jpg", "../rings/SORG021 - Copy.jpg", "../rings/SORG021 - Copy (2).jpg"],
         imageNames: ["SORG021", "SORG021 - Copy", "SORG021 - Copy (2)"]
     },
 ]

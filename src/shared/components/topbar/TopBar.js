@@ -64,7 +64,7 @@ function TopBar() {
 					</a>
 					<TreeItem nodeId="1" label="Jewellery">
 						<TreeItem nodeId="2" label="Shop By Category">
-							<a className="topbar__treeItem" href="/ring">
+							<a className="topbar__treeItem" href="/rings/SOR020">
 								<TreeItem nodeId="3" label="-  Rings" />
 							</a>
 							<a className="topbar__treeItem" href="/earrings">

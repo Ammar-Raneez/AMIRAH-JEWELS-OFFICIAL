@@ -1,9 +1,9 @@
 import { Paper } from '@material-ui/core';
-import './Product.css'
+import './OtherProducts.css'
 
-function Product({ img, name, viewMoreUrl }) {
+function OtherProducts({ img, name, viewMoreUrl }) {
     const extraClassName = name.indexOf(" ") > 0 ? "smallerFont" : "";
-    
+
     return (
         <Paper className={"product " + extraClassName}>
             <a href={viewMoreUrl}>
@@ -14,4 +14,4 @@ function Product({ img, name, viewMoreUrl }) {
     )
 }
 
-export default Product
+export default OtherProducts

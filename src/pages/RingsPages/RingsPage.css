@@ -175,10 +175,11 @@
 .ringsPage__otherProductsRow {
 	display: flex;
 	align-items: center;
-	justify-content: space-evenly;
-	flex-wrap: wrap;
+	overflow-x: scroll;
 }
-
+.ringsPage__otherProductsRow::-webkit-scrollbar {
+	display: none;
+}
 
 .ringsPage__descriptionOtherDetailsReadMore {
 	margin-top: 8px;
