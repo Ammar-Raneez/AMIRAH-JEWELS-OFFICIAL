@@ -32,6 +32,7 @@ import { addToCart } from './features/cartSlice';
 import { addToWishlist } from './features/wishlistSlice';
 import { changeRate } from './features/currencyRateSlice';
 import { changeSymbol } from './features/currencySymbolSlice';
+import GemDetailPage from './pages/GemsPages/update/GemDetailPage';
 
 function App() {
 	// const [{ wishListBasket, cartBasket, user }, dispatch] = useStateValue();
@@ -153,7 +154,12 @@ function App() {
 						<TealGemDetail />
 						<Footer />
 					</Route>
-
+					<Route path="/gems/aquamarine">
+						<TopBar />
+						<Header />
+						<GemDetailPage />
+						<Footer />
+					</Route>
 					<Route path="/rings">
 						<TopBar />
 						<Header />
