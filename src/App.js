@@ -33,7 +33,7 @@ import { addToWishlist } from './features/wishlistSlice';
 import { changeRate } from './features/currencyRateSlice';
 import { changeSymbol } from './features/currencySymbolSlice';
 import GemDetailPage from './pages/GemsPages/update/GemDetailPage';
-import gemData from "./gemData.json"
+import gemData from './gemData.json';
 
 function App() {
 	// const [{ wishListBasket, cartBasket, user }, dispatch] = useStateValue();
@@ -127,24 +127,6 @@ function App() {
 						<GemStonesMain />
 						<Footer />
 					</Route>
-					<Route path="/rose+gold">
-						<h2> Rose gold component</h2>
-					</Route>
-					<Route path="/white+gold">
-						<h2> white gold component</h2>
-					</Route>
-					<Route path="/diamonds">
-						<h2> Diamonds component</h2>
-					</Route>
-					<Route path="/pearl+sapphire">
-						<h2>Pearl sapphires component</h2>
-					</Route>
-					<Route path="/pink+sapphire">
-						<h2> pink sapphires component</h2>
-					</Route>
-					<Route path="/yellow+gold">
-						<h2> yellow gold component</h2>
-					</Route>
 					<Route path="/purple+sapphire">
 						<TopBar />
 						<Header />
@@ -157,12 +139,14 @@ function App() {
 						<TealGemDetail />
 						<Footer />
 					</Route>
-					<Route path="/gems/aquamarine">
-						<TopBar />
-						<Header />
-						<GemDetailPage data={gemData?.aquamarine}/>
-						<Footer />
-					</Route>
+					{gemData.map((gem) => (
+						<Route path={`/gems/${gem.id}`}>
+							<TopBar />
+							<Header />
+							<GemDetailPage data={gem} />
+							<Footer />
+						</Route>
+					))}
 					<Route path="/rings">
 						<TopBar />
 						<Header />
