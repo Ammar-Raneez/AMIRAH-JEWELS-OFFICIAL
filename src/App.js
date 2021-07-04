@@ -33,12 +33,9 @@ import { addToWishlist } from './features/wishlistSlice';
 import { changeRate } from './features/currencyRateSlice';
 import { changeSymbol } from './features/currencySymbolSlice';
 import GemDetailPage from './pages/GemsPages/update/GemDetailPage';
-<<<<<<< HEAD
-import gemData from './gemData.json';
-=======
+
 import { ringData } from './pages/RingsPages/ringData';
 import gemData from "./gemData.json"
->>>>>>> d798075896b15ad2278f8a9f8d6745e370f3b67f
 
 function App() {
 	// const [{ wishListBasket, cartBasket, user }, dispatch] = useStateValue();
@@ -153,7 +150,7 @@ function App() {
 							<Footer />
 						</Route>
 					))}
-					
+
 					<Route path="/rings">
 						<TopBar />
 						<Header />
@@ -181,7 +178,6 @@ function App() {
 
 
 					{/* everything else - tbc */}
->>>>>>> d798075896b15ad2278f8a9f8d6745e370f3b67f
 					<Route path="/earrings">
 						<h2>earrings component</h2>
 					</Route>
