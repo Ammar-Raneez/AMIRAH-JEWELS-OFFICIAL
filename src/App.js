@@ -33,7 +33,12 @@ import { addToWishlist } from './features/wishlistSlice';
 import { changeRate } from './features/currencyRateSlice';
 import { changeSymbol } from './features/currencySymbolSlice';
 import GemDetailPage from './pages/GemsPages/update/GemDetailPage';
+<<<<<<< HEAD
 import gemData from './gemData.json';
+=======
+import { ringData } from './pages/RingsPages/ringData';
+import gemData from "./gemData.json"
+>>>>>>> d798075896b15ad2278f8a9f8d6745e370f3b67f
 
 function App() {
 	// const [{ wishListBasket, cartBasket, user }, dispatch] = useStateValue();
@@ -139,6 +144,7 @@ function App() {
 						<TealGemDetail />
 						<Footer />
 					</Route>
+
 					{gemData.map((gem) => (
 						<Route path={`/gems/${gem.id}`}>
 							<TopBar />
@@ -147,12 +153,35 @@ function App() {
 							<Footer />
 						</Route>
 					))}
+					
 					<Route path="/rings">
 						<TopBar />
 						<Header />
 						<RingsPage />
 						<Footer />
 					</Route>
+
+					{/* all rings */}
+					{ringData.map(ring => (
+						<Route path={`/rings/` + ring.id}>
+							<TopBar isSpecificProduct={true} />
+							<Header />
+							<RingsPage
+								title={ring.title}
+								description={ring.description}
+								specification={ring.specification}
+								stoneInfo={ring.stoneInfo}
+								diamondInfo={ring.diamondInfo}
+								images={ring.images}
+								imageNames={ring.imageNames}
+							/>
+							<Footer />
+						</Route>
+					))}
+
+
+					{/* everything else - tbc */}
+>>>>>>> d798075896b15ad2278f8a9f8d6745e370f3b67f
 					<Route path="/earrings">
 						<h2>earrings component</h2>
 					</Route>

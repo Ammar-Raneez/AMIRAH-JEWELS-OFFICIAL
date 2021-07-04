@@ -24,7 +24,7 @@ function Category() {
                             <p>Earrings</p>
                         </div>
                     </a>
-                    <a href="/rings">
+                    <a href="/rings/SORG020">
                         <div className="homePage__categoryEach">
                             <img alt="ring-category" src="homepage category/rings.png" />
                             <p>Rings</p>

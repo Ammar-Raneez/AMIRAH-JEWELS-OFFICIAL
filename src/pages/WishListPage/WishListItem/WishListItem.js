@@ -1,12 +1,12 @@
 import './WishListItem.css';
 import CloseIcon from '@material-ui/icons/Close';
-import { db } from '../../../firebase';
-import { useEffect, useState } from 'react';
+// import { db } from '../../../firebase';
+// import { useEffect, useState } from 'react';
 import formatCurrency from 'format-currency';
 import { useDispatch, useSelector } from 'react-redux';
 import { selectUser } from '../../../features/userSlice';
-import { removeFromWishlist, selectWishlist } from '../../../features/wishlistSlice';
-import { addToCart, selectCart } from '../../../features/cartSlice';
+import { removeFromWishlist/*, selectWishlist*/ } from '../../../features/wishlistSlice';
+import { addToCart/*, selectCart*/ } from '../../../features/cartSlice';
 import { selectCurrencySymbol } from '../../../features/currencySymbolSlice';
 import { selectCurrencyRate } from '../../../features/currencyRateSlice';
 

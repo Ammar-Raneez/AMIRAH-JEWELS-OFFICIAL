@@ -4,9 +4,8 @@ import FavoriteBorderIcon from '@material-ui/icons/FavoriteBorder';
 import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { db } from '../../firebase';
-import { useStateValue } from '../../StateProvider';
 import './RingsPage.css';
-import Product from './Product/Product';
+import OtherProducts from './other-products/OtherProducts';
 import ChevronRightIcon from '@material-ui/icons/ChevronRight';
 import ReactImageMagnify from 'react-image-magnify';
 import { Fade } from 'react-awesome-reveal';
@@ -18,24 +17,39 @@ import { addToWishlist, removeFromWishlist, selectWishlist } from '../../feature
 import { addToCart, selectCart } from '../../features/cartSlice';
 import { selectCurrencySymbol } from '../../features/currencySymbolSlice';
 import { selectCurrencyRate } from '../../features/currencyRateSlice';
+import "react-responsive-carousel/lib/styles/carousel.min.css";
+import { Carousel } from 'react-responsive-carousel';
+import { ringData } from './ringData';
 
-function RingsPage() {
-	//this state is to track which image is selected to add a active className
-	const [currentImage, setCurrentImage] = useState('ring2');
-	const [readMoreDescription, setReadMoreDescription] = useState(false);
+function RingsPage({ title, description, specification, stoneInfo, diamondInfo, images, imageNames }) {
 	const user = useSelector(selectUser);
-	const dispatch = useDispatch();
 	const wishListBasket = useSelector(selectWishlist);
 	const cartBasket = useSelector(selectCart);
 	const currencySymbol = useSelector(selectCurrencySymbol);
 	const currencyRate = useSelector(selectCurrencyRate);
-	const [displayImage, setDisplayImage] = useState('pendantsNecklace/ring2.png');
+
+	const [currentImage, setCurrentImage] = useState(imageNames[0]);
+	const [readMoreDescription, setReadMoreDescription] = useState(false);
+	const [displayImage, setDisplayImage] = useState(images[0]);
 	const [addToWishList, setAddToWishList] = useState(false);
 	const [tempSafetyWishList, setTempSafetyWishList] = useState(false);
 	const [tempSafetyCartBasket, setTempSafetyCartBasket] = useState(false);
 	const [currentMetalType, setCurrentMetalType] = useState('18k Rose Gold');
 	const [currentMetalSize, setCurrentMetalSize] = useState('US 4');
 	const [displayPrice, setDisplayPrice] = useState(false);
+
+	const dispatch = useDispatch();
+
+	const [width, setWidth] = useState(0);
+
+    useEffect(() => {
+        setWidth(window.innerWidth);
+        const listener = window.addEventListener('resize', () => {
+            setWidth(window.innerWidth);
+        });
+
+        return window.removeEventListener('resize', listener);
+    }, [width])
 
 	useEffect(() => {
 		if (tempSafetyWishList === true) {
@@ -67,9 +81,9 @@ function RingsPage() {
 		if (user) {
 			dispatch(
 				addToCart({
-					productName: 'Some Stupid Ring',
+					productName: title,
 					productCost: 890.0,
-					productImgURL: 'pendantsNecklace/ring4.png',
+					productImgURL: images[0],
 					productQuantity: 1,
 					preferredMetal: currentMetalType,
 					preferredSize: currentMetalSize,
@@ -85,9 +99,9 @@ function RingsPage() {
 		if (user) {
 			dispatch(
 				addToWishlist({
-					name: 'Some Stupid Ring',
+					name: title,
 					cost: 890.0,
-					imgURL: 'pendantsNecklace/ring4.png',
+					imgURL: images[0],
 					preferredMetal: currentMetalType,
 					preferredSize: currentMetalSize,
 				})
@@ -100,7 +114,7 @@ function RingsPage() {
 
 	const removeFromWishList = () => {
 		if (user) {
-			dispatch(removeFromWishlist({ name: 'Some Stupid Ring' }));
+			dispatch(removeFromWishlist({ name: title }));
 			setAddToWishList(false);
 		} else {
 			alert('Please sign in to add item to wishlist');
@@ -109,69 +123,85 @@ function RingsPage() {
 
 	return (
 		<div className="ringsPage">
-			<SEO title="Rings" />
+			<SEO title={title} />
 			<div className="ringsPage__sectionCart">
 				<div className="ringsPage__sectionCartSmallImages">
 					<img
 						onMouseOver={(e) => {
-							selectedImage(e.target.src, 'ring2');
+							selectedImage(e.target.src, imageNames[0]);
 						}}
-						src="pendantsNecklace/ring2.png"
+						src={images[0]}
 						alt=""
-						className={currentImage === 'ring2' ? 'active' : ''}
+						className={currentImage === imageNames[0] ? 'active' : ''}
 					/>
 					<img
 						onMouseOver={(e) => {
-							selectedImage(e.target.src, 'ring3');
+							selectedImage(e.target.src, imageNames[1]);
 						}}
-						src="pendantsNecklace/ring3.png"
+						src={images[1]}
 						alt=""
-						className={currentImage === 'ring3' ? 'active' : ''}
+						className={currentImage === imageNames[1] ? 'active' : ''}
 					/>
 					<img
 						onMouseOver={(e) => {
-							selectedImage(e.target.src, 'ring4');
+							selectedImage(e.target.src, imageNames[2]);
 						}}
-						src="pendantsNecklace/ring4.png"
+						src={images[2]}
 						alt=""
-						className={currentImage === 'ring4' ? 'active' : ''}
+						className={currentImage === imageNames[2] ? 'active' : ''}
 					/>
 				</div>
-				<div className="ringsPage__sectionCartMainImage">
-					<ReactImageMagnify
-						hoverDelayInMs={0.1}
-						hoverOffDelayInMs={0.1}
-						enlargedImagePosition="over"
-						{...{
-							smallImage: {
-								alt: '',
-								width: 450,
-								height: 450,
-								src: displayImage,
-							},
-							largeImage: {
-								src: displayImage,
-								width: 1200,
-								height: 1200,
-							},
-						}}
-					/>
-					<div className="ringsPage__sectionCartMainImageIcon">
-						{user ? (
-							addToWishList ? (
-								<FavoriteIcon onClick={removeFromWishList} />
-							) : (
-								<FavoriteBorderIcon onClick={addItemToWishList} />
-							)
-						) : (
-							<></>
-						)}
-					</div>
-				</div>
+				{
+					width > 600 ? 
+						<div className="ringsPage__sectionCartMainImage">
+							<ReactImageMagnify
+								hoverDelayInMs={0.1}
+								hoverOffDelayInMs={0.1}
+								enlargedImagePosition="over"
+								{...{
+									smallImage: {
+										alt: '',
+										width: 550,
+										height: 550,
+										src: displayImage,
+									},
+									largeImage: {
+										src: displayImage,
+										width: 900,
+										height: 900,
+									},
+								}}
+							/>
+						</div>
+					:
+						<Carousel showArrows={true}>
+							<div>
+								<img alt="" height={250} width="90%" src={images[0]} />
+							</div>
+							<div>
+								<img alt="" height={250} width="90%" src={images[1]} />
+							</div>
+							<div>
+								<img alt="" height={250} width="90%" src={images[2]} />
+							</div>
+						</Carousel>
+				}
+
 				<div className="ringsPage__sectionCartCartDetails">
-					<Fade direction="left" cascade triggerOnce>
-						<h2>Some Stupid Ring</h2>
-						<div className="ringsPage__sectionCartCartDetailsItem">
+					<Fade direction="left" triggerOnce>
+						<h2>{title}</h2>
+						<div className="ringsPage__sectionCartMainImageIcon">
+							{user ? (
+								addToWishList ? (
+									<FavoriteIcon onClick={removeFromWishList} />
+								) : (
+									<FavoriteBorderIcon onClick={addItemToWishList} />
+								)
+							) : (
+								<></>
+							)}
+						</div>
+						<div style={{ borderTop: '1px solid black' }} className="ringsPage__sectionCartCartDetailsItem">
 							Preferred Metal:
 							<select
 								className="ringsPage__dropdownList"
@@ -224,7 +254,6 @@ function RingsPage() {
 								)}`}
 						</p>
 						<br />
-						<br />
 						<div className="ringsPage__sectionCartCartDetailsBtns">
 							{user ? (
 								<Link>
@@ -233,60 +262,53 @@ function RingsPage() {
 							) : (
 								<></>
 							)}
-							<a href="#product__description">
-								<button>VIEW DETAILS</button>
-							</a>
+						</div>
+
+						{/* Description */}
+						<div id="product__description" className="ringsPage__description">
+							<Fade triggerOnce cascade>
+								<h2>Description & Details</h2>
+								<p className="ringsPage__descriptionMain">
+									{description}
+								</p>
+								<div className="ringsPage__descriptionOtherDetails">
+									<Collapse style={readMoreDescription && { marginBottom: '0.7rem' }} in={readMoreDescription}>
+										<h4>Product specification</h4>
+										{specification.map(specs => <p>{specs}</p>)}
+									</Collapse>
+									<Collapse style={readMoreDescription && { marginBottom: '0.7rem' }}  in={readMoreDescription}>
+										<h4>Gemstone Information</h4>
+										{stoneInfo.map(info => <p>{info}</p>)}
+									</Collapse>
+									<Collapse in={readMoreDescription}>
+										<h4>Diamond Information</h4>
+										{diamondInfo.map(info => <p>{info}</p>)}
+									</Collapse>
+									<p
+										onClick={() => setReadMoreDescription(!readMoreDescription)}
+										className="ringsPage__descriptionOtherDetailsReadMore"
+									>
+										{readMoreDescription ? 'Read Less' : 'Read More'} <ChevronRightIcon />
+										<ChevronRightIcon />
+										<ChevronRightIcon />
+									</p>
+								</div>
+							</Fade>
 						</div>
 					</Fade>
 				</div>
-			</div>
-			{/* Description */}
-			<div id="product__description" className="ringsPage__description">
-				<Fade triggerOnce cascade>
-					<h2>Description & Details</h2>
-					<p className="ringsPage__descriptionMain">
-						This circle pendant features black onyx, a unique variety of quartz found in nature. This
-						striking pendant is traced with scintillating diamonds, resulting in a modern design with a
-						smooth finish and high polish. As multifaceted as it is iconic, the Tiffany T collection is a
-						tangible reminder of the connections we feel but can't always see. Showcase your personal style
-						by pairing this pendant with other Tiffany designs for a bold look.
-					</p>
-					<div className="ringsPage__descriptionOtherDetails">
-						<Collapse in={readMoreDescription}>
-							<p>18k rose gold with black onyx and round brilliant diamonds</p>
-							<p>Circle, 16 mm diameter</p>
-							<p>Carat total weight .05</p>
-							<p>Adjustable, 16-18" chain</p>
-						</Collapse>
-						<p
-							onClick={() => setReadMoreDescription(!readMoreDescription)}
-							className="ringsPage__descriptionOtherDetailsReadMore"
-						>
-							{readMoreDescription ? 'Read Less' : 'Read More'} <ChevronRightIcon />
-							<ChevronRightIcon />
-							<ChevronRightIcon />
-						</p>
-					</div>
-				</Fade>
 			</div>
 
 			{/* Other Similar Products */}
 			<div className="ringsPage__otherProducts">
 				<Fade cascade>
-					<h2>Other Similar Products</h2>
-					<br />
-					<h3>Showing 1 - 40 of 1020</h3>
+					<h2>You May Also like</h2>
 				</Fade>
 				<div className="ringsPage__otherProductsProducts">
 					<Fade delay={500} cascade>
 						<div className="ringsPage__otherProductsRow">
-							<Product img="pendantsNecklace/pink_necklace.png" name="Product Name" viewMoreUrl="/" />
-							<Product img="pendantsNecklace/pink_necklace.png" name="Product Name" viewMoreUrl="/" />
-							<Product img="pendantsNecklace/pink_necklace.png" name="Product Name" viewMoreUrl="/" />
-							<Product img="pendantsNecklace/pink_necklace.png" name="Product Name" viewMoreUrl="/" />
+							{ringData.map(ring => ring.title !== title && <OtherProducts img={ring.images[0]} name={ring.title} viewMoreUrl={`/rings/` + ring.id} />)}
 						</div>
-						{/* <div className="ringsPage__otherProductsRow">
-					</div> */}
 					</Fade>
 				</div>
 			</div>

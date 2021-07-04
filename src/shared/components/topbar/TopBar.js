@@ -1,12 +1,11 @@
 import './TopBar.css';
 import FacebookIcon from '@material-ui/icons/Facebook';
 import InstagramIcon from '@material-ui/icons/Instagram';
-import { Link, Redirect } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import PersonOutlinedIcon from '@material-ui/icons/PersonOutlined';
 import LocalMallOutlinedIcon from '@material-ui/icons/LocalMallOutlined';
 import MenuIcon from '@material-ui/icons/Menu';
 import FavoriteBorderIcon from '@material-ui/icons/FavoriteBorder';
-// import { useStateValue } from '../../../StateProvider';
 import { auth } from '../../../firebase';
 import React, { useState } from 'react';
 import TreeView from '@material-ui/lab/TreeView';
@@ -19,7 +18,7 @@ import Typed from 'react-typed';
 import { useDispatch, useSelector } from 'react-redux';
 import { logout, selectUser } from '../../../features/userSlice';
 
-function TopBar() {
+function TopBar({ isSpecificProduct }) {
 	const social = ['https://www.facebook.com/amirahgems', 'https://www.instagram.com/amirahgems/'];
 	const [openDrawer, setDrawer] = useState(false);
 	// const [{ wishListBasket, cartBasket, user }, dispatch] = useStateValue();
@@ -64,7 +63,7 @@ function TopBar() {
 					</a>
 					<TreeItem nodeId="1" label="Jewellery">
 						<TreeItem nodeId="2" label="Shop By Category">
-							<a className="topbar__treeItem" href="/rings">
+							<a className="topbar__treeItem" href="/rings/SORG020">
 								<TreeItem nodeId="3" label="-  Rings" />
 							</a>
 							<a className="topbar__treeItem" href="/earrings">
@@ -165,18 +164,22 @@ function TopBar() {
 				<a href="/" className="topbar__centerTypedHidden">
 					<Typed strings={['AMIRAH']} typeSpeed={100} className="topbar__centerTypedText"></Typed>
 					<Fade direction="up" triggerOnce delay={800}>
-						<img src="word_logo_bottom.png" className="topbar__center__TopLogo" alt="" />
+						{
+							isSpecificProduct ? <img src="../word_logo_bottom.png" className="topbar__center__TopLogo" alt="" /> : <img src="word_logo_bottom.png" className="topbar__center__TopLogo" alt="" />
+						}
 					</Fade>
 				</a>
 				<a href="/" className="topbar__centerHidden">
-					<img src="word_logo.png" className="topbar__center__TopLogo" alt="" />
+					{
+						isSpecificProduct ? <img src="../word_logo.png" className="topbar__center__TopLogo" alt="" /> : <img src="word_logo.png" className="topbar__center__TopLogo" alt="" />
+					}
 				</a>
 			</div>
 			<div className="topbar__right">
 				<div className="topbar__rightAccount">
 					<PersonOutlinedIcon />
 					{user?.displayName ? (
-						<p onClick={handleLogout} style={{ fontWeight: 'bold', fontSize: '1vw', cursor: 'pointer' }}>
+						<p onClick={handleLogout} style={{ fontWeight: 'bold', fontSize: '12px', cursor: 'pointer' }}>
 							Welcome, {user?.displayName.split(' ')[0]}
 						</p>
 					) : (
