@@ -13,7 +13,7 @@ function ComingSoon() {
 			}}
 		>
 			<div className="comingSoon__upper">
-				<img src="image.png" />
+				<img alt="" src="image.png" />
 			</div>
 			<div className="comingSoon__lower">
 				<div className="comingSoon__lowerLeft">

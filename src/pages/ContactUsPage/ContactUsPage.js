@@ -9,7 +9,7 @@ import { useRef, useState } from 'react';
 import { TextValidator, ValidatorForm } from 'react-material-ui-form-validator';
 import { KeyboardDatePicker, MuiPickersUtilsProvider } from '@material-ui/pickers';
 import DateFnsUtils from '@date-io/date-fns';
-import { setDate } from 'date-fns/esm';
+// import { setDate } from 'date-fns/esm';
 import SEO from '../../shared/components/SEO/SEO';
 
 function ContactUsPage() {

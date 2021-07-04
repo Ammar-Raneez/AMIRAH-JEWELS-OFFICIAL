@@ -3,8 +3,8 @@ import './RoyalExperience.css'
 import CalendarTodayIcon from '@material-ui/icons/CalendarToday';
 import RoomServiceIcon from '@material-ui/icons/RoomService';
 import MonetizationOnIcon from '@material-ui/icons/MonetizationOn';
-import { Fade, Slide } from 'react-awesome-reveal';
-import FavoriteIcon from '@material-ui/icons/Favorite';
+import { Fade/*, Slide*/ } from 'react-awesome-reveal';
+// import FavoriteIcon from '@material-ui/icons/Favorite';
 
 function RoyalExperience() {
     return (

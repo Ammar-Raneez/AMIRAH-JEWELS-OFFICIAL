@@ -16,20 +16,20 @@ import { KeyboardDatePicker, MuiPickersUtilsProvider } from '@material-ui/picker
 import emailjs from 'emailjs-com';
 import { useEffect, useRef, useState } from 'react';
 import { TextValidator, ValidatorForm } from 'react-material-ui-form-validator';
-import { useDispatch, useSelector } from 'react-redux';
-import { useHistory } from 'react-router-dom';
+import { /*useDispatch,*/ useSelector } from 'react-redux';
+// import { useHistory } from 'react-router-dom';
 import { selectCart } from '../../features/cartSlice';
 import { selectDelivery, selectSubTotal, selectTax } from '../../features/costSlice';
 import { selectUser } from '../../features/userSlice';
 import { db } from '../../firebase';
 import SEO from '../../shared/components/SEO/SEO';
-import { useStateValue } from '../../StateProvider';
+// import { useStateValue } from '../../StateProvider';
 import './CheckOutPage.css';
 
 function CheckOutPage() {
 	// const [{ subTotal, delivery, tax, cartBasket, user }, dispatch] = useStateValue();
 	const formRef = useRef('form');
-	const dispatch = useDispatch();
+	// const dispatch = useDispatch();
 	const user = useSelector(selectUser);
 	const cartBasket = useSelector(selectCart);
 	const subTotal = useSelector(selectSubTotal);
