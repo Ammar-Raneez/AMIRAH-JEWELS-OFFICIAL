@@ -36,7 +36,7 @@ function RingsPage({ title, description, specification, stoneInfo, diamondInfo, 
 	const [tempSafetyCartBasket, setTempSafetyCartBasket] = useState(false);
 	const [currentMetalType, setCurrentMetalType] = useState('18k Rose Gold');
 	const [currentMetalSize, setCurrentMetalSize] = useState('US 4');
-	const [displayPrice/*, setDisplayPrice*/] = useState(false);
+	const [displayPrice, setDisplayPrice] = useState(false);
 
 	const dispatch = useDispatch();
 

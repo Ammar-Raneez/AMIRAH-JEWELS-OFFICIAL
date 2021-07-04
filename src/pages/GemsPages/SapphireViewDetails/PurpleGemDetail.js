@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 import Gem from '../Gem/Gem';
 import './GemDetails.css';
 import formatCurrency from 'format-currency';
-// import { useStateValue } from '../../../StateProvider';
+import { useStateValue } from '../../../StateProvider';
 import { db } from '../../../firebase';
 import ReactImageMagnify from 'react-image-magnify';
 import { Fade } from 'react-awesome-reveal';

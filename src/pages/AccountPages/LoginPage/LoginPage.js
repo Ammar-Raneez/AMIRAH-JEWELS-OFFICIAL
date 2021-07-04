@@ -1,13 +1,13 @@
 import React, { useRef, useState } from 'react';
 import { useHistory } from 'react-router-dom';
 import { auth } from '../../../firebase';
-// import { useStateValue } from '../../../StateProvider';
+import { useStateValue } from '../../../StateProvider';
 import './LoginPage.css';
 import { ValidatorForm, TextValidator } from 'react-material-ui-form-validator';
 import { Button, Dialog, DialogActions, DialogContent, DialogContentText, DialogTitle } from '@material-ui/core';
 import SEO from '../../../shared/components/SEO/SEO';
-import { useDispatch/*, useSelector*/ } from 'react-redux';
-import { login/*, selectUser*/ } from '../../../features/userSlice';
+import { useDispatch, useSelector } from 'react-redux';
+import { login, selectUser } from '../../../features/userSlice';
 
 function LoginPage() {
 	const history = useHistory();

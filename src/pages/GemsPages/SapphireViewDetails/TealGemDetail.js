@@ -4,7 +4,7 @@ import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import Gem from '../Gem/Gem';
 import './GemDetails.css';
-// import { useStateValue } from '../../../StateProvider';
+import { useStateValue } from '../../../StateProvider';
 import { db } from '../../../firebase';
 import formatCurrency from 'format-currency';
 import ReactImageMagnify from 'react-image-magnify';

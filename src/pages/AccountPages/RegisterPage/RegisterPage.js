@@ -3,7 +3,7 @@ import { useHistory } from 'react-router-dom';
 import { auth, db } from '../../../firebase';
 import './RegisterPage.css';
 import firebase from 'firebase';
-// import { useStateValue } from '../../../StateProvider';
+import { useStateValue } from '../../../StateProvider';
 import { FormControl, FormControlLabel, FormLabel, Radio, RadioGroup } from '@material-ui/core';
 import DateFnsUtils from '@date-io/date-fns';
 import { KeyboardDatePicker, MuiPickersUtilsProvider } from '@material-ui/pickers';

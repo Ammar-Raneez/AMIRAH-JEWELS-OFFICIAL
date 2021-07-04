@@ -4,7 +4,7 @@ import FavoriteBorderIcon from '@material-ui/icons/FavoriteBorder';
 import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { db } from '../../firebase';
-// import { useStateValue } from '../../StateProvider';
+import { useStateValue } from '../../StateProvider';
 import './NecklacePendantPage.css';
 import Product from './Product/Product';
 import ChevronRightIcon from '@material-ui/icons/ChevronRight';
