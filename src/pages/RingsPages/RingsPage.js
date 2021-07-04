@@ -19,7 +19,7 @@ import { selectCurrencySymbol } from '../../features/currencySymbolSlice';
 import { selectCurrencyRate } from '../../features/currencyRateSlice';
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Carousel } from 'react-responsive-carousel';
-import { ringData } from './ring-data';
+import { ringData } from './ringData';
 
 function RingsPage({ title, description, specification, stoneInfo, diamondInfo, images, imageNames }) {
 	const user = useSelector(selectUser);
@@ -307,7 +307,7 @@ function RingsPage({ title, description, specification, stoneInfo, diamondInfo, 
 				<div className="ringsPage__otherProductsProducts">
 					<Fade delay={500} cascade>
 						<div className="ringsPage__otherProductsRow">
-							{ringData.map(ring => <OtherProducts img={ring.images[0]} name={ring.title} viewMoreUrl="/" />)}
+							{ringData.map(ring => ring.title !== title && <OtherProducts img={ring.images[0]} name={ring.title} viewMoreUrl={`/rings/` + ring.id} />)}
 						</div>
 					</Fade>
 				</div>

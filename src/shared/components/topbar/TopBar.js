@@ -18,7 +18,7 @@ import Typed from 'react-typed';
 import { useDispatch, useSelector } from 'react-redux';
 import { logout, selectUser } from '../../../features/userSlice';
 
-function TopBar() {
+function TopBar({ isSpecificProduct }) {
 	const social = ['https://www.facebook.com/amirahgems', 'https://www.instagram.com/amirahgems/'];
 	const [openDrawer, setDrawer] = useState(false);
 	// const [{ wishListBasket, cartBasket, user }, dispatch] = useStateValue();
@@ -164,11 +164,15 @@ function TopBar() {
 				<a href="/" className="topbar__centerTypedHidden">
 					<Typed strings={['AMIRAH']} typeSpeed={100} className="topbar__centerTypedText"></Typed>
 					<Fade direction="up" triggerOnce delay={800}>
-						<img src="word_logo_bottom.png" className="topbar__center__TopLogo" alt="" />
+						{
+							isSpecificProduct ? <img src="../word_logo_bottom.png" className="topbar__center__TopLogo" alt="" /> : <img src="word_logo_bottom.png" className="topbar__center__TopLogo" alt="" />
+						}
 					</Fade>
 				</a>
 				<a href="/" className="topbar__centerHidden">
-					<img src="word_logo.png" className="topbar__center__TopLogo" alt="" />
+					{
+						isSpecificProduct ? <img src="../word_logo.png" className="topbar__center__TopLogo" alt="" /> : <img src="word_logo.png" className="topbar__center__TopLogo" alt="" />
+					}
 				</a>
 			</div>
 			<div className="topbar__right">

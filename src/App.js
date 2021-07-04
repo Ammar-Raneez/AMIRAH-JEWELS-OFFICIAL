@@ -33,7 +33,7 @@ import { addToWishlist } from './features/wishlistSlice';
 import { changeRate } from './features/currencyRateSlice';
 import { changeSymbol } from './features/currencySymbolSlice';
 import GemDetailPage from './pages/GemsPages/update/GemDetailPage';
-import { ringData } from './pages/RingsPages/ring-data';
+import { ringData } from './pages/RingsPages/ringData';
 import gemData from "./gemData.json"
 
 function App() {
@@ -169,7 +169,7 @@ function App() {
 					{/* all rings */}
 					{ringData.map(ring => (
 						<Route path={`/rings/` + ring.id}>
-							<TopBar />
+							<TopBar isSpecificProduct={true} />
 							<Header />
 							<RingsPage
 								title={ring.title}
