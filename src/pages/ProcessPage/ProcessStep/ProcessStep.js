@@ -19,15 +19,15 @@ function ProcessStep({ img, stepNo, stepName, description, reflect, images=[] })
 		<>
 			<div className="processStep">
 				{images.length === 0 ? (
-					<img src={img} alt="" />
+					<img  alt="" src={img} alt="" />
 				) : (
 					<div style={{position: 'relative', height: '50vw'}}>
-						<img className="processStep__firstImage" style={{position: 'absolute'}} src={images[0]} />
-						<img className="processStep__secondImage" style={{position: 'absolute'}} src={images[1]} />
-						<img className="processStep__thirdImage" style={{position: 'absolute'}} src={images[2]} />
+						<img  alt="" className="processStep__firstImage" style={{position: 'absolute'}} src={images[0]} />
+						<img  alt="" className="processStep__secondImage" style={{position: 'absolute'}} src={images[1]} />
+						<img  alt="" className="processStep__thirdImage" style={{position: 'absolute'}} src={images[2]} />
 					</div>
 				)}
-				{/* {images.length === 0 ? <img src={img} alt="" /> : <img src={currentImage} alt="" />} */}
+				{/* {images.length === 0 ? <img  alt="" src={img} alt="" /> : <img  alt="" src={currentImage} alt="" />} */}
 				<Fade delay={1000}>
 					<div className="processStep__description">
 						<p>{description}</p>
@@ -45,12 +45,12 @@ function ProcessStep({ img, stepNo, stepName, description, reflect, images=[] })
 		<>
 			<div className="processStepReflect">
 				{images.length === 0 ? (
-					<img src={img} alt="" />
+					<img alt="" src={img} alt="" />
 				) : (
 					<div style={{position: 'relative', height: '50vw'}}>
-						<img className="processStep__firstImage" style={{position: 'absolute', left: '-53vw'}} src={images[0]} />
-						<img className="processStep__secondImage" style={{position: 'absolute', left: '-53vw'}} src={images[1]} />
-						<img className="processStep__thirdImage" style={{position: 'absolute', left: '-53vw'}} src={images[2]} />
+						<img  alt="" className="processStep__firstImage" style={{position: 'absolute', left: '-53vw'}} src={images[0]} />
+						<img  alt="" className="processStep__secondImage" style={{position: 'absolute', left: '-53vw'}} src={images[1]} />
+						<img  alt="" className="processStep__thirdImage" style={{position: 'absolute', left: '-53vw'}} src={images[2]} />
 					</div>
 				)}
 				<Fade delay={1000}>

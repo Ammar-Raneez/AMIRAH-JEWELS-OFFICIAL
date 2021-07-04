@@ -167,20 +167,22 @@ function App() {
 
 
 					{/* all rings */}
-					<Route path="/rings/SOR020">
-						<TopBar />
-						<Header />
-						<RingsPage
-							title={ringData[0].title}
-							description={ringData[0].description}
-							specification={ringData[0].specification}
-							stoneInfo={ringData[0].stoneInfo}
-							diamondInfo={ringData[0].diamondInfo}
-							images={ringData[0].images}
-							imageNames={ringData[0].imageNames}
-						/>
-						<Footer />
-					</Route>
+					{ringData.map(ring => (
+						<Route path={`/rings/` + ring.id}>
+							<TopBar />
+							<Header />
+							<RingsPage
+								title={ring.title}
+								description={ring.description}
+								specification={ring.specification}
+								stoneInfo={ring.stoneInfo}
+								diamondInfo={ring.diamondInfo}
+								images={ring.images}
+								imageNames={ring.imageNames}
+							/>
+							<Footer />
+						</Route>
+					))}
 
 
 					{/* everything else - tbc */}

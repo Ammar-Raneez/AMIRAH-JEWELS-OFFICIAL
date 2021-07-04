@@ -1,6 +1,6 @@
 import './WishListPage.css';
 import WishListItem from './WishListItem/WishListItem';
-import { useStateValue } from '../../StateProvider';
+// import { useStateValue } from '../../StateProvider';
 import { useEffect, useState } from 'react';
 import { db } from '../../firebase';
 import { Fade } from 'react-awesome-reveal';
@@ -9,7 +9,7 @@ import { useSelector } from 'react-redux';
 import { selectCart } from '../../features/cartSlice';
 import { selectWishlist } from '../../features/wishlistSlice';
 import { selectUser } from '../../features/userSlice';
-import { useDispatch } from 'react-redux';
+// import { useDispatch } from 'react-redux';
 
 function WishListPage() {
 	const [tempSafetyCartBasket, setTempSafetyCartBasket] = useState(false);

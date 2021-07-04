@@ -1,12 +1,11 @@
 import './TopBar.css';
 import FacebookIcon from '@material-ui/icons/Facebook';
 import InstagramIcon from '@material-ui/icons/Instagram';
-import { Link, Redirect } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import PersonOutlinedIcon from '@material-ui/icons/PersonOutlined';
 import LocalMallOutlinedIcon from '@material-ui/icons/LocalMallOutlined';
 import MenuIcon from '@material-ui/icons/Menu';
 import FavoriteBorderIcon from '@material-ui/icons/FavoriteBorder';
-// import { useStateValue } from '../../../StateProvider';
 import { auth } from '../../../firebase';
 import React, { useState } from 'react';
 import TreeView from '@material-ui/lab/TreeView';
@@ -64,7 +63,7 @@ function TopBar() {
 					</a>
 					<TreeItem nodeId="1" label="Jewellery">
 						<TreeItem nodeId="2" label="Shop By Category">
-							<a className="topbar__treeItem" href="/rings/SOR020">
+							<a className="topbar__treeItem" href="/rings/SORG020">
 								<TreeItem nodeId="3" label="-  Rings" />
 							</a>
 							<a className="topbar__treeItem" href="/earrings">

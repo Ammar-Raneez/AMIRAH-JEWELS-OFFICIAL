@@ -176,13 +176,13 @@ function RingsPage({ title, description, specification, stoneInfo, diamondInfo, 
 					:
 						<Carousel showArrows={true}>
 							<div>
-								<img height={250} width="90%" src={images[0]} />
+								<img alt="" height={250} width="90%" src={images[0]} />
 							</div>
 							<div>
-								<img height={250} width="90%" src={images[1]} />
+								<img alt="" height={250} width="90%" src={images[1]} />
 							</div>
 							<div>
-								<img height={250} width="90%" src={images[2]} />
+								<img alt="" height={250} width="90%" src={images[2]} />
 							</div>
 						</Carousel>
 				}
