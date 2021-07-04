@@ -163,7 +163,15 @@ function App() {
 					<Route path="/rings">
 						<TopBar />
 						<Header />
-						<RingsPage />
+						<RingsPage
+							title="Classic Square Pink Sapphire & Diamond Three Stone Ring"
+							description="This classic three stone ring features a fascinating square pink sapphire in between glittering round diamonds. The blossomy pink sapphire and the white diamonds are prong set on the 18K white gold ring for maximum brilliance. This pink sapphire ring with two diamonds exudes refined elegance"
+							specification={["Product Code: SORGO20", "Metal: 18K White Gold"]}
+							stoneInfo={["Gemstone: Square Pink Sapphire", "Carat Weight: 0.30 carat", "Setting Type: Prong"]}
+							diamondInfo={["Number of Round Diamonds: 2", "Carat Weight: 0.07 carat", "Quality Grade: VS", "Setting Type: Prong"]}
+							images={["rings/SORG020.jpg", "rings/SORG020F - Copy.jpg", "rings/SORG020F.jpg"]}
+							imageNames={["SORG020", "SORG020F - Copy", "SORG020F"]}
+						/>
 						<Footer />
 					</Route>
 					<Route path="/earrings">
