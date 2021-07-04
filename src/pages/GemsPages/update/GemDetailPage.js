@@ -41,16 +41,27 @@ const Container = styled.div`
 
 	> section {
 		:nth-child(2) {
-			border: 1px red solid;
+			/* border: 1px red solid; */
 			display: flex;
 			> main {
 				margin: 30px 20px;
 				:first-child {
-					flex: 0.6;
+					flex: 0.65;
 				}
 				:last-child {
-					flex: 0.4;
+					flex: 0.35;
 				}
+			}
+		}
+		:last-child {
+			padding: 30px;
+		}
+	}
+
+	@media screen and (max-width: 600px) {
+		> section {
+			:nth-child(2) {
+				flex-direction: column;
 			}
 		}
 	}

@@ -34,4 +34,32 @@ export const GemStatistics = () => {
 	);
 };
 
-const Container = styled.div``;
+const Container = styled.div`
+	border: 5px #87541e solid;
+	background-color: #e8e8e8;
+	padding: 30px 10px;
+	> section {
+		:first-child {
+			> div {
+				margin-top: 20px;
+				margin-bottom: 50px;
+				> h2,
+				> p {
+					text-align: center;
+				}
+			}
+		}
+		:last-child {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			> h2 {
+				width: fit-content;
+				border-bottom: 1px solid #db8932;
+				border-width: 2px;
+				padding: 0 0 4px 0;
+			}
+		}
+	}
+`;

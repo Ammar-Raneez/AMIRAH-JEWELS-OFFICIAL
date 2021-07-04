@@ -29,4 +29,17 @@ const Container = styled.div`
 		border-left: none;
 		border-color: #db8932;
 	}
+	@media screen and (max-width: 600px) {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		> h2 {
+			font-size: 1.2rem;
+			text-align: center;
+		}
+		> p {
+			text-align: center;
+		}
+	}
 `;
