@@ -14,11 +14,21 @@ export const GemTitle = () => {
 
 const Container = styled.div`
 	display: flex;
-	border: 1px red solid;
+	/* border: 1px red solid; */
 	justify-content: space-between;
 	padding: 50px;
+    border-bottom: 5px #87541E solid;
+	background-color: #f4ebe2;
 	> img {
 		object-fit: contain;
 		height: 200px;
+	}
+	> div {
+		> h1 {
+			font-size: 3rem;
+		}
+		> p {
+			margin-top: 5px;
+		}
 	}
 `;

@@ -16,7 +16,6 @@ const GemDetailPage = () => {
 			</section>
 			<section>
 				<main>
-					{/* flex 0.6 */}
 					<AboutGem />
 					<BirthStonesAnniversary />
 					<Treatments />
@@ -28,7 +27,6 @@ const GemDetailPage = () => {
 				</main>
 			</section>
 			<section>
-				{/* flex 0.4 */}
 				<WhyWeLoveGemStone />
 			</section>
 		</Container>
@@ -39,12 +37,14 @@ export default GemDetailPage;
 
 const Container = styled.div`
 	font-family: Quattrocento-Regular;
+	background-color: #f4ebe2;
 
 	> section {
 		:nth-child(2) {
 			border: 1px red solid;
 			display: flex;
 			> main {
+				margin: 30px 20px;
 				:first-child {
 					flex: 0.6;
 				}

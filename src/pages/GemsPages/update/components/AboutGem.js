@@ -13,8 +13,26 @@ export const AboutGem = () => {
 				The best gems combine high clarity with limpid transparency and blue to slightly greenish blue hues.
 				Like many beryls, aquamarine forms large crystals suitable for sizable fashioned gems and carvings
 			</p>
+			<hr />
 		</Container>
 	);
 };
 
-const Container = styled.div``;
+const Container = styled.div`
+	/* border: 1px red solid; */
+
+	> h2 {
+		margin: 5px 0;
+	}
+	> p {
+		margin: 20px 0;
+	}
+	> hr {
+		width: 60%;
+		border-width: 5px;
+		border-bottom: none;
+		border-right: none;
+		border-left: none;
+		border-color: #db8932;
+	}
+`;
