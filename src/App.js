@@ -160,7 +160,7 @@ function App() {
 					<Route path="/gems/aquamarine">
 						<TopBar />
 						<Header />
-						<GemDetailPage data={gemData.aquamarine}/>
+						<GemDetailPage data={gemData?.aquamarine}/>
 						<Footer />
 					</Route>
 					<Route path="/rings">

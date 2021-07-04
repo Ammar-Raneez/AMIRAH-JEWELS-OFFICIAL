@@ -1,26 +1,19 @@
 import styled from 'styled-components';
 
-export const AboutGem = () => {
+export const AboutGem = ({ aboutName, aboutDescriptionArray, aboutImage }) => {
 	return (
 		<Container>
-			<h2>ABOUT AQUAMARINE</h2>
-			<img src="/amirah-details-latest/KNOW YOUR GEMSTONES/AQUAMARINE.jpg" alt="" />
-			<p>
-				Aquamarine’s name comes from the Latin for seawater and it was said to calm waves and keep sailors safe
-				at sea. March’s birthstone was also thought to enhance the happiness of marriages.
-			</p>
-			<p>
-				The best gems combine high clarity with limpid transparency and blue to slightly greenish blue hues.
-				Like many beryls, aquamarine forms large crystals suitable for sizable fashioned gems and carvings
-			</p>
+			<h2>ABOUT {aboutName}</h2>
+			<img src={aboutImage} alt="" />
+			{aboutDescriptionArray.map((para) => (
+				<p>{para}</p>
+			))}
 			<hr />
 		</Container>
 	);
 };
 
 const Container = styled.div`
-	/* border: 1px red solid; */
-
 	> h2 {
 		margin: 8px 0;
 	}
@@ -39,7 +32,6 @@ const Container = styled.div`
 		object-fit: contain;
 		height: 150px;
 	}
-
 	@media screen and (max-width: 600px) {
 		display: flex;
 		flex-direction: column;

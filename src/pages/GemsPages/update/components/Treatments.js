@@ -1,21 +1,16 @@
 import styled from 'styled-components';
 
-export const Treatments = () => {
+export const Treatments = ({ treatmentsDetails }) => {
 	return (
 		<Container>
 			<h2>TREATMENTS</h2>
-			<p>
-				There are a number of processes used to alter the color, apparent clarity, or improve the durability of
-				gems.
-			</p>
+			<p>{treatmentsDetails}</p>
 			<hr />
 		</Container>
 	);
 };
 
 const Container = styled.div`
-	/* border: 1px red solid; */
-
 	> h2 {
 		margin: 30px 0 8px 0;
 	}
@@ -32,7 +27,7 @@ const Container = styled.div`
 		border-left: none;
 		border-color: #db8932;
 	}
-    @media screen and (max-width: 600px) {
+	@media screen and (max-width: 600px) {
 		display: flex;
 		flex-direction: column;
 		justify-content: center;

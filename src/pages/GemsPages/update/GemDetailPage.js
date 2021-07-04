@@ -8,26 +8,30 @@ import { Synthetics } from './components/Synthetics';
 import { Treatments } from './components/Treatments';
 import { WhyWeLoveGemStone } from './components/WhyWeLoveGemStone';
 
-const GemDetailPage = () => {
+const GemDetailPage = ({ data }) => {
 	return (
 		<Container>
 			<section>
-				<GemTitle />
+				<GemTitle title={data.title} titleText={data.titleText} titleImage={data.titleImage} />
 			</section>
 			<section>
 				<main>
-					<AboutGem />
-					<BirthStonesAnniversary />
-					<Treatments />
-					<Synthetics />
-					<Imitations />
+					<AboutGem
+						aboutName={data.aboutName}
+						aboutDescriptionArray={data.aboutDescriptionArray}
+						aboutImage={data.aboutImage}
+					/>
+					<BirthStonesAnniversary birthStoneDetails={data.birthStoneDetails} />
+					<Treatments treatmentsDetails={data.treatmentsDetails} />
+					<Synthetics syntheticDetails={data.syntheticDetails} />
+					<Imitations imitationsDetails={data.imitationsDetails} />
 				</main>
 				<main>
-					<GemStatistics />
+					<GemStatistics moreDetails={data.moreDetails} factsInformation={data.factsInformation} />
 				</main>
 			</section>
 			<section>
-				<WhyWeLoveGemStone />
+				<WhyWeLoveGemStone whyWeLoveGemStone={data.whyWeLoveGemStone}/>
 			</section>
 		</Container>
 	);
