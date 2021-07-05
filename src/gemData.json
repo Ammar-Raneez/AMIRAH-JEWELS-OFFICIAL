@@ -55,7 +55,7 @@
 			]
 		}
 	},
-	 {
+	{
 		"id": "alexandrite",
 		"title": "Alexandrite",
 		"titleText": "Green in sunlight, Red in Lamplight. Color-changing alexandrite is natures's magic trick",
@@ -111,7 +111,7 @@
 			]
 		}
 	},
-	 {
+	{
 		"id": "amber",
 		"title": "AMBER",
 		"titleText": "Amber is nature's time capsule. This fossilized tree resin contains remnants if life on earth millions of years ago.",
@@ -219,6 +219,566 @@
 				{
 					"title": "AMETRINE",
 					"description": "In Bolivia, amethyst and citrine occur in the same crystal. The unique gems, called ametrine, are half purple and half yellow."
+				}
+			]
+		}
+	},
+	{
+		"id": "ametrine",
+		"title": "AMETRINE",
+		"titleText": "This transparent quartz has colors of both amethyst and citrine, and is called ametrine or amethyst-citrine",
+		"titleImage": "/amirah-details-latest/KNOW YOUR GEMSTONES/AMETRINE.jpg",
+		"aboutName": "AMETRINE",
+		"aboutDescriptionArray": [
+			"Whether projecting from pegmatite walls or encrusting cavities in volcanic rock, quartz abounds worldwide. People have used quartz in jewelry for thousands of years.",
+			"When quartz displays the colors of amethyst and citrine in a single gem, the material is called ametrine or amethyst-citrine. Ametrine’s only commercial source is the Anahi mine in Bolivia"
+		],
+		"aboutImage": "/amirah-details-latest/KNOW YOUR GEMSTONES/AMETRINE.jpg",
+		"birthStoneDetails": "While amber isn’t a birthstone, it is associated with the astrological sign of Libra",
+		"treatmentsDetails": "There are a number of processes used to alter the color, apparent clarity, or improve the durability of gems.",
+		"syntheticDetails": "Some gemstones have synthetic counterparts that have essentially the same chemical, physical, and optical properties, but are grown by man in a laboratory.",
+		"imitationsDetails": "Any gem can be imitated—sometimes by manmade materials or by natural materials chosen by man to impersonate a particular gem.",
+		"moreDetails": [
+			{
+				"title": "NO PLACE ELSE",
+				"description": "There is only one commercial source for ametrine: the Anahi mine in Bolivia."
+			},
+			{
+				"title": "NATURE'S GIFT",
+				"description": "The presence of amethyst and citrine colors in a quartz crystal is a rare gift of nature."
+			},
+			{
+				"title": "CUTTER'S CHOICE",
+				"description": "Ametrine’s colors blend, combine, and contrast uniquely in each "
+			}
+		],
+		"factsInformation": {
+			"mineral": "Quartz",
+			"chemistry": "SiO2",
+			"color": "Bicolor orange/yellow and purple",
+			"refractiveIndex": "1.544 to 1.553",
+			"specificGravity": "2.66 (+0.03/-0.02)",
+			"mohsHardness": "7",
+			"birefringence": "NA"
+		},
+		"whyWeLoveGemStone": {
+			"img": "/amirah-details-latest/KNOW YOUR GEMSTONES/AMETRINE.jpg",
+			"data": [
+				{
+					"title": "GEODES",
+					"description": "In gem localities like Brazil, amethyst sometimes forms in hollow, crystal-lined geodes so big you can stand in them."
+				},
+				{
+					"title": "AFFORDABLE",
+					"description": "Even fine amethyst has a modest price tag. Large gems remain affordable as price per carat does not rise dramatically with larger size."
+				},
+				{
+					"title": "AMETRINE",
+					"description": "In Bolivia, amethyst and citrine occur in the same crystal. The unique gems, called ametrine, are half purple and half yellow."
+				}
+			]
+		}
+	},
+	{
+		"id": "amethyst",
+		"title": "AMETHYST",
+		"titleText": "The essence of the color purple, amethyst is beautiful enough for crown jewels yet affordable enough for class ring",
+		"titleImage": "/amirah-details-latest/KNOW YOUR GEMSTONES/AMETHYST.jpg",
+		"aboutName": "AMETHYST",
+		"aboutDescriptionArray": [
+			"Amethyst was as expensive as ruby and emerald until the 19th Century, when Brazil’s large deposits were discovered. It was believed to prevent intoxication amethystos means “not drunk” in ancient Greek.",
+			"Today, as the most valued quartz variety, amethyst is in demand for designer pieces and mass-market jewelry alike, and its purple to pastel hues retain wide consumer appeal."
+		],
+		"aboutImage": "/amirah-details-latest/KNOW YOUR GEMSTONES/AMETHYST.jpg",
+		"birthStoneDetails": "Amethyst is the birthstone for February and the gem for the 6th and 17th wedding anniversaries",
+		"treatmentsDetails": "There are a number of processes used to alter the color, apparent clarity, or improve the durability of gems.",
+		"syntheticDetails": "Some gemstones have synthetic counterparts that have essentially the same chemical, physical, and optical properties, but are grown by man in a laboratory",
+		"imitationsDetails": "Any gem can be imitated—sometimes by manmade materials or by natural materials chosen by man to impersonate a particular gem.",
+		"moreDetails": [
+			{
+				"title": "ST. VALENTINE",
+				"description": "The patron of romantic love wore an amethyst ring carved with the image of Cupid"
+			},
+			{
+				"title": "CAMILLO LEONARDI",
+				"description": "The astrologer wrote that amethyst quickens intelligence and gets rid of evil thoughts."
+			},
+			{
+				"title": "164 POUNDS",
+				"description": "Single amethyst crystals can be huge: the GIA Museum displayed a doubly terminated crystal that weighed 164 pounds."
+			}
+		],
+		"factsInformation": {
+			"mineral": "Quartz",
+			"chemistry": "SiO2",
+			"color": "Purple",
+			"refractiveIndex": "1.544 to 1.553",
+			"specificGravity": "2.66",
+			"mohsHardness": "7",
+			"birefringence": "0.009"
+		},
+		"whyWeLoveGemStone": {
+			"img": "/amirah-details-latest/KNOW YOUR GEMSTONES/AMETHYST.jpg",
+			"data": [
+				{
+					"title": "GEODES",
+					"description": "In gem localities like Brazil, amethyst sometimes forms in hollow, crystal-lined geodes so big you can stand in them."
+				},
+				{
+					"title": "AFFORDABLE",
+					"description": "Even fine amethyst has a modest price tag. Large gems remain affordable as price per carat does not rise dramatically with larger size."
+				},
+				{
+					"title": "AMETRINE",
+					"description": "In Bolivia, amethyst and citrine occur in the same crystal. The unique gems, called ametrine, are half purple and half yellow."
+				}
+			]
+		}
+	},
+	{
+		"id": "citrine",
+		"title": "CITRINE",
+		"titleText": "Citrine is the transparent, pale yellow to brownish orange variety of quart",
+		"titleImage": "/amirah-details-latest/KNOW YOUR GEMSTONES/CITRINE.jpg",
+		"aboutName": "CITRINE",
+		"aboutDescriptionArray": [
+			"Citrine is rare in nature. In the days before modern gemology, its tawny color caused it to be confused with topaz.",
+			"Today, its attractive color, plus the durability and affordability it shares with most other quartzes, makes it the top-selling yellow-to-orange gem. In the contemporary market, citrine’s most popular shade is an earthy, deep, brownish or reddish orange"
+		],
+		"aboutImage": "/amirah-details-latest/KNOW YOUR GEMSTONES/CITRINE.jpg",
+		"birthStoneDetails": "Along with topaz, citrine is a birthstone for November. It’s also recognized as the gem that commemorates the thirteenth anniversary",
+		"treatmentsDetails": "There are a number of processes used to alter the color, apparent clarity, or improve the durability of gems.",
+		"syntheticDetails": "Some gemstones have synthetic counterparts that have essentially the same chemical, physical, and optical properties, but are grown by man in a laboratory.",
+		"imitationsDetails": "Any gem can be imitated—sometimes by manmade materials or by natural materials chosen by man to impersonate a particular gem.",
+		"moreDetails": [
+			{
+				"title": "IRON",
+				"description": "A trace of iron in citrine’s structure is responsible for its yellow-to-orange color."
+			},
+			{
+				"title": "HEAT",
+				"description": "Natural citrine is rare. Most citrine on the market is the result of heat treatment of amethyst"
+			},
+			{
+				"title": "POPULAR",
+				"description": "Citrine is recognized as one of the most popular and frequently purchased yellow gemstones"
+			}
+		],
+		"factsInformation": {
+			"mineral": "Quartz",
+			"chemistry": "SiO2",
+			"color": "Yellow to orange, to orangy field",
+			"refractiveIndex": "1.544 to 1.553",
+			"specificGravity": "2.66 (+0.03/-0.02)",
+			"mohsHardness": "7",
+			"birefringence": "NA"
+		},
+		"whyWeLoveGemStone": {
+			"img": "/amirah-details-latest/KNOW YOUR GEMSTONES/CITRINE.jpg",
+			"data": [
+				{
+					"title": "AFFORDABLE",
+					"description": "Even fine citrine has a modest price tag. Large gems remain affordable, as price per carat does not rise dramatically for larger sizes"
+				},
+				{
+					"title": "GEODES",
+					"description": "Giant hollow crystal-lined amethyst geodes from areas like Brazil are often heated to become giant citrine “cathedrals.”"
+				},
+				{
+					"title": "AMETRINE",
+					"description": "In Bolivia, amethyst and citrine colors can occur together in the same crystal. These unique gems are called ametrine."
+				}
+			]
+		}
+	},
+	{
+		"id": "diamond",
+		"title": "DIAMOND",
+		"titleText": "Diamonds are among nature’s most precious and beautiful creations.",
+		"titleImage": "/amirah-details-latest/KNOW YOUR GEMSTONES/DIAMOND.jpg",
+		"aboutName": "DIAMOND",
+		"aboutDescriptionArray": [
+			"Diamond forms under high temperature and pressure conditions that exist only about 100 miles beneath the earth’s surface. Diamond’s carbon atoms are bonded in essentially the same way in all directions.",
+			"Another mineral, graphite, also contains only carbon, but its formation process and crystal structure are very different. Graphite is so soft that you can write with it, while diamond is so hard that you can only scratch it with another diamond"
+		],
+		"aboutImage": "/amirah-details-latest/KNOW YOUR GEMSTONES/DIAMOND.jpg",
+		"birthStoneDetails": "On almost all modern birthstone lists, diamond is recognized today as the birthstone for April. Diamond is also the gem that marks the 60th and 75th wedding anniversaries",
+		"treatmentsDetails": "There are a number of processes used to alter the color, apparent clarity, or improve the durability of gems.",
+		"syntheticDetails": "Some gemstones have synthetic counterparts that have essentially the same chemical, physical, and optical properties, but are grown by man in a laboratory.",
+		"imitationsDetails": "Any gem can be imitated—sometimes by manmade materials or by natural materials chosen by man to impersonate a particular gem.",
+		"moreDetails": [
+			{
+				"title": "58X HARDER",
+				"description": "Diamonds are the hardest material on earth: 58 times harder than anything else in nature."
+			},
+			{
+				"title": "'LUCY' IN THE SKY",
+				"description": "Fifty light years from earth, this star is a 10 billion-trillion-trillion carat diamond."
+			},
+			{
+				"title": "1 IN 1,000,000",
+				"description": "The average yield in most diamond mines is 1 part diamond to 1 million parts host rock"
+			}
+		],
+		"factsInformation": {
+			"mineral": "Diamond",
+			"chemistry": "C",
+			"color": "Colorless",
+			"refractiveIndex": "2.42",
+			"specificGravity": "3.52 (+/-0.01)",
+			"mohsHardness": "10",
+			"birefringence": "NA"
+		},
+		"whyWeLoveGemStone": {
+			"img": "/amirah-details-latest/KNOW YOUR GEMSTONES/DIAMOND.jpg",
+			"data": [
+				{
+					"title": "GLOBAL LANGUAGE",
+					"description": "The 4Cs, created by GIA, are considered the global language of diamond quality"
+				},
+				{
+					"title": "CARBON",
+					"description": "Diamond is the only gem composed of one single element: carbon."
+				},
+				{
+					"title": "A BILLION YEARS",
+					"description": "Most diamonds formed more than a billion years ago, deep in the earth’s mantle."
+				}
+			]
+		}
+	},
+	{
+		"id": "emerald",
+		"title": "EMERALD",
+		"titleText": "Emerald is the bluish green to green variety of beryl, a mineral species that includes aquamarine",
+		"titleImage": "/amirah-details-latest/KNOW YOUR GEMSTONES/EMERALD.jpg",
+		"aboutName": "EMERALD",
+		"aboutDescriptionArray": [
+			"Gem experts differ on the degree of green that makes one stone an emerald and another stone a less-expensive green beryl",
+			"Most gemologists, gemological laboratories, and colored stone dealers call a stone green beryl when its color is “too light” for it to be classified as emerald. Even among that group, however, there’s a difference of opinion about what’s considered “too light"
+		],
+		"aboutImage": "/amirah-details-latest/KNOW YOUR GEMSTONES/EMERALD.jpg",
+		"birthStoneDetails": "As the gem of spring, emerald is the perfect choice as the birthstone for the month of May. It’s also the gem of the twentieth and thirty-fifth wedding anniversaries",
+		"treatmentsDetails": "There are a number of processes used to alter the color, apparent clarity, or improve the durability of gems",
+		"syntheticDetails": "Some gemstones have synthetic counterparts that have essentially the same chemical, physical, and optical properties, but are grown by man in a laboratory",
+		"imitationsDetails": "Any gem can be imitated—sometimes by manmade materials or by natural materials chosen by man to impersonate a particular gem",
+		"moreDetails": [
+			{
+				"title": "2.97 BILLION YEARS",
+				"description": "Age of the oldest emeralds, from South Africa."
+			},
+			{
+				"title": "CLEOPATRA",
+				"description": "Pharaoh known for her passion for emeralds."
+			},
+			{
+				"title": "$6,578,500",
+				"description": "2011 sales price for Elizabeth Taylor’s emerald pendant - that's $280,000 per carat."
+			}
+		],
+		"factsInformation": {
+			"mineral": "Beryl",
+			"chemistry": "Be3Al2SiO18",
+			"color": "Vibrant green",
+			"refractiveIndex": "1.577 to 1.583",
+			"specificGravity": "2.72",
+			"mohsHardness": "7.5 to 8",
+			"birefringence": "0.005 to 0.009"
+		},
+		"whyWeLoveGemStone": {
+			"img": "/amirah-details-latest/KNOW YOUR GEMSTONES/DIAMOND.jpg",
+			"data": [
+				{
+					"title": "THREE-PHASE INCLUSIONS",
+					"description": "Three-phase inclusions in Colombian emeralds contain tiny crystals of rock salt, liquid, and a bubble of gas."
+				},
+				{
+					"title": "HEXAGONAL CRYSTALS",
+					"description": "The best emerald crystals are gorgeous flat-topped green hexagonal columns that are as beautiful as faceted stones."
+				},
+				{
+					"title": "ANCIENT EGYPT",
+					"description": "The first known emerald mines were in Egypt. It is believed that these mines were worked as early as 3500BC."
+				}
+			]
+		}
+	},
+	{
+		"id": "garnet",
+		"title": "GARNET",
+		"titleText": "Garnets are a set of closely related minerals forming a group, with gemstones in almost every colo",
+		"titleImage": "/amirah-details-latest/KNOW YOUR GEMSTONES/GARNET.jpg",
+		"aboutName": "GARNET",
+		"aboutDescriptionArray": [
+			"Red garnets have a long history, but modern gem buyers can pick from a rich palette of garnet colors: greens, oranges, pinkish oranges, deeply saturated purplish reds, and even some blues",
+			"Red garnet is one of the most common and widespread of gems. But not all garnets are as abundant as the red ones. A green garnet, tsavorite, is rarer and needs rarer rock chemistries and conditions to form."
+		],
+		"aboutImage": "/amirah-details-latest/KNOW YOUR GEMSTONES/GARNET.jpg",
+		"birthStoneDetails": "Garnet is the birthstone for January and the gem for the second anniversary",
+		"treatmentsDetails": "There are a number of processes used to alter the color, apparent clarity, or improve the durability of gems",
+		"syntheticDetails": "Some gemstones have synthetic counterparts that have essentially the same chemical, physical, and optical properties, but are grown by man in a laboratory",
+		"imitationsDetails": "Any gem can be imitated—sometimes by manmade materials or by natural materials chosen by man to impersonate a particular gem.",
+		"moreDetails": [
+			{
+				"title": "TSAVO PARK",
+				"description": "Campbell Bridges mined tsavorite garnet in Kenya near Tsavo National Park"
+			},
+			{
+				"title": "FABERGE",
+				"description": "The imperial Russian jeweler created intricate jewelry designs for demantoid garnet."
+			},
+			{
+				"title": "3800 BC",
+				"description": "A stylish red garnet bead necklace found in a grave in Egypt is more than 5,000 years old"
+			}
+		],
+		"factsInformation": {
+			"mineral": "Garent group",
+			"chemistry": "Almandine, Andraditem Grossular, Pyrope, Rhodolite, Spessartine",
+			"color": "All colours",
+			"refractiveIndex": "1.714-1.888",
+			"specificGravity": "3.47-4.15",
+			"mohsHardness": "6.5-7.5",
+			"birefringence": "NA"
+		},
+		"whyWeLoveGemStone": {
+			"img": "/amirah-details-latest/KNOW YOUR GEMSTONES/GARNET.jpg",
+			"data": [
+				{
+					"title": "GEMOLOGICAL CHALLENGE",
+					"description": "Figuring out how each new gem garnet fits into the six main mineral species is a challenge for gemologist"
+				},
+				{
+					"title": "HEXAGONAL CRYSTALS",
+					"description": "Figuring out how each new gem garnet fits into the six main mineral species is a challenge for gemologist"
+				},
+				{
+					"title": "ANCIENT EGYPT",
+					"description": "Figuring out how each new gem garnet fits into the six main mineral species is a challenge for gemologist"
+				}
+			]
+		}
+	},
+	{
+		"id": "iolite",
+		"title": "IOLITE",
+		"titleText": "According to legend, Vikings used iolite slices to reduce glare when checking the sun’s position.",
+		"titleImage": "/amirah-details-latest/KNOW YOUR GEMSTONES/IOLITE.jpg",
+		"aboutName": "IOLITE",
+		"aboutDescriptionArray": [
+			"In legends, ancient Viking navigators used thin slices of iolite as filters to help locate the sun on cloudy days. Whether or not the tales are true, iolite (mineralogists call it cordierite) can be fashioned into beautiful gems",
+			"Strongly pleochroic iolite has been incorrectly called “water sapphire,” as it can display a blue to violet hue in one direction and pale yellow to colorless in another"
+		],
+		"aboutImage": "/amirah-details-latest/KNOW YOUR GEMSTONES/IOLITE.jpg",
+		"birthStoneDetails": "Iolite is the gemstone for the twenty-first wedding anniversary",
+		"treatmentsDetails": "There are a number of processes used to alter the color, apparent clarity, or improve the durability of gems",
+		"syntheticDetails": "Some gemstones have synthetic counterparts that have essentially the same chemical, physical, and optical properties, but are grown by man in a laboratory",
+		"imitationsDetails": "Any gem can be imitated—sometimes by manmade materials or by natural materials chosen by man to impersonate a particular gem.",
+		"moreDetails": [
+			{
+				"title": "IOS",
+				"description": "Iolite’s name is from the Greek word ios, meaning violet."
+			},
+			{
+				"title": "PLEOCHROIC",
+				"description": "When you turn iolite, you’ll see three distinct colors in three crystal directions."
+			},
+			{
+				"title": "AU NATURAL",
+				"description": "Iolite is not typically treated. This is an attractive selling point for some consumers"
+			}
+		],
+		"factsInformation": {
+			"mineral": "lolite (Cordierite)",
+			"chemistry": "Mg2Al4Si5O18",
+			"color": "Violetish blue",
+			"refractiveIndex": "1.542 - 1.551",
+			"specificGravity": "2.61",
+			"mohsHardness": "7.0 - 7.5",
+			"birefringence": "+0.045, -0.011"
+		},
+		"whyWeLoveGemStone": {
+			"img": "/amirah-details-latest/KNOW YOUR GEMSTONES/IOLITE.jpg",
+			"data": [
+				{
+					"title": "STUNNING COLOR",
+					"description": "In its best colors, iolite can rival the beauty of tanzanite but at a fraction of the cost"
+				},
+				{
+					"title": "PHENOMENAL",
+					"description": "Usually transparent, iolite sometimes contains inclusions that cause attractive phenomena"
+				},
+				{
+					"title": "IRON",
+					"description": "Iolite’s beautiful violet-to-blue hue is due to the presence of iron in its structure"
+				}
+			]
+		}
+	},
+	{
+		"id": "jade",
+		"title": "JADE",
+		"titleText": "According to legend, Vikings used iolite slices to reduce glare when checking the sun’s position",
+		"titleImage": "/amirah-details-latest/KNOW YOUR GEMSTONES/JADE.jpg",
+		"aboutName": "JADE",
+		"aboutDescriptionArray": [
+			"Jade has its cultural roots in the smoke-dimmed caves and huts that sheltered prehistoric humans.",
+			"Around the world, Stone Age workers shaped this toughest of gems into weapons, tools, ornaments, and ritual objects. Their carvings invoked the powers of heaven and earth and mystic forces of life and death"
+		],
+		"aboutImage": "/amirah-details-latest/KNOW YOUR GEMSTONES/JADE.jpg",
+		"birthStoneDetails": "Jade is the official gem for the 12th anniversary.",
+		"treatmentsDetails": "There are a number of processes used to alter the color, apparent clarity, or improve the durability of gems.",
+		"syntheticDetails": "Some gemstones have synthetic counterparts that have essentially the same chemical, physical, and optical properties, but are grown by man in a laboratory",
+		"imitationsDetails": "Any gem can be imitated—sometimes by manmade materials or by natural materials chosen by man to impersonate a particular gem.",
+		"moreDetails": [
+			{
+				"title": "CONFUCIUS",
+				"description": "The philosopher wrote that jade is like virtue and its brightness represents heaven."
+			},
+			{
+				"title": "BI",
+				"description": "The traditional jade flat disc with a hole in the middle, known as a “bi,” symbolizes heaven."
+			},
+			{
+				"title": "YU",
+				"description": "The character for jade is one of the oldest in written Chinese, dating to 2950 BC"
+			}
+		],
+		"factsInformation": {
+			"mineral": "Jadeite and Nephrite",
+			"chemistry": "NaAlSi2O6 and Ca2(Mg,Fe)5Si8O22(OH)2",
+			"color": "Green, white, orange, yellow, lavender, black",
+			"refractiveIndex": "1.666 to 1.680",
+			"specificGravity": "3.34 and 2.95",
+			"mohsHardness": "6.0 to 7.0",
+			"birefringence": "NA"
+		},
+		"whyWeLoveGemStone": {
+			"img": "/amirah-details-latest/KNOW YOUR GEMSTONES/JADE.jpg",
+			"data": [
+				{
+					"title": "INTERACTION WITH LIGHT",
+					"description": "Jadeite’s structure scatters light. If properly cut, a white piece with a small green spot will make the gem appear completely green if lit from behind."
+				},
+				{
+					"title": "TOUGH, BUT NOT HARD",
+					"description": "Not unusually hard for a gem, both jade types are extremely tough. Neolithic knives and axe heads were often made of nephrite"
+				},
+				{
+					"title": "MUSICAL JADE",
+					"description": "Nephrite rings musically when struck. The imperial court in China had jade wind chimes designed to ring specific notes"
+				}
+			]
+		}
+	},
+	{
+		"id": "kunzite",
+		"title": "KUNZITE",
+		"titleText": "Collectors love kunzite for its color range, from delicate pastel pink to intense violetish purple",
+		"titleImage": "/amirah-details-latest/KNOW YOUR GEMSTONES/KUNZITE.jpg",
+		"aboutName": "KUNZITE",
+		"aboutDescriptionArray": [
+			"Kunzite is the best-known variety of the mineral spodumene. It’s named after famed gemologist George Frederick Kunz, who was the first to identify it as a unique variety of spodumene.",
+			"Kunzite gets its delicate color from trace amounts of manganese. California’s San Diego County is an important source of kunzite"
+		],
+		"aboutImage": "/amirah-details-latest/KNOW YOUR GEMSTONES/KUNZITE.jpg",
+		"birthStoneDetails": "Some consider kunzite to be an alternate birthstone for February",
+		"treatmentsDetails": "There are a number of processes used to alter the color, apparent clarity, or improve the durability of gems.",
+		"syntheticDetails": "Some gemstones have synthetic counterparts that have essentially the same chemical, physical, and optical properties, but are grown by man in a laboratory",
+		"imitationsDetails": "Any gem can be imitated—sometimes by manmade materials or by natural materials chosen by man to impersonate a particular gem.",
+		"moreDetails": [
+			{
+				"title": "SPODUMENE",
+				"description": "Kunzite is the best-known variety of spodumene. Others are green hiddenite and yellow triphane."
+			},
+			{
+				"title": "A 'NEW' GEM",
+				"description": "Kunzite was first recognized as a unique variety of spodumene around 1902"
+			},
+			{
+				"title": "LITHIUM",
+				"description": "The pegmatites that yield kunzite are also a source of lithium"
+			}
+		],
+		"factsInformation": {
+			"mineral": "Spodumene",
+			"chemistry": "LiAlSi2O6",
+			"color": "Pink-violetish purple, light-intense",
+			"refractiveIndex": "1.666 to 1.676",
+			"specificGravity": "3.18",
+			"mohsHardness": "6.5 to 7.0",
+			"birefringence": "0.014 to 0.016"
+		},
+		"whyWeLoveGemStone": {
+			"img": "/amirah-details-latest/KNOW YOUR GEMSTONES/KUNZITE.jpg",
+			"data": [
+				{
+					"title": "AFFORDABLE",
+					"description": "In spite of its rarity and beauty, kunzite can be quite affordable because it’s relatively unknown"
+				},
+				{
+					"title": "BLADES",
+					"description": "Kunzite is monoclinic and its crystals often take on a blade-like shape. Its rough form is dramatic."
+				},
+				{
+					"title": "PEGMATITES",
+					"description": "Kunzites are found in pegmatite deposits, often along with tourmaline, beryl, and other gems"
+				}
+			]
+		}
+	},
+	{
+		"id": "lapis-lazuli",
+		"title": "LAPIS LAZULI",
+		"titleText": "Lapis is a beautiful rock; an aggregate of several minerals, mainly lazurite, calcite, and pyrite",
+		"titleImage": "/amirah-details-latest/KNOW YOUR GEMSTONES/LAPIS-LAZULI.jpg",
+		"aboutName": "LAPIS LAZULI",
+		"aboutDescriptionArray": [
+			"This ancient rock is an aggregate of several minerals. The three major minerals that comprise lapis are lazurite, calcite, and pyrite",
+			"The rock can also contain lesser amounts of diopside, amphibole, feldspar, or mica. Lazurite is the ingredient responsible for producing the gem’s most prized color—bright royal blue"
+		],
+		"aboutImage": "/amirah-details-latest/KNOW YOUR GEMSTONES/LAPIS-LAZULI.jpg",
+		"birthStoneDetails": "Not consider as a birthstone",
+		"treatmentsDetails": "There are a number of processes used to alter the color, apparent clarity, or improve the durability of gems.",
+		"syntheticDetails": "Some gemstones have synthetic counterparts that have essentially the same chemical, physical, and optical properties, but are grown by man in a laboratory",
+		"imitationsDetails": "Any gem can be imitated—sometimes by manmade materials or by natural materials chosen by man to impersonate a particular gem.",
+		"moreDetails": [
+			{
+				"title": "ANCIENT",
+				"description": "Lapis was treasured by the ancient civilizations of Mesopotamia, Egypt, China, Greece, and Rome."
+			},
+			{
+				"title": "GLITTER",
+				"description": "Golden flecks of pyrite create a sparkle in lapis lazuli."
+			},
+			{
+				"title": "MARCO POLO",
+				"description": "In 1271, Marco Polo described ancient Bactria’s lapis mines"
+			}
+		],
+		"factsInformation": {
+			"mineral": "Rock",
+			"chemistry": "An aggregate",
+			"color": "Greenish blue to violetish blue",
+			"refractiveIndex": "1.500, sometimes 1.670",
+			"specificGravity": "2.75",
+			"mohsHardness": "NA",
+			"birefringence": "NA"
+		},
+		"whyWeLoveGemStone": {
+			"img": "/amirah-details-latest/KNOW YOUR GEMSTONES/LAPIS-LAZULI.jpg",
+			"data": [
+				{
+					"title": "EXQUISITE COLOR",
+					"description": "From ancient times to the present, many civilizations have prized lapis lazuli for its exquisite deep blue color"
+				},
+				{
+					"title": "6,500 YEARS",
+					"description": "Scholars of ancient civilizations believe that the link between man and lapis lazuli stretches back beyond 6,500 years"
+				},
+				{
+					"title": "ULTRAMARINE",
+					"description": "Renaissance painters used lapis to make “ultramarine” blue, an expensive pigment of unrivaled brightness and stability."
 				}
 			]
 		}
