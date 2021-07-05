@@ -34,7 +34,7 @@ import { changeRate } from './features/currencyRateSlice';
 import { changeSymbol } from './features/currencySymbolSlice';
 import GemDetailPage from './pages/GemsPages/update/GemDetailPage';
 import { ringData } from './pages/RingsPages/ringData';
-import gemData from "./gemData.json"
+import gemData from './gemData.json';
 
 function App() {
 	// const [{ wishListBasket, cartBasket, user }, dispatch] = useStateValue();
@@ -158,16 +158,9 @@ function App() {
 						<TealGemDetail />
 						<Footer />
 					</Route>
-					<Route path="/gems/aquamarine">
-						<TopBar />
-						<Header />
-						<GemDetailPage data={gemData?.aquamarine}/>
-						<Footer />
-					</Route>
-
 
 					{/* all rings */}
-					{ringData.map(ring => (
+					{ringData.map((ring) => (
 						<Route path={`/rings/` + ring.id}>
 							<TopBar isSpecificProduct={true} />
 							<Header />
@@ -184,6 +177,14 @@ function App() {
 						</Route>
 					))}
 
+					{gemData.map((gem) => (
+						<Route path={`/gems/${gem.id}`}>
+							<TopBar />
+							<Header />
+							<GemDetailPage data={gem} />
+							<Footer />
+						</Route>
+					))}
 
 					{/* everything else - tbc */}
 					<Route path="/earrings">

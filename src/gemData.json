@@ -1,5 +1,6 @@
-{
-	"aquamarine": {
+[
+	{
+		"id": "aquamarine",
 		"title": "Aquamarine",
 		"titleText": "Named after seawater, aquamarine’s fresh watery hue is a cool plunge into a refreshing pool",
 		"titleImage": "/amirah-details-latest/KNOW YOUR GEMSTONES/AQUAMARINE.jpg",
@@ -53,5 +54,173 @@
 				}
 			]
 		}
+	},
+	 {
+		"id": "alexandrite",
+		"title": "Alexandrite",
+		"titleText": "Green in sunlight, Red in Lamplight. Color-changing alexandrite is natures's magic trick",
+		"titleImage": "/amirah-details-latest/KNOW YOUR GEMSTONES/Alexandrite.jpg",
+		"aboutName": "ALEXANDRITE",
+		"aboutDescriptionArray": [
+			"Often described by gem aficionados as “emerald by day, ruby by night,” alexandrite is the very rare color-change variety of the mineral chrysobery.",
+			"Originally discovered in Russia’s Ural Mountains in the 1830s, it’s now found in Sri Lanka, East Africa, and Brazil, but fine material is exceptionally rare and valuable."
+		],
+		"aboutImage": "/amirah-details-latest/KNOW YOUR GEMSTONES/Alexandrite.jpg",
+		"birthStoneDetails": "Alexandrite is a birthstone for June, along with pearl and moonstone. Alexandrite is also the gem for the 55th wedding anniversary.",
+		"treatmentsDetails": "There are a number of processes used to alter the color, apparent clarity, or improve the durability of gems.",
+		"syntheticDetails": "Some gemstones have synthetic counterparts that have essentially the same chemical, physical, and optical properties, but are grown by man in a laboratory.",
+		"imitationsDetails": "Any gem can be imitated—sometimes by manmade materials or by natural materials chosen by man to impersonate a particular gem.",
+		"moreDetails": [
+			{
+				"title": "1830",
+				"description": "The year alexandrite was discovered in Russia’s Ural Mountains"
+			},
+			{
+				"title": "CZAR ALEXANDER II",
+				"description": "Gem’s namesake who emancipated Russia’s serfs and was assassinated in 1881"
+			},
+			{
+				"title": "580NM",
+				"description": "This absorption band allows alexandrite to shift from red to green when viewed under different light sources."
+			}
+		],
+		"factsInformation": {
+			"mineral": "Chrysoberyl",
+			"chemistry": "BeAl2O4",
+			"color": "Bluish green in daylight, purplish red in incandescent light",
+			"refractiveIndex": "1.746 to 1.755",
+			"specificGravity": "3.73",
+			"mohsHardness": "8.5",
+			"birefringence": "0.008 to 0.010"
+		},
+		"whyWeLoveGemStone": {
+			"img": "/amirah-details-latest/KNOW YOUR GEMSTONES/Alexandrite.jpg",
+			"data": [
+				{
+					"title": "COLOR CHANGE",
+					"description": "Making alexandrite change color from green to red is the world’s most fun use of a penlight."
+				},
+				{
+					"title": "LIGHT SOURCE",
+					"description": "This gem provides dramatic proof of how much the light source affects color in gems."
+				},
+				{
+					"title": "PHENOMENA",
+					"description": "Alexandrite can show both color change and a cat’s-eye: two phenomena in one gem."
+				}
+			]
+		}
+	},
+	 {
+		"id": "amber",
+		"title": "AMBER",
+		"titleText": "Amber is nature's time capsule. This fossilized tree resin contains remnants if life on earth millions of years ago.",
+		"titleImage": "/amirah-details-latest/KNOW YOUR GEMSTONES/AMBER.jpg",
+		"aboutName": "AMBER",
+		"aboutDescriptionArray": [
+			"The Greeks called amber elektron, or “made by the sun.” Homer praised its bright glow. The Egyptians buried it in tombs for the afterlife",
+			"Today’s scientists value amber too: it provides a three-dimensional window into prehistoric ecosystems through the myriad animal and plant inclusions it contains"
+		],
+		"aboutImage": "/amirah-details-latest/KNOW YOUR GEMSTONES/AMBER.jpg",
+		"birthStoneDetails": "While amber isn’t a birthstone, it is associated with the astrological sign of Taurus",
+		"treatmentsDetails": "There are a number of processes used to alter the color, apparent clarity, or improve the durability of gems",
+		"syntheticDetails": "Some gemstones have synthetic counterparts that have essentially the same chemical, physical, and optical properties, but are grown by man in a laborator",
+		"imitationsDetails": "Any gem can be imitated—sometimes by manmade materials or by natural materials chosen by man to impersonate a particular gem.",
+		"moreDetails": [
+			{
+				"title": "320 MILLION",
+				"description": "The oldest amber dates to the Upper Carboniferous Period"
+			},
+			{
+				"title": "6 TONS",
+				"description": "The Amber Room, a 1716 gift presented to Russia’s Peter the Great, was made from six tons of amber."
+			},
+			{
+				"title": "TIME CAPSULE",
+				"description": "1,000 extinct animal species as well as various types of plant matter have been identified in amber"
+			}
+		],
+		"factsInformation": {
+			"mineral": "Fossilized resin",
+			"chemistry": "C10H16O",
+			"color": "Yellow, orange and brown",
+			"refractiveIndex": "1.540",
+			"specificGravity": "1.08",
+			"mohsHardness": "2.0 to 2.5",
+			"birefringence": "0.008 to 0.010"
+		},
+		"whyWeLoveGemStone": {
+			"img": "/amirah-details-latest/KNOW YOUR GEMSTONES/AMBER.jpg",
+			"data": [
+				{
+					"title": "INTERESTING INCLUSIONS",
+					"description": "With inclusions like insects, lizards, leaves, flowers, and feathers, amber helps scientists study ancient ecosystems"
+				},
+				{
+					"title": "JURASSIC GEM",
+					"description": "Although the movie Jurassic Park is fiction, scientists extracted DNA from insects enclosed in 120-million year old amber."
+				},
+				{
+					"title": "FRAGRANT",
+					"description": "Amber smells good when you rub it. Although an oil made from burned amber was used in scents in ancient times, it isn’t used in perfume today."
+				}
+			]
+		}
+	},
+	{
+		"id": "amethyst",
+		"title": "AMETHYST",
+		"titleText": "The essence of the color purple, amethyst is beautiful enough for crown jewels yet affordable enough for class ring",
+		"titleImage": "/amirah-details-latest/KNOW YOUR GEMSTONES/AMETHYST.jpg",
+		"aboutName": "AMETHYST",
+		"aboutDescriptionArray": [
+			"Amethyst was as expensive as ruby and emerald until the 19th Century, when Brazil’s large deposits were discovered. It was believed to prevent intoxication amethystos means “not drunk” in ancient Greek.",
+			"Today, as the most valued quartz variety, amethyst is in demand for designer pieces and mass-market jewelry alike, and its purple to pastel hues retain wide consumer appeal."
+		],
+		"aboutImage": "/amirah-details-latest/KNOW YOUR GEMSTONES/AMETHYST.jpg",
+		"birthStoneDetails": "Amethyst is the birthstone for February and the gem for the 6th and 17th wedding anniversaries",
+		"treatmentsDetails": "There are a number of processes used to alter the color, apparent clarity, or improve the durability of gems.",
+		"syntheticDetails": "Some gemstones have synthetic counterparts that have essentially the same chemical, physical, and optical properties, but are grown by man in a laboratory",
+		"imitationsDetails": "Any gem can be imitated—sometimes by manmade materials or by natural materials chosen by man to impersonate a particular gem.",
+		"moreDetails": [
+			{
+				"title": "ST. VALENTINE",
+				"description": "The patron of romantic love wore an amethyst ring carved with the image of Cupid"
+			},
+			{
+				"title": "CAMILLO LEONARDI",
+				"description": "The astrologer wrote that amethyst quickens intelligence and gets rid of evil thoughts."
+			},
+			{
+				"title": "164 POUNDS",
+				"description": "Single amethyst crystals can be huge: the GIA Museum displayed a doubly terminated crystal that weighed 164 pounds."
+			}
+		],
+		"factsInformation": {
+			"mineral": "Quartz",
+			"chemistry": "SiO2",
+			"color": "Purple",
+			"refractiveIndex": "1.544 to 1.553",
+			"specificGravity": "2.66",
+			"mohsHardness": "7",
+			"birefringence": "0.009"
+		},
+		"whyWeLoveGemStone": {
+			"img": "/amirah-details-latest/KNOW YOUR GEMSTONES/AMETHYST.jpg",
+			"data": [
+				{
+					"title": "GEODES",
+					"description": "In gem localities like Brazil, amethyst sometimes forms in hollow, crystal-lined geodes so big you can stand in them."
+				},
+				{
+					"title": "AFFORDABLE",
+					"description": "Even fine amethyst has a modest price tag. Large gems remain affordable as price per carat does not rise dramatically with larger size."
+				},
+				{
+					"title": "AMETRINE",
+					"description": "In Bolivia, amethyst and citrine occur in the same crystal. The unique gems, called ametrine, are half purple and half yellow."
+				}
+			]
+		}
 	}
-}
+]
