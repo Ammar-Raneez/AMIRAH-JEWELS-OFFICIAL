@@ -280,62 +280,6 @@
 		}
 	},
 	{
-		"id": "amethyst",
-		"title": "AMETHYST",
-		"titleText": "The essence of the color purple, amethyst is beautiful enough for crown jewels yet affordable enough for class ring",
-		"titleImage": "/amirah-details-latest/KNOW YOUR GEMSTONES/AMETHYST.jpg",
-		"aboutName": "AMETHYST",
-		"aboutDescriptionArray": [
-			"Amethyst was as expensive as ruby and emerald until the 19th Century, when Brazil’s large deposits were discovered. It was believed to prevent intoxication amethystos means “not drunk” in ancient Greek.",
-			"Today, as the most valued quartz variety, amethyst is in demand for designer pieces and mass-market jewelry alike, and its purple to pastel hues retain wide consumer appeal."
-		],
-		"aboutImage": "/amirah-details-latest/KNOW YOUR GEMSTONES/AMETHYST.jpg",
-		"birthStoneDetails": "Amethyst is the birthstone for February and the gem for the 6th and 17th wedding anniversaries",
-		"treatmentsDetails": "There are a number of processes used to alter the color, apparent clarity, or improve the durability of gems.",
-		"syntheticDetails": "Some gemstones have synthetic counterparts that have essentially the same chemical, physical, and optical properties, but are grown by man in a laboratory",
-		"imitationsDetails": "Any gem can be imitated—sometimes by manmade materials or by natural materials chosen by man to impersonate a particular gem.",
-		"moreDetails": [
-			{
-				"title": "ST. VALENTINE",
-				"description": "The patron of romantic love wore an amethyst ring carved with the image of Cupid"
-			},
-			{
-				"title": "CAMILLO LEONARDI",
-				"description": "The astrologer wrote that amethyst quickens intelligence and gets rid of evil thoughts."
-			},
-			{
-				"title": "164 POUNDS",
-				"description": "Single amethyst crystals can be huge: the GIA Museum displayed a doubly terminated crystal that weighed 164 pounds."
-			}
-		],
-		"factsInformation": {
-			"mineral": "Quartz",
-			"chemistry": "SiO2",
-			"color": "Purple",
-			"refractiveIndex": "1.544 to 1.553",
-			"specificGravity": "2.66",
-			"mohsHardness": "7",
-			"birefringence": "0.009"
-		},
-		"whyWeLoveGemStone": {
-			"img": "/amirah-details-latest/KNOW YOUR GEMSTONES/AMETHYST.jpg",
-			"data": [
-				{
-					"title": "GEODES",
-					"description": "In gem localities like Brazil, amethyst sometimes forms in hollow, crystal-lined geodes so big you can stand in them."
-				},
-				{
-					"title": "AFFORDABLE",
-					"description": "Even fine amethyst has a modest price tag. Large gems remain affordable as price per carat does not rise dramatically with larger size."
-				},
-				{
-					"title": "AMETRINE",
-					"description": "In Bolivia, amethyst and citrine occur in the same crystal. The unique gems, called ametrine, are half purple and half yellow."
-				}
-			]
-		}
-	},
-	{
 		"id": "citrine",
 		"title": "CITRINE",
 		"titleText": "Citrine is the transparent, pale yellow to brownish orange variety of quart",
@@ -779,6 +723,846 @@
 				{
 					"title": "ULTRAMARINE",
 					"description": "Renaissance painters used lapis to make “ultramarine” blue, an expensive pigment of unrivaled brightness and stability."
+				}
+			]
+		}
+	},
+	{
+		"id": "moonstone",
+		"title": "MOONSTONE",
+		"titleText": "A ghostly sheen moves under the surface of this feldspar, like moonlight glowing in water.",
+		"titleImage": "/amirah-details-latest/KNOW YOUR GEMSTONES/MOONSTONE.jpg",
+		"aboutName": "MOONSTONE",
+		"aboutDescriptionArray": [
+			"Moonstone is a variety of the feldspar-group mineral orthoclase. During formation, orthoclase and albite separate into alternating layers. When light falls between these thin layers it is scattered producing the phenomenon called adularescence.",
+			"Adularescence is the light that appears to billow across a gem. Other feldspar minerals can also show adularescence including labradorite and sanidine."
+		],
+		"aboutImage": "/amirah-details-latest/KNOW YOUR GEMSTONES/MOONSTONE.jpg",
+		"birthStoneDetails": "Moonstone is a birthstone for June, along with pearl and alexandrite",
+		"treatmentsDetails": "There are a number of processes used to alter the color, apparent clarity, or improve the durability of gems",
+		"syntheticDetails": "Some gemstones have synthetic counterparts that have essentially the same chemical, physical, and optical properties, but are grown by man in a laboratory.",
+		"imitationsDetails": "Any gem can be imitated—sometimes by manmade materials or by natural materials chosen by man to impersonate a particular gem.",
+		"moreDetails": [
+			{
+				"title": "ADULARESCENCE",
+				"description": "Moonstone’s unearthly glow is caused by light scattering between microscopic layers of feldspar."
+			},
+			{
+				"title": "60%",
+				"description": "The minerals in the feldspar family make up more than half of the Earth’s rocky crust."
+			},
+			{
+				"title": "0.5 MICRONS",
+				"description": "Feldspar layers that create moonstone’s sheen are similar to the size of a wavelength of light."
+			}
+		],
+		"factsInformation": {
+			"mineral": "Feldspar",
+			"chemistry": "KALSi3O8",
+			"color": "Colorless to White, Gray, Green, Peach, Brown",
+			"refractiveIndex": "1.518 to 1.526",
+			"specificGravity": "2.58",
+			"mohsHardness": "6.0 to 6.5",
+			"birefringence": "0.05 to 0.008"
+		},
+		"whyWeLoveGemStone": {
+			"img": "/amirah-details-latest/KNOW YOUR GEMSTONES/MOONSTONE.jpg",
+			"data": [
+				{
+					"title": "RARITY",
+					"description": "Rare in top qualities, this ethereal gem derives from one of the earth's most common mineral"
+				},
+				{
+					"title": "ADULARESCENCE",
+					"description": "Stacked layers of orthoclase and albite diffract light, creating moonstone’s adularescence"
+				},
+				{
+					"title": "ANOTHER PHENOMENA",
+					"description": "Besides adularescence, moonstone sometimes also shows a cat’s-eye effect."
+				}
+			]
+		}
+	},
+	{
+		"id": "morganite",
+		"title": "MORGANITE",
+		"titleText": "Morganite is the pink to orange-pink variety of beryl, a mineral that includes emerald and aquamarine.",
+		"titleImage": "/amirah-details-latest/KNOW YOUR GEMSTONES/MORGANITE.jpg",
+		"aboutName": "MORGANITE",
+		"aboutDescriptionArray": [
+			"Morganite’s subtle color is caused by traces of manganese. Because morganite has distinct pleochroism pale pink and a deeper bluish pink—it’s necessary to orient the rough carefully for fashioning.",
+			"Strong color in morganite is rare, and gems usually have to be large to achieve the finest color."
+		],
+		"aboutImage": "/amirah-details-latest/KNOW YOUR GEMSTONES/MORGANITE.jpg",
+		"birthStoneDetails": "Not considered as a birthstone.",
+		"treatmentsDetails": "There are a number of processes used to alter the color, apparent clarity, or improve the durability of gems.",
+		"syntheticDetails": "Some gemstones have synthetic counterparts that have essentially the same chemical, physical, and optical properties, but are grown by man in a laboratory.",
+		"imitationsDetails": "Any gem can be imitated—sometimes by manmade materials or by natural materials chosen by man to impersonate a particular gem.",
+		"moreDetails": [
+			{
+				"title": "SALMON COLOR",
+				"description": "Untreated morganite often has a strong orange color component, creating a salmon color."
+			},
+			{
+				"title": "SIZE",
+				"description": "Morganite crystals can be large, with specimens from Brazil weighing over 10 kilograms."
+			},
+			{
+				"title": "FINANCE",
+				"description": "Morganite was named after J.P. Morgan, one of the greatest financiers in history."
+			}
+		],
+		"factsInformation": {
+			"mineral": "Feldspar",
+			"chemistry": "KALSi3O8",
+			"color": "Colorless to White, Gray, Green, Peach, Brown",
+			"refractiveIndex": "1.518 to 1.526",
+			"specificGravity": "2.58",
+			"mohsHardness": "6.0 to 6.5",
+			"birefringence": "0.05 to 0.008"
+		},
+		"whyWeLoveGemStone": {
+			"img": "/amirah-details-latest/KNOW YOUR GEMSTONES/MORGANITE.jpg",
+			"data": [
+				{
+					"title": "MULTIPHASE INCLUSIONS",
+					"description": "Morganite can contain liquid inclusions that contain gas bubbles and possibly also solid phases"
+				},
+				{
+					"title": "FLATTER PRISMS",
+					"description": "Morganite forms beautiful hexagonal prism crystals that tend to be flatter than aquamarine crystals"
+				},
+				{
+					"title": "PASTEL",
+					"description": "Morganite often comes in lighter pastel shades of pink"
+				}
+			]
+		}
+	},
+	{
+		"id": "opal",
+		"title": "OPAL",
+		"titleText": "Fireworks. Jellyfish. Galaxies. Lightning. Opal’s shifting play of kaleidoscopic colors is unlike any other gem.",
+		"titleImage": "/amirah-details-latest/KNOW YOUR GEMSTONES/OPAL.jpg",
+		"aboutName": "OPAL",
+		"aboutDescriptionArray": [
+			"Because opal has the colors of other gems, the Romans thought it was the most precious and powerful of all. The Bedouins believed that opals contained lightning and fell from the sky during thunderstorms.",
+			"When Australia’s mines began to produce opals commercially in the 1890s, it quickly became the world’s primary source for this October birthstone"
+		],
+		"aboutImage": "/amirah-details-latest/KNOW YOUR GEMSTONES/OPAL.jpg",
+		"birthStoneDetails": "Opal is an October birthstone",
+		"treatmentsDetails": "There are a number of processes used to alter the color, apparent clarity, or improve the durability of gems.",
+		"syntheticDetails": "Some gemstones have synthetic counterparts that have essentially the same chemical, physical, and optical properties, but are grown by man in a laboratory.",
+		"imitationsDetails": "Any gem can be imitated—sometimes by manmade materials or by natural materials chosen by man to impersonate a particular gem.",
+		"moreDetails": [
+			{
+				"title": "0.2 MICRONS",
+				"description": "Grids of silica spheres 0.2 microns in size create red play-of-color flashes."
+			},
+			{
+				"title": "20% WATER",
+				"description": "Opal contains up to 20% water trapped in its silica structure."
+			},
+			{
+				"title": "1829",
+				"description": "The novel “Anne of Geierstein” gave opal a reputation of being unlucky."
+			}
+		],
+		"factsInformation": {
+			"mineral": "Hydrated Silica",
+			"chemistry": "SiO2*nH2O",
+			"color": "All colors",
+			"refractiveIndex": "1.37 - 1.47",
+			"specificGravity": "2.15",
+			"mohsHardness": "5 to 6.5",
+			"birefringence": "NA"
+		},
+		"whyWeLoveGemStone": {
+			"img": "/amirah-details-latest/KNOW YOUR GEMSTONES/OPAL.jpg",
+			"data": [
+				{
+					"title": "FORMATION",
+					"description": "When opal formed, silica gel filled crevices in rock. As water evaporates, the silica is deposited in the form of tiny spheres."
+				},
+				{
+					"title": "INTERACTION WITH LIGHT",
+					"description": "Opal’s flashing play-of-color is caused by diffraction of light by silica spheres stacked like tiny Ping-Pong balls in a box"
+				},
+				{
+					"title": "UNIQUE",
+					"description": "Opal’s arrays of silica spheres form a fantastic variety of patterns and colors. No two opals are exactly alike."
+				}
+			]
+		}
+	},
+	{
+		"id": "pearls",
+		"title": "PEARLS",
+		"titleText": "Perfect shining spheres. Lustrous baroque forms. Seductive strands, warm to the touch. Pearls are simply and purely organic.",
+		"titleImage": "/amirah-details-latest/KNOW YOUR GEMSTONES/PEARLS.jpg",
+		"aboutName": "PEARLS",
+		"aboutDescriptionArray": [
+			"Perhaps the best-loved gems of all time, pearls—natural and cultured—occur in a wide variety of colors. The most familiar are white and cream, but the palette of colors extends to every hue.",
+			"Natural pearls form around a microscopic irritant in the bodies of certain mollusks. Cultured pearls are the result of the deliberate insertion of a bead or piece of tissue that the mollusk coats with nacre"
+		],
+		"aboutImage": "/amirah-details-latest/KNOW YOUR GEMSTONES/PEARLS.jpg",
+		"birthStoneDetails": "Pearl is the birthstone for June and the gem of the third and thirtieth anniversaries",
+		"treatmentsDetails": "There are a number of processes used to alter the color, apparent clarity, or improve the durability of gems.",
+		"syntheticDetails": "Some gemstones have synthetic counterparts that have essentially the same chemical, physical, and optical properties, but are grown by man in a laboratory.",
+		"imitationsDetails": "Any gem can be imitated—sometimes by manmade materials or by natural materials chosen by man to impersonate a particular gem.",
+		"moreDetails": [
+			{
+				"title": "2206 BC",
+				"description": "A Chinese historian writes about pearls for the first time"
+			},
+			{
+				"title": "653 FIFTH AVENUE",
+				"description": "In 1917, Pierre Cartier traded a double strand of natural pearls for a mansion on Fifth Avenue in New York City."
+			},
+			{
+				"title": "1893",
+				"description": "Kokichi Mikimoto successfully cultures a pearl in Japan."
+			}
+		],
+		"factsInformation": {
+			"mineral": "Calcium Carbonate",
+			"chemistry": "CaCO3",
+			"color": "White, black, gray, yellow, orange, pink, lavender, green, blue",
+			"refractiveIndex": "1.52 - 1.69",
+			"specificGravity": "2.60 - 2.85",
+			"mohsHardness": "2.5 - 3.0",
+			"birefringence": "NA"
+		},
+		"whyWeLoveGemStone": {
+			"img": "/amirah-details-latest/KNOW YOUR GEMSTONES/PEARLS.jpg",
+			"data": [
+				{
+					"title": "LUSTER",
+					"description": "Luster results from reflection of light rays off the pearl’s surface, and from concentric inner layers of nacre, like light bouncing off a convex mirror."
+				},
+				{
+					"title": "IMITATIONS",
+					"description": "Imitation pearls are smooth when rubbed against your teeth, while natural or cultured pearls have a slightly rough texture."
+				},
+				{
+					"title": "NATURAL PEARLS",
+					"description": "Natural pearls can be separated from cultured pearls by taking X-rays to reveal their inner structures."
+				}
+			]
+		}
+	},
+	{
+		"id": "peridot",
+		"title": "PERIDOT",
+		"titleText": "Found in lava, meteorites, and deep in the earth’s mantle, yellow-green peridot is the extreme gem.",
+		"titleImage": "/amirah-details-latest/KNOW YOUR GEMSTONES/PERIDOT.jpg",
+		"aboutName": "PERIDOT",
+		"aboutDescriptionArray": [
+			"The ancient Egyptians mined peridot on the Red Sea island of Zabargad, the source for many large fine peridots in the world’s museums. The Egyptians called it the “gem of the sun.”",
+			"Today this gem is still prized for its restful yellowish green hues and long history. Large strongly-colored, examples can be spectacular, and attractive smaller gems are available for jewelry at all price points"
+		],
+		"aboutImage": "/amirah-details-latest/KNOW YOUR GEMSTONES/PERIDOT.jpg",
+		"birthStoneDetails": "Peridot is the birthstone for August and the 15th anniversary gemstone",
+		"treatmentsDetails": "There are a number of processes used to alter the color, apparent clarity, or improve the durability of gems.",
+		"syntheticDetails": "Some gemstones have synthetic counterparts that have essentially the same chemical, physical, and optical properties, but are grown by man in a laboratory",
+		"imitationsDetails": "Any gem can be imitated—sometimes by manmade materials or by natural materials chosen by man to impersonate a particular gem.",
+		"moreDetails": [
+			{
+				"title": "4.5 BILLION",
+				"description": "Some peridot is ancient: it's found in pallasite meteorites, remnants of our solar system's birth."
+			},
+			{
+				"title": "STARDUST",
+				"description": "In 2005, peridot was found in comet dust brought back from the Stardust robotic space probe."
+			},
+			{
+				"title": "OLIVINE",
+				"description": "Gem variety of the mineral olivine: found in peridotite rock from the earth’s upper mantle"
+			}
+		],
+		"factsInformation": {
+			"mineral": "Olivine",
+			"chemistry": "(MgFe)2SiO4",
+			"color": "Yellowish green",
+			"refractiveIndex": "1.65 to 1.69",
+			"specificGravity": "3.34",
+			"mohsHardness": "6.5 to 7",
+			"birefringence": "0.036 to 0.038"
+		},
+		"whyWeLoveGemStone": {
+			"img": "/amirah-details-latest/KNOW YOUR GEMSTONES/PERIDOT.jpg",
+			"data": [
+				{
+					"title": "EXTRATERRESTRIAL",
+					"description": "Peridot crystals are found in meteorites: some rare extraterrestrial crystals are even big enough to facet as cut gemstones."
+				},
+				{
+					"title": "IRON GEM",
+					"description": "Most gems are colored by impurities such as iron. Peridot's color is intrinsically yellow-green. Higher-quality stones have an intense color."
+				},
+				{
+					"title": "SEEING DOUBLE",
+					"description": "Peridot has extremely high double refraction: when you look closely through the gem, you can see two of each pavilion facet."
+				}
+			]
+		}
+	},
+	{
+		"id": "rose-quartz",
+		"title": "ROSE QUARTZ",
+		"titleText": "Rose quartz is a quartz variety that gets its name from its delicate pink color.",
+		"titleImage": "/amirah-details-latest/KNOW YOUR GEMSTONES/ROSE-QUARTZ.jpg",
+		"aboutName": "ROSE QUARTZ",
+		"aboutDescriptionArray": [
+			"The color of rose quartz ranges from very light pink (almost white) to medium-dark pink. The most appealing color typically occurs in larger sizes; small rose quartz specimens with good color tend to be scarce.",
+			"Rose quartz is usually found in massive form, so well-shaped crystals are highly prized."
+		],
+		"aboutImage": "/amirah-details-latest/KNOW YOUR GEMSTONES/ROSE-QUARTZ.jpg",
+		"birthStoneDetails": "Rose quartz has been recognized as the gem that commemorates the fifth wedding anniversary.",
+		"treatmentsDetails": "There are a number of processes used to alter the color, apparent clarity, or improve the durability of gems.",
+		"syntheticDetails": "Some gemstones have synthetic counterparts that have essentially the same chemical, physical, and optical properties, but are grown by man in a laboratory.",
+		"imitationsDetails": "Any gem can be imitated—sometimes by manmade materials or by natural materials chosen by man to impersonate a particular gem.",
+		"moreDetails": [
+			{
+				"title": "DELICATE COLOR",
+				"description": "The deepest colors often occur in large sizes; small specimens with good color are rare."
+			},
+			{
+				"title": "TRANSLUCENCE",
+				"description": "Microscopic mineral inclusions give this pastel gem a cloudy translucence."
+			},
+			{
+				"title": "SIZ-POINTED STAR",
+				"description": "When rose quartz contains small, well oriented inclusions, it can sometimes show asterism."
+			}
+		],
+		"factsInformation": {
+			"mineral": "Quartz",
+			"chemistry": "SiO2",
+			"color": "Very light pink to medium-dark pink",
+			"refractiveIndex": "1.544 to 1.533",
+			"specificGravity": "2.66",
+			"mohsHardness": "7",
+			"birefringence": "NA"
+		},
+		"whyWeLoveGemStone": {
+			"img": "/amirah-details-latest/KNOW YOUR GEMSTONES/ROSE-QUARTZ.jpg",
+			"data": [
+				{
+					"title": "DELICATE COLOR",
+					"description": "The most appealing color typically occurs in larger sizes. Small specimens generally display lighter shades of pink."
+				},
+				{
+					"title": "PHENOMENAL",
+					"description": "When rose quartz contains numerous small inclusions, it can show a cat’s-eye or the more common star effect."
+				},
+				{
+					"title": "CARVINGS",
+					"description": "Rose quartz has been popular with gem carvers for producing figurines and other small decorative objects."
+				}
+			]
+		}
+	},
+	{
+		"id": "ruby",
+		"title": "RUBY",
+		"titleText": "Rose quartz is a quartz variety that gets its name from its delicate pink color.",
+		"titleImage": "/amirah-details-latest/KNOW YOUR GEMSTONES/RUBY.jpg",
+		"aboutName": "RUBY",
+		"aboutDescriptionArray": [
+			"Rubies can command the highest per-carat price of any colored stone. This makes ruby one of the most important gems in the colored stone market.",
+			"In its purest form, the mineral corundum is colorless. Trace elements that become part of the mineral’s crystal structure cause variations in its color. Chromium is the trace element that causes ruby’s red color."
+		],
+		"aboutImage": "/amirah-details-latest/KNOW YOUR GEMSTONES/RUBY.jpg",
+		"birthStoneDetails": "Ruby is the birthstone for July and the gem for the 15th and 40th anniversaries.",
+		"treatmentsDetails": "There are a number of processes used to alter the color, apparent clarity, or improve the durability of gems.",
+		"syntheticDetails": "Some gemstones have synthetic counterparts that have essentially the same chemical, physical, and optical properties, but are grown by man in a laboratory",
+		"imitationsDetails": "Any gem can be imitated—sometimes by manmade materials or by natural materials chosen by man to impersonate a particular gem.",
+		"moreDetails": [
+			{
+				"title": "RATNARAJ",
+				"description": "In Sanskrit, ruby is ratnaraj, meaning the king of gems."
+			},
+			{
+				"title": "MOGOK",
+				"description": "Myanmar’s legendary valley of rubies; the source of many of the world’s most fabulous gems"
+			},
+			{
+				"title": "$32.4 MILLION",
+				"description": "On May 12, 2015, a 25.59-carat ruby ring sold for $1,266,901 per carat, setting a new record at auction for a colored gemstone."
+			}
+		],
+		"factsInformation": {
+			"mineral": "Corundum",
+			"chemistry": "Al2O3",
+			"color": "Red",
+			"refractiveIndex": "1.762 to 1.770",
+			"specificGravity": "4.00",
+			"mohsHardness": "9",
+			"birefringence": "0.008 to 0.010"
+		},
+		"whyWeLoveGemStone": {
+			"img": "/amirah-details-latest/KNOW YOUR GEMSTONES/RUBY.jpg",
+			"data": [
+				{
+					"title": "INTENSE RED GLOW",
+					"description": "Fine ruby glows with intense red in sunlight thanks to red fluorescence, which intensifies its red color."
+				},
+				{
+					"title": "FIRST LASER",
+					"description": "The first laser was created in1960 using the red fluorescence light emitted by ruby."
+				},
+				{
+					"title": "CHROMIUM",
+					"description": "Chromium causes ruby's red. Gemologists consider it the 'rock star' of trace element."
+				}
+			]
+		}
+	},
+	{
+		"id": "sapphire",
+		"title": "SAPPHIRE",
+		"titleText": "The name “sapphire” can also apply to any corundum that’s not ruby red, another corundum variety.",
+		"titleImage": "/amirah-details-latest/KNOW YOUR GEMSTONES/SAPPHIRE.jpg",
+		"aboutName": "SAPPHIRE",
+		"aboutDescriptionArray": [
+			"Besides blue sapphire and ruby, the corundum family also includes so-called “fancy sapphires.” They come in violet, green, yellow, orange, pink, purple, and intermediate hues.",
+			"Some stones exhibit the phenomenon known as color change, most often going from blue in daylight or fluorescent lighting to purple under incandescent light. Sapphires can even be gray, black, or brown."
+		],
+		"aboutImage": "/amirah-details-latest/KNOW YOUR GEMSTONES/SAPPHIRE.jpg",
+		"birthStoneDetails": "Sapphire is the birthstone for September and the gem of the 5th and 45th anniversaries",
+		"treatmentsDetails": "There are a number of processes used to alter the color, apparent clarity, or improve the durability of gems.",
+		"syntheticDetails": "Some gemstones have synthetic counterparts that have essentially the same chemical, physical, and optical properties, but are grown by man in a laboratory.",
+		"imitationsDetails": "Any gem can be imitated—sometimes by manmade materials or by natural materials chosen by man to impersonate a particular gem.",
+		"moreDetails": [
+			{
+				"title": "KASHMIR",
+				"description": "Intensely saturated and velvety, rare sapphires from Kashmir set the standard for blue."
+			},
+			{
+				"title": "ROYAL BLUE",
+				"description": "The world’s most famous engagement ring: Kate Middleton’s and Princess Diana’s sapphire."
+			},
+			{
+				"title": "PADPARADSCHA",
+				"description": "A rare and valuable pinkish-orange sapphire named from the Sinhalese for lotus blossom."
+			}
+		],
+		"factsInformation": {
+			"mineral": "Corundum",
+			"chemistry": "Al2O3",
+			"color": "Every color but red",
+			"refractiveIndex": "1.762 to 1.770",
+			"specificGravity": "4.00",
+			"mohsHardness": "9",
+			"birefringence": "0.008 to 0.010"
+		},
+		"whyWeLoveGemStone": {
+			"img": "/amirah-details-latest/KNOW YOUR GEMSTONES/SAPPHIRE.jpg",
+			"data": [
+				{
+					"title": "VIVID AND SATURATED",
+					"description": "Sapphire’s blue can be vivid and saturated, like it’s lit from within."
+				},
+				{
+					"title": "DURABLE",
+					"description": "It’s so durable, synthetic sapphire is used for the windows of supermarket scanners and spacecraft."
+				},
+				{
+					"title": "DELICATE SLIK",
+					"description": "Sapphire often contains delicate intersecting needles of rutile that gemologists call silk."
+				}
+			]
+		}
+	},
+	{
+		"id": "spinel",
+		"title": "SPINEL",
+		"titleText": "The Black Prince’s Ruby. The Timur Ruby. For centuries, spinel, the great imposter, masqueraded as ruby in Europe’s crown jewels",
+		"titleImage": "/amirah-details-latest/KNOW YOUR GEMSTONES/SPINEL.jpg",
+		"aboutName": "SPINEL",
+		"aboutDescriptionArray": [
+			"Until recently, spinel was an underappreciated gem with little consumer recognition. Increasing demand for ruby alternatives rekindled appreciation for spinel’s rich red color and history.",
+			"In ancient times, southeast Asia’s mines yielded exceptional large spinel crystals, which became the treasured property of kings and emperors, often passing through many hands as spoils of war."
+		],
+		"aboutImage": "/amirah-details-latest/KNOW YOUR GEMSTONES/SPINEL.jpg",
+		"birthStoneDetails": "Spinel was recently added as an August birthstone, sharing this month with peridot and sardonyx. It has long been mistaken for ruby by emperors and monarchs. Many of the famous “rubies” of history were actually spinels.",
+		"treatmentsDetails": "There are a number of processes used to alter the color, apparent clarity, or improve the durability of gems",
+		"syntheticDetails": "Some gemstones have synthetic counterparts that have essentially the same chemical, physical, and optical properties, but are grown by man in a laboratory.",
+		"imitationsDetails": "Any gem can be imitated—sometimes by manmade materials or by natural materials chosen by man to impersonate a particular gem.",
+		"moreDetails": [
+			{
+				"title": "NAT THWE",
+				"description": "Spinel crystals are so perfect, in Burma they are said to be nat thwe or “polished by the spirits."
+			},
+			{
+				"title": "BLACK PRINCE",
+				"description": "The famous 14th century Black Prince’s Ruby in the British Imperial Crown is actually a red spinel."
+			},
+			{
+				"title": "1783",
+				"description": "Mineralogist Jean Baptiste Louis Rome de Lisle identifies spinel as a different mineral than ruby"
+			}
+		],
+		"factsInformation": {
+			"mineral": "Spinel",
+			"chemistry": "MgAl2O4",
+			"color": "Red, orange, pink, purple, blue, black",
+			"refractiveIndex": "1.718",
+			"specificGravity": "3.60",
+			"mohsHardness": "8",
+			"birefringence": "NA"
+		},
+		"whyWeLoveGemStone": {
+			"img": "/amirah-details-latest/KNOW YOUR GEMSTONES/SPINEL.jpg",
+			"data": [
+				{
+					"title": "STUNNING COLOR",
+					"description": "Singly refractive and often very transparent, red spinel rivals ruby’s color but it costs much less."
+				},
+				{
+					"title": "AMAZING CHROMIUM",
+					"description": "Red spinel is colored by chromium, the same trace element that colors ruby and emerald."
+				},
+				{
+					"title": "BIRTH OF GEMOLOGY",
+					"description": "Distinguishing spinel from ruby gave birth to the science of gemology."
+				}
+			]
+		}
+	},
+	{
+		"id": "sunstone",
+		"title": "SUNSTONE",
+		"titleText": "Sunstone’s phenomenal varieties show a distinct and lively glitter called aventurescence.",
+		"titleImage": "/amirah-details-latest/KNOW YOUR GEMSTONES/SUNSTONE.jpg",
+		"aboutName": "SUNSTONE",
+		"aboutDescriptionArray": [
+			"Sunstone is a member of the feldspar group. Both the orthoclase and the plagioclase feldspar species boast a sunstone variety. Other feldspar group gems include moonstone, non-phenomenal orthoclase, phenomenal and non-phenomenal labradorite, and amazonite.",
+			"Sunstone from Oregon is gaining attention as a natural and untreated product of the United States."
+		],
+		"aboutImage": "/amirah-details-latest/KNOW YOUR GEMSTONES/SUNSTONE.jpg",
+		"birthStoneDetails": "Not considered as a birthstone.",
+		"treatmentsDetails": "There are a number of processes used to alter the color, apparent clarity, or improve the durability of gems.",
+		"syntheticDetails": "Some gemstones have synthetic counterparts that have essentially the same chemical, physical, and optical properties, but are grown by man in a laboratory",
+		"imitationsDetails": "Any gem can be imitated—sometimes by manmade materials or by natural materials chosen by man to impersonate a particular gem.",
+		"moreDetails": [
+			{
+				"title": "FELDSPAR",
+				"description": "Sunstone is a member of the feldspar group of minerals."
+			},
+			{
+				"title": "AVENTURESCENCE",
+				"description": "Sunstone can have a sparkly, metallic-looking luster caused by flat, reflective inclusions."
+			},
+			{
+				"title": "OREGON",
+				"description": "Oregon sunstone is a transparent feldspar with glittery copper inclusions."
+			}
+		],
+		"factsInformation": {
+			"mineral": "Feldspar",
+			"chemistry": "Orthoclase, labradorite",
+			"color": "Yellow, green, red, red-brown, colorless",
+			"refractiveIndex": "1.518 - 1.568",
+			"specificGravity": "2.58 - 2.70",
+			"mohsHardness": "6.0 - 7.2",
+			"birefringence": "0.005 - 0.010"
+		},
+		"whyWeLoveGemStone": {
+			"img": "/amirah-details-latest/KNOW YOUR GEMSTONES/SUNSTONE.jpg",
+			"data": [
+				{
+					"title": "GLITTERY",
+					"description": "Reflective inclusions in sunstone’s phenomenal varieties cause a distinct and lively glitter called aventurescence."
+				},
+				{
+					"title": "NATURAL",
+					"description": "Oregon sunstone’s colors don’t result from treatment. The gem’s all natural and it’s mined in the United States."
+				},
+				{
+					"title": "'SPINEL RED'",
+					"description": "Red-colored Oregon sunstone is often marketed to consumers as “spinel red.” Its vivid hue rivals spinel and even ruby."
+				}
+			]
+		}
+	},
+	{
+		"id": "tanznanite",
+		"title": "TAZNANITE",
+		"titleText": "Poised between lush blue, vibrant violet, and rich purple, exotic tanzanite is found in only one place on earth, near majestic Mount Kilimanjar",
+		"titleImage": "/amirah-details-latest/KNOW YOUR GEMSTONES/TAZNANITE.jpg",
+		"aboutName": "TAZNANITE",
+		"aboutDescriptionArray": [
+			"Found in just one place on earth, tanzanite is a relatively recent discovery. Tiffany & Co named this blue-violet variety of zoisite in honor of Tanzania, where it was first unearthed in 1967.",
+			"Because the crystals show different colors depending on the viewing direction, cutters can fashion gems with a range of color from violetish blue to bluish violet depending on how much weight they want to retain from the rough."
+		],
+		"aboutImage": "/amirah-details-latest/KNOW YOUR GEMSTONES/TAZNANITE.jpg",
+		"birthStoneDetails": "Tanzanite is a birthstone for December, along with zircon, turquoise, and blue topaz. Tanzanite is also the gem for a 24th anniversary",
+		"treatmentsDetails": "There are a number of processes used to alter the color, apparent clarity, or improve the durability of gems.",
+		"syntheticDetails": "Some gemstones have synthetic counterparts that have essentially the same chemical, physical, and optical properties, but are grown by man in a laboratory",
+		"imitationsDetails": "Any gem can be imitated—sometimes by manmade materials or by natural materials chosen by man to impersonate a particular gem.",
+		"moreDetails": [
+			{
+				"title": "MERELANI",
+				"description": "Tanzanite has only one source: the hills of Merelani in northern Tanzania."
+			},
+			{
+				"title": "1967",
+				"description": "Masai tribesman Ali Juuyawatu is credited with finding the first tanzanite crystal"
+			},
+			{
+				"title": "PLEOCHROIC",
+				"description": "Tilt tanzanite and you’ll see three distinct colors in three crystal directions"
+			}
+		],
+		"factsInformation": {
+			"mineral": "Zoisite",
+			"chemistry": "Ca2Al3(SiO4)3(OH)",
+			"color": "Violet blue to bluish violet to violet purple",
+			"refractiveIndex": "1.691 to 1.700",
+			"specificGravity": "3.35",
+			"mohsHardness": "6 to 7",
+			"birefringence": "0.008 - 0.013"
+		},
+		"whyWeLoveGemStone": {
+			"img": "/amirah-details-latest/KNOW YOUR GEMSTONES/TAZNANITE.jpg",
+			"data": [
+				{
+					"title": "PLEOCHROIC",
+					"description": "Tanzanite is pleochroic, showing three different colors when viewed from different directions."
+				},
+				{
+					"title": "ONE PLACE ON EARTH",
+					"description": "Commercially mined in only one place, tanzanite is rarer than diamond."
+				},
+				{
+					"title": "RICH BLUE",
+					"description": "Tanzanite's rich blue-to-violet hues can be exceptionally beautiful."
+				}
+			]
+		}
+	},
+	{
+		"id": "topaz",
+		"title": "TOPAZ",
+		"titleText": "Honey yellow. Fiery orange. Cyclamen pink. Icy blue. In warm or cool tones, topaz is a lustrous and brilliant gem",
+		"titleImage": "/amirah-details-latest/KNOW YOUR GEMSTONES/TOPAZ.jpg",
+		"aboutName": "TOPAZ",
+		"aboutDescriptionArray": [
+			"Topaz actually has an exceptionally wide color range that, besides brown, includes various tones and saturations of blue, green, yellow, orange, red, pink, and purple.",
+			"Colorless topaz is plentiful, and is often treated to give it a blue color. Topaz is also pleochroic, meaning that the gem can show different colors in different crystal directions"
+		],
+		"aboutImage": "/amirah-details-latest/KNOW YOUR GEMSTONES/TOPAZ.jpg",
+		"birthStoneDetails": "Precious topaz is a birthstone for November and blue topaz is a birthstone for December. Blue topaz is the gem of the 4th anniversary and Imperial topaz is the gem of the 23rd anniversary.",
+		"treatmentsDetails": "There are a number of processes used to alter the color, apparent clarity, or improve the durability of gems",
+		"syntheticDetails": "Some gemstones have synthetic counterparts that have essentially the same chemical, physical, and optical properties, but are grown by man in a laboratory.",
+		"imitationsDetails": "Any gem can be imitated—sometimes by manmade materials or by natural materials chosen by man to impersonate a particular gem.",
+		"moreDetails": [
+			{
+				"title": "1768",
+				"description": "The royal court in Portugal celebrates the discovery of Imperial topaz in 1768."
+			},
+			{
+				"title": "271 KILOS",
+				"description": "A transparent topaz crystal discovered in Minas Gerais, Brazil weighs an astounding 596 pounds."
+			},
+			{
+				"title": "10 MEV",
+				"description": "Irradiating colorless topaz with electrons at energy of 10 million electron volts creates a sky blue color."
+			}
+		],
+		"factsInformation": {
+			"mineral": "Topaz",
+			"chemistry": "Al2(F,OH)2SiO4",
+			"color": "Yellow, orange, brown, pink to red to purple red, blue, light green and colorless",
+			"refractiveIndex": "1.619 to 1.627",
+			"specificGravity": "3.53",
+			"mohsHardness": "8",
+			"birefringence": "0.008 - 0.010"
+		},
+		"whyWeLoveGemStone": {
+			"img": "/amirah-details-latest/KNOW YOUR GEMSTONES/TOPAZ.jpg",
+			"data": [
+				{
+					"title": "KILOS",
+					"description": "Topaz comes in some of the gem world’s largest crystals: the largest are kilos, not carats."
+				},
+				{
+					"title": "SLIPPERY",
+					"description": "Faceted topaz takes such a high polish it’s slightly slippery to the touch."
+				},
+				{
+					"title": "PLEOCHROIC",
+					"description": "Topaz is pleochroic, displaying different colors in different crystal directions."
+				}
+			]
+		}
+	},
+	{
+		"id": "tourmaline",
+		"title": "TOURMALINE",
+		"titleText": "Tourmalines have a wide variety of exciting colors with one of the widest color ranges of any gem.",
+		"titleImage": "/amirah-details-latest/KNOW YOUR GEMSTONES/TOURMALINE.jpg",
+		"aboutName": "TOPAZ",
+		"aboutDescriptionArray": [
+			"Tourmaline’s colors have many different causes. It’s generally agreed that traces of iron, and possibly titanium, induce green and blue colors.",
+			"Manganese produces reds and pinks, and possibly yellows. Some pink and yellow tourmalines might owe their hues to color centers caused by radiation, which can be natural or laboratory-induced."
+		],
+		"aboutImage": "/amirah-details-latest/KNOW YOUR GEMSTONES/TOURMALINE.jpg",
+		"birthStoneDetails": "Tourmaline is a birthstone for October, along with opal. Tourmaline is also the gem of the eighth anniversary",
+		"treatmentsDetails": "There are a number of processes used to alter the color, apparent clarity, or improve the durability of gems.",
+		"syntheticDetails": "Some gemstones have synthetic counterparts that have essentially the same chemical, physical, and optical properties, but are grown by man in a laboratory.",
+		"imitationsDetails": "Any gem can be imitated—sometimes by manmade materials or by natural materials chosen by man to impersonate a particular gem.",
+		"moreDetails": [
+			{
+				"title": "1554",
+				"description": "Francisco Spinoza’s expedition discovers “Brazilian emerald”: the first recorded green tourmaline."
+			},
+			{
+				"title": "PYROELECTRIC",
+				"description": "Tourmaline becomes electrically charged when heated. Also when squeezed: it’s piezoelectric too."
+			},
+			{
+				"title": "PARAIBA",
+				"description": "Brazilian source famous for vivid blue to green tourmalines colored by copper"
+			}
+		],
+		"factsInformation": {
+			"mineral": "Topaz",
+			"chemistry": "Elbaite, Dravite, Liddicoattite, Chromedravite",
+			"color": "All colors",
+			"refractiveIndex": "1.624 to 1.644",
+			"specificGravity": "3.06",
+			"mohsHardness": "7 to 7.5",
+			"birefringence": "0.018 to 0.040"
+		},
+		"whyWeLoveGemStone": {
+			"img": "/amirah-details-latest/KNOW YOUR GEMSTONES/TOURMALINE.jpg",
+			"data": [
+				{
+					"title": "TRIGONAL SYSTEM",
+					"description": "Tourmaline crystallizes in the trigonal system; no other common mineral has three-sided prisms."
+				},
+				{
+					"title": "WATERMELON VARIETY",
+					"description": "Watermelon tourmaline is green on the outside and a delicious pink on the inside."
+				},
+				{
+					"title": "LIDDICOATITE",
+					"description": "Liddicoatite tourmaline was named for beloved former GIA President Richard T. Liddicoat."
+				}
+			]
+		}
+	},
+	{
+		"id": "turquoise",
+		"title": "TURQUOISE",
+		"titleText": "Azure sky, robin’s egg blue: Vivid shades of turquo define the color that’s named after this gem.",
+		"titleImage": "/amirah-details-latest/KNOW YOUR GEMSTONES/TURQUOISE.jpg",
+		"aboutName": "TOPAZ",
+		"aboutDescriptionArray": [
+			"Turquoise is found in only a few places on earth: dry and barren regions where acidic, copper-rich groundwater seeps downward and reacts with minerals that contain phosphorus and aluminum.",
+			"The result of this sedimentary process is a porous, semitranslucent to opaque compound of hydrated copper and aluminum phosphate."
+		],
+		"aboutImage": "/amirah-details-latest/KNOW YOUR GEMSTONES/TURQUOISE.jpg",
+		"birthStoneDetails": "Tourmaline is a birthstone for October, along with opal. Tourmaline is also the gem of the eighth anniversary",
+		"treatmentsDetails": "Turquoise is the traditional birthstone for the month of December and the gem of the 11th anniversary.",
+		"syntheticDetails": "Some gemstones have synthetic counterparts that have essentially the same chemical, physical, and optical properties, but are grown by man in a laboratory",
+		"imitationsDetails": "Any gem can be imitated—sometimes by manmade materials or by natural materials chosen by man to impersonate a particular gem.",
+		"moreDetails": [
+			{
+				"title": "4,000 BC",
+				"description": "Turquoise buried in Ancient Egyptian tombs is among the world’s oldest jewelry"
+			},
+			{
+				"title": "MEFKAT",
+				"description": "Ancient Egyptians called turquoise “mefkat,” which also means “joy” and “delight.”"
+			},
+			{
+				"title": "1519",
+				"description": "Montezuma, thinking Cortes was Quetzalcoatl, gave him the god’s favorite gem: turquoise."
+			}
+		],
+		"factsInformation": {
+			"mineral": "Turquoise",
+			"chemistry": "CuAl6(PO4)4 (OH)8*5H2O",
+			"color": "Blue to green",
+			"refractiveIndex": "1.610 to 1.650",
+			"specificGravity": "2.76",
+			"mohsHardness": "5 to 6",
+			"birefringence": "NA"
+		},
+		"whyWeLoveGemStone": {
+			"img": "/amirah-details-latest/KNOW YOUR GEMSTONES/TURQUOISE.jpg",
+			"data": [
+				{
+					"title": "SPIDERWEB",
+					"description": "The spiderweb of veins that appear in turquoise are matrix: evidence of the surrounding rock."
+				},
+				{
+					"title": "LEGACY",
+					"description": "A legacy of turquoise appreciation spans the globe, from ancient Egypt to Mesoamerica to China."
+				},
+				{
+					"title": "COPPER",
+					"description": "Turquoise is colored by copper, which creates some of the most vivid blues and greens in gems."
+				}
+			]
+		}
+	},
+	{
+		"id": "zircon",
+		"title": "ZIRCON",
+		"titleText": "Zircon is a colorful gem with high refraction and fire that’s unfairly confused with cubic zirconia",
+		"titleImage": "/amirah-details-latest/KNOW YOUR GEMSTONES/ZIRCON.jpg",
+		"aboutName": "ZIRCON",
+		"aboutDescriptionArray": [
+			"Colorless zircon is known for its brilliance and flashes of multicolored light, called fire. These zircon properties are close enough to the properties of diamond to account for centuries of confusion between the two gems.",
+			"Zircon occurs in an array of colors. Its varied palette of yellow, green, red, reddish brown, and blue hues makes it a favorite among collectors as well as informed consumers"
+		],
+		"aboutImage": "/amirah-details-latest/KNOW YOUR GEMSTONES/ZIRCON.jpg",
+		"birthStoneDetails": "Turquoise is the traditional birthstone for the month of December and the gem of the 11th anniversary",
+		"treatmentsDetails": "There are a number of processes used to alter the color, apparent clarity, or improve the durability of gems.",
+		"syntheticDetails": "Some gemstones have synthetic counterparts that have essentially the same chemical, physical, and optical properties, but are grown by man in a laboratory",
+		"imitationsDetails": "Any gem can be imitated—sometimes by manmade materials or by natural materials chosen by man to impersonate a particular gem.",
+		"moreDetails": [
+			{
+				"title": "4.4 BILLION",
+				"description": "Zircon found in Australia is the oldest mineral on earth."
+			},
+			{
+				"title": "METAMICTIZATION",
+				"description": "Zircon sometimes contains traces of uranium, irradiating itself and changing its properties."
+			},
+			{
+				"title": "MATARA",
+				"description": "Colorless zircon is called “Matara” zircon after a city in Sri Lanka near where it is mined"
+			}
+		],
+		"factsInformation": {
+			"mineral": "Zircon",
+			"chemistry": "ZrSiO4",
+			"color": "Blue, red, yellow, orange, brown, green",
+			"refractiveIndex": "1.925 - 1.815",
+			"specificGravity": "3.9 to 4.73",
+			"mohsHardness": "6 to 7.5",
+			"birefringence": "0 to 0.059"
+		},
+		"whyWeLoveGemStone": {
+			"img": "/amirah-details-latest/KNOW YOUR GEMSTONES/ZIRCON.jpg",
+			"data": [
+				{
+					"title": "GROLOGICAL CLOCK",
+					"description": "With radioactive trace elements that tick off time, zircon is a geological clock that tells us about the early earth."
+				},
+				{
+					"title": "BRILLIANCE AND FIRE",
+					"description": "Zircon has very high luster, refractive indices, and dispersion, giving it lots of brilliance and rainbow flashes of fire."
+				},
+				{
+					"title": "DOUBLE-DOUBLE",
+					"description": "Zircon’s pronounced double refraction means you can see twice as many facets and twice as much fire"
 				}
 			]
 		}
