@@ -77,8 +77,13 @@
 .gemStonesMain__otherGemsRow {
 	display: flex;
 	align-items: center;
+	flex-wrap: wrap;
 	justify-content: space-evenly;
+	/* overflow-x: scroll; */
 }
+/* .gemStonesMain__otherGemsRow::-webkit-scrollbar {
+	display: none;
+} */
 
 @media screen and (max-width: 900px) and (min-width: 450px) {
 	.gemStonesMain__detailsFirst > div > h1 {

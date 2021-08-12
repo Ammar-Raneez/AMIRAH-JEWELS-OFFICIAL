@@ -17,7 +17,7 @@
 }
 .gem > a > img {
 	object-fit: contain;
-	height: 220px;
+	height: 180px;
 }
 .gem > a {
 	text-decoration: none;
