@@ -1,0 +1,14 @@
+.rings-page-main__rings {
+    display: flex;
+}
+
+.rings-page-main__rings > div > div {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+.rings-page-main__rings > div > div > div {
+    width: 200px;
+}

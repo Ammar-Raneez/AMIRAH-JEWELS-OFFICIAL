@@ -35,6 +35,7 @@ import { changeSymbol } from './features/currencySymbolSlice';
 import GemDetailPage from './pages/GemsPages/update/GemDetailPage';
 import { ringData } from './pages/RingsPages/ringData';
 import gemData from './gemData.json';
+import RingsPageMain from './pages/RingsPages/RingsPageMain';
 
 function App() {
 	// const [{ wishListBasket, cartBasket, user }, dispatch] = useStateValue();
@@ -160,6 +161,12 @@ function App() {
 					</Route>
 
 					{/* all rings */}
+					<Route path="/all-rings" exact={true}>
+						<TopBar />
+						<Header />
+						<RingsPageMain />
+					</Route>
+
 					{ringData.map((ring) => (
 						<Route path={`/rings/` + ring.id}>
 							<TopBar isSpecificProduct={true} />
@@ -179,7 +186,7 @@ function App() {
 
 					{gemData.map((gem) => (
 						<Route path={`/gems/${gem.id}`}>
-							<TopBar />
+							<TopBar isSpecificProduct={true} />
 							<Header />
 							<GemDetailPage data={gem} />
 							<Footer />

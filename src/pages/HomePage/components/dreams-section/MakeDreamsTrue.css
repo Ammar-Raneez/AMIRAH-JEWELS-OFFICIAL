@@ -8,12 +8,12 @@
 /* ---------------------------TOP SECTION-------------------------- */
 .homePage__makeDreamsTrue__topImage {
 	object-fit: contain;
-	height: 28vw;
+	height: 22vw;
 }
 .homePage__makeDreamsTrue > .css-1gzxeik > h1 {
 	font-family: bowie;
 	color: #878787;
-	font-size: 3.5vw;
+	font-size: 2.5vw;
 	margin-top: 3vw;
 	font-weight: lighter;
 }
@@ -40,7 +40,7 @@
 .homePage__makeDreamsTrue__topPrices > .css-17ud6we > h1 {
 	color: #707070;
 	font-family: Quattrocento-Regular;
-	font-size: 2vw;
+	font-size: 1.7vw;
 	font-weight: bold;
 	align-self: flex-end;
 }
@@ -49,16 +49,16 @@
 	font-family: Quattrocento-Regular;
 	font-weight: lighter;
 	align-self: flex-end;
-	font-size: 2vw;
+	font-size: 1.7vw;
 }
 .homePage__makeDreamsTrue__topPurchase > .css-2qfv45 > h1 {
 	color: #707070;
 	font-family: Quattrocento-Regular;
-	font-size: 3vw;
+	font-size: 2.2vw;
 	font-weight: lighter;
 }
 .homePage__makeDreamsTrue__topPurchase > .css-2qfv45 > p {
-	font-size: 2vw;
+	font-size: 1.5vw;
 	font-family: Quattrocento-Regular;
 	align-self: flex-end;
 	color: #808080;
@@ -70,7 +70,7 @@
 	font-family: Quattrocento-Regular;
 	outline: none;
 	margin-top: 3vh;
-	font-size: 1.2vw;
+	font-size: 1.3vw;
 	border-radius: 1vw;
 	background-color: transparent;
 	cursor: pointer;
@@ -81,20 +81,21 @@
 /* ----------------------------MIDDLE SECTION---------------------------- */
 .homePage__makeDreamsTrue__middle {
 	display: flex;
-	margin-top: 18vw;
+	margin-top: 12vw;
 	align-items: center;
 	width: 100%;
 }
 .homePage__makeDreamsTrue__middle__image {
 	object-fit: contain;
-	height: 18vw;
+	height: 15vw;
 	position: absolute;
 	right: 0vw;
+	margin-top: -7vw;
 }
 .homePage__makeDreamsTrue__middleText {
 	height: 10vw;
 	padding-left: 8vw;
-	width: 30vw;
+	width: 45vw;
 	display: flex;
 	font-family: Quattrocento-Regular;
 	color: #707070;
@@ -107,7 +108,7 @@
 /* -----------------------------BOTTOM SECTION------------------------ */
 .homePage__makeDreamsTrue__bottom {
 	display: flex;
-	margin-top: 18vw;
+	margin-top: 10vw;
 	margin-bottom: 5vw;
 	flex-direction: column;
 	width: 100%;
@@ -116,7 +117,7 @@
 }
 .homePage__makeDreamsTrue__bottom > .css-1gzxeik > p {
 	font-family: Quattrocento-Regular;
-	font-size: 1.8vw;
+	font-size: 1.5vw;
 	color: #707070;
 }
 .homePage__makeDreamsTrue__bottomImageDetail {
@@ -172,7 +173,7 @@
 .homePage__makeDreamsTrue__bottomImageDetailFirstPurity > .css-2qfv45:first-child > p {
 	font-family: Quattrocento-Regular;
 	color: #909090;
-	font-size: 1.2vw;
+	font-size: 1vw;
 	border-bottom: 0.1vw #b1b1b1 solid;
 	padding-bottom: 0.5vw;
 }
@@ -190,7 +191,7 @@
 .homePage__makeDreamsTrue__bottomImageDetailFirstMetalWeight > .css-2qfv45:last-child > p,
 .homePage__makeDreamsTrue__bottomImageDetailFirstPurity > .css-2qfv45:last-child > p  {
 	font-family: Quattrocento-Regular;
-	font-size: 1.7vw;
+	font-size: 1.3vw;
 	padding-top: 0.5vw;
 	color: #606060;
 }

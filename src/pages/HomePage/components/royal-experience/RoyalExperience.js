@@ -3,13 +3,12 @@ import './RoyalExperience.css'
 import CalendarTodayIcon from '@material-ui/icons/CalendarToday';
 import RoomServiceIcon from '@material-ui/icons/RoomService';
 import MonetizationOnIcon from '@material-ui/icons/MonetizationOn';
-import { Fade, Slide } from 'react-awesome-reveal';
-import FavoriteIcon from '@material-ui/icons/Favorite';
+import { Fade } from 'react-awesome-reveal';
 
 function RoyalExperience() {
     return (
         <div className="homePage__middleSection">
-            <Fade>
+            <Fade triggerOnce style={{ display: 'flex', width: '100%' }}>
                 <div className="homePage__middleSectionTitle">
                     THE ROYAL EXPERIENCE
                 </div>

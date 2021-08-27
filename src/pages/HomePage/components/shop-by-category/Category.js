@@ -5,13 +5,13 @@ import './Category.css'
 function Category() {
     return (
         <div id="category" className="homePage__category">
-            <Fade cascade>
+            <Fade cascade triggerOnce>
                 <p className="homePage__categoryTitle">Shop By Category</p>
                 <p className="homePage__categorySubTitle">Brilliant design and craftsmanship.</p>
             </Fade>
 
             <div className="homePage__categoryRow">
-                <Fade direction="right">
+                <Fade direction="right" triggerOnce>
                     <a href="/necklace+pendants">
                         <div className="homePage__categoryEach">
                             <img alt="necklace-category" src="homepage category/necklace.png" />

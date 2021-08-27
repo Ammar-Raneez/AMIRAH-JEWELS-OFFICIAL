@@ -19,7 +19,7 @@ function Header() {
 				>
 					<div>
 						<Link
-							onClick={() => {
+							onMouseOver={() => {
 								setProductsClicked(!productsClicked);
 								setAboutUsClicked(false);
 							}}
@@ -31,7 +31,7 @@ function Header() {
 							<div className="header__optionsProductDetails">
 								<div>
 									<p style={{ color: '#656565', fontWeight: '600' }}>Shop by Category</p>
-									<Link className="header__optionsProductDetail" to="/rings/SORG020"><span>Rings</span></Link>
+									<Link className="header__optionsProductDetail" to="/all-rings"><span>Rings</span></Link>
 									<Link className="header__optionsProductDetail" to="/earrings"><span>Earrings</span></Link>
 									<Link className="header__optionsProductDetail" to="/bracelets"><span>Bracelets</span></Link>
 									<Link className="header__optionsProductHidden header__optionsProductDetail" to="/necklace+pendants"><span>Necklaces & Pendants</span></Link>
@@ -77,7 +77,7 @@ function Header() {
 				>
 					<div>
 						<Link
-							onClick={() => {
+							onMouseOver={() => {
 								setAboutUsClicked(!aboutUsClicked);
 								setProductsClicked(false);
 							}}

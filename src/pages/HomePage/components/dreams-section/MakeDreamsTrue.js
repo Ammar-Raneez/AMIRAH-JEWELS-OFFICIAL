@@ -1,5 +1,4 @@
 import { Fade, Slide } from 'react-awesome-reveal';
-import { useStateValue } from '../../../../StateProvider';
 import './MakeDreamsTrue.css';
 import formatCurrency from 'format-currency';
 import { useSelector } from 'react-redux';
@@ -13,21 +12,21 @@ function MakeDreamsTrue() {
 	return (
 		<div className="homePage__makeDreamsTrue">
 			{/* title */}
-			<Fade>
+			<Fade triggerOnce>
 				<h1>MAKE YOUR DREAMS COME TRUE.</h1>
 			</Fade>
 
 			{/* top ring section */}
 			<div className="homePage__makeDreamsTrue__top">
 				<div className="homePage__makeDreamsTrue__topPurchase">
-					<Slide>
+					<Slide triggerOnce>
 						<h1>Solitaire Ring</h1>
 						<p>Yellow</p>
 						<button>PURCHASE</button>
 					</Slide>
 				</div>
 
-				<Fade>
+				<Fade triggerOnce>
 					<img
 						src="homepage-dreams/PINK SAPPHIRE RING 2.png"
 						className="homePage__makeDreamsTrue__topImage"
@@ -35,7 +34,7 @@ function MakeDreamsTrue() {
 					/>
 				</Fade>
 				<div className="homePage__makeDreamsTrue__topPrices">
-					<Slide direction="right">
+					<Slide direction="right" triggerOnce>
 						<h1>PRICE</h1>
 						<h2>{currencySymbol} {formatCurrency(Math.round(4500 * currencyRate * 100) / 100)}</h2>
 					</Slide>
@@ -45,7 +44,7 @@ function MakeDreamsTrue() {
 			{/* middle ring section */}
 			<div className="homePage__makeDreamsTrue__middle">
 				<div className="homePage__makeDreamsTrue__middleText">
-					<Slide>
+					<Slide triggerOnce>
 						<p className="homePage__makeDreamsTrue__middleTextFirst">
 							Sapphire engagement rings have increasingly been the choice for brides looking for more
 							economical, personal, and unique choices.
@@ -57,7 +56,7 @@ function MakeDreamsTrue() {
 					</Slide>
 				</div>
 				{/* <Slide direction="right"> */}
-				<Fade>
+				<Fade triggerOnce>
 					<img
 						className="homePage__makeDreamsTrue__middle__image"
 						src="homepage-dreams/PINK SAPPHIRE RING.png"
@@ -69,49 +68,49 @@ function MakeDreamsTrue() {
 
 			{/* bottom ring section */}
 			<div className="homePage__makeDreamsTrue__bottom">
-				<Fade>
+				<Fade triggerOnce>
 					<p>Technical information</p>
 				</Fade>
 
 				<div className="homePage__makeDreamsTrue__bottomImageDetail">
 					<div className="homePage__makeDreamsTrue__bottomImageDetailFirst">
 						<div className="homePage__makeDreamsTrue__bottomImageDetailFirstHeight">
-							<Slide>
+							<Slide triggerOnce>
 								<p>HEIGHT</p>
 								<p>25.1 mm</p>
 							</Slide>
 						</div>
 						<div className="homePage__makeDreamsTrue__bottomImageDetailFirstWidth">
-							<Slide>
+							<Slide triggerOnce>
 								<p>WIDTH</p>
 								<p>21.5 mm</p>
 							</Slide>
 						</div>
 						<div className="homePage__makeDreamsTrue__bottomImageDetailFirstThickness">
-							<Slide>
+							<Slide triggerOnce>
 								<p>THICKNESS</p>
 								<p>1.7 mm</p>
 							</Slide>
 						</div>
 					</div>
-					<Fade>
+					<Fade triggerOnce>
 						<img src="homepage-dreams/PINK SAPPHIRE RING 3.png" alt="" />
 					</Fade>
 					<div className="homePage__makeDreamsTrue__bottomImageDetailSecond">
 						<div className="homePage__makeDreamsTrue__bottomImageDetailFirstWeight">
-							<Slide direction="right">
+							<Slide direction="right" triggerOnce>
 								<p>WEIGHT</p>
 								<p>1.292 get</p>
 							</Slide>
 						</div>
 						<div className="homePage__makeDreamsTrue__bottomImageDetailFirstMetalWeight">
-							<Slide direction="right">
+							<Slide direction="right" triggerOnce>
 								<p>METAL WEIGHT</p>
 								<p>2.77 gm</p>
 							</Slide>
 						</div>
 						<div className="homePage__makeDreamsTrue__bottomImageDetailFirstPurity">
-							<Slide direction="right">
+							<Slide direction="right" triggerOnce>
 								<p>PURITY</p>
 								<p>18 gk</p>
 							</Slide>

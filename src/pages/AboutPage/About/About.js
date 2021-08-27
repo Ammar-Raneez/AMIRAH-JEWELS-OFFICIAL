@@ -11,7 +11,7 @@ function About({ seoTitle, title, firstPara, secondHeader, secondSubHeader, seco
 				<Fade direction="left">
 					{/* jewel image */}
 					<div className="aboutPageCompanyTop__firstJewel">
-						<img src="aboutuspage/purple-sapphire.png" alt="" />
+						{/* <img src="aboutuspage/purple-sapphire.png" alt="" /> */}
 					</div>
 
 					<div className="aboutPageCompanyTop__middleContent">
@@ -21,7 +21,7 @@ function About({ seoTitle, title, firstPara, secondHeader, secondSubHeader, seco
 
 					{/* jewel image */}
 					<div className="aboutPageCompanyTop__lastJewel">
-						<img src="aboutuspage/purple-sapphire.png" alt="" />
+						{/* <img src="aboutuspage/purple-sapphire.png" alt="" /> */}
 					</div>
 				</Fade>
 			</div>

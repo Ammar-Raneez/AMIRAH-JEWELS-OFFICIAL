@@ -174,9 +174,6 @@ function Footer() {
 						<p>
 							<Link>Business Accounts</Link>
 						</p>
-						<p>
-							<Link>Amirah some shit</Link>
-						</p>
 					</div>
 				</div>
 				<div className="footer__topRight">
@@ -238,7 +235,7 @@ function Footer() {
 						</div>
 					)}
 				</div>
-				<p className="footer__bottomText">{`© AmirahGems. ${date}`}</p>
+				<p className="footer__bottomText">{`© AmirahGems. ${date}. Powered By Omiga`}</p>
 
 				{/* The below one is just duplicated for styling 🤣 ignore that */}
 				<div className="footer__bottomCountryLeft">

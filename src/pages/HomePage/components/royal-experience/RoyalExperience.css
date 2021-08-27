@@ -16,12 +16,16 @@
 }
 
 .homePage__middleSectionTitle {
-    font-size: 3.5vw;
+    font-size: 2.5vw;
     font-family: boowie;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    padding: 3vw 0 1vw 3vw;
 }
 
-.homePage__middleSectionTitle, .homePage__middleSectionMiddleContainer {
-    padding: 3vw;
+.homePage__middleSectionMiddleContainer {
+    padding: 1vw 2vw 3vw 2vw;
 }
 
 .homePage__middleSectionMiddleContainer {
@@ -38,19 +42,19 @@
 }
 
 .homePage__middleSectionMiddleContainer div .MuiSvgIcon-root {
-    font-size: 6vw !important;
+    font-size: 5vw !important;
     color: rgb(252, 203, 160) !important;
 }
 
 .homePage__middleSectionMiddleContainer div p {
-    font-size: 2vw;
+    font-size: 1.3vw;
     text-align: center;
     margin-top: 2vw;
     font-family: 'Quattrocento', serif;
 }
 
 .homePage__middleSectionMiddleContainerDesc {
-    font-size: 1.5vw !important;
+    font-size: 1.3vw !important;
 }
 
 @media screen and (max-width: 768px) and (min-width: 400px) {
