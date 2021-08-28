@@ -12,12 +12,12 @@
 	align-items: center;
 	justify-content: center;
 	flex-direction: column;
-	width: 210px;
+	/* width: 210px; */
 	margin: 16px;
 }
 .gem > a > img {
 	object-fit: contain;
-	height: 180px;
+	height: 200px;
 }
 .gem > a {
 	text-decoration: none;

@@ -1,15 +1,14 @@
-import { Paper } from '@material-ui/core';
-import './Gem.css';
+import { Paper } from "@material-ui/core";
+import "./Gem.css";
 
-function Gem({ img, name, viewMoreUrl }) {
-	return (
-		<Paper className="gem">
-			<a href={viewMoreUrl}>
-				<img src={img} alt="" />
-				<p>{name}</p>
-			</a>
-		</Paper>
-	);
+function Gem({ viewMoreUrl, cardImage }) {
+  return (
+    <Paper className="gem">
+      <a href={viewMoreUrl}>
+        <img src={cardImage} alt="" />
+      </a>
+    </Paper>
+  );
 }
 
 export default Gem;
