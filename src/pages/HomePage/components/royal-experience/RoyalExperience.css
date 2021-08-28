@@ -1,98 +1,123 @@
-@import url('https://fonts.googleapis.com/css2?family=Quattrocento&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Quattrocento&display=swap");
 @font-face {
-    font-family: boowie;
-    src: url(BOOWIE.ttf);
+  font-family: boowie;
+  src: url(BOOWIE.ttf);
 }
 
 .homePage__middleSection {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    color: #888;
-    left: 0;
-    width: 100%;
-    background-color:rgb(253, 246, 239);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #888;
+  left: 0;
+  width: 100%;
+  background-color: rgb(253, 246, 239);
 }
 
 .homePage__middleSectionTitle {
-    font-size: 2.5vw;
-    font-family: boowie;
-    display: flex;
-    justify-content: center;
-    width: 100%;
-    padding: 3vw 0 1vw 3vw;
+  font-size: 2.5vw;
+  font-family: boowie;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  padding: 3vw 0 1vw 3vw;
 }
 
 .homePage__middleSectionMiddleContainer {
-    padding: 1vw 2vw 3vw 2vw;
+  padding: 1vw 2vw 3vw 2vw;
 }
 
 .homePage__middleSectionMiddleContainer {
-    display: flex;
-    justify-content: center;
+  display: flex;
+  justify-content: center;
 }
 
 .homePage__middleSectionMiddleContainer div {
-    margin: 0px 3vw;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
+  margin: 0px 3vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .homePage__middleSectionMiddleContainer div .MuiSvgIcon-root {
-    font-size: 5vw !important;
-    color: rgb(252, 203, 160) !important;
+  font-size: 5vw !important;
+  color: rgb(252, 203, 160) !important;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  -webkit-animation-timing-function: ease-in-out;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-name: seesaw;
+  -moz-animation-name: seesaw;
+  -webkit-animation-iteration-count: infinite;
 }
 
 .homePage__middleSectionMiddleContainer div p {
-    font-size: 1.3vw;
-    text-align: center;
-    margin-top: 2vw;
-    font-family: 'Quattrocento', serif;
+  font-size: 1.3vw;
+  text-align: center;
+  margin-top: 2vw;
+  font-family: "Quattrocento", serif;
 }
 
 .homePage__middleSectionMiddleContainerDesc {
-    font-size: 1.3vw !important;
+  font-size: 1.3vw !important;
 }
 
 @media screen and (max-width: 768px) and (min-width: 400px) {
-    .homePage__middleSectionTitle {
-        font-size: 30px;
-    }
+  .homePage__middleSectionTitle {
+    font-size: 30px;
+  }
 
-    .homePage__middleSectionMiddleContainer div .MuiSvgIcon-root {
-        font-size: 40px !important;
-    }
+  .homePage__middleSectionMiddleContainer div .MuiSvgIcon-root {
+    font-size: 40px !important;
+  }
 
-    .homePage__middleSectionMiddleContainer div p {
-        font-size: 14px;
-    }
+  .homePage__middleSectionMiddleContainer div p {
+    font-size: 14px;
+  }
 
-    .homePage__middleSectionMiddleContainerDesc {
-        font-size: 12px !important;
-    }
+  .homePage__middleSectionMiddleContainerDesc {
+    font-size: 12px !important;
+  }
 }
 
 @media screen and (max-width: 400px) {
-    .homePage__middleSectionTitle {
-        font-size: 20px;
-    }
+  .homePage__middleSectionTitle {
+    font-size: 20px;
+  }
 
-    .homePage__middleSectionMiddleContainer div {
-        width: 80px;
-    }
+  .homePage__middleSectionMiddleContainer div {
+    width: 80px;
+  }
 
-    .homePage__middleSectionMiddleContainer div .MuiSvgIcon-root {
-        font-size: 40px !important;
-    }
+  .homePage__middleSectionMiddleContainer div .MuiSvgIcon-root {
+    font-size: 40px !important;
+  }
 
-    .homePage__middleSectionMiddleContainer div p {
-        font-size: 12px;
-    }
+  .homePage__middleSectionMiddleContainer div p {
+    font-size: 12px;
+  }
 
-    .homePage__middleSectionMiddleContainerDesc {
-        display: none;
-    }
+  .homePage__middleSectionMiddleContainerDesc {
+    display: none;
+  }
+}
+/* animation keyframes for seesaw */
+@keyframes seesaw {
+  0% {
+    -webkit-transform: rotate(10deg);
+    transform: rotate(10deg);
+  }
+  50% {
+    -webkit-transform: rotate(-10deg);
+    transform: rotate(-10deg);
+  }
+  100% {
+    -webkit-transform: rotate(10deg);
+    transform: rotate(10deg);
+  }
 }
