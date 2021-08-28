@@ -1,143 +1,144 @@
 .homePage__makeDreamsTrue {
-	display: flex;
-	flex-direction: column;
-	overflow-x: hidden !important;
-	align-items: center;
-	justify-content: space-evenly;
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden !important;
+  align-items: center;
+  justify-content: space-evenly;
 }
 /* ---------------------------TOP SECTION-------------------------- */
 .homePage__makeDreamsTrue__topImage {
-	object-fit: contain;
-	height: 22vw;
+  object-fit: contain;
+  height: 22vw;
 }
 .homePage__makeDreamsTrue > .css-1gzxeik > h1 {
-	font-family: bowie;
-	color: #878787;
-	font-size: 2.5vw;
-	margin-top: 3vw;
-	font-weight: lighter;
+  font-family: bowie;
+  color: #878787;
+  font-size: 2.5vw;
+  margin-top: 3vw;
+  font-weight: lighter;
 }
 .homePage__makeDreamsTrue__top {
-	width: 100%;
-	display: flex;
-	align-items: center;
-	flex: 0.4;
-	margin-top: 4vw;
-	justify-content: space-evenly;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex: 0.4;
+  margin-top: 4vw;
+  justify-content: space-evenly;
 }
 .homePage__makeDreamsTrue__topPurchase {
-	display: flex;
-	flex-direction: column;
-	justify-content: space-evenly;
-	width: 18vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  width: 18vw;
 }
 .homePage__makeDreamsTrue__topPrices {
-	display: flex;
-	align-self: flex-end;
-	flex: 0.4;
-	flex-direction: column;
+  display: flex;
+  align-self: flex-end;
+  flex: 0.4;
+  flex-direction: column;
 }
 .homePage__makeDreamsTrue__topPrices > .css-17ud6we > h1 {
-	color: #707070;
-	font-family: Quattrocento-Regular;
-	font-size: 1.7vw;
-	font-weight: bold;
-	align-self: flex-end;
+  color: #707070;
+  font-family: Quattrocento-Regular;
+  font-size: 1.7vw;
+  font-weight: bold;
+  align-self: flex-end;
 }
 .homePage__makeDreamsTrue__topPrices > .css-17ud6we > h2 {
-	color: #707070;
-	font-family: Quattrocento-Regular;
-	font-weight: lighter;
-	align-self: flex-end;
-	font-size: 1.7vw;
+  color: #707070;
+  font-family: Quattrocento-Regular;
+  font-weight: lighter;
+  align-self: flex-end;
+  font-size: 1.7vw;
 }
 .homePage__makeDreamsTrue__topPurchase > .css-2qfv45 > h1 {
-	color: #707070;
-	font-family: Quattrocento-Regular;
-	font-size: 2.2vw;
-	font-weight: lighter;
+  color: #707070;
+  font-family: Quattrocento-Regular;
+  font-size: 2.2vw;
+  font-weight: lighter;
 }
 .homePage__makeDreamsTrue__topPurchase > .css-2qfv45 > p {
-	font-size: 1.5vw;
-	font-family: Quattrocento-Regular;
-	align-self: flex-end;
-	color: #808080;
+  font-size: 1.5vw;
+  font-family: Quattrocento-Regular;
+  align-self: flex-end;
+  color: #808080;
 }
 .homePage__makeDreamsTrue__topPurchase > .css-2qfv45 > button {
-	width: 16vw;
-	padding: 1.5vh 1vw;
-	border: 0.2vw #ffc0a1 solid;
-	font-family: Quattrocento-Regular;
-	outline: none;
-	margin-top: 3vh;
-	font-size: 1.3vw;
-	border-radius: 1vw;
-	background-color: transparent;
-	cursor: pointer;
+  width: 16vw;
+  padding: 1.5vh 1vw;
+  border: 0.2vw #ffc0a1 solid;
+  font-family: Quattrocento-Regular;
+  outline: none;
+  margin-top: 3vh;
+  font-size: 1.3vw;
+  border-radius: 1vw;
+  background-color: transparent;
+  cursor: pointer;
 }
 .homePage__makeDreamsTrue__topPurchase > .css-2qfv45 > button:hover {
-	background-color: #fff0e8;
+  background-color: #fff0e8;
 }
 /* ----------------------------MIDDLE SECTION---------------------------- */
 .homePage__makeDreamsTrue__middle {
-	display: flex;
-	margin-top: 12vw;
-	align-items: center;
-	width: 100%;
+  display: flex;
+  margin-top: 12vw;
+  align-items: center;
+  width: 100%;
 }
 .homePage__makeDreamsTrue__middle__image {
-	object-fit: contain;
-	height: 15vw;
-	position: absolute;
-	right: 0vw;
-	margin-top: -7vw;
+  object-fit: contain;
+  height: 15vw;
+  position: absolute;
+  right: 0vw;
+  margin-top: -7vw;
 }
 .homePage__makeDreamsTrue__middleText {
-	height: 10vw;
-	padding-left: 8vw;
-	width: 45vw;
-	display: flex;
-	font-family: Quattrocento-Regular;
-	color: #707070;
-	flex-direction: column;
-	font-size: 1.3vw;
-	text-align: justify;
-	justify-content: space-between;
+  height: 10vw;
+  padding-left: 8vw;
+  width: 45vw;
+  display: flex;
+  font-family: Quattrocento-Regular;
+  color: #707070;
+  flex-direction: column;
+  font-size: 1.3vw;
+  text-align: justify;
+  justify-content: space-between;
 }
 
 /* -----------------------------BOTTOM SECTION------------------------ */
 .homePage__makeDreamsTrue__bottom {
-	display: flex;
-	margin-top: 10vw;
-	margin-bottom: 5vw;
-	flex-direction: column;
-	width: 100%;
-	align-items: center;
-	justify-content: center;
+  display: flex;
+  margin-top: 10vw;
+  margin-bottom: 5vw;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
 }
 .homePage__makeDreamsTrue__bottom > .css-1gzxeik > p {
-	font-family: Quattrocento-Regular;
-	font-size: 1.5vw;
-	color: #707070;
+  font-family: Quattrocento-Regular;
+  font-size: 1.5vw;
+  color: #707070;
 }
 .homePage__makeDreamsTrue__bottomImageDetail {
-	width: 100%;
-	padding: 5vw;
-	display: flex;
-	justify-content: center;
-	align-items: center;
+  width: 100%;
+  padding: 5vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .homePage__makeDreamsTrue__bottomImageDetail > div > img {
-	object-fit: contain;
-	height: 30vw;
+  object-fit: contain;
+  height: 30vw;
 }
-.homePage__makeDreamsTrue__bottomImageDetailFirst, .homePage__makeDreamsTrue__bottomImageDetailSecond {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: space-evenly;
-	width: 15vw;
-	height: 25vw;
+.homePage__makeDreamsTrue__bottomImageDetailFirst,
+.homePage__makeDreamsTrue__bottomImageDetailSecond {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 15vw;
+  height: 25vw;
 }
 .homePage__makeDreamsTrue__bottomImageDetailFirstHeight,
 .homePage__makeDreamsTrue__bottomImageDetailFirstWidth,
@@ -145,194 +146,343 @@
 .homePage__makeDreamsTrue__bottomImageDetailFirstWeight,
 .homePage__makeDreamsTrue__bottomImageDetailFirstMetalWeight,
 .homePage__makeDreamsTrue__bottomImageDetailFirstPurity {
-	width: 100%;
+  width: 100%;
 }
 
-.homePage__makeDreamsTrue__bottomImageDetailFirstWeight > .css-17ud6we > p, 
+.homePage__makeDreamsTrue__bottomImageDetailFirstWeight > .css-17ud6we > p,
 .homePage__makeDreamsTrue__bottomImageDetailFirstMetalWeight > .css-17ud6we > p,
 .homePage__makeDreamsTrue__bottomImageDetailFirstPurity > .css-17ud6we > p,
 .homePage__makeDreamsTrue__bottomImageDetailFirstWeight > .css-2qfv45 > p,
 .homePage__makeDreamsTrue__bottomImageDetailFirstMetalWeight > .css-2qfv45 > p,
 .homePage__makeDreamsTrue__bottomImageDetailFirstPurity > .css-2qfv45 > p {
-	display: flex;
-	flex-direction: column;
-	align-items: flex-end;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
 }
 
-.homePage__makeDreamsTrue__bottomImageDetailFirstHeight > .css-17ud6we:first-child > p,
-.homePage__makeDreamsTrue__bottomImageDetailFirstWidth > .css-17ud6we:first-child > p,
-.homePage__makeDreamsTrue__bottomImageDetailFirstThickness > .css-17ud6we:first-child > p,
-.homePage__makeDreamsTrue__bottomImageDetailFirstWeight > .css-17ud6we:first-child > p, 
-.homePage__makeDreamsTrue__bottomImageDetailFirstMetalWeight > .css-17ud6we:first-child > p,
-.homePage__makeDreamsTrue__bottomImageDetailFirstPurity > .css-17ud6we:first-child > p,
-.homePage__makeDreamsTrue__bottomImageDetailFirstHeight > .css-2qfv45:first-child > p,
-.homePage__makeDreamsTrue__bottomImageDetailFirstWidth > .css-2qfv45:first-child > p,
-.homePage__makeDreamsTrue__bottomImageDetailFirstThickness > .css-2qfv45:first-child > p,
-.homePage__makeDreamsTrue__bottomImageDetailFirstWeight > .css-2qfv45:first-child > p,
-.homePage__makeDreamsTrue__bottomImageDetailFirstMetalWeight > .css-2qfv45:first-child > p,
-.homePage__makeDreamsTrue__bottomImageDetailFirstPurity > .css-2qfv45:first-child > p {
-	font-family: Quattrocento-Regular;
-	color: #909090;
-	font-size: 1vw;
-	border-bottom: 0.1vw #b1b1b1 solid;
-	padding-bottom: 0.5vw;
+.homePage__makeDreamsTrue__bottomImageDetailFirstHeight
+  > .css-17ud6we:first-child
+  > p,
+.homePage__makeDreamsTrue__bottomImageDetailFirstWidth
+  > .css-17ud6we:first-child
+  > p,
+.homePage__makeDreamsTrue__bottomImageDetailFirstThickness
+  > .css-17ud6we:first-child
+  > p,
+.homePage__makeDreamsTrue__bottomImageDetailFirstWeight
+  > .css-17ud6we:first-child
+  > p,
+.homePage__makeDreamsTrue__bottomImageDetailFirstMetalWeight
+  > .css-17ud6we:first-child
+  > p,
+.homePage__makeDreamsTrue__bottomImageDetailFirstPurity
+  > .css-17ud6we:first-child
+  > p,
+.homePage__makeDreamsTrue__bottomImageDetailFirstHeight
+  > .css-2qfv45:first-child
+  > p,
+.homePage__makeDreamsTrue__bottomImageDetailFirstWidth
+  > .css-2qfv45:first-child
+  > p,
+.homePage__makeDreamsTrue__bottomImageDetailFirstThickness
+  > .css-2qfv45:first-child
+  > p,
+.homePage__makeDreamsTrue__bottomImageDetailFirstWeight
+  > .css-2qfv45:first-child
+  > p,
+.homePage__makeDreamsTrue__bottomImageDetailFirstMetalWeight
+  > .css-2qfv45:first-child
+  > p,
+.homePage__makeDreamsTrue__bottomImageDetailFirstPurity
+  > .css-2qfv45:first-child
+  > p {
+  font-family: Quattrocento-Regular;
+  color: #909090;
+  font-size: 1vw;
+  border-bottom: 0.1vw #b1b1b1 solid;
+  padding-bottom: 0.5vw;
 }
 
-.homePage__makeDreamsTrue__bottomImageDetailFirstHeight > .css-17ud6we:last-child > p,
-.homePage__makeDreamsTrue__bottomImageDetailFirstWidth > .css-17ud6we:last-child > p,
-.homePage__makeDreamsTrue__bottomImageDetailFirstThickness > .css-17ud6we:last-child > p,
-.homePage__makeDreamsTrue__bottomImageDetailFirstWeight > .css-17ud6we:last-child > p, 
-.homePage__makeDreamsTrue__bottomImageDetailFirstMetalWeight > .css-17ud6we:last-child > p,
-.homePage__makeDreamsTrue__bottomImageDetailFirstPurity > .css-17ud6we:last-child > p,
-.homePage__makeDreamsTrue__bottomImageDetailFirstHeight >.css-2qfv45:last-child > p,
-.homePage__makeDreamsTrue__bottomImageDetailFirstWidth > .css-2qfv45:last-child > p,
-.homePage__makeDreamsTrue__bottomImageDetailFirstThickness > .css-2qfv45:last-child > p,
-.homePage__makeDreamsTrue__bottomImageDetailFirstWeight > .css-2qfv45:last-child > p,
-.homePage__makeDreamsTrue__bottomImageDetailFirstMetalWeight > .css-2qfv45:last-child > p,
-.homePage__makeDreamsTrue__bottomImageDetailFirstPurity > .css-2qfv45:last-child > p  {
-	font-family: Quattrocento-Regular;
-	font-size: 1.3vw;
-	padding-top: 0.5vw;
-	color: #606060;
+.homePage__makeDreamsTrue__bottomImageDetailFirstHeight
+  > .css-17ud6we:last-child
+  > p,
+.homePage__makeDreamsTrue__bottomImageDetailFirstWidth
+  > .css-17ud6we:last-child
+  > p,
+.homePage__makeDreamsTrue__bottomImageDetailFirstThickness
+  > .css-17ud6we:last-child
+  > p,
+.homePage__makeDreamsTrue__bottomImageDetailFirstWeight
+  > .css-17ud6we:last-child
+  > p,
+.homePage__makeDreamsTrue__bottomImageDetailFirstMetalWeight
+  > .css-17ud6we:last-child
+  > p,
+.homePage__makeDreamsTrue__bottomImageDetailFirstPurity
+  > .css-17ud6we:last-child
+  > p,
+.homePage__makeDreamsTrue__bottomImageDetailFirstHeight
+  > .css-2qfv45:last-child
+  > p,
+.homePage__makeDreamsTrue__bottomImageDetailFirstWidth
+  > .css-2qfv45:last-child
+  > p,
+.homePage__makeDreamsTrue__bottomImageDetailFirstThickness
+  > .css-2qfv45:last-child
+  > p,
+.homePage__makeDreamsTrue__bottomImageDetailFirstWeight
+  > .css-2qfv45:last-child
+  > p,
+.homePage__makeDreamsTrue__bottomImageDetailFirstMetalWeight
+  > .css-2qfv45:last-child
+  > p,
+.homePage__makeDreamsTrue__bottomImageDetailFirstPurity
+  > .css-2qfv45:last-child
+  > p {
+  font-family: Quattrocento-Regular;
+  font-size: 1.3vw;
+  padding-top: 0.5vw;
+  color: #606060;
 }
 
 /* ------------------------------------------------------ */
 @font-face {
-	font-family: bowie;
-	src: url(BOOWIE.ttf);
+  font-family: bowie;
+  src: url(BOOWIE.ttf);
 }
 
 @font-face {
-	font-family: Quattrocento-Regular;
-	src: url(Quattrocento-Regular.ttf);
+  font-family: Quattrocento-Regular;
+  src: url(Quattrocento-Regular.ttf);
 }
 
 @media screen and (max-width: 768px) and (min-width: 400px) {
-	.homePage__makeDreamsTrue > .css-1gzxeik > h1 {
-		font-size: 28px;
-		text-align: center;
-	}
-	
-	.homePage__makeDreamsTrue__topPurchase > .css-2qfv45 > h1, .homePage__makeDreamsTrue__topPrices >  .css-17ud6we > h2 {
-		font-size: 14px;
-	}
-	
-	.homePage__makeDreamsTrue__topPurchase > .css-2qfv45 > p, .homePage__makeDreamsTrue__topPrices >  .css-17ud6we > h1 {
-		font-size: 12px;
-	}
+  .homePage__makeDreamsTrue > .css-1gzxeik > h1 {
+    font-size: 28px;
+    text-align: center;
+  }
 
-	.homePage__makeDreamsTrue__topPurchase > .css-2qfv45 > button {
-		font-size: 12px;
-		width: 100px;
-	}
+  .homePage__makeDreamsTrue__topPurchase > .css-2qfv45 > h1,
+  .homePage__makeDreamsTrue__topPrices > .css-17ud6we > h2 {
+    font-size: 14px;
+  }
 
-	.homePage__makeDreamsTrue__middleText {
-		font-size: 12px;
-	}
+  .homePage__makeDreamsTrue__topPurchase > .css-2qfv45 > p,
+  .homePage__makeDreamsTrue__topPrices > .css-17ud6we > h1 {
+    font-size: 12px;
+  }
 
-	.homePage__makeDreamsTrue__bottom {
-		margin-top: 120px;
-	}
+  .homePage__makeDreamsTrue__topPurchase > .css-2qfv45 > button {
+    font-size: 12px;
+    width: 100px;
+  }
 
-	.homePage__makeDreamsTrue__bottomImageDetailFirstHeight > .css-17ud6we:first-child > p,
-	.homePage__makeDreamsTrue__bottomImageDetailFirstWidth > .css-17ud6we:first-child > p,
-	.homePage__makeDreamsTrue__bottomImageDetailFirstThickness > .css-17ud6we:first-child > p,
-	.homePage__makeDreamsTrue__bottomImageDetailFirstWeight > .css-17ud6we:first-child > p, 
-	.homePage__makeDreamsTrue__bottomImageDetailFirstMetalWeight > .css-17ud6we:first-child > p,
-	.homePage__makeDreamsTrue__bottomImageDetailFirstPurity > .css-17ud6we:first-child > p,
-	.homePage__makeDreamsTrue__bottomImageDetailFirstHeight > .css-2qfv45:first-child > p,
-	.homePage__makeDreamsTrue__bottomImageDetailFirstWidth > .css-2qfv45:first-child > p,
-	.homePage__makeDreamsTrue__bottomImageDetailFirstThickness > .css-2qfv45:first-child > p,
-	.homePage__makeDreamsTrue__bottomImageDetailFirstWeight > .css-2qfv45:first-child > p,
-	.homePage__makeDreamsTrue__bottomImageDetailFirstMetalWeight > .css-2qfv45:first-child > p,
-	.homePage__makeDreamsTrue__bottomImageDetailFirstPurity > .css-2qfv45:first-child > p {
-		font-size: 10px;
-	}
+  .homePage__makeDreamsTrue__middleText {
+    font-size: 12px;
+  }
 
-	.homePage__makeDreamsTrue__bottomImageDetailFirstHeight > .css-17ud6we:last-child > p,
-	.homePage__makeDreamsTrue__bottomImageDetailFirstWidth > .css-17ud6we:last-child > p,
-	.homePage__makeDreamsTrue__bottomImageDetailFirstThickness > .css-17ud6we:last-child > p,
-	.homePage__makeDreamsTrue__bottomImageDetailFirstWeight > .css-17ud6we:last-child > p, 
-	.homePage__makeDreamsTrue__bottomImageDetailFirstMetalWeight > .css-17ud6we:last-child > p,
-	.homePage__makeDreamsTrue__bottomImageDetailFirstPurity > .css-17ud6we:last-child > p,
-	.homePage__makeDreamsTrue__bottomImageDetailFirstHeight >.css-2qfv45:last-child > p,
-	.homePage__makeDreamsTrue__bottomImageDetailFirstWidth > .css-2qfv45:last-child > p,
-	.homePage__makeDreamsTrue__bottomImageDetailFirstThickness > .css-2qfv45:last-child > p,
-	.homePage__makeDreamsTrue__bottomImageDetailFirstWeight > .css-2qfv45:last-child > p,
-	.homePage__makeDreamsTrue__bottomImageDetailFirstMetalWeight > .css-2qfv45:last-child > p,
-	.homePage__makeDreamsTrue__bottomImageDetailFirstPurity > .css-2qfv45:last-child > p {
-		font-size: 12px;
-	}
+  .homePage__makeDreamsTrue__bottom {
+    margin-top: 120px;
+  }
 
-	.homePage__makeDreamsTrue__bottom > .css-1gzxeik > p {
-		font-size: 14px;
-	}
+  .homePage__makeDreamsTrue__bottomImageDetailFirstHeight
+    > .css-17ud6we:first-child
+    > p,
+  .homePage__makeDreamsTrue__bottomImageDetailFirstWidth
+    > .css-17ud6we:first-child
+    > p,
+  .homePage__makeDreamsTrue__bottomImageDetailFirstThickness
+    > .css-17ud6we:first-child
+    > p,
+  .homePage__makeDreamsTrue__bottomImageDetailFirstWeight
+    > .css-17ud6we:first-child
+    > p,
+  .homePage__makeDreamsTrue__bottomImageDetailFirstMetalWeight
+    > .css-17ud6we:first-child
+    > p,
+  .homePage__makeDreamsTrue__bottomImageDetailFirstPurity
+    > .css-17ud6we:first-child
+    > p,
+  .homePage__makeDreamsTrue__bottomImageDetailFirstHeight
+    > .css-2qfv45:first-child
+    > p,
+  .homePage__makeDreamsTrue__bottomImageDetailFirstWidth
+    > .css-2qfv45:first-child
+    > p,
+  .homePage__makeDreamsTrue__bottomImageDetailFirstThickness
+    > .css-2qfv45:first-child
+    > p,
+  .homePage__makeDreamsTrue__bottomImageDetailFirstWeight
+    > .css-2qfv45:first-child
+    > p,
+  .homePage__makeDreamsTrue__bottomImageDetailFirstMetalWeight
+    > .css-2qfv45:first-child
+    > p,
+  .homePage__makeDreamsTrue__bottomImageDetailFirstPurity
+    > .css-2qfv45:first-child
+    > p {
+    font-size: 10px;
+  }
 
-	.homePage__makeDreamsTrue__bottomImageDetailFirst, .homePage__makeDreamsTrue__bottomImageDetailSecond {
-		width: 35%;
-	}
+  .homePage__makeDreamsTrue__bottomImageDetailFirstHeight
+    > .css-17ud6we:last-child
+    > p,
+  .homePage__makeDreamsTrue__bottomImageDetailFirstWidth
+    > .css-17ud6we:last-child
+    > p,
+  .homePage__makeDreamsTrue__bottomImageDetailFirstThickness
+    > .css-17ud6we:last-child
+    > p,
+  .homePage__makeDreamsTrue__bottomImageDetailFirstWeight
+    > .css-17ud6we:last-child
+    > p,
+  .homePage__makeDreamsTrue__bottomImageDetailFirstMetalWeight
+    > .css-17ud6we:last-child
+    > p,
+  .homePage__makeDreamsTrue__bottomImageDetailFirstPurity
+    > .css-17ud6we:last-child
+    > p,
+  .homePage__makeDreamsTrue__bottomImageDetailFirstHeight
+    > .css-2qfv45:last-child
+    > p,
+  .homePage__makeDreamsTrue__bottomImageDetailFirstWidth
+    > .css-2qfv45:last-child
+    > p,
+  .homePage__makeDreamsTrue__bottomImageDetailFirstThickness
+    > .css-2qfv45:last-child
+    > p,
+  .homePage__makeDreamsTrue__bottomImageDetailFirstWeight
+    > .css-2qfv45:last-child
+    > p,
+  .homePage__makeDreamsTrue__bottomImageDetailFirstMetalWeight
+    > .css-2qfv45:last-child
+    > p,
+  .homePage__makeDreamsTrue__bottomImageDetailFirstPurity
+    > .css-2qfv45:last-child
+    > p {
+    font-size: 12px;
+  }
+
+  .homePage__makeDreamsTrue__bottom > .css-1gzxeik > p {
+    font-size: 14px;
+  }
+
+  .homePage__makeDreamsTrue__bottomImageDetailFirst,
+  .homePage__makeDreamsTrue__bottomImageDetailSecond {
+    width: 35%;
+  }
 }
 
 @media screen and (max-width: 400px) {
-	.homePage__makeDreamsTrue > .css-1gzxeik > h1 {
-		text-align: center;
-		font-size: 20px;
-	}
+  .homePage__makeDreamsTrue > .css-1gzxeik > h1 {
+    text-align: center;
+    font-size: 20px;
+  }
 
-	.homePage__makeDreamsTrue__topPurchase > .css-2qfv45 > p, 
-	.homePage__makeDreamsTrue__topPurchase > .css-2qfv45 > h1, 
-	.homePage__makeDreamsTrue__topPrices > .css-17ud6we > h1, .homePage__makeDreamsTrue__topPrices > .css-17ud6we > h2 {
-		font-size: 12px;
-	}
+  .homePage__makeDreamsTrue__topPurchase > .css-2qfv45 > p,
+  .homePage__makeDreamsTrue__topPurchase > .css-2qfv45 > h1,
+  .homePage__makeDreamsTrue__topPrices > .css-17ud6we > h1,
+  .homePage__makeDreamsTrue__topPrices > .css-17ud6we > h2 {
+    font-size: 12px;
+  }
 
-	.homePage__makeDreamsTrue__middleText {
-		font-size: 12px;
-		width: 50%;
-	}
+  .homePage__makeDreamsTrue__middleText {
+    font-size: 12px;
+    width: 50%;
+  }
 
-	.homePage__makeDreamsTrue__topPurchase > .css-2qfv45 > button {
-		display: none;
-	}
+  .homePage__makeDreamsTrue__topPurchase > .css-2qfv45 > button {
+    display: none;
+  }
 
-	.homePage__makeDreamsTrue__bottomImageDetailFirstHeight > .css-17ud6we:first-child > p,
-	.homePage__makeDreamsTrue__bottomImageDetailFirstWidth > .css-17ud6we:first-child > p,
-	.homePage__makeDreamsTrue__bottomImageDetailFirstThickness > .css-17ud6we:first-child > p,
-	.homePage__makeDreamsTrue__bottomImageDetailFirstWeight > .css-17ud6we:first-child > p, 
-	.homePage__makeDreamsTrue__bottomImageDetailFirstMetalWeight > .css-17ud6we:first-child > p,
-	.homePage__makeDreamsTrue__bottomImageDetailFirstPurity > .css-17ud6we:first-child > p,
-	.homePage__makeDreamsTrue__bottomImageDetailFirstHeight > .css-2qfv45:first-child > p,
-	.homePage__makeDreamsTrue__bottomImageDetailFirstWidth > .css-2qfv45:first-child > p,
-	.homePage__makeDreamsTrue__bottomImageDetailFirstThickness > .css-2qfv45:first-child > p,
-	.homePage__makeDreamsTrue__bottomImageDetailFirstWeight > .css-2qfv45:first-child > p,
-	.homePage__makeDreamsTrue__bottomImageDetailFirstMetalWeight > .css-2qfv45:first-child > p,
-	.homePage__makeDreamsTrue__bottomImageDetailFirstPurity > .css-2qfv45:first-child > p {
-		font-size: 10px;
-	}
+  .homePage__makeDreamsTrue__bottomImageDetailFirstHeight
+    > .css-17ud6we:first-child
+    > p,
+  .homePage__makeDreamsTrue__bottomImageDetailFirstWidth
+    > .css-17ud6we:first-child
+    > p,
+  .homePage__makeDreamsTrue__bottomImageDetailFirstThickness
+    > .css-17ud6we:first-child
+    > p,
+  .homePage__makeDreamsTrue__bottomImageDetailFirstWeight
+    > .css-17ud6we:first-child
+    > p,
+  .homePage__makeDreamsTrue__bottomImageDetailFirstMetalWeight
+    > .css-17ud6we:first-child
+    > p,
+  .homePage__makeDreamsTrue__bottomImageDetailFirstPurity
+    > .css-17ud6we:first-child
+    > p,
+  .homePage__makeDreamsTrue__bottomImageDetailFirstHeight
+    > .css-2qfv45:first-child
+    > p,
+  .homePage__makeDreamsTrue__bottomImageDetailFirstWidth
+    > .css-2qfv45:first-child
+    > p,
+  .homePage__makeDreamsTrue__bottomImageDetailFirstThickness
+    > .css-2qfv45:first-child
+    > p,
+  .homePage__makeDreamsTrue__bottomImageDetailFirstWeight
+    > .css-2qfv45:first-child
+    > p,
+  .homePage__makeDreamsTrue__bottomImageDetailFirstMetalWeight
+    > .css-2qfv45:first-child
+    > p,
+  .homePage__makeDreamsTrue__bottomImageDetailFirstPurity
+    > .css-2qfv45:first-child
+    > p {
+    font-size: 10px;
+  }
 
-	.homePage__makeDreamsTrue__bottomImageDetailFirstHeight > .css-17ud6we:last-child > p,
-	.homePage__makeDreamsTrue__bottomImageDetailFirstWidth > .css-17ud6we:last-child > p,
-	.homePage__makeDreamsTrue__bottomImageDetailFirstThickness > .css-17ud6we:last-child > p,
-	.homePage__makeDreamsTrue__bottomImageDetailFirstWeight > .css-17ud6we:last-child > p, 
-	.homePage__makeDreamsTrue__bottomImageDetailFirstMetalWeight > .css-17ud6we:last-child > p,
-	.homePage__makeDreamsTrue__bottomImageDetailFirstPurity > .css-17ud6we:last-child > p,
-	.homePage__makeDreamsTrue__bottomImageDetailFirstHeight >.css-2qfv45:last-child > p,
-	.homePage__makeDreamsTrue__bottomImageDetailFirstWidth > .css-2qfv45:last-child > p,
-	.homePage__makeDreamsTrue__bottomImageDetailFirstThickness > .css-2qfv45:last-child > p,
-	.homePage__makeDreamsTrue__bottomImageDetailFirstWeight > .css-2qfv45:last-child > p,
-	.homePage__makeDreamsTrue__bottomImageDetailFirstMetalWeight > .css-2qfv45:last-child > p,
-	.homePage__makeDreamsTrue__bottomImageDetailFirstPurity > .css-2qfv45:last-child > p {
-		font-size: 12px;
-	}
+  .homePage__makeDreamsTrue__bottomImageDetailFirstHeight
+    > .css-17ud6we:last-child
+    > p,
+  .homePage__makeDreamsTrue__bottomImageDetailFirstWidth
+    > .css-17ud6we:last-child
+    > p,
+  .homePage__makeDreamsTrue__bottomImageDetailFirstThickness
+    > .css-17ud6we:last-child
+    > p,
+  .homePage__makeDreamsTrue__bottomImageDetailFirstWeight
+    > .css-17ud6we:last-child
+    > p,
+  .homePage__makeDreamsTrue__bottomImageDetailFirstMetalWeight
+    > .css-17ud6we:last-child
+    > p,
+  .homePage__makeDreamsTrue__bottomImageDetailFirstPurity
+    > .css-17ud6we:last-child
+    > p,
+  .homePage__makeDreamsTrue__bottomImageDetailFirstHeight
+    > .css-2qfv45:last-child
+    > p,
+  .homePage__makeDreamsTrue__bottomImageDetailFirstWidth
+    > .css-2qfv45:last-child
+    > p,
+  .homePage__makeDreamsTrue__bottomImageDetailFirstThickness
+    > .css-2qfv45:last-child
+    > p,
+  .homePage__makeDreamsTrue__bottomImageDetailFirstWeight
+    > .css-2qfv45:last-child
+    > p,
+  .homePage__makeDreamsTrue__bottomImageDetailFirstMetalWeight
+    > .css-2qfv45:last-child
+    > p,
+  .homePage__makeDreamsTrue__bottomImageDetailFirstPurity
+    > .css-2qfv45:last-child
+    > p {
+    font-size: 12px;
+  }
 
-	.homePage__makeDreamsTrue__bottom > .css-1gzxeik > p {
-		font-size: 14px;
-	}
+  .homePage__makeDreamsTrue__bottom > .css-1gzxeik > p {
+    font-size: 14px;
+  }
 
-	.homePage__makeDreamsTrue__bottom {
-		margin-top: 120px;
-	}
+  .homePage__makeDreamsTrue__bottom {
+    margin-top: 120px;
+  }
 
-	.homePage__makeDreamsTrue__bottomImageDetailFirst, .homePage__makeDreamsTrue__bottomImageDetailSecond {
-		width: 35%;
-	}
+  .homePage__makeDreamsTrue__bottomImageDetailFirst,
+  .homePage__makeDreamsTrue__bottomImageDetailSecond {
+    width: 35%;
+  }
 }
