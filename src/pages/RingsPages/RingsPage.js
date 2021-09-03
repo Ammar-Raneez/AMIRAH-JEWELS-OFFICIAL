@@ -14,7 +14,7 @@ import formatCurrency from 'format-currency';
 import { useDispatch, useSelector } from 'react-redux';
 import { selectUser } from '../../features/userSlice';
 import { addToWishlist, removeFromWishlist, selectWishlist } from '../../features/wishlistSlice';
-import { addToCart, selectCart } from '../../features/cartSlice';
+import { decrementItemCount, incrementItemCount, addToCart, selectCart } from '../../features/cartSlice';
 import { selectCurrencySymbol } from '../../features/currencySymbolSlice';
 import { selectCurrencyRate } from '../../features/currencyRateSlice';
 import "react-responsive-carousel/lib/styles/carousel.min.css";
@@ -36,6 +36,7 @@ function RingsPage({ title, description, specification, stoneInfo, diamondInfo, 
 	const [tempSafetyCartBasket, setTempSafetyCartBasket] = useState(false);
 	const [currentMetalType, setCurrentMetalType] = useState('18k Rose Gold');
 	const [currentMetalSize, setCurrentMetalSize] = useState('US 4');
+	const [currentQty, setCurrentQty] = useState(1);
 	const [displayPrice, setDisplayPrice] = useState(false);
 
 	const dispatch = useDispatch();
@@ -84,14 +85,14 @@ function RingsPage({ title, description, specification, stoneInfo, diamondInfo, 
 					productName: title,
 					productCost: 890.0,
 					productImgURL: images[0],
-					productQuantity: 1,
+					productQuantity: currentQty,
 					preferredMetal: currentMetalType,
 					preferredSize: currentMetalSize,
 				})
 			);
 			alert('Added item to cart!');
 		} else {
-			alert('Please sign in to add item to wishlist');
+			alert('Please sign in to add item to cart');
 		}
 	};
 
@@ -119,6 +120,35 @@ function RingsPage({ title, description, specification, stoneInfo, diamondInfo, 
 		} else {
 			alert('Please sign in to add item to wishlist');
 		}
+	};
+
+	const increaseQuantity = () => {
+		if (user) {
+			let temp = currentQty + 1;
+			setCurrentQty(temp);
+			dispatch(
+				incrementItemCount({
+					itemName: title,
+				})
+			);
+		} else {
+			alert('Please sign in');
+		}
+	};
+
+	const decreaseQuantity = () => {
+		if (user) {
+			let temp = currentQty - 1;
+			setCurrentQty(temp);
+			dispatch(
+				decrementItemCount({
+					itemName: title,
+				})
+			);
+		} else {
+			alert('Please sign in');
+		}
+
 	};
 
 	return (
@@ -191,15 +221,17 @@ function RingsPage({ title, description, specification, stoneInfo, diamondInfo, 
 					<Fade direction="left" triggerOnce>
 						<h2>{title}</h2>
 						<div className="ringsPage__sectionCartMainImageIcon">
-							{user ? (
+							{user ?
 								addToWishList ? (
 									<FavoriteIcon onClick={removeFromWishList} />
 								) : (
 									<FavoriteBorderIcon onClick={addItemToWishList} />
 								)
-							) : (
-								<></>
-							)}
+								:
+								<Link to="/login">
+									<FavoriteBorderIcon onClick={addItemToWishList} />
+								</Link>
+							}
 						</div>
 						<div style={{ borderTop: '1px solid black' }} className="ringsPage__sectionCartCartDetailsItem">
 							Preferred Metal:
@@ -244,8 +276,45 @@ function RingsPage({ title, description, specification, stoneInfo, diamondInfo, 
 							</select>
 						</div>
 						<div className="ringsPage__sectionCartCartDetailsItem">
-							<p>Quantity</p>
-							<p>1</p>
+							<p style={{flex: 1}}>Quantity</p>
+							<button
+									style={{
+										padding: '0.5vw 1vw',
+										fontSize: '1.5vw',
+										background: 'transparent',
+										border: 'none',
+										cursor: 'pointer',
+									}}
+									onClick={decreaseQuantity}
+								>
+									−
+								</button>
+								<input
+									style={{
+										textAlign: 'center',
+										padding: '1vw',
+										width: '3vw',
+										background: 'transparent',
+										border: 'none',
+									}}
+									type="number"
+									disabled={true}
+									name="Quantity"
+									placeholder="Quantity"
+									value={currentQty}
+								/>
+								<button
+									style={{
+										padding: '0.5vw 0vw',
+										fontSize: '1.5vw',
+										background: 'transparent',
+										border: 'none',
+										cursor: 'pointer',
+									}}
+									onClick={increaseQuantity}
+								>
+									+
+								</button>
 						</div>
 						<p>
 							{displayPrice &&
@@ -260,7 +329,9 @@ function RingsPage({ title, description, specification, stoneInfo, diamondInfo, 
 									<button onClick={addItemToCart}>ADD TO CART</button>
 								</Link>
 							) : (
-								<></>
+								<Link to="/login">
+									<button onClick={addItemToCart}>ADD TO CART</button>
+								</Link>
 							)}
 						</div>
 

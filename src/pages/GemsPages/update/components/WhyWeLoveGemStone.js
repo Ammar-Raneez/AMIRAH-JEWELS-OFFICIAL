@@ -3,7 +3,7 @@ import styled from 'styled-components';
 export const WhyWeLoveGemStone = ({ whyWeLoveGemStone }) => {
 	return (
 		<Container>
-			<img src={whyWeLoveGemStone.img} alt="" height="150" />
+			<img src={whyWeLoveGemStone.img} alt="" />
 			<h1>WHY WE LOVE THIS GEMSTONE</h1>
 			<section>
 				{whyWeLoveGemStone.data.map((data) => (
@@ -32,10 +32,9 @@ const Container = styled.div`
 	}
 	> img {
 		object-fit: contain;
-		height: 80px;
+		height: 10rem;
 		position: relative;
-		margin-top: -20px;
-		margin-bottom: 20px;
+		margin-top: -4%;
 	}
 	> section {
 		display: flex;

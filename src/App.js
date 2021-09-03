@@ -14,7 +14,7 @@ import AboutPagePolicy from "./pages/AboutPage/AboutPagePolicy";
 import AboutPageCareer from "./pages/AboutPage/AboutPageCareer";
 import LoginPage from "./pages/AccountPages/LoginPage/LoginPage";
 import WishListPage from "./pages/WishListPage/WishListPage";
-import NecklacePendantPage from "./pages/NecklacePendantPage/NecklacePendantPage";
+import NecklacePendantPageMain from "./pages/NecklacePendantPage/NecklacePendantPageMain";
 import GiftPage from "./pages/GiftPage/GiftPage";
 // import { useStateValue } from './StateProvider';
 import { useEffect } from "react";
@@ -38,6 +38,7 @@ import gemData from "./gemData.json";
 import RingsPageMain from "./pages/RingsPages/RingsPageMain";
 import BraceletsPage from "./pages/BraceletsPage/BraceletsPage";
 import EarringsPage from "./pages/EarringsPage/EarringsPage";
+import DesignerDeskPage from "./pages/DesignerDeskPage/DesignerDeskPage";
 
 function App() {
   // const [{ wishListBasket, cartBasket, user }, dispatch] = useStateValue();
@@ -119,7 +120,10 @@ function App() {
           </Route>
 
           <Route path="/designer+desk">
-            <ComingSoon />
+            <TopBar />
+            <Header />
+            <DesignerDeskPage />
+            <Footer />
           </Route>
           <Route path="/high+tea">
             <ComingSoon />
@@ -167,6 +171,7 @@ function App() {
             <TopBar />
             <Header />
             <RingsPageMain />
+            <Footer />
           </Route>
 
           {ringData.map((ring) => (
@@ -214,7 +219,7 @@ function App() {
           <Route path="/necklace+pendants">
             <TopBar />
             <Header />
-            <NecklacePendantPage />
+            <NecklacePendantPageMain />
             <Footer />
           </Route>
 

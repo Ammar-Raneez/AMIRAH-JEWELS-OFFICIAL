@@ -29,6 +29,7 @@
 	font-size: 14px;
 	display: flex;
 	justify-content: center;
+	text-align: center;
 }
 /* .product > a > button {
 	margin: 2vw;

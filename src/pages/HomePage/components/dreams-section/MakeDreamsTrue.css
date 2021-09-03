@@ -24,6 +24,7 @@
   flex: 0.4;
   margin-top: 4vw;
   justify-content: space-evenly;
+  margin-left: 4rem;
 }
 .homePage__makeDreamsTrue__topPurchase {
   display: flex;

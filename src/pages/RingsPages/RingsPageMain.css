@@ -4,7 +4,7 @@
 
 .rings-page-main__rings > div > div {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-evenly;
     width: 100%;
     flex-wrap: wrap;
 }
