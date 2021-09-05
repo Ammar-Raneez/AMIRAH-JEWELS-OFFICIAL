@@ -39,6 +39,7 @@ import RingsPageMain from "./pages/RingsPages/RingsPageMain";
 import BraceletsPage from "./pages/BraceletsPage/BraceletsPage";
 import EarringsPage from "./pages/EarringsPage/EarringsPage";
 import DesignerDeskPage from "./pages/DesignerDeskPage/DesignerDeskPage";
+import GemOrderPage from "./pages/GemsPages/update/GemOrderPage";
 
 function App() {
   // const [{ wishListBasket, cartBasket, user }, dispatch] = useStateValue();
@@ -204,13 +205,19 @@ function App() {
           <Route path="/earrings">
             <TopBar />
             <Header />
-			<EarringsPage />
+            <EarringsPage />
+            <Footer />
+          </Route>
+          <Route path="/gems/order">
+            <TopBar />
+            <Header />
+            <GemOrderPage />
             <Footer />
           </Route>
           <Route path="/bracelets">
             <TopBar />
             <Header />
-			<BraceletsPage />
+            <BraceletsPage />
             <Footer />
           </Route>
           <Route path="/forever+knot">
