@@ -20,9 +20,8 @@ function MakeDreamsTrue() {
 			<div className="homePage__makeDreamsTrue__top">
 				<div className="homePage__makeDreamsTrue__topPurchase">
 					<Slide triggerOnce>
-						<h1>Solitaire Ring</h1>
-						<p>Yellow</p>
-						<button>PURCHASE</button>
+						<h1>PURPLE PINK WONDER SOLITAIRE RING</h1>
+						<button>Buy Now</button>
 					</Slide>
 				</div>
 
@@ -69,7 +68,7 @@ function MakeDreamsTrue() {
 			{/* bottom ring section */}
 			<div className="homePage__makeDreamsTrue__bottom">
 				<Fade triggerOnce>
-					<p>Technical information</p>
+					<p>TECHNICAL INFORMATION</p>
 				</Fade>
 
 				<div className="homePage__makeDreamsTrue__bottomImageDetail">

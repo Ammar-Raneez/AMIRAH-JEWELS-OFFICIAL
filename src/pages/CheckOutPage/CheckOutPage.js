@@ -186,7 +186,7 @@ function CheckOutPage() {
 				<img src="aboutuspage/purple-sapphire.png" alt="" />
 			</div>
 			<div className="checkoutPage__form">
-				<h2>Check Out</h2>
+				<h2>CHECK OUT</h2>
 				<ValidatorForm onSubmit={proceedCheckout} ref={formRef} style={{ width: '100%' }}>
 					<TextValidator
 						style={{ width: '93%' }}

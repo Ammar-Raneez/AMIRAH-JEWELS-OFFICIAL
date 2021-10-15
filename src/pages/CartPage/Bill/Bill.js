@@ -48,9 +48,6 @@ function Bill({ subTotal, delivery, tax }) {
 						<button>CHECK OUT</button>
 					</Link>
 				</div>
-				<div className="bill__bottomSectionWarrant">
-					<p>Enjoy Complimentary shipping and returns on your order.</p>
-				</div>
 			</div>
 		</div>
 	);

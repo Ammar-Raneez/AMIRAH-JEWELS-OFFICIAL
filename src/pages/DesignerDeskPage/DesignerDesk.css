@@ -1,5 +1,6 @@
-.designerDesk-banner {
-    background-image: url('./H3.jpg');
-    background-size: 100% 100%;
-    height: 70vh;
+.designerDesk-banner > h1 {
+  font-family: Ginebra_font;
+  font-size: 6rem;
+  text-align: center;
+  padding: 5rem;
 }

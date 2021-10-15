@@ -1,9 +1,3 @@
-@import url("https://fonts.googleapis.com/css2?family=Quattrocento&display=swap");
-@font-face {
-  font-family: boowie;
-  src: url(BOOWIE.ttf);
-}
-
 .homePage__middleSection {
   display: flex;
   flex-direction: column;
@@ -17,7 +11,7 @@
 
 .homePage__middleSectionTitle {
   font-size: 2.5vw;
-  font-family: boowie;
+  font-family: Ginebra_font;
   display: flex;
   justify-content: center;
   width: 100%;
@@ -43,7 +37,7 @@
 
 .homePage__middleSectionMiddleContainer div .MuiSvgIcon-root {
   font-size: 5vw !important;
-  color: rgb(252, 203, 160) !important;
+  color: #d35f46 !important;
   -webkit-animation-duration: 1s;
   animation-duration: 1s;
   -webkit-animation-fill-mode: both;
@@ -60,7 +54,7 @@
   font-size: 1.3vw;
   text-align: center;
   margin-top: 2vw;
-  font-family: "Quattrocento", serif;
+  font-family: Santral;
 }
 
 .homePage__middleSectionMiddleContainerDesc {

@@ -1,3 +1,12 @@
+@font-face {
+	font-family: ginebra_font;
+	src: url(ginebra_font.ttf);
+}
+@font-face {
+	font-family: Santral;
+	src: url(santral.otf);
+}
+
 .ringsPage {
 	display: flex;
 	flex-direction: column;
@@ -13,7 +22,7 @@
 	outline: none;
 	background-color: transparent;
 	font-size: 14px;
-	font-family: Quattrocento-Regular;
+	font-family: Santral;
 	color: #474747;
 	width: 120px;
 	height: 30px;
@@ -63,7 +72,7 @@
 .ringsPage__sectionCartMainImageIcon > .MuiSvgIcon-root, .ringsPage__sectionCartMainImageIcon > a > .MuiSvgIcon-root {
 	font-size: 24px !important;
 	cursor: pointer;
-	color: rgb(255, 177, 109) !important;
+	color: #d35f46 !important;
 }
 .ringsPage__sectionCartMainImage {
 	margin: 0 100px 0 30px;
@@ -73,15 +82,15 @@
 	width: 350px;
 }
 .ringsPage__sectionCartCartDetails > div > h2 {
-	font-size: 16px;
-	font-family: Quattrocento-Regular;
+	font-size: 18px;
+	font-family: ginebra_font;
 	color: #707070;
-	font-weight: bold;
+	font-weight: lighter;
 	margin-bottom: 20px;
 }
 .ringsPage__sectionCartCartDetailsItem {
 	display: flex;
-	font-family: Quattrocento-Regular;
+	font-family: Santral;
 	color: #494949;
 	line-height: 40px;
 	padding: 0.4rem 0;
@@ -90,7 +99,7 @@
 	border-bottom: 1px solid black;
 }
 .ringsPage__sectionCartCartDetails > div > p {
-	font-family: Quattrocento-Regular;
+	font-family: Santral;
 	color: #494949;
 	line-height: 40px;
 }
@@ -111,7 +120,7 @@
 .ringsPage__sectionCartCartDetailsBtns > a > button {
 	flex: 1;
 	font-size: 14px;
-	font-family: Quattrocento-Regular;
+	font-family: Santral;
 	color: #444;
 	background-color: #ffc0a1;
 	transition: 0.1s ease-in-out;
@@ -132,7 +141,7 @@
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
-	font-family: Quattrocento-Regular;
+	font-family: Santral;
 	color: #707070;
 	margin: 80px;
 	margin-bottom: -50px;

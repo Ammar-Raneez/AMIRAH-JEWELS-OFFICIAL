@@ -21,7 +21,6 @@ import { logout, selectUser } from '../../../features/userSlice';
 function TopBar({ isSpecificProduct }) {
 	const social = ['https://www.facebook.com/amirahgems', 'https://www.instagram.com/amirahgems/'];
 	const [openDrawer, setDrawer] = useState(false);
-	// const [{ wishListBasket, cartBasket, user }, dispatch] = useStateValue();
 	const user = useSelector(selectUser);
 	const dispatch = useDispatch();
 
@@ -89,9 +88,6 @@ function TopBar({ isSpecificProduct }) {
 							<a className="topbar__treeItem" href="/joy+of+jewellery">
 								<TreeItem nodeId="11" label="- Joy of Jewellery" />
 							</a>
-							{/* <a className="topbar__treeItem" href="/gemstones+metal">
-								<TreeItem nodeId="12" label="- Explore More" />
-							</a> */}
 						</TreeItem>
 						<TreeItem nodeId="13" label="Featured Collections">
 							<a href="/">
@@ -164,14 +160,17 @@ function TopBar({ isSpecificProduct }) {
 				<a href="/" className="topbar__centerTypedHidden">
 					<Typed strings={['AMIRAH']} typeSpeed={100} className="topbar__centerTypedText"></Typed>
 					<Fade direction="up" triggerOnce delay={800}>
-						{
-							isSpecificProduct ? <img src="../word_logo_bottom.png" className="topbar__center__TopLogo" alt="" /> : <img src="word_logo_bottom.png" className="topbar__center__TopLogo" alt="" />
+						{isSpecificProduct ?
+							<img src="../word_logo_bottom.png" className="topbar__center__TopLogo" alt="" />
+							: <img src="word_logo_bottom.png" className="topbar__center__TopLogo" alt="" />
 						}
 					</Fade>
 				</a>
 				<a href="/" className="topbar__centerHidden">
 					{
-						isSpecificProduct ? <img src="../word_logo.png" className="topbar__center__TopLogo" alt="" /> : <img src="word_logo.png" className="topbar__center__TopLogo" alt="" />
+						isSpecificProduct ?
+							<img src="../word_logo.png" className="topbar__center__TopLogo" alt="" />
+							: <img src="word_logo.png" className="topbar__center__TopLogo" alt="" />
 					}
 				</a>
 			</div>

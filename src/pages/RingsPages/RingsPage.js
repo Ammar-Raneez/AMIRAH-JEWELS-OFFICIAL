@@ -219,7 +219,7 @@ function RingsPage({ title, description, specification, stoneInfo, diamondInfo, 
 
 				<div className="ringsPage__sectionCartCartDetails">
 					<Fade direction="left" triggerOnce>
-						<h2>{title}</h2>
+						<h2>{title.toUpperCase()}</h2>
 						<div className="ringsPage__sectionCartMainImageIcon">
 							{user ?
 								addToWishList ? (

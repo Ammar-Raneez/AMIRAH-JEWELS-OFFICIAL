@@ -1,3 +1,8 @@
+@font-face {
+	font-family: ginebra_font;
+	src: url(ginebra_font.ttf);
+}
+
 .MuiPaper-root.product.MuiPaper-elevation1.MuiPaper-rounded {
 	padding: 10px;
 	transition: 0.3s ease all;
@@ -23,7 +28,7 @@
 	text-decoration: none;
 }
 .product > a > p {
-	font-family: Quattrocento-Regular;
+	font-family: ginebra_font;
 	color: #707070;
 	padding: 1vw;
 	font-size: 14px;
@@ -31,32 +36,7 @@
 	justify-content: center;
 	text-align: center;
 }
-/* .product > a > button {
-	margin: 2vw;
-	padding: 0.8vw 3vw;
-	cursor: pointer !important;
-	margin-top: 1vw;
-	font-family: Quattrocento-Regular;
-	border: none;
-	font-size: 12px;
-	z-index: 999;
-	color: #555555;
-	outline: none;
-	background-color: white;
-	border: 2px #ffc0a1 solid;
-	border-radius: 0.7vw;
-	transition: 0.3s ease-in-out;
-} */
-/* .product > a > button:hover {
-	transition: 0.3s ease-in-out;
-	color: white;
-	background-color: #ffc0a1;
-	font-weight: bold;
-} */
-/* .product > img:hover {
-	transition: 0.3s ease-in-out;
-	transform: scale(1.05);
-} */
+
 @media screen and (max-width: 900px) and (min-width: 450px) {
 	.product {
 		padding: 10px;

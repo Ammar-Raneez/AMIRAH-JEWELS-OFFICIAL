@@ -1,8 +1,6 @@
-@import url('https://fonts.googleapis.com/css2?family=Cinzel&display=swap');
-
 @font-face {
-    font-family: quattrocento;
-    src: url(Quattrocento-Regular.ttf);
+	font-family: ginebra_font;
+	src: url(ginebra_font.ttf);
 }
 
 .header{
@@ -12,22 +10,28 @@
 	background-color: #fff;
 	z-index: 999;
 }
+
 .header__options {
 	display: flex;
 	align-items: center;
-	font-family: quattrocento;
+	font-family: ginebra_font;
 	justify-content: space-evenly;
 	margin: 1vw 2.5vw;
 	font-size: 1.2vw;
 }
-.header__options > a, .header__options > div > a {
+
+.header__options > a,
+.header__options > div > a {
 	color: rgb(85, 85, 85);
 	text-decoration: none;
 }
-.header__options > div > a:hover, .header__options > a:hover {
+
+.header__options > div > a:hover,
+.header__options > a:hover {
 	font-weight: bold;
 }
-.header_optionsJewellery{
+
+.header_optionsJewellery {
 	color: rgb(63, 63, 63);
 	font-weight: 600;
 }
@@ -38,6 +42,7 @@
 	flex-direction: column;
 	align-items: center;
 }
+
 .header__optionsAboutDetails {
 	font-size: 1.1vw;
 	position: absolute;
@@ -53,16 +58,16 @@
 }
 
 .header__optionsProductDetails {
-	font-size: 1.1vw;
+	font-size: 1vw;
 	position: absolute;
 	margin-top: 3.5vw;
 	margin-left: 18vw;
 	z-index: 99;
 	background-color: #fff;
 	padding: 0.8vw;
-	width: 45vw;
+	width: 40vw;
 	display: flex;
-	justify-content: space-between;
+	justify-content: space-evenly;
 	border-radius: 0.8vw;
 	box-shadow: 0vw 0.1vw 0.6vw rgba(0, 0, 0, 0.12), 0 0.1vw 0.2vw rgba(0, 0, 0, 0.24);
 }
@@ -73,7 +78,8 @@
 	padding: 1vw;
 }
 
-.header__optionsAboutDetails > a, .header__optionsProductDetails > div > a {
+.header__optionsAboutDetails > a,
+.header__optionsProductDetails > div > a {
 	padding: 0.4vw;
 	text-decoration: none;
 	cursor: pointer;
@@ -84,7 +90,8 @@
 	position: relative;
 }
 
-.header__optionsProductDetail span::before, .header__optionsProductDetail span::after {
+.header__optionsProductDetail span::before,
+.header__optionsProductDetail span::after {
 	position: absolute;
 	top: 1.3vw;
 	left: 0vw;
@@ -93,7 +100,8 @@
 	content: '';
 }
 
-.header__optionsProductDetail span::before, .header__optionsProductDetail span::after {
+.header__optionsProductDetail span::before,
+.header__optionsProductDetail span::after {
 	height: 2px;
 	width: 0px;
 }
@@ -114,12 +122,14 @@
 	transition: 0.3s ease;
 	border-radius: 0.7vw;
 }
+
 .header__optionsProductDetailSpecial:hover {
 	background: #ffc0a1;
 }
 
 @media screen and (max-width: 900px) and (min-width: 600px) {
-	.header__options, .header__optionsAboutDetails, .header__optionsProductDetails {
+	.header__options, .header__optionsAboutDetails,
+	.header__optionsProductDetails {
 		font-size: 13px;
 	}
 
@@ -132,13 +142,15 @@
 		margin-left: 350px;
 	}
 
-	.header__optionsProductDetail span::before, .header__optionsProductDetail span::after {
+	.header__optionsProductDetail span::before,
+	.header__optionsProductDetail span::after {
 		top: 14px;
 	}
 }
 
 @media screen and (max-width: 600px) and (min-width: 500px) {
-	.header__options, .header__optionsAboutDetails, .header__optionsProductDetails {
+	.header__options, .header__optionsAboutDetails,
+	.header__optionsProductDetails {
 		font-size: 13px;
 	}
 
@@ -151,8 +163,9 @@
 		justify-content: left;
 		width: 400px;
 	}
-	
-	.header__optionsProductDetail span::before, .header__optionsProductDetail span::after {
+
+	.header__optionsProductDetail span::before,
+	.header__optionsProductDetail span::after {
 		top: 14px;
 	}
 

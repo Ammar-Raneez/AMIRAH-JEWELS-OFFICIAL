@@ -1,18 +1,6 @@
-@import url('https://fonts.googleapis.com/css2?family=Quattrocento&display=swap');
-
 @font-face {
-	font-family: timeless;
-	src: url(Timeless.ttf);
-}
-
-@font-face {
-	font-family: boowie;
-	src: url(BOOWIE.ttf);
-}
-
-@font-face {
-	font-family: cinzel;
-	src: url(CinzelDecorative-Regular.otf);
+	font-family: ginebra_font;
+	src: url(ginebra_font.ttf);
 }
 
 .topbar__centerHidden {
@@ -20,7 +8,7 @@
 }
 
 .topbar {
-	font-family: timeless;
+	font-family: ginebra_font;
 	display: flex;
 	justify-content: space-between;
 	padding: 0 0 0 1vw;
@@ -44,9 +32,9 @@
 }
 
 .topbar__centerTypedText {
-	font-family: cinzel;
+	font-family: ginebra_font;
 	font-size: 2.6vw;
-	color: #d35f46;
+	color: #D35F46;
 	font-weight: 500;
 	letter-spacing: 0.5vw;
 	line-height: 1.8vw;
@@ -58,10 +46,11 @@
 }
 
 .expandedMoreIcon {
-	color: #c23d00 !important;
+	color: #D35F46 !important;
 }
+
 .chevronRightIcon {
-	color: #c23d00 !important;
+	color: #D35F46 !important;
 }
 
 .topbar__center {
@@ -70,21 +59,18 @@
 	justify-content: center;
 }
 
-.topbar__left, .topbar__right {
+.topbar__left,
+.topbar__right {
 	display: flex;
 	justify-content: space-around;
-	/* align-items: center; */
 }
 
 .topbar__right {
-	/* flex-grow: 0.3; */
 	min-width: 30%;
-	/* max-width: 25%; */
 	justify-content: flex-end;
 }
 
 .topbar__left {
-	/* flex-grow: 1.5; */
 	min-width: 25%;
 	max-width: 25%;
 	justify-content: left;
@@ -106,6 +92,7 @@
 	align-items: center;
 	font-size: 1vw;
 }
+
 .topbar__rightAccount > a:hover {
 	font-weight: bold;
 }
@@ -118,7 +105,7 @@
 	cursor: pointer;
 	font-size: 1.9vw !important;
 	transition: 0.3s ease;
-	color: rgb(255, 177, 109);
+	color: #D35F46;
 }
 
 .topbar__left > a > .MuiSvgIcon-root:hover,
@@ -132,12 +119,13 @@
 }
 
 .MuiTreeItem-label {
-	font-family: 'Quattrocento', serif !important;
+	font-family: ginebra_font, serif !important;
 	padding: 10px;
 	font-size: 14px !important;
 }
+
 .MuiTypography-root.MuiListItemText-primary.MuiTypography-body1.MuiTypography-displayBlock {
-	font-family: 'Quattrocento', serif !important;
+	font-family: ginebra_font, serif !important;
 	font-size: 14px !important;
 }
 
@@ -161,7 +149,11 @@
 	.topbar__centerTypedHidden > a > div {
 		line-height: 0;
 	}
-	.topbar__left > a > .MuiSvgIcon-root, .topbar__right > .MuiSvgIcon-root, .topbar__right > .topbar__rightAccount > .MuiSvgIcon-root, .topbar__right > a > .MuiSvgIcon-root {
+
+	.topbar__left > a > .MuiSvgIcon-root,
+	.topbar__right > .MuiSvgIcon-root,
+	.topbar__right > .topbar__rightAccount > .MuiSvgIcon-root,
+	.topbar__right > a > .MuiSvgIcon-root {
 		font-size: 20px !important;
 	}
 
@@ -179,9 +171,11 @@
 		display: block;
 	}
 
-	.topbar__left, .topbar__centerTypedHidden {
+	.topbar__left,
+	.topbar__centerTypedHidden {
 		display: none;
 	}
+
 	.topbar {
 		justify-content: space-between;
 	}
@@ -216,9 +210,11 @@
 		display: block;
 	}
 
-	.topbar__left, .topbar__centerTypedHidden {
+	.topbar__left,
+	.topbar__centerTypedHidden {
 		display: none;
 	}
+
 	.topbar {
 		justify-content: space-between;
 	}

@@ -16,14 +16,14 @@
 	width: 38vw;
 }
 .gemStonesMain__detailsFirst > div > h1 {
-	font-family: boowie;
+	font-family: Ginebra_font;
 	color: #707070;
 	font-weight: lighter;
 	font-size: 3.5vw;
 	padding: 1vw 0;
 }
 .gemStonesMain__detailsFirst > div > p {
-	font-family: Quattrocento-Regular;
+	font-family: Santral;
 	color: #707070;
 	font-size: 1.3vw;
 	line-height: 2vw;
@@ -39,32 +39,32 @@
 	padding: 1.3vw 3vw;
 	width: 16vw;
 	cursor: pointer;
-	font-family: Quattrocento-Regular;
+	font-family: Santral;
 	z-index: 999;
 	border: none;
 	font-size: 1.1vw;
 	color: #3f3f3f;
 	outline: none;
-	background-color: #ffc0a1;
+	background-color: #d35f46;
 	border-radius: 0.7vw;
 	transition: 0.3s ease-in-out;
 }
 .gemStonesMain__detailsFirstButtons > a:first-child > button:hover {
 	transition: 0.3s ease-in-out;
 	background-color: white;
-	border: 0.1px #ffc0a1 solid;
+	border: 0.1px #d35f46 solid;
 }
 .gemStonesMain__detailsFirstButtons > a:last-child > button:hover {
 	transition: 0.3s ease-in-out;
-	background-color: #ffc0a1;
+	background-color: #d35f46;
 }
 .gemStonesMain__detailsFirstButtons > a:last-child > button {
 	padding: 1.3vw 3vw;
 	width: 16vw;
 	transition: 0.3s ease-in-out;
 	cursor: pointer;
-	font-family: Quattrocento-Regular;
-	border: 0.1vw #ffc0a1 solid;
+	font-family: Santral;
+	border: 0.1vw #d35f46 solid;
 	font-size: 1.1vw;
 	color: #3f3f3f;
 	outline: none;

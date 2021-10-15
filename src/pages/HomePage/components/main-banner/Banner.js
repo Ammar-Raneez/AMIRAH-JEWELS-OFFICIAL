@@ -1,7 +1,7 @@
 
 import SimpleImageSlider from "react-simple-image-slider";
-import React, { useEffect, useState } from 'react'
-import './Banner.css'
+import React, { useEffect, useState } from 'react';
+import './Banner.css';
 
 function Banner() {
     const [width, setWidth] = useState(0);
@@ -23,30 +23,21 @@ function Banner() {
 
     return (
         width > 1100 ? (
-            <div style={{position: 'relative'}}>
-                <SimpleImageSlider
-                    images={images}
-                    height="75vh"
-                    width="100%"
-                    showBullets={true}
-                    showNavs={true}
-                />
-                <a href="#category">
-                    <button className="homePage__bannerLeftBtn" style={{position: 'absolute', bottom: 0, left: '70px'}}>
-                        Discover Now
-                    </button>
-                </a>
-            </div>
+            <a href="#category">
+                <div style={{position: 'relative'}}>
+                    <SimpleImageSlider
+                        images={images}
+                        height="75vh"
+                        width="100%"
+                        showBullets={true}
+                        showNavs={true}
+                    />
+                </div>
+            </a>
         ) : (
-            <div className="homePage__banner">
-                <a href="#category">
-                    <button className="homePage__bannerLeftBtn">
-                        Discover Now
-                    </button>
-                </a>
-            </div>
+            <a href="#category"><div className="homePage__banner" /></a>
         )
     )
 }
 
-export default Banner
+export default Banner;

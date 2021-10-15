@@ -10,7 +10,7 @@ function Header() {
 	return (
 		<div className="header">
 			<div className="header__options">
-				<Link to="/">Home</Link>
+				<Link to="/">HOME</Link>
 
 				<ClickAwayListener
 					mouseEvent="onMouseDown"
@@ -25,50 +25,109 @@ function Header() {
 							}}
 							className={productsClicked && 'header_optionsJewellery'}
 						>
-							Jewellery
+							JEWELLERY
 						</Link>
 						{productsClicked && (
 							<div className="header__optionsProductDetails">
 								<div>
-									<p style={{ color: '#656565', fontWeight: '600' }}>Shop by Category</p>
-									<Link className="header__optionsProductDetail" to="/all-rings"><span>Rings</span></Link>
-									<Link className="header__optionsProductDetail" to="/earrings"><span>Earrings</span></Link>
-									<Link className="header__optionsProductDetail" to="/bracelets"><span>Bracelets</span></Link>
-									<Link className="header__optionsProductHidden header__optionsProductDetail" to="/necklace+pendants"><span>Necklaces & Pendants</span></Link>
-									<Link style={{ color: '#656565', fontWeight: '600' }} className="header__optionsProductDetail" to="/explore+all+categories"><span>Explore All Categories</span></Link>
-									<Link style={{ color: '#656565', fontWeight: '600' }} className="header__optionsProductDetail header__optionsProductDetailSpecial" to="/gemstones+metal"><span>Shop by Gemstones</span></Link>
+									<p style={{ color: '#656565', fontWeight: '600' }}>SHOP BY CATEGORY</p>
+									<Link className="header__optionsProductDetail" to="/all-rings">
+										<span>RINGS</span>
+									</Link>
+									<Link className="header__optionsProductDetail" to="/earrings">
+										<span>EARRINGS</span>
+									</Link>
+									<Link className="header__optionsProductDetail" to="/bracelets">
+										<span>BRACELETS</span>
+									</Link>
+									<Link
+										className="header__optionsProductHidden header__optionsProductDetail"
+										to="/necklace+pendants"
+									>
+										<span>NECKLACES & PENDANTS</span>
+									</Link>
+									<Link
+										style={{ color: '#656565', fontWeight: '600' }}
+										className="header__optionsProductDetail"
+										to="/explore+all+categories"
+									>
+										<span>EXPLORE ALL CATEGORIES</span>
+									</Link>
+									<Link
+										style={{ color: '#656565', fontWeight: '600' }}
+										className="header__optionsProductDetail header__optionsProductDetailSpecial"
+										to="/gemstones+metal"
+									>
+										<span>SHOP BY GEMSTONES</span>
+									</Link>
 								</div>
 								<div>
-									<p style={{ color: '#656565', fontWeight: '600' }}>Shop by Collection</p>
-									<Link className="header__optionsProductHidden header__optionsProductDetail" to="/sollitarates"><span>Sollitarates</span></Link>
-									<Link className="header__optionsProductHidden header__optionsProductDetail" to="/eternity"><span>Eternity</span></Link>
-									<Link className="header__optionsProductHidden header__optionsProductDetail" to="/joy+of+jewellery"><span>Joy of Jewellery</span></Link>
-									{/* <Link className="header__optionsProductHidden header__optionsProductDetail" to="/yellow+gold"><span>Yellow Gold</span></Link>
-									<Link className="header__optionsProductHidden header__optionsProductDetail" to="/white+gold"><span>White Gold</span></Link>
-									<Link className="header__optionsProductHidden header__optionsProductDetail" to="/rose+gold"><span>Rose Gold</span></Link>
-									<Link className="header__optionsProductHidden header__optionsProductDetail" to="/diamonds"><span>Diamonds</span></Link>
-									<Link className="header__optionsProductDetail" to="/teal+sapphire"><span>Teal Sapphires</span></Link>
-									<Link className="header__optionsProductDetail" to="/pink+sapphire"><span>Pink Sapphires</span></Link>
-									<Link className="header__optionsProductDetail" to="/pearl+sapphire"><span>Pearl Sapphires</span></Link>
-									<Link className="header__optionsProductDetail" to="/purple+sapphire"><span>Purple Sapphires</span></Link>
-									<Link style={{ color: '#656565', fontWeight: '600' }} className="header__optionsProductDetail" to="/gemstones+metal"><span>Explore More</span></Link> */}
+									<p style={{ color: '#656565', fontWeight: '600' }}>SHOP BY COLLECTION</p>
+									<Link
+										className="header__optionsProductHidden header__optionsProductDetail"
+										to="/sollitarates"
+									>
+										<span>SOLLITARATES</span>
+									</Link>
+									<Link
+										className="header__optionsProductHidden header__optionsProductDetail"
+										to="/eternity"
+									>
+										<span>ETERNITY</span>
+									</Link>
 								</div>
-								<div>
-									<p style={{ color: '#656565', fontWeight: '600' }}>Featured Collections</p>
-									<Link className="header__optionsProductHidden header__optionsProductDetail" to="/signature"><span>Signature</span></Link>
-									<Link className="header__optionsProductHidden header__optionsProductDetail" to="/amarelo"><span>Amarelo</span></Link>
-									<Link className="header__optionsProductHidden header__optionsProductDetail" to="/mi+amor"><span>Mi Amor</span></Link>
-									<Link className="header__optionsProductDetail" to="/dew+drops"><span>Dew Drops</span></Link>
-									<Link className="header__optionsProductDetail" to="/ombre"><span>Ombre</span></Link>
-									<Link className="header__optionsProductDetail" to="/numero"><span>Numero</span></Link>
-									<Link style={{ color: '#656565', fontWeight: '600' }} className="header__optionsProductDetail" to="/explore+all+collection"><span>Explore All Collection</span></Link>
-								</div>
+								{/* <div>
+									<p style={{ color: '#656565', fontWeight: '600' }}>FEATURED COLLECTION</p>
+									<Link
+										className="header__optionsProductHidden header__optionsProductDetail"
+										to="/signature"
+									>
+										<span>SIGNATURE</span>
+									</Link>
+									<Link
+										className="header__optionsProductHidden header__optionsProductDetail"
+										to="/amarelo"
+									>
+										<span>AMARELO</span>
+									</Link>
+									<Link
+										className="header__optionsProductHidden header__optionsProductDetail"
+										to="/mi+amor"
+									>
+										<span>MI AMOR</span>
+									</Link>
+									<Link
+										className="header__optionsProductDetail" 
+										to="/dew+drops"
+									>
+										<span>DEW DROPS</span>
+									</Link>
+									<Link 
+										className="header__optionsProductDetail" 
+										to="/ombre"
+									>
+										<span>OMBRE</span>
+									</Link>
+									<Link 
+										className="header__optionsProductDetail" 
+										to="/numero"
+									>
+										<span>NUMERO</span>
+									</Link>
+									<Link
+										style={{ color: '#656565', fontWeight: '600' }}
+										className="header__optionsProductDetail"
+										to="/explore+all+collection"
+									>
+										<span>EXPLORE ALL COLLECTION</span>
+									</Link>
+								</div> */}
 							</div>
 						)}
 					</div>
 				</ClickAwayListener>
 
-				<Link to="/processes">Process</Link>
+				<Link to="/processes">PROCESS</Link>
 
 				<ClickAwayListener
 					mouseEvent="onMouseDown"
@@ -83,22 +142,28 @@ function Header() {
 							}}
 							className={aboutUsClicked && 'header_optionsJewellery'}
 						>
-							About Us
+							ABOUT US
 						</Link>
 						{aboutUsClicked && (
 							<div className="header__optionsAboutDetails">
 								<Link style={{ color: '#656565', fontWeight: '600' }} to="/aboutus">
-									Our Company
+									OUR COMPANY
 								</Link>
-								<Link className="header__optionsProductDetail" to="/charity"><span>Charity</span></Link>
-								<Link className="header__optionsProductDetail" to="/careers"><span>Careers</span></Link>
-								<Link className="header__optionsProductDetail" to="/policy"><span>Policy</span></Link>
+								<Link className="header__optionsProductDetail" to="/charity">
+									<span>CHARITY</span>
+								</Link>
+								<Link className="header__optionsProductDetail" to="/careers">
+									<span>CAREERS</span>
+								</Link>
+								<Link className="header__optionsProductDetail" to="/policy">
+									<span>POLICY</span>
+								</Link>
 							</div>
 						)}
 					</div>
 				</ClickAwayListener>
 
-				<Link to="/designer+desk">Designer Desk</Link>
+				<Link to="/designer+desk">DESIGNER DESK</Link>
 			</div>
 		</div>
 	);

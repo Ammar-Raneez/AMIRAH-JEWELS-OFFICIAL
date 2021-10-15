@@ -1,23 +1,18 @@
-// import { useHistory } from 'react-router-dom';
-// import { auth } from '../../../firebase';
-// import { useStateValue } from '../../../StateProvider';
 import { useEffect, useState } from 'react';
-// import { useStateValue } from '../../../StateProvider';
 import './Footer.css';
 import cc from 'currency-codes';
 import coinify from 'coinify';
-import { auth/*, db*/ } from '../../../firebase';
+import { auth } from '../../../firebase';
 import { IconButton } from '@material-ui/core';
 import InstagramIcon from '@material-ui/icons/Instagram';
 import FacebookIcon from '@material-ui/icons/Facebook';
 import EmailIcon from '@material-ui/icons/Email';
-// import PinterestIcon from '@material-ui/icons/Pinterest';
 import TwitterIcon from '@material-ui/icons/Twitter';
 import { Link, useHistory } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { logout, selectUser } from '../../../features/userSlice';
-import { changeSymbol/*, selectCurrencySymbol*/ } from '../../../features/currencySymbolSlice';
-import { changeRate/*, selectCurrencyRate*/ } from '../../../features/currencyRateSlice';
+import { changeSymbol } from '../../../features/currencySymbolSlice';
+import { changeRate } from '../../../features/currencyRateSlice';
 
 function Footer() {
 	const [date] = useState(new Date().getFullYear());

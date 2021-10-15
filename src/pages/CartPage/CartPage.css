@@ -12,7 +12,7 @@
 	margin-bottom: 2vw;
 }
 .cartPage__title > h1 {
-	font-family: bowie;
+	font-family: Ginebra_font;
 	font-size: 2.5vw;
 	margin: 2vw 0;
 	font-weight: lighter;
@@ -31,7 +31,7 @@
 	justify-content: space-around;
 	align-items: center;
 	color: #707070;
-	font-family: Quattrocento-Regular;
+	font-family: Santral;
 }
 
 .cartPage__itemsEmpty > h1 {
@@ -52,7 +52,7 @@
 	align-items: center;
 	color: #707070;
 	margin-top: 1vw;
-	font-family: Quattrocento-Regular;
+	font-family: Santral;
 }
 .cartPage__itemsNoLogin > h1 {
 	font-size: 2vw;
@@ -63,7 +63,7 @@
 	cursor: pointer;
 	margin-top: 1vw;
 	width: 100%;
-	font-family: Quattrocento-Regular;
+	font-family: Santral;
 	border: 1px solid #ffc0a1;
 	font-size: 1.3vw;
 	color: #555555;
@@ -91,7 +91,7 @@
 		color: #707070;
 		height: 60vh;
 		justify-content: center;
-		font-family: Quattrocento-Regular;
+		font-family: Santral;
 	}
 }
 
@@ -119,7 +119,7 @@
 		color: #707070;
 		height: 80vh;
 		justify-content: center;
-		font-family: Quattrocento-Regular;
+		font-family: Santral;
 	}
 }
 
@@ -150,6 +150,6 @@
 		color: #707070;
 		height: 80vh;
 		justify-content: center;
-		font-family: Quattrocento-Regular;
+		font-family: Santral;
 	}
 }
