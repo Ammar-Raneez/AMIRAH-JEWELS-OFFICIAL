@@ -17,8 +17,9 @@
 	flex-direction: column;
 	width: 400px;
 	border-radius: 20px;
-	border: 2px #ffe7dc solid;
+	border: 2px #d35f46 solid;
 }
+
 .checkoutPage__form > h2 {
 	font-size: 2.2vw;
 	font-family: Ginebra_font;
@@ -29,6 +30,7 @@
 	font-weight: lighter;
 	color: #707070;
 }
+
 .checkout__payment {
 	padding-top: 20px;
 }
@@ -43,7 +45,8 @@
 		width: 100% !important;
 	}
 
-	.MuiPickersMonthSelection-container, .MuiPickersYearSelection-container {
+	.MuiPickersMonthSelection-container,
+	.MuiPickersYearSelection-container {
 		height: 15vw !important;
 	}
 
@@ -52,7 +55,7 @@
 		font-size: 1vw !important;
 		line-height: 1vw !important;
 	}
-	
+
 	.MuiPickersYearSelection-container > div {
 		height: 3vw;
 		font-size: 1vw !important;
@@ -104,7 +107,8 @@
 		padding: 0.7vw;
 	}
 
-	.checkout__payment > fieldset > div > label > span > span > div > svg, .checkoutPage__form > form > div.MuiFormControl-root.MuiTextField-root.MuiFormControl-marginNormal > div > div > button > span > svg {
+	.checkout__payment > fieldset > div > label > span > span > div > svg,
+	.checkoutPage__form > form > div.MuiFormControl-root.MuiTextField-root.MuiFormControl-marginNormal > div > div > button > span > svg {
 		font-size: 1.5vw !important;
 		height: 2vw !important;
 		width: 2vw !important;
@@ -137,16 +141,19 @@
 
 @media screen and (max-width: 700px) {
 	.checkoutPage__form > h2 {
-		font-size: 20px ;
+		font-size: 20px;
 	}
+
 	.checkoutPage__form {
 		width: 250px;
 		padding: 20px;
 	}
+
 	input {
 		width: 200px !important;
 		font-size: 11px !important;
 	}
+
 	.checkoutPage {
 		margin: 10px;
 	}

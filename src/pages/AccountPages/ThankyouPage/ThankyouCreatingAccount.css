@@ -6,6 +6,7 @@
 	position: relative;
 	margin-top: 5%;
 }
+
 .thankingPage__firstJewel {
 	display: flex;
 	align-items: flex-end;
@@ -14,6 +15,7 @@
 	top: 3vw;
 	left: 3vw;
 }
+
 .thankingPage__lastJewel {
 	display: flex;
 	position: relative;
@@ -21,11 +23,13 @@
 	z-index: -1;
 	right: 3vw;
 }
+
 .thankingPage__lastJewel > img,
 .thankingPage__firstJewel > img {
 	object-fit: contain;
 	height: 7vw;
 }
+
 .thankingPage__body {
 	background-color: #f8f8f8;
 	width: 300px;
@@ -42,29 +46,31 @@
 	justify-content: space-around;
 	align-items: center;
 }
+
 .thankingPage__body > button {
 	padding: 1vw 3vw;
 	cursor: pointer !important;
 	margin-top: 1vw;
-	font-family: Quattrocento-Regular;
+	font-family: Santral;
 	border: none;
-    font-size: 1vw;
-    z-index: 99;
-	color: #555555;
+	font-size: 1vw;
+	z-index: 99;
+	color: black;
 	outline: none;
-	background-color: #ffc0a1;
+	background-color: #d35f46;
 	border-radius: 0.7vw;
     transition: 0.3s ease;
 }
 
 .thankingPage__body > button:hover {
-    background-color: white;
-    border: 1px #ffc0a1 solid;
+	background-color: white;
+	border: 1px #d35f46 solid;
 }
+
 .thankingPage__body > h1 {
 	font-size: 2.5vw;
 	text-align: center;
-	font-family: bowie;
+	font-family: Ginebra_font;
 	margin-bottom: 1vw;
 	display: flex;
 	align-items: center;
@@ -72,8 +78,9 @@
 	font-weight: lighter;
 	color: #707070;
 }
+
 .thankingPage__body > p {
-	font-family: Quattrocento-Regular;
+	font-family: Santral;
 	color: #707070;
 	padding: 1vw;
 	margin-bottom: 1vw;
@@ -86,16 +93,6 @@
 }
 
 /* ------------------------------------------------------ */
-@font-face {
-	font-family: bowie;
-	src: url(BOOWIE.ttf);
-}
-
-@font-face {
-	font-family: Quattrocento-Regular;
-	src: url(Quattrocento-Regular.ttf);
-}
-
 @media screen and (max-width: 768px) {
 	.thankingPage__body > h1 {
 		font-size: 20px;

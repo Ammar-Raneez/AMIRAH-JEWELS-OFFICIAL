@@ -107,10 +107,6 @@ function RegisterPage() {
 	return (
 		<div className="registerPage">
 			<SEO title="Register" />
-			{/* jewel image */}
-			<div className="registerPage__firstJewel">
-				<img src="aboutuspage/purple-sapphire.png" alt="" />
-			</div>
 			{/* form */}
 			<div className="registerPage__body">
 				<h1>CREATE AN ACCOUNT</h1>
@@ -214,11 +210,6 @@ function RegisterPage() {
 						<button type="submit">CREATE AN ACCOUNT</button>
 					</div>
 				</ValidatorForm>
-			</div>
-
-			{/* jewel image */}
-			<div className="registerPage__lastJewel">
-				<img src="aboutuspage/purple-sapphire.png" alt="" />
 			</div>
 		</div>
 	);

@@ -13,13 +13,15 @@ export const AboutGem = ({ aboutName, aboutDescriptionArray, aboutImage }) => {
 	);
 };
 
-const Container = styled.div`
+const Container = styled.div `
 	> h2 {
 		margin: 8px 0;
 	}
+
 	> p {
 		margin: 20px 0;
 	}
+
 	> hr {
 		width: 60%;
 		border-width: 5px;
@@ -28,19 +30,23 @@ const Container = styled.div`
 		border-left: none;
 		border-color: #db8932;
 	}
+
 	> img {
 		object-fit: contain;
 		height: 150px;
 	}
+
 	@media screen and (max-width: 600px) {
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
 		align-items: center;
+
 		> h2 {
 			font-size: 1.2rem;
 			text-align: center;
 		}
+
 		> p {
 			text-align: center;
 		}

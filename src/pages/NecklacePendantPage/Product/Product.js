@@ -8,7 +8,7 @@ function Product({ img, name, viewMoreUrl }) {
         <Paper className={"product " + extraClassName}>
             <a href={viewMoreUrl}>
                 <img src={img} alt="" />
-                <p>{name}</p>
+                <p>{name.toUpperCase()}</p>
             </a>
         </Paper>
     )

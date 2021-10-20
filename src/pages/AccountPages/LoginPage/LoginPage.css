@@ -1,13 +1,3 @@
-@font-face {
-	font-family: bowie;
-	src: url(BOOWIE.ttf);
-}
-
-@font-face {
-	font-family: Quattrocento-Regular;
-	src: url(Quattrocento-Regular.ttf);
-}
-
 .loginPage {
 	display: flex;
 	flex-wrap: wrap;
@@ -22,7 +12,7 @@
 	overflow-x: hidden;
 	min-width: 500px;
 	max-width: 500px;
-	color: #555555;
+	color: black;
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
@@ -30,12 +20,12 @@
 }
 
 .loginPage .loginPage__title {
-	font-family: bowie;
+	font-family: Ginebra_font;
 	font-size: 3vw;
 }
 
 .loginPage .loginPage__subTitle {
-	font-family: Quattrocento-Regular;
+	font-family: Santral;
 	font-size: 1.2vw;
 	margin-top: 1vw;
 	margin-bottom: 3vw;
@@ -59,7 +49,7 @@
 	border-top: none;
 	border-right: none;
 	border-left: none;
-	font-family: Quattrocento-Regular;
+	font-family: Santral;
 	padding: 0.8vw;
 	border-bottom: 0.1vw solid #707070;
 	font-size: 1vw;
@@ -77,21 +67,22 @@
 	cursor: pointer;
 	margin-top: 1vw;
 	width: 100%;
-	font-family: Quattrocento-Regular;
-	border: 1px solid #ffc0a1;
+	font-family: Santral;
+	border: 1px solid #d35f46;
 	font-size: 1.3vw;
-	color: #555555;
+	color: black;
 	outline: none;
-	background-color: #ffc0a1;
+	background-color: #d35f46;
 	border-radius: 0.7vw;
 	margin-top: 2vw;
 	transition: 0.3s ease;
 }
+
 .loginPage > div > div > form > button:hover,
 .loginPage > div > div > a > button:hover,
 .loginPage__leftSideBottom > button:hover {
 	background: #fff;
-	border: 1px solid #e58177;
+	border: 1px solid #d35f46;
 }
 
 @media screen and (max-width: 1250px) and (min-width: 400px) {
@@ -127,7 +118,8 @@
 		font-size: 14px;
 	}
 
-	.loginPage > div > div > form > button ,.loginPage__leftSideBottom > button{
+	.loginPage > div > div > form > button,
+	.loginPage__leftSideBottom > button {
 		margin-top: 20px;
 	}
 
@@ -138,7 +130,6 @@
 		align-items: center;
 		margin-bottom: 22%;
 		text-align: center;
-		/* flex-direction: column; */
 	}
 
 	.loginPage__form {
@@ -181,7 +172,8 @@
 		margin-bottom: 1.5vw;
 	}
 
-	.loginPage__form > div > div > label, .loginPage__form > div > div > div {
+	.loginPage__form > div > div > label,
+	.loginPage__form > div > div > div {
 		font-size: 1.5vw !important;
 		line-height: 1vw !important;
 	}
@@ -228,11 +220,13 @@
 	.loginPage .loginPage__subTitle,
 	.loginPage > div > div > form > button,
 	.loginPage > div > div > a > button,
-	.loginPage__leftSide > div > input,.loginPage__leftSideBottom > button {
+	.loginPage__leftSide > div > input,
+	.loginPage__leftSideBottom > button {
 		font-size: 14px;
 	}
 
-	.loginPage > div > div > form > button,.loginPage__leftSideBottom > button {
+	.loginPage > div > div > form > button,
+	.loginPage__leftSideBottom > button {
 		margin-top: 20px;
 	}
 
@@ -243,7 +237,6 @@
 		align-items: center;
 		margin-bottom: 50%;
 		text-align: center;
-		/* flex-direction: column; */
 	}
 
 	.loginPage__form {

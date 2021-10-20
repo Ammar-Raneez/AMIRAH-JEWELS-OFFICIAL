@@ -13,31 +13,31 @@ function Bill({ subTotal, delivery, tax }) {
 	return (
 		<div className="bill">
 			<div className="bill__topSection">
-				<p>Order Summary</p>
+				<p>ORDER SUMMARY</p>
 				<span>
 					<p>Subtotal</p>
 					<p>
-						{currencySymbol} {formatCurrency(Math.round(subTotal * currencyRate * 100) / 100)}
+						{currencySymbol}{formatCurrency(Math.round(subTotal * currencyRate * 100) / 100)}
 					</p>
 				</span>
 				<span>
 					<p>Delivery</p>
 					<p>
-						{currencySymbol} {formatCurrency(Math.round(delivery * currencyRate * 100) / 100)}
+						{currencySymbol}{formatCurrency(Math.round(delivery * currencyRate * 100) / 100)}
 					</p>
 				</span>
 				<span>
 					<p>Tax</p>
 					<p>
-						{currencySymbol} {formatCurrency(Math.round(tax * currencyRate * 100) / 100)}
+						{currencySymbol}{formatCurrency(Math.round(tax * currencyRate * 100) / 100)}
 					</p>
 				</span>
 			</div>
 			<div className="bill_middleSection">
 				<span>
-					<p>Estimated Total</p>
+					<p>Estimated Total &nbsp;</p>
 					<p>
-						{currencySymbol}{' '}
+						{currencySymbol}
 						{formatCurrency(Math.round((subTotal + delivery + tax) * currencyRate * 100) / 100)}
 					</p>
 				</span>

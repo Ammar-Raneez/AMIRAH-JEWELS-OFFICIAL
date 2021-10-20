@@ -182,14 +182,11 @@ function CheckOutPage() {
 		<div className="checkoutPage">
 			<SEO title="Checkout" />
 			{/* jewel image */}
-			<div className="thankingPage__firstJewel">
-				<img src="aboutuspage/purple-sapphire.png" alt="" />
-			</div>
 			<div className="checkoutPage__form">
 				<h2>CHECK OUT</h2>
-				<ValidatorForm onSubmit={proceedCheckout} ref={formRef} style={{ width: '100%' }}>
+				<ValidatorForm onSubmit={proceedCheckout} ref={formRef} style={{ width: '100%', fontFamily: 'Santral' }}>
 					<TextValidator
-						style={{ width: '93%' }}
+						style={{ width: '93%', fontFamily: 'Santral' }}
 						type="text"
 						label="First Name"
 						name="first name"
@@ -199,7 +196,7 @@ function CheckOutPage() {
 						validators={['required', 'matchRegexp:[a-z A-Z]$']}
 					/>
 					<TextValidator
-						style={{ width: '93%' }}
+						style={{ width: '93%', fontFamily: 'Santral' }}
 						type="text"
 						label="Middle Name"
 						name="middle name"
@@ -209,7 +206,7 @@ function CheckOutPage() {
 						validators={['required', 'matchRegexp:[a-z A-Z]$']}
 					/>
 					<TextValidator
-						style={{ width: '93%' }}
+						style={{ width: '93%', fontFamily: 'Santral' }}
 						type="text"
 						label="Last Name"
 						name="last name"
@@ -219,7 +216,7 @@ function CheckOutPage() {
 						validators={['required', 'matchRegexp:[a-z A-Z]$']}
 					/>
 					<TextValidator
-						style={{ width: '93%' }}
+						style={{ width: '93%', fontFamily: 'Santral' }}
 						type="text"
 						label="Address Line 01"
 						name="address line 01"
@@ -229,7 +226,7 @@ function CheckOutPage() {
 						validators={['required']}
 					/>
 					<TextValidator
-						style={{ width: '93%' }}
+						style={{ width: '93%', fontFamily: 'Santral' }}
 						type="text"
 						label="Address Line 02 (Optional)"
 						name="address line 02"
@@ -237,7 +234,7 @@ function CheckOutPage() {
 						value={addressLineTwo}
 					/>
 					<TextValidator
-						style={{ width: '93%' }}
+						style={{ width: '93%', fontFamily: 'Santral' }}
 						type="text"
 						label="City"
 						name="city"
@@ -247,7 +244,7 @@ function CheckOutPage() {
 						validators={['required', 'matchRegexp:[a-z A-Z]$']}
 					/>
 					<TextValidator
-						style={{ width: '93%' }}
+						style={{ width: '93%', fontFamily: 'Santral' }}
 						type="text"
 						label="PIN Code"
 						name="pin code"
@@ -257,7 +254,7 @@ function CheckOutPage() {
 						validators={['required']}
 					/>
 					<TextValidator
-						style={{ width: '93%' }}
+						style={{ width: '93%', fontFamily: 'Santral' }}
 						type="text"
 						label="Telephone"
 						name="telephone"
@@ -267,7 +264,7 @@ function CheckOutPage() {
 						validators={['required', 'matchRegexp:[0-9]$']}
 					/>
 					<TextValidator
-						style={{ width: '93%' }}
+						style={{ width: '93%', fontFamily: 'Santral' }}
 						type="text"
 						label="Email Address"
 						name="from_name"
@@ -278,7 +275,7 @@ function CheckOutPage() {
 					/>
 
 					<div className="checkout__payment">
-						<FormControl component="fieldset" style={{ width: '93%' }}>
+						<FormControl component="fieldset" style={{ width: '93%', fontFamily: 'Santral' }}>
 							<FormLabel
 								component="legend"
 								errorMessages="Please add an Email Address"
@@ -288,7 +285,7 @@ function CheckOutPage() {
 							</FormLabel>
 
 							<RadioGroup
-								style={{ display: 'flex' }}
+								style={{ display: 'flex', fontFamily: 'Santral' }}
 								aria-label="payment"
 								name="payment"
 								value={paymentType}
@@ -296,13 +293,13 @@ function CheckOutPage() {
 							>
 								<FormControlLabel
 									value="visa"
-									style={{ color: 'grey' }}
+									style={{ color: 'grey', fontFamily: 'Santral' }}
 									control={<Radio />}
 									label="VISA"
 								/>
 								<FormControlLabel
 									value="masterCard"
-									style={{ color: 'grey' }}
+									style={{ color: 'grey', fontFamily: 'Santral' }}
 									control={<Radio />}
 									label="MASTER CARD"
 								/>
@@ -311,7 +308,7 @@ function CheckOutPage() {
 					</div>
 					<MuiPickersUtilsProvider utils={DateFnsUtils}>
 						<KeyboardDatePicker
-							style={{ width: '93%' }}
+							style={{ width: '93%', fontFamily: 'Santral' }}
 							disableToolbar
 							variant="inline"
 							views={['year', 'month']}
@@ -326,7 +323,7 @@ function CheckOutPage() {
 						/>
 					</MuiPickersUtilsProvider>
 					<TextValidator
-						style={{ width: '93%' }}
+						style={{ width: '93%', fontFamily: 'Santral' }}
 						type="text"
 						label="Card Number"
 						name="card-number"
@@ -336,7 +333,7 @@ function CheckOutPage() {
 						validators={['required']}
 					/>
 					<TextValidator
-						style={{ width: '93%' }}
+						style={{ width: '93%', fontFamily: 'Santral' }}
 						type="text"
 						label="CSC"
 						name="csc"
@@ -346,16 +343,16 @@ function CheckOutPage() {
 						validators={['required']}
 					/>
 					<TextValidator
-						style={{ width: '40vw', display: 'none' }}
+						style={{ width: '40vw', display: 'none', fontFamily: 'Santral' }}
 						type="text"
 						name="message"
 						value={orderMessage}
 					/>
 					<div className="registerPage__createButton">
 						{user && cartBasket.length > 0 ? (
-							<Button type="submit">CONTINUE CHECKOUT</Button>
+							<Button style={{backgroundColor: '#d35f46', color: 'white', fontFamily: 'Ginebra_font'}} type="submit">CONTINUE CHECKOUT</Button>
 						) : (
-							<Button disabled type="submit">
+							<Button style={{fontFamily: 'Ginebra_font'}} disabled type="submit">
 								CONTINUE CHECKOUT
 							</Button>
 						)}

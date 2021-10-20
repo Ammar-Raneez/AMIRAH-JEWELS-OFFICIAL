@@ -1,5 +1,176 @@
 [
   {
+    "id": "sapphire",
+    "title": "SAPPHIRE",
+    "cardImage": "/amirah-details-latest/KNOW YOUR GEMSTONES/SAPPHIRE.jpg",
+    "titleText": "The name “sapphire” can also apply to any corundum that’s not ruby red, another corundum variety.",
+    "titleImage": "/amirah-details-latest/New Images - July 18th/polished-sapphire.png",
+    "aboutName": "SAPPHIRE",
+    "aboutDescriptionArray": [
+      "Besides blue sapphire and ruby, the corundum family also includes so-called “fancy sapphires.” They come in violet, green, yellow, orange, pink, purple, and intermediate hues.",
+      "Some stones exhibit the phenomenon known as color change, most often going from blue in daylight or fluorescent lighting to purple under incandescent light. Sapphires can even be gray, black, or brown."
+    ],
+    "aboutImage": "/amirah-details-latest/New Images - July 18th/polished-sapphire.png",
+    "birthStoneDetails": "Sapphire is the birthstone for September and the gem of the 5th and 45th anniversaries",
+    "treatmentsDetails": "There are a number of processes used to alter the color, apparent clarity, or improve the durability of gems.",
+    "syntheticDetails": "Some gemstones have synthetic counterparts that have essentially the same chemical, physical, and optical properties, but are grown by man in a laboratory.",
+    "imitationsDetails": "Any gem can be imitated—sometimes by manmade materials or by natural materials chosen by man to impersonate a particular gem.",
+    "moreDetails": [
+      {
+        "title": "KASHMIR",
+        "description": "Intensely saturated and velvety, rare sapphires from Kashmir set the standard for blue."
+      },
+      {
+        "title": "ROYAL BLUE",
+        "description": "The world’s most famous engagement ring: Kate Middleton’s and Princess Diana’s sapphire."
+      },
+      {
+        "title": "PADPARADSCHA",
+        "description": "A rare and valuable pinkish-orange sapphire named from the Sinhalese for lotus blossom."
+      }
+    ],
+    "factsInformation": {
+      "mineral": "Corundum",
+      "chemistry": "Al2O3",
+      "color": "Every color but red",
+      "refractiveIndex": "1.762 to 1.770",
+      "specificGravity": "4.00",
+      "mohsHardness": "9",
+      "birefringence": "0.008 to 0.010"
+    },
+    "whyWeLoveGemStone": {
+      "img": "/amirah-details-latest/New Images - July 18th/polished-sapphire.png",
+      "data": [
+        {
+          "title": "VIVID AND SATURATED",
+          "description": "Sapphire’s blue can be vivid and saturated, like it’s lit from within."
+        },
+        {
+          "title": "DURABLE",
+          "description": "It’s so durable, synthetic sapphire is used for the windows of supermarket scanners and spacecraft."
+        },
+        {
+          "title": "DELICATE SLIK",
+          "description": "Sapphire often contains delicate intersecting needles of rutile that gemologists call silk."
+        }
+      ]
+    }
+  },
+  {
+    "id": "topaz",
+    "title": "TOPAZ",
+    "cardImage": "/amirah-details-latest/KNOW YOUR GEMSTONES/TOPAZ.jpg",
+    "titleText": "Honey yellow. Fiery orange. Cyclamen pink. Icy blue. In warm or cool tones, topaz is a lustrous and brilliant gem",
+    "titleImage": "/amirah-details-latest/New Images - July 18th/polished-topaz.png",
+    "aboutName": "TOPAZ",
+    "aboutDescriptionArray": [
+      "Topaz actually has an exceptionally wide color range that, besides brown, includes various tones and saturations of blue, green, yellow, orange, red, pink, and purple.",
+      "Colorless topaz is plentiful, and is often treated to give it a blue color. Topaz is also pleochroic, meaning that the gem can show different colors in different crystal directions"
+    ],
+    "aboutImage": "/amirah-details-latest/New Images - July 18th/polished-topaz.png",
+    "birthStoneDetails": "Precious topaz is a birthstone for November and blue topaz is a birthstone for December. Blue topaz is the gem of the 4th anniversary and Imperial topaz is the gem of the 23rd anniversary.",
+    "treatmentsDetails": "There are a number of processes used to alter the color, apparent clarity, or improve the durability of gems",
+    "syntheticDetails": "Some gemstones have synthetic counterparts that have essentially the same chemical, physical, and optical properties, but are grown by man in a laboratory.",
+    "imitationsDetails": "Any gem can be imitated—sometimes by manmade materials or by natural materials chosen by man to impersonate a particular gem.",
+    "moreDetails": [
+      {
+        "title": "1768",
+        "description": "The royal court in Portugal celebrates the discovery of Imperial topaz in 1768."
+      },
+      {
+        "title": "271 KILOS",
+        "description": "A transparent topaz crystal discovered in Minas Gerais, Brazil weighs an astounding 596 pounds."
+      },
+      {
+        "title": "10 MEV",
+        "description": "Irradiating colorless topaz with electrons at energy of 10 million electron volts creates a sky blue color."
+      }
+    ],
+    "factsInformation": {
+      "mineral": "Topaz",
+      "chemistry": "Al2(F,OH)2SiO4",
+      "color": "Yellow, orange, brown, pink to red to purple red, blue, light green and colorless",
+      "refractiveIndex": "1.619 to 1.627",
+      "specificGravity": "3.53",
+      "mohsHardness": "8",
+      "birefringence": "0.008 - 0.010"
+    },
+    "whyWeLoveGemStone": {
+      "img": "/amirah-details-latest/New Images - July 18th/polished-topaz.png",
+      "data": [
+        {
+          "title": "KILOS",
+          "description": "Topaz comes in some of the gem world’s largest crystals: the largest are kilos, not carats."
+        },
+        {
+          "title": "SLIPPERY",
+          "description": "Faceted topaz takes such a high polish it’s slightly slippery to the touch."
+        },
+        {
+          "title": "PLEOCHROIC",
+          "description": "Topaz is pleochroic, displaying different colors in different crystal directions."
+        }
+      ]
+    }
+  },
+  {
+    "id": "pearl",
+    "title": "PEARLS",
+    "cardImage": "/amirah-details-latest/KNOW YOUR GEMSTONES/PEARL.jpg",
+    "titleText": "Perfect shining spheres. Lustrous baroque forms. Seductive strands, warm to the touch. Pearls are simply and purely organic.",
+    "titleImage": "/amirah-details-latest/New Images - July 18th/polished-perl.png",
+    "aboutName": "PEARLS",
+    "aboutDescriptionArray": [
+      "Perhaps the best-loved gems of all time, pearls—natural and cultured—occur in a wide variety of colors. The most familiar are white and cream, but the palette of colors extends to every hue.",
+      "Natural pearls form around a microscopic irritant in the bodies of certain mollusks. Cultured pearls are the result of the deliberate insertion of a bead or piece of tissue that the mollusk coats with nacre"
+    ],
+    "aboutImage": "/amirah-details-latest/New Images - July 18th/polished-perl.png",
+    "birthStoneDetails": "Pearl is the birthstone for June and the gem of the third and thirtieth anniversaries",
+    "treatmentsDetails": "There are a number of processes used to alter the color, apparent clarity, or improve the durability of gems.",
+    "syntheticDetails": "Some gemstones have synthetic counterparts that have essentially the same chemical, physical, and optical properties, but are grown by man in a laboratory.",
+    "imitationsDetails": "Any gem can be imitated—sometimes by manmade materials or by natural materials chosen by man to impersonate a particular gem.",
+    "moreDetails": [
+      {
+        "title": "2206 BC",
+        "description": "A Chinese historian writes about pearls for the first time"
+      },
+      {
+        "title": "653 FIFTH AVENUE",
+        "description": "In 1917, Pierre Cartier traded a double strand of natural pearls for a mansion on Fifth Avenue in New York City."
+      },
+      {
+        "title": "1893",
+        "description": "Kokichi Mikimoto successfully cultures a pearl in Japan."
+      }
+    ],
+    "factsInformation": {
+      "mineral": "Calcium Carbonate",
+      "chemistry": "CaCO3",
+      "color": "White, black, gray, yellow, orange, pink, lavender, green, blue",
+      "refractiveIndex": "1.52 - 1.69",
+      "specificGravity": "2.60 - 2.85",
+      "mohsHardness": "2.5 - 3.0",
+      "birefringence": "NA"
+    },
+    "whyWeLoveGemStone": {
+      "img": "/amirah-details-latest/New Images - July 18th/polished-perl.png",
+      "data": [
+        {
+          "title": "LUSTER",
+          "description": "Luster results from reflection of light rays off the pearl’s surface, and from concentric inner layers of nacre, like light bouncing off a convex mirror."
+        },
+        {
+          "title": "IMITATIONS",
+          "description": "Imitation pearls are smooth when rubbed against your teeth, while natural or cultured pearls have a slightly rough texture."
+        },
+        {
+          "title": "NATURAL PEARLS",
+          "description": "Natural pearls can be separated from cultured pearls by taking X-rays to reveal their inner structures."
+        }
+      ]
+    }
+  },
+  {
     "id": "aquamarine",
     "title": "Aquamarine",
     "cardImage": "/amirah-details-latest/KNOW YOUR GEMSTONES/AQUAMARINE.jpg",
@@ -912,63 +1083,6 @@
     }
   },
   {
-    "id": "pearl",
-    "title": "PEARLS",
-    "cardImage": "/amirah-details-latest/KNOW YOUR GEMSTONES/PEARL.jpg",
-    "titleText": "Perfect shining spheres. Lustrous baroque forms. Seductive strands, warm to the touch. Pearls are simply and purely organic.",
-    "titleImage": "/amirah-details-latest/New Images - July 18th/polished-perl.png",
-    "aboutName": "PEARLS",
-    "aboutDescriptionArray": [
-      "Perhaps the best-loved gems of all time, pearls—natural and cultured—occur in a wide variety of colors. The most familiar are white and cream, but the palette of colors extends to every hue.",
-      "Natural pearls form around a microscopic irritant in the bodies of certain mollusks. Cultured pearls are the result of the deliberate insertion of a bead or piece of tissue that the mollusk coats with nacre"
-    ],
-    "aboutImage": "/amirah-details-latest/New Images - July 18th/polished-perl.png",
-    "birthStoneDetails": "Pearl is the birthstone for June and the gem of the third and thirtieth anniversaries",
-    "treatmentsDetails": "There are a number of processes used to alter the color, apparent clarity, or improve the durability of gems.",
-    "syntheticDetails": "Some gemstones have synthetic counterparts that have essentially the same chemical, physical, and optical properties, but are grown by man in a laboratory.",
-    "imitationsDetails": "Any gem can be imitated—sometimes by manmade materials or by natural materials chosen by man to impersonate a particular gem.",
-    "moreDetails": [
-      {
-        "title": "2206 BC",
-        "description": "A Chinese historian writes about pearls for the first time"
-      },
-      {
-        "title": "653 FIFTH AVENUE",
-        "description": "In 1917, Pierre Cartier traded a double strand of natural pearls for a mansion on Fifth Avenue in New York City."
-      },
-      {
-        "title": "1893",
-        "description": "Kokichi Mikimoto successfully cultures a pearl in Japan."
-      }
-    ],
-    "factsInformation": {
-      "mineral": "Calcium Carbonate",
-      "chemistry": "CaCO3",
-      "color": "White, black, gray, yellow, orange, pink, lavender, green, blue",
-      "refractiveIndex": "1.52 - 1.69",
-      "specificGravity": "2.60 - 2.85",
-      "mohsHardness": "2.5 - 3.0",
-      "birefringence": "NA"
-    },
-    "whyWeLoveGemStone": {
-      "img": "/amirah-details-latest/New Images - July 18th/polished-perl.png",
-      "data": [
-        {
-          "title": "LUSTER",
-          "description": "Luster results from reflection of light rays off the pearl’s surface, and from concentric inner layers of nacre, like light bouncing off a convex mirror."
-        },
-        {
-          "title": "IMITATIONS",
-          "description": "Imitation pearls are smooth when rubbed against your teeth, while natural or cultured pearls have a slightly rough texture."
-        },
-        {
-          "title": "NATURAL PEARLS",
-          "description": "Natural pearls can be separated from cultured pearls by taking X-rays to reveal their inner structures."
-        }
-      ]
-    }
-  },
-  {
     "id": "peridot",
     "title": "PERIDOT",
     "cardImage": "/amirah-details-latest/KNOW YOUR GEMSTONES/PERIDOT.jpg",
@@ -1140,63 +1254,6 @@
     }
   },
   {
-    "id": "sapphire",
-    "title": "SAPPHIRE",
-    "cardImage": "/amirah-details-latest/KNOW YOUR GEMSTONES/SAPPHIRE.jpg",
-    "titleText": "The name “sapphire” can also apply to any corundum that’s not ruby red, another corundum variety.",
-    "titleImage": "/amirah-details-latest/New Images - July 18th/polished-sapphire.png",
-    "aboutName": "SAPPHIRE",
-    "aboutDescriptionArray": [
-      "Besides blue sapphire and ruby, the corundum family also includes so-called “fancy sapphires.” They come in violet, green, yellow, orange, pink, purple, and intermediate hues.",
-      "Some stones exhibit the phenomenon known as color change, most often going from blue in daylight or fluorescent lighting to purple under incandescent light. Sapphires can even be gray, black, or brown."
-    ],
-    "aboutImage": "/amirah-details-latest/New Images - July 18th/polished-sapphire.png",
-    "birthStoneDetails": "Sapphire is the birthstone for September and the gem of the 5th and 45th anniversaries",
-    "treatmentsDetails": "There are a number of processes used to alter the color, apparent clarity, or improve the durability of gems.",
-    "syntheticDetails": "Some gemstones have synthetic counterparts that have essentially the same chemical, physical, and optical properties, but are grown by man in a laboratory.",
-    "imitationsDetails": "Any gem can be imitated—sometimes by manmade materials or by natural materials chosen by man to impersonate a particular gem.",
-    "moreDetails": [
-      {
-        "title": "KASHMIR",
-        "description": "Intensely saturated and velvety, rare sapphires from Kashmir set the standard for blue."
-      },
-      {
-        "title": "ROYAL BLUE",
-        "description": "The world’s most famous engagement ring: Kate Middleton’s and Princess Diana’s sapphire."
-      },
-      {
-        "title": "PADPARADSCHA",
-        "description": "A rare and valuable pinkish-orange sapphire named from the Sinhalese for lotus blossom."
-      }
-    ],
-    "factsInformation": {
-      "mineral": "Corundum",
-      "chemistry": "Al2O3",
-      "color": "Every color but red",
-      "refractiveIndex": "1.762 to 1.770",
-      "specificGravity": "4.00",
-      "mohsHardness": "9",
-      "birefringence": "0.008 to 0.010"
-    },
-    "whyWeLoveGemStone": {
-      "img": "/amirah-details-latest/New Images - July 18th/polished-sapphire.png",
-      "data": [
-        {
-          "title": "VIVID AND SATURATED",
-          "description": "Sapphire’s blue can be vivid and saturated, like it’s lit from within."
-        },
-        {
-          "title": "DURABLE",
-          "description": "It’s so durable, synthetic sapphire is used for the windows of supermarket scanners and spacecraft."
-        },
-        {
-          "title": "DELICATE SLIK",
-          "description": "Sapphire often contains delicate intersecting needles of rutile that gemologists call silk."
-        }
-      ]
-    }
-  },
-  {
     "id": "spinel",
     "title": "SPINEL",
     "cardImage": "/amirah-details-latest/KNOW YOUR GEMSTONES/SPINEL.jpg",
@@ -1363,63 +1420,6 @@
         {
           "title": "RICH BLUE",
           "description": "Tanzanite's rich blue-to-violet hues can be exceptionally beautiful."
-        }
-      ]
-    }
-  },
-  {
-    "id": "topaz",
-    "title": "TOPAZ",
-    "cardImage": "/amirah-details-latest/KNOW YOUR GEMSTONES/TOPAZ.jpg",
-    "titleText": "Honey yellow. Fiery orange. Cyclamen pink. Icy blue. In warm or cool tones, topaz is a lustrous and brilliant gem",
-    "titleImage": "/amirah-details-latest/New Images - July 18th/polished-topaz.png",
-    "aboutName": "TOPAZ",
-    "aboutDescriptionArray": [
-      "Topaz actually has an exceptionally wide color range that, besides brown, includes various tones and saturations of blue, green, yellow, orange, red, pink, and purple.",
-      "Colorless topaz is plentiful, and is often treated to give it a blue color. Topaz is also pleochroic, meaning that the gem can show different colors in different crystal directions"
-    ],
-    "aboutImage": "/amirah-details-latest/New Images - July 18th/polished-topaz.png",
-    "birthStoneDetails": "Precious topaz is a birthstone for November and blue topaz is a birthstone for December. Blue topaz is the gem of the 4th anniversary and Imperial topaz is the gem of the 23rd anniversary.",
-    "treatmentsDetails": "There are a number of processes used to alter the color, apparent clarity, or improve the durability of gems",
-    "syntheticDetails": "Some gemstones have synthetic counterparts that have essentially the same chemical, physical, and optical properties, but are grown by man in a laboratory.",
-    "imitationsDetails": "Any gem can be imitated—sometimes by manmade materials or by natural materials chosen by man to impersonate a particular gem.",
-    "moreDetails": [
-      {
-        "title": "1768",
-        "description": "The royal court in Portugal celebrates the discovery of Imperial topaz in 1768."
-      },
-      {
-        "title": "271 KILOS",
-        "description": "A transparent topaz crystal discovered in Minas Gerais, Brazil weighs an astounding 596 pounds."
-      },
-      {
-        "title": "10 MEV",
-        "description": "Irradiating colorless topaz with electrons at energy of 10 million electron volts creates a sky blue color."
-      }
-    ],
-    "factsInformation": {
-      "mineral": "Topaz",
-      "chemistry": "Al2(F,OH)2SiO4",
-      "color": "Yellow, orange, brown, pink to red to purple red, blue, light green and colorless",
-      "refractiveIndex": "1.619 to 1.627",
-      "specificGravity": "3.53",
-      "mohsHardness": "8",
-      "birefringence": "0.008 - 0.010"
-    },
-    "whyWeLoveGemStone": {
-      "img": "/amirah-details-latest/New Images - July 18th/polished-topaz.png",
-      "data": [
-        {
-          "title": "KILOS",
-          "description": "Topaz comes in some of the gem world’s largest crystals: the largest are kilos, not carats."
-        },
-        {
-          "title": "SLIPPERY",
-          "description": "Faceted topaz takes such a high polish it’s slightly slippery to the touch."
-        },
-        {
-          "title": "PLEOCHROIC",
-          "description": "Topaz is pleochroic, displaying different colors in different crystal directions."
         }
       ]
     }

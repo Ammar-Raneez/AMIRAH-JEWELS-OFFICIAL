@@ -14,17 +14,20 @@ const GemOrderTitle = () => {
 
 export default GemOrderTitle;
 
-const Container = styled.div`
+const Container = styled.div `
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
   padding: 5pc 2pc;
   border-bottom: 5px #87541e solid;
+
   > h1 {
     font-size: 3.5rem;
     text-transform: uppercase;
+    font-family: Ginebra_font;
   }
+
   > p {
     width: 50%;
     text-align: center;

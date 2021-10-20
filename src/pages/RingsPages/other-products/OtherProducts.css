@@ -1,8 +1,3 @@
-@font-face {
-	font-family: ginebra_font;
-	src: url(ginebra_font.ttf);
-}
-
 .MuiPaper-root.product.MuiPaper-elevation1.MuiPaper-rounded {
 	padding: 10px;
 	transition: 0.3s ease all;
@@ -20,13 +15,16 @@
 	flex-direction: column;
 	margin: 16px;
 }
+
 .product > a > img {
 	object-fit: contain;
 	height: 220px;
 }
+
 .product > a {
 	text-decoration: none;
 }
+
 .product > a > p {
 	font-family: ginebra_font;
 	color: #707070;

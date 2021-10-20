@@ -7,7 +7,7 @@ export const GemTitle = ({ title, titleText, titleImage }) => {
   return (
     <Container>
       <div>
-        <h1>{title}</h1>
+        <h1>{title.toUpperCase()}</h1>
         <p>{titleText}</p>
         <div>
           <button onClick={() => history.push("/gems/order")}>
@@ -20,23 +20,28 @@ export const GemTitle = ({ title, titleText, titleImage }) => {
   );
 };
 
-const Container = styled.div`
+const Container = styled.div `
   display: flex;
   justify-content: space-between;
   padding: 50px;
   border-bottom: 5px #87541e solid;
   background-color: #f4ebe2;
+
   > img {
     object-fit: contain;
     height: 200px;
   }
+
   > div {
     > h1 {
       font-size: 3rem;
+      font-family: Ginebra_font;
     }
+
     > p {
       margin-top: 5px;
     }
+
     > div {
       border: 2px solid #d4765e;
       width: fit-content;
@@ -44,12 +49,13 @@ const Container = styled.div`
       border-radius: 5pc;
       margin-top: 1pc;
       padding: 0.3pc;
+
       > button {
         background-color: #d4765e;
         padding: 0.8pc 1.2pc;
         color: white;
         outline: none;
-        font-family: Quattrocento-Regular;
+        font-family: Santral;
         cursor: pointer;
         font-size: medium;
         border: 2px solid #d4765e;
@@ -63,11 +69,13 @@ const Container = styled.div`
       height: 150px;
     }
   }
+
   @media screen and (max-width: 600px) {
     > div {
       > h1 {
         font-size: 2rem;
       }
+
       > h1,
       > p {
         text-align: center;
@@ -78,6 +86,7 @@ const Container = styled.div`
       display: none;
     }
   }
+
   @media screen and (max-width: 350px) {
     > div {
       > h1 {

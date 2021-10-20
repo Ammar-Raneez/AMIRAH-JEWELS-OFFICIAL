@@ -5,6 +5,7 @@
 	background-color: #fff5ef;
 	width: 90vw;
 }
+
 .processStepReflect {
 	display: flex;
 	position: relative;
@@ -13,14 +14,19 @@
 	background-color: #fff5ef;
 	width: 90vw;
 }
-.processStep > img, .processStepReflect > img, .processStep > div > img, .processStepReflect > div > img {
+
+.processStep > img,
+.processStepReflect > img,
+.processStep > div > img,
+.processStepReflect > div > img {
 	object-fit: contain;
 	align-self: center;
 	height: 50vw;
 	transition: 0.3s ease all;
 }
 
-.processStep > div > img, .processStepReflect > div > img {
+.processStep > div > img,
+.processStepReflect > div > img {
 	opacity: 0;
 }
 
@@ -28,16 +34,20 @@
 	0% {
 		opacity:1;
 	}
+
 	45% {
 		opacity:1;
 	}
+
 	55% {
 		opacity:0;
 	}
+
 	100% {
 		opacity:0;
 	}
 }
+
 .processStep__firstImage {
 	animation-name: cf3FadeInOut;
 	animation-timing-function: ease-in-out;
@@ -45,6 +55,7 @@
 	animation-duration: 5s;
 	animation-direction: alternate;
 }
+
 .processStep__secondImage {
 	animation-name: cf3FadeInOut;
 	animation-timing-function: ease-in-out;
@@ -52,6 +63,7 @@
 	animation-duration: 10s;
 	animation-direction: alternate;
 }
+
 .processStep__thirdImage {
 	animation-name: cf3FadeInOut;
 	animation-timing-function: ease-in-out;
@@ -72,10 +84,11 @@
 	margin-bottom: 5vw;
 	margin-right: 8vw;
 	width: 35vw;
-	font-family: Quattrocento-Regular;
+	font-family: SanGtral;
 	color: #707070;
 	text-align: end;
 }
+
 .processStep__descriptionReflect > p {
 	position: absolute;
 	font-size: 1.5vw;
@@ -88,43 +101,50 @@
 	margin-bottom: 5vw;
 	margin-left: 8vw;
 	width: 35vw;
-	font-family: Quattrocento-Regular;
+	font-family: Santral;
 	color: #707070;
 	text-align: end;
 }
+
 .processStep__stepName > div > p {
 	font-size: 4vw;
-	font-family: Quattrocento-Regular;
+	font-family: Ginebra_font;
 	color: #707070;
 	text-align: end;
 }
+
 .processStep__stepNameReflect > div > p {
 	font-size: 4vw;
-	font-family: Quattrocento-Regular;
+	font-family: Ginebra_font;
 	color: #707070;
 	text-align: start;
 }
 
-.processStep__stepName > div:first-child > p, .processStep__stepNameReflect > div:first-child > p {
+.processStep__stepName > div:first-child > p,
+.processStep__stepNameReflect > div:first-child > p {
 	font-weight: bold;
 }
+
 .processStep__stepName, .processStep__stepNameReflect {
 	margin: 6vw 5vw;
 }
 
 @media screen and (max-width: 768px) and (min-width: 500px) {
-	.processStep__descriptionReflect > p, .processStep__description > p {
+	.processStep__descriptionReflect > p,
+	.processStep__description > p {
 		font-size: 12px;
 		line-height: 14px;
 	}
 }
 
 @media screen and (max-width: 500px) {
-	.processStep__description > p, .processStep__descriptionReflect > p {
+	.processStep__description > p,
+	.processStep__descriptionReflect > p {
 		display: none;
 	}
 
-	.processStep__stepName, .processStep__stepNameReflect {
+	.processStep__stepName,
+	.processStep__stepNameReflect {
 		display: flex;
 		flex-direction: column;
 		justify-content: center;

@@ -10,8 +10,9 @@ export const GemStatisticsFact = ({ factKey, factValue }) => {
 	);
 };
 
-const Container = styled.div`
+const Container = styled.div `
 	margin: 30px 0;
+
 	> p {
 		text-align: center;
 	}

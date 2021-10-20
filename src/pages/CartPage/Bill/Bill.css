@@ -11,7 +11,8 @@
 
 .bill__topSection > p {
 	font-weight: bold;
-	font-size: 1.2vw;
+	font-size: 1.5vw;
+	font-family: Ginebra_font;
 }
 
 .bill__topSection > span {
@@ -19,6 +20,7 @@
 	justify-content: space-between;
 	margin: 2vw 0vw;
 }
+
 .bill__topSection > span > p {
 	font-size: 1.2vw;
 }
@@ -27,6 +29,7 @@
 	border-top: 1px solid #aaa;
 	padding-top: 2vw;
 }
+
 .bill_middleSection > span {
 	display: flex;
 	justify-content: space-between;
@@ -35,6 +38,7 @@
 .bill_middleSection > span > p {
 	font-size: 1.2vw;
 }
+
 .bill_middleSection > span > p:first-child {
 	font-weight: bold;
 }
@@ -51,15 +55,17 @@
 	border: 1px solid #d35f46;
 	font-size: 1.2vw;
 	font-weight: bold;
-	font-family: Santral;
-	color: #707070;
+	font-family: Ginebra_font;
+	color: white;
 	background-color: #d35f46;
 	transition: 0.3s ease;
 }
+
 .bill__bottomSection > div > a > button:hover {
 	cursor: pointer;
 	background-color: white;
-	border: 1px solid #ffc0a1;
+	color: #d35f46;
+	border: 1px solid #d35f46;
 }
 
 .bill__bottomSection > div > p {
@@ -80,6 +86,7 @@
 	.bill {
 		margin-bottom: 3vh;
 	}
+
 	.bill__bottomSection > div > a > button {
 		margin-top: 20px;
 	}

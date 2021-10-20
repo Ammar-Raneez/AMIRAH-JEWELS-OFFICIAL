@@ -1,94 +1,91 @@
-@import url('https://fonts.googleapis.com/css2?family=Quattrocento&display=swap');
-
-@font-face {
-    font-family: boowie;
-    src: url(BOOWIE.ttf);
-}
-
 .homePage__category {
-    margin-bottom: 5vw;
-    margin-top: 0vw;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-    color: #888;
+	margin-bottom: 5vw;
+	margin-top: 0vw;
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	align-items: center;
+	color: #888;
 }
 
 .homePage__categoryTitle {
-    font-size: 2.5vw;
-    font-family: boowie;
+	font-size: 2.5vw;
+	font-family: ginebra_font;
 }
 
 .homePage__categorySubTitle {
-    font-family: 'Quattrocento', serif;
-    font-size: 1.2vw;
-    margin-top: 1vw;
-    margin-bottom: 5vw;
+	font-family: Santral;
+	font-size: 1.2vw;
+	margin-top: 1vw;
+	margin-bottom: 5vw;
 }
 
 .homePage__categoryRow {
-    display: flex;
-    justify-content: space-evenly;
-    flex-wrap: wrap;
+	display: flex;
+	justify-content: space-evenly;
+	flex-wrap: wrap;
 }
 
 .homePage__categoryRow > div > a {
-    text-decoration: none;
-    color: #888;
+	text-decoration: none;
+	color: #888;
 }
 
 .homePage__categoryRow > div > a > div > img {
-    min-width: 200px;
-    max-width: 200px;
-    max-height: 200px;
-    min-height: 200px;
-    margin: 1vw;
+	min-width: 200px;
+	max-width: 200px;
+	max-height: 200px;
+	min-height: 200px;
+	margin: 1vw;
 }
 
 .homePage__categoryEach {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    transition: 0.3s ease;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	transition: 0.3s ease;
+}
+
+.homePage__categoryEach > p {
+	font-family: Ginebra_font;
 }
 
 .homePage__categoryEach:hover {
-    cursor: pointer;
-    transform: scale(1.05);
+	cursor: pointer;
+	transform: scale(1.05);
 }
 
 @media screen and (max-width: 4000px) and (min-width: 1400px) {
-    .homePage__categoryRow > div > a > div > img {
-        min-width: 11vw;
-        max-width: 11vw;
-        max-height: 11vw;
-        min-height: 11vw;
-        margin: 1vw;
-    }
+	.homePage__categoryRow > div > a > div > img {
+		min-width: 11vw;
+		max-width: 11vw;
+		max-height: 11vw;
+		min-height: 11vw;
+		margin: 1vw;
+	}
 
-    .homePage__categoryRow > div > a > div > p {
-        font-size: 1.2vw;
-    }
+	.homePage__categoryRow > div > a > div > p {
+		font-size: 1.2vw;
+	}
 }
 
 @media screen and (max-width: 768px) and (min-width: 400px) {
-    .homePage__categoryTitle {
-        font-size: 30px;
-    }
+	.homePage__categoryTitle {
+		font-size: 30px;
+	}
 
-    .homePage__categorySubTitle {
-        font-size: 14px;
-    }
+	.homePage__categorySubTitle {
+		font-size: 14px;
+	}
 }
 
 @media screen and (max-width: 400px) {
-    .homePage__categoryTitle {
-        font-size: 20px;
-    }
-    
-    .homePage__categorySubTitle {
-        font-size: 14px;
-    }
+	.homePage__categoryTitle {
+		font-size: 20px;
+	}
+
+	.homePage__categorySubTitle {
+		font-size: 14px;
+	}
 }

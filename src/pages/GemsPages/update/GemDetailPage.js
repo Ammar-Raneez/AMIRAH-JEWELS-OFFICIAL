@@ -46,24 +46,27 @@ const GemDetailPage = ({ data }) => {
 
 export default GemDetailPage;
 
-const Container = styled.div`
-  font-family: Quattrocento-Regular;
+const Container = styled.div `
+  font-family: Santral;
   background-color: #f4ebe2;
 
   > section {
     :nth-child(2) {
-      /* border: 1px red solid; */
       display: flex;
+
       > main {
         margin: 30px 20px;
+
         :first-child {
           flex: 0.65;
         }
+
         :last-child {
           flex: 0.35;
         }
       }
     }
+
     :last-child {
       padding: 30px;
     }

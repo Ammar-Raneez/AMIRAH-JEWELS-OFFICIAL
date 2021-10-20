@@ -7,8 +7,9 @@
 	flex-direction: column;
 	overflow-x: hidden;
 }
+
 .processPage > div > h1 {
-	font-family: bowie;
+	font-family: Ginebra_font;
 	font-size: 3vw;
 	margin: 2vw;
 	width: 50vw;
@@ -17,14 +18,16 @@
 	font-weight: lighter;
 	color: #707070;
 }
+
 .processPage > div > p {
 	width: 65vw;
 	font-size: 1.5vw;
-	font-family: Quattrocento-Regular;
+	font-family: Santral;
 	line-height: 2vw;
 	color: #707070;
 	text-align: center;
 }
+
 .processPage__callBtn {
 	width: 40vw;
 	display: flex;
@@ -33,36 +36,42 @@
 	align-items: center;
 	justify-content: space-evenly;
 }
+
 .processPage__callBtn > a {
 	text-decoration: none;
 }
+
 .processPage__callBtn > a > button {
 	padding: 0.8vw;
 	cursor: pointer;
 	width: 15vw;
-	font-family: Quattrocento-Regular;
+	font-family: Santral;
 	border: none;
 	font-size: 1.2vw;
 	background-color: transparent;
 	outline: none;
-	border: 0.2vw #ffc0a1 solid;
+	border: 0.2vw #d35f46 solid;
 	transition: 0.3s ease;
 	border-radius: 0.7vw;
 }
+
 .processPage__callBtn > a:first-child > button {
-    background-color: #ffc0a1;
-    color: #5c5c5c;
+	background-color: #d35f46;
+	color: black;
 }
+
 .processPage__callBtn > a:last-child > button:hover{
-    background-color: #ffc0a1;
-    transition: 0.3s ease;
-    color: white;
+	background-color: #d35f46;
+	transition: 0.3s ease;
+	color: white;
 }
+
 .processPage__callBtn > a:first-child > button:hover{
-    background-color: white;
-    transition: 0.3s ease;
-    color: black !important;
+	background-color: white;
+	transition: 0.3s ease;
+	color: black !important;
 }
+
 
 @media screen and (max-width: 768px) and (min-width: 400px) {
 	.processPage > div > h1 {

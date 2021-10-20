@@ -65,9 +65,9 @@ function Header() {
 									<p style={{ color: '#656565', fontWeight: '600' }}>SHOP BY COLLECTION</p>
 									<Link
 										className="header__optionsProductHidden header__optionsProductDetail"
-										to="/sollitarates"
+										to="/solitarates"
 									>
-										<span>SOLLITARATES</span>
+										<span>SOLITARATES</span>
 									</Link>
 									<Link
 										className="header__optionsProductHidden header__optionsProductDetail"

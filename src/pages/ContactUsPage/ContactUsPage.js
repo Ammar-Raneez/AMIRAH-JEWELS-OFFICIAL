@@ -64,7 +64,7 @@ function ContactUsPage() {
 		<div className="contactUsPage">
 			<SEO title="Contact Us" />
 			<Fade cascade direction="right" triggerOnce>
-				<h1 className="contactUsPageTitle">Contact Us</h1>
+				<h1 className="contactUsPageTitle">CONTACT US</h1>
 
 				{/* description */}
 				<p className="contactUsPageDescription">

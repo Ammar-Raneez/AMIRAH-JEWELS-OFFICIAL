@@ -6,77 +6,89 @@
 	object-fit: contain;
 	height: 25vw;
 }
+
 .giftPage__details {
 	display: flex;
 	align-items: center;
 	justify-content: space-around;
 	padding: 0 5vw;
 }
+
 .giftPage__detailsFirst {
 	width: 38vw;
 }
+
 .giftPage__detailsFirst > div > h1 {
-	font-family: boowie;
+	font-family: Ginebra_font;
 	color: #707070;
 	font-weight: lighter;
 	font-size: 3.5vw;
 	padding: 1vw 0;
 }
+
 .giftPage__detailsFirst > div > p {
-	font-family: Quattrocento-Regular;
+	font-family: Santral;
 	color: #707070;
 	font-size: 1.3vw;
 	line-height: 2vw;
 	padding: 1vw 0;
 }
+
 .giftPage__detailsFirstButtons {
 	display: flex;
 	margin: 1.5vw;
 	justify-content: flex-start;
 	align-items: center;
 }
+
 .giftPage__detailsFirstButtons > a:first-child > button {
 	padding: 1.3vw 3vw;
 	width: 16vw;
 	cursor: pointer;
-	font-family: Quattrocento-Regular;
+	font-family: Santral;
 	z-index: 999;
 	border: none;
 	font-size: 1.1vw;
-	color: #3f3f3f;
+	color: black;
 	outline: none;
-	background-color: #ffc0a1;
+	background-color: #d35f46;
+	border-color: #d35f46;
 	border-radius: 0.7vw;
 	transition: 0.3s ease-in-out;
 	margin-right: 14px;
 }
+
 .giftPage__detailsFirstButtons > a:first-child > button:hover {
 	transition: 0.3s ease-in-out;
 	background-color: white;
-	border: 0.1px #ffc0a1 solid;
+	border: 0.1px #d35f46 solid;
 }
+
 .giftPage__detailsFirstButtons > a:last-child > button:hover {
 	transition: 0.3s ease-in-out;
-	background-color: #ffc0a1;
+	background-color: #d35f46;
 }
+
 .giftPage__detailsFirstButtons > a:last-child > button {
 	padding: 1.3vw 3vw;
 	width: 16vw;
 	transition: 0.3s ease-in-out;
 	cursor: pointer;
-	font-family: Quattrocento-Regular;
-	border: 0.1vw #ffc0a1 solid;
+	font-family: Santral;
+	border: 0.1vw #d35f46 solid;
 	z-index: 999;
 	font-size: 1.1vw;
-	color: #3f3f3f;
+	color: black;
 	outline: none;
 	background-color: white;
 	background-color: white;
 	border-radius: 0.7vw;
 }
+
 .giftPage {
 	margin-top: 5vw;
 }
+
 .giftPage__detailsSecond > img {
 	object-fit: contain;
 	height: 25vw;
@@ -85,12 +97,14 @@
 .giftPage__otherGems {
 	padding: 5vw;
 }
+
 .giftPage__otherGemsRow {
 	display: flex;
 	align-items: center;
 	justify-content: center;
 	flex-wrap: wrap;
 }
+
 @media screen and (max-width: 900px) and (min-width: 450px) {
 	.giftPage__detailsFirst {
 		width: 60vw;
@@ -107,14 +121,14 @@
 
 	.giftPage__detailsFirstButtons > a:first-child > button {
 		font-size: 11px;
-        margin: 5px;
+		margin: 5px;
 		width: 100px;
 		padding: 9px;
 	}
 
 	.giftPage__detailsFirstButtons > a:last-child > button {
 		font-size: 11px;
-        margin: 5px;
+		margin: 5px;
 		width: 100px;
 		padding: 12px;
 		padding-top: 15px;
@@ -153,14 +167,14 @@
 
 	.giftPage__detailsFirstButtons > a:first-child > button {
 		font-size: 11px;
-        margin: 5px;
+		margin: 5px;
 		width: 100px;
 		padding: 9px;
 	}
 
 	.giftPage__detailsFirstButtons > a:last-child > button {
 		font-size: 11px;
-        margin: 5px;
+		margin: 5px;
 		width: 100px;
 		padding: 12px;
 		padding-top: 15px;

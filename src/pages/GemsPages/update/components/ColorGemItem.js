@@ -12,17 +12,19 @@ const ColorGemItem = ({ img, name }) => {
 
 export default ColorGemItem;
 
-const Container = styled.div`
+const Container = styled.div `
   display: flex;
   flex-direction: column;
   align-items: center;
   background-color: #fff;
   padding: 1pc;
   justify-content: center;
+
   > img {
     object-fit: contain;
     height: 180px;
   }
+
   > p {
     text-align: center;
     margin: 0.5pc;

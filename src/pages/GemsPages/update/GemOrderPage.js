@@ -17,7 +17,7 @@ const GemOrderPage = () => {
 
 export default GemOrderPage;
 
-const Container = styled.div`
-  font-family: Quattrocento-Regular !important;
+const Container = styled.div `
+  font-family: Santral !important;
   background-color: #f4ebe2;
 `;

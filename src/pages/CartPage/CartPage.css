@@ -3,6 +3,7 @@
 	display: flex;
 	flex-direction: column;
 }
+
 .cartPage__main {
 	display: flex;
 	justify-content: space-between;
@@ -11,6 +12,7 @@
 .cartPage__title {
 	margin-bottom: 2vw;
 }
+
 .cartPage__title > h1 {
 	font-family: Ginebra_font;
 	font-size: 2.5vw;
@@ -21,6 +23,10 @@
 
 .cartPage__items {
 	width: 60%;
+}
+
+.cartPage__orderSummary {
+	min-width: 30%;
 }
 
 .cartPage__itemsEmpty {
@@ -38,6 +44,7 @@
 	font-size: 2vw;
 	font-weight: lighter;
 }
+
 .cartPage__itemsEmpty > p {
 	margin-top: 1.8vw;
 	font-size: 1.5vw;
@@ -54,29 +61,32 @@
 	margin-top: 1vw;
 	font-family: Santral;
 }
+
 .cartPage__itemsNoLogin > h1 {
 	font-size: 2vw;
 	font-weight: lighter;
 }
+
 .cartPage__itemsNoLogin > a > button {
 	padding: 1vw 3vw;
 	cursor: pointer;
 	margin-top: 1vw;
 	width: 100%;
 	font-family: Santral;
-	border: 1px solid #ffc0a1;
+	border: 1px solid #d35f46;
 	font-size: 1.3vw;
-	color: #555555;
+	color: black;
 	outline: none;
-	background-color: #ffc0a1;
-	border-radius: 0.7vw;
+	background-color: #d35f46;
 	margin-top: 2vw;
 	transition: 0.3s ease;
 }
+
 .cartPage__itemsNoLogin > a > button:hover {
 	background: #fff;
 	border: 1px solid #e58177;
 }
+
 .loadingGif > img {
 	padding: 2.2vw;
 	object-fit: contain;
@@ -108,11 +118,15 @@
 		padding: 50px;
 	}
 
-	.cartPage__title > h1, .cartPage__itemsNoLogin > h1, .cartPage__itemsNoLogin > a > button, .cartPage__itemsEmpty > h1 {
+	.cartPage__title > h1,
+	.cartPage__itemsNoLogin > h1,
+	.cartPage__itemsNoLogin > a > button,
+	.cartPage__itemsEmpty > h1 {
 		font-size: 20px;
 	}
 
-	.cartPage__itemsEmpty, .cartPage__itemsNoLogin {
+	.cartPage__itemsEmpty,
+	.cartPage__itemsNoLogin {
 		text-align: center;
 		box-shadow: 0px 1px 3px #878787;
 		padding: 10vw;
@@ -127,7 +141,11 @@
 	.cartPage__itemsEmpty > p {
 		font-size: 14px;
 	}
-	.cartPage__title > h1, .cartPage__itemsNoLogin > h1, .cartPage__itemsNoLogin > a > button, .cartPage__itemsEmpty > h1 {
+
+	.cartPage__title > h1,
+	.cartPage__itemsNoLogin > h1,
+	.cartPage__itemsNoLogin > a > button,
+	.cartPage__itemsEmpty > h1 {
 		font-size: 20px;
 	}
 
@@ -138,10 +156,12 @@
 	.cartPage__items {
 		width: 100%;
 	}
+
 	.loadingGif > img {
 		height: 100px;
 		padding: 50px;
 	}
+
 	.cartPage__itemsEmpty, .cartPage__itemsNoLogin {
 		font-size: 20px;
 		text-align: center;

@@ -12,7 +12,6 @@ function HomePage() {
 			<Banner />
 			<RoyalExperience />
 			<MakeDreamsTrue />
-			{/* <KeyFeatures /> */}
 			<Category />
 		</div>
 	);

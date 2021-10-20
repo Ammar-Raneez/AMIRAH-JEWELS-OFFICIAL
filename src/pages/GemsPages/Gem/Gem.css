@@ -12,47 +12,28 @@
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  /* width: 210px; */
   margin: 16px;
   padding: 0.1pc !important;
 }
+
 .gem > a > img {
   object-fit: contain;
   height: 220px;
 }
+
 .gem > a {
   text-decoration: none;
 }
+
 .gem > a > p {
-  font-family: Quattrocento-Regular;
+  font-family: Santral;
   color: #707070;
   padding: 1vw;
   font-size: 14px;
   display: flex;
   justify-content: center;
 }
-/* .gem > a > button {
-	margin: 2vw;
-	padding: 0.8vw 3vw;
-	cursor: pointer !important;
-	margin-top: 1vw;
-	font-family: Quattrocento-Regular;
-	border: none;
-	font-size: 14px;
-	z-index: 999;
-	color: #555555;
-	outline: none;
-	background-color: white;
-	border: 0.2vw #ffc0a1 solid;
-	border-radius: 0.7vw;
-	transition: 0.3s ease-in-out;
-}
-.gem > a > button:hover {
-	transition: 0.3s ease-in-out;
-	color: white;
-	background-color: #ffc0a1;
-	font-weight: bold;
-} */
+
 .gem:hover {
   transition: 0.3s ease-in-out;
   transform: scale(1.05);
@@ -62,7 +43,7 @@
   .MuiPaper-root.gem.MuiPaper-elevation1.MuiPaper-rounded {
     padding: 1.2vw !important;
     box-shadow: 0vw 0.1vw 0.1vw -0.5vw rgb(0 0 0 / 20%),
-      0vw 0.1vw 0.1vw 0vw rgb(0 0 0 / 14%), 0vw 0.1vw 0.1vw 0vw rgb(0 0 0 / 12%);
+    0vw 0.1vw 0.1vw 0vw rgb(0 0 0 / 14%), 0vw 0.1vw 0.1vw 0vw rgb(0 0 0 / 12%);
   }
 
   .gem {

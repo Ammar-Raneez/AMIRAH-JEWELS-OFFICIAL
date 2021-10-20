@@ -1,14 +1,14 @@
 .rings-page-main__rings {
-    display: flex;
+	display: flex;
 }
 
 .rings-page-main__rings > div > div {
-    display: flex;
-    justify-content: space-evenly;
-    width: 100%;
-    flex-wrap: wrap;
+	display: flex;
+	justify-content: space-evenly;
+	width: 100%;
+	flex-wrap: wrap;
 }
 
 .rings-page-main__rings > div > div > div {
-    width: 200px;
+	width: 200px;
 }
