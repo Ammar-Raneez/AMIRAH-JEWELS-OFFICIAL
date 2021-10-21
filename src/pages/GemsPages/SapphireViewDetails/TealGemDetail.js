@@ -4,7 +4,6 @@ import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import Gem from '../Gem/Gem';
 import './GemDetails.css';
-import { useStateValue } from '../../../StateProvider';
 import { db } from '../../../firebase';
 import formatCurrency from 'format-currency';
 import ReactImageMagnify from 'react-image-magnify';
@@ -37,6 +36,7 @@ function TealGemDetail() {
 				wishlist: wishListBasket,
 			});
 		}
+
 		setTempSafetyWishList(true);
 	}, [wishListBasket]);
 
@@ -46,6 +46,7 @@ function TealGemDetail() {
 				cart: cartBasket,
 			});
 		}
+
 		setTempSafetyCartBasket(true);
 	}, [cartBasket]);
 
@@ -67,6 +68,7 @@ function TealGemDetail() {
 					preferredSize: null,
 				})
 			);
+
 			alert('Added item to cart!');
 		} else {
 			alert('Please sign in to add item to wishlist');
@@ -114,27 +116,27 @@ function TealGemDetail() {
 				<div className="gemDetails__sectionCartSmallImages">
 					<img
 						onMouseOver={(e) => {
-							selectedImage(e.target.src, 'purple sapphire');
+							selectedImage(e.target.src, "purple sapphire");
 						}}
 						src="gems/purple-sapphire.png"
 						alt=""
-						className={currentImage === 'purple sapphire' ? 'active' : ''}
+						className={currentImage === "purple sapphire" ? "active" : ""}
 					/>
 					<img
 						onMouseOver={(e) => {
-							selectedImage(e.target.src, 'teal sapphire');
+							selectedImage(e.target.src, "teal sapphire");
 						}}
 						src="gems/teal-sapphire.png"
 						alt=""
-						className={currentImage === 'teal sapphire' ? 'active' : ''}
+						className={currentImage === "teal sapphire" ? "active" : ""}
 					/>
 					<img
 						onMouseOver={(e) => {
-							selectedImage(e.target.src, 'white sapphire');
+							selectedImage(e.target.src, "white sapphire");
 						}}
 						src="gems/white-sapphire.png"
 						alt=""
-						className={currentImage === 'white sapphire' ? 'active' : ''}
+						className={currentImage === "white sapphire" ? "active" : ''}
 					/>
 				</div>
 				<div className="gemDetails__sectionCartMainImage">
@@ -264,6 +266,6 @@ function TealGemDetail() {
 			</div>
 		</div>
 	);
-}
+};
 
 export default TealGemDetail;

@@ -8,7 +8,7 @@ import { selectCurrencyRate } from '../../../../features/currencyRateSlice';
 function MakeDreamsTrue() {
 	const currencySymbol = useSelector(selectCurrencySymbol);
 	const currencyRate = useSelector(selectCurrencyRate);
-	
+
 	return (
 		<div className="homePage__makeDreamsTrue">
 			{/* title */}
@@ -54,7 +54,6 @@ function MakeDreamsTrue() {
 						</p>
 					</Slide>
 				</div>
-				{/* <Slide direction="right"> */}
 				<Fade triggerOnce>
 					<img
 						className="homePage__makeDreamsTrue__middle__image"
@@ -62,7 +61,6 @@ function MakeDreamsTrue() {
 						alt=""
 					/>
 				</Fade>
-				{/* </Slide> */}
 			</div>
 
 			{/* bottom ring section */}
@@ -119,6 +117,6 @@ function MakeDreamsTrue() {
 			</div>
 		</div>
 	);
-}
+};
 
 export default MakeDreamsTrue;

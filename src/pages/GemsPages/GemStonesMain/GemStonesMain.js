@@ -1,8 +1,8 @@
-import Gem from "../Gem/Gem";
-import "./GemStonesMain.css";
-import { Fade } from "react-awesome-reveal";
-import SEO from "../../../shared/components/SEO/SEO";
-import gemData from "../../../gemData.json";
+import Gem from '../Gem/Gem';
+import './GemStonesMain.css';
+import { Fade } from 'react-awesome-reveal';
+import SEO from '../../../shared/components/SEO/SEO';
+import gemData from '../../../gemData.json';
 
 function GemStonesMain() {
   return (

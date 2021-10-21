@@ -1,13 +1,19 @@
 import React, { useRef, useState } from 'react';
 import { useHistory } from 'react-router-dom';
 import { auth } from '../../../firebase';
-import { useStateValue } from '../../../StateProvider';
 import './LoginPage.css';
 import { ValidatorForm, TextValidator } from 'react-material-ui-form-validator';
-import { Button, Dialog, DialogActions, DialogContent, DialogContentText, DialogTitle } from '@material-ui/core';
+import {
+	Button,
+	Dialog,
+	DialogActions,
+	DialogContent,
+	DialogContentText,
+	DialogTitle
+} from '@material-ui/core';
 import SEO from '../../../shared/components/SEO/SEO';
-import { useDispatch, useSelector } from 'react-redux';
-import { login, selectUser } from '../../../features/userSlice';
+import { useDispatch } from 'react-redux';
+import { login } from '../../../features/userSlice';
 
 function LoginPage() {
 	const history = useHistory();
@@ -16,7 +22,6 @@ function LoginPage() {
 	const [email, setEmail] = useState('');
 	const [forgetEmail, setForgetEmail] = useState('');
 	const [password, setPassword] = useState('');
-	// const [{ user }, dispatch] = useStateValue();
 	const [forgetPasswordOpen, setForgetPasswordOpen] = useState(false);
 	const dispatch = useDispatch();
 
@@ -33,24 +38,13 @@ function LoginPage() {
 				// signed in, redirect to the homepage
 				setEmail('');
 				setPassword('');
-
-				// setting the user into the react context API
-				// dispatch({
-				// 	type: 'SET_USER',
-				// 	user: auth.user,
-				// });
 				dispatch(login(auth.user));
-				// setTimeout(() => {
-				// 	alert('Welcome ' + auth.user.displayName + '!');
-				// }, 1000);
-
 				history.replace('/');
 
 				setTimeout(() => {
 					window.location.reload(true);
 				}, 2000);
-			})
-			.catch(setDialogOpen(!dialogOpen));
+			}).catch(setDialogOpen(!dialogOpen));
 	};
 
 	// Forget password implementation (using firebase)
@@ -61,13 +55,13 @@ function LoginPage() {
 			.then((res) => {
 				alert('Please check your email');
 				setForgetEmail('');
-			})
-			.catch((e) => alert(e.message));
+			}).catch((e) => alert(e.message));
 	};
 
 	return (
 		<div className="loginPage">
 			<SEO title="Login" />
+
 			<div className="loginPage__leftSide">
 				<div className="loginPage__leftSideTop">
 					<p className="loginPage__title">SIGN IN</p>
@@ -82,7 +76,7 @@ function LoginPage() {
 							onChange={(e) => setEmail(e.target.value)}
 							value={email}
 							errorMessages="Please add an email"
-							validators={['required', 'isEmail']}
+							validators={["required", "isEmail"]}
 						/>
 						<TextValidator
 							style={{ width: '90%' }}
@@ -92,13 +86,14 @@ function LoginPage() {
 							onChange={(e) => setPassword(e.target.value)}
 							value={password}
 							errorMessages="Please add a password"
-							validators={['required']}
+							validators={["required"]}
 						/>
 						<button type="submit">Sign In</button>
 					</ValidatorForm>
 					<button onClick={() => setForgetPasswordOpen(!forgetPasswordOpen)}>Forgot Password?</button>
 				</div>
 			</div>
+
 			<div className="loginPage__rightSide">
 				<div className="loginPage__rightSideTop">
 					<p className="loginPage__title">CREATE AN ACCOUNT</p>
@@ -113,6 +108,7 @@ function LoginPage() {
 					</a>
 				</div>
 			</div>
+
 			<Dialog
 				open={dialogOpen}
 				onClose={() => setDialogOpen(!dialogOpen)}
@@ -132,7 +128,7 @@ function LoginPage() {
 					</Button>
 				</DialogActions>
 			</Dialog>
-			{/* Dialog Box for forget password */}
+
 			<Dialog
 				open={forgetPasswordOpen}
 				onClose={() => setForgetPasswordOpen(!forgetPasswordOpen)}
@@ -154,7 +150,7 @@ function LoginPage() {
 								onChange={(e) => setForgetEmail(e.target.value)}
 								value={forgetEmail}
 								errorMessages="Please add an email"
-								validators={['required', 'isEmail']}
+								validators={["required", "isEmail"]}
 							/>
 							<Button
 								style={{

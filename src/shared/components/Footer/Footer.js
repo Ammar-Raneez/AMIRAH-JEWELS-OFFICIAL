@@ -17,7 +17,6 @@ import { changeRate } from '../../../features/currencyRateSlice';
 function Footer() {
 	const [date] = useState(new Date().getFullYear());
 	const history = useHistory();
-	// const [{ currencySymbol, currencyRate, user }, dispatch] = useStateValue();
 	const BASE_URL = 'https://v6.exchangerate-api.com/v6/0a31808a3c199a87cfda7925/latest/USD';
 	const [exchangeRates, setExchangeRates] = useState({});
 
@@ -251,63 +250,6 @@ function Footer() {
 			</div>
 		</div>
 	);
-}
+};
 
 export default Footer;
-
-// OLD FOOTER CODE
-// {
-	/* <div className="footer__main">
-				<div className="footer__top">
-					<div className="footer__leftSection">
-						<div className="footer__leftSectionTop">
-							<p>Products</p>
-							<a href="/necklace+pendants">Necklaces & Pendants</a>
-							<a href="/earrings">Earrings</a>
-							<a href="/rings">Rings</a>
-							<a href="/bracelets">Bracelets</a>
-							<a href="/engagement+rings">Engagement Rings</a>
-						</div>
-						<div className="footer__leftSectionDown">
-							<p>Follow us on:</p>
-							<a rel="noreferrer" href="https://www.instagram.com/amirahgems/" target="_blank">
-								Instagram
-							</a>
-							<a rel="noreferrer" href="https://www.facebook.com/amirahgems" target="_blank">
-								Facebook
-							</a>
-						</div>
-					</div>
-					<div className="footer__middleSection">
-						<p>About Us</p>
-						<a href="/aboutus">Company</a>
-						<a href="/charity">Charity</a>
-						<a href="/careers">Careers</a>
-						<a href="/policy">Policy</a>
-						<a href="/contactUs">Contact Us</a>
-					</div>
-					<div className="footer__rightSection">
-						<p>Latest by Amirah Gems</p>
-						<p className="footer__rightSectionDescription">
-							Be the first to know about exciting new designs, special events, store openings and much more.
-						</p>
-
-						<a href="/register">SIGN UP</a>
-						{displayCountryList && (
-							<div className="footer__rightSectionSelectCountry">
-								<p>Select Country: </p>
-								<select onChange={(e) => handleClickedCountry(e)}>
-									<option value={cc.code('USD')?.countries[0]}>Select Country</option>
-									{countries?.map((country, index) => (
-										<option key={index} value={country}>
-											{country}
-										</option>
-									))}
-								</select>
-							</div>
-						)}
-					</div>
-				</div>
-				<div className="footer__bottom">{`© AmirahGems. ${date}`}</div>
-			</div> */
-// }

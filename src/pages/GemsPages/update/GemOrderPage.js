@@ -1,6 +1,6 @@
-import styled from "styled-components";
-import GemOrderBody from "./components/GemOrderBody";
-import GemOrderTitle from "./components/GemOrderTitle";
+import styled from 'styled-components';
+import GemOrderBody from './components/GemOrderBody';
+import GemOrderTitle from './components/GemOrderTitle';
 
 const GemOrderPage = () => {
   return (
@@ -13,7 +13,7 @@ const GemOrderPage = () => {
       </section>
     </Container>
   );
-};
+}
 
 export default GemOrderPage;
 

@@ -18,6 +18,7 @@ export const store = configureStore({
 		wishlist: wishlistReducer,
 		cost: costReducer,
 	},
+
 	preloadedState: persistedState,
 });
 

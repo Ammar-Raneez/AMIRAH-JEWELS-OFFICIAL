@@ -73,6 +73,6 @@ function ProcessPage() {
 			</div>
 		</div>
 	);
-}
+};
 
 export default ProcessPage;

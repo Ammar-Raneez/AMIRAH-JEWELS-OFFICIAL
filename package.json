@@ -1,6 +1,6 @@
 {
-  "name": "amira-amira",
-  "version": "0.1.0",
+  "name": "amira-gems",
+  "version": "1.0.0",
   "private": true,
   "dependencies": {
     "@date-io/date-fns": "^1.3.13",

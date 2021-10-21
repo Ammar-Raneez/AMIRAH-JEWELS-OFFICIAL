@@ -1,48 +1,45 @@
-import HomePage from "./pages/HomePage/HomePage";
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import RegisterPage from "./pages/AccountPages/RegisterPage/RegisterPage";
-import Footer from "./shared/components/Footer/Footer";
-import TopBar from "./shared/components/topbar/TopBar";
-import Header from "./shared/components/header/Header";
-import AboutPageCompany from "./pages/AboutPage/AboutPageCompany";
-import AboutPageCharity from "./pages/AboutPage/AboutPageCharity";
-import ThankyouCreatingAccount from "./pages/AccountPages/ThankyouPage/ThankyouCreatingAccount";
-import GemStonesMain from "./pages/GemsPages/GemStonesMain/GemStonesMain";
-import ProcessPage from "./pages/ProcessPage/ProcessPage";
-import AboutPagePolicy from "./pages/AboutPage/AboutPagePolicy";
-import AboutPageCareer from "./pages/AboutPage/AboutPageCareer";
-import LoginPage from "./pages/AccountPages/LoginPage/LoginPage";
-import WishListPage from "./pages/WishListPage/WishListPage";
-import NecklacePendantPageMain from "./pages/NecklacePendantPage/NecklacePendantPageMain";
-import GiftPage from "./pages/GiftPage/GiftPage";
-// import { useStateValue } from './StateProvider';
-import { useEffect } from "react";
-import { auth, db } from "./firebase";
-import CartPage from "./pages/CartPage/CartPage";
-import TealGemDetail from "./pages/GemsPages/SapphireViewDetails/TealGemDetail";
-import PurpleGemDetail from "./pages/GemsPages/SapphireViewDetails/PurpleGemDetail";
-import CheckOutPage from "./pages/CheckOutPage/CheckOutPage";
-import ContactUsPage from "./pages/ContactUsPage/ContactUsPage";
-import ComingSoon from "./pages/ComingSoon/CominSoon";
-import RingsPage from "./pages/RingsPages/RingsPage";
-import { login, logout, selectUser } from "./features/userSlice";
-import { useDispatch, useSelector } from "react-redux";
-import { addToCart } from "./features/cartSlice";
-import { addToWishlist } from "./features/wishlistSlice";
-import { changeRate } from "./features/currencyRateSlice";
-import { changeSymbol } from "./features/currencySymbolSlice";
-import GemDetailPage from "./pages/GemsPages/update/GemDetailPage";
-import { ringData } from "./pages/RingsPages/ringData";
-import gemData from "./gemData.json";
-import RingsPageMain from "./pages/RingsPages/RingsPageMain";
-import BraceletsPage from "./pages/BraceletsPage/BraceletsPage";
-import EarringsPage from "./pages/EarringsPage/EarringsPage";
-import DesignerDeskPage from "./pages/DesignerDeskPage/DesignerDeskPage";
-import GemOrderPage from "./pages/GemsPages/update/GemOrderPage";
+import HomePage from './pages/HomePage/HomePage';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import RegisterPage from './pages/AccountPages/RegisterPage/RegisterPage';
+import Footer from './shared/components/Footer/Footer';
+import TopBar from './shared/components/topbar/TopBar';
+import Header from './shared/components/header/Header';
+import AboutPageCompany from './pages/AboutPage/AboutPageCompany';
+import AboutPageCharity from './pages/AboutPage/AboutPageCharity';
+import GemStonesMain from './pages/GemsPages/GemStonesMain/GemStonesMain';
+import ProcessPage from './pages/ProcessPage/ProcessPage';
+import AboutPagePolicy from './pages/AboutPage/AboutPagePolicy';
+import AboutPageCareer from './pages/AboutPage/AboutPageCareer';
+import LoginPage from './pages/AccountPages/LoginPage/LoginPage';
+import WishListPage from './pages/WishListPage/WishListPage';
+import NecklacePendantPageMain from './pages/NecklacePendantPage/NecklacePendantPageMain';
+import GiftPage from './pages/GiftPage/GiftPage';
+// import { useEffect } from 'react';
+// import { auth, db } from './firebase';
+import CartPage from './pages/CartPage/CartPage';
+import TealGemDetail from './pages/GemsPages/SapphireViewDetails/TealGemDetail';
+import PurpleGemDetail from './pages/GemsPages/SapphireViewDetails/PurpleGemDetail';
+import CheckOutPage from './pages/CheckOutPage/CheckOutPage';
+import ContactUsPage from './pages/ContactUsPage/ContactUsPage';
+import ComingSoon from './pages/ComingSoon/CominSoon';
+import RingsPage from './pages/RingsPages/RingsPage';
+// import { login, logout, selectUser } from './features/userSlice';
+// import { useDispatch } from 'react-redux';
+// import { addToCart } from './features/cartSlice';
+// import { addToWishlist } from './features/wishlistSlice';
+// import { changeRate } from './features/currencyRateSlice';
+// import { changeSymbol } from './features/currencySymbolSlice';
+import GemDetailPage from './pages/GemsPages/update/GemDetailPage';
+import { ringData } from './pages/RingsPages/ringData';
+import gemData from './gemData.json';
+import RingsPageMain from './pages/RingsPages/RingsPageMain';
+import BraceletsPage from './pages/BraceletsPage/BraceletsPage';
+import EarringsPage from './pages/EarringsPage/EarringsPage';
+import DesignerDeskPage from './pages/DesignerDeskPage/DesignerDeskPage';
+import GemOrderPage from './pages/GemsPages/update/GemOrderPage';
 
 function App() {
-  // const [{ wishListBasket, cartBasket, user }, dispatch] = useStateValue();
-  const dispatch = useDispatch();
+  // const dispatch = useDispatch();
 
   /* COMMENTED INORDERED TO PREVENT WASTAGE FOR NOW ----------->
 	useEffect(() => {
@@ -314,6 +311,6 @@ function App() {
       </div>
     </Router>
   );
-}
+};
 
 export default App;

@@ -1,12 +1,12 @@
-import styled from "styled-components";
-import { AboutGem } from "./components/AboutGem";
-import { BirthStonesAnniversary } from "./components/BirthStonesAnniversary";
-import { GemStatistics } from "./components/GemStatistics";
-import { GemTitle } from "./components/GemTitle";
-import { Imitations } from "./components/Imitations";
-import { Synthetics } from "./components/Synthetics";
-import { Treatments } from "./components/Treatments";
-import { WhyWeLoveGemStone } from "./components/WhyWeLoveGemStone";
+import styled from 'styled-components';
+import { AboutGem } from './components/AboutGem';
+import { BirthStonesAnniversary } from './components/BirthStonesAnniversary';
+import { GemStatistics } from './components/GemStatistics';
+import { GemTitle } from './components/GemTitle';
+import { Imitations } from './components/Imitations';
+import { Synthetics } from './components/Synthetics';
+import { Treatments } from './components/Treatments';
+import { WhyWeLoveGemStone } from './components/WhyWeLoveGemStone';
 
 const GemDetailPage = ({ data }) => {
   return (
@@ -42,7 +42,7 @@ const GemDetailPage = ({ data }) => {
       </section>
     </Container>
   );
-};
+}
 
 export default GemDetailPage;
 

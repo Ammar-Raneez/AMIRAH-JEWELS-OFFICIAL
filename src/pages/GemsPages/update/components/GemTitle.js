@@ -1,5 +1,5 @@
-import { useHistory } from "react-router";
-import styled from "styled-components";
+import { useHistory } from 'react-router';
+import styled from 'styled-components';
 
 export const GemTitle = ({ title, titleText, titleImage }) => {
   const history = useHistory();

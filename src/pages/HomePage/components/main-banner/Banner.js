@@ -1,43 +1,43 @@
 
-import SimpleImageSlider from "react-simple-image-slider";
+import SimpleImageSlider from 'react-simple-image-slider';
 import React, { useEffect, useState } from 'react';
 import './Banner.css';
 
 function Banner() {
-    const [width, setWidth] = useState(0);
+  const [width, setWidth] = useState(0);
 
-    const images = [
-        {url: "amirah-details-latest/H1.jpg"},
-        {url: "amirah-details-latest/H2.jpg"},
-        {url: "amirah-details-latest/H3.jpg"},
-    ];
+  const images = [
+    {url: 'amirah-details-latest/H1.jpg'},
+    {url: 'amirah-details-latest/H2.jpg'},
+    {url: 'amirah-details-latest/H3.jpg'},
+  ];
 
-    useEffect(() => {
-        setWidth(window.innerWidth);
-        const listener = window.addEventListener('resize', () => {
-            setWidth(window.innerWidth);
-        });
+  useEffect(() => {
+    setWidth(window.innerWidth);
+    const listener = window.addEventListener('resize', () => {
+      setWidth(window.innerWidth);
+    });
 
-        return window.removeEventListener('resize', listener);
-    }, [width])
+    return window.removeEventListener('resize', listener);
+  }, [width]);
 
-    return (
-        width > 1100 ? (
-            <a href="#category">
-                <div style={{position: 'relative'}}>
-                    <SimpleImageSlider
-                        images={images}
-                        height="75vh"
-                        width="100%"
-                        showBullets={true}
-                        showNavs={true}
-                    />
-                </div>
-            </a>
-        ) : (
-            <a href="#category"><div className="homePage__banner" /></a>
-        )
+  return (
+    width > 1100 ? (
+      <a href="#category">
+        <div style={{position: 'relative'}}>
+          <SimpleImageSlider
+            images={images}
+            height="75vh"
+            width="100%"
+            showBullets={true}
+            showNavs={true}
+          />
+        </div>
+      </a>
+  ) : (
+      <a href="#category"><div className="homePage__banner" /></a>
     )
-}
+  );
+};
 
 export default Banner;

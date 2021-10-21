@@ -1,25 +1,12 @@
 import './ProcessStep.css';
 import { Fade } from 'react-awesome-reveal';
-// import { useEffect, useState } from 'react';
 
 function ProcessStep({ img, stepNo, stepName, description, reflect, images=[] }) {
-	// const [currentImage, setCurrentImage] = useState(images[0]);
-
-	// useEffect(() => {
-	// 	const timer = setInterval(() => {
-	// 		const randomClass = allImageClasses[Math.floor(Math.random() * allImageClasses.length)];
-		// setCurrentImage(randomImage);
-	// 		document.getElementsByClassName(randomClass)[0].setS
-	// 	}
-	// 	, 2000)
-	// 	return () => clearInterval(timer);
-	// }, [])
-
 	return !reflect ? (
 		<>
 			<div className="processStep">
 				{images.length === 0 ? (
-					<img  alt="" src={img} alt="" />
+					<img src={img} alt="process" />
 				) : (
 					<div style={{position: 'relative', height: '50vw'}}>
 						<img  alt="" className="processStep__firstImage" style={{position: 'absolute'}} src={images[0]} />
@@ -27,7 +14,6 @@ function ProcessStep({ img, stepNo, stepName, description, reflect, images=[] })
 						<img  alt="" className="processStep__thirdImage" style={{position: 'absolute'}} src={images[2]} />
 					</div>
 				)}
-				{/* {images.length === 0 ? <img  alt="" src={img} alt="" /> : <img  alt="" src={currentImage} alt="" />} */}
 				<Fade delay={1000}>
 					<div className="processStep__description">
 						<p>{description}</p>
@@ -45,7 +31,7 @@ function ProcessStep({ img, stepNo, stepName, description, reflect, images=[] })
 		<>
 			<div className="processStepReflect">
 				{images.length === 0 ? (
-					<img alt="" src={img} alt="" />
+					<img alt="" src={img} />
 				) : (
 					<div style={{position: 'relative', height: '50vw'}}>
 						<img  alt="" className="processStep__firstImage" style={{position: 'absolute', left: '-53vw'}} src={images[0]} />
@@ -67,6 +53,6 @@ function ProcessStep({ img, stepNo, stepName, description, reflect, images=[] })
 			</div>
 		</>
 	);
-}
+};
 
 export default ProcessStep;

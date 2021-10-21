@@ -5,6 +5,7 @@ export const currencySymbolSlice = createSlice({
 	initialState: {
 		symbol: '$',
 	},
+
 	reducers: {
 		changeSymbol: (state, action) => {
 			state.symbol = action.payload;
@@ -13,7 +14,5 @@ export const currencySymbolSlice = createSlice({
 });
 
 export const { changeSymbol } = currencySymbolSlice.actions;
-
 export const selectCurrencySymbol = (state) => state.symbol.symbol;
-
 export default currencySymbolSlice.reducer;

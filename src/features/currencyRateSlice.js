@@ -5,6 +5,7 @@ export const currencyRateSlice = createSlice({
 	initialState: {
 		rate:  1.0,
 	},
+
 	reducers: {
 		changeRate: (state, action) => {
 			state.rate = action.payload;
@@ -13,7 +14,5 @@ export const currencyRateSlice = createSlice({
 });
 
 export const { changeRate } = currencyRateSlice.actions;
-
 export const selectCurrencyRate = (state) => state.rate.rate;
-
 export default currencyRateSlice.reducer;

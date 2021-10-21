@@ -7,7 +7,7 @@ function ComingSoon() {
 		<div 
 			className="comingSoon" 
 			style={{ 
-				background: "linear-gradient(0deg, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)), url(logo.png)" ,
+				background: 'linear-gradient(0deg, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)), url(logo.png)' ,
 				backgroundRepeat: 'no-repeat',
 				backgroundPosition: '165% 10%'
 			}}

@@ -4,12 +4,17 @@ import MailOutlineIcon from '@material-ui/icons/MailOutline';
 import CallIcon from '@material-ui/icons/Call';
 import ScheduleIcon from '@material-ui/icons/Schedule';
 import emailjs from 'emailjs-com';
-import { Button, Dialog, DialogContent, DialogContentText, DialogTitle } from '@material-ui/core';
+import {
+	Button,
+	Dialog,
+	DialogContent,
+	DialogContentText,
+	DialogTitle
+} from '@material-ui/core';
 import { useRef, useState } from 'react';
 import { TextValidator, ValidatorForm } from 'react-material-ui-form-validator';
 import { KeyboardDatePicker, MuiPickersUtilsProvider } from '@material-ui/pickers';
 import DateFnsUtils from '@date-io/date-fns';
-import { setDate } from 'date-fns/esm';
 import SEO from '../../shared/components/SEO/SEO';
 
 function ContactUsPage() {
@@ -30,8 +35,7 @@ function ContactUsPage() {
 				console.log(result.text);
 				setEmail('');
 				setMessage('');
-			},
-			(error) => {
+			}, (error) => {
 				console.log(error.text);
 			}
 		);
@@ -48,8 +52,7 @@ function ContactUsPage() {
 				setEmail('');
 				setMessage('');
 				setScheduleDate('');
-			},
-			(error) => {
+			}, (error) => {
 				console.log(error.text);
 			}
 		);
@@ -106,7 +109,7 @@ function ContactUsPage() {
 					aria-labelledby="alert-dialog-title"
 					aria-describedby="alert-dialog-description"
 				>
-					<DialogTitle id="alert-dialog-title">{'Create a Mail'}</DialogTitle>
+					<DialogTitle id="alert-dialog-title">Create a Mail</DialogTitle>
 					<DialogContent>
 						<DialogContentText id="alert-dialog-description">
 							<ValidatorForm onSubmit={sendEmail} ref={formRef}>
@@ -118,7 +121,7 @@ function ContactUsPage() {
 									onChange={(e) => setEmail(e.target.value)}
 									value={email}
 									errorMessages="Please add an email"
-									validators={['required', 'isEmail']}
+									validators={["required", "isEmail"]}
 								/>
 
 							
@@ -130,7 +133,7 @@ function ContactUsPage() {
 									onChange={(e) => setMessage(e.target.value)}
 									value={message}
 									errorMessages="Please add a message"
-									validators={['required']}
+									validators={["required"]}
 								/>
 								<Button
 									style={{
@@ -155,7 +158,7 @@ function ContactUsPage() {
 					aria-labelledby="alert-dialog-title"
 					aria-describedby="alert-dialog-description"
 				>
-					<DialogTitle id="alert-dialog-title">{'Schedule a call'}</DialogTitle>
+					<DialogTitle id="alert-dialog-title">Schedule a call</DialogTitle>
 					<DialogContent>
 						<DialogContentText id="alert-dialog-description">
 							<ValidatorForm onSubmit={scheduleACall} ref={formRef}>
@@ -167,7 +170,7 @@ function ContactUsPage() {
 									onChange={(e) => setEmail(e.target.value)}
 									value={email}
 									errorMessages="Please add an email"
-									validators={['required', 'isEmail']}
+									validators={["required", "isEmail"]}
 								/>
 		
 								<MuiPickersUtilsProvider utils={DateFnsUtils}>
@@ -182,7 +185,7 @@ function ContactUsPage() {
 										value={scheduleDate}
 										onChange={onDateChange}
 										KeyboardButtonProps={{
-											'aria-label': 'change date',
+											"aria-label": "change date",
 										}}
 									/>
 								</MuiPickersUtilsProvider>

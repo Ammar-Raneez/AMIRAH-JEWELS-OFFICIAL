@@ -5,11 +5,11 @@ export const cartSlice = createSlice({
 	initialState: {
 		cart: [],
 	},
+
 	reducers: {
 		addToCart: (state, action) => {
 			let cart_ = state.cart;
 			let presentBasket = false;
-
 			for (let index = 0; index < cart_?.length; index++) {
 				const element = cart_[index];
 				if (element?.productName === action.payload?.productName) {
@@ -35,10 +35,10 @@ export const cartSlice = createSlice({
 
 			state.cart = cart_;
 		},
+
 		incrementItemCount: (state, action) => {
 			let itemName = action.payload['itemName'];
 			let cart_ = state.cart;
-
 			for (let index = 0; index < cart_?.length; index++) {
 				if (cart_[index].productName === itemName) {
 					cart_[index].productQuantity += 1;
@@ -47,6 +47,7 @@ export const cartSlice = createSlice({
 
 			state.cart = cart_;
 		},
+
 		decrementItemCount: (state, action) => {
 			let itemName = action.payload['itemName'];
 			let cart_ = state.cart;
@@ -54,6 +55,7 @@ export const cartSlice = createSlice({
 			// loop through the list of items in the cart and find for the item to be updated
 			for (let index = 0; index < cart_?.length; index++) {
 				if (cart_[index].productName === itemName) {
+
 					// now we can increment the quantity of the item
 					if (cart_[index].productQuantity > 1) {
 						cart_[index].productQuantity -= 1;
@@ -67,7 +69,5 @@ export const cartSlice = createSlice({
 });
 
 export const { addToCart, removeFromCart, incrementItemCount, decrementItemCount } = cartSlice.actions;
-
 export const selectCart = (state) => state.cart.cart;
-
 export default cartSlice.reducer;

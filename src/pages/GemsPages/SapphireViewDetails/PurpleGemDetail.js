@@ -5,7 +5,6 @@ import { Link } from 'react-router-dom';
 import Gem from '../Gem/Gem';
 import './GemDetails.css';
 import formatCurrency from 'format-currency';
-import { useStateValue } from '../../../StateProvider';
 import { db } from '../../../firebase';
 import ReactImageMagnify from 'react-image-magnify';
 import { Fade } from 'react-awesome-reveal';
@@ -118,23 +117,23 @@ function PurpleGemDetail() {
 						}}
 						src="gems/purple-sapphire.png"
 						alt=""
-						className={currentImage === 'purple sapphire' ? 'active' : ''}
+						className={currentImage === "purple sapphire" ? "active" : ""}
 					/>
 					<img
 						onMouseOver={(e) => {
-							selectedImage(e.target.src, 'teal sapphire');
+							selectedImage(e.target.src, "teal sapphire");
 						}}
 						src="gems/teal-sapphire.png"
 						alt=""
-						className={currentImage === 'teal sapphire' ? 'active' : ''}
+						className={currentImage === "teal sapphire" ? "active" : ""}
 					/>
 					<img
 						onMouseOver={(e) => {
-							selectedImage(e.target.src, 'white sapphire');
+							selectedImage(e.target.src, "white sapphire");
 						}}
 						src="gems/white-sapphire.png"
 						alt=""
-						className={currentImage === 'white sapphire' ? 'active' : ''}
+						className={currentImage === "white sapphire" ? "active" : ""}
 					/>
 				</div>
 				<div className="gemDetails__sectionCartMainImage">
@@ -265,6 +264,6 @@ function PurpleGemDetail() {
 			</div>
 		</div>
 	);
-}
+};
 
 export default PurpleGemDetail;

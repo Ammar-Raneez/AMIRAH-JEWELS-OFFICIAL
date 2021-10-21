@@ -76,52 +76,6 @@ function Header() {
 										<span>ETERNITY</span>
 									</Link>
 								</div>
-								{/* <div>
-									<p style={{ color: '#656565', fontWeight: '600' }}>FEATURED COLLECTION</p>
-									<Link
-										className="header__optionsProductHidden header__optionsProductDetail"
-										to="/signature"
-									>
-										<span>SIGNATURE</span>
-									</Link>
-									<Link
-										className="header__optionsProductHidden header__optionsProductDetail"
-										to="/amarelo"
-									>
-										<span>AMARELO</span>
-									</Link>
-									<Link
-										className="header__optionsProductHidden header__optionsProductDetail"
-										to="/mi+amor"
-									>
-										<span>MI AMOR</span>
-									</Link>
-									<Link
-										className="header__optionsProductDetail" 
-										to="/dew+drops"
-									>
-										<span>DEW DROPS</span>
-									</Link>
-									<Link 
-										className="header__optionsProductDetail" 
-										to="/ombre"
-									>
-										<span>OMBRE</span>
-									</Link>
-									<Link 
-										className="header__optionsProductDetail" 
-										to="/numero"
-									>
-										<span>NUMERO</span>
-									</Link>
-									<Link
-										style={{ color: '#656565', fontWeight: '600' }}
-										className="header__optionsProductDetail"
-										to="/explore+all+collection"
-									>
-										<span>EXPLORE ALL COLLECTION</span>
-									</Link>
-								</div> */}
 							</div>
 						)}
 					</div>
@@ -167,6 +121,6 @@ function Header() {
 			</div>
 		</div>
 	);
-}
+};
 
 export default Header;

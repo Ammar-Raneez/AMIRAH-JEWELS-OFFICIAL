@@ -1,14 +1,14 @@
-import styled from "styled-components";
-import { useState } from "react";
-import Dropdown from "react-dropdown";
-import "react-dropdown/style.css";
-import { COLOR_SAPPHIRE } from "../colorSapphire";
-import ColorGemItem from "./ColorGemItem";
+import styled from 'styled-components';
+import { useState } from 'react';
+import Dropdown from 'react-dropdown';
+import 'react-dropdown/style.css';
+import { COLOR_SAPPHIRE } from '../colorSapphire';
+import ColorGemItem from './ColorGemItem';
 
 const GemOrderBody = () => {
-  let cuts = ["HEART", "OVAL", "PEAR", "ROUND", "SQUARE", "TRIANGLE"];
+  let cuts = ['HEART', 'OVAL', 'PEAR', 'ROUND', 'SQUARE', 'TRIANGLE'];
   const [selectedCut, setSelectedCut] = useState(cuts[0]);
-  let carat = ["0.25", "0.5", "0.75", "1", "1.25", "1.5", "1.75", "2"];
+  let carat = ['0.25', '0.5', '0.75', '1', '1.25', '1.5', '1.75', '2'];
   const [selectedCarat, setSelectedCarat] = useState(carat[0]);
 
   return (

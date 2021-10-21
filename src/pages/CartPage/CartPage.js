@@ -11,7 +11,6 @@ import { selectDelivery, selectSubTotal, selectTax } from '../../features/costSl
 import { selectWishlist } from '../../features/wishlistSlice';
 
 function CartPage() {
-	// const [{ cartBasket, user, subTotal, delivery, tax }, dispatch] = useStateValue();
 	const user = useSelector(selectUser);
 	const cartBasket = useSelector(selectCart);
 	const subTotal = useSelector(selectSubTotal);
@@ -35,6 +34,7 @@ function CartPage() {
 				wishlist: wishListBasket,
 			});
 		}
+
 		setUpdateWishList(true);
 	}, [wishListBasket]);
 
@@ -45,6 +45,7 @@ function CartPage() {
 				cart: cartBasket,
 			});
 		}
+
 		setUpdateCartList(true);
 	}, [cartBasket]);
 

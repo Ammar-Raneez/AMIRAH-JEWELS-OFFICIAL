@@ -15,6 +15,6 @@ function HomePage() {
 			<Category />
 		</div>
 	);
-}
+};
 
 export default HomePage;

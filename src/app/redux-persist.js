@@ -2,7 +2,6 @@
 export const saveToLocalStorage = (state) => {
 	try {
 		const serializedState = JSON.stringify(state);
-		// window.localStorage.clear();
 		localStorage.setItem('state', serializedState);
 	} catch (e) {
 		console.log(e);

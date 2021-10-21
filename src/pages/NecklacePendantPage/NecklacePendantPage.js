@@ -4,7 +4,6 @@ import FavoriteBorderIcon from '@material-ui/icons/FavoriteBorder';
 import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { db } from '../../firebase';
-import { useStateValue } from '../../StateProvider';
 import './NecklacePendantPage.css';
 import Product from './Product/Product';
 import ChevronRightIcon from '@material-ui/icons/ChevronRight';
@@ -42,6 +41,7 @@ function NecklacePendantPage() {
 				wishlist: wishListBasket,
 			});
 		}
+
 		setTempSafetyWishList(true);
 	}, [wishList]);
 
@@ -51,6 +51,7 @@ function NecklacePendantPage() {
 				cart: cartBasket,
 			});
 		}
+
 		setTempSafetyCartBasket(true);
 	}, [cartBasket]);
 
@@ -74,6 +75,7 @@ function NecklacePendantPage() {
 					preferredSize: null,
 				})
 			);
+
 			alert('Added item to cart!');
 		} else {
 			alert('Please sign in to add item to wishlist');
@@ -91,6 +93,7 @@ function NecklacePendantPage() {
 					preferredSize: null,
 				})
 			);
+
 			setAddToWishList(true);
 		} else {
 			alert('Please sign in to add item to wishlist');
@@ -245,8 +248,6 @@ function NecklacePendantPage() {
 							<Product img="pendantsNecklace/pink_necklace.png" name="Product Name" viewMoreUrl="/" />
 							<Product img="pendantsNecklace/pink_necklace.png" name="Product Name" viewMoreUrl="/" />
 						</div>
-						{/* <div className="necklacePendant__otherProductsRow">
-					</div> */}
 					</Fade>
 				</div>
 			</div>

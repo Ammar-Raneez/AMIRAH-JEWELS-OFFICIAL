@@ -8,12 +8,13 @@ export const costSlice = createSlice({
 		estimatedTotal: 0,
 		tax: 20,
 	},
+
 	reducers: {
 		calculateSubTotal: (state, action) => {
 			let subTotal_ = 0;
 			let cart_ = action.payload;
 
-            for (let index = 0; index < cart_?.length; index++) {
+			for (let index = 0; index < cart_?.length; index++) {
 				const item = cart_[index];
 				const totalCostPerItem = item.productCost * item.productQuantity;
 				subTotal_ += totalCostPerItem;
@@ -21,13 +22,16 @@ export const costSlice = createSlice({
 
 			state.subTotal = subTotal_;
 		},
+
 		calculateEstimatedTotal: (state) => {
 			let total_ = Math.round(state.subTotal + state.delivery + state.tax);
 			state.estimatedTotal = total_;
 		},
+
 		changeDeliveryCost: (state, action) => {
 			state.delivery = action.payload['delivery'];
 		},
+
 		changeTaxCost: (state, action) => {
 			state.tax = action.payload['tax'];
 		},
@@ -41,5 +45,4 @@ export const selectSubTotal = (state) => state.cost.subTotal;
 export const selectDelivery = (state) => state.cost.delivery;
 export const selectEstimatedTotal = (state) => state.cost.estimatedTotal;
 export const selectTax = (state) => state.cost.tax;
-
 export default costSlice.reducer;

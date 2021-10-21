@@ -35,6 +35,7 @@ function TopBar({ isSpecificProduct }) {
 		if (event && event.type === 'keydown' && (event.key === 'Tab' || event.key === 'Shift')) {
 			return;
 		}
+
 		setDrawer(open);
 	};
 
@@ -212,6 +213,6 @@ function TopBar({ isSpecificProduct }) {
 			</div>
 		</div>
 	);
-}
+};
 
 export default TopBar;

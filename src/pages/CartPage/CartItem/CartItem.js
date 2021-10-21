@@ -3,13 +3,25 @@ import './CartItem.css';
 import CloseIcon from '@material-ui/icons/Close';
 import formatCurrency from 'format-currency';
 import { useDispatch, useSelector } from 'react-redux';
-import { decrementItemCount, incrementItemCount, removeFromCart, selectCart } from '../../../features/cartSlice';
+import {
+	decrementItemCount,
+	incrementItemCount,
+	removeFromCart,
+	selectCart
+} from '../../../features/cartSlice';
 import { addToWishlist } from '../../../features/wishlistSlice';
 import { selectCurrencySymbol } from '../../../features/currencySymbolSlice';
 import { selectCurrencyRate } from '../../../features/currencyRateSlice';
 import { calculateSubTotal } from '../../../features/costSlice';
 
-function CartItem({ productCost, productImgURL, productName, productQuantity, preferredMetal, preferredSize }) {
+function CartItem({
+	productCost,
+	productImgURL,
+	productName,
+	productQuantity,
+	preferredMetal,
+	preferredSize
+}) {
 	const cartBasket = useSelector(selectCart);
 	const dispatch = useDispatch();
 	const currencySymbol = useSelector(selectCurrencySymbol);
@@ -118,7 +130,7 @@ function CartItem({ productCost, productImgURL, productName, productQuantity, pr
 							</div>
 							<span>
 								<p>
-									{currencySymbol}{' '}
+									{currencySymbol}
 									{formatCurrency(
 										(productQuantity * Math.round(productCost * currencyRate * 100)) / 100
 									)}

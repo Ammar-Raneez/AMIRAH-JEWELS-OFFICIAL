@@ -1,5 +1,5 @@
-import { Paper } from "@material-ui/core";
-import "./Gem.css";
+import { Paper } from '@material-ui/core';
+import './Gem.css';
 
 function Gem({ viewMoreUrl, cardImage }) {
   return (

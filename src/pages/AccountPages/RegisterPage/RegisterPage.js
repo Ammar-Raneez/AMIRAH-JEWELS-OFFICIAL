@@ -3,7 +3,6 @@ import { useHistory } from 'react-router-dom';
 import { auth, db } from '../../../firebase';
 import './RegisterPage.css';
 import firebase from 'firebase';
-import { useStateValue } from '../../../StateProvider';
 import { FormControl, FormControlLabel, FormLabel, Radio, RadioGroup } from '@material-ui/core';
 import DateFnsUtils from '@date-io/date-fns';
 import { KeyboardDatePicker, MuiPickersUtilsProvider } from '@material-ui/pickers';
@@ -23,8 +22,6 @@ function RegisterPage() {
 	const [gender, setGender] = useState('');
 	const [birthMonth, setBirthMonth] = useState('');
 	const [birthDay, setBirthDay] = useState('');
-	// const [{ user }, dispatch] = useStateValue();
-	// const user = useSelector(selectUser);
 	const dispatch = useDispatch();
 
 	useEffect(() => {
@@ -32,6 +29,7 @@ function RegisterPage() {
 			if (password.length <= 6) {
 				return false;
 			}
+
 			return true;
 		});
 	});
@@ -80,28 +78,13 @@ function RegisterPage() {
 				setBirthDay('');
 				setBirthMonth('');
 				setPassword('');
-
-				// setting the user into the react context API
-				// dispatch({
-				// 	type: 'SET_USER',
-				// 	user: auth.user,
-				// });
 				dispatch(login(auth.user));
-
-				// setTimeout(() => {
-				// 	alert('Welcome ' + auth.user.displayName + '!');
-				// }, 1000);
 
 				// redirect to homepage
 				setTimeout(() => {
 					history.replace('/');
 				}, 2000);
-
-				// setTimeout(() => {
-				// 	window.location.reload(true);
-				// }, 2000);
-			})
-			.catch((e) => alert(e.message));
+			}).catch((e) => alert(e.message));
 	};
 
 	return (
@@ -122,8 +105,6 @@ function RegisterPage() {
 					style={{ width: '100%' }}
 					className="registerPage__form"
 				>
-					{/* <div className="registerPage__formFirst">
-						<ValidatorForm ref={formRef} style={{ width: '100%' }}> */}
 					<TextValidator
 						style={{ width: '93%' }}
 						type="text"
@@ -132,7 +113,7 @@ function RegisterPage() {
 						onChange={(e) => setFirstName(e.target.value)}
 						value={firstName}
 						errorMessages="Please add a first name"
-						validators={['required']}
+						validators={["required"]}
 					/>
 					<TextValidator
 						style={{ width: '93%' }}
@@ -142,7 +123,7 @@ function RegisterPage() {
 						onChange={(e) => setLastName(e.target.value)}
 						value={lastName}
 						errorMessages="Please add a last name"
-						validators={['required']}
+						validators={["required"]}
 					/>
 					<TextValidator
 						style={{ width: '93%' }}
@@ -152,7 +133,7 @@ function RegisterPage() {
 						onChange={(e) => setEmail(e.target.value)}
 						value={email}
 						errorMessages="Please add an email"
-						validators={['required', 'isEmail']}
+						validators={["required", "isEmail"]}
 					/>
 					<TextValidator
 						style={{ width: '93%' }}
@@ -161,16 +142,13 @@ function RegisterPage() {
 						name="password"
 						onChange={(e) => setPassword(e.target.value)}
 						value={password}
-						errorMessages={['Please add a password', 'Please enter more than 6 characters']}
-						validators={['required', 'isPasswordLength']}
+						errorMessages={["Please add a password", "Please enter more than 6 characters"]}
+						validators={["required", "isPasswordLength"]}
 					/>
-					{/* </ValidatorForm>
-					</div> */}
 					<div className="registerPage__formSecond">
-						{/* <p>Gender (Optional)</p> */}
 						<div className="registerPage__formSecondInputs">
 							<FormControl component="fieldset">
-								<FormLabel style={{ fontFamily: 'Quattrocento-Regular' }} component="legend">
+								<FormLabel style={{ fontFamily: 'Santral' }} component="legend">
 									Gender (Optional)
 								</FormLabel>
 								<RadioGroup
@@ -200,7 +178,7 @@ function RegisterPage() {
 									value={completeBirthday}
 									onChange={onDateChange}
 									KeyboardButtonProps={{
-										'aria-label': 'change date',
+										"aria-label": "change date",
 									}}
 								/>
 							</MuiPickersUtilsProvider>

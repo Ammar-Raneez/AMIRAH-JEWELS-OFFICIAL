@@ -77,6 +77,6 @@ function WishListItem({ img, title, price, preferredSize, preferredMetal }) {
 			</div>
 		</div>
 	);
-}
+};
 
 export default WishListItem;

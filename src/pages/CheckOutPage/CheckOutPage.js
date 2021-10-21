@@ -16,20 +16,16 @@ import { KeyboardDatePicker, MuiPickersUtilsProvider } from '@material-ui/picker
 import emailjs from 'emailjs-com';
 import { useEffect, useRef, useState } from 'react';
 import { TextValidator, ValidatorForm } from 'react-material-ui-form-validator';
-import { useDispatch, useSelector } from 'react-redux';
-import { useHistory } from 'react-router-dom';
+import { useSelector } from 'react-redux';
 import { selectCart } from '../../features/cartSlice';
 import { selectDelivery, selectSubTotal, selectTax } from '../../features/costSlice';
 import { selectUser } from '../../features/userSlice';
 import { db } from '../../firebase';
 import SEO from '../../shared/components/SEO/SEO';
-import { useStateValue } from '../../StateProvider';
 import './CheckOutPage.css';
 
 function CheckOutPage() {
-	// const [{ subTotal, delivery, tax, cartBasket, user }, dispatch] = useStateValue();
 	const formRef = useRef('form');
-	const dispatch = useDispatch();
 	const user = useSelector(selectUser);
 	const cartBasket = useSelector(selectCart);
 	const subTotal = useSelector(selectSubTotal);
@@ -87,6 +83,7 @@ function CheckOutPage() {
 					],
 				});
 		}
+
 		setUpdateCheckoutCollection(true);
 	}, [allCheckOutDetailsHistory]);
 
@@ -140,6 +137,7 @@ function CheckOutPage() {
 				cartDetails += '), ';
 			}
 			cartDetails += ']';
+
 			setOrderMessage(`
 				An Order is made by ${user?.email},
 				The Order includes the following details:
@@ -178,13 +176,17 @@ function CheckOutPage() {
 		setCardExpYear(value.toString().split(' ')[1]);
 		setCardExpMonth(value.toString().split(' ')[0]);
 	};
+
 	return (
 		<div className="checkoutPage">
 			<SEO title="Checkout" />
-			{/* jewel image */}
 			<div className="checkoutPage__form">
 				<h2>CHECK OUT</h2>
-				<ValidatorForm onSubmit={proceedCheckout} ref={formRef} style={{ width: '100%', fontFamily: 'Santral' }}>
+				<ValidatorForm
+					onSubmit={proceedCheckout}
+					ref={formRef}
+					style={{ width: '100%', fontFamily: 'Santral' }}
+				>
 					<TextValidator
 						style={{ width: '93%', fontFamily: 'Santral' }}
 						type="text"
@@ -193,7 +195,7 @@ function CheckOutPage() {
 						onChange={(e) => setFirstName(e.target.value)}
 						value={firstName}
 						errorMessages="Please add a First name"
-						validators={['required', 'matchRegexp:[a-z A-Z]$']}
+						validators={["required", "matchRegexp:[a-z A-Z]$"]}
 					/>
 					<TextValidator
 						style={{ width: '93%', fontFamily: 'Santral' }}
@@ -203,7 +205,7 @@ function CheckOutPage() {
 						onChange={(e) => setMiddleName(e.target.value)}
 						value={middleName}
 						errorMessages="Please add a Middle name"
-						validators={['required', 'matchRegexp:[a-z A-Z]$']}
+						validators={["required", "matchRegexp:[a-z A-Z]$"]}
 					/>
 					<TextValidator
 						style={{ width: '93%', fontFamily: 'Santral' }}
@@ -213,7 +215,7 @@ function CheckOutPage() {
 						onChange={(e) => setLastName(e.target.value)}
 						value={lastName}
 						errorMessages="Please add a Last name"
-						validators={['required', 'matchRegexp:[a-z A-Z]$']}
+						validators={["required", "matchRegexp:[a-z A-Z]$"]}
 					/>
 					<TextValidator
 						style={{ width: '93%', fontFamily: 'Santral' }}
@@ -223,7 +225,7 @@ function CheckOutPage() {
 						onChange={(e) => setAddressLineOne(e.target.value)}
 						value={addressLineOne}
 						errorMessages="Please add an Address"
-						validators={['required']}
+						validators={["required"]}
 					/>
 					<TextValidator
 						style={{ width: '93%', fontFamily: 'Santral' }}
@@ -241,7 +243,7 @@ function CheckOutPage() {
 						onChange={(e) => setCity(e.target.value)}
 						value={city}
 						errorMessages="Please add a City"
-						validators={['required', 'matchRegexp:[a-z A-Z]$']}
+						validators={["required", "matchRegexp:[a-z A-Z]$"]}
 					/>
 					<TextValidator
 						style={{ width: '93%', fontFamily: 'Santral' }}
@@ -251,7 +253,7 @@ function CheckOutPage() {
 						onChange={(e) => setPinCode(e.target.value)}
 						value={pinCode}
 						errorMessages="Please add a PIN Code"
-						validators={['required']}
+						validators={["required"]}
 					/>
 					<TextValidator
 						style={{ width: '93%', fontFamily: 'Santral' }}
@@ -261,7 +263,7 @@ function CheckOutPage() {
 						onChange={(e) => setTelephoneNumber(e.target.value)}
 						value={telephoneNumber}
 						errorMessages="Please add a Telephone Number"
-						validators={['required', 'matchRegexp:[0-9]$']}
+						validators={["required", "matchRegexp:[0-9]$"]}
 					/>
 					<TextValidator
 						style={{ width: '93%', fontFamily: 'Santral' }}
@@ -271,7 +273,7 @@ function CheckOutPage() {
 						onChange={(e) => setEmailAddress(e.target.value)}
 						value={emailAddress}
 						errorMessages="Please add an Email Address"
-						validators={['required', 'isEmail']}
+						validators={["required", "isEmail"]}
 					/>
 
 					<div className="checkout__payment">
@@ -279,7 +281,7 @@ function CheckOutPage() {
 							<FormLabel
 								component="legend"
 								errorMessages="Please add an Email Address"
-								validators={['required']}
+								validators={["required"]}
 							>
 								Payment Type
 							</FormLabel>
@@ -318,7 +320,7 @@ function CheckOutPage() {
 							value={cardExpireDate}
 							onChange={onDateChange}
 							KeyboardButtonProps={{
-								'aria-label': 'change date',
+								"aria-label": "change date",
 							}}
 						/>
 					</MuiPickersUtilsProvider>
@@ -330,7 +332,7 @@ function CheckOutPage() {
 						onChange={(e) => setCardNumber(e.target.value)}
 						value={cardNumber}
 						errorMessages="Please add a Card Number"
-						validators={['required']}
+						validators={["required"]}
 					/>
 					<TextValidator
 						style={{ width: '93%', fontFamily: 'Santral' }}
@@ -340,7 +342,7 @@ function CheckOutPage() {
 						onChange={(e) => setCsc(e.target.value)}
 						value={csc}
 						errorMessages="Please add a CSC"
-						validators={['required']}
+						validators={["required"]}
 					/>
 					<TextValidator
 						style={{ width: '40vw', display: 'none', fontFamily: 'Santral' }}
@@ -350,7 +352,12 @@ function CheckOutPage() {
 					/>
 					<div className="registerPage__createButton">
 						{user && cartBasket.length > 0 ? (
-							<Button style={{backgroundColor: '#d35f46', color: 'white', fontFamily: 'Ginebra_font'}} type="submit">CONTINUE CHECKOUT</Button>
+							<Button
+								style={{backgroundColor: '#d35f46', color: 'white', fontFamily: 'Ginebra_font'}}
+								type="submit"
+								>
+									CONTINUE CHECKOUT
+							</Button>
 						) : (
 							<Button style={{fontFamily: 'Ginebra_font'}} disabled type="submit">
 								CONTINUE CHECKOUT
@@ -358,10 +365,6 @@ function CheckOutPage() {
 						)}
 					</div>
 				</ValidatorForm>
-			</div>
-			{/* jewel image */}
-			<div className="thankingPage__lastJewel">
-				<img src="aboutuspage/purple-sapphire.png" alt="" />
 			</div>
 
 			<Dialog
@@ -386,7 +389,7 @@ function CheckOutPage() {
 				aria-labelledby="alert-dialog-title"
 				aria-describedby="alert-dialog-description"
 			>
-				<DialogTitle id="alert-dialog-title">{'Success'}</DialogTitle>
+				<DialogTitle id="alert-dialog-title">Success</DialogTitle>
 				<DialogContent>
 					<DialogContentText id="alert-dialog-description">
 						Check out Successfully Completed!
@@ -394,7 +397,7 @@ function CheckOutPage() {
 				</DialogContent>
 				<DialogActions>
 					<Button onClick={() => setSucessDialgoOpen(!sucessDialgoOpen)} color="primary">
-						ok
+						OK
 					</Button>
 				</DialogActions>
 			</Dialog>
