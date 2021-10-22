@@ -39,14 +39,14 @@ function GiftPage() {
 			<div id="otherProducts" className="giftPage__otherGems">
 				<Fade cascade>
 					<div className="giftPage__otherGemsRow">
-						<Product img="homepage category/necklace.png" name="Necklaces & Pendants" viewMoreUrl="/necklace+pendants" />
-						<Product img="homepage category/earrings.png" name="Earrings" viewMoreUrl="/earrings" />
-						<Product img="homepage category/rings.png" name="Rings" viewMoreUrl="/all-rings" />
-						<Product img="homepage category/bracelets.png" name="Bracelets" viewMoreUrl="/bracelets" />
+						<Product img="home/category/necklace.png" name="Necklaces & Pendants" viewMoreUrl="/necklace+pendants" />
+						<Product img="home/category/earrings.png" name="Earrings" viewMoreUrl="/earrings" />
+						<Product img="home/category/rings.png" name="Rings" viewMoreUrl="/all-rings" />
+						<Product img="home/category/bracelets.png" name="Bracelets" viewMoreUrl="/bracelets" />
 					</div>
 					{/* Place New products in each div, keeping a max of 4 per row */}
 					<div className="giftPage__otherGemsRow">
-						<Product img="homepage category/forever-knot.png" name="Forever Knot" viewMoreUrl="/" />
+						<Product img="home/category/forever-knot.png" name="Forever Knot" viewMoreUrl="/" />
 					</div>
 				</Fade>
 			</div>

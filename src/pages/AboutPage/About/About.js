@@ -9,19 +9,9 @@ function About({ seoTitle, title, firstPara, secondHeader, secondSubHeader, seco
 			<SEO title={seoTitle} />
 			<div className="aboutPageCompanyTop">
 				<Fade direction="left">
-					{/* jewel image */}
-					<div className="aboutPageCompanyTop__firstJewel">
-						{/* <img src="aboutuspage/purple-sapphire.png" alt="" /> */}
-					</div>
-
 					<div className="aboutPageCompanyTop__middleContent">
 						<h2>{title}</h2>
 						<p>{firstPara}</p>
-					</div>
-
-					{/* jewel image */}
-					<div className="aboutPageCompanyTop__lastJewel">
-						{/* <img src="aboutuspage/purple-sapphire.png" alt="" /> */}
 					</div>
 				</Fade>
 			</div>

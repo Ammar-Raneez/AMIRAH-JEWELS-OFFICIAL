@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 const EarringsPage = () => {
-  const EARRINGS_BANNER = '/amirah-details-latest/EARRINGS.jpg';
+  const EARRINGS_BANNER = 'banners/EARRINGS.jpg';
 
   return (
     <Container>

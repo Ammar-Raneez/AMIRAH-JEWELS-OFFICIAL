@@ -1,38 +1,38 @@
 export const COLOR_SAPPHIRE = [
   {
-    imgPath: "/amirah-details-latest/SAPPHIRE STONES/BLUE SAPPHIRE.jpg",
+    imgPath: "sapphires/BLUE SAPPHIRE.jpg",
     name: "BLUE SAPPHIRE",
   },
   {
-    imgPath: "/amirah-details-latest/SAPPHIRE STONES/GREEN SAPPHIRE.jpg",
+    imgPath: "sapphires/GREEN SAPPHIRE.jpg",
     name: "GREEN SAPPHIRE",
   },
   {
-    imgPath: "/amirah-details-latest/SAPPHIRE STONES/PINK SAPPHIRE.jpg",
+    imgPath: "sapphires/PINK SAPPHIRE.jpg",
     name: "PINK SAPPHIRE",
   },
   {
-    imgPath: "/amirah-details-latest/SAPPHIRE STONES/ORANGE SAPPHIRE.jpg",
+    imgPath: "sapphires/ORANGE SAPPHIRE.jpg",
     name: "ORANGE SAPPHIRE",
   },
   {
-    imgPath: "/amirah-details-latest/SAPPHIRE STONES/PURPLE SAPPHIRE.jpg",
+    imgPath: "sapphires/PURPLE SAPPHIRE.jpg",
     name: "PURPLE SAPPHIRE",
   },
   {
-    imgPath: "/amirah-details-latest/SAPPHIRE STONES/TEALE SAPPHIRE.jpg",
+    imgPath: "sapphires/TEALE SAPPHIRE.jpg",
     name: "TEALE SAPPHIRE",
   },
   {
-    imgPath: "/amirah-details-latest/SAPPHIRE STONES/PADPARADSCHA SAPPHIRE.jpg",
+    imgPath: "sapphires/PADPARADSCHA SAPPHIRE.jpg",
     name: "PADPARADSCHA SAPPHIRE",
   },
   {
-    imgPath: "/amirah-details-latest/SAPPHIRE STONES/VIOLET SAPPHIRE.jpg",
+    imgPath: "sapphires/VIOLET SAPPHIRE.jpg",
     name: "VIOLET SAPPHIRE",
   },
   {
-    imgPath: "/amirah-details-latest/SAPPHIRE STONES/YELLOW SAPPHIRE.jpg",
+    imgPath: "sapphires/YELLOW SAPPHIRE.jpg",
     name: "YELLOW SAPPHIRE",
   },
 ];

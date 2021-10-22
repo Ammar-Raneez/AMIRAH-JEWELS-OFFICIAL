@@ -14,31 +14,31 @@ function Category() {
 				<Fade direction="right" triggerOnce>
 					<a href="/necklace+pendants">
 						<div className="homePage__categoryEach">
-							<img alt="necklace-category" src="homepage category/necklace.png" />
+							<img alt="necklace-category" src="home/category/necklace.png" />
 							<p>NECKLACES & PENDANTS</p>
 						</div>
 					</a>
 					<a href="/earrings">
 						<div className="homePage__categoryEach">
-							<img alt="earring-category" src="homepage category/earrings.png" />
+							<img alt="earring-category" src="home/category/earrings.png" />
 							<p>EARRINGS</p>
 						</div>
 					</a>
-					<a href="/rings/SORG020">
+					<a href="/all-rings">
 						<div className="homePage__categoryEach">
-							<img alt="ring-category" src="homepage category/rings.png" />
+							<img alt="ring-category" src="home/category/rings.png" />
 							<p>RINGS</p>
 						</div>
 					</a>
 					<a href="/bracelets">
 						<div className="homePage__categoryEach">
-							<img alt="bracelet-category" src="homepage category/bracelets.png" />
+							<img alt="bracelet-category" src="home/category/bracelets.png" />
 							<p>BRACELETS</p>
 						</div>
 					</a>
 					<a href="forever+knot">
 						<div className="homePage__categoryEach">
-							<img alt="foreverKnot-category" src="homepage category/forever-knot.png" />
+							<img alt="foreverKnot-category" src="home/category/forever-knot.png" />
 							<p>FOREVER KNOT</p>
 						</div>
 					</a>

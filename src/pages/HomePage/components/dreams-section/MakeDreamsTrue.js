@@ -27,7 +27,7 @@ function MakeDreamsTrue() {
 
 				<Fade triggerOnce>
 					<img
-						src="homepage-dreams/PINK SAPPHIRE RING 2.png"
+						src="home/dreams/PINK SAPPHIRE RING 2.png"
 						className="homePage__makeDreamsTrue__topImage"
 						alt=""
 					/>
@@ -57,7 +57,7 @@ function MakeDreamsTrue() {
 				<Fade triggerOnce>
 					<img
 						className="homePage__makeDreamsTrue__middle__image"
-						src="homepage-dreams/PINK SAPPHIRE RING.png"
+						src="home/dreams/PINK SAPPHIRE RING.png"
 						alt=""
 					/>
 				</Fade>
@@ -91,7 +91,7 @@ function MakeDreamsTrue() {
 						</div>
 					</div>
 					<Fade triggerOnce>
-						<img src="homepage-dreams/PINK SAPPHIRE RING 3.png" alt="" />
+						<img src="home/dreams/PINK SAPPHIRE RING 3.png" alt="" />
 					</Fade>
 					<div className="homePage__makeDreamsTrue__bottomImageDetailSecond">
 						<div className="homePage__makeDreamsTrue__bottomImageDetailFirstWeight">

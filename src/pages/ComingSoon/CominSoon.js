@@ -7,13 +7,13 @@ function ComingSoon() {
 		<div 
 			className="comingSoon" 
 			style={{ 
-				background: 'linear-gradient(0deg, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)), url(logo.png)' ,
+				background: 'linear-gradient(0deg, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)), url(logos/logo.png)' ,
 				backgroundRepeat: 'no-repeat',
 				backgroundPosition: '165% 10%'
 			}}
 		>
 			<div className="comingSoon__upper">
-				<img src="image.png" alt="coming-soon" />
+				<img src="logos/image.png" alt="coming-soon" />
 			</div>
 			<div className="comingSoon__lower">
 				<div className="comingSoon__lowerLeft">

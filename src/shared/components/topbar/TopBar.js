@@ -162,16 +162,16 @@ function TopBar({ isSpecificProduct }) {
 					<Typed strings={['AMIRAH']} typeSpeed={100} className="topbar__centerTypedText"></Typed>
 					<Fade direction="up" triggerOnce delay={800}>
 						{isSpecificProduct ?
-							<img src="../word_logo_bottom.png" className="topbar__center__TopLogo" alt="" />
-							: <img src="word_logo_bottom.png" className="topbar__center__TopLogo" alt="" />
+							<img src="../logos/word_logo_bottom.png" className="topbar__center__TopLogo" alt="" />
+							: <img src="logos/word_logo_bottom.png" className="topbar__center__TopLogo" alt="" />
 						}
 					</Fade>
 				</a>
 				<a href="/" className="topbar__centerHidden">
 					{
 						isSpecificProduct ?
-							<img src="../word_logo.png" className="topbar__center__TopLogo" alt="" />
-							: <img src="word_logo.png" className="topbar__center__TopLogo" alt="" />
+							<img src="../logos/word_logo.png" className="topbar__center__TopLogo" alt="" />
+							: <img src="logos/word_logo.png" className="topbar__center__TopLogo" alt="" />
 					}
 				</a>
 			</div>

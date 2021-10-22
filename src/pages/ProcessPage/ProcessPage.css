@@ -63,7 +63,6 @@
 .processPage__callBtn > a:last-child > button:hover{
 	background-color: #d35f46;
 	transition: 0.3s ease;
-	color: white;
 }
 
 .processPage__callBtn > a:first-child > button:hover{

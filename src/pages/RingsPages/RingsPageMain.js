@@ -7,7 +7,7 @@ const RingsPageMain = () => {
 	return (
 		<div>
 			<div class="rings-page-main__banner">
-				<img src="amirah-details-latest/RINGS.jpg" width="100%" alt="rings-banner" />
+				<img src="banners/RINGS.jpg" width="100%" alt="rings-banner" />
 			</div>
 			<div className="rings-page-main__rings">
 				<Fade cascade>

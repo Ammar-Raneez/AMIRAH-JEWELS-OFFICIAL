@@ -78,6 +78,7 @@
 	color: black;
 	outline: none;
 	background-color: #d35f46;
+	border-radius: 0.7vw;
 	margin-top: 2vw;
 	transition: 0.3s ease;
 }

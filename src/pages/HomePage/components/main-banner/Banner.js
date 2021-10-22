@@ -7,9 +7,9 @@ function Banner() {
   const [width, setWidth] = useState(0);
 
   const images = [
-    {url: 'amirah-details-latest/H1.jpg'},
-    {url: 'amirah-details-latest/H2.jpg'},
-    {url: 'amirah-details-latest/H3.jpg'},
+    {url: 'banners/H1.jpg'},
+    {url: 'banners/H2.jpg'},
+    {url: 'banners/H3.jpg'},
   ];
 
   useEffect(() => {

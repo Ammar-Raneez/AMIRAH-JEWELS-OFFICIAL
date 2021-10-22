@@ -150,7 +150,7 @@ function App() {
           <Route path="/yellow+gold">
             <h2> yellow gold component</h2>
           </Route>
-          <Route path="/purple+sapphire">
+          {/* <Route path="/purple+sapphire">
             <TopBar />
             <Header />
             <PurpleGemDetail />
@@ -161,7 +161,7 @@ function App() {
             <Header />
             <TealGemDetail />
             <Footer />
-          </Route>
+          </Route> */}
 
           {/* all rings */}
           <Route path="/all-rings" exact={true}>

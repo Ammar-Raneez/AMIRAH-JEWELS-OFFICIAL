@@ -13,16 +13,18 @@
   justify-content: center;
   flex-direction: column;
   margin: 16px;
+  height: 220px;
   padding: 0.1pc !important;
 }
 
 .gem > a > img {
   object-fit: contain;
-  height: 220px;
+  height: 100%;
 }
 
 .gem > a {
   text-decoration: none;
+  height: 100%;
 }
 
 .gem > a > p {
