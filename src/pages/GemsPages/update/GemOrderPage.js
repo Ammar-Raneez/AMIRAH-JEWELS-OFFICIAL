@@ -18,6 +18,6 @@ const GemOrderPage = () => {
 export default GemOrderPage;
 
 const Container = styled.div `
-  font-family: Santral !important;
+  font-family: santral !important;
   background-color: #f4ebe2;
 `;

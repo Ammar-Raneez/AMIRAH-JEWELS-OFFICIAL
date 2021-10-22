@@ -55,7 +55,7 @@ const Container = styled.div `
         padding: 0.8pc 1.2pc;
         color: white;
         outline: none;
-        font-family: Santral;
+        font-family: santral;
         cursor: pointer;
         font-size: medium;
         border: 2px solid #d4765e;

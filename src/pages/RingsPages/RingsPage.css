@@ -1,12 +1,3 @@
-@font-face {
-	font-family: ginebra_font;
-	src: url(ginebra_font.ttf);
-}
-@font-face {
-	font-family: Santral;
-	src: url(santral.otf);
-}
-
 .ringsPage {
 	display: flex;
 	flex-direction: column;
@@ -21,7 +12,7 @@
 	outline: none;
 	background-color: transparent;
 	font-size: 14px;
-	font-family: Santral;
+	font-family: santral;
 	color: #474747;
 	width: 120px;
 	height: 30px;
@@ -99,7 +90,7 @@
 
 .ringsPage__sectionCartCartDetailsItem {
 	display: flex;
-	font-family: Santral;
+	font-family: santral;
 	color: #494949;
 	line-height: 40px;
 	padding: 0.4rem 0;
@@ -109,7 +100,7 @@
 }
 
 .ringsPage__sectionCartCartDetails > div > p {
-	font-family: Santral;
+	font-family: santral;
 	color: #494949;
 	line-height: 40px;
 }
@@ -133,7 +124,7 @@
 .ringsPage__sectionCartCartDetailsBtns > a > button {
 	flex: 1;
 	font-size: 14px;
-	font-family: Santral;
+	font-family: santral;
 	color: black;
 	background-color: #d35f46;
 	transition: 0.1s ease-in-out;
@@ -154,7 +145,7 @@
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
-	font-family: Santral;
+	font-family: santral;
 	color: #707070;
 	margin: 80px;
 	margin-bottom: -50px;

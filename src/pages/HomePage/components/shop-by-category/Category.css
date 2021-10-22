@@ -14,7 +14,7 @@
 }
 
 .homePage__categorySubTitle {
-	font-family: Santral;
+	font-family: santral;
 	font-size: 1.2vw;
 	margin-top: 1vw;
 	margin-bottom: 5vw;
@@ -48,7 +48,7 @@
 }
 
 .homePage__categoryEach > p {
-	font-family: Ginebra_font;
+	font-family: ginebra_font;
 }
 
 .homePage__categoryEach:hover {

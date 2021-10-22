@@ -1,3 +1,13 @@
+@font-face {
+	font-family: ginebra_font;
+	src: url(./ginebra_font.ttf);
+}
+
+@font-face {
+	font-family: santral;
+	src: url(./santral.otf);
+}
+
 * {
 	padding: 0;
 	margin: 0;

@@ -131,7 +131,7 @@ const Container = styled.div `
       text-transform: uppercase;
       color: white;
       outline: none;
-      font-family: Santral;
+      font-family: santral;
       cursor: pointer;
       font-size: medium;
       border: 2px solid #d35f46;

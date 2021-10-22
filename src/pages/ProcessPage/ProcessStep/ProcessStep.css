@@ -84,7 +84,7 @@
 	margin-bottom: 5vw;
 	margin-right: 8vw;
 	width: 35vw;
-	font-family: Santral;
+	font-family: santral;
 	color: #707070;
 	text-align: end;
 }
@@ -101,21 +101,21 @@
 	margin-bottom: 5vw;
 	margin-left: 8vw;
 	width: 35vw;
-	font-family: Santral;
+	font-family: santral;
 	color: #707070;
 	text-align: end;
 }
 
 .processStep__stepName > div > p {
 	font-size: 4vw;
-	font-family: Ginebra_font;
+	font-family: ginebra_font;
 	color: #707070;
 	text-align: end;
 }
 
 .processStep__stepNameReflect > div > p {
 	font-size: 4vw;
-	font-family: Ginebra_font;
+	font-family: ginebra_font;
 	color: #707070;
 	text-align: start;
 }

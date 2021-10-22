@@ -47,7 +47,7 @@
 
 .wishListItem__details > .wishListItem__title > p {
 	font-size: 14px;
-	font-family: Santral;
+	font-family: santral;
 	color: #707070;
 	margin-bottom: 14px;
 	text-align: center;
@@ -67,7 +67,7 @@
 	border: 1px solid #535353;
 	padding: 12px 0px;
 	margin-top: 1vw;
-	font-family: Santral;
+	font-family: santral;
 	color: black;
 	font-size: 14px;
 	display: flex;

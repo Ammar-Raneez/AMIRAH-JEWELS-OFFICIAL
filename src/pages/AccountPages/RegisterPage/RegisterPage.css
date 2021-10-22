@@ -50,7 +50,7 @@
 	border-top: none;
 	border-right: none;
 	border-left: none;
-	font-family: Santral;
+	font-family: santral;
 	padding: 0.8vw;
 	border-bottom: 0.1vw solid #707070;
 	font-size: 1vw;
@@ -71,7 +71,7 @@
 	border-top: none;
 	border-right: none;
 	border-left: none;
-	font-family: Santral;
+	font-family: santral;
 	padding: 0.8vw;
 	border-bottom: 0.1vw solid #707070;
 	font-size: 1vw;
@@ -96,7 +96,7 @@
 }
 
 .registerPage__formSecond {
-	font-family: Santral;
+	font-family: santral;
 	padding: 0.8vw;
 	margin-top: 1.2vw;
 	font-size: 1.2vw;
@@ -105,7 +105,7 @@
 }
 
 .registerPage__formThird {
-	font-family: Santral;
+	font-family: santral;
 	padding: 0.8vw;
 	font-size: 1.2vw;
 	color: #707070;
@@ -122,7 +122,7 @@
 	padding: 1vw 3vw;
 	cursor: pointer;
 	margin-top: 2vw;
-	font-family: Santral;
+	font-family: santral;
 	border: none;
 	font-size: 1vw;
 	color: black;
@@ -133,7 +133,7 @@
 
 .registerPage__body > h1 {
 	font-size: 2.2vw;
-	font-family: Ginebra_font;
+	font-family: ginebra_font;
 	margin-bottom: 1vw;
 	display: flex;
 	align-items: center;
@@ -143,7 +143,7 @@
 }
 
 .registerPage__body > p {
-	font-family: Santral;
+	font-family: santral;
 	color: #707070;
 	padding: 1vw;
 	margin-bottom: 1vw;

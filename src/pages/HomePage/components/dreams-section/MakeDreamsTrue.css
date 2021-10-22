@@ -13,7 +13,7 @@
 }
 
 .homePage__makeDreamsTrue > .css-1gzxeik > h1 {
-  font-family: Ginebra_font;
+  font-family: ginebra_font;
   color: #878787;
   font-size: 2.5vw;
   margin-top: 3vw;
@@ -46,7 +46,7 @@
 
 .homePage__makeDreamsTrue__topPrices > .css-17ud6we > h1 {
   color: #707070;
-  font-family: Ginebra_font;
+  font-family: ginebra_font;
   font-size: 1.7vw;
   font-weight: bold;
   align-self: flex-end;
@@ -54,7 +54,7 @@
 
 .homePage__makeDreamsTrue__topPrices > .css-17ud6we > h2 {
   color: #707070;
-  font-family: Santral;
+  font-family: santral;
   font-weight: lighter;
   align-self: flex-end;
   font-size: 1.7vw;
@@ -62,14 +62,14 @@
 
 .homePage__makeDreamsTrue__topPurchase > .css-2qfv45 > h1 {
   color: #707070;
-  font-family: Ginebra_font;
+  font-family: ginebra_font;
   font-size: 2.2vw;
   font-weight: lighter;
 }
 
 .homePage__makeDreamsTrue__topPurchase > .css-2qfv45 > p {
   font-size: 1.5vw;
-  font-family: Santral;
+  font-family: santral;
   align-self: flex-end;
   color: #808080;
 }
@@ -78,7 +78,7 @@
   width: 16vw;
   padding: 1vw 3vw 1.1vw 3vw;
   border: 0.2vw #d35f46 solid;
-  font-family: Santral;
+  font-family: santral;
   outline: none;
   margin-top: 3vh;
   font-size: 1.3vw;
@@ -111,7 +111,7 @@
   padding-left: 8vw;
   width: 45vw;
   display: flex;
-  font-family: Santral;
+  font-family: santral;
   color: #707070;
   flex-direction: column;
   font-size: 1.3vw;
@@ -131,7 +131,7 @@
 }
 
 .homePage__makeDreamsTrue__bottom > .css-1gzxeik > p {
-  font-family: Ginebra_font;
+  font-family: ginebra_font;
   font-size: 1.5vw;
   color: #707070;
 }
@@ -215,7 +215,7 @@
 .homePage__makeDreamsTrue__bottomImageDetailFirstPurity
   > .css-2qfv45:first-child
   > p {
-  font-family: Santral;
+  font-family: santral;
   color: #909090;
   font-size: 1vw;
   border-bottom: 0.1vw #b1b1b1 solid;
@@ -258,7 +258,7 @@
 .homePage__makeDreamsTrue__bottomImageDetailFirstPurity
   > .css-2qfv45:last-child
   > p {
-  font-family: Santral;
+  font-family: santral;
   font-size: 1.3vw;
   padding-top: 0.5vw;
   color: #606060;

@@ -9,7 +9,7 @@
 }
 
 .processPage > div > h1 {
-	font-family: Ginebra_font;
+	font-family: ginebra_font;
 	font-size: 3vw;
 	margin: 2vw;
 	width: 50vw;
@@ -22,7 +22,7 @@
 .processPage > div > p {
 	width: 65vw;
 	font-size: 1.5vw;
-	font-family: Santral;
+	font-family: santral;
 	line-height: 2vw;
 	color: #707070;
 	text-align: center;
@@ -45,7 +45,7 @@
 	padding: 0.8vw;
 	cursor: pointer;
 	width: 15vw;
-	font-family: Santral;
+	font-family: santral;
 	border: none;
 	font-size: 1.2vw;
 	background-color: transparent;

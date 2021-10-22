@@ -51,7 +51,7 @@
 	padding: 1vw 3vw;
 	cursor: pointer !important;
 	margin-top: 1vw;
-	font-family: Santral;
+	font-family: santral;
 	border: none;
 	font-size: 1vw;
 	z-index: 99;
@@ -70,7 +70,7 @@
 .thankingPage__body > h1 {
 	font-size: 2.5vw;
 	text-align: center;
-	font-family: Ginebra_font;
+	font-family: ginebra_font;
 	margin-bottom: 1vw;
 	display: flex;
 	align-items: center;
@@ -80,7 +80,7 @@
 }
 
 .thankingPage__body > p {
-	font-family: Santral;
+	font-family: santral;
 	color: #707070;
 	padding: 1vw;
 	margin-bottom: 1vw;

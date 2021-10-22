@@ -67,7 +67,7 @@
 
 .necklacePendant__sectionCartCartDetails > div > h2 {
 	font-size: 25px;
-	font-family: Santral;
+	font-family: santral;
 	color: #707070;
 	font-weight: bold;
 	margin-bottom: 50px;
@@ -76,7 +76,7 @@
 .necklacePendant__sectionCartCartDetailsItem {
 	font-size: 18px;
 	display: flex;
-	font-family: Santral;
+	font-family: santral;
 	color: #494949;
 	line-height: 50px;
 	align-items: center;
@@ -84,7 +84,7 @@
 }
 
 .necklacePendant__sectionCartCartDetails > div > p {
-	font-family: Santral;
+	font-family: santral;
 	font-size: 20px;
 	color: #494949;
 	line-height: 50px;
@@ -109,7 +109,7 @@
 .necklacePendant__sectionCartCartDetailsBtns > a > button {
 	flex: 1;
 	font-size: 14px;
-	font-family: Santral;
+	font-family: santral;
 	color: black;
 	background-color: #d35f46;
 	border-radius: 10px;
@@ -145,7 +145,7 @@
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
-	font-family: Santral;
+	font-family: santral;
 	color: #707070;
 	margin: 80px;
 	margin-bottom: -50px;

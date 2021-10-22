@@ -47,7 +47,7 @@ const GemDetailPage = ({ data }) => {
 export default GemDetailPage;
 
 const Container = styled.div `
-  font-family: Santral;
+  font-family: santral;
   background-color: #f4ebe2;
 
   > section {

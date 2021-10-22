@@ -8,7 +8,7 @@
 }
 
 .contactUsPageTitle {
-	font-family: Ginebra_font;
+	font-family: ginebra_font;
 	font-size: 40px;
 	margin-top: 30px;
 	text-align: center;
@@ -19,7 +19,7 @@
 .contactUsPageDescription {
 	width: 65vw;
 	font-size: 1.5vw;
-	font-family: Santral;
+	font-family: santral;
 	line-height: 30px;
 	padding: 40px 0;
 	color: #707070;
@@ -64,7 +64,7 @@
 	transition: 0.3s ease;
 	border-radius: 0.7vw;
 	margin: 20px;
-	font-family: Santral;
+	font-family: santral;
 	padding: 15px 0;
 }
 
@@ -81,7 +81,7 @@
 	display: flex;
 	margin: 40px;
 	flex-direction: column;
-	font-family: Santral;
+	font-family: santral;
 	align-items: center;
 	justify-content: center;
 }
@@ -268,7 +268,7 @@
 		transition: 0.3s ease;
 		border-radius: 0.7vw;
 		margin: 20px;
-		font-family: Santral;
+		font-family: santral;
 		padding: 15px 0;
 	}
 
@@ -304,7 +304,7 @@
 		transition: 0.3s ease;
 		border-radius: 0.7vw;
 		margin: 20px;
-		font-family: Santral;
+		font-family: santral;
 		padding: 15px 0;
 	}
 }
@@ -331,7 +331,7 @@
 		text-decoration: none;
 		border-radius: 0.7vw;
 		margin: 20px;
-		font-family: Santral;
+		font-family: santral;
 		padding: 15px 0;
 	}
 
@@ -367,7 +367,7 @@
 		transition: 0.3s ease;
 		border-radius: 0.7vw;
 		margin: 20px;
-		font-family: Santral;
+		font-family: santral;
 		padding: 15px 0;
 	}
 

@@ -39,14 +39,14 @@
 }
 
 .cartItem__descriptionRightTop > h1 {
-	font-family: Santral;
+	font-family: santral;
 	font-weight: bolder;
 	font-size: 1.5vw;
 	color: black;
 }
 
 .cartItem__descriptionRightBottom > .cartItem__descriptionRightBottomDetails > span > p {
-	font-family: Santral;
+	font-family: santral;
 	color: #707070;
 	font-size: 1.5vw;
 }
@@ -57,7 +57,7 @@
 
 .cartItem__descriptionRightBottom > .cartItem__descriptionRightBottomQty > p {
 	margin-bottom: 1vw;
-	font-family: Santral;
+	font-family: santral;
 	color: #707070;
 	display: flex;
 	font-weight: bold;
@@ -70,7 +70,7 @@
 	border-top: none;
 	border-right: none;
 	border-left: none;
-	font-family: Santral;
+	font-family: santral;
 	padding: 0.8vw;
 	border-bottom: 0.1vw solid #707070;
 	font-size: 1.5vw;
@@ -86,7 +86,7 @@
 }
 
 .cartItem__descriptionRightSave {
-	font-family: Santral;
+	font-family: santral;
 	color: black;
 	font-weight: bold;
 	font-size: 1.2vw;

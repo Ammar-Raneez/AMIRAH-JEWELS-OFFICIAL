@@ -20,12 +20,12 @@
 }
 
 .loginPage .loginPage__title {
-	font-family: Ginebra_font;
+	font-family: ginebra_font;
 	font-size: 3vw;
 }
 
 .loginPage .loginPage__subTitle {
-	font-family: Santral;
+	font-family: santral;
 	font-size: 1.2vw;
 	margin-top: 1vw;
 	margin-bottom: 3vw;
@@ -49,7 +49,7 @@
 	border-top: none;
 	border-right: none;
 	border-left: none;
-	font-family: Santral;
+	font-family: santral;
 	padding: 0.8vw;
 	border-bottom: 0.1vw solid #707070;
 	font-size: 1vw;
@@ -67,7 +67,7 @@
 	cursor: pointer;
 	margin-top: 1vw;
 	width: 100%;
-	font-family: Santral;
+	font-family: santral;
 	border: 1px solid #d35f46;
 	font-size: 1.3vw;
 	color: black;

@@ -25,7 +25,7 @@ const Container = styled.div `
   > h1 {
     font-size: 3.5rem;
     text-transform: uppercase;
-    font-family: Ginebra_font;
+    font-family: ginebra_font;
   }
 
   > p {

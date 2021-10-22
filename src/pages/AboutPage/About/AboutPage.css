@@ -5,8 +5,8 @@
 	justify-content: center;
 	flex-direction: column;
 	align-items: center;
-	/* height: 90vh; */
 }
+
 .aboutPageCompanyMiddle {
 	display: flex;
 	flex-direction: column;
@@ -15,30 +15,35 @@
 	margin-bottom: 5vw;
 	justify-content: space-around;
 }
+
 .aboutPageCompanyMiddleFirst {
 	width: 2vw;
 	height: 2vw;
-	background: #ffc0a1 0% 0% no-repeat padding-box;
+	background: #d35f46 0% 0% no-repeat padding-box;
 	border-radius: 100vw;
 	opacity: 1;
 }
+
 .aboutPageCompanyMiddleMiddle {
 	width: 1vw;
 	height: 1vw;
-	background: #ffc0a1 0% 0% no-repeat padding-box;
+	background: #d35f46 0% 0% no-repeat padding-box;
 	border-radius: 100vw;
 	opacity: 1;
 }
+
 .aboutPageCompanyMiddleLast {
 	width: 0.8vw;
 	height: 0.8vw;
-	background: #ffc0a1 0% 0% no-repeat padding-box;
+	background: #d35f46 0% 0% no-repeat padding-box;
 	border-radius: 100vw;
 	opacity: 1;
 }
+
 .aboutPageCompanyTop {
 	width: 45vw;
 }
+
 .aboutPageCompanyTop__firstJewel {
 	display: flex;
 	align-items: flex-end;
@@ -47,6 +52,7 @@
 	top: 3vw;
 	left: 3vw;
 }
+
 .aboutPageCompanyTop__lastJewel {
 	display: flex;
 	position: relative;
@@ -60,12 +66,13 @@
 	object-fit: contain;
 	height: 7vw;
 }
+
 .aboutPageCompanyTop__middleContent,
 .aboutPageCompanyLast {
 	display: flex;
 	flex-direction: column;
 	color: #707070;
-	font-family: Quattrocento-Regular;
+	font-family: santral;
 	align-items: center;
 	justify-content: center;
 	background-color: white;
@@ -73,19 +80,22 @@
 	border-radius: 1vw;
 	box-shadow: 0vw 0.1vw 0.6vw rgba(0, 0, 0, 0.12), 0 0.1vw 0.2vw rgba(0, 0, 0, 0.24);
 }
+
 .aboutPageCompanyTop__middleContent > h2,
 .aboutPageCompanyLast > h2 {
-	font-family: bowie;
+	font-family: ginebra_font;
 	font-size: 2.5vw;
 	padding-bottom: 2.5vw;
 	font-weight: lighter;
 }
+
 .aboutPageCompanyTop__middleContent > p {
 	width: 35vw;
 	font-size: 1.3vw;
 	line-height: 2vw;
 	text-align: center;
 }
+
 .aboutPageCompanyLast > p {
 	width: 35vw;
 	font-size: 1.3vw;
@@ -93,6 +103,7 @@
 	text-align: center;
 	padding: 1vw 0;
 }
+
 .aboutPageCompanyLast {
 	height: 40vw;
 	margin-bottom: 40vw;
@@ -106,14 +117,13 @@
 
 	.aboutPageCompanyLast {
 		height: 320px;
-		/* margin-bottom: 40px; */
 	}
 
 	.aboutPageCompanyTop__middleContent > p {
 		font-size: 12px;
 		line-height: 18px;
 	}
-	
+
 	.aboutPageCompanyLast > p {
 		font-size: 12px;
 		line-height: 18px;
@@ -147,7 +157,7 @@
 		line-height: 18px;
 		width: 100%;
 	}
-	
+
 	.aboutPageCompanyLast > p {
 		font-size: 12px;
 		line-height: 18px;

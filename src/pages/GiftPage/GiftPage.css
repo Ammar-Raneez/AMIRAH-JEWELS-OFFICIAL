@@ -19,7 +19,7 @@
 }
 
 .giftPage__detailsFirst > div > h1 {
-	font-family: Ginebra_font;
+	font-family: ginebra_font;
 	color: #707070;
 	font-weight: lighter;
 	font-size: 3.5vw;
@@ -27,7 +27,7 @@
 }
 
 .giftPage__detailsFirst > div > p {
-	font-family: Santral;
+	font-family: santral;
 	color: #707070;
 	font-size: 1.3vw;
 	line-height: 2vw;
@@ -45,7 +45,7 @@
 	padding: 1.3vw 3vw;
 	width: 16vw;
 	cursor: pointer;
-	font-family: Santral;
+	font-family: santral;
 	z-index: 999;
 	border: none;
 	font-size: 1.1vw;
@@ -74,7 +74,7 @@
 	width: 16vw;
 	transition: 0.3s ease-in-out;
 	cursor: pointer;
-	font-family: Santral;
+	font-family: santral;
 	border: 0.1vw #d35f46 solid;
 	z-index: 999;
 	font-size: 1.1vw;

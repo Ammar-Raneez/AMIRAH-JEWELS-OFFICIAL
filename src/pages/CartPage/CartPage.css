@@ -14,7 +14,7 @@
 }
 
 .cartPage__title > h1 {
-	font-family: Ginebra_font;
+	font-family: ginebra_font;
 	font-size: 2.5vw;
 	margin: 2vw 0;
 	font-weight: lighter;
@@ -37,7 +37,7 @@
 	justify-content: space-around;
 	align-items: center;
 	color: #707070;
-	font-family: Santral;
+	font-family: santral;
 }
 
 .cartPage__itemsEmpty > h1 {
@@ -59,7 +59,7 @@
 	align-items: center;
 	color: #707070;
 	margin-top: 1vw;
-	font-family: Santral;
+	font-family: santral;
 }
 
 .cartPage__itemsNoLogin > h1 {
@@ -72,7 +72,7 @@
 	cursor: pointer;
 	margin-top: 1vw;
 	width: 100%;
-	font-family: Santral;
+	font-family: santral;
 	border: 1px solid #d35f46;
 	font-size: 1.3vw;
 	color: black;
@@ -102,7 +102,7 @@
 		color: #707070;
 		height: 60vh;
 		justify-content: center;
-		font-family: Santral;
+		font-family: santral;
 	}
 }
 
@@ -134,7 +134,7 @@
 		color: #707070;
 		height: 80vh;
 		justify-content: center;
-		font-family: Santral;
+		font-family: santral;
 	}
 }
 
@@ -171,6 +171,6 @@
 		color: #707070;
 		height: 80vh;
 		justify-content: center;
-		font-family: Santral;
+		font-family: santral;
 	}
 }

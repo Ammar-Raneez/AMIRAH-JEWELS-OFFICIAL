@@ -3,7 +3,7 @@
 	padding: 1vw;
 	background-color: #d35f46;
 	flex-direction: column;
-	font-family: Santral;
+	font-family: santral;
 	justify-content: space-between;
 }
 
@@ -36,7 +36,7 @@
 	text-decoration: none;
 	color: #fff;
 	padding-bottom: 1.5vw;
-	font-family: Santral;
+	font-family: santral;
 	font-weight: bold;
 }
 
@@ -44,7 +44,7 @@
 .footer__topLeftSectionTwo > p > a,
 .footer__topLeftSectionThree > p > a {
 	color: #fff;
-	font-family: Santral;
+	font-family: santral;
 	font-size: 15px;
 	line-height: 2.5vw;
 	text-decoration: none;
@@ -52,7 +52,7 @@
 
 .footer__topRightSignUp > p:nth-child(2) {
 	color: #fff;
-	font-family: Santral;
+	font-family: santral;
 	font-size: 15px;
 	line-height: 2vw;
 	text-decoration: none;
@@ -88,7 +88,7 @@
 	cursor: pointer;
 	text-decoration: none;
 	margin-top: 1vw;
-	font-family: Santral;
+	font-family: santral;
 	border: none;
 	font-size: 15px;
 	margin-top: 3vw;
@@ -119,14 +119,14 @@
 .footer__bottomCountrySelectCountry > p {
 	font-size: 14px;
 	color: #fff;
-	font-family: Santral;
+	font-family: santral;
 	font-weight: bold;
 }
 
 .footer__bottomText {
 	font-size: 14px;
 	color: #fff;
-	font-family: Santral;
+	font-family: santral;
 }
 
 .footer__bottomCountrySelectCountry > select {
@@ -135,7 +135,7 @@
 	outline: none;
 	background-color: transparent;
 	font-size: 14px;
-	font-family: Santral;
+	font-family: santral;
 	color: black;
 	height: 30px;
 	cursor: pointer;

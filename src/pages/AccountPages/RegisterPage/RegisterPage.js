@@ -148,7 +148,7 @@ function RegisterPage() {
 					<div className="registerPage__formSecond">
 						<div className="registerPage__formSecondInputs">
 							<FormControl component="fieldset">
-								<FormLabel style={{ fontFamily: 'Santral' }} component="legend">
+								<FormLabel style={{ fontFamily: 'santral' }} component="legend">
 									Gender (Optional)
 								</FormLabel>
 								<RadioGroup
