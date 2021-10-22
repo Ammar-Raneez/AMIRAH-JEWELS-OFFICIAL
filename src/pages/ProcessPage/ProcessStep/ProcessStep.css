@@ -74,7 +74,7 @@
 
 .processStep__description > p {
 	position: absolute;
-	font-size: 1.5vw;
+	font-size: 1.2vw;
 	background-color: #fff;
 	padding: 2vw;
 	padding-bottom: 4vw;
@@ -91,7 +91,7 @@
 
 .processStep__descriptionReflect > p {
 	position: absolute;
-	font-size: 1.5vw;
+	font-size: 1.2vw;
 	background-color: #fff;
 	padding: 2vw;
 	padding-bottom: 4vw;
@@ -107,14 +107,14 @@
 }
 
 .processStep__stepName > div > p {
-	font-size: 4vw;
+	font-size: 3vw;
 	font-family: ginebra_font;
 	color: #707070;
 	text-align: end;
 }
 
 .processStep__stepNameReflect > div > p {
-	font-size: 4vw;
+	font-size: 3vw;
 	font-family: ginebra_font;
 	color: #707070;
 	text-align: start;

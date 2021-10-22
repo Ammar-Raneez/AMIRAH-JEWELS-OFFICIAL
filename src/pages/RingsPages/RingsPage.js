@@ -381,7 +381,7 @@ function RingsPage({
 			{/* Other Similar Products */}
 			<div className="ringsPage__otherProducts">
 				<Fade cascade>
-					<h2>You May Also like</h2>
+					<h2>YOU MAY ALSO LIKE</h2>
 				</Fade>
 				<div className="ringsPage__otherProductsProducts">
 					<Fade delay={500} cascade>

@@ -12,7 +12,7 @@
 	font-family: ginebra_font;
 	justify-content: space-evenly;
 	margin: 1vw 2.5vw;
-	font-size: 1.2vw;
+	font-size: 1vw;
 }
 
 .header__options > a,
@@ -39,7 +39,7 @@
 }
 
 .header__optionsAboutDetails {
-	font-size: 1.1vw;
+	font-size: 1vw;
 	position: absolute;
 	margin-top: 3.5vw;
 	padding: 0.8vw;
@@ -61,7 +61,7 @@
 	z-index: 99;
 	background-color: #fff;
 	padding: 0.8vw;
-	width: 36vw;
+	width: 30vw;
 	display: flex;
 	justify-content: space-evenly;
 	border-radius: 0.8vw;

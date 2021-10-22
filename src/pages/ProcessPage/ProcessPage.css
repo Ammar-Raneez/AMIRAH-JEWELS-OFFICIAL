@@ -10,7 +10,7 @@
 
 .processPage > div > h1 {
 	font-family: ginebra_font;
-	font-size: 3vw;
+	font-size: 2.5vw;
 	margin: 2vw;
 	width: 50vw;
 	text-align: center;
@@ -21,7 +21,7 @@
 
 .processPage > div > p {
 	width: 65vw;
-	font-size: 1.5vw;
+	font-size: 1.2vw;
 	font-family: santral;
 	line-height: 2vw;
 	color: #707070;

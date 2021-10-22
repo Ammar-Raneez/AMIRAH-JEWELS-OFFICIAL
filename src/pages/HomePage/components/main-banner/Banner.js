@@ -23,17 +23,15 @@ function Banner() {
 
   return (
     width > 1100 ? (
-      <a href="#category">
-        <div style={{position: 'relative'}}>
-          <SimpleImageSlider
-            images={images}
-            height="75vh"
-            width="100%"
-            showBullets={true}
-            showNavs={true}
-          />
-        </div>
-      </a>
+      <div style={{position: 'relative'}}>
+        <SimpleImageSlider
+          images={images}
+          height="75vh"
+          width="100%"
+          showBullets={true}
+          showNavs={true}
+        />
+      </div>
   ) : (
       <a href="#category"><div className="homePage__banner" /></a>
     )

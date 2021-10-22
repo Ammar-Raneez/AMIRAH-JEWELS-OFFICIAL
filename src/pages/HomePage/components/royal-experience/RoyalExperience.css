@@ -10,7 +10,7 @@
 }
 
 .homePage__middleSectionTitle {
-  font-size: 2.5vw;
+  font-size: 2.3vw;
   font-family: ginebra_font;
   display: flex;
   justify-content: center;
@@ -51,14 +51,14 @@
 }
 
 .homePage__middleSectionMiddleContainer div p {
-  font-size: 1.3vw;
+  font-size: 1.2vw;
   text-align: center;
   margin-top: 2vw;
   font-family: santral;
 }
 
 .homePage__middleSectionMiddleContainerDesc {
-  font-size: 1.3vw !important;
+  font-size: 1.2vw !important;
 }
 
 @media screen and (max-width: 768px) and (min-width: 400px) {

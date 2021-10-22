@@ -105,7 +105,7 @@ const Container = styled.div `
     width: 100%;
 
     > p {
-      font-size: medium;
+      font-size: small;
       font-weight: bold;
       text-transform: uppercase;
     }

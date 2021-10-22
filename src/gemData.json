@@ -2,15 +2,15 @@
   {
     "id": "sapphire",
     "title": "SAPPHIRE",
-    "cardImage": "gems/know-your-gemstones/SAPPHIRE.jpg",
+    "cardImage": "/gems/know-your-gemstones/SAPPHIRE.jpg",
     "titleText": "The name “sapphire” can also apply to any corundum that’s not ruby red, another corundum variety.",
-    "titleImage": "gems/why-we-love-gemstones/polished-sapphire.png",
+    "titleImage": "/gems/why-we-love-gemstones/polished-sapphire.png",
     "aboutName": "SAPPHIRE",
     "aboutDescriptionArray": [
       "Besides blue sapphire and ruby, the corundum family also includes so-called “fancy sapphires.” They come in violet, green, yellow, orange, pink, purple, and intermediate hues.",
       "Some stones exhibit the phenomenon known as color change, most often going from blue in daylight or fluorescent lighting to purple under incandescent light. Sapphires can even be gray, black, or brown."
     ],
-    "aboutImage": "gems/why-we-love-gemstones/polished-sapphire.png",
+    "aboutImage": "/gems/why-we-love-gemstones/polished-sapphire.png",
     "birthStoneDetails": "Sapphire is the birthstone for September and the gem of the 5th and 45th anniversaries",
     "treatmentsDetails": "There are a number of processes used to alter the color, apparent clarity, or improve the durability of gems.",
     "syntheticDetails": "Some gemstones have synthetic counterparts that have essentially the same chemical, physical, and optical properties, but are grown by man in a laboratory.",
@@ -39,7 +39,7 @@
       "birefringence": "0.008 to 0.010"
     },
     "whyWeLoveGemStone": {
-      "img": "gems/why-we-love-gemstones/polished-sapphire.png",
+      "img": "/gems/why-we-love-gemstones/polished-sapphire.png",
       "data": [
         {
           "title": "VIVID AND SATURATED",
@@ -59,15 +59,15 @@
   {
     "id": "topaz",
     "title": "TOPAZ",
-    "cardImage": "gems/know-your-gemstones/TOPAZ.jpg",
+    "cardImage": "/gems/know-your-gemstones/TOPAZ.jpg",
     "titleText": "Honey yellow. Fiery orange. Cyclamen pink. Icy blue. In warm or cool tones, topaz is a lustrous and brilliant gem",
-    "titleImage": "gems/why-we-love-gemstones/polished-topaz.png",
+    "titleImage": "/gems/why-we-love-gemstones/polished-topaz.png",
     "aboutName": "TOPAZ",
     "aboutDescriptionArray": [
       "Topaz actually has an exceptionally wide color range that, besides brown, includes various tones and saturations of blue, green, yellow, orange, red, pink, and purple.",
       "Colorless topaz is plentiful, and is often treated to give it a blue color. Topaz is also pleochroic, meaning that the gem can show different colors in different crystal directions"
     ],
-    "aboutImage": "gems/why-we-love-gemstones/polished-topaz.png",
+    "aboutImage": "/gems/why-we-love-gemstones/polished-topaz.png",
     "birthStoneDetails": "Precious topaz is a birthstone for November and blue topaz is a birthstone for December. Blue topaz is the gem of the 4th anniversary and Imperial topaz is the gem of the 23rd anniversary.",
     "treatmentsDetails": "There are a number of processes used to alter the color, apparent clarity, or improve the durability of gems",
     "syntheticDetails": "Some gemstones have synthetic counterparts that have essentially the same chemical, physical, and optical properties, but are grown by man in a laboratory.",
@@ -96,7 +96,7 @@
       "birefringence": "0.008 - 0.010"
     },
     "whyWeLoveGemStone": {
-      "img": "gems/why-we-love-gemstones/polished-topaz.png",
+      "img": "/gems/why-we-love-gemstones/polished-topaz.png",
       "data": [
         {
           "title": "KILOS",
@@ -116,15 +116,15 @@
   {
     "id": "pearl",
     "title": "PEARLS",
-    "cardImage": "gems/know-your-gemstones/PEARL.jpg",
+    "cardImage": "/gems/know-your-gemstones/PEARL.jpg",
     "titleText": "Perfect shining spheres. Lustrous baroque forms. Seductive strands, warm to the touch. Pearls are simply and purely organic.",
-    "titleImage": "gems/why-we-love-gemstones/polished-perl.png",
+    "titleImage": "/gems/why-we-love-gemstones/polished-perl.png",
     "aboutName": "PEARLS",
     "aboutDescriptionArray": [
       "Perhaps the best-loved gems of all time, pearls—natural and cultured—occur in a wide variety of colors. The most familiar are white and cream, but the palette of colors extends to every hue.",
       "Natural pearls form around a microscopic irritant in the bodies of certain mollusks. Cultured pearls are the result of the deliberate insertion of a bead or piece of tissue that the mollusk coats with nacre"
     ],
-    "aboutImage": "gems/why-we-love-gemstones/polished-perl.png",
+    "aboutImage": "/gems/why-we-love-gemstones/polished-perl.png",
     "birthStoneDetails": "Pearl is the birthstone for June and the gem of the third and thirtieth anniversaries",
     "treatmentsDetails": "There are a number of processes used to alter the color, apparent clarity, or improve the durability of gems.",
     "syntheticDetails": "Some gemstones have synthetic counterparts that have essentially the same chemical, physical, and optical properties, but are grown by man in a laboratory.",
@@ -153,7 +153,7 @@
       "birefringence": "NA"
     },
     "whyWeLoveGemStone": {
-      "img": "gems/why-we-love-gemstones/polished-perl.png",
+      "img": "/gems/why-we-love-gemstones/polished-perl.png",
       "data": [
         {
           "title": "LUSTER",
@@ -173,15 +173,15 @@
   {
     "id": "aquamarine",
     "title": "Aquamarine",
-    "cardImage": "gems/know-your-gemstones/AQUAMARINE.jpg",
+    "cardImage": "/gems/know-your-gemstones/AQUAMARINE.jpg",
     "titleText": "Named after seawater, aquamarine’s fresh watery hue is a cool plunge into a refreshing pool",
-    "titleImage": "gems/why-we-love-gemstones/polished-aquamarine-gem.png",
+    "titleImage": "/gems/why-we-love-gemstones/polished-aquamarine-gem.png",
     "aboutName": "AQUAMARINE",
     "aboutDescriptionArray": [
       "Aquamarine’s name comes from the Latin for seawater and it was said to calm waves and keep sailors safe at sea. March’s birthstone was also thought to enhance the happiness of marriages.",
       "The best gems combine high clarity with limpid transparency and blue to slightly greenish blue hues. Like many beryls, aquamarine forms large crystals suitable for sizable fashioned gems and carvings"
     ],
-    "aboutImage": "gems/why-we-love-gemstones/polished-aquamarine-gem.png",
+    "aboutImage": "/gems/why-we-love-gemstones/polished-aquamarine-gem.png",
     "birthStoneDetails": "Aquamarine is the birthstone for March and the gem of the 19th wedding anniversary.",
     "treatmentsDetails": "There are a number of processes used to alter the color, apparent clarity, or improve the durability of gems.",
     "syntheticDetails": "Some gemstones have synthetic counterparts that have essentially the same chemical, physical, and optical properties, but are grown by man in a laboratory",
@@ -210,7 +210,7 @@
       "birefringence": "0.005 to 0.009"
     },
     "whyWeLoveGemStone": {
-      "img": "gems/why-we-love-gemstones/polished-aquamarine-gem.png",
+      "img": "/gems/why-we-love-gemstones/polished-aquamarine-gem.png",
       "data": [
         {
           "title": "BEAUTIFUL CRYSTALS",
@@ -230,15 +230,15 @@
   {
     "id": "alexandrite",
     "title": "Alexandrite",
-    "cardImage": "gems/know-your-gemstones/Alexandrite.jpg",
+    "cardImage": "/gems/know-your-gemstones/Alexandrite.jpg",
     "titleText": "Green in sunlight, Red in Lamplight. Color-changing alexandrite is natures's magic trick",
-    "titleImage": "gems/why-we-love-gemstones/polished-alexandrite-gem.png",
+    "titleImage": "/gems/why-we-love-gemstones/polished-alexandrite-gem.png",
     "aboutName": "ALEXANDRITE",
     "aboutDescriptionArray": [
       "Often described by gem aficionados as “emerald by day, ruby by night,” alexandrite is the very rare color-change variety of the mineral chrysobery.",
       "Originally discovered in Russia’s Ural Mountains in the 1830s, it’s now found in Sri Lanka, East Africa, and Brazil, but fine material is exceptionally rare and valuable."
     ],
-    "aboutImage": "gems/why-we-love-gemstones/polished-alexandrite-gem.png",
+    "aboutImage": "/gems/why-we-love-gemstones/polished-alexandrite-gem.png",
     "birthStoneDetails": "Alexandrite is a birthstone for June, along with pearl and moonstone. Alexandrite is also the gem for the 55th wedding anniversary.",
     "treatmentsDetails": "There are a number of processes used to alter the color, apparent clarity, or improve the durability of gems.",
     "syntheticDetails": "Some gemstones have synthetic counterparts that have essentially the same chemical, physical, and optical properties, but are grown by man in a laboratory.",
@@ -267,7 +267,7 @@
       "birefringence": "0.008 to 0.010"
     },
     "whyWeLoveGemStone": {
-      "img": "gems/why-we-love-gemstones/polished-alexandrite-gem.png",
+      "img": "/gems/why-we-love-gemstones/polished-alexandrite-gem.png",
       "data": [
         {
           "title": "COLOR CHANGE",
@@ -287,15 +287,15 @@
   {
     "id": "amber",
     "title": "AMBER",
-    "cardImage": "gems/know-your-gemstones/AMBER.jpg",
+    "cardImage": "/gems/know-your-gemstones/AMBER.jpg",
     "titleText": "Amber is nature's time capsule. This fossilized tree resin contains remnants if life on earth millions of years ago.",
-    "titleImage": "gems/why-we-love-gemstones/polished-amber-gems.png",
+    "titleImage": "/gems/why-we-love-gemstones/polished-amber-gems.png",
     "aboutName": "AMBER",
     "aboutDescriptionArray": [
       "The Greeks called amber elektron, or “made by the sun.” Homer praised its bright glow. The Egyptians buried it in tombs for the afterlife",
       "Today’s scientists value amber too: it provides a three-dimensional window into prehistoric ecosystems through the myriad animal and plant inclusions it contains"
     ],
-    "aboutImage": "gems/why-we-love-gemstones/polished-amber-gems.png",
+    "aboutImage": "/gems/why-we-love-gemstones/polished-amber-gems.png",
     "birthStoneDetails": "While amber isn’t a birthstone, it is associated with the astrological sign of Taurus",
     "treatmentsDetails": "There are a number of processes used to alter the color, apparent clarity, or improve the durability of gems",
     "syntheticDetails": "Some gemstones have synthetic counterparts that have essentially the same chemical, physical, and optical properties, but are grown by man in a laborator",
@@ -324,7 +324,7 @@
       "birefringence": "0.008 to 0.010"
     },
     "whyWeLoveGemStone": {
-      "img": "gems/why-we-love-gemstones/polished-amber-gems.png",
+      "img": "/gems/why-we-love-gemstones/polished-amber-gems.png",
       "data": [
         {
           "title": "INTERESTING INCLUSIONS",
@@ -344,15 +344,15 @@
   {
     "id": "amethyst",
     "title": "AMETHYST",
-    "cardImage": "gems/know-your-gemstones/AMETHYST.jpg",
+    "cardImage": "/gems/know-your-gemstones/AMETHYST.jpg",
     "titleText": "The essence of the color purple, amethyst is beautiful enough for crown jewels yet affordable enough for class ring",
-    "titleImage": "gems/why-we-love-gemstones/amethyst.png",
+    "titleImage": "/gems/why-we-love-gemstones/amethyst.png",
     "aboutName": "AMETHYST",
     "aboutDescriptionArray": [
       "Amethyst was as expensive as ruby and emerald until the 19th Century, when Brazil’s large deposits were discovered. It was believed to prevent intoxication amethystos means “not drunk” in ancient Greek.",
       "Today, as the most valued quartz variety, amethyst is in demand for designer pieces and mass-market jewelry alike, and its purple to pastel hues retain wide consumer appeal."
     ],
-    "aboutImage": "gems/why-we-love-gemstones/amethyst.png",
+    "aboutImage": "/gems/why-we-love-gemstones/amethyst.png",
     "birthStoneDetails": "Amethyst is the birthstone for February and the gem for the 6th and 17th wedding anniversaries",
     "treatmentsDetails": "There are a number of processes used to alter the color, apparent clarity, or improve the durability of gems.",
     "syntheticDetails": "Some gemstones have synthetic counterparts that have essentially the same chemical, physical, and optical properties, but are grown by man in a laboratory",
@@ -381,7 +381,7 @@
       "birefringence": "0.009"
     },
     "whyWeLoveGemStone": {
-      "img": "gems/why-we-love-gemstones/amethyst.png",
+      "img": "/gems/why-we-love-gemstones/amethyst.png",
       "data": [
         {
           "title": "GEODES",
@@ -401,15 +401,15 @@
   {
     "id": "ametrine",
     "title": "AMETRINE",
-    "cardImage": "gems/know-your-gemstones/AMETRINE.jpg",
+    "cardImage": "/gems/know-your-gemstones/AMETRINE.jpg",
     "titleText": "This transparent quartz has colors of both amethyst and citrine, and is called ametrine or amethyst-citrine",
-    "titleImage": "gems/why-we-love-gemstones/polished-ametrine-gem.png",
+    "titleImage": "/gems/why-we-love-gemstones/polished-ametrine-gem.png",
     "aboutName": "AMETRINE",
     "aboutDescriptionArray": [
       "Whether projecting from pegmatite walls or encrusting cavities in volcanic rock, quartz abounds worldwide. People have used quartz in jewelry for thousands of years.",
       "When quartz displays the colors of amethyst and citrine in a single gem, the material is called ametrine or amethyst-citrine. Ametrine’s only commercial source is the Anahi mine in Bolivia"
     ],
-    "aboutImage": "gems/why-we-love-gemstones/polished-ametrine-gem.png",
+    "aboutImage": "/gems/why-we-love-gemstones/polished-ametrine-gem.png",
     "birthStoneDetails": "While amber isn’t a birthstone, it is associated with the astrological sign of Libra",
     "treatmentsDetails": "There are a number of processes used to alter the color, apparent clarity, or improve the durability of gems.",
     "syntheticDetails": "Some gemstones have synthetic counterparts that have essentially the same chemical, physical, and optical properties, but are grown by man in a laboratory.",
@@ -438,7 +438,7 @@
       "birefringence": "NA"
     },
     "whyWeLoveGemStone": {
-      "img": "gems/why-we-love-gemstones/polished-ametrine-gem.png",
+      "img": "/gems/why-we-love-gemstones/polished-ametrine-gem.png",
       "data": [
         {
           "title": "GEODES",
@@ -458,15 +458,15 @@
   {
     "id": "citrine",
     "title": "CITRINE",
-    "cardImage": "gems/know-your-gemstones/CITRINE.jpg",
+    "cardImage": "/gems/know-your-gemstones/CITRINE.jpg",
     "titleText": "Citrine is the transparent, pale yellow to brownish orange variety of quart",
-    "titleImage": "gems/why-we-love-gemstones/polished-citrine-gem.png",
+    "titleImage": "/gems/why-we-love-gemstones/polished-citrine-gem.png",
     "aboutName": "CITRINE",
     "aboutDescriptionArray": [
       "Citrine is rare in nature. In the days before modern gemology, its tawny color caused it to be confused with topaz.",
       "Today, its attractive color, plus the durability and affordability it shares with most other quartzes, makes it the top-selling yellow-to-orange gem. In the contemporary market, citrine’s most popular shade is an earthy, deep, brownish or reddish orange"
     ],
-    "aboutImage": "gems/why-we-love-gemstones/polished-citrine-gem.png",
+    "aboutImage": "/gems/why-we-love-gemstones/polished-citrine-gem.png",
     "birthStoneDetails": "Along with topaz, citrine is a birthstone for November. It’s also recognized as the gem that commemorates the thirteenth anniversary",
     "treatmentsDetails": "There are a number of processes used to alter the color, apparent clarity, or improve the durability of gems.",
     "syntheticDetails": "Some gemstones have synthetic counterparts that have essentially the same chemical, physical, and optical properties, but are grown by man in a laboratory.",
@@ -495,7 +495,7 @@
       "birefringence": "NA"
     },
     "whyWeLoveGemStone": {
-      "img": "gems/why-we-love-gemstones/polished-citrine-gem.png",
+      "img": "/gems/why-we-love-gemstones/polished-citrine-gem.png",
       "data": [
         {
           "title": "AFFORDABLE",
@@ -515,15 +515,15 @@
   {
     "id": "diamond",
     "title": "DIAMOND",
-    "cardImage": "gems/know-your-gemstones/DIAMOND.jpg",
+    "cardImage": "/gems/know-your-gemstones/DIAMOND.jpg",
     "titleText": "Diamonds are among nature’s most precious and beautiful creations.",
-    "titleImage": "gems/why-we-love-gemstones/polished-diamond.png",
+    "titleImage": "/gems/why-we-love-gemstones/polished-diamond.png",
     "aboutName": "DIAMOND",
     "aboutDescriptionArray": [
       "Diamond forms under high temperature and pressure conditions that exist only about 100 miles beneath the earth’s surface. Diamond’s carbon atoms are bonded in essentially the same way in all directions.",
       "Another mineral, graphite, also contains only carbon, but its formation process and crystal structure are very different. Graphite is so soft that you can write with it, while diamond is so hard that you can only scratch it with another diamond"
     ],
-    "aboutImage": "gems/why-we-love-gemstones/polished-diamond.png",
+    "aboutImage": "/gems/why-we-love-gemstones/polished-diamond.png",
     "birthStoneDetails": "On almost all modern birthstone lists, diamond is recognized today as the birthstone for April. Diamond is also the gem that marks the 60th and 75th wedding anniversaries",
     "treatmentsDetails": "There are a number of processes used to alter the color, apparent clarity, or improve the durability of gems.",
     "syntheticDetails": "Some gemstones have synthetic counterparts that have essentially the same chemical, physical, and optical properties, but are grown by man in a laboratory.",
@@ -552,7 +552,7 @@
       "birefringence": "NA"
     },
     "whyWeLoveGemStone": {
-      "img": "gems/why-we-love-gemstones/polished-diamond.png",
+      "img": "/gems/why-we-love-gemstones/polished-diamond.png",
       "data": [
         {
           "title": "GLOBAL LANGUAGE",
@@ -572,15 +572,15 @@
   {
     "id": "emerald",
     "title": "EMERALD",
-    "cardImage": "gems/know-your-gemstones/EMERALD.jpg",
+    "cardImage": "/gems/know-your-gemstones/EMERALD.jpg",
     "titleText": "Emerald is the bluish green to green variety of beryl, a mineral species that includes aquamarine",
-    "titleImage": "gems/why-we-love-gemstones/polished-emerald-gem.png",
+    "titleImage": "/gems/why-we-love-gemstones/polished-emerald-gem.png",
     "aboutName": "EMERALD",
     "aboutDescriptionArray": [
       "Gem experts differ on the degree of green that makes one stone an emerald and another stone a less-expensive green beryl",
       "Most gemologists, gemological laboratories, and colored stone dealers call a stone green beryl when its color is “too light” for it to be classified as emerald. Even among that group, however, there’s a difference of opinion about what’s considered “too light"
     ],
-    "aboutImage": "gems/why-we-love-gemstones/polished-emerald-gem.png",
+    "aboutImage": "/gems/why-we-love-gemstones/polished-emerald-gem.png",
     "birthStoneDetails": "As the gem of spring, emerald is the perfect choice as the birthstone for the month of May. It’s also the gem of the twentieth and thirty-fifth wedding anniversaries",
     "treatmentsDetails": "There are a number of processes used to alter the color, apparent clarity, or improve the durability of gems",
     "syntheticDetails": "Some gemstones have synthetic counterparts that have essentially the same chemical, physical, and optical properties, but are grown by man in a laboratory",
@@ -609,7 +609,7 @@
       "birefringence": "0.005 to 0.009"
     },
     "whyWeLoveGemStone": {
-      "img": "gems/why-we-love-gemstones/polished-emerald-gem.png",
+      "img": "/gems/why-we-love-gemstones/polished-emerald-gem.png",
       "data": [
         {
           "title": "THREE-PHASE INCLUSIONS",
@@ -629,15 +629,15 @@
   {
     "id": "garnet",
     "title": "GARNET",
-    "cardImage": "gems/know-your-gemstones/GARNET.jpg",
+    "cardImage": "/gems/know-your-gemstones/GARNET.jpg",
     "titleText": "Garnets are a set of closely related minerals forming a group, with gemstones in almost every colo",
-    "titleImage": "gems/why-we-love-gemstones/garnet-polished-gem.png",
+    "titleImage": "/gems/why-we-love-gemstones/garnet-polished-gem.png",
     "aboutName": "GARNET",
     "aboutDescriptionArray": [
       "Red garnets have a long history, but modern gem buyers can pick from a rich palette of garnet colors: greens, oranges, pinkish oranges, deeply saturated purplish reds, and even some blues",
       "Red garnet is one of the most common and widespread of gems. But not all garnets are as abundant as the red ones. A green garnet, tsavorite, is rarer and needs rarer rock chemistries and conditions to form."
     ],
-    "aboutImage": "gems/why-we-love-gemstones/garnet-polished-gem.png",
+    "aboutImage": "/gems/why-we-love-gemstones/garnet-polished-gem.png",
     "birthStoneDetails": "Garnet is the birthstone for January and the gem for the second anniversary",
     "treatmentsDetails": "There are a number of processes used to alter the color, apparent clarity, or improve the durability of gems",
     "syntheticDetails": "Some gemstones have synthetic counterparts that have essentially the same chemical, physical, and optical properties, but are grown by man in a laboratory",
@@ -666,7 +666,7 @@
       "birefringence": "NA"
     },
     "whyWeLoveGemStone": {
-      "img": "gems/why-we-love-gemstones/garnet-polished-gem.png",
+      "img": "/gems/why-we-love-gemstones/garnet-polished-gem.png",
       "data": [
         {
           "title": "GEMOLOGICAL CHALLENGE",
@@ -686,15 +686,15 @@
   {
     "id": "iolite",
     "title": "IOLITE",
-    "cardImage": "gems/know-your-gemstones/IOLITE.jpg",
+    "cardImage": "/gems/know-your-gemstones/IOLITE.jpg",
     "titleText": "According to legend, Vikings used iolite slices to reduce glare when checking the sun’s position.",
-    "titleImage": "gems/why-we-love-gemstones/151543_iolite_rough_hero_v2.png",
+    "titleImage": "/gems/why-we-love-gemstones/151543_iolite_rough_hero_v2.png",
     "aboutName": "IOLITE",
     "aboutDescriptionArray": [
       "In legends, ancient Viking navigators used thin slices of iolite as filters to help locate the sun on cloudy days. Whether or not the tales are true, iolite (mineralogists call it cordierite) can be fashioned into beautiful gems",
       "Strongly pleochroic iolite has been incorrectly called “water sapphire,” as it can display a blue to violet hue in one direction and pale yellow to colorless in another"
     ],
-    "aboutImage": "gems/why-we-love-gemstones/151543_iolite_rough_hero_v2.png",
+    "aboutImage": "/gems/why-we-love-gemstones/151543_iolite_rough_hero_v2.png",
     "birthStoneDetails": "Iolite is the gemstone for the twenty-first wedding anniversary",
     "treatmentsDetails": "There are a number of processes used to alter the color, apparent clarity, or improve the durability of gems",
     "syntheticDetails": "Some gemstones have synthetic counterparts that have essentially the same chemical, physical, and optical properties, but are grown by man in a laboratory",
@@ -723,7 +723,7 @@
       "birefringence": "+0.045, -0.011"
     },
     "whyWeLoveGemStone": {
-      "img": "gems/why-we-love-gemstones/151543_iolite_rough_hero_v2.png",
+      "img": "/gems/why-we-love-gemstones/151543_iolite_rough_hero_v2.png",
       "data": [
         {
           "title": "STUNNING COLOR",
@@ -743,15 +743,15 @@
   {
     "id": "jade",
     "title": "JADE",
-    "cardImage": "gems/know-your-gemstones/JADE.jpg",
+    "cardImage": "/gems/know-your-gemstones/JADE.jpg",
     "titleText": "According to legend, Vikings used iolite slices to reduce glare when checking the sun’s position",
-    "titleImage": "gems/why-we-love-gemstones/polished-jade-gem.png",
+    "titleImage": "/gems/why-we-love-gemstones/polished-jade-gem.png",
     "aboutName": "JADE",
     "aboutDescriptionArray": [
       "Jade has its cultural roots in the smoke-dimmed caves and huts that sheltered prehistoric humans.",
       "Around the world, Stone Age workers shaped this toughest of gems into weapons, tools, ornaments, and ritual objects. Their carvings invoked the powers of heaven and earth and mystic forces of life and death"
     ],
-    "aboutImage": "gems/why-we-love-gemstones/polished-jade-gem.png",
+    "aboutImage": "/gems/why-we-love-gemstones/polished-jade-gem.png",
     "birthStoneDetails": "Jade is the official gem for the 12th anniversary.",
     "treatmentsDetails": "There are a number of processes used to alter the color, apparent clarity, or improve the durability of gems.",
     "syntheticDetails": "Some gemstones have synthetic counterparts that have essentially the same chemical, physical, and optical properties, but are grown by man in a laboratory",
@@ -780,7 +780,7 @@
       "birefringence": "NA"
     },
     "whyWeLoveGemStone": {
-      "img": "gems/why-we-love-gemstones/polished-jade-gem.png",
+      "img": "/gems/why-we-love-gemstones/polished-jade-gem.png",
       "data": [
         {
           "title": "INTERACTION WITH LIGHT",
@@ -800,15 +800,15 @@
   {
     "id": "kunzite",
     "title": "KUNZITE",
-    "cardImage": "gems/know-your-gemstones/KUNZITE.jpg",
+    "cardImage": "/gems/know-your-gemstones/KUNZITE.jpg",
     "titleText": "Collectors love kunzite for its color range, from delicate pastel pink to intense violetish purple",
-    "titleImage": "gems/why-we-love-gemstones/97442_kunzite_rough_hero.png",
+    "titleImage": "/gems/why-we-love-gemstones/97442_kunzite_rough_hero.png",
     "aboutName": "KUNZITE",
     "aboutDescriptionArray": [
       "Kunzite is the best-known variety of the mineral spodumene. It’s named after famed gemologist George Frederick Kunz, who was the first to identify it as a unique variety of spodumene.",
       "Kunzite gets its delicate color from trace amounts of manganese. California’s San Diego County is an important source of kunzite"
     ],
-    "aboutImage": "gems/why-we-love-gemstones/97442_kunzite_rough_hero.png",
+    "aboutImage": "/gems/why-we-love-gemstones/97442_kunzite_rough_hero.png",
     "birthStoneDetails": "Some consider kunzite to be an alternate birthstone for February",
     "treatmentsDetails": "There are a number of processes used to alter the color, apparent clarity, or improve the durability of gems.",
     "syntheticDetails": "Some gemstones have synthetic counterparts that have essentially the same chemical, physical, and optical properties, but are grown by man in a laboratory",
@@ -837,7 +837,7 @@
       "birefringence": "0.014 to 0.016"
     },
     "whyWeLoveGemStone": {
-      "img": "gems/why-we-love-gemstones/97442_kunzite_rough_hero.png",
+      "img": "/gems/why-we-love-gemstones/97442_kunzite_rough_hero.png",
       "data": [
         {
           "title": "AFFORDABLE",
@@ -857,15 +857,15 @@
   {
     "id": "lapis-lazuli",
     "title": "LAPIS LAZULI",
-    "cardImage": "gems/know-your-gemstones/LAPIS-LAZULI.jpg",
+    "cardImage": "/gems/know-your-gemstones/LAPIS-LAZULI.jpg",
     "titleText": "Lapis is a beautiful rock; an aggregate of several minerals, mainly lazurite, calcite, and pyrite",
-    "titleImage": "gems/why-we-love-gemstones/150226_lapisLazuli_rough_hero.png",
+    "titleImage": "/gems/why-we-love-gemstones/150226_lapisLazuli_rough_hero.png",
     "aboutName": "LAPIS LAZULI",
     "aboutDescriptionArray": [
       "This ancient rock is an aggregate of several minerals. The three major minerals that comprise lapis are lazurite, calcite, and pyrite",
       "The rock can also contain lesser amounts of diopside, amphibole, feldspar, or mica. Lazurite is the ingredient responsible for producing the gem’s most prized color—bright royal blue"
     ],
-    "aboutImage": "gems/why-we-love-gemstones/150226_lapisLazuli_rough_hero.png",
+    "aboutImage": "/gems/why-we-love-gemstones/150226_lapisLazuli_rough_hero.png",
     "birthStoneDetails": "Not consider as a birthstone",
     "treatmentsDetails": "There are a number of processes used to alter the color, apparent clarity, or improve the durability of gems.",
     "syntheticDetails": "Some gemstones have synthetic counterparts that have essentially the same chemical, physical, and optical properties, but are grown by man in a laboratory",
@@ -894,7 +894,7 @@
       "birefringence": "NA"
     },
     "whyWeLoveGemStone": {
-      "img": "gems/why-we-love-gemstones/150226_lapisLazuli_rough_hero.png",
+      "img": "/gems/why-we-love-gemstones/150226_lapisLazuli_rough_hero.png",
       "data": [
         {
           "title": "EXQUISITE COLOR",
@@ -914,15 +914,15 @@
   {
     "id": "moonstone",
     "title": "MOONSTONE",
-    "cardImage": "gems/know-your-gemstones/MOONSTONE.jpg",
+    "cardImage": "/gems/know-your-gemstones/MOONSTONE.jpg",
     "titleText": "A ghostly sheen moves under the surface of this feldspar, like moonlight glowing in water.",
-    "titleImage": "gems/why-we-love-gemstones/polished-moonstone.png",
+    "titleImage": "/gems/why-we-love-gemstones/polished-moonstone.png",
     "aboutName": "MOONSTONE",
     "aboutDescriptionArray": [
       "Moonstone is a variety of the feldspar-group mineral orthoclase. During formation, orthoclase and albite separate into alternating layers. When light falls between these thin layers it is scattered producing the phenomenon called adularescence.",
       "Adularescence is the light that appears to billow across a gem. Other feldspar minerals can also show adularescence including labradorite and sanidine."
     ],
-    "aboutImage": "gems/why-we-love-gemstones/polished-moonstone.png",
+    "aboutImage": "/gems/why-we-love-gemstones/polished-moonstone.png",
     "birthStoneDetails": "Moonstone is a birthstone for June, along with pearl and alexandrite",
     "treatmentsDetails": "There are a number of processes used to alter the color, apparent clarity, or improve the durability of gems",
     "syntheticDetails": "Some gemstones have synthetic counterparts that have essentially the same chemical, physical, and optical properties, but are grown by man in a laboratory.",
@@ -951,7 +951,7 @@
       "birefringence": "0.05 to 0.008"
     },
     "whyWeLoveGemStone": {
-      "img": "gems/why-we-love-gemstones/polished-moonstone.png",
+      "img": "/gems/why-we-love-gemstones/polished-moonstone.png",
       "data": [
         {
           "title": "RARITY",
@@ -971,15 +971,15 @@
   {
     "id": "morganite",
     "title": "MORGANITE",
-    "cardImage": "gems/know-your-gemstones/MORGANITE.jpg",
+    "cardImage": "/gems/know-your-gemstones/MORGANITE.jpg",
     "titleText": "Morganite is the pink to orange-pink variety of beryl, a mineral that includes emerald and aquamarine.",
-    "titleImage": "gems/why-we-love-gemstones/morganite_rough_hero.png",
+    "titleImage": "/gems/why-we-love-gemstones/morganite_rough_hero.png",
     "aboutName": "MORGANITE",
     "aboutDescriptionArray": [
       "Morganite’s subtle color is caused by traces of manganese. Because morganite has distinct pleochroism pale pink and a deeper bluish pink—it’s necessary to orient the rough carefully for fashioning.",
       "Strong color in morganite is rare, and gems usually have to be large to achieve the finest color."
     ],
-    "aboutImage": "gems/why-we-love-gemstones/morganite_rough_hero.png",
+    "aboutImage": "/gems/why-we-love-gemstones/morganite_rough_hero.png",
     "birthStoneDetails": "Not considered as a birthstone.",
     "treatmentsDetails": "There are a number of processes used to alter the color, apparent clarity, or improve the durability of gems.",
     "syntheticDetails": "Some gemstones have synthetic counterparts that have essentially the same chemical, physical, and optical properties, but are grown by man in a laboratory.",
@@ -1008,7 +1008,7 @@
       "birefringence": "0.05 to 0.008"
     },
     "whyWeLoveGemStone": {
-      "img": "gems/why-we-love-gemstones/morganite_rough_hero.png",
+      "img": "/gems/why-we-love-gemstones/morganite_rough_hero.png",
       "data": [
         {
           "title": "MULTIPHASE INCLUSIONS",
@@ -1028,15 +1028,15 @@
   {
     "id": "opal",
     "title": "OPAL",
-    "cardImage": "gems/know-your-gemstones/OPAL.jpg",
+    "cardImage": "/gems/know-your-gemstones/OPAL.jpg",
     "titleText": "Fireworks. Jellyfish. Galaxies. Lightning. Opal’s shifting play of kaleidoscopic colors is unlike any other gem.",
-    "titleImage": "gems/why-we-love-gemstones/opal_rough.png",
+    "titleImage": "/gems/why-we-love-gemstones/opal_rough.png",
     "aboutName": "OPAL",
     "aboutDescriptionArray": [
       "Because opal has the colors of other gems, the Romans thought it was the most precious and powerful of all. The Bedouins believed that opals contained lightning and fell from the sky during thunderstorms.",
       "When Australia’s mines began to produce opals commercially in the 1890s, it quickly became the world’s primary source for this October birthstone"
     ],
-    "aboutImage": "gems/why-we-love-gemstones/opal_rough.png",
+    "aboutImage": "/gems/why-we-love-gemstones/opal_rough.png",
     "birthStoneDetails": "Opal is an October birthstone",
     "treatmentsDetails": "There are a number of processes used to alter the color, apparent clarity, or improve the durability of gems.",
     "syntheticDetails": "Some gemstones have synthetic counterparts that have essentially the same chemical, physical, and optical properties, but are grown by man in a laboratory.",
@@ -1065,7 +1065,7 @@
       "birefringence": "NA"
     },
     "whyWeLoveGemStone": {
-      "img": "gems/why-we-love-gemstones/opal_rough.png",
+      "img": "/gems/why-we-love-gemstones/opal_rough.png",
       "data": [
         {
           "title": "FORMATION",
@@ -1085,15 +1085,15 @@
   {
     "id": "peridot",
     "title": "PERIDOT",
-    "cardImage": "gems/know-your-gemstones/PERIDOT.jpg",
+    "cardImage": "/gems/know-your-gemstones/PERIDOT.jpg",
     "titleText": "Found in lava, meteorites, and deep in the earth’s mantle, yellow-green peridot is the extreme gem.",
-    "titleImage": "gems/why-we-love-gemstones/peridot-gem.png",
+    "titleImage": "/gems/why-we-love-gemstones/peridot-gem.png",
     "aboutName": "PERIDOT",
     "aboutDescriptionArray": [
       "The ancient Egyptians mined peridot on the Red Sea island of Zabargad, the source for many large fine peridots in the world’s museums. The Egyptians called it the “gem of the sun.”",
       "Today this gem is still prized for its restful yellowish green hues and long history. Large strongly-colored, examples can be spectacular, and attractive smaller gems are available for jewelry at all price points"
     ],
-    "aboutImage": "gems/why-we-love-gemstones/peridot-gem.png",
+    "aboutImage": "/gems/why-we-love-gemstones/peridot-gem.png",
     "birthStoneDetails": "Peridot is the birthstone for August and the 15th anniversary gemstone",
     "treatmentsDetails": "There are a number of processes used to alter the color, apparent clarity, or improve the durability of gems.",
     "syntheticDetails": "Some gemstones have synthetic counterparts that have essentially the same chemical, physical, and optical properties, but are grown by man in a laboratory",
@@ -1122,7 +1122,7 @@
       "birefringence": "0.036 to 0.038"
     },
     "whyWeLoveGemStone": {
-      "img": "gems/why-we-love-gemstones/peridot-gem.png",
+      "img": "/gems/why-we-love-gemstones/peridot-gem.png",
       "data": [
         {
           "title": "EXTRATERRESTRIAL",
@@ -1142,15 +1142,15 @@
   {
     "id": "rose-quartz",
     "title": "ROSE QUARTZ",
-    "cardImage": "gems/know-your-gemstones/ROSE-QUARTZ.jpg",
+    "cardImage": "/gems/know-your-gemstones/ROSE-QUARTZ.jpg",
     "titleText": "Rose quartz is a quartz variety that gets its name from its delicate pink color.",
-    "titleImage": "gems/why-we-love-gemstones/85065_roseQuartz_rough_hero.png",
+    "titleImage": "/gems/why-we-love-gemstones/85065_roseQuartz_rough_hero.png",
     "aboutName": "ROSE QUARTZ",
     "aboutDescriptionArray": [
       "The color of rose quartz ranges from very light pink (almost white) to medium-dark pink. The most appealing color typically occurs in larger sizes; small rose quartz specimens with good color tend to be scarce.",
       "Rose quartz is usually found in massive form, so well-shaped crystals are highly prized."
     ],
-    "aboutImage": "gems/why-we-love-gemstones/85065_roseQuartz_rough_hero.png",
+    "aboutImage": "/gems/why-we-love-gemstones/85065_roseQuartz_rough_hero.png",
     "birthStoneDetails": "Rose quartz has been recognized as the gem that commemorates the fifth wedding anniversary.",
     "treatmentsDetails": "There are a number of processes used to alter the color, apparent clarity, or improve the durability of gems.",
     "syntheticDetails": "Some gemstones have synthetic counterparts that have essentially the same chemical, physical, and optical properties, but are grown by man in a laboratory.",
@@ -1179,7 +1179,7 @@
       "birefringence": "NA"
     },
     "whyWeLoveGemStone": {
-      "img": "gems/why-we-love-gemstones/85065_roseQuartz_rough_hero.png",
+      "img": "/gems/why-we-love-gemstones/85065_roseQuartz_rough_hero.png",
       "data": [
         {
           "title": "DELICATE COLOR",
@@ -1199,15 +1199,15 @@
   {
     "id": "ruby",
     "title": "RUBY",
-    "cardImage": "gems/know-your-gemstones/RUBY.jpg",
+    "cardImage": "/gems/know-your-gemstones/RUBY.jpg",
     "titleText": "Rose quartz is a quartz variety that gets its name from its delicate pink color.",
-    "titleImage": "gems/why-we-love-gemstones/polished-ruby.png",
+    "titleImage": "/gems/why-we-love-gemstones/polished-ruby.png",
     "aboutName": "RUBY",
     "aboutDescriptionArray": [
       "Rubies can command the highest per-carat price of any colored stone. This makes ruby one of the most important gems in the colored stone market.",
       "In its purest form, the mineral corundum is colorless. Trace elements that become part of the mineral’s crystal structure cause variations in its color. Chromium is the trace element that causes ruby’s red color."
     ],
-    "aboutImage": "gems/why-we-love-gemstones/polished-ruby.png",
+    "aboutImage": "/gems/why-we-love-gemstones/polished-ruby.png",
     "birthStoneDetails": "Ruby is the birthstone for July and the gem for the 15th and 40th anniversaries.",
     "treatmentsDetails": "There are a number of processes used to alter the color, apparent clarity, or improve the durability of gems.",
     "syntheticDetails": "Some gemstones have synthetic counterparts that have essentially the same chemical, physical, and optical properties, but are grown by man in a laboratory",
@@ -1236,7 +1236,7 @@
       "birefringence": "0.008 to 0.010"
     },
     "whyWeLoveGemStone": {
-      "img": "gems/why-we-love-gemstones/polished-ruby.png",
+      "img": "/gems/why-we-love-gemstones/polished-ruby.png",
       "data": [
         {
           "title": "INTENSE RED GLOW",
@@ -1256,15 +1256,15 @@
   {
     "id": "spinel",
     "title": "SPINEL",
-    "cardImage": "gems/know-your-gemstones/SPINEL.jpg",
+    "cardImage": "/gems/know-your-gemstones/SPINEL.jpg",
     "titleText": "The Black Prince’s Ruby. The Timur Ruby. For centuries, spinel, the great imposter, masqueraded as ruby in Europe’s crown jewels",
-    "titleImage": "gems/why-we-love-gemstones/polished-spinel.png",
+    "titleImage": "/gems/why-we-love-gemstones/polished-spinel.png",
     "aboutName": "SPINEL",
     "aboutDescriptionArray": [
       "Until recently, spinel was an underappreciated gem with little consumer recognition. Increasing demand for ruby alternatives rekindled appreciation for spinel’s rich red color and history.",
       "In ancient times, southeast Asia’s mines yielded exceptional large spinel crystals, which became the treasured property of kings and emperors, often passing through many hands as spoils of war."
     ],
-    "aboutImage": "gems/why-we-love-gemstones/polished-spinel.png",
+    "aboutImage": "/gems/why-we-love-gemstones/polished-spinel.png",
     "birthStoneDetails": "Spinel was recently added as an August birthstone, sharing this month with peridot and sardonyx. It has long been mistaken for ruby by emperors and monarchs. Many of the famous “rubies” of history were actually spinels.",
     "treatmentsDetails": "There are a number of processes used to alter the color, apparent clarity, or improve the durability of gems",
     "syntheticDetails": "Some gemstones have synthetic counterparts that have essentially the same chemical, physical, and optical properties, but are grown by man in a laboratory.",
@@ -1293,7 +1293,7 @@
       "birefringence": "NA"
     },
     "whyWeLoveGemStone": {
-      "img": "gems/why-we-love-gemstones/polished-spinel.png",
+      "img": "/gems/why-we-love-gemstones/polished-spinel.png",
       "data": [
         {
           "title": "STUNNING COLOR",
@@ -1313,15 +1313,15 @@
   {
     "id": "sunstone",
     "title": "SUNSTONE",
-    "cardImage": "gems/know-your-gemstones/SUNSTONE.jpg",
+    "cardImage": "/gems/know-your-gemstones/SUNSTONE.jpg",
     "titleText": "Sunstone’s phenomenal varieties show a distinct and lively glitter called aventurescence.",
-    "titleImage": "gems/why-we-love-gemstones/polished-sunstone.png",
+    "titleImage": "/gems/why-we-love-gemstones/polished-sunstone.png",
     "aboutName": "SUNSTONE",
     "aboutDescriptionArray": [
       "Sunstone is a member of the feldspar group. Both the orthoclase and the plagioclase feldspar species boast a sunstone variety. Other feldspar group gems include moonstone, non-phenomenal orthoclase, phenomenal and non-phenomenal labradorite, and amazonite.",
       "Sunstone from Oregon is gaining attention as a natural and untreated product of the United States."
     ],
-    "aboutImage": "gems/why-we-love-gemstones/polished-sunstone.png",
+    "aboutImage": "/gems/why-we-love-gemstones/polished-sunstone.png",
     "birthStoneDetails": "Not considered as a birthstone.",
     "treatmentsDetails": "There are a number of processes used to alter the color, apparent clarity, or improve the durability of gems.",
     "syntheticDetails": "Some gemstones have synthetic counterparts that have essentially the same chemical, physical, and optical properties, but are grown by man in a laboratory",
@@ -1350,7 +1350,7 @@
       "birefringence": "0.005 - 0.010"
     },
     "whyWeLoveGemStone": {
-      "img": "gems/why-we-love-gemstones/polished-sunstone.png",
+      "img": "/gems/why-we-love-gemstones/polished-sunstone.png",
       "data": [
         {
           "title": "GLITTERY",
@@ -1370,15 +1370,15 @@
   {
     "id": "tanznanite",
     "title": "TAZNANITE",
-    "cardImage": "gems/know-your-gemstones/TANZANITE.jpg",
+    "cardImage": "/gems/know-your-gemstones/TANZANITE.jpg",
     "titleText": "Poised between lush blue, vibrant violet, and rich purple, exotic tanzanite is found in only one place on earth, near majestic Mount Kilimanjar",
-    "titleImage": "gems/why-we-love-gemstones/polished-tanzanite.png",
+    "titleImage": "/gems/why-we-love-gemstones/polished-tanzanite.png",
     "aboutName": "TAZNANITE",
     "aboutDescriptionArray": [
       "Found in just one place on earth, tanzanite is a relatively recent discovery. Tiffany & Co named this blue-violet variety of zoisite in honor of Tanzania, where it was first unearthed in 1967.",
       "Because the crystals show different colors depending on the viewing direction, cutters can fashion gems with a range of color from violetish blue to bluish violet depending on how much weight they want to retain from the rough."
     ],
-    "aboutImage": "gems/why-we-love-gemstones/polished-tanzanite.png",
+    "aboutImage": "/gems/why-we-love-gemstones/polished-tanzanite.png",
     "birthStoneDetails": "Tanzanite is a birthstone for December, along with zircon, turquoise, and blue topaz. Tanzanite is also the gem for a 24th anniversary",
     "treatmentsDetails": "There are a number of processes used to alter the color, apparent clarity, or improve the durability of gems.",
     "syntheticDetails": "Some gemstones have synthetic counterparts that have essentially the same chemical, physical, and optical properties, but are grown by man in a laboratory",
@@ -1407,7 +1407,7 @@
       "birefringence": "0.008 - 0.013"
     },
     "whyWeLoveGemStone": {
-      "img": "gems/why-we-love-gemstones/polished-tanzanite.png",
+      "img": "/gems/why-we-love-gemstones/polished-tanzanite.png",
       "data": [
         {
           "title": "PLEOCHROIC",
@@ -1427,15 +1427,15 @@
   {
     "id": "tourmaline",
     "title": "TOURMALINE",
-    "cardImage": "gems/know-your-gemstones/TOURMALINE.jpg",
+    "cardImage": "/gems/know-your-gemstones/TOURMALINE.jpg",
     "titleText": "Tourmalines have a wide variety of exciting colors with one of the widest color ranges of any gem.",
-    "titleImage": "gems/why-we-love-gemstones/polished-tourmaline.png",
+    "titleImage": "/gems/why-we-love-gemstones/polished-tourmaline.png",
     "aboutName": "TOPAZ",
     "aboutDescriptionArray": [
       "Tourmaline’s colors have many different causes. It’s generally agreed that traces of iron, and possibly titanium, induce green and blue colors.",
       "Manganese produces reds and pinks, and possibly yellows. Some pink and yellow tourmalines might owe their hues to color centers caused by radiation, which can be natural or laboratory-induced."
     ],
-    "aboutImage": "gems/why-we-love-gemstones/polished-tourmaline.png",
+    "aboutImage": "/gems/why-we-love-gemstones/polished-tourmaline.png",
     "birthStoneDetails": "Tourmaline is a birthstone for October, along with opal. Tourmaline is also the gem of the eighth anniversary",
     "treatmentsDetails": "There are a number of processes used to alter the color, apparent clarity, or improve the durability of gems.",
     "syntheticDetails": "Some gemstones have synthetic counterparts that have essentially the same chemical, physical, and optical properties, but are grown by man in a laboratory.",
@@ -1464,7 +1464,7 @@
       "birefringence": "0.018 to 0.040"
     },
     "whyWeLoveGemStone": {
-      "img": "gems/why-we-love-gemstones/polished-tourmaline.png",
+      "img": "/gems/why-we-love-gemstones/polished-tourmaline.png",
       "data": [
         {
           "title": "TRIGONAL SYSTEM",
@@ -1484,15 +1484,15 @@
   {
     "id": "turquoise",
     "title": "TURQUOISE",
-    "cardImage": "gems/know-your-gemstones/TURQUOISE.jpg",
+    "cardImage": "/gems/know-your-gemstones/TURQUOISE.jpg",
     "titleText": "Azure sky, robin’s egg blue: Vivid shades of turquo define the color that’s named after this gem.",
-    "titleImage": "gems/why-we-love-gemstones/polished-turquoise.png",
+    "titleImage": "/gems/why-we-love-gemstones/polished-turquoise.png",
     "aboutName": "TOPAZ",
     "aboutDescriptionArray": [
       "Turquoise is found in only a few places on earth: dry and barren regions where acidic, copper-rich groundwater seeps downward and reacts with minerals that contain phosphorus and aluminum.",
       "The result of this sedimentary process is a porous, semitranslucent to opaque compound of hydrated copper and aluminum phosphate."
     ],
-    "aboutImage": "gems/why-we-love-gemstones/polished-turquoise.png",
+    "aboutImage": "/gems/why-we-love-gemstones/polished-turquoise.png",
     "birthStoneDetails": "Tourmaline is a birthstone for October, along with opal. Tourmaline is also the gem of the eighth anniversary",
     "treatmentsDetails": "Turquoise is the traditional birthstone for the month of December and the gem of the 11th anniversary.",
     "syntheticDetails": "Some gemstones have synthetic counterparts that have essentially the same chemical, physical, and optical properties, but are grown by man in a laboratory",
@@ -1521,7 +1521,7 @@
       "birefringence": "NA"
     },
     "whyWeLoveGemStone": {
-      "img": "gems/why-we-love-gemstones/polished-turquoise.png",
+      "img": "/gems/why-we-love-gemstones/polished-turquoise.png",
       "data": [
         {
           "title": "SPIDERWEB",
@@ -1541,15 +1541,15 @@
   {
     "id": "zircon",
     "title": "ZIRCON",
-    "cardImage": "gems/know-your-gemstones/ZIRCON.jpg",
+    "cardImage": "/gems/know-your-gemstones/ZIRCON.jpg",
     "titleText": "Zircon is a colorful gem with high refraction and fire that’s unfairly confused with cubic zirconia",
-    "titleImage": "gems/why-we-love-gemstones/polished-zircon.png",
+    "titleImage": "/gems/why-we-love-gemstones/polished-zircon.png",
     "aboutName": "ZIRCON",
     "aboutDescriptionArray": [
       "Colorless zircon is known for its brilliance and flashes of multicolored light, called fire. These zircon properties are close enough to the properties of diamond to account for centuries of confusion between the two gems.",
       "Zircon occurs in an array of colors. Its varied palette of yellow, green, red, reddish brown, and blue hues makes it a favorite among collectors as well as informed consumers"
     ],
-    "aboutImage": "gems/why-we-love-gemstones/polished-zircon.png",
+    "aboutImage": "/gems/why-we-love-gemstones/polished-zircon.png",
     "birthStoneDetails": "Turquoise is the traditional birthstone for the month of December and the gem of the 11th anniversary",
     "treatmentsDetails": "There are a number of processes used to alter the color, apparent clarity, or improve the durability of gems.",
     "syntheticDetails": "Some gemstones have synthetic counterparts that have essentially the same chemical, physical, and optical properties, but are grown by man in a laboratory",
@@ -1578,7 +1578,7 @@
       "birefringence": "0 to 0.059"
     },
     "whyWeLoveGemStone": {
-      "img": "gems/why-we-love-gemstones/polished-zircon.png",
+      "img": "/gems/why-we-love-gemstones/polished-zircon.png",
       "data": [
         {
           "title": "GROLOGICAL CLOCK",

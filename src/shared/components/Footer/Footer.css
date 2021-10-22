@@ -32,7 +32,7 @@
 .footer__topLeftSectionTwo > p:first-child > a,
 .footer__topLeftSectionThree > p:first-child > a,
 .footer__topRightSignUp > p:first-child {
-	font-size: 16px;
+	font-size: 14px;
 	text-decoration: none;
 	color: #fff;
 	padding-bottom: 1.5vw;
@@ -45,7 +45,7 @@
 .footer__topLeftSectionThree > p > a {
 	color: #fff;
 	font-family: santral;
-	font-size: 15px;
+	font-size: 14px;
 	line-height: 2.5vw;
 	text-decoration: none;
 }
@@ -53,7 +53,7 @@
 .footer__topRightSignUp > p:nth-child(2) {
 	color: #fff;
 	font-family: santral;
-	font-size: 15px;
+	font-size: 14px;
 	line-height: 2vw;
 	text-decoration: none;
 }
@@ -90,7 +90,7 @@
 	margin-top: 1vw;
 	font-family: santral;
 	border: none;
-	font-size: 15px;
+	font-size: 14px;
 	margin-top: 3vw;
 	text-align: center;
 	background-color: transparent;
@@ -175,7 +175,7 @@
 	.footer__topLeftSectionTwo > p:first-child > a,
 	.footer__topLeftSectionThree > p:first-child > a,
 	.footer__topRightSignUp > p:first-child {
-		font-size: 15px;
+		font-size: 14px;
 	}
 
 	.footer__bottomCountrySelectCountry > select {

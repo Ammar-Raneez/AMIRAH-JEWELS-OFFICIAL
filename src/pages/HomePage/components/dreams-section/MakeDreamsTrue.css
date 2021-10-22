@@ -15,7 +15,7 @@
 .homePage__makeDreamsTrue > .css-1gzxeik > h1 {
   font-family: ginebra_font;
   color: #878787;
-  font-size: 2.5vw;
+  font-size: 2.3vw;
   margin-top: 3vw;
   font-weight: lighter;
 }
@@ -47,7 +47,7 @@
 .homePage__makeDreamsTrue__topPrices > .css-17ud6we > h1 {
   color: #707070;
   font-family: ginebra_font;
-  font-size: 1.7vw;
+  font-size: 1.5vw;
   font-weight: bold;
   align-self: flex-end;
 }
@@ -57,18 +57,18 @@
   font-family: santral;
   font-weight: lighter;
   align-self: flex-end;
-  font-size: 1.7vw;
+  font-size: 1.5vw;
 }
 
 .homePage__makeDreamsTrue__topPurchase > .css-2qfv45 > h1 {
   color: #707070;
   font-family: ginebra_font;
-  font-size: 2.2vw;
+  font-size: 2vw;
   font-weight: lighter;
 }
 
 .homePage__makeDreamsTrue__topPurchase > .css-2qfv45 > p {
-  font-size: 1.5vw;
+  font-size: 1.2vw;
   font-family: santral;
   align-self: flex-end;
   color: #808080;
@@ -81,7 +81,7 @@
   font-family: santral;
   outline: none;
   margin-top: 3vh;
-  font-size: 1.3vw;
+  font-size: 1.2vw;
   border-radius: 1vw;
   background-color: transparent;
   cursor: pointer;
@@ -114,7 +114,7 @@
   font-family: santral;
   color: #707070;
   flex-direction: column;
-  font-size: 1.3vw;
+  font-size: 1.2vw;
   text-align: justify;
   justify-content: space-between;
 }
@@ -259,7 +259,7 @@
   > .css-2qfv45:last-child
   > p {
   font-family: santral;
-  font-size: 1.3vw;
+  font-size: 1.1vw;
   padding-top: 0.5vw;
   color: #606060;
 }
