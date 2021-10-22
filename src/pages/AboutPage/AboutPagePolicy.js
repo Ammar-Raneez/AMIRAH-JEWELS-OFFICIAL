@@ -1,12 +1,12 @@
-import React, { useEffect } from "react";
-import About from "./About/About";
+import React, { useEffect } from 'react';
+import About from './About/About';
 
 function AboutPagePolicy() {
   const pdfPath =
-    "/amirah-details-latest/Other Contents/AMIRAH GEMS WEB PRIVACY POLICY_ocr.pdf";
+    '/amirah-details-latest/Other Contents/AMIRAH GEMS WEB PRIVACY POLICY.pdf';
 
   useEffect(() => {
-    window.open(pdfPath, "_blank");
+    window.open(pdfPath, '_blank');
   }, []);
 
   return (

@@ -56,7 +56,7 @@ const GemOrderBody = () => {
       </section>
     </Container>
   );
-};
+}
 
 export default GemOrderBody;
 

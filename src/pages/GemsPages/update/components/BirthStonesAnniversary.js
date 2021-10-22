@@ -8,7 +8,7 @@ export const BirthStonesAnniversary = ({ birthStoneDetails }) => {
 			<hr />
 		</Container>
 	);
-};
+}
 
 const Container = styled.div `
 	> h2 {

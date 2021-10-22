@@ -7,6 +7,6 @@ function WhiteGemDetail() {
 			<SEO title="White Gems" />
 		</div>
 	);
-};
+}
 
 export default WhiteGemDetail;

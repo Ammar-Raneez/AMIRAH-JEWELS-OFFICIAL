@@ -7,6 +7,6 @@ return (
 			<SEO title="Padparadscha Gems" />
 		</div>
 	);
-};
+}
 
 export default PadparadschaGemDetail;

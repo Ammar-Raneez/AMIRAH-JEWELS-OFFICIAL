@@ -61,7 +61,7 @@
 
 // 		console.log('/' + imagePath.split('/').reverse()[1] + '/' + imagePath.split('/').reverse()[0]);
 // 		setDisplayImage('/' + imagePath.split('/').reverse()[1] + '/' + imagePath.split('/').reverse()[0]);
-// 	};
+// 	}
 
 // 	const addItemToCart = () => {
 // 		if (user) {
@@ -80,7 +80,7 @@
 // 		} else {
 // 			alert('Please sign in to add item to wishlist');
 // 		}
-// 	};
+// 	}
 
 // 	const addItemToWishList = () => {
 // 		if (user) {
@@ -98,7 +98,7 @@
 // 		} else {
 // 			alert('Please sign in to add item to wishlist');
 // 		}
-// 	};
+// 	}
 
 // 	const handleRemoveItemWishlist = () => {
 // 		if (user) {
@@ -107,7 +107,7 @@
 // 		} else {
 // 			alert('Please sign in to add item to wishlist');
 // 		}
-// 	};
+// 	}
 
 // 	return (
 // 		<div className="necklacePendant">

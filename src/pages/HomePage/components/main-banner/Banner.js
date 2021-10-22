@@ -38,6 +38,6 @@ function Banner() {
       <a href="#category"><div className="homePage__banner" /></a>
     )
   );
-};
+}
 
 export default Banner;

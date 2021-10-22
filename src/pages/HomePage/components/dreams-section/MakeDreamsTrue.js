@@ -117,6 +117,6 @@ function MakeDreamsTrue() {
 			</div>
 		</div>
 	);
-};
+}
 
 export default MakeDreamsTrue;

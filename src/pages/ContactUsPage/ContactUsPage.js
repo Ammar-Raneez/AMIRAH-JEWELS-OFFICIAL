@@ -39,7 +39,7 @@ function ContactUsPage() {
 				console.log(error.text);
 			}
 		);
-	};
+	}
 
 	const scheduleACall = (e) => {
 		e.preventDefault();
@@ -56,12 +56,12 @@ function ContactUsPage() {
 				console.log(error.text);
 			}
 		);
-	};
+	}
 
 	// setting the selected date from the calendar
 	const onDateChange = (date, value) => {
 		setScheduleDate(value);
-	};
+	}
 
 	return (
 		<div className="contactUsPage">

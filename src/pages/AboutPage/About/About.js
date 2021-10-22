@@ -42,6 +42,6 @@ function About({
 		</Fade>
 	</div>
 	);
-};
+}
 
 export default About

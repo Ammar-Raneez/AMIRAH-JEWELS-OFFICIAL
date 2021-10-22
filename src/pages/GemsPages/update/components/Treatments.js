@@ -8,7 +8,7 @@ export const Treatments = ({ treatmentsDetails }) => {
 			<hr />
 		</Container>
 	);
-};
+}
 
 const Container = styled.div `
 	> h2 {

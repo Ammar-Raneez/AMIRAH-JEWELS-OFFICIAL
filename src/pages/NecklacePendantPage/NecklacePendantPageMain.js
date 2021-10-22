@@ -6,6 +6,6 @@ const NecklacePendantPageMain = () => {
 			
 		</div>
 	);
-};
+}
 
 export default NecklacePendantPageMain

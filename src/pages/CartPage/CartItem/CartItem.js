@@ -37,7 +37,7 @@ function CartItem({
 				productName: productName,
 			})
 		);
-	};
+	}
 
 	const increaseQuantity = () => {
 		dispatch(
@@ -45,7 +45,7 @@ function CartItem({
 				itemName: productName,
 			})
 		);
-	};
+	}
 
 	const decreaseQuantity = () => {
 		dispatch(
@@ -53,7 +53,7 @@ function CartItem({
 				itemName: productName,
 			})
 		);
-	};
+	}
 
 	const addItemToWishList = () => {
 		dispatch(
@@ -65,7 +65,7 @@ function CartItem({
 				preferredSize: preferredSize,
 			})
 		);
-	};
+	}
 
 	return (
 		<div className="cartItem">

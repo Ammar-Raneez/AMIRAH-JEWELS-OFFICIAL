@@ -1,12 +1,12 @@
-import React, { useEffect } from "react";
-import About from "./About/About";
+import React, { useEffect } from 'react';
+import About from './About/About';
 
 function AboutPageCareer() {
   const pdfPath =
-    "/amirah-details-latest/Other Contents/AMIRAH GEMS WEB CAREER_ocr.pdf";
+    '/amirah-details-latest/Other Contents/AMIRAH GEMS WEB CAREER.pdf';
 
   useEffect(() => {
-    window.open(pdfPath, "_blank");
+    window.open(pdfPath, '_blank');
   }, []);
 
   return (

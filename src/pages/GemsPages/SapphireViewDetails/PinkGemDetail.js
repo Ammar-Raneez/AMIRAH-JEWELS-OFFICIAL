@@ -7,6 +7,6 @@ function PinkGemDetail() {
 			<SEO title="Pink Gems" />
 		</div>
 	);
-};
+}
 
 export default PinkGemDetail;

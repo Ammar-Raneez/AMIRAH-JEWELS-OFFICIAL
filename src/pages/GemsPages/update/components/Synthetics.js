@@ -8,7 +8,7 @@ export const Synthetics = ({ syntheticDetails }) => {
 			<hr />
 		</Container>
 	);
-};
+}
 
 const Container = styled.div `
 	> h2 {

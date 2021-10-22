@@ -29,7 +29,7 @@ function TopBar({ isSpecificProduct }) {
 			auth.signOut();
 			dispatch(logout());
 		}
-	};
+	}
 
 	const toggleDrawer = (open) => (event) => {
 		if (event && event.type === 'keydown' && (event.key === 'Tab' || event.key === 'Shift')) {
@@ -37,7 +37,7 @@ function TopBar({ isSpecificProduct }) {
 		}
 
 		setDrawer(open);
-	};
+	}
 
 	const drawerItems = (anchor) => (
 		<div
@@ -213,6 +213,6 @@ function TopBar({ isSpecificProduct }) {
 			</div>
 		</div>
 	);
-};
+}
 
 export default TopBar;

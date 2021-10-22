@@ -11,7 +11,7 @@ export const AboutGem = ({ aboutName, aboutDescriptionArray, aboutImage }) => {
 			<hr />
 		</Container>
 	);
-};
+}
 
 const Container = styled.div `
 	> h2 {

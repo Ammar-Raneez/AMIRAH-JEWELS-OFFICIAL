@@ -76,7 +76,7 @@ function Footer() {
 	const userSignOut = () => {
 		auth.signOut();
 		dispatch(logout());
-	};
+	}
 
 	// handling the clicked country
 	const handleClickedCountry = (e) => {
@@ -103,7 +103,7 @@ function Footer() {
 		// 	currencyRate: exchangeRates[clickedCC],
 		// 	currencySymbol: currencySymbol,
 		// });
-	};
+	}
 
 	return (
 		<div className="footer">
@@ -250,6 +250,6 @@ function Footer() {
 			</div>
 		</div>
 	);
-};
+}
 
 export default Footer;

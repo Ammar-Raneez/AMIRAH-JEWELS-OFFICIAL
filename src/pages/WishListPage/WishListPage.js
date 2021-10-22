@@ -96,6 +96,6 @@ function WishListPage() {
 			</div>
 		</div>
 	);
-};
+}
 
 export default WishListPage;

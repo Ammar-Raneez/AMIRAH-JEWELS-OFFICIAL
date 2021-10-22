@@ -20,6 +20,6 @@ const RingsPageMain = () => {
 			</div>
 		</div>
 	);
-};
+}
 
 export default RingsPageMain

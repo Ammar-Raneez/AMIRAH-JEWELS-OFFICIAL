@@ -7,6 +7,6 @@ function OrangeGemDetail() {
 			<SEO title="Orange Gems" />
 		</div>
 	);
-};
+}
 
 export default OrangeGemDetail;

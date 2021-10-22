@@ -26,7 +26,7 @@ export const GemStatistics = ({ moreDetails, factsInformation }) => {
 			</section>
 		</Container>
 	);
-};
+}
 
 const Container = styled.div `
 	border: 5px #87541e solid;

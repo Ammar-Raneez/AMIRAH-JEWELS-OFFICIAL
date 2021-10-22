@@ -169,13 +169,13 @@ function CheckOutPage() {
 		} else {
 			setDialogOpen(!dialogOpen);
 		}
-	};
+	}
 
 	const onDateChange = (date, value) => {
 		setCardExpireDate(value);
 		setCardExpYear(value.toString().split(' ')[1]);
 		setCardExpMonth(value.toString().split(' ')[0]);
-	};
+	}
 
 	return (
 		<div className="checkoutPage">

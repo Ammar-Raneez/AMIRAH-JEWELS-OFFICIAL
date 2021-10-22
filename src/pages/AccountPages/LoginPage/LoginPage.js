@@ -45,7 +45,7 @@ function LoginPage() {
 					window.location.reload(true);
 				}, 2000);
 			}).catch(setDialogOpen(!dialogOpen));
-	};
+	}
 
 	// Forget password implementation (using firebase)
 	const forgetPassword = () => {
@@ -56,7 +56,7 @@ function LoginPage() {
 				alert('Please check your email');
 				setForgetEmail('');
 			}).catch((e) => alert(e.message));
-	};
+	}
 
 	return (
 		<div className="loginPage">

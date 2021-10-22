@@ -45,6 +45,6 @@ function RoyalExperience() {
 			</Fade>
 		</div>
 	);
-};
+}
 
 export default RoyalExperience;

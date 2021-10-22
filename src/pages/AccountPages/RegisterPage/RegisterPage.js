@@ -38,7 +38,7 @@ function RegisterPage() {
 		setcompleteBirthday(value);
 		setBirthMonth(value.toString().split('/')[1]);
 		setBirthDay(value.toString().split('/')[0]);
-	};
+	}
 
 	const registerUser = (e) => {
 		e.preventDefault();
@@ -85,7 +85,7 @@ function RegisterPage() {
 					history.replace('/');
 				}, 2000);
 			}).catch((e) => alert(e.message));
-	};
+	}
 
 	return (
 		<div className="registerPage">

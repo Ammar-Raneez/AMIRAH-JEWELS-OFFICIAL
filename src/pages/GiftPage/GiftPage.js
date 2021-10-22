@@ -52,6 +52,6 @@ function GiftPage() {
 			</div>
 		</div>
 	);
-};
+}
 
 export default GiftPage;

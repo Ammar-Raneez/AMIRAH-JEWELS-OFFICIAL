@@ -12,6 +12,6 @@ function OtherProducts({ img, name, viewMoreUrl }) {
 			</a>
 		</Paper>
 	);
-};
+}
 
 export default OtherProducts

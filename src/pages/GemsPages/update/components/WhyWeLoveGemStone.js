@@ -15,7 +15,7 @@ export const WhyWeLoveGemStone = ({ whyWeLoveGemStone }) => {
 			</section>
 		</Container>
 	);
-};
+}
 
 const Container = styled.div `
 	display: flex;

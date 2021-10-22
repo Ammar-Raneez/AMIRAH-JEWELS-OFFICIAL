@@ -9,6 +9,6 @@ function SEO({ title }) {
 			<title>{titleText}</title>
 		</Helmet>
 	);
-};
+}
 
 export default SEO

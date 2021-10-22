@@ -6,7 +6,7 @@ export const saveToLocalStorage = (state) => {
 	} catch (e) {
 		console.log(e);
 	}
-};
+}
 
 export const loadFromLocalStorage = () => {
 	try {
@@ -17,4 +17,4 @@ export const loadFromLocalStorage = () => {
 		console.log(e);
 		return undefined;
 	}
-};
+}

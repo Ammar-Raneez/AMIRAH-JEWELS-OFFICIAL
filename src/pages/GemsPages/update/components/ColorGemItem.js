@@ -8,7 +8,7 @@ const ColorGemItem = ({ img, name }) => {
       <p>{name}</p>
     </Container>
   );
-};
+}
 
 export default ColorGemItem;
 

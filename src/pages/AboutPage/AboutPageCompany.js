@@ -1,13 +1,13 @@
-import About from "./About/About";
-import styled from "styled-components";
-import { useEffect } from "react";
+import About from './About/About';
+import styled from 'styled-components';
+import { useEffect } from 'react';
 
 function AboutPageCompany() {
   const pdfPath =
-    "/amirah-details-latest/Other Contents/AMIRAH GEMS WEB TERMS OF USE_ocr.pdf";
+    '/amirah-details-latest/Other Contents/AMIRAH GEMS WEB TERMS OF USE.pdf';
 
   useEffect(() => {
-    window.open(pdfPath, "_blank");
+    window.open(pdfPath, '_blank');
   }, []);
 
   return (

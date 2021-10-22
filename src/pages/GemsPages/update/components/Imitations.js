@@ -7,7 +7,7 @@ export const Imitations = ({ imitationsDetails }) => {
 			<p>{imitationsDetails}</p>
 		</Container>
 	);
-};
+}
 
 const Container = styled.div `
 	> h2 {

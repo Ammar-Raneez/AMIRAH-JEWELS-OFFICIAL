@@ -10,7 +10,7 @@ const GemOrderTitle = () => {
       </p>
     </Container>
   );
-};
+}
 
 export default GemOrderTitle;
 

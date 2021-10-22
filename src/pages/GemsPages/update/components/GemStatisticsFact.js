@@ -8,7 +8,7 @@ export const GemStatisticsFact = ({ factKey, factValue }) => {
 			</p>
 		</Container>
 	);
-};
+}
 
 const Container = styled.div `
 	margin: 30px 0;

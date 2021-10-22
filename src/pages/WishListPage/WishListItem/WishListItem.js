@@ -34,7 +34,7 @@ function WishListItem({ img, title, price, preferredSize, preferredMetal }) {
 		} else {
 			alert('Please sign in to add item to wishlist');
 		}
-	};
+	}
 
 	const removeItem = () => {
 		if (user) {
@@ -49,7 +49,7 @@ function WishListItem({ img, title, price, preferredSize, preferredMetal }) {
 		} else {
 			alert('Please sign in to add item to wishlist');
 		}
-	};
+	}
 
 	return (
 		<div className="wishListItem">
@@ -77,6 +77,6 @@ function WishListItem({ img, title, price, preferredSize, preferredMetal }) {
 			</div>
 		</div>
 	);
-};
+}
 
 export default WishListItem;

@@ -18,7 +18,7 @@ export const GemTitle = ({ title, titleText, titleImage }) => {
       <img src={titleImage} alt="" />
     </Container>
   );
-};
+}
 
 const Container = styled.div `
   display: flex;

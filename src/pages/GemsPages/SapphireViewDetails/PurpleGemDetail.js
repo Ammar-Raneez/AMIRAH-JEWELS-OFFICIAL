@@ -52,7 +52,7 @@
 // 	const selectedImage = (imagePath, image) => {
 // 		setCurrentImage(image);
 // 		setDisplayImage('/' + imagePath.split('/').reverse()[1] + '/' + imagePath.split('/').reverse()[0]);
-// 	};
+// 	}
 
 // 	const addItemToWishList = () => {
 // 		if (user) {
@@ -69,7 +69,7 @@
 // 		} else {
 // 			alert('Please sign in to add item to wishlist');
 // 		}
-// 	};
+// 	}
 
 // 	const addItemToCart = () => {
 // 		if (user) {
@@ -87,7 +87,7 @@
 // 		} else {
 // 			alert('Please sign in to add item to wishlist');
 // 		}
-// 	};
+// 	}
 
 // 	const removeFromWishList = () => {
 // 		if (user) {
@@ -96,7 +96,7 @@
 // 		} else {
 // 			alert('Please sign in to add item to wishlist');
 // 		}
-// 	};
+// 	}
 
 // 	const tableRow = (description, detail) => (
 // 		<div className="tableRow">
@@ -264,6 +264,6 @@
 // 			</div>
 // 		</div>
 // 	);
-// };
+// }
 
 // export default PurpleGemDetail;

@@ -84,7 +84,7 @@ function RingsPage({
 
 		console.log('/' + imagePath.split('/').reverse()[1] + '/' + imagePath.split('/').reverse()[0]);
 		setDisplayImage('/' + imagePath.split('/').reverse()[1] + '/' + imagePath.split('/').reverse()[0]);
-	};
+	}
 
 	const addItemToCart = () => {
 		if (user) {
@@ -102,7 +102,7 @@ function RingsPage({
 		} else {
 			alert('Please sign in to add item to cart');
 		}
-	};
+	}
 
 	const addItemToWishList = () => {
 		if (user) {
@@ -119,7 +119,7 @@ function RingsPage({
 		} else {
 			alert('Please sign in to add item to wishlist');
 		}
-	};
+	}
 
 	const removeFromWishList = () => {
 		if (user) {
@@ -128,7 +128,7 @@ function RingsPage({
 		} else {
 			alert('Please sign in to add item to wishlist');
 		}
-	};
+	}
 
 	const increaseQuantity = () => {
 		if (user) {
@@ -142,7 +142,7 @@ function RingsPage({
 		} else {
 			alert('Please sign in');
 		}
-	};
+	}
 
 	const decreaseQuantity = () => {
 		if (user) {
@@ -157,7 +157,7 @@ function RingsPage({
 			alert('Please sign in');
 		}
 
-	};
+	}
 
 	return (
 		<div className="ringsPage">

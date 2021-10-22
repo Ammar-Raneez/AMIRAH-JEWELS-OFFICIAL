@@ -53,6 +53,6 @@ function ProcessStep({ img, stepNo, stepName, description, reflect, images=[] })
 			</div>
 		</>
 	);
-};
+}
 
 export default ProcessStep;
