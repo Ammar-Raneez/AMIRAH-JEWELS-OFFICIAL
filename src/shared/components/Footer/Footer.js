@@ -17,6 +17,7 @@ import { changeRate } from '../../../features/currencyRateSlice';
 function Footer() {
 	const [date] = useState(new Date().getFullYear());
 	const history = useHistory();
+	const social = ['https://www.facebook.com/amirahgems', 'https://www.instagram.com/amirahgems/'];
 	const BASE_URL = 'https://v6.exchangerate-api.com/v6/0a31808a3c199a87cfda7925/latest/USD';
 	const [exchangeRates, setExchangeRates] = useState({});
 
@@ -114,7 +115,7 @@ function Footer() {
 							<Link>Customer Service</Link>
 						</p>
 						<p>
-							<Link>Contact Us</Link>
+							<Link to="/contactus">Contact Us</Link>
 						</p>
 						<p>
 							<Link>Product Care & Repair</Link>
@@ -188,13 +189,13 @@ function Footer() {
 					<div className="footer__topRightIcons">
 						<IconButton
 							className="footer__topRightIconButton"
-							onClick={() => window.open('http://www.instagram.com', '_blank')}
+							onClick={() => window.open(social[0], '_blank')}
 						>
 							<InstagramIcon />
 						</IconButton>
 						<IconButton
 							className="footer__topRightIconButton"
-							onClick={() => window.open('http://www.facebook.com', '_blank')}
+							onClick={() => window.open(social[1], '_blank')}
 						>
 							<FacebookIcon />
 						</IconButton>
