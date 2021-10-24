@@ -11,7 +11,7 @@
 
 .bill__topSection > p {
 	font-weight: bold;
-	font-size: 1.5vw;
+	font-size: 1.3vw;
 	font-family: ginebra_font;
 }
 
@@ -22,7 +22,7 @@
 }
 
 .bill__topSection > span > p {
-	font-size: 1.2vw;
+	font-size: 1.1vw;
 }
 
 .bill_middleSection {
@@ -36,7 +36,7 @@
 }
 
 .bill_middleSection > span > p {
-	font-size: 1.2vw;
+	font-size: 1.1vw;
 }
 
 .bill_middleSection > span > p:first-child {
@@ -53,7 +53,7 @@
 	padding: 1vw 1.5vw;
 	border-radius: 1vw;
 	border: 1px solid #d35f46;
-	font-size: 1.2vw;
+	font-size: 1.1vw;
 	font-weight: bold;
 	font-family: ginebra_font;
 	color: white;
@@ -79,7 +79,7 @@
 .bill__bottomSectionButton > a {
 	display: flex;
 	justify-content: center;
-    text-decoration: none;
+	text-decoration: none;
 }
 
 @media screen and (max-width: 900px) and (min-width: 450px) {

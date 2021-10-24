@@ -12,11 +12,13 @@ export const BirthStonesAnniversary = ({ birthStoneDetails }) => {
 
 const Container = styled.div `
 	> h2 {
+		font-size: 18px;
 		margin: 30px 0 8px 0;
 	}
 
 	> p {
 		margin: 0 0 30px 0;
+		font-size: 14px;
 	}
 
 	> hr {

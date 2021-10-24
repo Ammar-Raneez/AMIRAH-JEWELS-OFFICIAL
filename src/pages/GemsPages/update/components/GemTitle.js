@@ -39,6 +39,7 @@ const Container = styled.div `
     }
 
     > p {
+      font-size: 14px;
       margin-top: 5px;
     }
 
@@ -57,7 +58,7 @@ const Container = styled.div `
         outline: none;
         font-family: santral;
         cursor: pointer;
-        font-size: medium;
+        font-size: 14px;
         border: 2px solid #d4765e;
         border-radius: 5pc;
       }

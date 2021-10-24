@@ -29,6 +29,7 @@ const Container = styled.div `
   }
 
   > p {
+    font-size: 14px;
     width: 50%;
     text-align: center;
     margin-top: 5px;

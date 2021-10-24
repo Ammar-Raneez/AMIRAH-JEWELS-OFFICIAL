@@ -26,6 +26,7 @@ const Container = styled.div `
   }
 
   > p {
+    font-size: 14px;
     text-align: center;
     margin: 0.5pc;
   }

@@ -41,9 +41,10 @@ const Container = styled.div `
 	> section {
 		display: flex;
 		justify-content: space-evenly;
-		padding: 60px 30px;
+		padding: 60px 0;
 
 		> div {
+			flex: 1;
 			margin: 0 30px;
 
 			> h2,
@@ -51,8 +52,13 @@ const Container = styled.div `
 				text-align: center;
 			}
 
+			> p {
+				font-size: 14px;
+			}
+
 			> h2 {
 				margin-bottom: 20px;
+				font-size: 18px;
 			}
 		}
 	}

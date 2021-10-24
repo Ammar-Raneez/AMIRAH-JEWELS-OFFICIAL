@@ -41,18 +41,18 @@
 .cartItem__descriptionRightTop > h1 {
 	font-family: santral;
 	font-weight: bolder;
-	font-size: 1.5vw;
+	font-size: 1.3vw;
 	color: black;
 }
 
 .cartItem__descriptionRightBottom > .cartItem__descriptionRightBottomDetails > span > p {
 	font-family: santral;
 	color: #707070;
-	font-size: 1.5vw;
+	font-size: 1.3vw;
 }
 
 .cartItem__descriptionRightBottomDetails > div > input {
-	width: 1.5vw;
+	width: 1.3vw;
 }
 
 .cartItem__descriptionRightBottom > .cartItem__descriptionRightBottomQty > p {
@@ -89,7 +89,7 @@
 	font-family: santral;
 	color: black;
 	font-weight: bold;
-	font-size: 1.2vw;
+	font-size: 1.1vw;
 	transition: 0.3s ease;
 }
 

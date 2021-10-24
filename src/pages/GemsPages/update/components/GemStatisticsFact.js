@@ -14,6 +14,7 @@ const Container = styled.div `
 	margin: 30px 0;
 
 	> p {
+		font-size: 14px;
 		text-align: center;
 	}
 `;

@@ -43,6 +43,14 @@ const Container = styled.div `
 				> p {
 					text-align: center;
 				}
+
+				> h2 {
+					font-size: 18px;
+				}
+
+				> p {
+					font-size: 14px;
+				}
 			}
 		}
 
@@ -57,6 +65,7 @@ const Container = styled.div `
 				border-bottom: 1px solid #db8932;
 				border-width: 2px;
 				padding: 0 0 4px 0;
+				font-size: 18px;
 			}
 		}
 	}

@@ -16,10 +16,12 @@ export const AboutGem = ({ aboutName, aboutDescriptionArray, aboutImage }) => {
 const Container = styled.div `
 	> h2 {
 		margin: 8px 0;
+		font-size: 18px;
 	}
 
 	> p {
 		margin: 20px 0;
+		font-size: 14px;
 	}
 
 	> hr {
@@ -33,7 +35,7 @@ const Container = styled.div `
 
 	> img {
 		object-fit: contain;
-		height: 150px;
+		height: 170px;
 	}
 
 	@media screen and (max-width: 600px) {

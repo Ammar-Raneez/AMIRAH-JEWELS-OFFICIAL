@@ -13,10 +13,12 @@ export const Treatments = ({ treatmentsDetails }) => {
 const Container = styled.div `
 	> h2 {
 		margin: 30px 0 8px 0;
+		font-size: 18px;
 	}
 
 	> p {
 		margin: 0 0 30px 0;
+		font-size: 14px;
 	}
 
 	> hr {

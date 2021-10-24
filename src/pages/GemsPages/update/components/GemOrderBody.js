@@ -133,7 +133,7 @@ const Container = styled.div `
       outline: none;
       font-family: santral;
       cursor: pointer;
-      font-size: medium;
+      font-size: 14px;
       border: 2px solid #d35f46;
       border-radius: 5pc;
     }
