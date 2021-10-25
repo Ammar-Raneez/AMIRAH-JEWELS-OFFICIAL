@@ -91,7 +91,6 @@
 .loadingGif > img {
 	padding: 2.2vw;
 	object-fit: contain;
-	height: 20vw;
 }
 
 @media screen and (max-width: 1700px) and (min-width: 900px) {

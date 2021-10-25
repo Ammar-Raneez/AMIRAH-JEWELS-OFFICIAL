@@ -37,7 +37,6 @@
 .loadingGif > img {
 	padding: 30px;
 	object-fit: contain;
-	height: 250px;
 }
 
 .wishListPage__itemsEmpty {
