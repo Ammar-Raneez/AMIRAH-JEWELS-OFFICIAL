@@ -31,7 +31,7 @@ function WishListPage() {
 		}
 
 		setTempSafetyWishListBasket(true);
-	}, [wishListBasket]);
+	}, [tempSafetyWishListBasket, user?.email, wishListBasket]);
 
 	useEffect(() => {
 		if (tempSafetyCartBasket === true) {
@@ -41,7 +41,7 @@ function WishListPage() {
 		}
 
 		setTempSafetyCartBasket(true);
-	}, [cartBasket]);
+	}, [cartBasket, tempSafetyCartBasket, user?.email]);
 
 	return user ? (
 		<div className="wishListPage" style={wishListBasket.length === 1 ? { height: '85vh' } : {}}>

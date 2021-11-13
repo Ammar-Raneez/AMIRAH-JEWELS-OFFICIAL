@@ -1,0 +1,91 @@
+.authorize {
+	padding: 2vw;
+	height: 90vh;
+	display: flex;
+}
+
+.authorize__login-wrapper {
+	flex: 1;
+	display: flex;
+	justify-content: center;
+}
+
+.authorize__login {
+	width: 40%;
+	overflow-x: hidden;
+	color: black;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.authorize__title {
+	font-family: ginebra_font;
+	font-size: 3rem;
+	text-align: center;
+}
+
+.authorize__subTitle {
+	text-align: center;
+	font-family: santral;
+	font-size: 1.1rem;
+	margin-top: 1vw;
+	margin-bottom: 3vw;
+}
+
+.authorize__login .authorize__loginTop,
+.authorize__login .authorize__loginBottom {
+	width: 100%;
+}
+
+.authorize__login > div > input {
+	width: 95%;
+	outline: none;
+	border-top: none;
+	border-right: none;
+	border-left: none;
+	font-family: santral;
+	padding: 0.8vw;
+	border-bottom: 0.1vw solid #707070;
+	font-size: 1rem;
+	color: #707070;
+}
+
+.authorize__btn {
+	padding: 1vw 3vw;
+	cursor: pointer;
+	margin-top: 1vw;
+	width: 100%;
+	font-family: santral;
+	border: 1px solid #d35f46;
+	font-size: 1.1rem;
+	color: black;
+	outline: none;
+	background-color: #d35f46;
+	border-radius: 0.7rem;
+	margin-top: 2vw;
+	transition: 0.3s ease;
+}
+
+.authorize__btn:hover {
+	background: #fff;
+	border: 1px solid #d35f46;
+}
+
+@media screen and (max-width: 900px) and (min-width: 500px) {
+	.authorize {
+		background-position: 0 0 !important;
+		background-size: contain !important;
+	}
+}
+
+@media screen and (max-width: 500px) {
+	.authorize {
+		height: 98vh;
+	}
+
+	.authorize__login {
+		width: 80%;
+	}
+}

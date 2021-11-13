@@ -85,6 +85,7 @@ function CheckOutPage() {
 		}
 
 		setUpdateCheckoutCollection(true);
+	// eslint-disable-next-line react-hooks/exhaustive-deps
 	}, [allCheckOutDetailsHistory]);
 
 	// WHEN USER CLICKS CHECKOUT BTN, THIS FUNCTION IS FIRED!

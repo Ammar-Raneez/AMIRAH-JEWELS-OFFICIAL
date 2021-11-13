@@ -1,12 +1,10 @@
 import './WishListItem.css';
 import CloseIcon from '@material-ui/icons/Close';
-// import { db } from '../../../firebase';
-// import { useEffect, useState } from 'react';
 import formatCurrency from 'format-currency';
 import { useDispatch, useSelector } from 'react-redux';
 import { selectUser } from '../../../features/userSlice';
-import { removeFromWishlist/*, selectWishlist*/ } from '../../../features/wishlistSlice';
-import { addToCart/*, selectCart*/ } from '../../../features/cartSlice';
+import { removeFromWishlist } from '../../../features/wishlistSlice';
+import { addToCart } from '../../../features/cartSlice';
 import { selectCurrencySymbol } from '../../../features/currencySymbolSlice';
 import { selectCurrencyRate } from '../../../features/currencyRateSlice';
 
@@ -39,13 +37,6 @@ function WishListItem({ img, title, price, preferredSize, preferredMetal }) {
 	const removeItem = () => {
 		if (user) {
 			dispatch(removeFromWishlist({ name: title }));
-
-			// LAST ITEM REMOVE PROBLEM ALTERNATE SOLUTION
-			// if (wishListBasket.length === 1) {
-			// 	db.collection('users').doc(user?.email).update({
-			// 		wishlist: [],
-			// 	});
-			// }
 		} else {
 			alert('Please sign in to add item to wishlist');
 		}

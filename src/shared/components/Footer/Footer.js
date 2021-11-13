@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import './Footer.css';
 import cc from 'currency-codes';
 import coinify from 'coinify';
-import { auth } from '../../../firebase';
+import { auth, db } from '../../../firebase';
 import { IconButton } from '@material-ui/core';
 import InstagramIcon from '@material-ui/icons/Instagram';
 import FacebookIcon from '@material-ui/icons/Facebook';
@@ -59,7 +59,7 @@ function Footer() {
 			}
 
 			// setting the currency and country array
-			// allCountry.sort();
+			allCountry.sort();
 			let copyCountry = [];
 
 			for (let index = 0; index < allCountry.length; index++) {
@@ -72,7 +72,7 @@ function Footer() {
 
 			setDisplayCountryList(true);
 		}
-	}, [loadedAllTheCountries]);
+	}, [exchangeRates, loadedAllTheCountries]);
 
 	const userSignOut = () => {
 		auth.signOut();
@@ -86,24 +86,16 @@ function Footer() {
 		let currencySymbol = coinify.symbol(clickedCC);
 
 		// Dispatch to set the new currency rate
-		// dispatch({
-		// 	type: 'SET_CURRENCY_RATE',
-		// 	currencyRate: exchangeRates[clickedCC],
-		// });
 		dispatch(changeRate(exchangeRates[clickedCC]));
 
 		// Dispatch to set the new currency symbol
-		// dispatch({
-		// 	type: 'SET_CURRENCY_SYMBOL',
-		// 	currencySymbol: currencySymbol,
-		// });
 		dispatch(changeSymbol(currencySymbol));
 
 		// Update the currency and the currency symbol from the DB
-		// db.collection('users').doc(user?.email).update({
-		// 	currencyRate: exchangeRates[clickedCC],
-		// 	currencySymbol: currencySymbol,
-		// });
+		db.collection('users').doc(user?.email).update({
+			currencyRate: exchangeRates[clickedCC],
+			currencySymbol: currencySymbol,
+		});
 	}
 
 	return (

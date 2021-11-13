@@ -125,7 +125,7 @@ function TopBar({ isSpecificProduct }) {
 				</TreeView>
 				<List>
 					{['Instagram', 'Facebook'].map((text, index) => (
-						<a className="topbar__treeItem" href={social[index]} target="_blank" rel="noreferrer">
+						<a className="topbar__treeItem" key={index} href={social[index]} target="_blank" rel="noreferrer">
 							<ListItem key={text}>
 								<ListItemIcon>{index % 2 === 0 ? <InstagramIcon /> : <FacebookIcon />}</ListItemIcon>
 								<ListItemText primary={text} />

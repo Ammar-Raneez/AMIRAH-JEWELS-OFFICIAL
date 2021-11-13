@@ -29,7 +29,7 @@ function CartItem({
 
 	useEffect(() => {
 		dispatch(calculateSubTotal(cartBasket));
-	}, [cartBasket]);
+	}, [cartBasket, dispatch]);
 
 	const removeItemFromCart = () => {
 		dispatch(

@@ -36,7 +36,7 @@ function CartPage() {
 		}
 
 		setUpdateWishList(true);
-	}, [wishListBasket]);
+	}, [updateWishList, user?.email, wishListBasket]);
 
 	useEffect(() => {
 		// Update the database records when the items are updated in the cart (Add to WishLt)
@@ -47,7 +47,7 @@ function CartPage() {
 		}
 
 		setUpdateCartList(true);
-	}, [cartBasket]);
+	}, [cartBasket, updateCartList, user?.email]);
 
 	return user ? (
 		<div className="cartPage">

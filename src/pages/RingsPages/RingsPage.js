@@ -45,7 +45,7 @@ function RingsPage({
 	const [currentMetalType, setCurrentMetalType] = useState('18k Rose Gold');
 	const [currentMetalSize, setCurrentMetalSize] = useState('US 4');
 	const [currentQty, setCurrentQty] = useState(1);
-	const [displayPrice, setDisplayPrice] = useState(false);
+	const [displayPrice, /*setDisplayPrice*/] = useState(false);
 
 	const dispatch = useDispatch();
 
@@ -67,7 +67,7 @@ function RingsPage({
 			});
 		}
 		setTempSafetyWishList(true);
-	}, [wishListBasket]);
+	}, [tempSafetyWishList, user?.email, wishListBasket]);
 
 	useEffect(() => {
 		if (tempSafetyCartBasket === true) {
@@ -76,7 +76,7 @@ function RingsPage({
 			});
 		}
 		setTempSafetyCartBasket(true);
-	}, [cartBasket]);
+	}, [cartBasket, tempSafetyCartBasket, user?.email]);
 
 	// created the image path
 	const selectedImage = (imagePath, image) => {
