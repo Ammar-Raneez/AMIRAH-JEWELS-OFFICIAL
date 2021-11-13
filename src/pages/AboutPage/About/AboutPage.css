@@ -106,7 +106,28 @@
 
 .aboutPageCompanyLast {
 	height: 40vw;
-	margin-bottom: 40vw;
+	margin-bottom: 4vw;
+}
+
+.aboutus_link-btn {
+	padding: 1vw 3vw;
+	cursor: pointer;
+	width: 100%;
+	font-family: santral;
+	border: 1px solid #d35f46;
+	font-size: 1.1rem;
+	color: black;
+	outline: none;
+	background-color: #d35f46;
+	border-radius: 0.7rem;
+	margin-top: 2vw;
+	transition: 0.3s ease;
+	margin-bottom: 34vw;
+}
+
+.aboutus_link-btn:hover {
+	background: #fff;
+	border: 1px solid #d35f46;
 }
 
 @media screen and (max-width: 900px) and (min-width: 450px) {

@@ -109,14 +109,14 @@ function TopBar({ isSpecificProduct }) {
 						<a className="topbar__treeItem" href="/aboutus">
 							<TreeItem nodeId="19" label="- Our Company" />
 						</a>
-						<a className="topbar__treeItem" href="/charity">
-							<TreeItem nodeId="20" label="- Charity" />
-						</a>
 						<a className="topbar__treeItem" href="/careers">
-							<TreeItem nodeId="21" label="- Careers" />
+							<TreeItem nodeId="20" label="- Careers" />
 						</a>
 						<a className="topbar__treeItem" href="/policy">
-							<TreeItem nodeId="22" label="- Policy" />
+							<TreeItem nodeId="21" label="- Policy" />
+						</a>
+						<a className="topbar__treeItem" href="/terms-of-use">
+							<TreeItem nodeId="22" label="- terms-of-use" />
 						</a>
 					</TreeItem>
 					<a className="topbar__treeItem" href="/">

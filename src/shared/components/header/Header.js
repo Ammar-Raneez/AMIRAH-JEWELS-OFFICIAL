@@ -103,14 +103,14 @@ function Header() {
 								<Link style={{ color: '#656565', fontWeight: '600' }} to="/aboutus">
 									OUR COMPANY
 								</Link>
-								<Link className="header__optionsProductDetail" to="/charity">
-									<span>CHARITY</span>
-								</Link>
 								<Link className="header__optionsProductDetail" to="/careers">
 									<span>CAREERS</span>
 								</Link>
 								<Link className="header__optionsProductDetail" to="/policy">
 									<span>POLICY</span>
+								</Link>
+								<Link className="header__optionsProductDetail" to="/terms-of-use">
+									<span>TERMS OF USE</span>
 								</Link>
 							</div>
 						)}

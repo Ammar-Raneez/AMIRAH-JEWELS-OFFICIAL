@@ -11,8 +11,13 @@ function About({
 	secondSubHeader,
 	secondFirstPara,
 	secondSecondPara,
-	secondThirdPara
+	secondThirdPara,
+	readMoreLink
 }) {
+	const readMore = () => {
+		window.open(readMoreLink);
+	}
+
 	return (
 	<div className="aboutPageCompany">
 		<SEO title={seoTitle} />
@@ -31,14 +36,20 @@ function About({
 				<p className="aboutPageCompanyMiddleLast"></p>
 			</div>
 		</Fade>
+		{secondHeader && (
+			<Fade direction="right">
+				<div className="aboutPageCompanyLast">
+					<h2>{secondHeader}</h2>
+					<h2>{secondSubHeader}</h2>
+					<p>{secondFirstPara}</p>
+					<p>{secondSecondPara}</p>
+					<p>{secondThirdPara}</p>
+				</div>
+			</Fade>
+		)}
+
 		<Fade direction="right">
-			<div className="aboutPageCompanyLast">
-				<h2>{secondHeader}</h2>
-				<h2>{secondSubHeader}</h2>
-				<p>{secondFirstPara}</p>
-				<p>{secondSecondPara}</p>
-				<p>{secondThirdPara}</p>
-			</div>
+			<button className="aboutus_link-btn" onClick={readMore}>Read Full Document</button>
 		</Fade>
 	</div>
 	);

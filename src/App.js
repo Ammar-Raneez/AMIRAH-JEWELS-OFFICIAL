@@ -5,7 +5,6 @@ import Footer from './shared/components/Footer/Footer';
 import TopBar from './shared/components/topbar/TopBar';
 import Header from './shared/components/header/Header';
 import AboutPageCompany from './pages/AboutPage/AboutPageCompany';
-import AboutPageCharity from './pages/AboutPage/AboutPageCharity';
 import GemStonesMain from './pages/GemsPages/GemStonesMain/GemStonesMain';
 import ProcessPage from './pages/ProcessPage/ProcessPage';
 import AboutPagePolicy from './pages/AboutPage/AboutPagePolicy';
@@ -36,6 +35,7 @@ import DesignerDeskPage from './pages/DesignerDeskPage/DesignerDeskPage';
 import GemOrderPage from './pages/GemsPages/update/GemOrderPage';
 import Authorize from './pages/authorize/Authorize';
 import ComingSoon from './pages/ComingSoon/ComingSoon';
+import AboutPageTermsOfUse from './pages/AboutPage/AboutPageTermsOfUse';
 
 function App() {
   const [isAuthorized, setIsAuthorized] = useState(false);
@@ -246,10 +246,10 @@ function App() {
               <AboutPageCareer />
               <Footer />
             </Route>
-            <Route path="/charity">
+            <Route path="/terms-of-use">
               <TopBar />
               <Header />
-              <AboutPageCharity />
+              <AboutPageTermsOfUse />
               <Footer />
             </Route>
 
