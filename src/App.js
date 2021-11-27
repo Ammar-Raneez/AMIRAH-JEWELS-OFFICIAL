@@ -13,14 +13,14 @@ import LoginPage from './pages/AccountPages/LoginPage/LoginPage';
 import WishListPage from './pages/WishListPage/WishListPage';
 import NecklacePendantPageMain from './pages/NecklacePendantPage/NecklacePendantPageMain';
 import GiftPage from './pages/GiftPage/GiftPage';
-import { useState, useEffect } from 'react';
+import { useEffect } from 'react';
 import { auth, db } from './firebase';
 import CartPage from './pages/CartPage/CartPage';
 import CheckOutPage from './pages/CheckOutPage/CheckOutPage';
 import ContactUsPage from './pages/ContactUsPage/ContactUsPage';
 import RingsPage from './pages/RingsPages/RingsPage';
 import { login, logout } from './features/userSlice';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { addToCart } from './features/cartSlice';
 import { addToWishlist } from './features/wishlistSlice';
 import { changeRate } from './features/currencyRateSlice';
@@ -36,9 +36,10 @@ import GemOrderPage from './pages/GemsPages/update/GemOrderPage';
 import Authorize from './pages/authorize/Authorize';
 import ComingSoon from './pages/ComingSoon/ComingSoon';
 import AboutPageTermsOfUse from './pages/AboutPage/AboutPageTermsOfUse';
+import { isAuthorized } from './features/authorizedSlice';
 
 function App() {
-  const [isAuthorized, setIsAuthorized] = useState(false);
+  const authorized = useSelector(isAuthorized);
   const dispatch = useDispatch();
 
 	useEffect(() => {
@@ -97,7 +98,7 @@ function App() {
 	}, [dispatch]);
 
   return (
-    isAuthorized ? (
+    authorized ? (
       <Router>
         <div className="app">
           <Switch>
@@ -299,10 +300,7 @@ function App() {
         </div>
       </Router>
     ): (
-      <Authorize
-        isAuthorized={isAuthorized}
-        setIsAuthorized={setIsAuthorized}
-      />
+      <Authorize />
     )
   );
 }

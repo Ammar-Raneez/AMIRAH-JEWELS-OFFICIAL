@@ -1,17 +1,19 @@
 import { useRef, useState } from 'react';
+import { useDispatch } from 'react-redux';
 import { TextValidator, ValidatorForm } from 'react-material-ui-form-validator';
 import './authorize.css';
+import { allow } from '../../features/authorizedSlice';
 
-function Authorize({ _, setIsAuthorized }) {
+function Authorize({ _ }) {
 	const formRef = useRef('form');
-	const [email, setEmail] = useState('');
 	const [password, setPassword] = useState('');
+	const dispatch = useDispatch();
 
 	const signIn = (event) => {
 		event.preventDefault();
 
-		if (email === 'amirahadmin@gmail.com' && password === 'AmirahAdmin123') {
-			setIsAuthorized(true);
+		if (password === 'AmirahAdmin123') {
+			dispatch(allow());
 		} else {
 			alert('Invalid Credentials');
 		}
@@ -34,15 +36,7 @@ function Authorize({ _, setIsAuthorized }) {
 					</div>
 					<div className="authorize__loginBottom">
 						<ValidatorForm onSubmit={signIn} ref={formRef} className="authorize__form">
-							<TextValidator
-								style={{ width: '100%' }}
-								label="Email"
-								name="email"
-								onChange={(e) => setEmail(e.target.value)}
-								value={email}
-								errorMessages="Please add an email"
-								validators={["required", "isEmail"]}
-							/>
+
 							<TextValidator
 								style={{ width: '100%' }}
 								type="password"

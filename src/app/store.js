@@ -1,6 +1,7 @@
 import { configureStore } from '@reduxjs/toolkit';
 import userReducer from '../features/userSlice';
 import currencySymbolReducer from '../features/currencySymbolSlice';
+import isAuthorizedReducer from '../features/authorizedSlice';
 import currencyRateReducer from '../features/currencyRateSlice';
 import cartReducer from '../features/cartSlice';
 import wishlistReducer from '../features/wishlistSlice';
@@ -17,6 +18,7 @@ export const store = configureStore({
 		cart: cartReducer,
 		wishlist: wishlistReducer,
 		cost: costReducer,
+		isAuthorized: isAuthorizedReducer
 	},
 
 	preloadedState: persistedState,
