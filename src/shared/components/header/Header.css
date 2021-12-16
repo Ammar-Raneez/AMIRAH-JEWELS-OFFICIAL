@@ -39,7 +39,7 @@
 }
 
 .header__optionsAboutDetails {
-	font-size: 1vw;
+	font-size: 0.9vw;
 	position: absolute;
 	margin-top: 3.5vw;
 	padding: 0.8vw;
@@ -48,13 +48,14 @@
 	background-color: #fff;
 	display: flex;
 	flex-direction: column;
+	font-family: santral;
 	border-radius: 0.8vw;
 	box-shadow: 0vw 0.1vw 0.6vw rgba(0, 0, 0, 0.12),
 		0 0.1vw 0.2vw rgba(0, 0, 0, 0.24);
 }
 
 .header__optionsProductDetails {
-	font-size: 1vw;
+	font-size: 0.9vw;
 	position: absolute;
 	margin-top: 3.5vw;
 	margin-left: 18vw;
@@ -63,6 +64,7 @@
 	padding: 0.8vw;
 	width: 30vw;
 	display: flex;
+	font-family: santral;
 	justify-content: space-evenly;
 	border-radius: 0.8vw;
 	box-shadow: 0vw 0.1vw 0.6vw rgba(0, 0, 0, 0.12),

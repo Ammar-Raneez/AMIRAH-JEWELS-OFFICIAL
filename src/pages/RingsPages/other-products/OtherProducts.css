@@ -18,7 +18,8 @@
 
 .product > a > img {
 	object-fit: contain;
-	height: 220px;
+	position: relative;
+	width: 100%;
 }
 
 .product > a {

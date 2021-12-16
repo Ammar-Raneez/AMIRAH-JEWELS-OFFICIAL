@@ -104,71 +104,70 @@ function Footer() {
 				<div className="footer__topLeft">
 					<div className="footer__topLeftSectionOne">
 						<p>
-							<Link>Customer Service</Link>
+							<Link>CUSTOMER SERVICE</Link>
 						</p>
 						<p>
-							<Link to="/contactus">Contact Us</Link>
+							<Link to="/contactus">CONTACT US</Link>
 						</p>
 						<p>
-							<Link>Product Care & Repair</Link>
+							<Link>PRODUCT CARE & REPAIR</Link>
 						</p>
 						<p>
-							<Link>Book an Appointment</Link>
+							<Link>BOOK AN APPOINTMENT</Link>
 						</p>
 						<p>
-							<Link>Frequently Asked Questions</Link>
+							<Link>FREQUENTLY ASKED QUESTIONS</Link>
 						</p>
 						<p>
-							<Link>Shipping & Returns</Link>
+							<Link>SHIPPING & RETURNS</Link>
 						</p>
 						<p>
-							<Link>Tiffany Select Financing</Link>
+							<Link>TIFFANY SELECT FINANCING</Link>
 						</p>
 						<p>
-							<Link>Gift Cards</Link>
+							<Link>GIFT CARDS</Link>
 						</p>
 					</div>
 					<div className="footer__topLeftSectionTwo">
 						<p>
-							<Link>Our Company</Link>
+							<Link>OUR COMPANY</Link>
 						</p>
 						<p>
-							<Link>World of Amirah</Link>
+							<Link>WORLD OF AMIRAH</Link>
 						</p>
 						<p>
-							<Link>Sustainability</Link>
+							<Link>SUSTAINABILITY</Link>
 						</p>
 						<p>
-							<Link>CA Supply Chains Act</Link>
+							<Link>CA SUPPLY CHAINS ACT</Link>
 						</p>
 						<p>
-							<Link>Amirah Careers</Link>
+							<Link>AMIRAH CAREERS</Link>
 						</p>
 						<p>
-							<Link>Website Policies</Link>
+							<Link>WEBSITE POLICIES</Link>
 						</p>
 						<p>
-							<Link>Report an Issue</Link>
+							<Link>REPORT AN ISSUE</Link>
 						</p>
 					</div>
 					<div className="footer__topLeftSectionThree">
 						<p>
-							<Link>Related Amirah Sites</Link>
+							<Link>RELATED AMIRAH SITES</Link>
 						</p>
 						<p>
-							<Link>Wedding & Gift Registry</Link>
+							<Link>WEDDING & GIFT REGISTRY</Link>
 						</p>
 						<p>
-							<Link>Business Accounts</Link>
+							<Link>BUSINESS ACCOUNTS</Link>
 						</p>
 					</div>
 				</div>
 				<div className="footer__topRight">
 					<div className="footer__topRightSignUp">
-						<p>Latest by Amirah Gems</p>
+						<p>LATEST BY AMIRAH GEMS</p>
 						<p className="footer__rightSectionDescription">
-							Be the first to know about exciting new designs, special events, store openings and much
-							more.
+							BE THE FIRST TO KNOW ABOUT EXCITING NEW DESIGNS, SPECIAL EVENTS, STORE OPENINGS AND MUCH MORE.
 						</p>
 						{!user ? (
 							<Link to="/register" target="_top">

@@ -17,7 +17,7 @@ function RoyalExperience() {
 				<div className="homePage__middleSectionMiddleContainer">
 					<div>
 						<RoomServiceIcon />
-						<p>Amirah At Your Service</p>
+						<p>AMIRAH AT YOUR SERVICE</p>
 						<p className="homePage__middleSectionMiddleContainerDesc">
 							Our customer service
 							experts are always here to
@@ -26,7 +26,7 @@ function RoyalExperience() {
 					</div>
 					<div>
 						<CalendarTodayIcon />
-						<p>Book an Appointment</p>
+						<p>BOOK AN APPOINTMENT</p>
 						<p className="homePage__middleSectionMiddleContainerDesc">
 							We are happy to help you
 							in-store or virtual
@@ -35,7 +35,7 @@ function RoyalExperience() {
 					</div>
 					<div>
 						<MonetizationOnIcon />
-						<p>Easy Payment</p>
+						<p>EASY PAYMENT</p>
 						<p className="homePage__middleSectionMiddleContainerDesc">
 							We provide easy payment
 							facilities at your convience

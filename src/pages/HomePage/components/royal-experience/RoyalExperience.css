@@ -51,14 +51,15 @@
 }
 
 .homePage__middleSectionMiddleContainer div p {
-  font-size: 1.2vw;
+  font-size: 1.3vw;
   text-align: center;
   margin-top: 2vw;
-  font-family: santral;
+  font-family: ginebra_font;
 }
 
 .homePage__middleSectionMiddleContainerDesc {
   font-size: 1.2vw !important;
+  font-family: santral !important;
 }
 
 @media screen and (max-width: 768px) and (min-width: 400px) {

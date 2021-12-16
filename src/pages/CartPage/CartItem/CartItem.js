@@ -79,8 +79,8 @@ function CartItem({
 				<div className="cartItem__descriptionRight">
 					<div className="cartItem__descriptionRightTop">
 						<h1>
-							{productName} {preferredMetal !== null && ` • ${preferredMetal} • `}
-							{preferredSize !== null && ` ${preferredSize}  `}
+							{productName.toUpperCase()} {preferredMetal !== null && ` • ${preferredMetal.toUpperCase()} • `}
+							{preferredSize !== null && ` ${preferredSize.toUpperCase()}  `}
 						</h1>
 					</div>
 					<div className="cartItem__descriptionRightBottom">
