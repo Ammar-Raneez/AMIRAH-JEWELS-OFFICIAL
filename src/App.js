@@ -33,8 +33,8 @@ import BraceletsPage from './pages/BraceletsPage/BraceletsPage';
 import EarringsPage from './pages/EarringsPage/EarringsPage';
 import DesignerDeskPage from './pages/DesignerDeskPage/DesignerDeskPage';
 import GemOrderPage from './pages/GemsPages/update/GemOrderPage';
-import Authorize from './pages/Authorize/Authorize';
-import ComingSoon from './pages/ComingSoon/ComingSoon';
+import Authorize from './pages/AuthorizePage/Authorize';
+import ComingSoon from './pages/ComingSoonPage/ComingSoon';
 import AboutPageTermsOfUse from './pages/AboutPage/AboutPageTermsOfUse';
 import { isAuthorized } from './features/authorizedSlice';
 
