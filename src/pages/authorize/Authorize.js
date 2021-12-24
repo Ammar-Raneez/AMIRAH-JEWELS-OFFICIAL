@@ -1,7 +1,7 @@
 import { useRef, useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { TextValidator, ValidatorForm } from 'react-material-ui-form-validator';
-import './authorize.css';
+import './Authorize.css';
 import { allow } from '../../features/authorizedSlice';
 
 function Authorize({ _ }) {

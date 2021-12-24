@@ -1,4 +1,4 @@
-import './comingSoon.css';
+import './ComingSoon.css';
 import FacebookIcon from '@material-ui/icons/Facebook';
 import InstagramIcon from '@material-ui/icons/Instagram';
 
