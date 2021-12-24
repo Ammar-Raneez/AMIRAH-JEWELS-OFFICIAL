@@ -51,14 +51,14 @@ function RingsPage({
 
 	const [width, setWidth] = useState(0);
 
-    useEffect(() => {
-        setWidth(window.innerWidth);
-        const listener = window.addEventListener('resize', () => {
-            setWidth(window.innerWidth);
-        });
+	useEffect(() => {
+		setWidth(window.innerWidth);
+		const listener = window.addEventListener('resize', () => {
+			setWidth(window.innerWidth);
+		});
 
-        return window.removeEventListener('resize', listener);
-    }, [width])
+		return window.removeEventListener('resize', listener);
+	}, [width])
 
 	useEffect(() => {
 		if (tempSafetyWishList === true) {
@@ -81,8 +81,6 @@ function RingsPage({
 	// created the image path
 	const selectedImage = (imagePath, image) => {
 		setCurrentImage(image);
-
-		console.log('/' + imagePath.split('/').reverse()[1] + '/' + imagePath.split('/').reverse()[0]);
 		setDisplayImage('/' + imagePath.split('/').reverse()[1] + '/' + imagePath.split('/').reverse()[0]);
 	}
 
@@ -190,7 +188,7 @@ function RingsPage({
 					/>
 				</div>
 				{
-					width > 600 ? 
+					width > 600 ?
 						<div className="ringsPage__sectionCartMainImage">
 							<ReactImageMagnify
 								hoverDelayInMs={0.1}
@@ -211,7 +209,7 @@ function RingsPage({
 								}}
 							/>
 						</div>
-					:
+						:
 						<Carousel showArrows={true}>
 							<div>
 								<img alt="" height={250} width="90%" src={images[0]} />
@@ -284,45 +282,45 @@ function RingsPage({
 							</select>
 						</div>
 						<div className="ringsPage__sectionCartCartDetailsItem">
-							<p style={{flex: 1}}>Quantity</p>
+							<p style={{ flex: 1 }}>Quantity</p>
 							<button
-									style={{
-										padding: '0.5vw 1vw',
-										fontSize: '1.5vw',
-										background: 'transparent',
-										border: 'none',
-										cursor: 'pointer',
-									}}
-									onClick={decreaseQuantity}
-								>
-									−
-								</button>
-								<input
-									style={{
-										textAlign: 'center',
-										padding: '1vw',
-										width: '3vw',
-										background: 'transparent',
-										border: 'none',
-									}}
-									type="number"
-									disabled={true}
-									name="Quantity"
-									placeholder="Quantity"
-									value={currentQty}
-								/>
-								<button
-									style={{
-										padding: '0.5vw 0vw',
-										fontSize: '1.5vw',
-										background: 'transparent',
-										border: 'none',
-										cursor: 'pointer',
-									}}
-									onClick={increaseQuantity}
-								>
-									+
-								</button>
+								style={{
+									padding: '0.5vw 1vw',
+									fontSize: '1.5vw',
+									background: 'transparent',
+									border: 'none',
+									cursor: 'pointer',
+								}}
+								onClick={decreaseQuantity}
+							>
+								−
+							</button>
+							<input
+								style={{
+									textAlign: 'center',
+									padding: '1vw',
+									width: '3vw',
+									background: 'transparent',
+									border: 'none',
+								}}
+								type="number"
+								disabled={true}
+								name="Quantity"
+								placeholder="Quantity"
+								value={currentQty}
+							/>
+							<button
+								style={{
+									padding: '0.5vw 0vw',
+									fontSize: '1.5vw',
+									background: 'transparent',
+									border: 'none',
+									cursor: 'pointer',
+								}}
+								onClick={increaseQuantity}
+							>
+								+
+							</button>
 						</div>
 						<p>
 							{displayPrice &&
@@ -355,7 +353,7 @@ function RingsPage({
 										<h4>Product specification</h4>
 										{specification.map(specs => <p>{specs}</p>)}
 									</Collapse>
-									<Collapse style={readMoreDescription && { marginBottom: '0.7rem' }}  in={readMoreDescription}>
+									<Collapse style={readMoreDescription && { marginBottom: '0.7rem' }} in={readMoreDescription}>
 										<h4>Gemstone Information</h4>
 										{stoneInfo.map(info => <p>{info}</p>)}
 									</Collapse>
@@ -383,13 +381,11 @@ function RingsPage({
 				<Fade cascade>
 					<h2>YOU MAY ALSO LIKE</h2>
 				</Fade>
-				<div className="ringsPage__otherProductsProducts">
-					<Fade delay={500} cascade>
-						<div className="ringsPage__otherProductsRow">
-							{ringData.map((ring) => (
-								ring.title !== title && (
-									<OtherProducts img={ring.images[0]} name={ring.title} viewMoreUrl={`/rings/` + ring.id} />
-								)
+				<div className="rings-page-main__rings">
+					<Fade cascade>
+						<div>
+							{ringData.map((ring) => ring.title !== title && (
+								<OtherProducts key={ring.id} img={ring.images[0]} name={ring.title} viewMoreUrl={`/rings/` + ring.id} />
 							))}
 						</div>
 					</Fade>

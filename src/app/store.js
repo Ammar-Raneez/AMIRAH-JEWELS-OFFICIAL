@@ -1,4 +1,4 @@
-import { configureStore } from '@reduxjs/toolkit';
+import { configureStore, getDefaultMiddleware } from '@reduxjs/toolkit';
 import userReducer from '../features/userSlice';
 import currencySymbolReducer from '../features/currencySymbolSlice';
 import isAuthorizedReducer from '../features/authorizedSlice';
@@ -20,7 +20,9 @@ export const store = configureStore({
 		cost: costReducer,
 		isAuthorized: isAuthorizedReducer
 	},
-
+  middleware: getDefaultMiddleware({
+    serializableCheck: false,
+  }),
 	preloadedState: persistedState,
 });
 

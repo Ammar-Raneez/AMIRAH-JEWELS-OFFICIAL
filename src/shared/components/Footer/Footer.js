@@ -104,62 +104,62 @@ function Footer() {
 				<div className="footer__topLeft">
 					<div className="footer__topLeftSectionOne">
 						<p>
-							<Link>CUSTOMER SERVICE</Link>
+							<Link to="/">CUSTOMER SERVICE</Link>
 						</p>
 						<p>
 							<Link to="/contactus">CONTACT US</Link>
 						</p>
 						<p>
-							<Link>PRODUCT CARE & REPAIR</Link>
+							<Link to="/">PRODUCT CARE & REPAIR</Link>
 						</p>
 						<p>
-							<Link>BOOK AN APPOINTMENT</Link>
+							<Link to="/">BOOK AN APPOINTMENT</Link>
 						</p>
 						<p>
-							<Link>FREQUENTLY ASKED QUESTIONS</Link>
+							<Link to="/">FREQUENTLY ASKED QUESTIONS</Link>
 						</p>
 						<p>
-							<Link>SHIPPING & RETURNS</Link>
+							<Link to="/">SHIPPING & RETURNS</Link>
 						</p>
 						<p>
-							<Link>TIFFANY SELECT FINANCING</Link>
+							<Link to="/">TIFFANY SELECT FINANCING</Link>
 						</p>
 						<p>
-							<Link>GIFT CARDS</Link>
+							<Link to="/">GIFT CARDS</Link>
 						</p>
 					</div>
 					<div className="footer__topLeftSectionTwo">
 						<p>
-							<Link>OUR COMPANY</Link>
+							<Link to="/">OUR COMPANY</Link>
 						</p>
 						<p>
-							<Link>WORLD OF AMIRAH</Link>
+							<Link to="/">WORLD OF AMIRAH</Link>
 						</p>
 						<p>
-							<Link>SUSTAINABILITY</Link>
+							<Link to="/">SUSTAINABILITY</Link>
 						</p>
 						<p>
-							<Link>CA SUPPLY CHAINS ACT</Link>
+							<Link to="/">CA SUPPLY CHAINS ACT</Link>
 						</p>
 						<p>
-							<Link>AMIRAH CAREERS</Link>
+							<Link to="/">AMIRAH CAREERS</Link>
 						</p>
 						<p>
-							<Link>WEBSITE POLICIES</Link>
+							<Link to="/">WEBSITE POLICIES</Link>
 						</p>
 						<p>
-							<Link>REPORT AN ISSUE</Link>
+							<Link to="/">REPORT AN ISSUE</Link>
 						</p>
 					</div>
 					<div className="footer__topLeftSectionThree">
 						<p>
-							<Link>RELATED AMIRAH SITES</Link>
+							<Link to="/">RELATED AMIRAH SITES</Link>
 						</p>
 						<p>
-							<Link>WEDDING & GIFT REGISTRY</Link>
+							<Link to="/">WEDDING & GIFT REGISTRY</Link>
 						</p>
 						<p>
-							<Link>BUSINESS ACCOUNTS</Link>
+							<Link to="/">BUSINESS ACCOUNTS</Link>
 						</p>
 					</div>
 				</div>
@@ -174,7 +174,7 @@ function Footer() {
 								SIGN UP
 							</Link>
 						) : (
-							<Link onClick={userSignOut}>SIGN OUT</Link>
+							<span onClick={userSignOut}>SIGN OUT</span>
 						)}
 					</div>
 					<div className="footer__topRightIcons">

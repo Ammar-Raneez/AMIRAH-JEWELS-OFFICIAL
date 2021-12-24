@@ -18,15 +18,16 @@ function Header() {
 					onClickAway={() => setProductsClicked(false)}
 				>
 					<div>
-						<Link
+						<span
 							onMouseOver={() => {
 								setProductsClicked(!productsClicked);
 								setAboutUsClicked(false);
 							}}
-							className={productsClicked && 'header_optionsJewellery'}
+							style={{ cursor: 'pointer' }}
+							className={productsClicked ? 'header_optionsJewellery': ''}
 						>
 							JEWELLERY
-						</Link>
+						</span>
 						{productsClicked && (
 							<div className="header__optionsProductDetails">
 								<div>
@@ -89,15 +90,16 @@ function Header() {
 					onClickAway={() => setAboutUsClicked(false)}
 				>
 					<div>
-						<Link
+						<span
 							onMouseOver={() => {
 								setAboutUsClicked(!aboutUsClicked);
 								setProductsClicked(false);
 							}}
-							className={aboutUsClicked && 'header_optionsJewellery'}
+							style={{ cursor: 'pointer' }}
+							className={aboutUsClicked ? 'header_optionsJewellery': ''}
 						>
 							ABOUT US
-						</Link>
+						</span>
 						{aboutUsClicked && (
 							<div className="header__optionsAboutDetails">
 								<Link style={{ color: '#656565', fontWeight: '600' }} to="/aboutus">

@@ -2,7 +2,7 @@ import { useEffect, useRef, useState } from 'react';
 import { useHistory } from 'react-router-dom';
 import { auth, db } from '../../../firebase';
 import './RegisterPage.css';
-import firebase from 'firebase';
+import firebase from 'firebase/app';
 import { FormControl, FormControlLabel, FormLabel, Radio, RadioGroup } from '@material-ui/core';
 import DateFnsUtils from '@date-io/date-fns';
 import { KeyboardDatePicker, MuiPickersUtilsProvider } from '@material-ui/pickers';
@@ -42,8 +42,6 @@ function RegisterPage() {
 
 	const registerUser = (e) => {
 		e.preventDefault();
-		console.log(birthMonth, birthDay);
-
 		if (!firstName || !email || !password || !lastName) {
 			return;
 		}

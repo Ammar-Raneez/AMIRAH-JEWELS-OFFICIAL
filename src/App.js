@@ -161,7 +161,7 @@ function App() {
             </Route>
 
             {ringData.map((ring) => (
-              <Route id={ring.id} path={`/rings/` + ring.id}>
+              <Route key={ring.id} id={ring.id} path={`/rings/` + ring.id}>
                 <TopBar isSpecificProduct={true} />
                 <Header />
                 <RingsPage
@@ -178,7 +178,7 @@ function App() {
             ))}
 
             {gemData.map((gem) => (
-              <Route id={gem.id} path={`/gems/${gem.id}`}>
+              <Route key={gem.id} id={gem.id} path={`/gems/${gem.id}`}>
                 <TopBar isSpecificProduct={true} />
                 <Header />
                 <GemDetailPage data={gem} />

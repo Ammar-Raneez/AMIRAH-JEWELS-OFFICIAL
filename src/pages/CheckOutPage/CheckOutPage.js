@@ -56,7 +56,6 @@ function CheckOutPage() {
 	// Adding the order details into the database
 	useEffect(() => {
 		if (updateCheckoutCollection) {
-			console.log('adding to database');
 			db.collection('users')
 				.doc(user?.email)
 				.update({
@@ -104,7 +103,6 @@ function CheckOutPage() {
 				snapshot.docs.forEach((doc) => {
 					if (doc.id === user?.email) {
 						// getting the current checkout orders present from the database
-						console.log('Adding old items inside');
 						tempArray = [];
 						for (const checkOutDetails of doc.data()?.checkOutOrders) {
 							tempArray.push(checkOutDetails);
