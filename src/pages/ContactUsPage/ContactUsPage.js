@@ -13,8 +13,8 @@ import {
 } from '@material-ui/core';
 import { useRef, useState } from 'react';
 import { TextValidator, ValidatorForm } from 'react-material-ui-form-validator';
-import { KeyboardDatePicker, MuiPickersUtilsProvider } from '@material-ui/pickers';
-import DateFnsUtils from '@date-io/date-fns';
+// import { KeyboardDatePicker, MuiPickersUtilsProvider } from '@material-ui/pickers';
+// import DateFnsUtils from '@date-io/date-fns';
 import SEO from '../../shared/components/SEO/SEO';
 
 function ContactUsPage() {
@@ -23,7 +23,7 @@ function ContactUsPage() {
 	const [email, setEmail] = useState();
 	const [message, setMessage] = useState('');
 	const [scheduleACallDialogOpen, setScheduleACallDialogOpen] = useState(false);
-	const [scheduleDate, setScheduleDate] = useState();
+	// const [scheduleDate, setScheduleDate] = useState();
 
 	const sendEmail = (e) => {
 		e.preventDefault();
@@ -46,12 +46,12 @@ function ContactUsPage() {
 		setScheduleACallDialogOpen(!scheduleACallDialogOpen);
 
 		// SENDING MAIL FUNCTIONALITY
-		emailjs.sendForm('service_lvksm7m', 'amirah_scheduleCall', e.target, 'user_pxB9WpI7yEgKMxO3A4XCP').then(
+		emailjs.sendForm('service_lvksm7m', 'amirah_contactUs', e.target, 'user_pxB9WpI7yEgKMxO3A4XCP').then(
 			(result) => {
 				console.log(result.text);
 				setEmail('');
 				setMessage('');
-				setScheduleDate('');
+				// setScheduleDate('');
 			}, (error) => {
 				console.log(error.text);
 			}
@@ -59,9 +59,9 @@ function ContactUsPage() {
 	}
 
 	// setting the selected date from the calendar
-	const onDateChange = (date, value) => {
-		setScheduleDate(value);
-	}
+	// const onDateChange = (date, value) => {
+	// 	setScheduleDate(value);
+	// }
 
 	return (
 		<div className="contactUsPage">
@@ -124,7 +124,7 @@ function ContactUsPage() {
 									validators={["required", "isEmail"]}
 								/>
 
-							
+
 								<TextValidator
 									style={{ width: '40vw' }}
 									type="text"
@@ -172,8 +172,19 @@ function ContactUsPage() {
 									errorMessages="Please add an email"
 									validators={["required", "isEmail"]}
 								/>
-		
-								<MuiPickersUtilsProvider utils={DateFnsUtils}>
+
+
+								<TextValidator
+									style={{ width: '40vw' }}
+									type="text"
+									label="Message"
+									name="message"
+									onChange={(e) => setMessage(e.target.value)}
+									value={message}
+									errorMessages="Please add a message"
+									validators={["required"]}
+								/>
+								{/* <MuiPickersUtilsProvider utils={DateFnsUtils}>
 									<KeyboardDatePicker
 										style={{ width: '40vw' }}
 										disableToolbar
@@ -188,7 +199,7 @@ function ContactUsPage() {
 											"aria-label": "change date",
 										}}
 									/>
-								</MuiPickersUtilsProvider>
+								</MuiPickersUtilsProvider> */}
 								<Button
 									style={{
 										float: 'right',
