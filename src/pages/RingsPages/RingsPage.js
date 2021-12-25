@@ -385,7 +385,9 @@ function RingsPage({
 					<Fade cascade>
 						<div>
 							{ringData.map((ring) => ring.title !== title && (
-								<OtherProducts key={ring.id} img={ring.images[0]} name={ring.title} viewMoreUrl={`/rings/` + ring.id} />
+								<Fade cascade>
+									<OtherProducts key={ring.id} img={ring.images[0]} name={ring.title} viewMoreUrl={`/rings/` + ring.id} />
+								</Fade>
 							))}
 						</div>
 					</Fade>

@@ -45,11 +45,13 @@ function GemStonesMain() {
         <Fade cascade>
           <div className="gemStonesMain__otherGemsRow">
             {gemData.map(({ id, cardImage }, key) => (
-              <Gem
-                viewMoreUrl={`/gems/${id}`}
-                key={key}
-                cardImage={cardImage}
-              />
+              <Fade cascade>
+                <Gem
+                  viewMoreUrl={`/gems/${id}`}
+                  key={key}
+                  cardImage={cardImage}
+                />
+              </Fade>
             ))}
           </div>
         </Fade>

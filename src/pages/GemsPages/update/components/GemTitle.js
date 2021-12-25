@@ -1,3 +1,4 @@
+import { Fade } from 'react-awesome-reveal';
 import { useHistory } from 'react-router';
 import styled from 'styled-components';
 
@@ -7,15 +8,19 @@ export const GemTitle = ({ title, titleText, titleImage }) => {
   return (
     <Container>
       <div>
-        <h1>{title.toUpperCase()}</h1>
-        <p>{titleText}</p>
-        <div>
-          <button onClick={() => history.push("/gems/order")}>
-            PLACE AN ORDER
-          </button>
-        </div>
+        <Fade triggerOnce direction="left">
+          <h1>{title.toUpperCase()}</h1>
+          <p>{titleText}</p>
+          <div>
+            <button onClick={() => history.push("/gems/order")}>
+              PLACE AN ORDER
+            </button>
+          </div>
+        </Fade>
       </div>
-      <img src={titleImage} alt="" />
+      <Fade triggerOnce direction="right">
+        <img src={titleImage} alt="" />
+      </Fade>
     </Container>
   );
 }
@@ -27,12 +32,12 @@ const Container = styled.div `
   border-bottom: 5px #87541e solid;
   background-color: #f4ebe2;
 
-  > img {
+  > div > img {
     object-fit: contain;
     height: 200px;
   }
 
-  > div {
+  > div > div {
     > h1 {
       font-size: 3rem;
       font-family: Ginebra_font;
@@ -66,13 +71,13 @@ const Container = styled.div `
   }
 
   @media screen and (max-width: 1000px) {
-    > img {
+    > div > img {
       height: 150px;
     }
   }
 
   @media screen and (max-width: 600px) {
-    > div {
+    > div > div {
       > h1 {
         font-size: 2rem;
       }
@@ -89,7 +94,7 @@ const Container = styled.div `
   }
 
   @media screen and (max-width: 350px) {
-    > div {
+    > div > div {
       > h1 {
         font-size: 1.5rem;
       }

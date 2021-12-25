@@ -1,3 +1,4 @@
+import { Fade } from 'react-awesome-reveal';
 import styled from 'styled-components';
 import { AboutGem } from './components/AboutGem';
 import { BirthStonesAnniversary } from './components/BirthStonesAnniversary';
@@ -20,21 +21,25 @@ const GemDetailPage = ({ data }) => {
       </section>
       <section>
         <main>
-          <AboutGem
-            aboutName={data.aboutName}
-            aboutDescriptionArray={data.aboutDescriptionArray}
-            aboutImage={data.aboutImage}
-          />
-          <BirthStonesAnniversary birthStoneDetails={data.birthStoneDetails} />
-          <Treatments treatmentsDetails={data.treatmentsDetails} />
-          <Synthetics syntheticDetails={data.syntheticDetails} />
-          <Imitations imitationsDetails={data.imitationsDetails} />
+          <Fade direction="left" cascade triggerOnce>
+            <AboutGem
+              aboutName={data.aboutName}
+              aboutDescriptionArray={data.aboutDescriptionArray}
+              aboutImage={data.aboutImage}
+            />
+            <BirthStonesAnniversary birthStoneDetails={data.birthStoneDetails} />
+            <Treatments treatmentsDetails={data.treatmentsDetails} />
+            <Synthetics syntheticDetails={data.syntheticDetails} />
+            <Imitations imitationsDetails={data.imitationsDetails} />
+          </Fade>
         </main>
         <main>
-          <GemStatistics
-            moreDetails={data.moreDetails}
-            factsInformation={data.factsInformation}
-          />
+          <Fade direction="right" triggerOnce>
+            <GemStatistics
+              moreDetails={data.moreDetails}
+              factsInformation={data.factsInformation}
+            />
+          </Fade>
         </main>
       </section>
       <section>
@@ -46,7 +51,7 @@ const GemDetailPage = ({ data }) => {
 
 export default GemDetailPage;
 
-const Container = styled.div `
+const Container = styled.div`
   font-family: santral;
   background-color: #f4ebe2;
 
