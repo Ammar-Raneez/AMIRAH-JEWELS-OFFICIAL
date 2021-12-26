@@ -11,6 +11,7 @@
 .homePage__categoryTitle {
 	font-size: 2.3vw;
 	font-family: ginebra_font;
+	letter-spacing: 3px;
 }
 
 .homePage__categorySubTitle {
@@ -49,6 +50,7 @@
 
 .homePage__categoryEach > p {
 	font-family: ginebra_font;
+	letter-spacing: 1px;
 }
 
 .homePage__categoryEach:hover {

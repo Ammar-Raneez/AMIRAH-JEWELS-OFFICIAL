@@ -45,7 +45,7 @@ function WishListPage() {
 
 	return user ? (
 		<div className="wishListPage" style={wishListBasket.length === 1 ? { height: '85vh' } : {}}>
-			<SEO title={`${user.displayName}'s Wish List`} />
+			<SEO title={`Amirah - ${user.displayName}'s Wish List`} />
 			{/* wishlist title */}
 			<div className="wishListPage__title">
 				<h1>MY WISHLIST</h1>
@@ -87,7 +87,7 @@ function WishListPage() {
 		</div>
 	) : (
 		<div className="wishListPage">
-			<SEO title="Wish list" />
+			<SEO title={`Amirah - Wish List`} />
 			<div className="wishListPage__itemsNoLogin">
 				<h1>Login to be able to save items you would like to purchase later</h1>
 				<a href="/login">

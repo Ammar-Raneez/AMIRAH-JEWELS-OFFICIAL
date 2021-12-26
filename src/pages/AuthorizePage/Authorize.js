@@ -3,6 +3,7 @@ import { useDispatch } from 'react-redux';
 import { TextValidator, ValidatorForm } from 'react-material-ui-form-validator';
 import './Authorize.css';
 import { allow } from '../../features/authorizedSlice';
+import SEO from '../../shared/components/SEO/SEO';
 
 function Authorize({ _ }) {
 	const formRef = useRef('form');
@@ -28,6 +29,7 @@ function Authorize({ _ }) {
 				backgroundPosition: '165% 10%'
 			}}
 		>
+			<SEO title="Amirah - Welcome" />
 			<div className="authorize__login-wrapper">
 				<div className="authorize__login">
 					<div className="authorize__loginTop">

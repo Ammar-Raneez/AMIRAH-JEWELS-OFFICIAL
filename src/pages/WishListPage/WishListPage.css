@@ -10,6 +10,7 @@
 
 .wishListPage__title > h1 {
 	font-family: ginebra_font;
+	letter-spacing: 3px;
 	font-size: 2.5vw;
 	margin: 2vw 0;
 	font-weight: lighter;

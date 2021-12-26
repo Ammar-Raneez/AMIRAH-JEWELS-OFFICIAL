@@ -83,6 +83,7 @@
 .ringsPage__sectionCartCartDetails > div > h2 {
 	font-size: 16px;
 	font-family: ginebra_font;
+	letter-spacing: 3px;
 	color: #707070;
 	font-weight: lighter;
 	margin-bottom: 20px;
@@ -154,6 +155,7 @@
 
 .ringsPage__otherProducts > div > h2 {
 	font-family: ginebra_font;
+	letter-spacing: 3px;
 }
 
 .ringsPage__description {

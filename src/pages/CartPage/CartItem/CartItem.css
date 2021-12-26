@@ -40,6 +40,7 @@
 
 .cartItem__descriptionRightTop > h1 {
 	font-family: ginebra_font;
+	letter-spacing: 3px;
 	font-weight: bolder;
 	font-size: 1.3vw;
 	color: black;

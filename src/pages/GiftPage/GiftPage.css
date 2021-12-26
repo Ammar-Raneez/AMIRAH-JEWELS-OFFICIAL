@@ -20,6 +20,7 @@
 
 .giftPage__detailsFirst > div > h1 {
 	font-family: ginebra_font;
+	letter-spacing: 3px;
 	color: #707070;
 	font-weight: lighter;
 	font-size: 2.5vw;

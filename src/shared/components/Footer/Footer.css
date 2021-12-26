@@ -82,7 +82,8 @@
 	padding: 1vw !important;
 }
 
-.footer__topRightSignUp > span {
+.footer__topRightSignUp > span,
+.footer__topRightSignUp > a {
 	padding: 1vw 3vw;
 	color: #fff;
 	cursor: pointer;
@@ -100,7 +101,8 @@
 	border-radius: 0.7vw;
 }
 
-.footer__topRightSignUp > span:hover {
+.footer__topRightSignUp > span:hover,
+.footer__topRightSignUp > a:hover {
 	background-color: #d35f46;
 	transition: 0.3s ease;
 	font-weight: bold;

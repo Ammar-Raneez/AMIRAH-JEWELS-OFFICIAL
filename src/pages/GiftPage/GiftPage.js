@@ -6,7 +6,7 @@ import SEO from '../../shared/components/SEO/SEO';
 function GiftPage() {
 	return (
 		<div className="giftPage">
-			<SEO title="Explore All Categories" />
+			<SEO title="Amirah - Explore All Categories" />
 			<div className="giftPage__details">
 				<Fade triggerOnce direction="left">
 					<div className="giftPage__detailsSecond">

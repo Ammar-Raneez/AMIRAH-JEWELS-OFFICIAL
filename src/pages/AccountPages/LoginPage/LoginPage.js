@@ -60,7 +60,7 @@ function LoginPage() {
 
 	return (
 		<div className="loginPage">
-			<SEO title="Login" />
+			<SEO title="Amirah - Login" />
 
 			<div className="loginPage__leftSide">
 				<div className="loginPage__leftSideTop">

@@ -10,6 +10,7 @@
 	display: flex;
 	align-items: center;
 	font-family: ginebra_font;
+	letter-spacing: 2px;
 	justify-content: space-evenly;
 	margin: 1vw 2.5vw;
 	font-size: 1vw;
@@ -62,7 +63,7 @@
 	z-index: 99;
 	background-color: #fff;
 	padding: 0.8vw;
-	width: 30vw;
+	width: 34vw;
 	display: flex;
 	font-family: santral;
 	justify-content: space-evenly;
@@ -111,11 +112,11 @@
 
 .header__optionsProductDetail span:hover::after {
 	width: 100%;
-	background: #d3650f;
+	background: rgb(211, 95, 70);
 }
 
 .header__optionsProductDetailSpecial {
-	border: 0.1vw solid #d3650f;
+	border: 0.1vw solid rgb(211, 95, 70);
 	display: flex;
 	justify-content: center;
 	transition: 0.3s ease;
@@ -123,7 +124,7 @@
 }
 
 .header__optionsProductDetailSpecial:hover {
-	background: #d3650f;
+	background: rgb(211, 95, 70);
 }
 
 .header__optionsProductDetailSpecial:hover span {

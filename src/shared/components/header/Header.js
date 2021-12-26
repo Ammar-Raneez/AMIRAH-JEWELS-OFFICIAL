@@ -55,7 +55,7 @@ function Header() {
 										<span>EXPLORE ALL CATEGORIES</span>
 									</Link>
 									<Link
-										style={{ color: '#656565', fontWeight: '600' }}
+										style={{ color: '#D35F46', fontWeight: '600', borderColor: '#D35F46' }}
 										className="header__optionsProductDetail header__optionsProductDetailSpecial"
 										to="/gemstones+metal"
 									>

@@ -1,4 +1,5 @@
 import { Fade } from 'react-awesome-reveal'
+import SEO from '../../shared/components/SEO/SEO';
 import OtherProducts from './other-products/OtherProducts';
 import { ringData } from './ringData';
 import './RingsPageMain.css'
@@ -6,6 +7,7 @@ import './RingsPageMain.css'
 const RingsPageMain = () => {
 	return (
 		<div>
+			<SEO title="Amirah - Rings" />
 			<div class="rings-page-main__banner">
 				<img src="banners/RINGS.jpg" width="100%" alt="rings-banner" />
 			</div>

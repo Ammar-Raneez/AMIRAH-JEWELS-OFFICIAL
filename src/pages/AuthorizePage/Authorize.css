@@ -22,6 +22,7 @@
 
 .authorize__title {
 	font-family: ginebra_font;
+	letter-spacing: 3px;
 	font-size: 3rem;
 	text-align: center;
 }

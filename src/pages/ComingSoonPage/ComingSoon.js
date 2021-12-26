@@ -1,6 +1,7 @@
 import './ComingSoon.css';
 import FacebookIcon from '@material-ui/icons/Facebook';
 import InstagramIcon from '@material-ui/icons/Instagram';
+import SEO from '../../shared/components/SEO/SEO';
 
 function ComingSoon() {
 	return (
@@ -12,6 +13,7 @@ function ComingSoon() {
 				backgroundPosition: '165% 10%'
 			}}
 		>
+			<SEO title="Amirah - Coming Soon" />
 			<div className="comingSoon__upper">
 				<img src="logos/image.png" alt="coming-soon" />
 			</div>

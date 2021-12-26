@@ -109,6 +109,7 @@
 .processStep__stepName > div > p {
 	font-size: 3vw;
 	font-family: ginebra_font;
+	letter-spacing: 1px;
 	color: #707070;
 	text-align: end;
 }
@@ -116,6 +117,7 @@
 .processStep__stepNameReflect > div > p {
 	font-size: 3vw;
 	font-family: ginebra_font;
+	letter-spacing: 1px;
 	color: #707070;
 	text-align: start;
 }

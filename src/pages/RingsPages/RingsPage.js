@@ -159,7 +159,7 @@ function RingsPage({
 
 	return (
 		<div className="ringsPage">
-			<SEO title={title} />
+			<SEO title={`Amirah - ${title}`} />
 			<div className="ringsPage__sectionCart">
 				<div className="ringsPage__sectionCartSmallImages">
 					<img

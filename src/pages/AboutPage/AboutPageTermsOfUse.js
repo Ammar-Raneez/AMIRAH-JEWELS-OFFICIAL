@@ -7,7 +7,7 @@ function AboutPageTermsOfUse() {
 
   return (
     <About
-      seoTitle="About Us - Terms Of Use"
+      seoTitle="Amirah - Terms Of Use"
       title="TERMS OF USE"
       firstPara="Use of this website and any service contained constitutes acceptance of these Terms of use"
       readMoreLink={pdfPath}

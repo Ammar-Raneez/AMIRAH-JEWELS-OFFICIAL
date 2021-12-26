@@ -87,7 +87,7 @@ function RegisterPage() {
 
 	return (
 		<div className="registerPage">
-			<SEO title="Register" />
+			<SEO title="Amirah - Register" />
 			{/* form */}
 			<div className="registerPage__body">
 				<h1>CREATE AN ACCOUNT</h1>

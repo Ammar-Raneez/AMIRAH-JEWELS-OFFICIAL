@@ -7,7 +7,7 @@ import gemData from '../../../gemData.json';
 function GemStonesMain() {
   return (
     <div className="gemStonesMain">
-      <SEO title="Explore All Gems & Stones" />
+      <SEO title="Amirah - Explore All Gemstones" />
       <div className="gemStonesMain__details">
         <div className="gemStonesMain__detailsFirst">
           <Fade triggerOnce direction="left">

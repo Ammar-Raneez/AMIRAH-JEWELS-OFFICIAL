@@ -29,6 +29,7 @@ const Container = styled.div `
     font-size: 3.5rem;
     text-transform: uppercase;
     font-family: ginebra_font;
+    letter-spacing: 3px;
   }
 
   > p {

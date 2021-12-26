@@ -7,7 +7,7 @@ function AboutPageCareer() {
 
   return (
     <About
-      seoTitle="About Us - Career"
+      seoTitle="Amirah - Career"
       title="CAREER"
       firstPara="DESTINED FOR A CAREER IN THE JEWELLERY INDUSTRY?"
       secondHeader="2021"

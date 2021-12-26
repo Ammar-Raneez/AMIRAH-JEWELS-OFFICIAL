@@ -8,7 +8,7 @@ function AboutPageCompany() {
   return (
     <Container>
       <About
-        seoTitle="About Us - Company"
+        seoTitle="Amirah - Company"
         title="AMIRAH GEMS"
         firstPara="An icon for a new era, AMIRAG Gems debuts. It captures the courage, strength and optimism that AMIRAH stands for."
         secondHeader="2021"

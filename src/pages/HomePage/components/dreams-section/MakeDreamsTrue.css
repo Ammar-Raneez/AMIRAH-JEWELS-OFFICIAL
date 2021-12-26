@@ -14,6 +14,7 @@
 
 .homePage__makeDreamsTrue > .css-1gzxeik > h1 {
   font-family: ginebra_font;
+  letter-spacing: 3px;
   color: #878787;
   font-size: 2.3vw;
   margin-top: 3vw;
@@ -47,6 +48,7 @@
 .homePage__makeDreamsTrue__topPrices > .css-17ud6we > h1 {
   color: #707070;
   font-family: ginebra_font;
+  letter-spacing: 3px;
   font-size: 1.5vw;
   font-weight: bold;
   align-self: flex-end;
@@ -63,6 +65,7 @@
 .homePage__makeDreamsTrue__topPurchase > .css-2qfv45 > h1 {
   color: #707070;
   font-family: ginebra_font;
+  letter-spacing: 3px;
   font-size: 2vw;
   font-weight: lighter;
 }
@@ -132,6 +135,7 @@
 
 .homePage__makeDreamsTrue__bottom > .css-1gzxeik > p {
   font-family: ginebra_font;
+  letter-spacing: 1px;
   font-size: 1.5vw;
   color: #707070;
 }

@@ -23,6 +23,7 @@
 .checkoutPage__form > h2 {
 	font-size: 2.2vw;
 	font-family: ginebra_font;
+	letter-spacing: 3px;
 	margin-bottom: 1vw;
 	display: flex;
 	align-items: center;

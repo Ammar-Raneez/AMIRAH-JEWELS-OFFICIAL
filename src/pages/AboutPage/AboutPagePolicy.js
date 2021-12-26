@@ -7,7 +7,7 @@ function AboutPagePolicy() {
 
   return (
     <About
-      seoTitle="About Us - Policy"
+      seoTitle="Amirah - Policy"
       title="POLICY"
       firstPara="This Privacy Policy describes Our policies and procedures on the collection, use and disclosure of Your information"
       readMoreLink={pdfPath}

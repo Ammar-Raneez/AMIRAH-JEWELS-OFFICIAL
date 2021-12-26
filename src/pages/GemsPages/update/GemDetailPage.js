@@ -1,5 +1,6 @@
 import { Fade } from 'react-awesome-reveal';
 import styled from 'styled-components';
+import SEO from '../../../shared/components/SEO/SEO';
 import { AboutGem } from './components/AboutGem';
 import { BirthStonesAnniversary } from './components/BirthStonesAnniversary';
 import { GemStatistics } from './components/GemStatistics';
@@ -10,8 +11,11 @@ import { Treatments } from './components/Treatments';
 import { WhyWeLoveGemStone } from './components/WhyWeLoveGemStone';
 
 const GemDetailPage = ({ data }) => {
+  const gemTitle = data.title[0].toUpperCase() + data.title.substring(1).toLowerCase();
+
   return (
     <Container>
+      <SEO title={`Amirah - ${gemTitle} Details`} />
       <section>
         <GemTitle
           title={data.title}

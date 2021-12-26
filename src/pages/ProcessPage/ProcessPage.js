@@ -6,7 +6,7 @@ import SEO from '../../shared/components/SEO/SEO';
 function ProcessPage() {
 	return (
 		<div className="processPage">
-			<SEO title="The Process" />
+			<SEO title="Amirah - The Process" />
 			{/* title */}
 			<Fade cascade direction="right" triggerOnce>
 				<h1>BRINGING UNIQUE JEWELLERY DESIGNS TO LIFE</h1>

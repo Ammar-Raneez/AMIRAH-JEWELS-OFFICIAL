@@ -41,6 +41,7 @@ const Container = styled.div `
     > h1 {
       font-size: 3rem;
       font-family: Ginebra_font;
+      letter-spacing: 3px;
     }
 
     > p {

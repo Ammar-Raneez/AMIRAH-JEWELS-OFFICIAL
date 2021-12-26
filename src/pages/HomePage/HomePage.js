@@ -8,7 +8,7 @@ import SEO from '../../shared/components/SEO/SEO';
 function HomePage() {
 	return (
 		<div className="homepage">
-			<SEO title="Home" />
+			<SEO title="Amirah - Home" />
 			<Banner />
 			<RoyalExperience />
 			<MakeDreamsTrue />

@@ -84,6 +84,7 @@
 .aboutPageCompanyTop__middleContent > h2,
 .aboutPageCompanyLast > h2 {
 	font-family: ginebra_font;
+	letter-spacing: 3px;
 	font-size: 2.5vw;
 	padding-bottom: 2.5vw;
 	font-weight: lighter;

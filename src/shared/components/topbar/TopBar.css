@@ -4,6 +4,7 @@
 
 .topbar {
 	font-family: ginebra_font;
+	letter-spacing: 1px;
 	display: flex;
 	justify-content: space-between;
 	padding: 0 0 0 1vw;
@@ -28,8 +29,9 @@
 
 .topbar__centerTypedText {
 	font-family: ginebra_font;
+	letter-spacing: 1px;
 	font-size: 2.6vw;
-	color: #D35F46;
+	color: rgb(211, 95, 70);
 	font-weight: 500;
 	letter-spacing: 0.5vw;
 	line-height: 1.8vw;
@@ -41,11 +43,11 @@
 }
 
 .expandedMoreIcon {
-	color: #D35F46 !important;
+	color: rgb(211, 95, 70) !important;
 }
 
 .chevronRightIcon {
-	color: #D35F46 !important;
+	color: rgb(211, 95, 70) !important;
 }
 
 .topbar__center {
@@ -100,7 +102,7 @@
 	cursor: pointer;
 	font-size: 1.9vw !important;
 	transition: 0.3s ease;
-	color: #D35F46;
+	color: rgb(211, 95, 70);
 }
 
 .topbar__left > a > .MuiSvgIcon-root:hover,
@@ -115,12 +117,14 @@
 
 .MuiTreeItem-label {
 	font-family: ginebra_font, serif !important;
+	letter-spacing: 1px;
 	padding: 10px;
 	font-size: 14px !important;
 }
 
 .MuiTypography-root.MuiListItemText-primary.MuiTypography-body1.MuiTypography-displayBlock {
 	font-family: ginebra_font, serif !important;
+	letter-spacing: 1px;
 	font-size: 14px !important;
 }
 

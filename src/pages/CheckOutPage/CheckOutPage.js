@@ -178,7 +178,7 @@ function CheckOutPage() {
 
 	return (
 		<div className="checkoutPage">
-			<SEO title="Checkout" />
+			<SEO title="Amirah - Checkout" />
 			<div className="checkoutPage__form">
 				<h2>CHECK OUT</h2>
 				<ValidatorForm
@@ -352,13 +352,13 @@ function CheckOutPage() {
 					<div className="registerPage__createButton">
 						{user && cartBasket.length > 0 ? (
 							<Button
-								style={{backgroundColor: '#d35f46', color: 'white', fontFamily: 'ginebra_font'}}
+								style={{ backgroundColor: '#d35f46', color: 'white', fontFamily: 'ginebra_font', letterSpacing: '1px' }}
 								type="submit"
 								>
 									CONTINUE CHECKOUT
 							</Button>
 						) : (
-							<Button style={{fontFamily: 'ginebra_font'}} disabled type="submit">
+							<Button style={{ fontFamily: 'ginebra_font', letterSpacing: '1px' }} disabled type="submit">
 								CONTINUE CHECKOUT
 							</Button>
 						)}
