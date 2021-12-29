@@ -37,6 +37,7 @@ import Authorize from './pages/AuthorizePage/Authorize';
 import ComingSoon from './pages/ComingSoonPage/ComingSoon';
 import AboutPageTermsOfUse from './pages/AboutPage/AboutPageTermsOfUse';
 import { isAuthorized } from './features/authorizedSlice';
+import ScrollToTop from './shared/ScrollToTop';
 
 function App() {
   const authorized = useSelector(isAuthorized);
@@ -100,6 +101,7 @@ function App() {
   return (
     authorized ? (
       <Router>
+        <ScrollToTop />
         <div className="app">
           <Switch>
             <Route path="/login">

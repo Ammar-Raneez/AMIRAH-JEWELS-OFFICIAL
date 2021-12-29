@@ -17,7 +17,7 @@ import { changeRate } from '../../../features/currencyRateSlice';
 function Footer() {
 	const [date] = useState(new Date().getFullYear());
 	const history = useHistory();
-	const social = ['https://www.facebook.com/amirahgems', 'https://www.instagram.com/amirahgems/'];
+	const social = ['https://www.instagram.com/amirahgems/', 'https://www.facebook.com/amirahgems'];
 	const BASE_URL = 'https://v6.exchangerate-api.com/v6/0a31808a3c199a87cfda7925/latest/USD';
 	const [exchangeRates, setExchangeRates] = useState({});
 
@@ -113,7 +113,7 @@ function Footer() {
 							<Link to="/">PRODUCT CARE & REPAIR</Link>
 						</p>
 						<p>
-							<Link to="/">BOOK AN APPOINTMENT</Link>
+							<Link to="/contactus">BOOK AN APPOINTMENT</Link>
 						</p>
 						<p>
 							<Link to="/">FREQUENTLY ASKED QUESTIONS</Link>
@@ -142,10 +142,10 @@ function Footer() {
 							<Link to="/">CA SUPPLY CHAINS ACT</Link>
 						</p>
 						<p>
-							<Link to="/">AMIRAH CAREERS</Link>
+							<Link to="/careers">AMIRAH CAREERS</Link>
 						</p>
 						<p>
-							<Link to="/">WEBSITE POLICIES</Link>
+							<Link to="/policy">WEBSITE POLICIES</Link>
 						</p>
 						<p>
 							<Link to="/">REPORT AN ISSUE</Link>
