@@ -108,6 +108,9 @@ function Header() {
 								<Link className="header__optionsProductDetail" to="/careers">
 									<span>CAREERS</span>
 								</Link>
+								<Link className="header__optionsProductDetail" to="/charity">
+									<span>CHARITY</span>
+								</Link>
 								<Link className="header__optionsProductDetail" to="/policy">
 									<span>POLICY</span>
 								</Link>

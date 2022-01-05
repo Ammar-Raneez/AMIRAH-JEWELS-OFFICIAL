@@ -38,65 +38,66 @@ import ComingSoon from './pages/ComingSoonPage/ComingSoon';
 import AboutPageTermsOfUse from './pages/AboutPage/AboutPageTermsOfUse';
 import { isAuthorized } from './features/authorizedSlice';
 import ScrollToTop from './shared/ScrollToTop';
+import AboutPageCharity from './pages/AboutPage/AboutPageCharity';
 
 function App() {
   const authorized = useSelector(isAuthorized);
   const dispatch = useDispatch();
 
-	useEffect(() => {
-		// auth persistance
-		auth.onAuthStateChanged((userAuth) => {
-			if (userAuth) {
-				// user is logged in
-				dispatch(login(userAuth));
+  useEffect(() => {
+    // auth persistance
+    auth.onAuthStateChanged((userAuth) => {
+      if (userAuth) {
+        // user is logged in
+        dispatch(login(userAuth));
 
-				// we load all the content from the database (this runs only once)
-				// user logged in only we load the details for the particular user
-				db.collection('users').onSnapshot((snapshot) =>
-					snapshot.docs.forEach((doc) => {
-						if (doc.id === userAuth?.email) {
-							// adding the cart items
-							for (const cartItem of doc.data().cart) {
-								// console.log('Adding items from the database into the cart');
-								dispatch(
-									addToCart({
-										productCost: cartItem.productCost,
-										productImgURL: cartItem.productImgURL,
-										productName: cartItem.productName,
-										productQuantity: cartItem.productQuantity,
-										preferredMetal: cartItem.preferredMetal,
-										preferredSize: cartItem.preferredSize,
-									})
-								);
-							}
+        // we load all the content from the database (this runs only once)
+        // user logged in only we load the details for the particular user
+        db.collection('users').onSnapshot((snapshot) =>
+          snapshot.docs.forEach((doc) => {
+            if (doc.id === userAuth?.email) {
+              // adding the cart items
+              for (const cartItem of doc.data().cart) {
+                // console.log('Adding items from the database into the cart');
+                dispatch(
+                  addToCart({
+                    productCost: cartItem.productCost,
+                    productImgURL: cartItem.productImgURL,
+                    productName: cartItem.productName,
+                    productQuantity: cartItem.productQuantity,
+                    preferredMetal: cartItem.preferredMetal,
+                    preferredSize: cartItem.preferredSize,
+                  })
+                );
+              }
 
-							// adding the wishlist items
-							for (const wishlistItem of doc.data().wishlist) {
-								dispatch(
-									addToWishlist({
-										name: wishlistItem.name,
-										cost: wishlistItem.cost,
-										imgURL: wishlistItem.imgURL,
-										preferredMetal: wishlistItem.preferredMetal,
-										preferredSize: wishlistItem.preferredSize,
-									})
-								);
-							}
+              // adding the wishlist items
+              for (const wishlistItem of doc.data().wishlist) {
+                dispatch(
+                  addToWishlist({
+                    name: wishlistItem.name,
+                    cost: wishlistItem.cost,
+                    imgURL: wishlistItem.imgURL,
+                    preferredMetal: wishlistItem.preferredMetal,
+                    preferredSize: wishlistItem.preferredSize,
+                  })
+                );
+              }
 
-							// Dispatch to set the currency rate from the db
-							dispatch(changeRate(doc.data().currencyRate));
+              // Dispatch to set the currency rate from the db
+              dispatch(changeRate(doc.data().currencyRate));
 
-							// Dispatch to set the currency symbol from the db
-							dispatch(changeSymbol(doc.data().currencySymbol));
-						}
-					})
-				);
-			} else {
-				// user is logged out
-				dispatch(logout());
-			}
-		});
-	}, [dispatch]);
+              // Dispatch to set the currency symbol from the db
+              dispatch(changeSymbol(doc.data().currencySymbol));
+            }
+          })
+        );
+      } else {
+        // user is logged out
+        dispatch(logout());
+      }
+    });
+  }, [dispatch]);
 
   return (
     authorized ? (
@@ -246,6 +247,12 @@ function App() {
               <AboutPageCareer />
               <Footer />
             </Route>
+            <Route path="/charity">
+              <TopBar />
+              <Header />
+              <AboutPageCharity />
+              <Footer />
+            </Route>
             <Route path="/terms-of-use">
               <TopBar />
               <Header />
@@ -298,7 +305,7 @@ function App() {
           </Switch>
         </div>
       </Router>
-    ): (
+    ) : (
       <Authorize />
     )
   );
