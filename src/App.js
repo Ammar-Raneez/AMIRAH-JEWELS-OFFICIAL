@@ -207,9 +207,6 @@ function App() {
               <BraceletsPage />
               <Footer />
             </Route>
-            <Route path="/forever+knot">
-              <h2>Forever Knot component</h2>
-            </Route>
             <Route path="/necklace+pendants">
               <TopBar />
               <Header />

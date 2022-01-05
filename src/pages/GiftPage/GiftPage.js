@@ -44,10 +44,6 @@ function GiftPage() {
 						<Product img="home/category/rings.png" name="Rings" viewMoreUrl="/all-rings" />
 						<Product img="home/category/bracelets.png" name="Bracelets" viewMoreUrl="/bracelets" />
 					</div>
-					{/* Place New products in each div, keeping a max of 4 per row */}
-					<div className="giftPage__otherGemsRow">
-						<Product img="home/category/forever-knot.png" name="Forever Knot" viewMoreUrl="/" />
-					</div>
 				</Fade>
 			</div>
 		</div>

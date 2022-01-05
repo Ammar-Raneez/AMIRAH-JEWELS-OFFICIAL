@@ -36,12 +36,6 @@ function Category() {
 							<p>BRACELETS</p>
 						</div>
 					</a>
-					<a href="forever+knot">
-						<div className="homePage__categoryEach">
-							<img alt="foreverKnot-category" src="home/category/forever-knot.png" />
-							<p>FOREVER KNOT</p>
-						</div>
-					</a>
 				</Fade>   
 			</div>
 		</div>
