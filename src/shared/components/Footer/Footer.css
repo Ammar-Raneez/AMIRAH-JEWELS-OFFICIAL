@@ -235,7 +235,7 @@
 	}
 }
 
-@media screen and (max-width: 310px) {
+@media screen and (max-width: 600px) {
 	.footer__top,
 	.footer__bottomCountryLeft,
 	.footer__bottomCountryRight,
