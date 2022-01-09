@@ -170,12 +170,9 @@ function TopBar({ isSpecificProduct, isMoreSpecificProduct }) {
 					</Fade>
 				</a>
 				<a href="/" className="topbar__centerHidden">
-					{isSpecificProduct ?
-						<img src="../logos/word_logo_bottom.png" className="topbar__center__TopLogo" alt="" />
-						: isMoreSpecificProduct ?
-							<img src="../../logos/word_logo_bottom.png" className="topbar__center__TopLogo" alt="" />
-							: <img src="logos/word_logo_bottom.png" className="topbar__center__TopLogo" alt="" />
-					}
+					<div style={{ padding: '5px 10px 10px 5px' }}>
+						<Typed strings={['AMIRAH']} typeSpeed={100} className="topbar__centerTypedText"></Typed>
+					</div>
 				</a>
 			</div>
 			<div className="topbar__right">
