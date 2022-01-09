@@ -58,12 +58,12 @@ function TopBar({ isSpecificProduct, isMoreSpecificProduct }) {
 					defaultCollapseIcon={<ExpandMoreIcon className="expandedMoreIcon" />}
 					defaultExpandIcon={<ChevronRightIcon className="chevronRightIcon" />}
 				>
-					<a className="topbar__treeItem" href="/home">
+					<a className="topbar__treeItem" href="/">
 						<TreeItem nodeId="0" label="Home" />
 					</a>
 					<TreeItem nodeId="1" label="Jewellery">
 						<TreeItem nodeId="2" label="Shop By Category">
-							<a className="topbar__treeItem" href="/rings/SORG020">
+							<a className="topbar__treeItem" href="/all-rings">
 								<TreeItem nodeId="3" label="-  Rings" />
 							</a>
 							<a className="topbar__treeItem" href="/earrings">
@@ -86,41 +86,30 @@ function TopBar({ isSpecificProduct, isMoreSpecificProduct }) {
 							<a className="topbar__treeItem" href="/eternity">
 								<TreeItem nodeId="10" label="- Eternity" />
 							</a>
-							<a className="topbar__treeItem" href="/joy+of+jewellery">
-								<TreeItem nodeId="11" label="- Joy of Jewellery" />
-							</a>
-						</TreeItem>
-						<TreeItem nodeId="13" label="Featured Collections">
-							<a href="/">
-								<TreeItem nodeId="14" label="Signature" />
-							</a>
-							<a href="/">
-								<TreeItem nodeId="15" label="Amarelo" />
-							</a>
-							<a href="/">
-								<TreeItem nodeId="16" label="Mi Amor" />
-							</a>
 						</TreeItem>
 					</TreeItem>
 					<a className="topbar__treeItem" href="/processes">
-						<TreeItem nodeId="17" label="Process" />
+						<TreeItem nodeId="11" label="Process" />
 					</a>
-					<TreeItem nodeId="18" label="About Us">
+					<TreeItem nodeId="12" label="About Us">
 						<a className="topbar__treeItem" href="/aboutus">
-							<TreeItem nodeId="19" label="- Our Company" />
+							<TreeItem nodeId="13" label="- Our Company" />
 						</a>
 						<a className="topbar__treeItem" href="/careers">
-							<TreeItem nodeId="20" label="- Careers" />
+							<TreeItem nodeId="14" label="- Careers" />
+						</a>
+						<a className="topbar__treeItem" href="/charity">
+							<TreeItem nodeId="15" label="- Charity" />
 						</a>
 						<a className="topbar__treeItem" href="/policy">
-							<TreeItem nodeId="21" label="- Policy" />
+							<TreeItem nodeId="16" label="- Policy" />
 						</a>
 						<a className="topbar__treeItem" href="/terms-of-use">
-							<TreeItem nodeId="22" label="- terms-of-use" />
+							<TreeItem nodeId="17" label="- Terms Of Use" />
 						</a>
 					</TreeItem>
-					<a className="topbar__treeItem" href="/">
-						<TreeItem nodeId="23" label="Designer Desk" />
+					<a className="topbar__treeItem" href="/designer+desk">
+						<TreeItem nodeId="18" label="Designer Desk" />
 					</a>
 				</TreeView>
 				<List>
