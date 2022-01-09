@@ -6,9 +6,15 @@ import ColorGemItem from './ColorGemItem';
 import emailjs from 'emailjs-com';
 import Select from 'react-select';
 import { Fade } from 'react-awesome-reveal';
+import { useParams } from 'react-router';
+import { selectUser } from '../../../../features/userSlice';
+import { useSelector } from 'react-redux';
 
 const GemOrderBody = () => {
   const formRef = useRef('form');
+  const user = useSelector(selectUser);
+  const { id } = useParams();
+
   let cuts = [
     { value: 'HEART', label: 'HEART' },
     { value: 'OVAL', label: 'OVAL' },
@@ -29,6 +35,19 @@ const GemOrderBody = () => {
     { value: '2', label: '2' }
   ];
   const [selectedCarat, setSelectedCarat] = useState(carat[0]);
+  let sapphire = [
+    { value: 'blue sapphire', label: 'blue sapphire' },
+    { value: 'green sapphire', label: 'green sapphire' },
+    { value: 'pink sapphire', label: 'pink sapphire' },
+    { value: 'orange sapphire', label: 'orange sapphire' },
+    { value: 'purple sapphire', label: 'purple sapphire' },
+    { value: 'teale sapphire', label: 'teale sapphire' },
+    { value: 'padparadscha sapphire', label: 'padparadscha sapphire' },
+    { value: 'violet sapphire', label: 'violet sapphire' },
+    { value: 'yellow sapphire', label: 'yellow sapphire' }
+  ]
+  const [selectedSapphire, setSelectedSapphire] = useState(sapphire[0]);
+
   const [qty, setQty] = useState(0);
   const [otherInfo, setOtherInfo] = useState('');
 
@@ -37,8 +56,9 @@ const GemOrderBody = () => {
     emailjs.sendForm('service_lvksm7m', 'amirah_sendQuote', e.target, 'user_pxB9WpI7yEgKMxO3A4XCP').then(
       (result) => {
         console.log(result.text);
-        setSelectedCarat(cuts[0]);
+        setSelectedCut(cuts[0]);
         setSelectedCarat(carat[0]);
+        setSelectedSapphire(sapphire[0]);
         setQty(0);
         setOtherInfo('');
       }, (error) => {
@@ -50,15 +70,35 @@ const GemOrderBody = () => {
   return (
     <Fade triggerOnce direction="up">
       <Container>
-        <section className="section__colors">
-          <h2>1.THE COLOR</h2>
-          <div>
-            {COLOR_SAPPHIRE.map((item, index) => (
-              <ColorGemItem img={item.imgPath} name={item.name} key={index} />
-            ))}
-          </div>
-        </section>
+        {id === 'sapphire' && (
+          <section className="section__colors">
+            <h2>1.THE COLOR</h2>
+            <div>
+              {COLOR_SAPPHIRE.map((item, index) => (
+                <ColorGemItem
+                  setSapphireColor={setSelectedSapphire}
+                  sapphireColor={sapphire[index]}
+                  selectedSapphire={selectedSapphire}
+                  img={item.imgPath}
+                  name={item.name}
+                  key={index}
+                />
+              ))}
+            </div>
+          </section>
+        )}
         <form style={{ width: '100%' }} onSubmit={sendQuote} ref={formRef}>
+          <input name="from_name" value={user.email} style={{ display: 'none' }} />
+          {id === 'sapphire' && (
+            <Select
+              options={sapphire}
+              name="selected_colour"
+              onChange={(e) => setSelectedSapphire(e)}
+              value={selectedSapphire}
+              placeholder="Select Sapphire Colour"
+              className="gemOrder__hideSapColor"
+            />
+          )}
           <section className="section__dropdowns">
             <div>
               <h2>2.THE CUT</h2>
@@ -123,6 +163,10 @@ const Container = styled.div`
   align-items: center;
   padding: 5pc 10vw;
 
+  .gemOrder__hideSapColor {
+    display: none;
+  }
+
   .section__colors {
     width: 100%;
 
@@ -130,6 +174,25 @@ const Container = styled.div`
       margin-top: 0.5pc;
       display: flex;
       overflow-x: scroll;
+
+      ::-webkit-scrollbar {
+        height: 8px;
+      }
+
+      /* Track */
+      ::-webkit-scrollbar-track {
+        background: #f1f1f1; 
+      }
+      
+      /* Handle */
+      ::-webkit-scrollbar-thumb {
+        background: rgb(211, 95, 70); 
+      }
+
+      /* Handle on hover */
+      ::-webkit-scrollbar-thumb:hover {
+        background: rgb(211, 95, 70); 
+      }
     }
   }
 

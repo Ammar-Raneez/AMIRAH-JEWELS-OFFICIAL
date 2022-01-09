@@ -196,7 +196,7 @@ function App() {
               <EarringsPage />
               <Footer />
             </Route>
-            <Route path="/gems/order">
+            <Route path="/gems/order/:id">
               <TopBar isSpecificProduct={true} />
               <Header />
               <GemOrderPage />

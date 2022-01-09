@@ -2,7 +2,7 @@ import { Fade } from 'react-awesome-reveal';
 import { useHistory } from 'react-router';
 import styled from 'styled-components';
 
-export const GemTitle = ({ title, titleText, titleImage }) => {
+export const GemTitle = ({ id, title, titleText, titleImage }) => {
   const history = useHistory();
 
   return (
@@ -12,7 +12,9 @@ export const GemTitle = ({ title, titleText, titleImage }) => {
           <h1>{title.toUpperCase()}</h1>
           <p>{titleText}</p>
           <div>
-            <button onClick={() => history.push("/gems/order")}>
+            <button
+              onClick={() => history.push({ pathname: `/gems/order/${id}` })}
+            >
               PLACE AN ORDER
             </button>
           </div>
@@ -25,7 +27,7 @@ export const GemTitle = ({ title, titleText, titleImage }) => {
   );
 }
 
-const Container = styled.div `
+const Container = styled.div`
   display: flex;
   justify-content: space-between;
   padding: 50px;

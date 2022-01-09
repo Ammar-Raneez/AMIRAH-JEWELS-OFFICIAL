@@ -18,6 +18,7 @@ const GemDetailPage = ({ data }) => {
       <SEO title={`Amirah - ${gemTitle} Details`} />
       <section>
         <GemTitle
+          id={data.id}
           title={data.title}
           titleText={data.titleText}
           titleImage={data.titleImage}
