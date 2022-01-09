@@ -88,7 +88,7 @@ const GemOrderBody = () => {
           </section>
         )}
         <form style={{ width: '100%' }} onSubmit={sendQuote} ref={formRef}>
-          <input name="from_name" value={user.email} style={{ display: 'none' }} />
+          <input name="from_name" value={user?.email} style={{ display: 'none' }} />
           {id === 'sapphire' && (
             <Select
               options={sapphire}
@@ -143,11 +143,23 @@ const GemOrderBody = () => {
               rows="10"
             />
           </section>
-          <div className="section__sendBtnContainer">
-            <section className="section__sendBtn">
-              <button type="submit">send my quote</button>
-            </section>
-          </div>
+          {user ? (
+            <div className="section__sendBtnContainer">
+              <section className="section__sendBtn">
+                <button type="submit">send my quote</button>
+              </section>
+            </div>
+          ) : (
+            <p
+              style={{
+                textAlign: 'center',
+                marginTop: '15px',
+                color: '#87541e'
+              }}
+            >
+              <strong>Please login To Request A Quote</strong>
+            </p>
+          )}
         </form>
       </Container>
     </Fade>
@@ -217,6 +229,7 @@ const Container = styled.div`
       margin-top: 0.5pc;
       font-size: medium;
       padding: 0.5pc 0.5pc;
+      outline: none;
     }
   }
 
@@ -233,6 +246,8 @@ const Container = styled.div`
       width: 100%;
       margin-top: 0.5pc;
       resize: none;
+      outline: none;
+      padding: 0.5pc;
     }
   }
 
@@ -260,6 +275,27 @@ const Container = styled.div`
       font-size: 14px;
       border: 2px solid #d35f46;
       border-radius: 5pc;
+    }
+  }
+
+  @media screen and (max-width: 600px) {
+    .section__dropdowns {
+      flex-direction: column;
+
+      .dropdown {
+        width: 100%;
+        margin-bottom: 2rem;
+      }
+    }
+
+    .section__quantity {
+      input {
+        width: 95% !important;
+      }
+    }
+
+    .section__textField {
+      width: 96% !important;
     }
   }
 `;

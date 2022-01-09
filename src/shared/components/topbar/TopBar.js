@@ -18,7 +18,7 @@ import Typed from 'react-typed';
 import { useDispatch, useSelector } from 'react-redux';
 import { logout, selectUser } from '../../../features/userSlice';
 
-function TopBar({ isSpecificProduct }) {
+function TopBar({ isSpecificProduct, isMoreSpecificProduct }) {
 	const social = ['https://www.facebook.com/amirahgems', 'https://www.instagram.com/amirahgems/'];
 	const [openDrawer, setDrawer] = useState(false);
 	const user = useSelector(selectUser);
@@ -163,15 +163,18 @@ function TopBar({ isSpecificProduct }) {
 					<Fade direction="up" triggerOnce delay={800}>
 						{isSpecificProduct ?
 							<img src="../logos/word_logo_bottom.png" className="topbar__center__TopLogo" alt="" />
-							: <img src="logos/word_logo_bottom.png" className="topbar__center__TopLogo" alt="" />
+							: isMoreSpecificProduct ?
+								<img src="../../logos/word_logo_bottom.png" className="topbar__center__TopLogo" alt="" />
+								: <img src="logos/word_logo_bottom.png" className="topbar__center__TopLogo" alt="" />
 						}
 					</Fade>
 				</a>
 				<a href="/" className="topbar__centerHidden">
-					{
-						isSpecificProduct ?
-							<img src="../logos/word_logo.png" className="topbar__center__TopLogo" alt="" />
-							: <img src="logos/word_logo.png" className="topbar__center__TopLogo" alt="" />
+					{isSpecificProduct ?
+						<img src="../logos/word_logo_bottom.png" className="topbar__center__TopLogo" alt="" />
+						: isMoreSpecificProduct ?
+							<img src="../../logos/word_logo_bottom.png" className="topbar__center__TopLogo" alt="" />
+							: <img src="logos/word_logo_bottom.png" className="topbar__center__TopLogo" alt="" />
 					}
 				</a>
 			</div>
