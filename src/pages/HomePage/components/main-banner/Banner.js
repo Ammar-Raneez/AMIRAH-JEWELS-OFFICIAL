@@ -29,13 +29,13 @@ function Banner() {
   }, [width]);
 
   return (
-    width > 1100 ? (
+    width > 2300 ? (
       <div style={{ position: 'relative' }}>
         <Slide arrows={false} indicators>
           {images.map((slideImage, index) => (
-            <div className="each-slide" key={index} style={{ height: '450px' }}>
+            <div className="each-slide" key={index} style={{ height: '100%' }}>
               <a href={redirectURLs[index]}>
-                <div style={{ 'backgroundImage': `url(${slideImage.url})`, height: '450px' }}>
+                <div style={{ 'backgroundImage': `url(${slideImage.url})`, backgroundSize: 'cover', height: '850px' }}>
                   <span>{slideImage.caption}</span>
                 </div>
               </a>
@@ -43,15 +43,46 @@ function Banner() {
           ))}
         </Slide>
       </div>
-    ) : (
-      <div
-        className="homePage__banner"
-        style={{
-          backgroundImage: 'url(banners/H1.jpg)',
-          backgroundSize: 'cover'
-        }}
-      />
-    )
+    ) :
+      width > 1800 ? (
+        <div style={{ position: 'relative' }}>
+          <Slide arrows={false} indicators>
+            {images.map((slideImage, index) => (
+              <div className="each-slide" key={index} style={{ height: '100%' }}>
+                <a href={redirectURLs[index]}>
+                  <div style={{ 'backgroundImage': `url(${slideImage.url})`, backgroundSize: 'cover', height: '650px' }}>
+                    <span>{slideImage.caption}</span>
+                  </div>
+                </a>
+              </div>
+            ))}
+          </Slide>
+        </div>
+      ) :
+        width > 900 ? (
+          <div style={{ position: 'relative' }}>
+            <Slide arrows={false} indicators>
+              {images.map((slideImage, index) => (
+                <div className="each-slide" key={index} style={{ height: '100%' }}>
+                  <a href={redirectURLs[index]}>
+                    <div style={{ 'backgroundImage': `url(${slideImage.url})`, backgroundSize: 'cover', height: '450px' }}>
+                      <span>{slideImage.caption}</span>
+                    </div>
+                  </a>
+                </div>
+              ))}
+            </Slide>
+          </div>
+        ) :
+          width > 500 ? (
+            <div
+              className="homePage__banner"
+              style={{
+                backgroundImage: 'url(banners/H1.jpg)',
+                backgroundSize: 'cover'
+              }}
+            />
+          ) : null
   );
 }
 
