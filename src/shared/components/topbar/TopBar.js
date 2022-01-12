@@ -14,7 +14,6 @@ import ChevronRightIcon from '@material-ui/icons/ChevronRight';
 import TreeItem from '@material-ui/lab/TreeItem';
 import { List, ListItem, ListItemIcon, ListItemText, SwipeableDrawer } from '@material-ui/core';
 import { Fade } from 'react-awesome-reveal';
-import Typed from 'react-typed';
 import { useDispatch, useSelector } from 'react-redux';
 import { logout, selectUser } from '../../../features/userSlice';
 
@@ -148,19 +147,25 @@ function TopBar({ isSpecificProduct, isMoreSpecificProduct }) {
 			</div>
 			<div className="topbar__center">
 				<a href="/" className="topbar__centerTypedHidden">
-					<Typed strings={['AMIRAH']} typeSpeed={100} className="topbar__centerTypedText"></Typed>
-					<Fade direction="up" triggerOnce delay={800}>
+					<Fade direction="down" triggerOnce>
 						{isSpecificProduct ?
-							<img src="../logos/word_logo_bottom.png" className="topbar__center__TopLogo" alt="" />
+							<img src="../logos/word_logo.png" className="topbar__center__TopLogo" alt="" />
 							: isMoreSpecificProduct ?
-								<img src="../../logos/word_logo_bottom.png" className="topbar__center__TopLogo" alt="" />
-								: <img src="logos/word_logo_bottom.png" className="topbar__center__TopLogo" alt="" />
+								<img src="../../logos/word_logo.png" className="topbar__center__TopLogo" alt="" />
+								: <img src="logos/word_logo.png" className="topbar__center__TopLogo" alt="" />
 						}
 					</Fade>
 				</a>
 				<a href="/" className="topbar__centerHidden">
 					<div style={{ padding: '5px 10px 10px 5px' }}>
-						<Typed strings={['AMIRAH']} typeSpeed={100} className="topbar__centerTypedText"></Typed>
+						<Fade direction="down" triggerOnce>
+							{isSpecificProduct ?
+								<img src="../logos/word_logo.png" className="topbar__center__TopLogo" alt="" />
+								: isMoreSpecificProduct ?
+									<img src="../../logos/word_logo.png" className="topbar__center__TopLogo" alt="" />
+									: <img src="logos/word_logo.png" className="topbar__center__TopLogo" alt="" />
+							}
+						</Fade>
 					</div>
 				</a>
 			</div>
