@@ -11,13 +11,15 @@ export const GemTitle = ({ id, title, titleText, titleImage }) => {
         <Fade triggerOnce direction="left">
           <h1>{title.toUpperCase()}</h1>
           <p>{titleText}</p>
-          <div>
-            <button
-              onClick={() => history.push({ pathname: `/gems/order/${id}` })}
-            >
-              PLACE AN ORDER
-            </button>
-          </div>
+          {id === 'sapphire' ? (
+            <div>
+              <button
+                onClick={() => history.push({ pathname: `/gems/order/${id}` })}
+              >
+                PLACE AN ORDER
+              </button>
+            </div>
+          ): <></>}
         </Fade>
       </div>
       <Fade triggerOnce direction="right">

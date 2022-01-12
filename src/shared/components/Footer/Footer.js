@@ -110,9 +110,6 @@ function Footer() {
 							<Link to="/contactus">CONTACT US</Link>
 						</p>
 						<p>
-							<Link to="/">PRODUCT CARE & REPAIR</Link>
-						</p>
-						<p>
 							<Link to="/contactus">BOOK AN APPOINTMENT</Link>
 						</p>
 						<p>
@@ -120,9 +117,6 @@ function Footer() {
 						</p>
 						<p>
 							<Link to="/">SHIPPING & RETURNS</Link>
-						</p>
-						<p>
-							<Link to="/">TIFFANY SELECT FINANCING</Link>
 						</p>
 						<p>
 							<Link to="/">GIFT CARDS</Link>
@@ -134,12 +128,6 @@ function Footer() {
 						</p>
 						<p>
 							<Link to="/">WORLD OF AMIRAH</Link>
-						</p>
-						<p>
-							<Link to="/">SUSTAINABILITY</Link>
-						</p>
-						<p>
-							<Link to="/">CA SUPPLY CHAINS ACT</Link>
 						</p>
 						<p>
 							<Link to="/careers">AMIRAH CAREERS</Link>
@@ -157,9 +145,6 @@ function Footer() {
 						</p>
 						<p>
 							<Link to="/">WEDDING & GIFT REGISTRY</Link>
-						</p>
-						<p>
-							<Link to="/">BUSINESS ACCOUNTS</Link>
 						</p>
 					</div>
 				</div>

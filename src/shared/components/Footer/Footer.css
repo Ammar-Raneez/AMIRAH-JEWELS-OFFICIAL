@@ -90,23 +90,19 @@
 	text-decoration: none;
 	margin-top: 1vw;
 	font-family: santral;
-	border: none;
+	border: 1px solid;
 	font-size: 14px;
 	margin-top: 3vw;
 	text-align: center;
 	background-color: transparent;
 	outline: none;
-	border: 0.2vw #d35f46 solid;
 	transition: 0.3s ease;
 	border-radius: 0.7vw;
 }
 
 .footer__topRightSignUp > span:hover,
 .footer__topRightSignUp > a:hover {
-	background-color: #d35f46;
-	transition: 0.3s ease;
-	font-weight: bold;
-	color: white;
+	background-color: #d15336;
 }
 
 .footer__bottom {

@@ -5,10 +5,16 @@ const ColorGemItem = ({ setSapphireColor, selectedSapphire, sapphireColor, img, 
   return (
     <Container
       onClick={() => setSapphireColor(sapphireColor)}
-      style={selectedSapphire.value === sapphireColor.value ? { borderTop: '2px solid #87541e' } : null}
+      style={
+        selectedSapphire.value === sapphireColor.value ?
+          { backgroundColor: 'rgba(211, 95, 70, 0.5)' }
+          : null
+      }
     >
       <img src={img} alt="gem-color" />
-      <p>{name}</p>
+      <strong>
+        <p>{name}</p>
+      </strong>
     </Container>
   );
 }
@@ -34,8 +40,9 @@ const Container = styled.div`
     margin: 0.5pc;
   }
 
+  transition: 0.3s ease;
   :hover {
-    border-top: 2px solid #87541e;
+    background-color: rgba(211, 95, 70, 0.3);
     cursor: pointer;
   }
 `;
